@@ -1,6 +1,8 @@
 Welcome to CETONI Elements documentation!
 =========================================
 
+.. image:: _static/splashscreen_dark.jpg
+
 The CETONI Elements software is a modular laboratory automation solution for
 controlling and automating all CETONI devices and for integrating and automating 
 external devices. 
