@@ -1,0 +1,19 @@
+Create a virtual environment for a project:
+
+```bash
+cd project_folder
+virtualenv venv
+````
+
+To begin using the virtual environment, it needs to be activated:
+
+```bash
+source venv/bin/activate
+```
+
+```bash
+pip install sphinx
+pip install sphinx-rtd-theme
+pip install breathe
+pip install myst-parser
+```
