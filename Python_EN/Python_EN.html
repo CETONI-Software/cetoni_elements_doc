@@ -41,7 +41,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Intro_EN/Intro_EN.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">CETONI Elements - An Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python Add-on</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
@@ -221,9 +220,9 @@ function, are displayed to you as red text in the Python console.</p>
 <section id="import-standard-modules">
 <h3>Import standard modules<a class="headerlink" href="#import-standard-modules" title="Permalink to this headline"></a></h3>
 <p>The plugin uses a standard Python installation and thus has access to
-all standard Python modules or to other modules installed via <em>pip</em>. You
-can import a module as usual using the <em>import</em> statement. In the
-following example the <em>time</em> module is imported and used:</p>
+all standard Python modules or to other modules installed via <code class="file docutils literal notranslate"><span class="pre">pip</span></code>. You
+can import a module as usual using the <code class="code docutils literal notranslate"><span class="pre">import</span></code> statement. In the
+following example the <code class="file docutils literal notranslate"><span class="pre">time</span></code> module is imported and used:</p>
 <p><a class="reference internal" href="../_images/10000201000001F80000008C5125B8F7F53F8BDD.png"><img alt="image18" src="../_images/10000201000001F80000008C5125B8F7F53F8BDD.png" style="width: 13.34cm; height: 3.704cm;" /></a></p>
 </section>
 <section id="import-custom-modules">
@@ -234,8 +233,8 @@ your current project. This directory is added by the software to the
 <code class="code docutils literal notranslate"><span class="pre">sys.path</span></code> of the Python interpreter. For example, if you are working
 in the <em>PythonDev</em> project, then the absolute path to this directory
 would be:</p>
-<p><code class="file docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/PythonDev/Scripts/Python</span></code></p>
-<p>If you import the module <code class="code docutils literal notranslate"><span class="pre">sys</span></code> in the Python console, then you can see
+<p class="centered">
+<strong><code class="file docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/PythonDev/Scripts/Python</span></code></strong></p><p>If you import the module <code class="code docutils literal notranslate"><span class="pre">sys</span></code> in the Python console, then you can see
 via <code class="code docutils literal notranslate"><span class="pre">sys.path</span></code> that the above directory is in the import path.</p>
 <p><a class="reference internal" href="../_images/100002010000025D00000083173EACC09611440F.png"><img alt="image19" src="../_images/100002010000025D00000083173EACC09611440F.png" style="width: 16.013cm; height: 3.468cm;" /></a></p>
 <p>To test the import functionality, create the <code class="file docutils literal notranslate"><span class="pre">hello.py</span></code> file
@@ -255,53 +254,60 @@ in the above folder with the following content:</p>
 <p>The software adds a module <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> to the Python interpreter,
 which can be used to access application objects. After importing the
 module via <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">cetoni_elements</span> <span class="pre">import</span> <span class="pre">*</span></code> you can access these
-objects.</p>
-<p>See <a class="reference internal" href="#python-api"><span class="std std-ref">API Reference</span></a> for a detailed description of the available application
-objects.</p>
+objects. The <a class="reference internal" href="#scriptenv">ScriptEnv</a> object is the central object for accessing
+available devices and application objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference internal" href="#python-api"><span class="std std-ref">API Reference</span></a> for a detailed description of the ScriptEnv object.</p>
+</div>
 <p>The following image shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module
-and then call the <code class="code docutils literal notranslate"><span class="pre">help()</span></code> function of the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object:</p>
+and then call the <code class="code docutils literal notranslate"><span class="pre">help()</span></code> function of the <a class="reference internal" href="#scriptenv">ScriptEnv</a> object:</p>
 <p><a class="reference internal" href="../_images/10000201000001F100000088C0C4A7C7C9B93CC8.png"><img alt="image21" src="../_images/10000201000001F100000088C0C4A7C7C9B93CC8.png" style="width: 13.155cm; height: 3.598cm;" /></a></p>
 </section>
 <section id="display-properties-and-methods-of-objects">
 <h3>Display properties and methods of objects<a class="headerlink" href="#display-properties-and-methods-of-objects" title="Permalink to this headline"></a></h3>
-<p>Using the Python function <em>dir(object)</em> you can display all methods and
+<p>Using the Python function <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> you can display all methods and
 properties of application objects. For example, you can use it to
-display all the functions and properties of the <em>ScriptEnv</em> object.</p>
+display all the functions and properties of the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object.</p>
 <p><a class="reference internal" href="../_images/10000201000002260000007A3CE2023C617A29C5.png"><img alt="image22" src="../_images/10000201000002260000007A3CE2023C617A29C5.png" style="width: 14.557cm; height: 3.23cm;" /></a></p>
-<p>Alternatively, all application objects also have a <em>help()</em>
+<p>Alternatively, all application objects also have a <code class="code docutils literal notranslate"><span class="pre">help()</span></code>
 function that provides a clearer display of an object’s properties and
-methods. In the figure below you can see the call of <em>ScriptEnv.help()</em>.
-The console shows the <em>Properties</em> ❶ and methods (<em>Slots</em> ❷) of the
-<em>ScriptEnv</em>object:</p>
+methods. In the figure below you can see the call of <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.help()</span></code>.
+The console shows the <code class="code docutils literal notranslate"><span class="pre">Properties</span></code> ❶ and methods (<code class="code docutils literal notranslate"><span class="pre">Slots</span></code> ❷) of the
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object:</p>
 <a class="reference internal image-reference" href="../_images/10000201000002260000011A8780E1969FECAAC9.png"><img alt="../_images/10000201000002260000011A8780E1969FECAAC9.png" src="../_images/10000201000002260000011A8780E1969FECAAC9.png" style="width: 14.557cm; height: 7.465cm;" /></a>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use the <code class="xref any docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="xref any docutils literal notranslate"><span class="pre">Object.help()</span></code>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
 functions to get an overview of the methods and
 properties of a given object.</p>
 </div>
 </section>
 <section id="using-device-objects">
 <h3>Using device objects<a class="headerlink" href="#using-device-objects" title="Permalink to this headline"></a></h3>
-<p>You can access device objects using the <em>ScriptEnv.getDevice()</em>
+<p>You can access device objects using the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code>
 function. To get an overview of available device names you can call the
-<em>ScriptEnv.getDeviceNames()</em> function.</p>
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDeviceNames()</span></code> function.</p>
 <p><a class="reference internal" href="../_images/1000020100000240000000AEB0E9BCC2CF19CA4A.png"><img alt="image26" src="../_images/1000020100000240000000AEB0E9BCC2CF19CA4A.png" style="width: 15.245cm; height: 4.606cm;" /></a></p>
 <p>The code completion helps you to enter a device name by
 showing you a list of matching names (see figure above). If you call the
-<em>getDevice()</em> function without an assignment to a variable, then you can
+<code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code> function without an assignment to a variable, then you can
 see in the console if the call was successful:</p>
-<p>py&gt; ScriptEnv.getDevice(“Nemesys_S_1”)</p>
-<p>CNemesys4Pump (QtLabb::CNemesys4Pump at: 0x000002402DDCBF20)</p>
-<p>To access a device, assign the result of the call to <em>getDevice()</em> to a
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+CNemesys4Pump <span class="o">(</span>QtLabb::CNemesys4Pump at: 0x000002402DDCBF20<span class="o">)</span>
+</pre></div>
+</div>
+<p>To access a device, assign the result of the call to <code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code> to a
 variable. In the following example, we assign the device object for the
-first Nemesys S pump to the variable <em>pump</em>:</p>
-<p>py&gt; pump = ScriptEnv.getDevice(“Nemesys_S_1”)</p>
-<p>Now you can use the <em>dir(pump)</em> and <em>pump.help()</em> functions to get an
+first Nemesys S pump to the variable <code class="code docutils literal notranslate"><span class="pre">pump</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; <span class="nv">pump</span> <span class="o">=</span> ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Now you can use the <code class="code docutils literal notranslate"><span class="pre">dir(pump)</span></code> and <code class="code docutils literal notranslate"><span class="pre">pump.help()</span></code> functions to get an
 overview of the available methods and functions of the pump object.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use the <code class="xref any docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="xref any docutils literal notranslate"><span class="pre">Object.help()</span></code>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
 functions to get an overview of the methods and
 properties of device objects.</p>
 </div>
@@ -309,7 +315,7 @@ properties of device objects.</p>
 <p class="admonition-title">Important</p>
 <p>For many devices, accessing device
 properties and methods or displaying help via
-<code class="xref any docutils literal notranslate"><span class="pre">Object.help()</span></code> is only possible if the application is
+<code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code> is only possible if the application is
 connected to the devices.</p>
 </div>
 <div class="caution admonition">
@@ -325,44 +331,44 @@ malfunctions or a crash of the software.</p>
 <p>When you are connected to the device, you can now access the device
 functionality via the device object functions. For example, you can
 trigger a refill process for the pump:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">&gt;</span> <span class="n">pump</span><span class="o">.</span><span class="n">refillSyringe</span><span class="p">()</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; pump.refillSyringe<span class="o">()</span>
 </pre></div>
 </div>
 <p>or stop the pumping operation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">&gt;</span> <span class="n">pump</span><span class="o">.</span><span class="n">stopPumping</span><span class="p">()</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; pump.stopPumping<span class="o">()</span>
 </pre></div>
 </div>
-<p>The following code shows how to import the <em>cetoni_elements</em> module, get
-the device object for the Nemesys S pump via the <em>ScriptEnv</em> object, and
+<p>The following code shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, get
+the device object for the Nemesys S pump via the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object, and
 then start an emptying process of the syringe:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span>
-<span class="n">py</span><span class="o">&gt;</span> <span class="n">pump</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="p">)</span>
-<span class="n">py</span><span class="o">&gt;</span> <span class="n">pump</span><span class="o">.</span><span class="n">emptySyringe</span><span class="p">()</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; from cetoni_elements import
+py&gt; <span class="nv">pump</span> <span class="o">=</span> ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+py&gt; pump.emptySyringe<span class="o">()</span>
 </pre></div>
 </div>
 </section>
 <section id="using-application-objects">
 <h3>Using application objects<a class="headerlink" href="#using-application-objects" title="Permalink to this headline"></a></h3>
 <p>Similar to device objects, you can also access application objects that
-are no devices. Use the two functions<em>ScriptEnv.getObject()</em>and
-<em>ScriptEnv.getObjectNames()</em>for this</p>
-<p>The following code shows how to import the <em>cetoni_elements</em> module, get
-the application object of the graphical logger via the <em>ScriptEnv</em>
+are no devices. Use the two functions <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">criptEnv.getObjectNames()</span></code> for this</p>
+<p>The following code shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, get
+the application object of the graphical logger via the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code>
 object and then start logging:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">py</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="p">)</span>
-<span class="n">py</span><span class="o">&gt;</span> <span class="n">plot</span><span class="o">.</span><span class="n">startLogging</span><span class="p">()</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt; from cetoni_elements import *
+py&gt; <span class="nv">plot</span> <span class="o">=</span> ScriptEnv.getObject<span class="o">(</span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="o">)</span>
+py&gt; plot.startLogging<span class="o">()</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use the <code class="xref any docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="xref any docutils literal notranslate"><span class="pre">Object.help()</span></code>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
 functions to get an overview of the methods and
 properties of application objects.</p>
 </div>
 <div class="caution admonition">
 <p class="admonition-title">Attention</p>
-<p>Risk of malfunction / data loss !
+<p><strong>Risk of malfunction / data loss !</strong>
 The functions of the application objects may give you
 access to functions that are not available in the
 graphical user interface. Always test functions outside
@@ -377,18 +383,32 @@ software.</p>
 <h2>Python Script Function - Execute Python Code<a class="headerlink" href="#python-script-function-execute-python-code" title="Permalink to this headline"></a></h2>
 <section id="overview-1">
 <span id="id1"></span><h3>Overview<a class="headerlink" href="#overview-1" title="Permalink to this headline"></a></h3>
-<p><a class="reference internal" href="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg"><img alt="image42" height="2cm" src="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" width="2cm" /></a></p>
-<p>The Python plugin adds the <em>Execute Python Code</em>script
-function to the <em>Core Functions</em> category of the <em>Script Pool:</em></p>
-<p><a class="reference internal" href="../_images/1000020100000109000001120A8A8A9BB7B494E7.png"><img alt="image43" src="../_images/1000020100000109000001120A8A8A9BB7B494E7.png" style="width: 7.013cm; height: 7.251cm;" /></a></p>
+<figure class="align-left" style="width: 60px">
+<img alt="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" src="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" /></figure>
+<p>The Python plugin adds the <code class="code docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">Python</span> <span class="pre">Code</span></code> script
+function to the <span class="guilabel">Core Functions</span> category of the <span class="guilabel">Script Pool</span>:</p>
+<img alt="../_images/1000020100000109000001120A8A8A9BB7B494E7.png" src="../_images/1000020100000109000001120A8A8A9BB7B494E7.png" />
 <p>This function allows you to execute Python code in the script
 system of the application. When you insert the function into your
 script, you will see the initial Python script in the configuration
-area. This script contains the two functions <em>script_exec()</em> and
-<em>script_abort():</em></p>
-<p><a class="reference internal" href="../_images/10000201000001E7000000A78827B788FF6CF36C.png"><img alt="image44" src="../_images/10000201000001E7000000A78827B788FF6CF36C.png" style="width: 12.891cm; height: 4.42cm;" /></a></p>
+area. This script contains the two functions <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement your script logic in this function</span>
+<span class="c1"># Avoid blocking function calls</span>
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="k">return</span>
+
+
+<span class="c1"># Implement your clean up code here in case of script stop</span>
+<span class="c1"># Stop pending actions, clean up resources</span>
+<span class="c1"># Keep execution time of this function short and do not use</span>
+<span class="c1"># any blocking function calls</span>
+<span class="k">def</span> <span class="nf">script_abort</span><span class="p">():</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
 <p>When the script is executed, it is loaded by the Python
-interpreter as a separate module and then the <em>script_exec()</em>function
+interpreter as a separate module and then the <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> function
 is called. I.e. this function is the main function of the script and the
 logic should be implemented there.</p>
 <div class="admonition tip">
@@ -561,8 +581,7 @@ edit the Python code.</p>
 <h3>Using custom modules<a class="headerlink" href="#using-custom-modules" title="Permalink to this headline"></a></h3>
 <p>If your script contains very complex and extensive logic, you may want
 to offload the code to an external module and include it using the
-import functionality (see section <a class="reference external" href="#1.4.2.Importcustommodules|outline">Import custom
-modules</a>). You can then call
+import functionality (see section <a class="reference internal" href="#import-custom-modules">Import custom modules</a>). You can then call
 the functions of the imported module from within <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code>.</p>
 <p>In the following example we import our own module <code class="file docutils literal notranslate"><span class="pre">hello</span></code> and call its
 function <code class="code docutils literal notranslate"><span class="pre">helloworld()</span></code>.</p>
@@ -618,8 +637,7 @@ script in the application.</p>
 <p>To be able to pass the results of calculations in Python code to the
 running script or to react to values from the script, it is necessary to
 access script variables. To do this, import the <code class="file docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module
-(see section <a class="reference external" href="#1.5.1.Thecetoni_elementsmodule|outline">The cetoni_elements
-module</a>).</p>
+(see section <a class="reference internal" href="#the-cetoni-elements-module">The cetoni_elements module</a>).</p>
 <p>Once you have imported the module, you can access script variables using
 the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getVar()</span></code>, <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVar()</span></code> and
 <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVars()</span></code> functions. The following example shows how to read
@@ -639,7 +657,7 @@ calculated value back into the script variable:</p>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Remember that script variables in
-Python script always start with a dollar sign - <code class="xref any docutils literal notranslate"><span class="pre">$VarName</span></code>.</p>
+Python script always start with a dollar sign - <code class="code docutils literal notranslate"><span class="pre">$VarName</span></code>.</p>
 </div>
 <p>Script variables can also be used to access devices. Script variables
 can store device references. By reading the device reference and
@@ -752,9 +770,54 @@ script and can be evaluated further.</p>
 <span id="python-api"></span><h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
 <section id="scriptenv">
 <h3>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
-<p>The ScriptEnv object is the central object for accessing available devices and
-application objects.</p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">ScriptEnv`</span></code> object is the central object for accessing available
+devices and application objects.</p>
 <div class="breathe-sectiondef docutils container">
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv">
+<span id="_CPPv3NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="Python::CScriptEnvAccess::getDeviceNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDeviceNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a tuple with all device names that can be accessed from Python. </p>
+<p>Use the device name when calling the <code class="docutils literal notranslate"><a class="reference internal" href="#classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"><span class="std std-ref"><span class="pre">getDevice()</span></span></a></code> function to get the corresponding device object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="Python::CScriptEnvAccess::getDevice__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"></span><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CDevice</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the device object for the given device name. </p>
+<p>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s">&quot;Nemesys_S_1&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv">
+<span id="_CPPv3NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="Python::CScriptEnvAccess::getObjectNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObjectNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a list of all registered application objects that are not devices and that can be accessed from Python, such as the graphical logger. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="Python::CScriptEnvAccess::getObject__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getObject</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the object with the given object name <code class="docutils literal notranslate"><span class="pre">Name</span></code>. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getObject</span><span class="p">(</span><span class="s">&quot;ProcessDataGraph&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="Python::CScriptEnvAccess::getVar__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">VarName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the value of a certain script variable. </p>
+<p>The variable name needs to start with a dollar sign.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getVar</span><span class="p">(</span><span class="s">&quot;$FlowRate&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant">
 <span id="_CPPv3N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="_CPPv2N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="Python::CScriptEnvAccess::setVar__QStringCR.QVariantCR"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant" title="Permalink to this definition"></a><br /></dt>
@@ -762,15 +825,7 @@ application objects.</p>
 <p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVar</span><span class="p">(</span><span class="s">&quot;$TargetPos&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>Name</strong> – Name of the variable like <code class="docutils literal notranslate"><span class="pre">$Flow</span></code> or <code class="docutils literal notranslate"><span class="pre">$Position</span></code> </p></li>
-<li><p><strong>Value</strong> – The value to set for this variable </p></li>
-</ul>
-</dd>
-</dl>
+ </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -780,27 +835,7 @@ application objects.</p>
 <p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVars</span><span class="p">({</span><span class="s">&quot;$Value1&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$Value2&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">})</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>Values</strong> – Dictionary with key value pairs </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString">
-<span id="_CPPv3NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="Python::CScriptEnvAccess::getVar__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">VarName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the value of a certain script variable. </p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getVar</span><span class="p">(</span><span class="s">&quot;$FlowRate&quot;</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>VarName</strong> – Name of the variable (needs to start with $ sign) </p>
-</dd>
-</dl>
+ </p>
 </dd></dl>
 
 </div>

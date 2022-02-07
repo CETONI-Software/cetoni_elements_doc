@@ -136,9 +136,9 @@ Import standard modules
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The plugin uses a standard Python installation and thus has access to
-all standard Python modules or to other modules installed via *pip*. You
-can import a module as usual using the *import* statement. In the
-following example the *time* module is imported and used:
+all standard Python modules or to other modules installed via :file:`pip`. You
+can import a module as usual using the :code:`import` statement. In the
+following example the :file:`time` module is imported and used:
 
 |image18|
 
@@ -152,7 +152,8 @@ your current project. This directory is added by the software to the
 in the *PythonDev* project, then the absolute path to this directory
 would be:
 
-:file:`C:/Users/Public/Documents/QmixElements/Projects/PythonDev/Scripts/Python`
+.. centered::
+   :file:`C:/Users/Public/Documents/QmixElements/Projects/PythonDev/Scripts/Python`
 
 If you import the module :code:`sys` in the Python console, then you can see
 via :code:`sys.path` that the above directory is in the import path.
@@ -180,30 +181,31 @@ The cetoni_elements module
 The software adds a module :code:`cetoni_elements` to the Python interpreter,
 which can be used to access application objects. After importing the
 module via :code:`from cetoni_elements import *` you can access these
-objects.
+objects. The `ScriptEnv`_ object is the central object for accessing 
+available devices and application objects.
 
-See :ref:`python-api` for a detailed description of the available application
-objects.
+.. note::
+   See :ref:`python-api` for a detailed description of the ScriptEnv object.
 
 The following image shows how to import the :code:`cetoni_elements` module
-and then call the :code:`help()` function of the :code:`ScriptEnv` object:
+and then call the :code:`help()` function of the `ScriptEnv`_ object:
 
 |image21|
 
 Display properties and methods of objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the Python function *dir(object)* you can display all methods and
+Using the Python function :code:`dir(object)` you can display all methods and
 properties of application objects. For example, you can use it to
-display all the functions and properties of the *ScriptEnv* object.
+display all the functions and properties of the :code:`ScriptEnv` object.
 
 |image22|
 
-Alternatively, all application objects also have a *help()*
+Alternatively, all application objects also have a :code:`help()`
 function that provides a clearer display of an object's properties and
-methods. In the figure below you can see the call of *ScriptEnv.help()*.
-The console shows the *P\ roperties* ❶ and methods (*Slots* ❷) of the
-*ScriptEnv*\ object:
+methods. In the figure below you can see the call of :code:`ScriptEnv.help()`.
+The console shows the :code:`Properties` ❶ and methods (:code:`Slots` ❷) of the
+:code:`ScriptEnv` object:
 
 .. image:: Pictures/10000201000002260000011A8780E1969FECAAC9.png
    :width: 14.557cm
@@ -211,7 +213,7 @@ The console shows the *P\ roperties* ❶ and methods (*Slots* ❷) of the
 
 
 .. tip::
-   Use the `dir(object)` and `Object.help()`   
+   Use the :code:`dir(object)` and :code:`Object.help()`   
    functions to get an overview of the methods and         
    properties of a given object. 
 
@@ -219,32 +221,35 @@ The console shows the *P\ roperties* ❶ and methods (*Slots* ❷) of the
 Using device objects
 ~~~~~~~~~~~~~~~~~~~~
 
-You can access device objects using the *ScriptEnv.getDevice()*
+You can access device objects using the :code:`ScriptEnv.getDevice()`
 function. To get an overview of available device names you can call the
-*ScriptEnv.getDeviceNames()* function.
+:code:`ScriptEnv.getDeviceNames()` function.
 
 |image26|
 
 The code completion helps you to enter a device name by
 showing you a list of matching names (see figure above). If you call the
-*getDevice()* function without an assignment to a variable, then you can
+:code:`getDevice()` function without an assignment to a variable, then you can
 see in the console if the call was successful:
 
-py> ScriptEnv.getDevice("Nemesys_S_1")
+.. code-block:: shell
 
-CNemesys4Pump (QtLabb::CNemesys4Pump at: 0x000002402DDCBF20)
+   py> ScriptEnv.getDevice("Nemesys_S_1")
+   CNemesys4Pump (QtLabb::CNemesys4Pump at: 0x000002402DDCBF20)
 
-To access a device, assign the result of the call to *getDevice()* to a
+To access a device, assign the result of the call to :code:`getDevice()` to a
 variable. In the following example, we assign the device object for the
-first Nemesys S pump to the variable *pump*:
+first Nemesys S pump to the variable :code:`pump`:
 
-py> pump = ScriptEnv.getDevice("Nemesys_S_1")
+.. code-block:: shell
 
-Now you can use the *dir(pump)* and *pump.help()* functions to get an
+   py> pump = ScriptEnv.getDevice("Nemesys_S_1")
+
+Now you can use the :code:`dir(pump)` and :code:`pump.help()` functions to get an
 overview of the available methods and functions of the pump object.
 
 .. tip::
-   Use the `dir(object)` and `Object.help()`   
+   Use the :code:`dir(object)` and :code:`Object.help()`   
    functions to get an overview of the methods and         
    properties of device objects.
 
@@ -254,7 +259,7 @@ overview of the available methods and functions of the pump object.
 
    For many devices, accessing device     
    properties and methods or displaying help via           
-   `Object.help()` is only possible if the application is 
+   :code:`Object.help()` is only possible if the application is 
    connected to the devices. 
 
 .. admonition:: Attention
@@ -273,21 +278,21 @@ When you are connected to the device, you can now access the device
 functionality via the device object functions. For example, you can
 trigger a refill process for the pump:
 
-.. code-block:: python
+.. code-block:: shell
 
    py> pump.refillSyringe()
 
 or stop the pumping operation:
 
-.. code-block:: python
+.. code-block:: shell
 
    py> pump.stopPumping()
 
-The following code shows how to import the *cetoni_elements* module, get
-the device object for the Nemesys S pump via the *ScriptEnv* object, and
+The following code shows how to import the :code:`cetoni_elements` module, get
+the device object for the Nemesys S pump via the :code:`ScriptEnv` object, and
 then start an emptying process of the syringe:
 
-.. code-block:: python
+.. code-block:: shell
 
    py> from cetoni_elements import
    py> pump = ScriptEnv.getDevice("Nemesys_S_1")
@@ -297,14 +302,14 @@ Using application objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to device objects, you can also access application objects that
-are no devices. Use the two functions\ *ScriptEnv.getObject()*\ and
-*ScriptEnv.getObjectNames()*\ for this
+are no devices. Use the two functions :code:`ScriptEnv.getObject()` and
+:code:`criptEnv.getObjectNames()` for this
 
-The following code shows how to import the *cetoni_elements* module, get
-the application object of the graphical logger via the *ScriptEnv*
+The following code shows how to import the :code:`cetoni_elements` module, get
+the application object of the graphical logger via the :code:`ScriptEnv`
 object and then start logging:
 
-.. code-block:: python
+.. code-block:: shell
 
    py> from cetoni_elements import *
    py> plot = ScriptEnv.getObject("ProcessDataGraph")
@@ -312,14 +317,14 @@ object and then start logging:
 
 
 .. tip::
-   Use the `dir(object)` and `Object.help()`   
+   Use the :code:`dir(object)` and :code:`Object.help()`   
    functions to get an overview of the methods and         
    properties of application objects.          
 
 .. admonition:: Attention
    :class: caution
 
-   Risk of malfunction / data loss !                                                           
+   **Risk of malfunction / data loss !**                                                           
    The functions of the application objects may give you   
    access to functions that are not available in the       
    graphical user interface. Always test functions outside 
@@ -337,23 +342,38 @@ Python Script Function - Execute Python Code
 Overview
 ~~~~~~~~
 
-|image42|
+.. figure:: Pictures/1000139A00000B6A00000B5A63C99382F8AF9D57.svg
+   :align: left
+   :figwidth: 60px
 
-The Python plugin adds the *Execute Python Code*\ script
-function to the *Core Functions* category of the *Script Pool:*
+The Python plugin adds the :code:`Execute Python Code` script
+function to the :guilabel:`Core Functions` category of the :guilabel:`Script Pool`:
 
-|image43|
-
+.. image:: Pictures/1000020100000109000001120A8A8A9BB7B494E7.png
+   
 This function allows you to execute Python code in the script
 system of the application. When you insert the function into your
 script, you will see the initial Python script in the configuration
-area. This script contains the two functions *script_exec()* and
-*script_abort():*
+area. This script contains the two functions :code:`script_exec()` and
+:code:`script_abort()`:
 
-|image44|
+.. code-block:: python
+
+   # Implement your script logic in this function
+   # Avoid blocking function calls
+   def script_exec():
+      return
+
+
+   # Implement your clean up code here in case of script stop
+   # Stop pending actions, clean up resources
+   # Keep execution time of this function short and do not use
+   # any blocking function calls
+   def script_abort():
+      return
 
 When the script is executed, it is loaded by the Python
-interpreter as a separate module and then the *script_exec()*\ function
+interpreter as a separate module and then the :code:`script_exec()` function
 is called. I.e. this function is the main function of the script and the
 logic should be implemented there.
 
@@ -552,8 +572,7 @@ Using custom modules
 
 If your script contains very complex and extensive logic, you may want
 to offload the code to an external module and include it using the
-import functionality (see section `Import custom
-modules <#1.4.2.Import custom modules|outline>`__). You can then call
+import functionality (see section `Import custom modules`_). You can then call
 the functions of the imported module from within :code:`script_exec()`.
 
 In the following example we import our own module :file:`hello` and call its
@@ -622,8 +641,7 @@ Accessing script variables
 To be able to pass the results of calculations in Python code to the
 running script or to react to values from the script, it is necessary to
 access script variables. To do this, import the :file:`cetoni_elements` module
-(see section `The cetoni_elements
-module <#1.5.1.The cetoni_elements module|outline>`__).
+(see section `The cetoni_elements module`_).
 
 Once you have imported the module, you can access script variables using
 the :code:`ScriptEnv.getVar()`, :code:`ScriptEnv.setVar()` and
@@ -647,7 +665,7 @@ calculated value back into the script variable:
    :class: note
 
    Remember that script variables in  
-   Python script always start with a dollar sign - `$VarName`.        
+   Python script always start with a dollar sign - :code:`$VarName`.        
 
 
 Script variables can also be used to access devices. Script variables
@@ -782,8 +800,8 @@ API Reference
 ScriptEnv
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ScriptEnv object is the central object for accessing available devices and 
-application objects.
+The :code:`ScriptEnv`` object is the central object for accessing available 
+devices and application objects.
 
 .. doxygenclass:: Python::CScriptEnvAccess
     :project: python
@@ -913,12 +931,6 @@ application objects.
 .. |image41| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
    :width: 1.799cm
    :height: 1.799cm
-.. |image42| image:: Pictures/1000139A00000B6A00000B5A63C99382F8AF9D57.svg
-   :width: 2cm
-   :height: 2cm
-.. |image43| image:: Pictures/1000020100000109000001120A8A8A9BB7B494E7.png
-   :width: 7.013cm
-   :height: 7.251cm
 .. |image44| image:: Pictures/10000201000001E7000000A78827B788FF6CF36C.png
    :width: 12.891cm
    :height: 4.42cm

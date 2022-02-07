@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python Add-on" href="../Python_EN/Python_EN.html" />
-    <link rel="prev" title="Introduction" href="../Intro_EN/Intro_EN.html" /> 
+    <link rel="prev" title="Welcome to CETONI Elements documentation!" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,18 +42,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Intro_EN/Intro_EN.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">CETONI Elements - An Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#initial-operation">Initial Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-steps">First Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#license-keys">License Keys</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#activate-license">Activate License</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#overview-of-activated-licenses">Overview of Activated Licenses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#remove-licenses">Remove Licenses</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#create-device-configuration">Create Device Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#import-device-configuration">Import Device Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#export-device-configuration">Export Device Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device-configurations">Device Configurations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-configuration">Create Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-configuration">Open Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-configuration">Import Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-device-configuration">Export Device Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#cetoni-elements-the-basics">CETONI Elements – The Basics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#show-user-manual">Show User Manual</a></li>
@@ -136,56 +139,22 @@
              
   <section id="cetoni-elements-an-overview">
 <h1>CETONI Elements - An Overview<a class="headerlink" href="#cetoni-elements-an-overview" title="Permalink to this headline"></a></h1>
-<section id="initial-operation">
-<h2>Initial Operation<a class="headerlink" href="#initial-operation" title="Permalink to this headline"></a></h2>
+<section id="first-steps">
+<h2>First Steps<a class="headerlink" href="#first-steps" title="Permalink to this headline"></a></h2>
 <p>The first time the software is started, a default configuration is
 loaded: The software loads only its core without any device-specific
 plugins. The default configuration is active, when you see the following
 startup screen (figure below).</p>
 <p><a class="reference internal" href="../_images/1000020100000422000002BE2B654AE685AA4D8E.png"><img alt="Figure 1.1: First start of CETONI Elements – Startup Screen" src="../_images/1000020100000422000002BE2B654AE685AA4D8E.png" style="width: 100%;" /></a></p>
-<p>You have
-to install and load a device configuration, in order to be able to
-control your devices with the software. A device configuration is a
-collection of configuration files, which describe the configuration of
-all devices and modules, which together form a complex system or device.
-In the startup screen you can see all ways to load a valid device
-configuration:</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt><strong>Create Configuration</strong></dt><dd><p>This button starts the Device
-Configurator that lets you create arbitrary device configurations
-yourself. More information on creating device configurations can be
-found in the device configurator documentation</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><strong>Open Configuration</strong></dt><dd><p>This allows you to load an existing device
-configuration that was previously installed on your system.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><strong>Import Configuration</strong></dt><dd><p>Select this menu item to install a device
-configuration from a disk or USB-stick (eg from CETONI Elements
-installation CD) – see section <em>Import Device Configuration</em></p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><strong>Start Demo</strong></dt><dd><p>If you want to start the application in demo mode, eg
-for presentations and tests or if you currently have no real
-equipment, then click this button.</p>
-</dd>
-</dl>
-</li>
-</ul>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Also after a system crash or after an
 update of the software, the default configuration is
 loaded, and the start-up screen appears.</p>
 </div>
+<p>If you want to start the application in demo mode, eg
+for presentations and tests or if you currently have no real
+equipment, then click the <span class="guilabel">Start Demo</span> button.</p>
 </section>
 <section id="license-keys">
 <h2>License Keys<a class="headerlink" href="#license-keys" title="Permalink to this headline"></a></h2>
@@ -225,21 +194,38 @@ you can only remove all licenses together. After removing the licenses,
 you will work with a demo license again.</p>
 </section>
 </section>
-<section id="create-device-configuration">
-<h2>Create Device Configuration<a class="headerlink" href="#create-device-configuration" title="Permalink to this headline"></a></h2>
-<p><a class="reference internal" href="../_images/100002010000009600000096EA64110C769BEAC3.png"><img alt="image7" src="../_images/100002010000009600000096EA64110C769BEAC3.png" style="width: 2cm; height: 2cm;" /></a></p>
+<section id="device-configurations">
+<h2>Device Configurations<a class="headerlink" href="#device-configurations" title="Permalink to this headline"></a></h2>
+<p>You have
+to install and load a device configuration, in order to be able to
+control your devices with the software. A device configuration is a
+collection of configuration files, which describe the configuration of
+all devices and modules, which together form a complex system or device.
+In the startup screen you can see all ways to get to a valid device
+configuration:</p>
+<p><a class="reference internal" href="../_images/1000020100000422000002BE2B654AE685AA4D8E.png"><img alt="Figure 1.1: First start of CETONI Elements – Startup Screen" src="../_images/1000020100000422000002BE2B654AE685AA4D8E.png" style="width: 100%;" /></a></p>
+<section id="create-configuration">
+<h3>Create Configuration<a class="headerlink" href="#create-configuration" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/100002010000009600000096EA64110C769BEAC3.png"><img alt="../_images/100002010000009600000096EA64110C769BEAC3.png" class="align-left" src="../_images/100002010000009600000096EA64110C769BEAC3.png" style="width: 2cm; height: 2cm;" /></a>
 <p>The <em>Create Configuration</em> button allows you to create new
 device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
 Configurator, which is integrated in CETONI Elements. For detailed
-instructions on how to create device configurations, see chapter
-<a class="reference external" href="#anchor-8">Fehler: Verweis nicht gefunden</a> <a class="reference external" href="#anchor-8">Fehler: Verweis nicht
-gefunden</a>.</p>
+instructions on how to create device configurations, see Device Configurator
+section.</p>
 </section>
-<section id="import-device-configuration">
-<h2>Import Device Configuration<a class="headerlink" href="#import-device-configuration" title="Permalink to this headline"></a></h2>
-<p><a class="reference internal" href="../_images/10000201000000960000009603BB5C04B1480424.png"><img alt="image8" src="../_images/10000201000000960000009603BB5C04B1480424.png" style="width: 2cm; height: 2cm;" /></a></p>
+<section id="open-configuration">
+<h3>Open Configuration<a class="headerlink" href="#open-configuration" title="Permalink to this headline"></a></h3>
+<p>This allows you to load an existing device
+configuration that was previously installed on your system.</p>
+</section>
+<section id="import-configuration">
+<h3>Import Configuration<a class="headerlink" href="#import-configuration" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000201000000960000009603BB5C04B1480424.png"><img alt="../_images/10000201000000960000009603BB5C04B1480424.png" class="align-left" src="../_images/10000201000000960000009603BB5C04B1480424.png" style="width: 2cm; height: 2cm;" /></a>
+<p>Select this menu item to install a device
+configuration from a disk or USB-stick (eg from CETONI Elements
+installation CD)</p>
 <p>For most devices and modules you can create your own device
 configurations with the CETONI Elements Device Configurator. If you have
 devices that are not supported by the Device Configurator or if you use
@@ -255,17 +241,17 @@ automatically and you don’t need to perform the
 following steps.</p>
 </div>
 <ol class="arabic simple">
-<li><p>Select the <em>Device → Import Configuration</em> menu item from the main
+<li><p>Select the <span class="menuselection">Device → Import Configuration</span> menu item from the main
 menu.</p></li>
 </ol>
 <p><a class="reference internal" href="../_images/10000000000001310000010F1E67A086173830FE.png"><img alt="Figure 1.2: Import device configuration" src="../_images/10000000000001310000010F1E67A086173830FE.png" style="width: 8.07cm; height: 7.17cm;" /></a></p>
 <ol class="arabic simple" start="2">
 <li><p>Now select whether you
-want to import a folder with a device configuration (<em>Import
-Folder</em>) or a compressed device configuration file (<span class="guilabel">Import .qcf File</span>).
+want to import a folder with a device configuration (<span class="guilabel">Import Folder</span>)
+or a compressed device configuration file (<span class="guilabel">Import .qcf File</span>).
 On the installation media that came with your device, the
 device configurations are stored in folders. Therefore, select the
-item <em>Import Folder</em>.</p></li>
+item <span class="guilabel">Import Folder</span>.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/1000000000000214000000A60483FD84C031337D.png"><img alt="../_images/1000000000000214000000A60483FD84C031337D.png" src="../_images/1000000000000214000000A60483FD84C031337D.png" style="width: 14.076cm; height: 4.392cm;" /></a>
 <ol class="arabic simple" start="3">
@@ -292,15 +278,16 @@ these are always imported into the current project.</p>
 </div>
 </section>
 <section id="export-device-configuration">
-<h2>Export Device Configuration<a class="headerlink" href="#export-device-configuration" title="Permalink to this headline"></a></h2>
+<h3>Export Device Configuration<a class="headerlink" href="#export-device-configuration" title="Permalink to this headline"></a></h3>
 <p>You can also export device configurations. If you would like to give a
 device configuration to employees or if you need the send a device
 configuration to the CETONI support staff, then you should export a
-device configuration as compressed <em>.qcf</em> file. To export a device
-configuration, select the main menu item <em>Device → Export
-Configuration</em>.</p>
+device configuration as compressed <code class="file docutils literal notranslate"><span class="pre">.qcf</span></code> file. To export a device
+configuration, select the main menu item
+<span class="menuselection">Device → Export Configuration</span>.</p>
 <p><a class="reference internal" href="../_images/1000000000000176000000AAFAC8C916053B5D6A.png"><img alt="Figure 1.5: Export device configuration" src="../_images/1000000000000176000000AAFAC8C916053B5D6A.png" style="width: 9.895cm; height: 4.498cm;" /></a></p>
 <p>Device configurations are exported as compressed <code class="file docutils literal notranslate"><span class="pre">*.qcf</span></code> files.</p>
+</section>
 </section>
 <section id="cetoni-elements-the-basics">
 <h2>CETONI Elements – The Basics<a class="headerlink" href="#cetoni-elements-the-basics" title="Permalink to this headline"></a></h2>
@@ -547,7 +534,7 @@ button in the toolbar to call the Standard Perspective
 </section>
 <section id="creating-perspectives">
 <h3>Creating Perspectives<a class="headerlink" href="#creating-perspectives" title="Permalink to this headline"></a></h3>
-<p><a class="reference internal" href="../_images/10002D67000034EB000034EBF8FD72807B3DC1BA.svg"><img alt="image23" src="../_images/10002D67000034EB000034EBF8FD72807B3DC1BA.svg" width="100" /></a></p>
+<a class="reference internal image-reference" href="../_images/10002D67000034EB000034EBF8FD72807B3DC1BA.svg"><img alt="../_images/10002D67000034EB000034EBF8FD72807B3DC1BA.svg" class="align-left" src="../_images/10002D67000034EB000034EBF8FD72807B3DC1BA.svg" width="60" /></a>
 <p>To create a perspective, click the <span class="guilabel">Create Perspective</span>
 button in the toolbar. Then enter a unique name for this perspective in
 the input dialog and click <span class="guilabel">OK</span>.</p>
@@ -592,9 +579,9 @@ automatically displayed when an event is written to the log.</p>
 <p><a class="reference internal" href="../_images/100002010000026700000079181DA868FE965CCF.png"><img alt="Figure : Event Log View" src="../_images/100002010000026700000079181DA868FE965CCF.png" style="width: 15.965cm; height: 3.14cm;" /></a></p>
 <p><a class="reference internal" href="../_images/100004F9000034EB000034EB95984B664DF6577B.svg"><img alt="image27" height="1.499cm" src="../_images/100004F9000034EB000034EB95984B664DF6577B.svg" width="1.499cm" /></a></p>
 <p>You can clear the event log by
-pressing the <em>Clear Event Log</em> button in the upper right corner of the
+pressing the <span class="guilabel">Clear Event Log</span> button in the upper right corner of the
 screen (see figure).</p>
-<p><a class="reference internal" href="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg"><img alt="image28" src="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg" width="100" /></a></p>
+<a class="reference internal image-reference" href="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg"><img alt="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg" class="align-left" src="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg" width="60" /></a>
 <p>By clicking the <em>Export To File</em> button, you can export the
 contents of the event log to a text file. After you have assigned a file
 name, the file is saved and you can open it in any text editor.</p>
@@ -686,48 +673,39 @@ project name <strong>❶</strong>. Then select whether you want to copy the sett
 the current project into the new project (<em>Copy current project
 settings</em>) or whether you want to start with an empty project (<em>Create
 empty project</em>) <strong>❷</strong>.</p>
-<p><em>Then select the location where the project folder is to be created.If
-the checkboxUse default location***❸*</em><em>is checked, the project
-will be created in theProjectsdirectory of the CETONI Elements data
-folder.</em><em>If you want to select a differentstoragelocation, for
+<p>Then select the location where the project folder is to be created. If
+the checkbox <span class="guilabel">Use default location</span> ❸ is checked, the project
+will be created in the <code class="file docutils literal notranslate"><span class="pre">Projects</span></code> directory of the CETONI Elements data
+folder. If you want to select a different storage location, for
 example, to save the project on an external device, remove the check
-mark***❸*</em><em>and selectthe locationby clicking
-theBrowsebutton***❹*</em><em>.</em></p>
-<p><em>Complete the creation of the new project by clicking
-OK***❺*</em><em>.</em></p>
+mark ❸ and select the location by clicking the <span class="guilabel">Browse</span> button ❹.</p>
+<p>Complete the creation of the new project by clicking <span class="guilabel">OK</span> ❺.</p>
 <p><a class="reference internal" href="../_images/100000000000025000000166DB408F1FB7BB2D47.png"><img alt="Figure 1.36: Configuration dialog for creation of a new project" src="../_images/100000000000025000000166DB408F1FB7BB2D47.png" style="width: 15.663cm; height: 9.472cm;" /></a></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg"><img alt="image35" height="1.799cm" src="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg" width="1.799cm" /></a></p></td>
-<td><p><strong>Important</strong>. Save project data, such as scripts,
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Save project data, such as scripts,
 images, log files, etc., in the project directory or
 subdirectories whenever possible. This is the only way
 to ensure that all important data is exported or saved
-during project export.</p></td>
-</tr>
-</tbody>
-</table>
+during project export.</p>
+</div>
 </section>
 <section id="open-an-existing-project">
 <h3>Open an existing project<a class="headerlink" href="#open-an-existing-project" title="Permalink to this headline"></a></h3>
-<p><em>Toopen an existingproject, select the menu itemFile → Open
-Projectfrom the main menu.</em></p>
+<p>To open an existing project, select the menu item
+<span class="menuselection">File → Open Project</span> from the main menu.</p>
 <p><a class="reference internal" href="../_images/1000000000000170000000A7C5E2BBA82D900D3D.png"><img alt="Figure 1.37: Open an existing project" src="../_images/1000000000000170000000A7C5E2BBA82D900D3D.png" style="width: 9.737cm; height: 4.419cm;" /></a></p>
-<p><em>In the dialogwindowthat is
-now displayed, you can use the selection box</em><strong>❶</strong><em>to select a
+<p>In the dialog window that is
+now displayed, you can use the selection box ❶ to select a
 project from the standard project directory. You can also select a
-project by typing the project name into theselection box. The
+project by typing the project name into the selection box. The
 selection box supports you while typing, through the display of matching
 projects. If your project is not stored in the default directory, click
-theBrowsebutton</em><strong>❷</strong><em>. You can then select a project directory
-with the help of a directory selection dialogwindow(for example, on
-an external device).</em></p>
+the Browse button ❷. You can then select a project directory
+with the help of a directory selection dialog window (for example, on
+an external device).</p>
 <p><a class="reference internal" href="../_images/100000000000020B00000124D393F3498C85002B.png"><img alt="Figure 1.38: Dialog for opening an existing project" src="../_images/100000000000020B00000124D393F3498C85002B.png" style="width: 13.838cm; height: 7.726cm;" /></a></p>
-<p><em>Then open the new project by clicking OK***❸*</em><em>.</em></p>
+<p>Then open the new project by clicking <span class="guilabel">OK</span> ❸.</p>
 </section>
 <section id="export-current-project">
 <h3>Export current project<a class="headerlink" href="#export-current-project" title="Permalink to this headline"></a></h3>
@@ -746,21 +724,14 @@ of the project❶are to be exported.</p>
 <p>Click the
 <em>Select All</em> <em>❷</em>or <em>Select None</em> <em>❸</em>buttons to select all elements
 or no element.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg"><img alt="image38" height="1.799cm" src="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg" width="1.799cm" /></a></p></td>
-<td><p><strong>Important</strong>. Exporting directories with large amounts
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Exporting directories with large amounts
 of data, e.g. Pictures and Videos directories, leads to
 large project files and longer times for the export of
 a project. Export such directories only if it is
-necessary for the transfer of data.</p></td>
-</tr>
-</tbody>
-</table>
+necessary for the transfer of data.</p>
+</div>
 <p>During the export, you will be informed about the current state of the
 export by the <em>EventLog❶</em>, the <em>ProgressWindow❷,</em> and the
 Status Line <em>❸</em>.</p>
@@ -779,19 +750,12 @@ You will then see a window where you enter the name under which the
 imported project should be stored in your CETONI Elements project
 directory.</p>
 <p><a class="reference internal" href="../_images/10000201000001B00000009E14CEAFCC900E13F3.png"><img alt="Figure 1.43: Enter project name" src="../_images/10000201000001B00000009E14CEAFCC900E13F3.png" style="width: 11.434cm; height: 4.182cm;" /></a></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg"><img alt="image41" height="1.799cm" src="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg" width="1.799cm" /></a></p></td>
-<td><p><strong>IMPORTANT</strong>. Assign a unique project name. If you use
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Assign a unique project name. If you use
 a name for which a project already exists in the
-project directory, an import is not possible.</p></td>
-</tr>
-</tbody>
-</table>
+project directory, an import is not possible.</p>
+</div>
 <p>During the import, you will be informed about the current state of the
 import by the <em>EventLog❶</em>, the <em>ProgressWindow❷</em>and the
 <em>StatusLine❸</em>.</p>
@@ -842,21 +806,14 @@ the design of the graphical interface.</p>
 <p>You can customize accent color by selecting a color from the
 palette of predefined colors <em>❷</em> or by defining your own color using the
 <em>Custom Color</em>button <em>❸</em>.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg"><img alt="image46" height="1.799cm" src="../_images/10000D67000004F6000004F6259481FFE44F65EA1.svg" width="1.799cm" /></a></p></td>
-<td><p><strong>Important</strong>. Adjusting the graphical user interface
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Adjusting the graphical user interface
 after a change blocks the application for a short time.
 You should therefore not perform these changes if you
 are working with devices or if a critical control
-application / script is active.</p></td>
-</tr>
-</tbody>
-</table>
+application / script is active.</p>
+</div>
 <p>Using the <em>Color Theme</em> selection box, you can switch the complete color
 design of the application between different themes. For example, you can
 switch between a Light Theme and a Dark Theme to adapt the application
@@ -913,19 +870,12 @@ the corresponding cell of the third column and entering the password.</p>
 <p>When you
 have finished the configuration, click the <em>OK</em> button to close the
 dialog and save the configuration.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000201000000300000003031E742E674D59307.png"><img alt="image52" src="../_images/10000201000000300000003031E742E674D59307.png" style="width: 1.799cm; height: 1.799cm;" /></a></p></td>
-<td><p><strong>Important</strong>. The configuration is saved in the
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The configuration is saved in the
 current project. This means that the configuration of
-the interface is project-specific and not global.</p></td>
-</tr>
-</tbody>
-</table>
+the interface is project-specific and not global.</p>
+</div>
 </section>
 <section id="switching-ui-access-mode">
 <h3>Switching UI Access Mode<a class="headerlink" href="#switching-ui-access-mode" title="Permalink to this headline"></a></h3>
@@ -946,7 +896,7 @@ then select the default configuration.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Intro_EN/Intro_EN.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to CETONI Elements documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,7 +1,7 @@
 CETONI Elements - An Overview
 =============================
 
-Initial Operation
+First Steps
 -----------------
 
 The first time the software is started, a default configuration is
@@ -11,31 +11,6 @@ startup screen (figure below).
 
 |Figure 1.1: First start of CETONI Elements – Startup Screen|
 
-You have
-to install and load a device configuration, in order to be able to
-control your devices with the software. A device configuration is a
-collection of configuration files, which describe the configuration of
-all devices and modules, which together form a complex system or device.
-In the startup screen you can see all ways to load a valid device
-configuration:
-
-- **Create Configuration**
-   This button starts the Device
-   Configurator that lets you create arbitrary device configurations
-   yourself. More information on creating device configurations can be
-   found in the device configurator documentation
-- **Open Configuration**
-   This allows you to load an existing device
-   configuration that was previously installed on your system.
--  **Import Configuration**
-    Select this menu item to install a device
-    configuration from a disk or USB-stick (eg from CETONI Elements
-    installation CD) – see section *Import Device Configuration*
--  **Start Demo**
-    If you want to start the application in demo mode, eg
-    for presentations and tests or if you currently have no real
-    equipment, then click this button.
-
 .. admonition:: Important
    :class: note
 
@@ -43,6 +18,9 @@ configuration:
    update of the software, the default configuration is     
    loaded, and the start-up screen appears.
 
+If you want to start the application in demo mode, eg
+for presentations and tests or if you currently have no real
+equipment, then click the :guilabel:`Start Demo` button.
 
 License Keys
 ------------
@@ -98,24 +76,52 @@ from the main menu. It is not possible to remove individual licenses,
 you can only remove all licenses together. After removing the licenses,
 you will work with a demo license again.
 
-Create Device Configuration
+Device Configurations
 ---------------------------
 
-|image7|
+You have
+to install and load a device configuration, in order to be able to
+control your devices with the software. A device configuration is a
+collection of configuration files, which describe the configuration of
+all devices and modules, which together form a complex system or device.
+In the startup screen you can see all ways to get to a valid device
+configuration:
+
+|Figure 1.1: First start of CETONI Elements – Startup Screen|
+
+Create Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/100002010000009600000096EA64110C769BEAC3.png
+   :width: 2cm
+   :height: 2cm
+   :align: left
 
 The *Create Configuration* button allows you to create new
 device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
 Configurator, which is integrated in CETONI Elements. For detailed
-instructions on how to create device configurations, see chapter
-`Fehler: Verweis nicht gefunden <#anchor-8>`__ `Fehler: Verweis nicht
-gefunden <#anchor-8>`__.
+instructions on how to create device configurations, see Device Configurator
+section.
 
-Import Device Configuration
----------------------------
+Open Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|image8|
+This allows you to load an existing device
+configuration that was previously installed on your system.
+
+Import Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/10000201000000960000009603BB5C04B1480424.png
+   :width: 2cm
+   :height: 2cm
+   :align: left
+
+Select this menu item to install a device
+configuration from a disk or USB-stick (eg from CETONI Elements
+installation CD)
 
 For most devices and modules you can create your own device
 configurations with the CETONI Elements Device Configurator. If you have
@@ -132,17 +138,17 @@ Perform the following steps to import an existing device configuration:
    automatically and you don't need to perform the         
    following steps. 
 
-(1) Select the *Device → Import Configuration* menu item from the main
+(1) Select the :menuselection:`Device → Import Configuration` menu item from the main
     menu.
 
 |Figure 1.2: Import device configuration| 
 
 (2) Now select whether you
-    want to import a folder with a device configuration (*Import
-    Folder*) or a compressed device configuration file (:guilabel:`Import .qcf File`). 
+    want to import a folder with a device configuration (:guilabel:`Import Folder`) 
+    or a compressed device configuration file (:guilabel:`Import .qcf File`). 
     On the installation media that came with your device, the
     device configurations are stored in folders. Therefore, select the
-    item *Import Folder*.
+    item :guilabel:`Import Folder`.
 
 .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
    :width: 14.076cm
@@ -173,14 +179,14 @@ start to load.
    these are always imported into the current project. 
 
 Export Device Configuration
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also export device configurations. If you would like to give a
 device configuration to employees or if you need the send a device
 configuration to the CETONI support staff, then you should export a
-device configuration as compressed *.qcf* file. To export a device
-configuration, select the main menu item *Device → Export
-Configuration*.
+device configuration as compressed :file:`.qcf` file. To export a device
+configuration, select the main menu item 
+:menuselection:`Device → Export Configuration`.
 
 |Figure 1.5: Export device configuration|
 
@@ -500,7 +506,9 @@ the perspectives from the main menu. To do this, select the menu item
 Creating Perspectives
 ~~~~~~~~~~~~~~~~~~~~~
 
-|image23|
+.. image:: Pictures/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
+   :width: 60
+   :align: left
 
 To create a perspective, click the :guilabel:`Create Perspective`
 button in the toolbar. Then enter a unique name for this perspective in
@@ -559,10 +567,12 @@ automatically displayed when an event is written to the log.
 |image27|
 
 You can clear the event log by
-pressing the *Clear Event Log* button in the upper right corner of the
+pressing the :guilabel:`Clear Event Log` button in the upper right corner of the
 screen (see figure).
 
-|image28|
+.. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
+   :width: 60
+   :align: left
 
 By clicking the *Export To File* button, you can export the
 contents of the event log to a text file. After you have assigned a file
@@ -679,48 +689,47 @@ the current project into the new project (*Copy current project
 settings*) or whether you want to start with an empty project (*Create
 empty project*) **❷**.
 
-*Then select the location where the project folder is to be created.\ If
-the checkbox\ Use default location\ *\ **❸**\ *is checked, the project
-will be created in the\ Projects\ directory of the CETONI Elements data
-folder.*\ *If you want to select a different\ storage\ location, for
+Then select the location where the project folder is to be created. If
+the checkbox :guilabel:`Use default location` ❸ is checked, the project
+will be created in the :file:`Projects` directory of the CETONI Elements data
+folder. If you want to select a different storage location, for
 example, to save the project on an external device, remove the check
-mark\ *\ **❸**\ *\ and select\ the location\ by clicking
-the\ Browse\ button\ *\ **❹**\ *\ .*
+mark ❸ and select the location by clicking the :guilabel:`Browse` button ❹.
 
-*Complete the creation of the new project by clicking
-OK\ *\ **❺**\ *\ .*
+Complete the creation of the new project by clicking :guilabel:`OK` ❺.
 
 |Figure 1.36: Configuration dialog for creation of a new project|
 
-+-----------+---------------------------------------------------------+
-| |image35| | **Important**. Save project data, such as scripts,      |
-|           | images, log files, etc., in the project directory or    |
-|           | subdirectories whenever possible. This is the only way  |
-|           | to ensure that all important data is exported or saved  |
-|           | during project export.                                  |
-+-----------+---------------------------------------------------------+
+.. admonition:: Important
+   :class: note
+
+   Save project data, such as scripts,      
+   images, log files, etc., in the project directory or    
+   subdirectories whenever possible. This is the only way  
+   to ensure that all important data is exported or saved  
+   during project export. 
 
 Open an existing project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-*To\ open an existing\ project, select the menu item\ File → Open
-Project\ from the main menu.*
+To open an existing project, select the menu item 
+:menuselection:`File → Open Project` from the main menu.
 
 |Figure 1.37: Open an existing project|
 
-*In the dialog\ window\ that is
-now displayed, you can use the selection box*\ **❶**\ *to select a
+In the dialog window that is
+now displayed, you can use the selection box ❶ to select a
 project from the standard project directory. You can also select a
-project by typing the project name into the\ selection box. The
+project by typing the project name into the selection box. The
 selection box supports you while typing, through the display of matching
 projects. If your project is not stored in the default directory, click
-the\ Browse\ button*\ **❷**\ *. You can then select a project directory
-with the help of a directory selection dialog\ window\ (for example, on
-an external device).*
+the Browse button ❷. You can then select a project directory
+with the help of a directory selection dialog window (for example, on
+an external device).
 
 |Figure 1.38: Dialog for opening an existing project|
 
-*Then open the new project by clicking OK\ *\ **❸**\ *\ .*
+Then open the new project by clicking :guilabel:`OK` ❸.
  
 Export current project
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -746,13 +755,14 @@ Click the
 *Select All* *❷*\ or *Select None* *❸*\ buttons to select all elements
 or no element.
 
-+-----------+---------------------------------------------------------+
-| |image38| | **Important**. Exporting directories with large amounts |
-|           | of data, e.g. Pictures and Videos directories, leads to |
-|           | large project files and longer times for the export of  |
-|           | a project. Export such directories only if it is        |
-|           | necessary for the transfer of data.                     |
-+-----------+---------------------------------------------------------+
+.. admonition:: Important
+   :class: note
+
+   Exporting directories with large amounts 
+   of data, e.g. Pictures and Videos directories, leads to 
+   large project files and longer times for the export of  
+   a project. Export such directories only if it is        
+   necessary for the transfer of data. 
 
 During the export, you will be informed about the current state of the
 export by the *E\ vent\ L\ og\ ❶*, the *Progress\ W\ indow\ ❷,* and the
@@ -779,11 +789,12 @@ directory.
 
 |Figure 1.43: Enter project name|
 
-+-----------+---------------------------------------------------------+
-| |image41| | **IMPORTANT**. Assign a unique project name. If you use |
-|           | a name for which a project already exists in the        |
-|           | project directory, an import is not possible.           |
-+-----------+---------------------------------------------------------+
+.. admonition:: Important
+   :class: note
+
+   Assign a unique project name. If you use 
+   a name for which a project already exists in the        
+   project directory, an import is not possible. 
 
 During the import, you will be informed about the current state of the
 import by the *E\ vent\ L\ og\ ❶*, the *Progress\ W\ indow\ ❷*\ and the
@@ -847,13 +858,14 @@ You can customize accent color by selecting a color from the
 palette of predefined colors *❷* or by defining your own color using the
 *Custom Color*\ button *❸*.
 
-+-----------+---------------------------------------------------------+
-| |image46| | **Important**. Adjusting the graphical user interface   |
-|           | after a change blocks the application for a short time. |
-|           | You should therefore not perform these changes if you   |
-|           | are working with devices or if a critical control       |
-|           | application / script is active.                         |
-+-----------+---------------------------------------------------------+
+.. admonition:: Important
+   :class: note
+
+   Adjusting the graphical user interface   
+   after a change blocks the application for a short time. 
+   You should therefore not perform these changes if you   
+   are working with devices or if a critical control       
+   application / script is active.
 
 Using the *Color Theme* selection box, you can switch the complete color
 design of the application between different themes. For example, you can
@@ -930,11 +942,12 @@ When you
 have finished the configuration, click the *OK* button to close the
 dialog and save the configuration.
 
-+-----------+---------------------------------------------------------+
-| |image52| | **Important**. The configuration is saved in the        |
-|           | current project. This means that the configuration of   |
-|           | the interface is project-specific and not global.       |
-+-----------+---------------------------------------------------------+
+.. admonition:: Important
+   :class: note
+
+   The configuration is saved in the        
+   current project. This means that the configuration of   
+   the interface is project-specific and not global. 
 
 Switching UI Access Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -971,12 +984,6 @@ then select the default configuration.
 .. |image6| image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png
    :width: 13.049cm
    :height: 9.079cm
-.. |image7| image:: Pictures/100002010000009600000096EA64110C769BEAC3.png
-   :width: 2cm
-   :height: 2cm
-.. |image8| image:: Pictures/10000201000000960000009603BB5C04B1480424.png
-   :width: 2cm
-   :height: 2cm
 .. |image9| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
    :width: 1.799cm
    :height: 1.799cm
@@ -1083,8 +1090,6 @@ then select the default configuration.
 .. |image22| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
    :width: 1.799cm
    :height: 1.799cm
-.. |image23| image:: Pictures/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
-   :width: 100
 .. |Figure : Create Perspective| image:: Pictures/10000201000000CA00000080463140FE0D508006.png
    :width: 5.346cm
    :height: 3.388cm
@@ -1109,8 +1114,6 @@ then select the default configuration.
 .. |image27| image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
    :width: 1.499cm
    :height: 1.499cm
-.. |image28| image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
-   :width: 100
 .. |Figure : Showing Event Log View| image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
    :width: 11.753cm
    :height: 4.262cm

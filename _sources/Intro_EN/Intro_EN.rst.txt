@@ -1,13 +1,9 @@
 Introduction
 ============
 
-Foreword
---------
-
-Thank you for deciding to purchase a CETONI product. We would like to
-support you with this handbook insofar as possible in your interaction
-with the software. We are directly available for any questions or
-suggestions that you may have.
+CETONI Elements is a modular laboratory automation solution for controlling and 
+automating all CETONI devices and for integrating and automating external 
+devices. 
 
 Symbols and Signal Words Used
 -----------------------------
