@@ -34,7 +34,6 @@ demo license. To view your installed licenses, select
 
 .. image:: Pictures/1000020100000174000000D78571510911B97AEE.png
    :width: 9.846cm
-   :height: 5.69cm
 
 The demo license allows you to create device configurations with
 simulated devices and to test all functions of the software.
@@ -66,7 +65,6 @@ of the application, you can display an overview of the current licenses:
 
 .. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
    :width: 12.494cm
-   :height: 8.124cm
 
 Remove Licenses
 ~~~~~~~~~~~~~~~
@@ -152,7 +150,6 @@ Perform the following steps to import an existing device configuration:
 
 .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
    :width: 14.076cm
-   :height: 4.392cm
 
 (3) In the dialog that now opens, select the *DeviceConfiguration*
     directory on the installation CD or browse to another directory
@@ -218,7 +215,6 @@ The software manual can be accessed via the application's help menu
 .. figure:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
    :alt: Figure 1.6: Access software manual
    :width: 5.821cm
-   :height: 4.366cm
 
 .. admonition:: Important
    :class: note
@@ -452,7 +448,6 @@ menu of the view group.
 .. image:: Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
    :alt: 
    :width: 14.504cm
-   :height: 4.339cm
 
 
 Perspectives
@@ -494,7 +489,6 @@ the perspectives from the main menu. To do this, select the menu item
 .. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
    :alt: 
    :width: 14.531cm
-   :height: 6.378cm
 
 .. tip::
    If you have lost the overview when arranging  
@@ -546,7 +540,6 @@ displayed and display a menu for selecting the view (see figure below).
 
 .. image:: Pictures/10000201000000E10000005F05B9041439F8E1EF.png
    :width: 5.955cm
-   :height: 2.514cm
 
 .. tip::
    The sidebar, and also all toolbars, can be    
@@ -580,7 +573,6 @@ name, the file is saved and you can open it in any text editor.
 
 .. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
    :width: 15.88cm
-   :height: 2.249cm
 
 If you want to display the event log view manually, select *Window →
 Show View → Event Log* from the main menu of the application.
@@ -621,7 +613,6 @@ Elements with your device(s).
 .. figure:: Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
    :alt: Connecting your devices
    :width: 8.334cm
-   :height: 4.71cm
 
 .. admonition:: Important
    :class: note
@@ -966,273 +957,108 @@ then select the default configuration.
 
 .. |Figure 1.1: First start of CETONI Elements – Startup Screen| image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
    :width: 100%
-.. |image1| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image2| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image3| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image4| image:: Pictures/10000201000001D6000000AE5ED5B8BD0CA17D65.png
    :width: 12.441cm
-   :height: 4.606cm
 .. |image5| image:: Pictures/10000201000001ED00000145C29F8E208FCC285C.png
    :width: 13.049cm
-   :height: 8.602cm
 .. |image6| image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png
    :width: 13.049cm
-   :height: 9.079cm
-.. |image9| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image10| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image11| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.2: Import device configuration| image:: Pictures/10000000000001310000010F1E67A086173830FE.png
    :width: 8.07cm
-   :height: 7.17cm
 .. |Figure 1.3: Assign a configuration name| image:: Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
    :width: 11.43cm
-   :height: 4.18cm
 .. |image12| image:: Pictures/10000201000002810000018F6EE2B3E17DBB7FD1.png
    :width: 12.961cm
-   :height: 8.059cm
 .. |Figure 1.4: Restart application| image:: Pictures/100000000000020900000097955C208F8F030D3B.png
    :width: 13.785cm
-   :height: 3.995cm
-.. |image13| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image14| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image15| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.5: Export device configuration| image:: Pictures/1000000000000176000000AAFAC8C916053B5D6A.png
    :width: 9.895cm
-   :height: 4.498cm
-.. |image16| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image17| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image18| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.7: Displaying the installed software version| image:: Pictures/100000000000023E0000011C5BF7D6D89E212C48.png
    :width: 15.187cm
-   :height: 7.514cm
 .. |Figure 1.9: Displaying Views via the Menu| image:: Pictures/10000201000001BF000000EB5BF27DBB42FBAF06.png
    :width: 11.83cm
-   :height: 6.219cm
 .. |Figure 1.10: Displaying Views for Devices| image:: Pictures/1000020100000221000000ABD10E7731B686C5B3.png
    :width: 14.425cm
-   :height: 4.526cm
 .. |Figure 1.11: Move View via Drag & Drop| image:: Pictures/100002010000036A000001C8BBF4BBC66184FB09.png
    :width: 100%
 .. |Figure 1.12: Detach view from its position via context menu| image:: Pictures/10000201000001310000009DE8129AEE37B00CF4.png
    :width: 8.073cm
-   :height: 4.156cm
 .. |Figure 1.13: Drop target markers| image:: Pictures/10000201000002890000014BCF8FC8087ECC35C5.png
    :width: 100%
 .. |Figure 1.14: Drop Preview Display| image:: Pictures/10000201000002890000014B5699FFD5D09BAADF.png
    :width: 16.201cm
-   :height: 8.262cm
 .. |Figure 1.15: View inserted on the left side| image:: Pictures/10000201000002890000014BC4687441A2A645E3.png
    :width: 16.201cm
-   :height: 8.262cm
 .. |Figure 1.16: View Group| image:: Pictures/1000020100000252000000C9F4392403DF96FF6D.png
    :width: 15.722cm
-   :height: 5.32cm
 .. |Figure 1.17: Drop target markers| image:: Pictures/1000020100000289000000F51BAC327624A0EC0B.png
    :width: 16.201cm
-   :height: 6.114cm
 .. |Figure 1.18: Insert View as Additional Tab| image:: Pictures/1000020100000289000000F59743DC452A74F108.png
    :width: 16.201cm
-   :height: 6.114cm
 .. |Figure 1.19: Moving View Groups| image:: Pictures/10000201000002E4000001531CF5648A1020DCB4.png
    :width: 16.201cm
-   :height: 7.421cm
 .. |Figure 1.20: Undock View Group| image:: Pictures/1000020100000264000000FC1AB96C910DA572FD.png
    :width: 16.2cm
-   :height: 6.669cm
 .. |Figure 1.21: Closing View| image:: Pictures/1000020100000264000000BF3127F5F8B75874DD.png
    :width: 16.2cm
-   :height: 5.055cm
 .. |Figure 1.22: Closing View Group| image:: Pictures/1000020100000264000000BF9FA7CB8EE15E4D72.png
    :width: 16.2cm
-   :height: 5.055cm
 .. |Figure 1.23: Opening the View Menu of a View Group| image:: Pictures/100002010000026D000000D2FF18CEC652F6FACF.png
    :width: 16.201cm
-   :height: 5.477cm
 .. |Figure 1.24: Close all inactive views of a group| image:: Pictures/10000201000002000000006B0A134CD1AC8B3316.png
    :width: 13.552cm
-   :height: 2.833cm
 .. |image19| image:: Pictures/100002010000021A0000002B78422E539BC46AD1.png
    :width: 14.24cm
-   :height: 1.138cm
 .. |Figure 1.26: Opening existing perspective| image:: Pictures/1000020100000220000000E4C70099429E65895A.png
    :width: 14.399cm
-   :height: 6.034cm
-.. |image20| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image21| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image22| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure : Create Perspective| image:: Pictures/10000201000000CA00000080463140FE0D508006.png
    :width: 5.346cm
-   :height: 3.388cm
 .. |Figure : Manage Perspectives| image:: Pictures/10000201000001A9000000C56CAD6237DD6652DC.png
    :width: 11.248cm
-   :height: 5.214cm
 .. |Figure : Deleting Perspectives| image:: Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
    :width: 12.811cm
-   :height: 6.193cm
-.. |image24| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image25| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image26| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure : Event Log View| image:: Pictures/100002010000026700000079181DA868FE965CCF.png
    :width: 15.965cm
-   :height: 3.14cm
 .. |image27| image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
    :width: 1.499cm
-   :height: 1.499cm
 .. |Figure : Showing Event Log View| image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
    :width: 11.753cm
-   :height: 4.262cm
 .. |image29| image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
    :width: 100%
-.. |image30| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image31| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image32| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.34: Browse project folder| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
    :width: 10.398cm
-   :height: 4.763cm
 .. |Figure 1.35: Creating new project| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
    :width: 10.398cm
-   :height: 4.763cm
 .. |Figure 1.36: Configuration dialog for creation of a new project| image:: Pictures/100000000000025000000166DB408F1FB7BB2D47.png
    :width: 15.663cm
-   :height: 9.472cm
-.. |image33| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image34| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image35| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.37: Open an existing project| image:: Pictures/1000000000000170000000A7C5E2BBA82D900D3D.png
    :width: 9.737cm
-   :height: 4.419cm
 .. |Figure 1.38: Dialog for opening an existing project| image:: Pictures/100000000000020B00000124D393F3498C85002B.png
    :width: 13.838cm
-   :height: 7.726cm
 .. |Figure 1.39: Open the project export window| image:: Pictures/10000201000001A8000000BB1B03350B9BEA1D79.png
    :width: 11.222cm
-   :height: 4.949cm
 .. |Figure 1.40: Selection of project directories for export| image:: Pictures/1000020100000298000001FB7D3433258DF59F1D.png
    :width: 16.201cm
-   :height: 12.37cm
-.. |image36| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image37| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image38| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.41: Status display project export| image:: Pictures/10000201000002E90000011C77337172831B2410.png
    :width: 16.201cm
-   :height: 6.175cm
 .. |Figure 1.42: Selecting project import| image:: Pictures/10000201000001AA000000C9957BE44F06738675.png
    :width: 11.275cm
-   :height: 5.32cm
 .. |Figure 1.43: Enter project name| image:: Pictures/10000201000001B00000009E14CEAFCC900E13F3.png
    :width: 11.434cm
-   :height: 4.182cm
-.. |image39| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image40| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image41| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.44: Status display project import| image:: Pictures/10000201000002E90000011C77337172831B2410.png
    :width: 16.201cm
-   :height: 6.175cm
 .. |image42| image:: Pictures/10000201000001730000009795A0B0ECA50C9747.png
    :width: 9.82cm
-   :height: 3.995cm
 .. |Figure 1.45: Settings dialog| image:: Pictures/100002010000021200000126AC99A172AA6E85CC.png
    :width: 14.028cm
-   :height: 7.781cm
 .. |image43| image:: Pictures/10000201000002890000017285BB5129C447B7B6.png
    :width: 16.201cm
-   :height: 9.236cm
-.. |image44| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image45| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image46| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.46: Open UI Access Configuration| image:: Pictures/1000020100000161000000ADAFFCD2193104E170.png
    :width: 9.343cm
-   :height: 4.579cm
 .. |Figure 1.47: Configuration dialog for UI access configuration| image:: Pictures/100002010000023700000105D086995A6867BEE3.png
    :width: 15.007cm
-   :height: 6.907cm
-.. |image47| image:: Pictures/100002010000003000000030EF0B0BADA39D31CB.png
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image48| image:: Pictures/100002010000003000000030EF0B0BADA39D31CB.png
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image49| image:: Pictures/100002010000003000000030EF0B0BADA39D31CB.png
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.48: Enter password for UI access mode selection| image:: Pictures/1000020100000283000000ABD9FB0393AF480FE9.png
    :width: 16.201cm
-   :height: 4.307cm
-.. |image50| image:: Pictures/10000201000000300000003031E742E674D59307.png
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image51| image:: Pictures/10000201000000300000003031E742E674D59307.png
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image52| image:: Pictures/10000201000000300000003031E742E674D59307.png
-   :width: 1.799cm
-   :height: 1.799cm
 .. |Figure 1.49: Switching UI Access Mode| image:: Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
    :width: 9.052cm
-   :height: 4.42cm
+

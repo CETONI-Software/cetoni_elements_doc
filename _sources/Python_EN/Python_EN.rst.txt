@@ -408,7 +408,6 @@ writing Python code.
 
 .. image:: Pictures/10000201000002220000012B6A5FF31AA3060F79.png
    :width: 14.452cm
-   :height: 7.915cm
 
 The editor has the following features
 
@@ -810,208 +809,38 @@ devices and application objects.
     :members-only:
     :membergroups: scripting
 
-.. |image1| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image2| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image3| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image4| image:: Pictures/10000201000001F300000184E6B4E02B1D179B7A.png
-.. |image5| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image6| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image7| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image8| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image9| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image10| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image11| image:: Pictures/10000201000001EB00000073BDF3384E8179E4AB.png
    :width: 12.996cm
-   :height: 3.043cm
 .. |image12| image:: Pictures/10000201000001F7000000E586F7E58BD20D8C3D.png
    :width: 13.314cm
-   :height: 6.061cm
-.. |image13| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image14| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image15| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image16| image:: Pictures/10000201000001F80000008CC938D11BE28032EE.png
    :width: 13.34cm
-   :height: 3.704cm
 .. |image17| image:: Pictures/10000201000001EF00000062B50A9A0A013ADF8C.png
    :width: 13.102cm
-   :height: 2.593cm
 .. |image18| image:: Pictures/10000201000001F80000008C5125B8F7F53F8BDD.png
    :width: 13.34cm
-   :height: 3.704cm
 .. |image19| image:: Pictures/100002010000025D00000083173EACC09611440F.png
    :width: 16.013cm
-   :height: 3.468cm
 .. |image20| image:: Pictures/100002010000021E0000007B7A4EF3D62F1DF696.png
    :width: 14.346cm
-   :height: 3.254cm
 .. |image21| image:: Pictures/10000201000001F100000088C0C4A7C7C9B93CC8.png
    :width: 13.155cm
-   :height: 3.598cm
 .. |image22| image:: Pictures/10000201000002260000007A3CE2023C617A29C5.png
    :width: 14.557cm
-   :height: 3.23cm
-.. |image23| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image24| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image25| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image26| image:: Pictures/1000020100000240000000AEB0E9BCC2CF19CA4A.png
    :width: 15.245cm
-   :height: 4.606cm
-.. |image27| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image28| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image29| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image30| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image31| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image32| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image33| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image34| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image35| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image36| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image37| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image38| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image39| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image40| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image41| image:: Pictures/10000E5F000004F6000004F6E6C66567E26292A2.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image44| image:: Pictures/10000201000001E7000000A78827B788FF6CF36C.png
    :width: 12.891cm
-   :height: 4.42cm
-.. |image45| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image46| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image47| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image48| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image49| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image50| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image51| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image52| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image53| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image54| image:: Pictures/10000201000001950000009E1928E5F4B3BBCE66.png
    :width: 10.719cm
-   :height: 4.182cm
 .. |image55| image:: Pictures/10000201000001F60000006B04A15868149985AC.png
    :width: 13.287cm
-   :height: 2.833cm
-.. |image56| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image57| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image58| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image59| image:: Pictures/1000020100000299000000B54BF487EBAF7E8E66.png
    :width: 16.201cm
-   :height: 4.408cm
 .. |image60| image:: Pictures/10000201000001D000000061F880AB480C04AA56.png
    :width: 12.28cm
-   :height: 2.566cm
-.. |image61| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image62| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image63| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
 .. |image64| image:: Pictures/100002010000018E0000004E45BDDA2F2CB1A1E9.png
    :width: 10.534cm
-   :height: 2.064cm
 .. |image65| image:: Pictures/1000020100000157000000475414DB3324BBC74A.png
    :width: 9.079cm
-   :height: 1.879cm
-.. |image66| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image67| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image68| image:: Pictures/100010E9000004F6000004F63DD8DD0424FEE418.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image69| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image70| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
-.. |image71| image:: Pictures/10000D67000004F6000004F6259481FFE44F65EA.svg
-   :width: 1.799cm
-   :height: 1.799cm
