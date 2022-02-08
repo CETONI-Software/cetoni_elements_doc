@@ -275,7 +275,7 @@ function that provides a clearer display of an object’s properties and
 methods. In the figure below you can see the call of <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.help()</span></code>.
 The console shows the <code class="code docutils literal notranslate"><span class="pre">Properties</span></code> ❶ and methods (<code class="code docutils literal notranslate"><span class="pre">Slots</span></code> ❷) of the
 <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object:</p>
-<a class="reference internal image-reference" href="../_images/10000201000002260000011A8780E1969FECAAC9.png"><img alt="../_images/10000201000002260000011A8780E1969FECAAC9.png" src="../_images/10000201000002260000011A8780E1969FECAAC9.png" style="width: 14.557cm; height: 7.465cm;" /></a>
+<a class="reference internal image-reference" href="../_images/10000201000002260000011A8780E1969FECAAC9.png"><img alt="../_images/10000201000002260000011A8780E1969FECAAC9.png" src="../_images/10000201000002260000011A8780E1969FECAAC9.png" style="width: 14.557cm;" /></a>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
@@ -492,16 +492,17 @@ the global variable <code class="code docutils literal notranslate"><span class=
 <span class="n">counter</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="k">global</span> <span class="n">counter</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
-   <span class="n">counter</span> <span class="o">=</span> <span class="n">i</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">return</span>
+   <span class="k">global</span> <span class="n">counter</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+      <span class="n">counter</span> <span class="o">=</span> <span class="n">i</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="k">return</span>
+
 <span class="k">def</span> <span class="nf">script_abort</span><span class="p">():</span>
-<span class="k">global</span> <span class="n">counter</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;script_abort() after &quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="s2">&quot; loops&quot;</span><span class="p">)</span>
-<span class="k">return</span>
+   <span class="k">global</span> <span class="n">counter</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;script_abort() after &quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="s2">&quot; loops&quot;</span><span class="p">)</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 </section>
@@ -527,12 +528,12 @@ be aborted cleanly:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
-<span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
-   <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
-   <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
-<span class="k">return</span>
+   <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
+   <span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
+   <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <p>To fix this problem the call to <code class="code docutils literal notranslate"><span class="pre">socket.recv()</span></code> should have a timeout.
@@ -541,16 +542,16 @@ This has been implemented in the following example using the
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
-<span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
-   <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
-   <span class="n">s</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-   <span class="k">try</span><span class="p">:</span>
-      <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
-   <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-<span class="k">return</span>
+   <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
+   <span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
+   <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+      <span class="k">try</span><span class="p">:</span>
+         <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
+      <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 </section>
@@ -588,8 +589,8 @@ function <code class="code docutils literal notranslate"><span class="pre">hello
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hello</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
-<span class="k">return</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <p>The output of the script appears both in the event log:</p>
@@ -617,10 +618,10 @@ script in the application as follows:</p>
 <span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">reload</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">reload</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span> <span class="c1"># trigger explicit reload of hello module</span>
-<span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
-<span class="n">hello</span><span class="o">.</span><span class="n">hellouniverse</span><span class="p">()</span>
-<span class="k">return</span>
+   <span class="n">reload</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span> <span class="c1"># trigger explicit reload of hello module</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">hellouniverse</span><span class="p">()</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <p>The script is now executed without errors.</p>
@@ -646,12 +647,12 @@ calculated value back into the script variable:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">flow</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
-<span class="n">flow</span> <span class="o">=</span> <span class="n">flow</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">,</span> <span class="n">flow</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
-<span class="k">return</span>
+   <span class="n">flow</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
+   <span class="n">flow</span> <span class="o">=</span> <span class="n">flow</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">,</span> <span class="n">flow</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <div class="note admonition">
@@ -671,10 +672,10 @@ syringe is emptied via <code class="code docutils literal notranslate"><span cla
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">pump</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Pump1&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pump</span><span class="p">)</span>
-<span class="n">pump</span><span class="o">.</span><span class="n">emptySyringe</span><span class="p">()</span>
-<span class="k">return</span>
+   <span class="n">pump</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Pump1&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">pump</span><span class="p">)</span>
+   <span class="n">pump</span><span class="o">.</span><span class="n">emptySyringe</span><span class="p">()</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <p>It is also possible to create lists in Python and to store them in a
@@ -683,8 +684,8 @@ stores them in the script variable <code class="code docutils literal notranslat
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Positions&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
-<span class="k">return</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Positions&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 <p>Instead of simple values, it is possible to create lists of devices and
@@ -694,10 +695,10 @@ This list is stored in the script variable <code class="code docutils literal no
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="n">di1</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN1&quot;</span><span class="p">)</span>
-<span class="n">di2</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN2&quot;</span><span class="p">)</span>
-<span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$DigitalInputs&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">di1</span><span class="p">,</span> <span class="n">di2</span><span class="p">])</span>
-<span class="k">return</span>
+   <span class="n">di1</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN1&quot;</span><span class="p">)</span>
+   <span class="n">di2</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN2&quot;</span><span class="p">)</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$DigitalInputs&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">di1</span><span class="p">,</span> <span class="n">di2</span><span class="p">])</span>
+   <span class="k">return</span>
 </pre></div>
 </div>
 </section>
@@ -716,21 +717,21 @@ Elements can be used to implement a barcode scanner using the
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="c1"># Main script function</span>
 <span class="linenos"> 7</span><span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
-<span class="linenos"> 8</span><span class="n">barcode</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="linenos"> 9</span><span class="n">camera</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s1">&#39;Qmix_CAM_1&#39;</span><span class="p">)</span>
-<span class="linenos">10</span><span class="n">qimage</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">capturedPreviewImage</span><span class="p">()</span>
-<span class="linenos">11</span><span class="n">frame</span> <span class="o">=</span> <span class="n">qimage2ndarray</span><span class="o">.</span><span class="n">rgb_view</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span>
-<span class="linenos">12</span><span class="n">barcodes</span> <span class="o">=</span> <span class="n">pyzbar</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-<span class="linenos">13</span><span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">barcodes</span><span class="p">:</span>
-<span class="linenos">14</span>   <span class="n">barcode</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="linenos">15</span>   <span class="k">break</span>
+<span class="linenos"> 8</span>   <span class="n">barcode</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos"> 9</span>   <span class="n">camera</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s1">&#39;Qmix_CAM_1&#39;</span><span class="p">)</span>
+<span class="linenos">10</span>   <span class="n">qimage</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">capturedPreviewImage</span><span class="p">()</span>
+<span class="linenos">11</span>   <span class="n">frame</span> <span class="o">=</span> <span class="n">qimage2ndarray</span><span class="o">.</span><span class="n">rgb_view</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span>
+<span class="linenos">12</span>   <span class="n">barcodes</span> <span class="o">=</span> <span class="n">pyzbar</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+<span class="linenos">13</span>   <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">barcodes</span><span class="p">:</span>
+<span class="linenos">14</span>      <span class="n">barcode</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="linenos">15</span>      <span class="k">break</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1"># output</span>
-<span class="linenos">18</span><span class="k">if</span> <span class="n">barcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos">19</span>   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="n">barcode</span><span class="p">)</span>
-<span class="linenos">20</span><span class="k">else</span><span class="p">:</span>
-<span class="linenos">21</span>   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="linenos">22</span><span class="k">return</span>
+<span class="linenos">17</span>   <span class="c1"># output</span>
+<span class="linenos">18</span>   <span class="k">if</span> <span class="n">barcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">19</span>      <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="n">barcode</span><span class="p">)</span>
+<span class="linenos">20</span>   <span class="k">else</span><span class="p">:</span>
+<span class="linenos">21</span>      <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="linenos">22</span>   <span class="k">return</span>
 </pre></div>
 </div>
 <p>By importing the <code class="file docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, the CETONI Elements camera

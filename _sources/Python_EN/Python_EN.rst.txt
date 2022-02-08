@@ -209,8 +209,6 @@ The console shows the :code:`Properties` ❶ and methods (:code:`Slots` ❷) of 
 
 .. image:: Pictures/10000201000002260000011A8780E1969FECAAC9.png
    :width: 14.557cm
-   :height: 7.465cm
-
 
 .. tip::
    Use the :code:`dir(object)` and :code:`Object.help()`   
@@ -471,16 +469,17 @@ the global variable :code:`counter`:
    counter = None
 
    def script_exec():
-   global counter
-   for i in range(1000):
-      counter = i
-      print(i)
-      time.sleep(1)
-   return
+      global counter
+      for i in range(1000):
+         counter = i
+         print(i)
+         time.sleep(1)
+      return
+
    def script_abort():
-   global counter
-   print("script_abort() after ", counter, " loops")
-   return
+      global counter
+      print("script_abort() after ", counter, " loops")
+      return
 
 Implementation of the function logic in script_exec()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -510,12 +509,12 @@ be aborted cleanly:
    import socket
 
    def script_exec():
-   HOST = '127.0.0.1'  # The server's hostname or IP address
-   PORT = 65432        # The port used by the server
-   with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-      s.connect((HOST, PORT))
-      data = s.recv(2048)
-   return
+      HOST = '127.0.0.1'  # The server's hostname or IP address
+      PORT = 65432        # The port used by the server
+      with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+         s.connect((HOST, PORT))
+         data = s.recv(2048)
+      return
 
 To fix this problem the call to :code:`socket.recv()` should have a timeout.
 This has been implemented in the following example using the
@@ -526,16 +525,16 @@ This has been implemented in the following example using the
    import socket
 
    def script_exec():
-   HOST = '127.0.0.1'  # The server's hostname or IP address
-   PORT = 65432        # The port used by the server
-   with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-      s.connect((HOST, PORT))
-      s.settimeout(0.5)
-      try:
-         data = s.recv(2048)
-      except socket.timeout as err:
-         print(err)
-   return
+      HOST = '127.0.0.1'  # The server's hostname or IP address
+      PORT = 65432        # The port used by the server
+      with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+         s.connect((HOST, PORT))
+         s.settimeout(0.5)
+         try:
+            data = s.recv(2048)
+         except socket.timeout as err:
+            print(err)
+      return
 
 Script execution errors
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -582,8 +581,8 @@ function :code:`helloworld()`.
    import hello
 
    def script_exec():
-   hello.helloworld()
-   return
+      hello.helloworld()
+      return
 
 The output of the script appears both in the event log:
 
@@ -620,10 +619,10 @@ script in the application as follows:
    from importlib import reload
 
    def script_exec():
-   reload(hello) # trigger explicit reload of hello module
-   hello.helloworld()
-   hello.hellouniverse()
-   return
+      reload(hello) # trigger explicit reload of hello module
+      hello.helloworld()
+      hello.hellouniverse()
+      return
 
 The script is now executed without errors.
 
@@ -653,12 +652,12 @@ calculated value back into the script variable:
    from cetoni_elements import *
 
    def script_exec():
-   flow = ScriptEnv.getVar("$Flow")
-   print(flow)
-   flow = flow + 2;
-   ScriptEnv.setVar("$Flow", flow)
-   print(flow)
-   return
+      flow = ScriptEnv.getVar("$Flow")
+      print(flow)
+      flow = flow + 2;
+      ScriptEnv.setVar("$Flow", flow)
+      print(flow)
+      return
 
 .. admonition:: Important
    :class: note
@@ -682,10 +681,10 @@ syringe is emptied via :code:`pump.emptySyringe()`:
    from cetoni_elements import *
 
    def script_exec():
-   pump = ScriptEnv.getVar("$Pump1")
-   print(pump)
-   pump.emptySyringe()
-   return
+      pump = ScriptEnv.getVar("$Pump1")
+      print(pump)
+      pump.emptySyringe()
+      return
 
 It is also possible to create lists in Python and to store them in a
 script variable. The following example creates a list of 4 values and
@@ -696,8 +695,8 @@ stores them in the script variable :code:`$Positions`:
    from cetoni_elements import *
 
    def script_exec():
-   ScriptEnv.setVar("$Positions", [0, 3.5, 12, 7])
-   return
+      ScriptEnv.setVar("$Positions", [0, 3.5, 12, 7])
+      return
 
 Instead of simple values, it is possible to create lists of devices and
 store them in variables. In the following example a list is created
@@ -709,10 +708,10 @@ This list is stored in the script variable :code:`$DigitalInputs`.
    from cetoni_elements import *
 
    def script_exec():
-   di1 = ScriptEnv.getDevice("Nemesys_S_1_DigIN1")
-   di2 = ScriptEnv.getDevice("Nemesys_S_1_DigIN2")
-   ScriptEnv.setVar("$DigitalInputs", [di1, di2])
-   return
+      di1 = ScriptEnv.getDevice("Nemesys_S_1_DigIN1")
+      di2 = ScriptEnv.getDevice("Nemesys_S_1_DigIN2")
+      ScriptEnv.setVar("$DigitalInputs", [di1, di2])
+      return
 
 Example scripts
 ---------------
@@ -735,21 +734,21 @@ Elements can be used to implement a barcode scanner using the
 
    # Main script function
    def script_exec():
-   barcode = None
-   camera = ScriptEnv.getObject('Qmix_CAM_1')
-   qimage = camera.capturedPreviewImage()
-   frame = qimage2ndarray.rgb_view(qimage)
-   barcodes = pyzbar.decode(frame)
-   for b in barcodes:
-      barcode = b.data.decode('utf-8')
-      break
+      barcode = None
+      camera = ScriptEnv.getObject('Qmix_CAM_1')
+      qimage = camera.capturedPreviewImage()
+      frame = qimage2ndarray.rgb_view(qimage)
+      barcodes = pyzbar.decode(frame)
+      for b in barcodes:
+         barcode = b.data.decode('utf-8')
+         break
 
-   # output
-   if barcode is not None:
-      ScriptEnv.setVar('$Barcode', barcode)
-   else:
-      ScriptEnv.setVar('$Barcode', 0)
-   return
+      # output
+      if barcode is not None:
+         ScriptEnv.setVar('$Barcode', barcode)
+      else:
+         ScriptEnv.setVar('$Barcode', 0)
+      return
 
 By importing the :file:`cetoni_elements` module, the CETONI Elements camera
 can be accessed and an image can be captured:
