@@ -42,7 +42,7 @@ simulated devices and to test all functions of the software.
 
 In order to use the software to control your devices, you must
 register the license code you have received in the software. To do this,
-select *Help → Activate License* in the main menu.
+select :menuselection:`Help → Activate License` in the main menu.
 
 |image5|
 
@@ -60,7 +60,7 @@ above.
 Overview of Activated Licenses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the menu item *Help → Show License Information* in the main menu
+Using the menu item :menuselection:`Help → Show License Information` in the main menu
 of the application, you can display an overview of the current licenses:
 
 .. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
@@ -69,7 +69,7 @@ of the application, you can display an overview of the current licenses:
 Remove Licenses
 ~~~~~~~~~~~~~~~
 
-If you want to remove all licenses, select *Help → Remove License Data*
+If you want to remove all licenses, select :menuselection:`Help → Remove License Data`
 from the main menu. It is not possible to remove individual licenses,
 you can only remove all licenses together. After removing the licenses,
 you will work with a demo license again.
@@ -95,7 +95,7 @@ Create Configuration
    :height: 2cm
    :align: left
 
-The *Create Configuration* button allows you to create new
+The :guilabel:`Create Configuration` button allows you to create new
 device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
@@ -151,7 +151,7 @@ Perform the following steps to import an existing device configuration:
 .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
    :width: 14.076cm
 
-(3) In the dialog that now opens, select the *DeviceConfiguration*
+(3) In the dialog that now opens, select the :file:`DeviceConfiguration`
     directory on the installation CD or browse to another directory
     containing a valid device configuration.
 
@@ -240,9 +240,8 @@ central components:
 
 .. figure:: Pictures/100002010000040500000272304B3AA146FD9FA5.png
    :alt: Overview of application Main window
-   :width: 100%
 
-1. Title bar
+1. `Title bar`_
 2. Main menu
 3. Toolbars (can be freely positioned and can be hidden)
 4. Sidebar for showing *Views* (can be freely positioned and can be
@@ -259,15 +258,13 @@ and the name of the currently loaded device configuration. The following
 example illustrates this more clearly. If the title bar contains the
 following text:
 
-CETONI Elements – C:\Users\Public\Documents\CETONI
-Elements\Projects\default_project [demo (shared)]
+:code:`CETONI Elements – C:\Users\Public\\Documents\CETONI Elements\Projects\default_project [demo (shared)]`
 
 then you will get the following information:
 
--  **application name**: *CETONI Elements*
--  **current project path:** *C:\Users\Public\Documents\CETONI
-   Elements\Projects\default_project*
--  **device configuration\ :\ demo (shared)**
+-  **application name**: CETONI Elements
+-  **current project path**: :file:`C:\\Users\\Public\\Documents\\CETONI Elements\\Projects\\default_project`
+-  **device configuration**: demo (shared)
 
 Views
 -----
@@ -277,8 +274,8 @@ Views
 Introduction
 ~~~~~~~~~~~~
 
-The *V\ iews* are windows that contain the display and control elements
-for a specific task or device. For example, there are *V\ iews* for the
+The *Views* are windows that contain the display and control elements
+for a specific task or device. For example, there are *Views* for the
 graphical logger, the display of I/O channels or for the script editor.
 
 All views can be freely moved within the main window via drag & drop.
@@ -292,7 +289,7 @@ Show Views
 ~~~~~~~~~~
 
 When you start the software, not all views may be displayed. To display
-a view, select *Window → Show View* from the main menu. You will then
+a view, select :menuselection:`Window → Show View` from the main menu. You will then
 see a menu with all views that are available in the application. Simply
 click on the corresponding menu item to display the view (see figure
 below).
@@ -307,7 +304,7 @@ individually.
 |Figure 1.10: Displaying Views for Devices|
 
 Alternatively, you can show
-some views via the *Sidebar* without having to open the main menu.
+some views via the :guilabel:`Sidebar` without having to open the main menu.
 
 Moving Views
 ~~~~~~~~~~~~
@@ -324,7 +321,7 @@ view freely (see figure below).
 Alternatively, you can detach
 the view from its position by double-clicking on its tab. The third
 option is the context menu of the view. To do this, right-click the tab
-and choose *Detach* from the context menu.
+and choose :guilabel:`Detach` from the context menu.
 
 |Figure 1.12: Detach view from its position via context menu|
 
@@ -397,7 +394,7 @@ from the current position and move it to a new position.
 
 Alternatively, you can detach a view
 group by double-clicking in the title bar ❶ of the group, via the menu
-item *Detach Area* ❷ in the context menu or by clicking the *Detach*
+item :guilabel:`Detach Area` ❷ in the context menu or by clicking the :guilabel:`Detach`
 button in the title bar ❸.
 
 |Figure 1.20: Undock View Group|
@@ -410,12 +407,12 @@ Closing Views and View Groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can close a single view either via the Close button ❶ in the active
-tab or via the menu item *Close* ❷ in the context menu of a tab.
+tab or via the menu item :guilabel:`Close` ❷ in the context menu of a tab.
 
 |Figure 1.21: Closing View|
 
-A view group can be closed with the Close
-button ❶ in the title bar of the group or with the *Close Area* menu
+A view group can be closed with the :guilabel:`Close`.
+button ❶ in the title bar of the group or with the :guilabel:`Close Area` menu
 item ❷ in the context menu of the view group.
 
 |Figure 1.22: Closing View Group|
@@ -434,15 +431,15 @@ view.
 
 If you want to
 "clean up" a view group quickly, you can use the context menu to close
-all views except the currently active view. To do this, select *Close
-Others* from the context menu of the active tab.
+all views except the currently active view. To do this, select :guilabel:`Close Others`
+from the context menu of the active tab.
 
 |Figure 1.24: Close all inactive views of a group|
 
 If you want to
 quickly "clean up" a window, for example the main window of the
 application, you can use the context menu of a view group to close all
-other groups. To do this, select *Close Other Areas* from the context
+other groups. To do this, select :guilabel:`Close Other Areas` from the context
 menu of the view group.
 
 .. image:: Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
@@ -484,7 +481,7 @@ When you click on a
 perspective, the views in the user interface are arranged in the same
 way as when the perspective was created. Alternatively, you can access
 the perspectives from the main menu. To do this, select the menu item
-*Window → Perspective*.
+:menuselection:`Window → Perspective`.
 
 .. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
    :alt: 
@@ -495,7 +492,7 @@ the perspectives from the main menu. To do this, select the menu item
    the views or if you want to start again with the        
    arrangement of the views, simply use the Perspective    
    button in the toolbar to call the Standard Perspective  
-   (*Default*).
+   :guilabel:`Default`.
 
 Creating Perspectives
 ~~~~~~~~~~~~~~~~~~~~~
@@ -515,20 +512,20 @@ The new perspective is now available in the Perspective menu.
 Deleting Perspectives
 ~~~~~~~~~~~~~~~~~~~~~
 
-To delete perspectives, choose *Manage Perspectives* from the
+To delete perspectives, choose :guilabel:`Manage Perspectives` from the
 Perspectives menu.
 
 |Figure : Manage Perspectives|
 
 A dialog with a list of all perspectives
 is now displayed. In the list ❶ you can select single or multiple
-perspectives just like in the file explorer. You can use the *Shift* key
-to select several related entries. With the help of the *Ctrl* key you
+perspectives just like in the file explorer. You can use the :kbd:`Shift` key
+to select several related entries. With the help of the :kbd:`Ctrl` key you
 can click several entries one after the other and select them.
 
 |Figure : Deleting Perspectives|
 
-If you then click the Remove button ❷,
+If you then click the :guilabel:`Remove` button ❷,
 all selected perspectives will be deleted.
 
 Sidebar
@@ -567,15 +564,16 @@ screen (see figure).
    :width: 60
    :align: left
 
-By clicking the *Export To File* button, you can export the
+By clicking the :guilabel:`Export To File` button, you can export the
 contents of the event log to a text file. After you have assigned a file
 name, the file is saved and you can open it in any text editor.
 
 .. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
    :width: 15.88cm
 
-If you want to display the event log view manually, select *Window →
-Show View → Event Log* from the main menu of the application.
+If you want to display the event log view manually, select 
+:menuselection:`Window → Show View → Event Log`` from the main menu of the 
+application.
 
 |Figure : Showing Event Log View|
 
@@ -637,7 +635,7 @@ SI units and much more. That is, when you load a project, all
 user-specific settings are loaded. So you can easily switch between
 different projects or share projects with other employees.
 
-The `title bar <#1.6.Title bar|outline>`__ always shows your current
+The `Title bar`_ always shows your current
 project path. If you select the menu item :menuselection:`File → Browse Project Folder` 
 in the main menu, the current project will be opened in File
 Explorer.
@@ -655,15 +653,15 @@ addition, the following sub directories exist in the project directory:
    configurator
 -  :file:`Data` – this is a directory in which the plugins can store data
    that can not be saved in the project settings file
--  *Log\ –*\ *used to store log files such as CSV files generated by CSV
-   logger.*
--  *Pictures\ –*\ *stores all image files that are recorded in the
+-  :file:`Log` – used to store log files such as CSV files generated by CSV
+   logger.
+-  :file:`Pictures` - stores all image files that are recorded in the
    project (for example, by script functions or from the camera
-   plugin).*
--  *Scripts\ –\ a\ ll script files that are created in a project are to
-   be stored in this directory*
--  *Videos\ –\ v\ ideo files that are generated by the camera plugin
-   will be stored in this directory*
+   plugin).
+-  :file:`Scripts` – all script files that are created in a project are to
+   be stored in this directory
+-  :file:`Videos` – video files that are generated by the camera plugin
+   will be stored in this directory
 
 Creating a new project
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -675,10 +673,10 @@ from the main menu.
 
 In the dialog window that is then
 displayed, you can configure the new project. First enter a unique
-project name **❶**. Then select whether you want to copy the settings of
-the current project into the new project (*Copy current project
-settings*) or whether you want to start with an empty project (*Create
-empty project*) **❷**.
+project name ❶. Then select whether you want to copy the settings of
+the current project into the new project via 
+:guilabel:`Copy current project settings` or whether you want to start with an 
+empty project via :guilabel:`Create empty project` ❷.
 
 Then select the location where the project folder is to be created. If
 the checkbox :guilabel:`Use default location` ❸ is checked, the project
@@ -735,15 +733,15 @@ which you select for export are stored in a compressed project file
 
 To export a project, you
 must first open the project in the software. From the application's main
-menu, select File → Export Project.
+menu, select :menuselection:`File → Export Project`.
 
 In the export window that appears, you can now select which directories
-of the project\ ❶\ are to be exported.
+of the project ❶ are to be exported.
 
 |Figure 1.40: Selection of project directories for export|
 
 Click the
-*Select All* *❷*\ or *Select None* *❸*\ buttons to select all elements
+:guilabel:`Select All` ❷ or :guilabel:`Select None` ❸ buttons to select all elements
 or no element.
 
 .. admonition:: Important
@@ -756,24 +754,24 @@ or no element.
    necessary for the transfer of data. 
 
 During the export, you will be informed about the current state of the
-export by the *E\ vent\ L\ og\ ❶*, the *Progress\ W\ indow\ ❷,* and the
-Status Line *❸*.
+export by the *Event Log* ❶, the *Progress Window* ❷, and the
+*Status Line* ❸.
 
 |Figure 1.41: Status display project export|
 
 You can cancel the export
-at any time by clicking the *Cancel*\ ❹ button.
+at any time by clicking the :guilabel:`Cancel` ❹ button.
 
 Importing projects
 ~~~~~~~~~~~~~~~~~~~~
 
 The import function allows you to import project files :file:`*.qpr` into the
-software. To do this, select File → Import Project from the main menu.
+software. To do this, select :menuselection:`File → Import Project` from the main menu.
 
 |Figure 1.42: Selecting project import|
 
 In the file selection window
-that appears, select the project file (\* .qpr) that you want to import.
+that appears, select the project file :file:`*.qpr` that you want to import.
 You will then see a window where you enter the name under which the
 imported project should be stored in your CETONI Elements project
 directory.
@@ -788,19 +786,19 @@ directory.
    project directory, an import is not possible. 
 
 During the import, you will be informed about the current state of the
-import by the *E\ vent\ L\ og\ ❶*, the *Progress\ W\ indow\ ❷*\ and the
-*S\ tatus\ L\ ine\ ❸*.
+import by the *Event Log* ❶, the *Progress Window* ❷ and the
+*Status Line* ❸.
 
 |Figure 1.44: Status display project import|
 
 You can cancel the import
-at any time by clicking the *Cancel* ❹ button. After successfully
+at any time by clicking the :guilabel:`Cancel` ❹ button. After successfully
 importing the project, the software will offer you to load the imported
 project.
 
 |image42|
 
-Click *Yes* to restart the software with the imported
+Click :guilabel:`Yes` to restart the software with the imported
 project.
 
 Global Settings
@@ -810,7 +808,7 @@ Open settings dialog
 ~~~~~~~~~~~~~~~~~~~~
 
 The configuration dialog for the global application settings can be
-opened via the menu item *Edit → Settings* in the main menu of the
+opened via the menu item :menuselection:`Edit --> Settings` in the main menu of the
 application.
 
 |Figure 1.45: Settings dialog|
@@ -820,7 +818,7 @@ different settings categories. Select a category for which you want to
 configure the global settings. On the right side you will see the
 settings that you can configure for the selected category.
 
-Click *Apply* to accept the changes or *OK* to accept the changes and
+Click :guilabel:`Apply` to accept the changes or :guilabel:`OK` to accept the changes and
 close the dialog.
 
 General Settings
@@ -838,16 +836,16 @@ connection to the device without any user intervention being necessary.
 Personalize Color and Style
 ---------------------------
 
-Via the menu item *Edit –> Settings* in the main menu of the application
+Via the menu item :menuselection:`Edit --> Settings` in the main menu of the application
 you open the configuration dialog of the application. There you will
-find the *Color & Style* *❶* section with the settings for customizing
+find the *Color & Style* ❶ section with the settings for customizing
 the design of the graphical interface.
 
 |image43|
 
 You can customize accent color by selecting a color from the
-palette of predefined colors *❷* or by defining your own color using the
-*Custom Color*\ button *❸*.
+palette of predefined colors ❷ or by defining your own color using the
+:guilabel:`Custom Color` button ❸.
 
 .. admonition:: Important
    :class: note
@@ -858,7 +856,7 @@ palette of predefined colors *❷* or by defining your own color using the
    are working with devices or if a critical control       
    application / script is active.
 
-Using the *Color Theme* selection box, you can switch the complete color
+Using the :guilabel:`Color Theme` selection box, you can switch the complete color
 design of the application between different themes. For example, you can
 switch between a Light Theme and a Dark Theme to adapt the application
 to your wishes or to the corporate identity of your company. The
@@ -893,18 +891,18 @@ controls.
 Configuring Access to User Interface Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To configure access to the software interface, select\ *Edit→ Configure
-UI Access* from the main menu.
+To configure access to the software interface, select 
+:menuselection:`Edit --> Configure UI Access` from the main menu.
 
 |Figure 1.46: Open UI Access Configuration|
 
 The configuration dialog
-for UI access is displayed. In the first column **❶** you can see the
+for UI access is displayed. In the first column ❶ you can see the
 elements of the user interface that you can hide and show. Within the
 individual groups (e.g. workbenches) the elements are sorted
 alphabetically.
 
-In the second column **❷** you can see the configuration of the
+In the second column ❷ you can see the configuration of the
 *Default* mode. This mode is always active when the software is started.
 I.e. this mode is the mode that every user sees without special
 authorizations. For each element, you can choose whether it is visible
@@ -914,7 +912,7 @@ normal users.
 |Figure 1.47: Configuration dialog for UI access configuration|
 
 The
-third column **❸** contains the configuration of the interface for
+third column ❸ contains the configuration of the interface for
 access-protected mode. This mode is password protected. This means that
 you can access this mode by entering the password and thus show
 previously hidden operating elements.
@@ -930,7 +928,7 @@ the corresponding cell of the third column and entering the password.
 |Figure 1.48: Enter password for UI access mode selection|
 
 When you
-have finished the configuration, click the *OK* button to close the
+have finished the configuration, click the :guilabel:`OK` button to close the
 dialog and save the configuration.
 
 .. admonition:: Important
@@ -945,8 +943,8 @@ Switching UI Access Mode
 
 After starting the application, the standard mode is always active. This
 means that the interface is displayed with the configuration that you
-have configured for standard mode. To enter protected mode, select *Edit
-→ Select UI Access Mode* from the main menu.
+have configured for standard mode. To enter protected mode, select 
+:menuselection:`Edit --> Select UI Access Mode` from the main menu.
 
 |Figure 1.49: Switching UI Access Mode|
 

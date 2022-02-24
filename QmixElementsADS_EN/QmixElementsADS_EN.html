@@ -8,6 +8,8 @@
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/style_override.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -17,6 +19,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -169,7 +173,7 @@ simulated devices and to test all functions of the software.</p>
 <p><a class="reference internal" href="../_images/10000201000001D6000000AE5ED5B8BD0CA17D65.png"><img alt="image4" src="../_images/10000201000001D6000000AE5ED5B8BD0CA17D65.png" style="width: 12.441cm;" /></a></p>
 <p>In order to use the software to control your devices, you must
 register the license code you have received in the software. To do this,
-select <em>Help → Activate License</em> in the main menu.</p>
+select <span class="menuselection">Help → Activate License</span> in the main menu.</p>
 <p><a class="reference internal" href="../_images/10000201000001ED00000145C29F8E208FCC285C.png"><img alt="image5" src="../_images/10000201000001ED00000145C29F8E208FCC285C.png" style="width: 13.049cm;" /></a></p>
 <p>In the license activation dialog, enter your license code and
 then click the <span class="guilabel">Activate</span> button. If you have entered the license key
@@ -182,13 +186,13 @@ above.</p>
 </section>
 <section id="overview-of-activated-licenses">
 <h3>Overview of Activated Licenses<a class="headerlink" href="#overview-of-activated-licenses" title="Permalink to this headline"></a></h3>
-<p>Using the menu item <em>Help → Show License Information</em> in the main menu
+<p>Using the menu item <span class="menuselection">Help → Show License Information</span> in the main menu
 of the application, you can display an overview of the current licenses:</p>
 <a class="reference internal image-reference" href="../_images/10000201000001D800000133EEE683E0C6194C68.png"><img alt="../_images/10000201000001D800000133EEE683E0C6194C68.png" src="../_images/10000201000001D800000133EEE683E0C6194C68.png" style="width: 12.494cm;" /></a>
 </section>
 <section id="remove-licenses">
 <h3>Remove Licenses<a class="headerlink" href="#remove-licenses" title="Permalink to this headline"></a></h3>
-<p>If you want to remove all licenses, select <em>Help → Remove License Data</em>
+<p>If you want to remove all licenses, select <span class="menuselection">Help → Remove License Data</span>
 from the main menu. It is not possible to remove individual licenses,
 you can only remove all licenses together. After removing the licenses,
 you will work with a demo license again.</p>
@@ -207,7 +211,7 @@ configuration:</p>
 <section id="create-configuration">
 <h3>Create Configuration<a class="headerlink" href="#create-configuration" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100002010000009600000096EA64110C769BEAC3.png"><img alt="../_images/100002010000009600000096EA64110C769BEAC3.png" class="align-left" src="../_images/100002010000009600000096EA64110C769BEAC3.png" style="width: 2cm; height: 2cm;" /></a>
-<p>The <em>Create Configuration</em> button allows you to create new
+<p>The <span class="guilabel">Create Configuration</span> button allows you to create new
 device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
@@ -255,7 +259,7 @@ item <span class="guilabel">Import Folder</span>.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/1000000000000214000000A60483FD84C031337D.png"><img alt="../_images/1000000000000214000000A60483FD84C031337D.png" src="../_images/1000000000000214000000A60483FD84C031337D.png" style="width: 14.076cm;" /></a>
 <ol class="arabic simple" start="3">
-<li><p>In the dialog that now opens, select the <em>DeviceConfiguration</em>
+<li><p>In the dialog that now opens, select the <code class="file docutils literal notranslate"><span class="pre">DeviceConfiguration</span></code>
 directory on the installation CD or browse to another directory
 containing a valid device configuration.</p></li>
 </ol>
@@ -330,10 +334,10 @@ menu (see figure below).</p>
 <p>The application window of the software consists of the following
 central components:</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/100002010000040500000272304B3AA146FD9FA5.png"><img alt="Overview of application Main window" src="../_images/100002010000040500000272304B3AA146FD9FA5.png" style="width: 100%;" /></a>
+<img alt="Overview of application Main window" src="../_images/100002010000040500000272304B3AA146FD9FA5.png" />
 </figure>
 <ol class="arabic simple">
-<li><p>Title bar</p></li>
+<li><p><a class="reference internal" href="#title-bar">Title bar</a></p></li>
 <li><p>Main menu</p></li>
 <li><p>Toolbars (can be freely positioned and can be hidden)</p></li>
 <li><p>Sidebar for showing <em>Views</em> (can be freely positioned and can be
@@ -349,14 +353,12 @@ interface</p></li>
 and the name of the currently loaded device configuration. The following
 example illustrates this more clearly. If the title bar contains the
 following text:</p>
-<p>CETONI Elements – C:UsersPublicDocumentsCETONI
-ElementsProjectsdefault_project [demo (shared)]</p>
+<p><code class="code docutils literal notranslate"><span class="pre">CETONI</span> <span class="pre">Elements</span> <span class="pre">–</span> <span class="pre">C:\Users\Public\\Documents\CETONI</span> <span class="pre">Elements\Projects\default_project</span> <span class="pre">[demo</span> <span class="pre">(shared)]</span></code></p>
 <p>then you will get the following information:</p>
 <ul class="simple">
-<li><p><strong>application name</strong>: <em>CETONI Elements</em></p></li>
-<li><p><strong>current project path:</strong> <em>C:UsersPublicDocumentsCETONI
-ElementsProjectsdefault_project</em></p></li>
-<li><p><strong>device configuration:demo (shared)</strong></p></li>
+<li><p><strong>application name</strong>: CETONI Elements</p></li>
+<li><p><strong>current project path</strong>: <code class="file docutils literal notranslate"><span class="pre">C:\Users\Public\Documents\CETONI</span> <span class="pre">Elements\Projects\default_project</span></code></p></li>
+<li><p><strong>device configuration</strong>: demo (shared)</p></li>
 </ul>
 </section>
 <section id="views">
@@ -376,7 +378,7 @@ an individual graphical user interface.</p>
 <section id="show-views">
 <h3>Show Views<a class="headerlink" href="#show-views" title="Permalink to this headline"></a></h3>
 <p>When you start the software, not all views may be displayed. To display
-a view, select <em>Window → Show View</em> from the main menu. You will then
+a view, select <span class="menuselection">Window → Show View</span> from the main menu. You will then
 see a menu with all views that are available in the application. Simply
 click on the corresponding menu item to display the view (see figure
 below).</p>
@@ -387,7 +389,7 @@ the views in the View menu are grouped together and can be displayed
 individually.</p>
 <p><a class="reference internal" href="../_images/1000020100000221000000ABD10E7731B686C5B3.png"><img alt="Figure 1.10: Displaying Views for Devices" src="../_images/1000020100000221000000ABD10E7731B686C5B3.png" style="width: 14.425cm;" /></a></p>
 <p>Alternatively, you can show
-some views via the <em>Sidebar</em> without having to open the main menu.</p>
+some views via the <span class="guilabel">Sidebar</span> without having to open the main menu.</p>
 </section>
 <section id="moving-views">
 <h3>Moving Views<a class="headerlink" href="#moving-views" title="Permalink to this headline"></a></h3>
@@ -401,7 +403,7 @@ view freely (see figure below).</p>
 <p>Alternatively, you can detach
 the view from its position by double-clicking on its tab. The third
 option is the context menu of the view. To do this, right-click the tab
-and choose <em>Detach</em> from the context menu.</p>
+and choose <span class="guilabel">Detach</span> from the context menu.</p>
 <p><a class="reference internal" href="../_images/10000201000001310000009DE8129AEE37B00CF4.png"><img alt="Figure 1.12: Detach view from its position via context menu" src="../_images/10000201000001310000009DE8129AEE37B00CF4.png" style="width: 8.073cm;" /></a></p>
 <p>If you
 have detached the view from its position, the view is displayed in a
@@ -456,7 +458,7 @@ from the current position and move it to a new position.</p>
 <p><a class="reference internal" href="../_images/10000201000002E4000001531CF5648A1020DCB4.png"><img alt="Figure 1.19: Moving View Groups" src="../_images/10000201000002E4000001531CF5648A1020DCB4.png" style="width: 16.201cm;" /></a></p>
 <p>Alternatively, you can detach a view
 group by double-clicking in the title bar ❶ of the group, via the menu
-item <em>Detach Area</em> ❷ in the context menu or by clicking the <em>Detach</em>
+item <span class="guilabel">Detach Area</span> ❷ in the context menu or by clicking the <span class="guilabel">Detach</span>
 button in the title bar ❸.</p>
 <p><a class="reference internal" href="../_images/1000020100000264000000FC1AB96C910DA572FD.png"><img alt="Figure 1.20: Undock View Group" src="../_images/1000020100000264000000FC1AB96C910DA572FD.png" style="width: 16.2cm;" /></a></p>
 <p>You can dock a view group or a window
@@ -466,10 +468,10 @@ view.</p>
 <section id="closing-views-and-view-groups">
 <h3>Closing Views and View Groups<a class="headerlink" href="#closing-views-and-view-groups" title="Permalink to this headline"></a></h3>
 <p>You can close a single view either via the Close button ❶ in the active
-tab or via the menu item <em>Close</em> ❷ in the context menu of a tab.</p>
+tab or via the menu item <span class="guilabel">Close</span> ❷ in the context menu of a tab.</p>
 <p><a class="reference internal" href="../_images/1000020100000264000000BF3127F5F8B75874DD.png"><img alt="Figure 1.21: Closing View" src="../_images/1000020100000264000000BF3127F5F8B75874DD.png" style="width: 16.2cm;" /></a></p>
-<p>A view group can be closed with the Close
-button ❶ in the title bar of the group or with the <em>Close Area</em> menu
+<p>A view group can be closed with the <span class="guilabel">Close</span>.
+button ❶ in the title bar of the group or with the <span class="guilabel">Close Area</span> menu
 item ❷ in the context menu of the view group.</p>
 <p><a class="reference internal" href="../_images/1000020100000264000000BF9FA7CB8EE15E4D72.png"><img alt="Figure 1.22: Closing View Group" src="../_images/1000020100000264000000BF9FA7CB8EE15E4D72.png" style="width: 16.2cm;" /></a></p>
 </section>
@@ -484,13 +486,13 @@ view.</p>
 <p><a class="reference internal" href="../_images/100002010000026D000000D2FF18CEC652F6FACF.png"><img alt="Figure 1.23: Opening the View Menu of a View Group" src="../_images/100002010000026D000000D2FF18CEC652F6FACF.png" style="width: 16.201cm;" /></a></p>
 <p>If you want to
 “clean up” a view group quickly, you can use the context menu to close
-all views except the currently active view. To do this, select <em>Close
-Others</em> from the context menu of the active tab.</p>
+all views except the currently active view. To do this, select <span class="guilabel">Close Others</span>
+from the context menu of the active tab.</p>
 <p><a class="reference internal" href="../_images/10000201000002000000006B0A134CD1AC8B3316.png"><img alt="Figure 1.24: Close all inactive views of a group" src="../_images/10000201000002000000006B0A134CD1AC8B3316.png" style="width: 13.552cm;" /></a></p>
 <p>If you want to
 quickly “clean up” a window, for example the main window of the
 application, you can use the context menu of a view group to close all
-other groups. To do this, select <em>Close Other Areas</em> from the context
+other groups. To do this, select <span class="guilabel">Close Other Areas</span> from the context
 menu of the view group.</p>
 <a class="reference internal image-reference" href="../_images/1000020100000224000000A46CB57E1DDB2A63DE.png"><img alt="" src="../_images/1000020100000224000000A46CB57E1DDB2A63DE.png" style="width: 14.504cm;" /></a>
 </section>
@@ -521,7 +523,7 @@ perspective ❷.</p>
 perspective, the views in the user interface are arranged in the same
 way as when the perspective was created. Alternatively, you can access
 the perspectives from the main menu. To do this, select the menu item
-<em>Window → Perspective</em>.</p>
+<span class="menuselection">Window → Perspective</span>.</p>
 <a class="reference internal image-reference" href="../_images/1000020100000225000000F171D95022C6176EB6.png"><img alt="" src="../_images/1000020100000225000000F171D95022C6176EB6.png" style="width: 14.531cm;" /></a>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -529,7 +531,7 @@ the perspectives from the main menu. To do this, select the menu item
 the views or if you want to start again with the
 arrangement of the views, simply use the Perspective
 button in the toolbar to call the Standard Perspective
-(<em>Default</em>).</p>
+<span class="guilabel">Default</span>.</p>
 </div>
 </section>
 <section id="creating-perspectives">
@@ -543,16 +545,16 @@ the input dialog and click <span class="guilabel">OK</span>.</p>
 </section>
 <section id="deleting-perspectives">
 <h3>Deleting Perspectives<a class="headerlink" href="#deleting-perspectives" title="Permalink to this headline"></a></h3>
-<p>To delete perspectives, choose <em>Manage Perspectives</em> from the
+<p>To delete perspectives, choose <span class="guilabel">Manage Perspectives</span> from the
 Perspectives menu.</p>
 <p><a class="reference internal" href="../_images/10000201000001A9000000C56CAD6237DD6652DC.png"><img alt="Figure : Manage Perspectives" src="../_images/10000201000001A9000000C56CAD6237DD6652DC.png" style="width: 11.248cm;" /></a></p>
 <p>A dialog with a list of all perspectives
 is now displayed. In the list ❶ you can select single or multiple
-perspectives just like in the file explorer. You can use the <em>Shift</em> key
-to select several related entries. With the help of the <em>Ctrl</em> key you
+perspectives just like in the file explorer. You can use the <kbd class="kbd docutils literal notranslate">Shift</kbd> key
+to select several related entries. With the help of the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key you
 can click several entries one after the other and select them.</p>
 <p><a class="reference internal" href="../_images/10000201000001E4000000EAEAB5054A1B53326F.png"><img alt="Figure : Deleting Perspectives" src="../_images/10000201000001E4000000EAEAB5054A1B53326F.png" style="width: 12.811cm;" /></a></p>
-<p>If you then click the Remove button ❷,
+<p>If you then click the <span class="guilabel">Remove</span> button ❷,
 all selected perspectives will be deleted.</p>
 </section>
 </section>
@@ -582,12 +584,13 @@ automatically displayed when an event is written to the log.</p>
 pressing the <span class="guilabel">Clear Event Log</span> button in the upper right corner of the
 screen (see figure).</p>
 <a class="reference internal image-reference" href="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg"><img alt="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg" class="align-left" src="../_images/10000F570000350500003505D59CCCB32AAEA5EE.svg" width="60" /></a>
-<p>By clicking the <em>Export To File</em> button, you can export the
+<p>By clicking the <span class="guilabel">Export To File</span> button, you can export the
 contents of the event log to a text file. After you have assigned a file
 name, the file is saved and you can open it in any text editor.</p>
 <a class="reference internal image-reference" href="../_images/1000020100000258000000551980D8BBF41A9394.png"><img alt="../_images/1000020100000258000000551980D8BBF41A9394.png" src="../_images/1000020100000258000000551980D8BBF41A9394.png" style="width: 15.88cm;" /></a>
-<p>If you want to display the event log view manually, select <em>Window →
-Show View → Event Log</em> from the main menu of the application.</p>
+<p>If you want to display the event log view manually, select
+<span class="menuselection">Window → Show View → Event Log`</span> from the main menu of the
+application.</p>
 <p><a class="reference internal" href="../_images/10000201000001BC000000A1C8DF9C7A6A7811D1.png"><img alt="Figure : Showing Event Log View" src="../_images/10000201000001BC000000A1C8DF9C7A6A7811D1.png" style="width: 11.753cm;" /></a></p>
 <p>The event log lists the individual
 events in chronological order. The latest event is always in the first
@@ -635,7 +638,7 @@ names, syringe and tubing configurations, scaling factors, flow rates,
 SI units and much more. That is, when you load a project, all
 user-specific settings are loaded. So you can easily switch between
 different projects or share projects with other employees.</p>
-<p>The <a class="reference external" href="#1.6.Titlebar|outline">title bar</a> always shows your current
+<p>The <a class="reference internal" href="#title-bar">Title bar</a> always shows your current
 project path. If you select the menu item <span class="menuselection">File → Browse Project Folder</span>
 in the main menu, the current project will be opened in File
 Explorer.</p>
@@ -651,15 +654,15 @@ configurations that you import or create with the device
 configurator</p></li>
 <li><p><code class="file docutils literal notranslate"><span class="pre">Data</span></code> – this is a directory in which the plugins can store data
 that can not be saved in the project settings file</p></li>
-<li><p><em>Log–</em><em>used to store log files such as CSV files generated by CSV
-logger.</em></p></li>
-<li><p><em>Pictures–</em><em>stores all image files that are recorded in the
+<li><p><code class="file docutils literal notranslate"><span class="pre">Log</span></code> – used to store log files such as CSV files generated by CSV
+logger.</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">Pictures</span></code> - stores all image files that are recorded in the
 project (for example, by script functions or from the camera
-plugin).</em></p></li>
-<li><p><em>Scripts–all script files that are created in a project are to
-be stored in this directory</em></p></li>
-<li><p><em>Videos–video files that are generated by the camera plugin
-will be stored in this directory</em></p></li>
+plugin).</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">Scripts</span></code> – all script files that are created in a project are to
+be stored in this directory</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">Videos</span></code> – video files that are generated by the camera plugin
+will be stored in this directory</p></li>
 </ul>
 </section>
 <section id="creating-a-new-project">
@@ -669,10 +672,10 @@ from the main menu.</p>
 <p><a class="reference internal" href="../_images/1000000000000189000000B4EABB56CB8A567B96.png"><img alt="Figure 1.35: Creating new project" src="../_images/1000000000000189000000B4EABB56CB8A567B96.png" style="width: 10.398cm;" /></a></p>
 <p>In the dialog window that is then
 displayed, you can configure the new project. First enter a unique
-project name <strong>❶</strong>. Then select whether you want to copy the settings of
-the current project into the new project (<em>Copy current project
-settings</em>) or whether you want to start with an empty project (<em>Create
-empty project</em>) <strong>❷</strong>.</p>
+project name ❶. Then select whether you want to copy the settings of
+the current project into the new project via
+<span class="guilabel">Copy current project settings</span> or whether you want to start with an
+empty project via <span class="guilabel">Create empty project</span> ❷.</p>
 <p>Then select the location where the project folder is to be created. If
 the checkbox <span class="guilabel">Use default location</span> ❸ is checked, the project
 will be created in the <code class="file docutils literal notranslate"><span class="pre">Projects</span></code> directory of the CETONI Elements data
@@ -717,12 +720,12 @@ which you select for export are stored in a compressed project file
 <p><a class="reference internal" href="../_images/10000201000001A8000000BB1B03350B9BEA1D79.png"><img alt="Figure 1.39: Open the project export window" src="../_images/10000201000001A8000000BB1B03350B9BEA1D79.png" style="width: 11.222cm;" /></a></p>
 <p>To export a project, you
 must first open the project in the software. From the application’s main
-menu, select File → Export Project.</p>
+menu, select <span class="menuselection">File → Export Project</span>.</p>
 <p>In the export window that appears, you can now select which directories
-of the project❶are to be exported.</p>
+of the project ❶ are to be exported.</p>
 <p><a class="reference internal" href="../_images/1000020100000298000001FB7D3433258DF59F1D.png"><img alt="Figure 1.40: Selection of project directories for export" src="../_images/1000020100000298000001FB7D3433258DF59F1D.png" style="width: 16.201cm;" /></a></p>
 <p>Click the
-<em>Select All</em> <em>❷</em>or <em>Select None</em> <em>❸</em>buttons to select all elements
+<span class="guilabel">Select All</span> ❷ or <span class="guilabel">Select None</span> ❸ buttons to select all elements
 or no element.</p>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
@@ -733,19 +736,19 @@ a project. Export such directories only if it is
 necessary for the transfer of data.</p>
 </div>
 <p>During the export, you will be informed about the current state of the
-export by the <em>EventLog❶</em>, the <em>ProgressWindow❷,</em> and the
-Status Line <em>❸</em>.</p>
+export by the <em>Event Log</em> ❶, the <em>Progress Window</em> ❷, and the
+<em>Status Line</em> ❸.</p>
 <p><a class="reference internal" href="../_images/10000201000002E90000011C77337172831B2410.png"><img alt="Figure 1.41: Status display project export" src="../_images/10000201000002E90000011C77337172831B2410.png" style="width: 16.201cm;" /></a></p>
 <p>You can cancel the export
-at any time by clicking the <em>Cancel</em>❹ button.</p>
+at any time by clicking the <span class="guilabel">Cancel</span> ❹ button.</p>
 </section>
 <section id="importing-projects">
 <h3>Importing projects<a class="headerlink" href="#importing-projects" title="Permalink to this headline"></a></h3>
 <p>The import function allows you to import project files <code class="file docutils literal notranslate"><span class="pre">*.qpr</span></code> into the
-software. To do this, select File → Import Project from the main menu.</p>
+software. To do this, select <span class="menuselection">File → Import Project</span> from the main menu.</p>
 <p><a class="reference internal" href="../_images/10000201000001AA000000C9957BE44F06738675.png"><img alt="Figure 1.42: Selecting project import" src="../_images/10000201000001AA000000C9957BE44F06738675.png" style="width: 11.275cm;" /></a></p>
 <p>In the file selection window
-that appears, select the project file (* .qpr) that you want to import.
+that appears, select the project file <code class="file docutils literal notranslate"><span class="pre">*.qpr</span></code> that you want to import.
 You will then see a window where you enter the name under which the
 imported project should be stored in your CETONI Elements project
 directory.</p>
@@ -757,15 +760,15 @@ a name for which a project already exists in the
 project directory, an import is not possible.</p>
 </div>
 <p>During the import, you will be informed about the current state of the
-import by the <em>EventLog❶</em>, the <em>ProgressWindow❷</em>and the
-<em>StatusLine❸</em>.</p>
+import by the <em>Event Log</em> ❶, the <em>Progress Window</em> ❷ and the
+<em>Status Line</em> ❸.</p>
 <p><a class="reference internal" href="../_images/10000201000002E90000011C77337172831B2410.png"><img alt="Figure 1.44: Status display project import" src="../_images/10000201000002E90000011C77337172831B2410.png" style="width: 16.201cm;" /></a></p>
 <p>You can cancel the import
-at any time by clicking the <em>Cancel</em> ❹ button. After successfully
+at any time by clicking the <span class="guilabel">Cancel</span> ❹ button. After successfully
 importing the project, the software will offer you to load the imported
 project.</p>
 <p><a class="reference internal" href="../_images/10000201000001730000009795A0B0ECA50C9747.png"><img alt="image42" src="../_images/10000201000001730000009795A0B0ECA50C9747.png" style="width: 9.82cm;" /></a></p>
-<p>Click <em>Yes</em> to restart the software with the imported
+<p>Click <span class="guilabel">Yes</span> to restart the software with the imported
 project.</p>
 </section>
 </section>
@@ -774,14 +777,14 @@ project.</p>
 <section id="open-settings-dialog">
 <h3>Open settings dialog<a class="headerlink" href="#open-settings-dialog" title="Permalink to this headline"></a></h3>
 <p>The configuration dialog for the global application settings can be
-opened via the menu item <em>Edit → Settings</em> in the main menu of the
+opened via the menu item <span class="menuselection">Edit ‣ Settings</span> in the main menu of the
 application.</p>
 <p><a class="reference internal" href="../_images/100002010000021200000126AC99A172AA6E85CC.png"><img alt="Figure 1.45: Settings dialog" src="../_images/100002010000021200000126AC99A172AA6E85CC.png" style="width: 14.028cm;" /></a></p>
 <p>On the left side you will find the
 different settings categories. Select a category for which you want to
 configure the global settings. On the right side you will see the
 settings that you can configure for the selected category.</p>
-<p>Click <em>Apply</em> to accept the changes or <em>OK</em> to accept the changes and
+<p>Click <span class="guilabel">Apply</span> to accept the changes or <span class="guilabel">OK</span> to accept the changes and
 close the dialog.</p>
 </section>
 <section id="general-settings">
@@ -798,14 +801,14 @@ connection to the device without any user intervention being necessary.</p>
 </section>
 <section id="personalize-color-and-style">
 <h2>Personalize Color and Style<a class="headerlink" href="#personalize-color-and-style" title="Permalink to this headline"></a></h2>
-<p>Via the menu item <em>Edit –&gt; Settings</em> in the main menu of the application
+<p>Via the menu item <span class="menuselection">Edit ‣ Settings</span> in the main menu of the application
 you open the configuration dialog of the application. There you will
-find the <em>Color &amp; Style</em> <em>❶</em> section with the settings for customizing
+find the <em>Color &amp; Style</em> ❶ section with the settings for customizing
 the design of the graphical interface.</p>
 <p><a class="reference internal" href="../_images/10000201000002890000017285BB5129C447B7B6.png"><img alt="image43" src="../_images/10000201000002890000017285BB5129C447B7B6.png" style="width: 16.201cm;" /></a></p>
 <p>You can customize accent color by selecting a color from the
-palette of predefined colors <em>❷</em> or by defining your own color using the
-<em>Custom Color</em>button <em>❸</em>.</p>
+palette of predefined colors ❷ or by defining your own color using the
+<span class="guilabel">Custom Color</span> button ❸.</p>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Adjusting the graphical user interface
@@ -814,7 +817,7 @@ You should therefore not perform these changes if you
 are working with devices or if a critical control
 application / script is active.</p>
 </div>
-<p>Using the <em>Color Theme</em> selection box, you can switch the complete color
+<p>Using the <span class="guilabel">Color Theme</span> selection box, you can switch the complete color
 design of the application between different themes. For example, you can
 switch between a Light Theme and a Dark Theme to adapt the application
 to your wishes or to the corporate identity of your company. The
@@ -838,15 +841,15 @@ controls.</p>
 </section>
 <section id="configuring-access-to-user-interface-elements">
 <h3>Configuring Access to User Interface Elements<a class="headerlink" href="#configuring-access-to-user-interface-elements" title="Permalink to this headline"></a></h3>
-<p>To configure access to the software interface, select<em>Edit→ Configure
-UI Access</em> from the main menu.</p>
+<p>To configure access to the software interface, select
+<span class="menuselection">Edit ‣ Configure UI Access</span> from the main menu.</p>
 <p><a class="reference internal" href="../_images/1000020100000161000000ADAFFCD2193104E170.png"><img alt="Figure 1.46: Open UI Access Configuration" src="../_images/1000020100000161000000ADAFFCD2193104E170.png" style="width: 9.343cm;" /></a></p>
 <p>The configuration dialog
-for UI access is displayed. In the first column <strong>❶</strong> you can see the
+for UI access is displayed. In the first column ❶ you can see the
 elements of the user interface that you can hide and show. Within the
 individual groups (e.g. workbenches) the elements are sorted
 alphabetically.</p>
-<p>In the second column <strong>❷</strong> you can see the configuration of the
+<p>In the second column ❷ you can see the configuration of the
 <em>Default</em> mode. This mode is always active when the software is started.
 I.e. this mode is the mode that every user sees without special
 authorizations. For each element, you can choose whether it is visible
@@ -854,7 +857,7 @@ or hidden in the interface. This way you can easily hide controls from
 normal users.</p>
 <p><a class="reference internal" href="../_images/100002010000023700000105D086995A6867BEE3.png"><img alt="Figure 1.47: Configuration dialog for UI access configuration" src="../_images/100002010000023700000105D086995A6867BEE3.png" style="width: 15.007cm;" /></a></p>
 <p>The
-third column <strong>❸</strong> contains the configuration of the interface for
+third column ❸ contains the configuration of the interface for
 access-protected mode. This mode is password protected. This means that
 you can access this mode by entering the password and thus show
 previously hidden operating elements.</p>
@@ -868,7 +871,7 @@ them if necessary.</p>
 the corresponding cell of the third column and entering the password.</p>
 <p><a class="reference internal" href="../_images/1000020100000283000000ABD9FB0393AF480FE9.png"><img alt="Figure 1.48: Enter password for UI access mode selection" src="../_images/1000020100000283000000ABD9FB0393AF480FE9.png" style="width: 16.201cm;" /></a></p>
 <p>When you
-have finished the configuration, click the <em>OK</em> button to close the
+have finished the configuration, click the <span class="guilabel">OK</span> button to close the
 dialog and save the configuration.</p>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
@@ -881,8 +884,8 @@ the interface is project-specific and not global.</p>
 <h3>Switching UI Access Mode<a class="headerlink" href="#switching-ui-access-mode" title="Permalink to this headline"></a></h3>
 <p>After starting the application, the standard mode is always active. This
 means that the interface is displayed with the configuration that you
-have configured for standard mode. To enter protected mode, select <em>Edit
-→ Select UI Access Mode</em> from the main menu.</p>
+have configured for standard mode. To enter protected mode, select
+<span class="menuselection">Edit ‣ Select UI Access Mode</span> from the main menu.</p>
 <p><a class="reference internal" href="../_images/1000020100000156000000A7DF47A4FDADBD88ED.png"><img alt="Figure 1.49: Switching UI Access Mode" src="../_images/1000020100000156000000A7DF47A4FDADBD88ED.png" style="width: 9.052cm;" /></a></p>
 <p>After selection, the interface
 is immediately adapted according to the selected configuration. If you
