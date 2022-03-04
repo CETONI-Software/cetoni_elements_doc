@@ -139,7 +139,7 @@ Perform the following steps to import an existing device configuration:
 (1) Select the :menuselection:`Device → Import Configuration` menu item from the main
     menu.
 
-|Figure 1.2: Import device configuration| 
+.. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
 
 (2) Now select whether you
     want to import a folder with a device configuration (:guilabel:`Import Folder`) 
@@ -149,7 +149,6 @@ Perform the following steps to import an existing device configuration:
     item :guilabel:`Import Folder`.
 
 .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
-   :width: 14.076cm
 
 (3) In the dialog that now opens, select the :file:`DeviceConfiguration`
     directory on the installation CD or browse to another directory
@@ -209,19 +208,19 @@ configuration within the standardized user interface.
 Show User Manual
 ~~~~~~~~~~~~~~~~~~
 
-The software manual can be accessed via the application's help menu
-(:menuselection:`Help → Show Manual`).
+The software PDF manual can be accessed via the application's help menu
+(:menuselection:`Help → Show PDF Manual`).
 
-.. figure:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
-   :alt: Figure 1.6: Access software manual
-   :width: 5.821cm
+.. image:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
 
 .. admonition:: Important
    :class: note
 
-   The software manual is provided in the   
-   pdf file format. A pdf-viewer must be installed on your 
-   system to be able to view this document. 
+   A PDF-viewer must be installed on your system to be able to view the PDF
+   software manual.
+
+To show this online software manual select the menu item 
+:menuselection:`Help → Open Online Manual`.
 
 Show Software Version
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -961,8 +960,6 @@ then select the default configuration.
    :width: 13.049cm
 .. |image6| image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png
    :width: 13.049cm
-.. |Figure 1.2: Import device configuration| image:: Pictures/10000000000001310000010F1E67A086173830FE.png
-   :width: 8.07cm
 .. |Figure 1.3: Assign a configuration name| image:: Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
    :width: 11.43cm
 .. |image12| image:: Pictures/10000201000002810000018F6EE2B3E17DBB7FD1.png

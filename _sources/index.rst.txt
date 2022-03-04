@@ -43,3 +43,4 @@ your navigation through this document:
 
    QmixElementsADS_EN/QmixElementsADS_EN.rst
    Python_EN/Python_EN.rst
+   sila_EN/sila_EN.rst
