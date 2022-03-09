@@ -1,6 +1,27 @@
 Python Add-on
 =============
 
+.. image:: Pictures/python_header.svg
+
+Introduction
+------------
+
+The Python add-on allows you to execute Python code in CETONI Elements
+scripts via a corresponding script function. It thus provides an easy
+way to include the Python scripting language in your CETONI Elements
+scripts.
+
+The embedded Python interpreter offers the same functionality as an
+execution of Python scripts via :command:`python` command. I.e. if you install
+libraries via :command:`pip` for the Python version used by the add-on, the
+functions of these Python libraries are also available in CETONI
+Elements.
+
+This gives you many additional possibilities such as accessing and
+parsing files, accessing databases, TCP/IP network communication via
+Python sockets or using complex analysis functions implemented in
+Python.
+
 Installation
 ------------
 
@@ -48,25 +69,6 @@ select it for installation if it is not yet available on your computer.
    The installed Python version **must**   
    match the version specified in the installer. The plugin 
    will not work correctly with other versions. 
-
-Introduction
-------------
-
-The Python add-on allows you to execute Python code in CETONI Elements
-scripts via a corresponding script function. It thus provides an easy
-way to include the Python scripting language in your CETONI Elements
-scripts.
-
-The embedded Python interpreter offers the same functionality as an
-execution of Python scripts via :command:`python` command. I.e. if you install
-libraries via :command:`pip` for the Python version used by the add-on, the
-functions of these Python libraries are also available in CETONI
-Elements.
-
-This gives you many additional possibilities such as accessing and
-parsing files, accessing databases, TCP/IP network communication via
-Python sockets or using complex analysis functions implemented in
-Python.
 
 Python Console
 --------------

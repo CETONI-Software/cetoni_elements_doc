@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SiLA2 Add-on &mdash; CETONI Elements Manual 20220203 documentation</title>
+  <title>SiLA2 Add-on &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/style_override.css" type="text/css" />
@@ -48,13 +48,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">CETONI Elements - An Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">Python Add-on</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">SiLA2 Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sila-2-basics">SiLA 2 Basics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#client-server-concept">Client-Server concept</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commands-and-properties">Commands and Properties</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-the-sila-add-on">Introduction to the SiLA Add-on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sila-ui-overview">SiLA UI Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#connecting-to-a-sila-2-server">Connecting to a SiLA 2 server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#connecting-to-automatically-detected-servers">Connecting to automatically detected servers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#manually-add-and-connect-to-a-server">Manually add and connect to a server</a></li>
@@ -63,7 +64,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#control-of-a-sila-2-server">Control of a SiLA 2 server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sila-2-script-functions">SiLA 2 Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#execute-sila-command">Execute SiLA Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#read-sila-property">Read SiLA Property</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wait-for-sila-property-value">Wait For SiLA Property Value</a></li>
@@ -105,9 +106,17 @@
              
   <section id="sila2-add-on">
 <h1>SiLA2 Add-on<a class="headerlink" href="#sila2-add-on" title="Permalink to this headline"></a></h1>
+<img alt="../_images/sila_header.svg" src="../_images/sila_header.svg" /><section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>The SiLA Add-on allows you to integrate any SiLA device into the CETONI
+Elements software. A generic, dynamically generated interface allows you to
+manually access all SiLA features, commands and properties of any SiLA device.
+With the help of several script functions you can automate your SiLA devices
+and integrate them into CETONI Elements scripts.</p>
+</section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
-<p>SiLA 2 add-on is not included in the standard CETONI Elements
+<p>The SiLA 2 add-on is not included in the standard CETONI Elements
 installation package, but must be installed additionally as an add-on.
 The versions of SiLA 2 Plugin and installed CETONI Elements software
 should match. For example, if you want to install SiLA 2 Plugin with
@@ -126,13 +135,13 @@ risk of problems and errors.</p>
 <p>Start the file <code class="file docutils literal notranslate"><span class="pre">CETONI_Elements_SiLA_64bit_Setup.exe</span></code> for installation.
 The installation wizard will then guide you through the installation of
 the software and hardware drivers.</p>
-<img alt="../_images/1000000100000211000001A2E74E74F60F20C8AC.png" src="../_images/1000000100000211000001A2E74E74F60F20C8AC.png" />
+<img alt="../_images/sila_install_01.png" src="../_images/sila_install_01.png" />
 <p>During the installation, the Bonjour Print Services are installed which
 are necessary for the automatic discovery of SiLA Servers in the
 network. This step is only required if the Bonjour Services are not
 already installed on your computer. If they are already installed,
 please deactivate the corresponding component (figure below).</p>
-<img alt="../_images/1000000100000211000001A20580E1A6CD385D13.png" src="../_images/1000000100000211000001A20580E1A6CD385D13.png" />
+<img alt="../_images/sila_install_02.png" src="../_images/sila_install_02.png" />
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>On Windows, you must be logged in with
@@ -142,68 +151,68 @@ drivers.</p>
 </section>
 <section id="sila-2-basics">
 <h2>SiLA 2 Basics<a class="headerlink" href="#sila-2-basics" title="Permalink to this headline"></a></h2>
-<p>SiLA 2 (Standardization in Lab Automation) is a communication standard
-for laboratory devices. The primary goal of SiLA is to create an
-international, open connectivity standard in laboratory automation that
-allows devices from different manufacturers to communicate with each
-other in one application.</p>
+<p>SiLA 2 is a communication standard for laboratory instruments, such as readers,
+liquid handling robots and chromatography and other analytical equipment.
+The primary goal of SiLA is to create an international, open connectivity
+standard in laboratory automation that allows devices from different
+manufacturers to communicate with each other in one application.</p>
 <section id="client-server-concept">
 <h3>Client-Server concept<a class="headerlink" href="#client-server-concept" title="Permalink to this headline"></a></h3>
 <p>Communication is client-server based and uses established network
-standards. A SiLA server is usually provided by a device while a SiLA
-client is usually a control software (e.g. a LIMS or CETONI Elements).
+standards. A <strong>SiLA server</strong> is usually provided by a <strong>device</strong> while a
+<strong>SiLA client</strong> is usually a control software (e.g. a LIMS or CETONI Elements).
 Since a SiLA server represents a device in most cases, the terms SiLA
 server (or just server) and device are used synonymously in this
 document.</p>
-<p>The client always acts as the master by initiating the connection to a
-server. The connection is established via a TCP/IP network. A central
-component of SiLA 2 is the discovery of SiLA servers by SiLA clients in
-a local network. A client can use the SiLA Server Discovery mechanism to
-determine all available servers and their functionalities.</p>
-<p>In SiLA 2, these functionalities of a device are called features.
-Features are another central component of SiLA 2. They describe which
-data a server provides and which actions the device can perform.</p>
+<img alt="../_images/client_server.png" src="../_images/client_server.png" />
+<p>Each SiLA Server has a certain number of Features implemented. <strong>SiLA Features</strong>
+are a key component of the SiLA 2 Standard as they define the
+interaction between the SiLA Client and the SiLA Server. Every single Feature
+describes a certain aspect of the overall behavior of the Server.</p>
+<p>The features of a device (that is, a SiLA server) are described using an XML
+file where the functionality is described using:</p>
+<ul class="simple">
+<li><p><strong>Properties</strong>: data values that can be static (e.g. serial number) or dynamic (e.g. current temperature)</p></li>
+<li><p><strong>Commands</strong>: an interaction to control or pass information to/from the SiLA ,
+an action that can be executed by a SiLA server</p></li>
+<li><p><strong>Parameters</strong>: expected information required to execute the command</p></li>
+<li><p><strong>Return values</strong>: expected output of the command</p></li>
+<li><p><strong>Errors</strong>: expected errors that might occur during the operation</p></li>
+</ul>
+<img alt="../_images/sila_feature.png" src="../_images/sila_feature.png" />
 </section>
 <section id="commands-and-properties">
 <h3>Commands and Properties<a class="headerlink" href="#commands-and-properties" title="Permalink to this headline"></a></h3>
-<p>In SiLA 2, the data are called <em>properties</em> and the actions are called
-<em>commands</em>. Properties and commands can be both <em>unobservable</em> and
-<em>observable</em>.</p>
-<p><strong>Unobservable properties</strong> are static data of a server that do not
+<p>Properties and commands can be both <strong>unobservable</strong> and <strong>observable</strong>.</p>
+<ul class="simple">
+<li><p><strong>Unobservable properties</strong> are static data of a server that do not
 change during the runtime of a server (e.g. the number of possible
-switching positions of a valve).</p>
-<p><strong>Observable properties</strong> are dynamic data of a server that can change
+switching positions of a valve).</p></li>
+<li><p><strong>Observable properties</strong> are dynamic data of a server that can change
 during the runtime of a server and about which clients should be
 informed (e.g. the current flow rate of a syringe pump). Clients can
 subscribe to observable properties so that they are notified of any
-changes to the property.</p>
-<p><strong>Unobservable commands</strong> are actions that can be performed on a device
+changes to the property.</p></li>
+<li><p><strong>Unobservable commands</strong> are actions that can be performed on a device
 and that take very little time (e.g., to change settings such as the
-syringe parameters of a pump).</p>
-<p><strong>Observable commands</strong> are actions that can potentially take a long
+syringe parameters of a pump).</p></li>
+<li><p><strong>Observable commands</strong> are actions that can potentially take a long
 time to execute on the device (e.g., fluid dispensing). Here, a client
 can subscribe to the so-called <em>Execution Info</em> to be notified about the
-progress of the command execution.</p>
-<p><em>Commands</em> (unlike properties) can have parameters and return values.
-Parameters can be used to influence the execution of a command (e.g. to
-specify the desired flow rate and the volume to be dosed for a dose).
-Return values can be used to transmit the result of a command execution
-to the client (e.g. the acquisition data of a spectrometry).</p>
-<p>Additional metadata may be required to read a property or execute a
-command. These behave similarly to command parameters in the sense that
-depending on the metadata the value of a property or the effect of a
-command execution can vary.</p>
+progress of the command execution.</p></li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>A comprehensive introduction to the SiLA
 standard is available on the SiLA homepage:
-<a class="reference external" href="https://sila-standard.com/standards/">https://sila-standard.com/standards/</a></p>
+<a class="reference external" href="https://sila-standard.com/standards/">https://sila-standard.com/standards/</a> or in this
+<a class="reference external" href="https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152">blog post</a>.</p>
 </div>
 </section>
 </section>
-<section id="introduction-to-the-sila-add-on">
-<h2>Introduction to the SiLA Add-on<a class="headerlink" href="#introduction-to-the-sila-add-on" title="Permalink to this headline"></a></h2>
-<p>By clicking the SiLA 2 button and selecting <em>Server Overview</em> ❶ in the
+<section id="sila-ui-overview">
+<h2>SiLA UI Overview<a class="headerlink" href="#sila-ui-overview" title="Permalink to this headline"></a></h2>
+<p>By clicking the <span class="guilabel">SiLA 2</span> button and selecting <em>Server Overview</em> ❶ in the
 sidebar, you switch to the SiLA 2 add-on (see figure below).</p>
 <img alt="../_images/100000010000049200000191916BBBF1204CA308.png" src="../_images/100000010000049200000191916BBBF1204CA308.png" />
 <ol class="arabic simple">
@@ -314,7 +323,7 @@ workflows. For this purpose, the script functions provided by the
 plugin, which are presented in Section <a class="reference internal" href="#sila-2-script-functions">SiLA 2 Script Functions</a>, are more
 suitable.</p>
 <p>Open the generic interface by selecting the desired server with the
-<span class="guilabel">SiLA 2</span> button in the sidebar (see section <a class="reference internal" href="#introduction-to-the-sila-add-on">Introduction to the SiLA Add-on</a>).
+<span class="guilabel">SiLA 2</span> button in the sidebar (see section <a href="#id2"><span class="problematic" id="id3">`Introduction to the SiLA Add-on`_</span></a>).
 You will first see all SiLA 2 features provided by the server ❶. If you move the
 mouse pointer over one of the <span class="guilabel">i</span> icons, a tooltip with the
 description of the feature ❷ will appear. By clicking on the feature
@@ -374,8 +383,8 @@ reused when the connection to the server is re-established.</p>
 </section>
 <section id="sila-2-script-functions">
 <h2>SiLA 2 Script Functions<a class="headerlink" href="#sila-2-script-functions" title="Permalink to this headline"></a></h2>
-<section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h3>
+<section id="id1">
+<h3>Introduction<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
 <p>The SiLA 2 plugin contains various script functions for script-driven
 execution of commands and querying of properties.</p>
 <p><img alt="image31" src="../_images/100000010000014900000092D61E6440C9053063.png" /></p>

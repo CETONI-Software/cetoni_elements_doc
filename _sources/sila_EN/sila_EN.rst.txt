@@ -1,10 +1,21 @@
 SiLA2 Add-on
 ============
 
+.. image:: Pictures/sila_header.svg
+
+Introduction
+------------
+
+The SiLA Add-on allows you to integrate any SiLA device into the CETONI 
+Elements software. A generic, dynamically generated interface allows you to 
+manually access all SiLA features, commands and properties of any SiLA device. 
+With the help of several script functions you can automate your SiLA devices 
+and integrate them into CETONI Elements scripts. 
+
 Installation
 ------------
 
-SiLA 2 add-on is not included in the standard CETONI Elements
+The SiLA 2 add-on is not included in the standard CETONI Elements
 installation package, but must be installed additionally as an add-on.
 The versions of SiLA 2 Plugin and installed CETONI Elements software
 should match. For example, if you want to install SiLA 2 Plugin with
@@ -27,7 +38,7 @@ Start the file :file:`CETONI_Elements_SiLA_64bit_Setup.exe` for installation.
 The installation wizard will then guide you through the installation of
 the software and hardware drivers.
 
-.. image:: Pictures/1000000100000211000001A2E74E74F60F20C8AC.png
+.. image:: Pictures/sila_install_01.png
 
 During the installation, the Bonjour Print Services are installed which
 are necessary for the automatic discovery of SiLA Servers in the
@@ -35,7 +46,7 @@ network. This step is only required if the Bonjour Services are not
 already installed on your computer. If they are already installed,
 please deactivate the corresponding component (figure below).
 
-.. image:: Pictures/1000000100000211000001A20580E1A6CD385D13.png
+.. image:: Pictures/sila_install_02.png
 
 .. admonition:: Important
    :class: note
@@ -47,78 +58,75 @@ please deactivate the corresponding component (figure below).
 SiLA 2 Basics
 -------------
 
-SiLA 2 (Standardization in Lab Automation) is a communication standard
-for laboratory devices. The primary goal of SiLA is to create an
-international, open connectivity standard in laboratory automation that
-allows devices from different manufacturers to communicate with each
-other in one application.
+SiLA 2 is a communication standard for laboratory instruments, such as readers, 
+liquid handling robots and chromatography and other analytical equipment.
+The primary goal of SiLA is to create an international, open connectivity 
+standard in laboratory automation that allows devices from different 
+manufacturers to communicate with each other in one application.
 
 Client-Server concept
 ~~~~~~~~~~~~~~~~~~~~~
 
 Communication is client-server based and uses established network
-standards. A SiLA server is usually provided by a device while a SiLA
-client is usually a control software (e.g. a LIMS or CETONI Elements).
+standards. A **SiLA server** is usually provided by a **device** while a 
+**SiLA client** is usually a control software (e.g. a LIMS or CETONI Elements).
 Since a SiLA server represents a device in most cases, the terms SiLA
 server (or just server) and device are used synonymously in this
 document.
 
-The client always acts as the master by initiating the connection to a
-server. The connection is established via a TCP/IP network. A central
-component of SiLA 2 is the discovery of SiLA servers by SiLA clients in
-a local network. A client can use the SiLA Server Discovery mechanism to
-determine all available servers and their functionalities.
+.. image:: Pictures/client_server.png
 
-In SiLA 2, these functionalities of a device are called features.
-Features are another central component of SiLA 2. They describe which
-data a server provides and which actions the device can perform.
+Each SiLA Server has a certain number of Features implemented. **SiLA Features**
+are a key component of the SiLA 2 Standard as they define the 
+interaction between the SiLA Client and the SiLA Server. Every single Feature 
+describes a certain aspect of the overall behavior of the Server.
+
+The features of a device (that is, a SiLA server) are described using an XML 
+file where the functionality is described using:
+
+- **Properties**: data values that can be static (e.g. serial number) or dynamic (e.g. current temperature)
+- **Commands**: an interaction to control or pass information to/from the SiLA , 
+  an action that can be executed by a SiLA server
+- **Parameters**: expected information required to execute the command
+- **Return values**: expected output of the command
+- **Errors**: expected errors that might occur during the operation
+
+.. image:: Pictures/sila_feature.png
 
 Commands and Properties
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-In SiLA 2, the data are called *properties* and the actions are called
-*commands*. Properties and commands can be both *unobservable* and
-*observable*.
+Properties and commands can be both **unobservable** and **observable**.
 
-**Unobservable properties** are static data of a server that do not
-change during the runtime of a server (e.g. the number of possible
-switching positions of a valve).
+- **Unobservable properties** are static data of a server that do not
+  change during the runtime of a server (e.g. the number of possible
+  switching positions of a valve).
 
-**Observable properties** are dynamic data of a server that can change
-during the runtime of a server and about which clients should be
-informed (e.g. the current flow rate of a syringe pump). Clients can
-subscribe to observable properties so that they are notified of any
-changes to the property.
+- **Observable properties** are dynamic data of a server that can change
+  during the runtime of a server and about which clients should be
+  informed (e.g. the current flow rate of a syringe pump). Clients can
+  subscribe to observable properties so that they are notified of any
+  changes to the property.
 
-**Unobservable commands** are actions that can be performed on a device
-and that take very little time (e.g., to change settings such as the
-syringe parameters of a pump).
+- **Unobservable commands** are actions that can be performed on a device
+  and that take very little time (e.g., to change settings such as the
+  syringe parameters of a pump).
 
-**Observable commands** are actions that can potentially take a long
-time to execute on the device (e.g., fluid dispensing). Here, a client
-can subscribe to the so-called *Execution Info* to be notified about the
-progress of the command execution.
-
-*Commands* (unlike properties) can have parameters and return values.
-Parameters can be used to influence the execution of a command (e.g. to
-specify the desired flow rate and the volume to be dosed for a dose).
-Return values can be used to transmit the result of a command execution
-to the client (e.g. the acquisition data of a spectrometry).
-
-Additional metadata may be required to read a property or execute a
-command. These behave similarly to command parameters in the sense that
-depending on the metadata the value of a property or the effect of a
-command execution can vary.
+- **Observable commands** are actions that can potentially take a long
+  time to execute on the device (e.g., fluid dispensing). Here, a client
+  can subscribe to the so-called *Execution Info* to be notified about the
+  progress of the command execution.
 
 .. tip::
    A comprehensive introduction to the SiLA        
    standard is available on the SiLA homepage:              
-   https://sila-standard.com/standards/ 
+   https://sila-standard.com/standards/ or in this 
+   `blog post <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
-Introduction to the SiLA Add-on
--------------------------------
+SiLA UI Overview
+----------------
 
-By clicking the SiLA 2 button and selecting *Server Overview* ❶ in the
+By clicking the :guilabel:`SiLA 2` button and selecting *Server Overview* ❶ in the
 sidebar, you switch to the SiLA 2 add-on (see figure below).
 
 .. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
