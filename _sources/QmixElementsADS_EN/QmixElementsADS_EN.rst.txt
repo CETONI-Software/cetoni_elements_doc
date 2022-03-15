@@ -30,7 +30,7 @@ Activate License
 
 Right after the initial installation of the software, you have an active
 demo license. To view your installed licenses, select 
-:menuselection:`Help → Show License Information` from the main menu.
+:menuselection:`Help --> Show License Information` from the main menu.
 
 .. image:: Pictures/1000020100000174000000D78571510911B97AEE.png
    :width: 9.846cm
@@ -42,7 +42,7 @@ simulated devices and to test all functions of the software.
 
 In order to use the software to control your devices, you must
 register the license code you have received in the software. To do this,
-select :menuselection:`Help → Activate License` in the main menu.
+select :menuselection:`Help --> Activate License` in the main menu.
 
 |image5|
 
@@ -60,7 +60,7 @@ above.
 Overview of Activated Licenses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the menu item :menuselection:`Help → Show License Information` in the main menu
+Using the menu item :menuselection:`Help --> Show License Information` in the main menu
 of the application, you can display an overview of the current licenses:
 
 .. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
@@ -69,7 +69,7 @@ of the application, you can display an overview of the current licenses:
 Remove Licenses
 ~~~~~~~~~~~~~~~
 
-If you want to remove all licenses, select :menuselection:`Help → Remove License Data`
+If you want to remove all licenses, select :menuselection:`Help --> Remove License Data`
 from the main menu. It is not possible to remove individual licenses,
 you can only remove all licenses together. After removing the licenses,
 you will work with a demo license again.
@@ -136,7 +136,7 @@ Perform the following steps to import an existing device configuration:
    automatically and you don't need to perform the         
    following steps. 
 
-(1) Select the :menuselection:`Device → Import Configuration` menu item from the main
+(1) Select the :menuselection:`Device --> Import Configuration` menu item from the main
     menu.
 
 .. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
@@ -182,7 +182,7 @@ device configuration to employees or if you need the send a device
 configuration to the CETONI support staff, then you should export a
 device configuration as compressed :file:`.qcf` file. To export a device
 configuration, select the main menu item 
-:menuselection:`Device → Export Configuration`.
+:menuselection:`Device --> Export Configuration`.
 
 |Figure 1.5: Export device configuration|
 
@@ -191,8 +191,8 @@ Device configurations are exported as compressed :file:`*.qcf` files.
 CETONI Elements – The Basics
 ------------------------------
 
-Introduction
-~~~~~~~~~~~~~~
+Introduction into CETONI Elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The CETONI Elements application is a plugin-based, modular software
 solution for controlling a wide range of laboratory automation devices,
@@ -209,7 +209,7 @@ Show User Manual
 ~~~~~~~~~~~~~~~~~~
 
 The software PDF manual can be accessed via the application's help menu
-(:menuselection:`Help → Show PDF Manual`).
+(:menuselection:`Help --> Show PDF Manual`).
 
 .. image:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
 
@@ -220,13 +220,13 @@ The software PDF manual can be accessed via the application's help menu
    software manual.
 
 To show this online software manual select the menu item 
-:menuselection:`Help → Open Online Manual`.
+:menuselection:`Help --> Open Online Manual`.
 
 Show Software Version
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 If you need to know the version of the installed CETONI Elements, e.g.,
-for service purposes, select :menuselection:`Help → About CETONI Elements` from the main
+for service purposes, select :menuselection:`Help --> About CETONI Elements` from the main
 menu (see figure below).
 
 |Figure 1.7: Displaying the installed software version|
@@ -268,10 +268,8 @@ then you will get the following information:
 Views
 -----
 
-.. _introduction-1:
-
-Introduction
-~~~~~~~~~~~~
+Introduction to Views
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *Views* are windows that contain the display and control elements
 for a specific task or device. For example, there are *Views* for the
@@ -288,7 +286,7 @@ Show Views
 ~~~~~~~~~~
 
 When you start the software, not all views may be displayed. To display
-a view, select :menuselection:`Window → Show View` from the main menu. You will then
+a view, select :menuselection:`Window --> Show View` from the main menu. You will then
 see a menu with all views that are available in the application. Simply
 click on the corresponding menu item to display the view (see figure
 below).
@@ -480,7 +478,7 @@ When you click on a
 perspective, the views in the user interface are arranged in the same
 way as when the perspective was created. Alternatively, you can access
 the perspectives from the main menu. To do this, select the menu item
-:menuselection:`Window → Perspective`.
+:menuselection:`Window --> Perspective`.
 
 .. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
    :alt: 
@@ -571,7 +569,7 @@ name, the file is saved and you can open it in any text editor.
    :width: 15.88cm
 
 If you want to display the event log view manually, select 
-:menuselection:`Window → Show View → Event Log`` from the main menu of the 
+:menuselection:`Window --> Show View --> Event Log`` from the main menu of the 
 application.
 
 |Figure : Showing Event Log View|
@@ -621,10 +619,8 @@ Elements with your device(s).
 Working with projects
 ---------------------
 
-.. _introduction-2:
-
-Introduction
-~~~~~~~~~~~~
+Introduction to projects
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you work with the CETONI Elements software, then you always work in a
 certain CETONI Elements project. A project stores all project-related
@@ -635,7 +631,7 @@ user-specific settings are loaded. So you can easily switch between
 different projects or share projects with other employees.
 
 The `Title bar`_ always shows your current
-project path. If you select the menu item :menuselection:`File → Browse Project Folder` 
+project path. If you select the menu item :menuselection:`File --> Browse Project Folder` 
 in the main menu, the current project will be opened in File
 Explorer.
 
@@ -665,7 +661,7 @@ addition, the following sub directories exist in the project directory:
 Creating a new project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a new project, select the menu item  :menuselection:`File → New Project`
+To create a new project, select the menu item  :menuselection:`File --> New Project`
 from the main menu.
 
 |Figure 1.35: Creating new project|
@@ -701,7 +697,7 @@ Open an existing project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To open an existing project, select the menu item 
-:menuselection:`File → Open Project` from the main menu.
+:menuselection:`File --> Open Project` from the main menu.
 
 |Figure 1.37: Open an existing project|
 
@@ -732,7 +728,7 @@ which you select for export are stored in a compressed project file
 
 To export a project, you
 must first open the project in the software. From the application's main
-menu, select :menuselection:`File → Export Project`.
+menu, select :menuselection:`File --> Export Project`.
 
 In the export window that appears, you can now select which directories
 of the project ❶ are to be exported.
@@ -765,7 +761,7 @@ Importing projects
 ~~~~~~~~~~~~~~~~~~~~
 
 The import function allows you to import project files :file:`*.qpr` into the
-software. To do this, select :menuselection:`File → Import Project` from the main menu.
+software. To do this, select :menuselection:`File --> Import Project` from the main menu.
 
 |Figure 1.42: Selecting project import|
 
@@ -874,10 +870,8 @@ Example 2: Light design with blue accent color
 Restricting Access to the User Interface (UI)
 ---------------------------------------------
 
-.. _introduction-3:
-
-Introduction
-~~~~~~~~~~~~
+Introduction to UI Access configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The software allows you to restrict access to control elements in the
 software using the UI-Access- Manager. You can configure which elements

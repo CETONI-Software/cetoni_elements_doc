@@ -40,7 +40,11 @@ your navigation through this document:
    :maxdepth: 2
    :caption: Contents:
    :hidden:
+   :numbered:
 
    QmixElementsADS_EN/QmixElementsADS_EN.rst
+   scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
+   scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
+   qmixv_EN/qmixv_EN.rst
    Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst

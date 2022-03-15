@@ -1,0 +1,16 @@
+<svg x="0" y="0" width="512" height="512" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <title>resize icon</title>
+    <desc>resize icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+    <g>
+        <polygon points="32,32 480,32 480,480 32,480" fill="#4ec1f5"/>
+        <polygon points="480,32 480,480 32,480" fill="#0299e3"/>
+        <polygon points="64,64 448,64 448,448 64,448" fill="#dff3fd"/>
+        <polygon points="448,64 448,448 64,448" fill="#b1e3fb"/>
+        <polygon points="32,320 192,320 192,480 32,480" fill="#4ec1f5"/>
+        <polygon points="192,320 192,480 32,480" fill="#0299e3"/>
+        <polygon points="370.75,186.5 416,231.75 416,96 280.25,96 325.5,141.25 237.25,229.5 192,184.25 192,320 327.75,320 282.5,274.75" fill="#788f9b"/>
+        <polygon points="282.5,274.75 370.75,186.5 416,231.75 416,96 192,320 327.75,320" fill="#546e7a"/>
+    </g>
+</svg>

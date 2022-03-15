@@ -47,3 +47,60 @@ body > div.wy-grid-for-nav > nav > div > div.wy-menu.wy-menu-vertical > p > span
 .wy-nav-side {
     background-color: #233942 !important;
 }
+
+/* Customize for CETONI Documentation*/
+.rst-content .guilabel {
+    background:#e7f2fa;
+    border:1px solid #6ab0de;
+    padding: 4px 8px 4px 8px;
+   }
+
+/*rtd theme does not render menuselection, so let's apply guilabel settings to it*/
+.rst-content .menuselection {
+    background:#e7f2fa;
+    font-size: 80%;
+    border:1px solid #6ab0de;
+    font-weight:700;
+    border-radius:4px;
+    margin:auto 2px;
+    padding: 4px 8px 4px 8px;
+   }
+
+html[data-theme='dark'] .rst-content .guilabel {
+    background:#2d2d2d;
+    border:1px solid #505050;
+}
+
+html[data-theme='dark'] .rst-content .menuselection {
+    background:#2d2d2d;
+    border:1px solid #505050;
+}
+
+   /* creates a border and background with shadow that looks like a key */
+.rst-content .kbd {
+    font-family: "Source Code Pro",monospace;
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    font-size: 87.5%;
+    /*color: #212121;*/
+    background-color: #f2f2f2;
+    border: 1px solid #cbcbcb;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),inset 0 0 0 2px #fff;
+}
+
+html[data-theme='dark'] .rst-content .kbd {
+    font-family: "Source Code Pro",monospace;
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    font-size: 87.5%;
+    /*color: #212121;*/
+    background-color: #383838;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,1),inset 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+.guinum {
+    color: #dd0000;
+    font-size: 120%;
+    font-weight:700;
+}

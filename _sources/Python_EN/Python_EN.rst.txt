@@ -73,8 +73,8 @@ select it for installation if it is not yet available on your computer.
 Python Console
 --------------
 
-Overview
-~~~~~~~~
+Overview of Python Console
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Python add-on has a Python console that allows you to interactively
 enter and execute Python code similar to the standard Python console.
@@ -87,8 +87,8 @@ In the Python console, you can try out commands, test access
 to objects, and it helps you debug problems. If function calls work in
 the console, you can use them in your script.
 
-Context Menu
-~~~~~~~~~~~~
+Context Menu of Python Console
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The context menu of the Python console contains the usual commands for
 text editing:
@@ -337,14 +337,12 @@ object and then start logging:
 Python Script Function - Execute Python Code
 --------------------------------------------
 
-.. _overview-1:
+Python Script Functions Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Overview
-~~~~~~~~
-
-.. figure:: Pictures/1000139A00000B6A00000B5A63C99382F8AF9D57.svg
+.. image:: Pictures/1000139A00000B6A00000B5A63C99382F8AF9D57.svg
    :align: left
-   :figwidth: 60px
+   :width: 60px
 
 The Python plugin adds the :code:`Execute Python Code` script
 function to the :guilabel:`Core Functions` category of the :guilabel:`Script Pool`:
@@ -411,23 +409,36 @@ writing Python code.
 
 The editor has the following features
 
--  Syntax highlighting for Python code ❶
+-  Syntax highlighting for Python code :guinum:`❶`
 -  a simple code completion
--  Code Folding ❷
--  Line numbers ❸
--  Undo / Redo functionality ❹
+-  Code Folding :guinum:`❷`
+-  Line numbers :guinum:`❸`
+-  Undo / Redo functionality :guinum:`❹`
 
 Some functions of the editor are available via the context menu, other
 functions are available via keyboard shortcuts. Here are some of the
 functions:
 
--  Increase font size – **Ctrl +**
--  Decrease font size – **Ctrl -**
--  Reset font size to default – **Ctrl+0**
--  Indent selected code block: **Tab**
--  Unindent selected code block: **Shift+Tab**
--  Undo: **Ctrl+Z** or context menu
--  Redo: **Ctrl+Y** or contexte menu
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Action
+     - Keyboard Shortcut
+   * - Increase font size
+     - :kbd:`Ctrl` + :kbd:`+`
+   * - Decrease font size
+     - :kbd:`Ctrl` + :kbd:`-`
+   * - Reset font size to default
+     - :kbd:`Ctrl` + :kbd:`0`
+   * - Indent selected code block
+     - :kbd:`Tab`
+   * - Unindent selected code block
+     - :kbd:`Shift` + :kbd:`Tab`
+   * - Undo
+     - :kbd:`Ctrl` + :kbd:`Z` or context menu
+   * - Redo
+     - :kbd:`Ctrl` + :kbd:`Y` or contexte menu
 
 .. admonition:: Important
    :class: note

@@ -3,8 +3,8 @@ SiLA2 Add-on
 
 .. image:: Pictures/sila_header.svg
 
-Introduction
-------------
+Introduction to SiLA2 Add-on
+--------------------------------
 
 The SiLA Add-on allows you to integrate any SiLA device into the CETONI 
 Elements software. A generic, dynamically generated interface allows you to 
@@ -12,8 +12,8 @@ manually access all SiLA features, commands and properties of any SiLA device.
 With the help of several script functions you can automate your SiLA devices 
 and integrate them into CETONI Elements scripts. 
 
-Installation
-------------
+Installation of SiLA2 Add-on
+--------------------------------
 
 The SiLA 2 add-on is not included in the standard CETONI Elements
 installation package, but must be installed additionally as an add-on.
@@ -250,7 +250,8 @@ plugin, which are presented in Section `SiLA 2 Script Functions`_, are more
 suitable.
 
 Open the generic interface by selecting the desired server with the 
-:guilabel:`SiLA 2` button in the sidebar (see section `Introduction to the SiLA Add-on`_). 
+:guilabel:`SiLA 2` button in the sidebar 
+(see section `SiLA 2 Basics`_). 
 You will first see all SiLA 2 features provided by the server ❶. If you move the
 mouse pointer over one of the :guilabel:`i` icons, a tooltip with the
 description of the feature ❷ will appear. By clicking on the feature
@@ -319,8 +320,8 @@ reused when the connection to the server is re-established.
 SiLA 2 Script Functions
 -----------------------
 
-Introduction
-~~~~~~~~~~~~
+Introduction to SiLA Script Functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The SiLA 2 plugin contains various script functions for script-driven
 execution of commands and querying of properties.
