@@ -330,7 +330,7 @@ alternative way for moving functions up and down the list: First, make a
 right mouse click on the function that is to be moved. This will open a
 context menu from which you may then select *Move up* or *Move down*,
 respectively (figure above). Alternatively, you can use the keyboard
-with the :kbd:`Ctrl+Cursor up` or :kbd:`Ctrl+Cursor down` shortcuts.
+with the :kbd:`Ctrl` + :kbd:`↑` or :kbd:`Ctrl` + :kbd:`↓` shortcuts.
 
 This latter method may only be used to move functions up or down within
 the current sequence. If you want to move a function to a completely
@@ -362,8 +362,8 @@ Copying Functions
 Similarly, functions can be copied either by using the context menu via
 the mouse or using key combinations via the keyboard. If you work with
 the context menu, simply select *Copy* and then *Paste* from the menu
-(figure below); with the keyboard, use the :kbd:`Ctrl+C` shortcut to copy and
-:kbd:`Ctrl+V` to paste.
+(figure below); with the keyboard, use the :kbd:`Ctrl` + :kbd:`C` shortcut to copy and
+:kbd:`Ctrl` + :kbd:`V` to paste.
 
 |Figure : Copying a function|
 
@@ -371,11 +371,11 @@ This is how you copy a function to a new position:
 
 1. Select the functions you want to move.
 2. Copy the functions via *Copy* of the context menu or via the
-   keyboard and :kbd:`Ctrl+C`.
+   keyboard and :kbd:`Ctrl` + :kbd:`C`.
 3. Select the function before which you want to insert the copied
    function by left-clicking it.
 4. Paste the copied functions via *Paste* of the context menu or via the
-   keyboard and :kbd:`Ctrl+V`.
+   keyboard and :kbd:`Ctrl` + :kbd:`V`.
 
 To insert the same functions at multiple points of the function tree
 simply repeat steps 3 and 4 (above).
@@ -566,7 +566,7 @@ defined so far (see figure below).
 Every additional
 character that you enter will cause a filtering of that list according
 to the character sequence inserted thus far. You may use either the
-:kbd:`up` or :kbd:`down buttons` of your keyboard or the mouse to select a name
+:kbd:`↑` or :kbd:`↓` of your keyboard or the mouse to select a name
 from that pre-filtered list. Accept the selection by pressing the
 :kbd:`Enter` key.
 

@@ -1,20 +1,27 @@
-QmixV Plugin
+Valve Plugin
 ============
 
-Introduction to QmixV Plugin
+Introduction to Valve Plugin
 --------------------------------
 
-The QmixV plugin is used to control the QmixV valve modules or to
-control valve devices that are part of other devices (i.e. valves
-mounted on Nemesys syringe pumps).
+The valve plugin is used to control
 
-|Figure 1: QmixV valve device list|
+.. image:: Pictures/valve_devices_numbered.jpg
+
+- :guinum:`❶` CETONI QmixV valve modules
+- :guinum:`❷` valve devices that are part of other devices (i.e. valves
+  mounted on Nemesys syringe pumps)
+- :guinum:`❸` supported valves from other manufacturers (e.g. VICI valves)
 
 Valve Device List
 --------------------
 
-The plugin mainly consists of the valve device list (see Figure above),
-which is displayed as a separate view in the graphical user interface. You
+The plugin mainly consists of the valve device list,
+which is displayed as a separate view in the graphical user interface. 
+
+|Figure 1: QmixV valve device list|
+
+You
 can move the window to another position in the graphic interface at any
 time by dragging and dropping the title bar, or you can move it out of
 the interface to become a separate window.

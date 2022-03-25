@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. QmixV Plugin &mdash; CETONI Elements Manual</title>
+  <title>5. Valve Plugin &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Python Add-on" href="../Python_EN/Python_EN.html" />
-    <link rel="prev" title="3. Generic Script Functions" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" /> 
+    <link rel="next" title="6. Python Add-on" href="../Python_EN/Python_EN.html" />
+    <link rel="prev" title="4. I/O Plugin" href="../qmixio_EN/qmixio_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,24 +55,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">1. CETONI Elements - An Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">2. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">3. Generic Script Functions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. QmixV Plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-qmixv-plugin">4.1. Introduction to QmixV Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#valve-device-list">4.2. Valve Device List</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#editing-valve-names">4.2.1. Editing valve names</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#switching-valve-position">4.2.2. Switching valve position</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#naming-valve-positions">4.2.3. Naming valve positions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">4. I/O Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Valve Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-valve-plugin">5.1. Introduction to Valve Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valve-device-list">5.2. Valve Device List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#editing-valve-names">5.2.1. Editing valve names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switching-valve-position">5.2.2. Switching valve position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming-valve-positions">5.2.3. Naming valve positions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-valves">4.3. Creating Valves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deleting-valves">4.4. Deleting Valves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#valve-script-functions">4.5. Valve Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#switch-valve">4.5.1. Switch Valve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-valves">5.3. Creating Valves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-valves">5.4. Deleting Valves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valve-script-functions">5.5. Valve Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#switch-valve">5.5.1. Switch Valve</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">5. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">6. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">6. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">7. SiLA2 Add-on</a></li>
 </ul>
 
         </div>
@@ -89,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">4. </span>QmixV Plugin</li>
+      <li><span class="section-number">5. </span>Valve Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qmixv_EN/qmixv_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -99,19 +100,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="qmixv-plugin">
-<h1><span class="section-number">4. </span>QmixV Plugin<a class="headerlink" href="#qmixv-plugin" title="Permalink to this headline"></a></h1>
-<section id="introduction-to-qmixv-plugin">
-<h2><span class="section-number">4.1. </span>Introduction to QmixV Plugin<a class="headerlink" href="#introduction-to-qmixv-plugin" title="Permalink to this headline"></a></h2>
-<p>The QmixV plugin is used to control the QmixV valve modules or to
-control valve devices that are part of other devices (i.e. valves
-mounted on Nemesys syringe pumps).</p>
-<p><img alt="Figure 1: QmixV valve device list" src="../_images/10000201000001EB000000F0B98E00020FCB7DA7.png" /></p>
+  <section id="valve-plugin">
+<h1><span class="section-number">5. </span>Valve Plugin<a class="headerlink" href="#valve-plugin" title="Permalink to this headline"></a></h1>
+<section id="introduction-to-valve-plugin">
+<h2><span class="section-number">5.1. </span>Introduction to Valve Plugin<a class="headerlink" href="#introduction-to-valve-plugin" title="Permalink to this headline"></a></h2>
+<p>The valve plugin is used to control</p>
+<img alt="../_images/valve_devices_numbered.jpg" src="../_images/valve_devices_numbered.jpg" />
+<ul class="simple">
+<li><p><span class="guinum">❶</span> CETONI QmixV valve modules</p></li>
+<li><p><span class="guinum">❷</span> valve devices that are part of other devices (i.e. valves
+mounted on Nemesys syringe pumps)</p></li>
+<li><p><span class="guinum">❸</span> supported valves from other manufacturers (e.g. VICI valves)</p></li>
+</ul>
 </section>
 <section id="valve-device-list">
-<h2><span class="section-number">4.2. </span>Valve Device List<a class="headerlink" href="#valve-device-list" title="Permalink to this headline"></a></h2>
-<p>The plugin mainly consists of the valve device list (see Figure above),
-which is displayed as a separate view in the graphical user interface. You
+<h2><span class="section-number">5.2. </span>Valve Device List<a class="headerlink" href="#valve-device-list" title="Permalink to this headline"></a></h2>
+<p>The plugin mainly consists of the valve device list,
+which is displayed as a separate view in the graphical user interface.</p>
+<p><img alt="Figure 1: QmixV valve device list" src="../_images/10000201000001EB000000F0B98E00020FCB7DA7.png" /></p>
+<p>You
 can move the window to another position in the graphic interface at any
 time by dragging and dropping the title bar, or you can move it out of
 the interface to become a separate window.</p>
@@ -120,7 +127,7 @@ tabular form. The name of the module and the actual valve position
 status icon is shown in the left-hand table column, and the right-hand
 column shows the name of the current position of the valve.</p>
 <section id="editing-valve-names">
-<h3><span class="section-number">4.2.1. </span>Editing valve names<a class="headerlink" href="#editing-valve-names" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.1. </span>Editing valve names<a class="headerlink" href="#editing-valve-names" title="Permalink to this headline"></a></h3>
 <p>You can change the name of a valve at any time and, for example, assign
 a name suitable for your particular application. You change a name by the
 following steps:</p>
@@ -133,7 +140,7 @@ Figure above)</p></li>
 </ol>
 </section>
 <section id="switching-valve-position">
-<h3><span class="section-number">4.2.2. </span>Switching valve position<a class="headerlink" href="#switching-valve-position" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.2. </span>Switching valve position<a class="headerlink" href="#switching-valve-position" title="Permalink to this headline"></a></h3>
 <p>You can also switch the valve position in the module list. For this
 purpose proceed as follows:</p>
 <ol class="arabic simple">
@@ -147,7 +154,7 @@ table cell to close the selection box.</p></li>
 <p>The valve is now switched into the new valve position.</p>
 </section>
 <section id="naming-valve-positions">
-<h3><span class="section-number">4.2.3. </span>Naming valve positions<a class="headerlink" href="#naming-valve-positions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.3. </span>Naming valve positions<a class="headerlink" href="#naming-valve-positions" title="Permalink to this headline"></a></h3>
 <p>You can give each valve position an individual name in the software, and
 so configure the names of the valve positions to suit your application.
 Perform the following steps to change the names of the valve positions.</p>
@@ -181,7 +188,7 @@ in all areas of the software.</p>
 </section>
 </section>
 <section id="creating-valves">
-<h2><span class="section-number">4.3. </span>Creating Valves<a class="headerlink" href="#creating-valves" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.3. </span>Creating Valves<a class="headerlink" href="#creating-valves" title="Permalink to this headline"></a></h2>
 <p>You can control CETONI valves via one or more digital outputs. If you
 have connected your valve to the corresponding digital outputs, you must
 configure it in the software.</p>
@@ -220,7 +227,7 @@ the valve list.</p>
 </div>
 </section>
 <section id="deleting-valves">
-<h2><span class="section-number">4.4. </span>Deleting Valves<a class="headerlink" href="#deleting-valves" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.4. </span>Deleting Valves<a class="headerlink" href="#deleting-valves" title="Permalink to this headline"></a></h2>
 <p>Valves that you have created dynamically in the software, e.g. with the
 <a class="reference internal" href="#creating-valves"><span class="std std-ref">Create Valve</span></a> function (see previous section), can be deleted from the
 valve list via the context menu. To do this, right-click on the line of
@@ -236,12 +243,12 @@ item.</p>
 </div>
 </section>
 <section id="valve-script-functions">
-<h2><span class="section-number">4.5. </span>Valve Script Functions<a class="headerlink" href="#valve-script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.5. </span>Valve Script Functions<a class="headerlink" href="#valve-script-functions" title="Permalink to this headline"></a></h2>
 <p><img alt="Figure 10: Qmix valve script functions" src="../_images/10000201000000F70000003E8592638162A9459E.png" /></p>
 <p>The Qmix valve plugin contains a script function for switching the Qmix valves
 from a script.</p>
 <section id="switch-valve">
-<h3><span class="section-number">4.5.1. </span>Switch Valve<a class="headerlink" href="#switch-valve" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.5.1. </span>Switch Valve<a class="headerlink" href="#switch-valve" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002F3400003505000035057520F6A9E5AEC280.svg"><img alt="../_images/10002F3400003505000035057520F6A9E5AEC280.svg" class="align-left" src="../_images/10002F3400003505000035057520F6A9E5AEC280.svg" width="60" /></a>
 <p>You use this function to switch the valve position. In the
 configuration area of this function, you can select the valve device <span class="guinum">❶</span>,
@@ -267,15 +274,15 @@ position for syringe refill.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" class="btn btn-neutral float-left" title="3. Generic Script Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="5. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../qmixio_EN/qmixio_EN.html" class="btn btn-neutral float-left" title="4. I/O Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="6. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Mar 15, 2022 13:30.
+      <span class="lastupdated">Last updated on Mar 25, 2022 08:50.
       </span></p>
   </div>
 

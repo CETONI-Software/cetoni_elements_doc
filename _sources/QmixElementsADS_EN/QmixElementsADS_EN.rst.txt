@@ -191,7 +191,7 @@ Device configurations are exported as compressed :file:`*.qcf` files.
 CETONI Elements – The Basics
 ------------------------------
 
-Introduction into CETONI Elements
+Introduction to CETONI Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The CETONI Elements application is a plugin-based, modular software
@@ -261,9 +261,9 @@ following text:
 
 then you will get the following information:
 
--  **application name**: CETONI Elements
--  **current project path**: :file:`C:\\Users\\Public\\Documents\\CETONI Elements\\Projects\\default_project`
--  **device configuration**: demo (shared)
+:application name: CETONI Elements
+:current project path: :file:`C:\\Users\\Public\\Documents\\CETONI Elements\\Projects\\default_project`
+:device configuration: demo (shared)
 
 Views
 -----

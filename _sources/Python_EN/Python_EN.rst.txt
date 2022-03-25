@@ -3,8 +3,8 @@ Python Add-on
 
 .. image:: Pictures/python_header.svg
 
-Introduction
-------------
+Introduction to Python Add-on
+------------------------------
 
 The Python add-on allows you to execute Python code in CETONI Elements
 scripts via a corresponding script function. It thus provides an easy
