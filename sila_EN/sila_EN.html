@@ -73,7 +73,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#accept-untrusted-certificates">7.5.3. Accept untrusted certificates</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#control-of-a-sila-2-server">7.6. Control of a SiLA 2 server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-of-a-sila-2-server">7.6. Control of a SiLA 2 server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-generic-ui">7.6.1. Overview of generic UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sila-commands-ui">7.6.2. SiLA Commands UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sila-properties-ui">7.6.3. SiLA Properties UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#terminating-a-connection-to-a-server">7.6.4. Terminating a connection to a server</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#sila-2-script-functions">7.7. SiLA 2 Script Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction-to-sila-script-functions">7.7.1. Introduction to SiLA Script Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#execute-sila-command">7.7.2. Execute SiLA Command</a></li>
@@ -224,22 +230,21 @@ standard is available on the SiLA homepage:
 </section>
 <section id="sila-ui-overview">
 <h2><span class="section-number">7.4. </span>SiLA UI Overview<a class="headerlink" href="#sila-ui-overview" title="Permalink to this headline"></a></h2>
-<p>By clicking the <span class="guilabel">SiLA 2</span> button and selecting <em>Server Overview</em> ❶ in the
+<p>By clicking the <span class="guilabel">SiLA 2</span> button and selecting <em>Server Overview</em> <span class="guinum">❶</span> in the
 sidebar, you switch to the SiLA 2 add-on (see figure below).</p>
 <img alt="../_images/100000010000049200000191916BBBF1204CA308.png" src="../_images/100000010000049200000191916BBBF1204CA308.png" />
 <ol class="arabic simple">
 <li><p><span class="guilabel">SiLA 2</span> button for display of <em>Server Overview</em> and connected SiLA 2
 servers.</p></li>
-<li><p>Tabs for selecting the <em>Server Overview</em> or a SiLA 2 server</p></li>
 <li><p>Button to perform a network scan to find available SiLA 2 servers</p></li>
 <li><p>Button to connect to all servers in the list</p></li>
 <li><p>Display of all SiLA 2 servers found in the network or added manually</p></li>
+<li><p>Selection box for allowing unencrypted connections.</p></li>
+<li><p>Button for adding a SiLA 2 server manually</p></li>
 <li><p>Button to connect or disconnect from a SiLA 2 server</p></li>
 <li><p>Button to delete the server from the list</p></li>
-<li><p>Button for adding a SiLA 2 server manually</p></li>
-<li><p>Selection box for allowing unencrypted connections.</p></li>
 </ol>
-<p>You can use the sidebar button ❶ or the tabs ❷ to switch between the
+<p>You can use the sidebar button <span class="guinum">❶</span> or the view tabs to switch between the
 currently connected SiLA 2 servers and the <em>Server Overview</em>. A tab is
 created for each server.</p>
 </section>
@@ -247,24 +252,29 @@ created for each server.</p>
 <h2><span class="section-number">7.5. </span>Connecting to a SiLA 2 server<a class="headerlink" href="#connecting-to-a-sila-2-server" title="Permalink to this headline"></a></h2>
 <section id="connecting-to-automatically-detected-servers">
 <h3><span class="section-number">7.5.1. </span>Connecting to automatically detected servers<a class="headerlink" href="#connecting-to-automatically-detected-servers" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/link.svg"><img alt="../_images/link.svg" class="align-left" src="../_images/link.svg" width="40" /></a>
 <p>To connect to a SiLA 2 server that was found in the local network via
-SiLA Server Discovery, simply click on the <span class="guilabel">Connect</span> icon ❶ in the
-corresponding row in the <em>Server Overview</em>. After the connection has
-been successfully established, the <em>Disconnect</em> icon ❷ appears instead
+SiLA Server Discovery, simply click on the <em>Connect</em> icon <span class="guinum">❶</span> in the
+corresponding row in the <em>Server Overview</em>.</p>
+<a class="reference internal image-reference" href="../_images/broken_link.svg"><img alt="../_images/broken_link.svg" class="align-left" src="../_images/broken_link.svg" width="40" /></a>
+<p>After the connection has
+been successfully established, the <em>Disconnect</em> icon <span class="guinum">❷</span> appears instead
 of the <em>Connect</em> icon. By clicking on this icon you can disconnect from
 this device again.</p>
 <img alt="../_images/1000000100000433000000D8B27B749FA02DEB20.png" src="../_images/1000000100000433000000D8B27B749FA02DEB20.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The <span class="guilabel">Connect-To-All</span> ❸ button allows you to
+<a class="reference internal image-reference" href="../_images/link_multi.svg"><img alt="../_images/link_multi.svg" class="align-left" src="../_images/link_multi.svg" width="40" /></a>
+<p>The <em>Connect-To-All</em> <span class="guinum">❸</span> button allows you to
 connect to all devices at once, rather than having to
 connect to each device individually.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<a class="reference internal image-reference" href="../_images/wifi.svg"><img alt="../_images/wifi.svg" class="align-left" src="../_images/wifi.svg" width="40" /></a>
 <p>If the software did not find one or more of
 your SiLA devices, it may help to restart the servers
-and run a new network scan ❹.</p>
+and run a new network scan <span class="guinum">❹</span>.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -284,7 +294,8 @@ disconnected.</p>
 However, if one of your devices does not provide encryption, the
 connection attempt will fail with an error message in the event log. For
 local testing, you can still connect to this device if you check
-<span class="guilabel">Allow insecure (unencrypted) connection</span> ❺.</p>
+<span class="guilabel">Allow insecure (unencrypted) connection</span> (see figure below).</p>
+<img alt="../_images/allow_unsecure.png" src="../_images/allow_unsecure.png" />
 <div class="caution admonition">
 <p class="admonition-title">Attention</p>
 <p>You should never establish an
@@ -295,9 +306,10 @@ device and the software can be read by third parties.</p>
 </section>
 <section id="manually-add-and-connect-to-a-server">
 <h3><span class="section-number">7.5.2. </span>Manually add and connect to a server<a class="headerlink" href="#manually-add-and-connect-to-a-server" title="Permalink to this headline"></a></h3>
+<img alt="../_images/add_server.png" src="../_images/add_server.png" />
 <p>If a server in your local network is not found automatically, or if you
 want to connect to a server outside your local network, you must add
-this server manually. To do this, click the <span class="guilabel">Add server</span> ❻ button (see
+this server manually. To do this, click the <span class="guilabel">Add server</span> <span class="guinum">❻</span> button (see
 figure above). The following dialog box appears.</p>
 <p><img alt="image25" src="../_images/100000000000016F0000009E1716FA5C8D3B4E18.png" /></p>
 <p>Enter either the host name or the IP address of your device
@@ -314,48 +326,68 @@ and client, which are also used to encrypt the communication on the
 Internet. Usually, these certificates are signed by a trusted
 certificate authority. If you try to connect to a server that uses a
 self-signed certificate, the following dialog box appears:</p>
-<p><img alt="image26" src="../_images/1000000100000389000001CB2D6FE681615C5C1E.png" /></p>
-<p>Here you can decide whether or not to connect despite the
-untrusted certificate. By clicking <span class="guilabel">View Certificate</span> you get more
-information about the certificate. There you can see, most importantly,
-which institution created and signed the certificate.</p>
+<img alt="../_images/untrusted_certificate.png" src="../_images/untrusted_certificate.png" />
 <p>If you trust the certificate, click <span class="guilabel">Yes</span> in the dialog box to continue
 the connection, otherwise click <span class="guilabel">No</span>. In this case, the connection will
 be aborted.</p>
+<p>By clicking <span class="guilabel">View Certificate</span> you get more
+information about the certificate. There you can see, most importantly,
+which institution created and signed the certificate.</p>
+<img alt="../_images/untrusted_certificate2.png" src="../_images/untrusted_certificate2.png" />
 </section>
 </section>
 <section id="control-of-a-sila-2-server">
 <h2><span class="section-number">7.6. </span>Control of a SiLA 2 server<a class="headerlink" href="#control-of-a-sila-2-server" title="Permalink to this headline"></a></h2>
+<section id="overview-of-generic-ui">
+<h3><span class="section-number">7.6.1. </span>Overview of generic UI<a class="headerlink" href="#overview-of-generic-ui" title="Permalink to this headline"></a></h3>
 <p>After you have successfully connected to a SiLA server, you can control
 it via a generic interface. This interface looks the same for any type
 of SiLA server, that is, for any device regardless of the type or
-manufacturer of the device. While this interface allows you to control
+manufacturer of the device.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While this interface allows you to control
 every aspect of a SiLA server, it cannot be used to create complex
 workflows. For this purpose, the script functions provided by the
 plugin, which are presented in Section <a class="reference internal" href="#sila-2-script-functions">SiLA 2 Script Functions</a>, are more
 suitable.</p>
+</div>
 <p>Open the generic interface by selecting the desired server with the
 <span class="guilabel">SiLA 2</span> button in the sidebar
 (see section <a class="reference internal" href="#sila-2-basics">SiLA 2 Basics</a>).
-You will first see all SiLA 2 features provided by the server ❶. If you move the
+You will first see all SiLA 2 features provided by the server <span class="guinum">❶</span>. If you move the
 mouse pointer over one of the <span class="guilabel">i</span> icons, a tooltip with the
-description of the feature ❷ will appear. By clicking on the feature
-name or the arrow to the left of the name, you can expand the feature.
-Now you can see all available commands and properties of this feature ❸.
-Commands can be found on the left side, properties on the right side.
-With the splitter you can resize the width that is available to the
-commands or properties ❹.</p>
-<img alt="../_images/100000010000051B0000030085F2FF05DAA66F0C.png" src="../_images/100000010000051B0000030085F2FF05DAA66F0C.png" />
-<p>If a command has parameters, metadata or return values, it can also be
-expanded to enter the parameters or metadata and display the return
-values ❺. If a command has no parameters or only one, then the command
-cannot be expanded and at most one input field is displayed directly
-next to the command name ❻. To execute the command, click the <span class="guilabel">Execute</span>
-button ❼.</p>
-<p>Normally, properties cannot be expanded. Here, only a field with the
-current value of the property is displayed. To the right is a button for
-re-polling the property ❽. Clicking the button triggers one of the
-following two actions:</p>
+description of the feature <span class="guinum">❷</span> will appear.</p>
+<img alt="../_images/feature_overview.png" src="../_images/feature_overview.png" />
+<p>By clicking on the feature
+name or the arrow to the left of the name, you can expand the feature (see figure below).
+Now you can see all available commands and properties of this feature.
+Commands can be found on the left side  <span class="guinum">❶</span>, properties on the right side
+<span class="guinum">❷</span>. With the splitter  <span class="guinum">❸</span> you can resize the width that is
+available to the commands or properties.</p>
+<img alt="../_images/commands_and_properties.png" src="../_images/commands_and_properties.png" />
+</section>
+<section id="sila-commands-ui">
+<h3><span class="section-number">7.6.2. </span>SiLA Commands UI<a class="headerlink" href="#sila-commands-ui" title="Permalink to this headline"></a></h3>
+<p>If a command has parameters metadata or return values,
+such as the <span class="guilabel">Set Fill Level</span> command <span class="guinum">❶</span> in the figure below, it can also be
+expanded to enter the parameters <span class="guinum">❷</span> or metadata and display the return
+values. The following picture shows all commands of the <span class="guilabel">Pump Fluid Dosing Service</span>
+feature:</p>
+<img alt="../_images/sila_commands.png" src="../_images/sila_commands.png" />
+<p>If a command has no parameters or only one, such as the <span class="guilabel">Generate Flow</span>
+command in the figure above, then the command  cannot be expanded and at most one
+input field is displayed directly next to the command name <span class="guinum">❸</span>.
+To execute the command, click the <span class="guilabel">Execute</span> button <span class="guinum">❹</span>.</p>
+</section>
+<section id="sila-properties-ui">
+<h3><span class="section-number">7.6.3. </span>SiLA Properties UI<a class="headerlink" href="#sila-properties-ui" title="Permalink to this headline"></a></h3>
+<p>Normally, properties cannot be expanded. The picture below shows the SiLA properties
+of the <span class="guilabel">Analog In Channel Provider</span> feature. Here, only a field with the
+current value of the property is displayed <span class="guinum">❶</span>. To the right is a button for
+re-polling the property <span class="guinum">❷</span>.</p>
+<img alt="../_images/sila_properties.png" src="../_images/sila_properties.png" />
+<p>Clicking the re-polling button button <span class="guinum">❷</span> triggers one of the following two actions:</p>
 <ul class="simple">
 <li><p>If the property is <em>Unobservable</em> (see Section <a class="reference internal" href="#commands-and-properties">Commands and Properties</a>),
 then it is simply queried again by the server.</p></li>
@@ -366,10 +398,9 @@ canceled due to an error.</p></li>
 </ul>
 <p>It is possible that a property requires metadata. In this case, the
 property can be expanded like a command and the input fields for the
-metadata ❾ appear. After you have entered the metadata, you must query
+metadata <span class="guinum">❸</span> appear. After you have entered the metadata, you must query
 the property again or start a new subscription so that this data is sent
 to the server.</p>
-<img alt="../_images/100000010000050F000001275A2A324C15199036.png" src="../_images/100000010000050F000001275A2A324C15199036.png" />
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>When the generic interface is opened for
@@ -381,6 +412,9 @@ In this case you have to enter the metadata first and
 then query the value yourself or start a subscription
 yourself.</p>
 </div>
+</section>
+<section id="terminating-a-connection-to-a-server">
+<h3><span class="section-number">7.6.4. </span>Terminating a connection to a server<a class="headerlink" href="#terminating-a-connection-to-a-server" title="Permalink to this headline"></a></h3>
 <p>If you terminate the connection to a server or the connection is
 automatically terminated, e.g. due to a network error, the interface
 remains open, but all input fields and buttons are locked. If you then
@@ -394,13 +428,14 @@ allows you to reopen the view later, for example to see certain
 parameters or command responses. Furthermore, this view is automatically
 reused when the connection to the server is re-established.</p>
 </section>
+</section>
 <section id="sila-2-script-functions">
 <h2><span class="section-number">7.7. </span>SiLA 2 Script Functions<a class="headerlink" href="#sila-2-script-functions" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-sila-script-functions">
 <h3><span class="section-number">7.7.1. </span>Introduction to SiLA Script Functions<a class="headerlink" href="#introduction-to-sila-script-functions" title="Permalink to this headline"></a></h3>
 <p>The SiLA 2 plugin contains various script functions for script-driven
 execution of commands and querying of properties.</p>
-<p><img alt="image31" src="../_images/100000010000014900000092D61E6440C9053063.png" /></p>
+<img alt="../_images/sila_script_functions.png" src="../_images/sila_script_functions.png" />
 </section>
 <section id="execute-sila-command">
 <h3><span class="section-number">7.7.2. </span>Execute SiLA Command<a class="headerlink" href="#execute-sila-command" title="Permalink to this headline"></a></h3>
@@ -409,14 +444,14 @@ execution of commands and querying of properties.</p>
 the result of the execution in a variable.</p>
 <p><img alt="image33" src="../_images/1000000100000345000001D7A7109FF96388C318.png" /></p>
 <p><img alt="image34" src="../_images/100000010000032D000000CB19F74944FFDAB71C.png" /></p>
-<p>You can set the command to be executed ❶, as well
-as the required parameters and metadata ❷ in the configuration area.</p>
-<p>In addition, you can enable or disable the <span class="guilabel">Run to completion</span> ❸ option
+<p>You can set the command to be executed <span class="guinum">❶</span>, as well
+as the required parameters and metadata <span class="guinum">❷</span> in the configuration area.</p>
+<p>In addition, you can enable or disable the <span class="guilabel">Run to completion</span> <span class="guinum">❸</span> option
 for <em>Observable Commands</em>. If <span class="guilabel">Run to completion</span> is enabled, script
 execution will not continue until the command has been fully executed.
 If this option is not active, the command is only started and then the
 next script function is processed immediately.</p>
-<p>If the command has return values, you can also specify variables ❹ in
+<p>If the command has return values, you can also specify variables <span class="guinum">❹</span> in
 which these values are to be stored.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -432,10 +467,10 @@ configuration area.</p>
 <p>With this function you can query a property and store the
 value into a variable.</p>
 <p><img alt="image39" src="../_images/1000000100000345000001FD6EA9B6588936741F.png" /></p>
-<p>You can set the property ❶ to be queried and the possible
-required metadata ❷ in the configuration area.</p>
+<p>You can set the property <span class="guinum">❶</span> to be queried and the possible
+required metadata <span class="guinum">❷</span> in the configuration area.</p>
 <p>Enter the name of the variable that is supposed to store the value of
-the read property in the field below ❸. If the property returns a
+the read property in the field below <span class="guinum">❸</span>. If the property returns a
 structure of several values, corresponding fields will appear for each
 element of the structure, in which you can enter the individual script
 variables.</p>
@@ -447,7 +482,7 @@ variables.</p>
 for a specific property to meet a defined condition. The function will
 not continue until the condition is met.</p>
 <p><img alt="image41" src="../_images/100000010000034500000209E2A9E0C1D0F440CC.png" /></p>
-<p>In the configuration area, first select the property ❶ you
+<p>In the configuration area, first select the property <span class="guinum">❶</span> you
 want to check and the optionally required metadata, as described for the
 <a class="reference internal" href="#read-sila-property">Read SiLA Property</a> function.</p>
 <div class="note admonition">
@@ -456,8 +491,8 @@ want to check and the optionally required metadata, as described for the
 be used in this script function.</p>
 </div>
 <p>In the <em>Condition</em> area, you configure the check condition. To do this,
-first select a comparison operator ❷ and then enter the value ❸ to be
-compared with. In the value field ❸ you can also use variables to set
+first select a comparison operator <span class="guinum">❷</span> and then enter the value <span class="guinum">❸</span> to be
+compared with. In the value field <span class="guinum">❸</span> you can also use variables to set
 the check condition.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -483,9 +518,9 @@ your scripts with the new servers.</p>
 into the script editor. Then select a SiLA 2 function where you want to
 change the server. The configuration interface of the function should be
 grayed out because the corresponding SiLA server is not connected. In
-addition, you will also see a warning message ❶.</p>
+addition, you will also see a warning message <span class="guinum">❶</span>.</p>
 <p><img alt="image48" src="../_images/10000001000003B5000001C901728FB6CD47BE5B.png" /></p>
-<p>Now click on the icon for changing the SiLA server ❷. The
+<p>Now click on the icon for changing the SiLA server <span class="guinum">❷</span>. The
 following dialog box opens:</p>
 <img alt="../_images/10000001000001C600000172BBE267CD9A17CF31.png" src="../_images/10000001000001C600000172BBE267CD9A17CF31.png" />
 <p>Here you can now select one of the connected SiLA servers to be used
@@ -540,10 +575,10 @@ special characters.</p>
 <p>SiLA process data can be used in the graphical process data logger as
 known from other devices:</p>
 <p><img alt="image53" src="../_images/1000000100000550000002C759AE7BAD95D9239D.png" /></p>
-<p>First, open the Plotlogger configuration ❶. There, drag and
-drop the desired SiLA device into the list of plot curves ❷. Then
+<p>First, open the Plotlogger configuration <span class="guinum">❶</span>. There, drag and
+drop the desired SiLA device into the list of plot curves <span class="guinum">❷</span>. Then
 double-click on the device property cell to select the SiLA property to
-be recorded ❸.</p>
+be recorded <span class="guinum">❸</span>.</p>
 </section>
 </section>
 </section>
@@ -560,7 +595,7 @@ be recorded ❸.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Mar 29, 2022 12:24.
+      <span class="lastupdated">Last updated on Apr 07, 2022 09:22.
       </span></p>
   </div>
 

@@ -1,6 +1,7 @@
 SiLA2 Add-on
 ============
 
+
 .. image:: Pictures/sila_header.svg
 
 Introduction to SiLA2 Add-on
@@ -126,23 +127,22 @@ Properties and commands can be both **unobservable** and **observable**.
 SiLA UI Overview
 ----------------
 
-By clicking the :guilabel:`SiLA 2` button and selecting *Server Overview* ❶ in the
+By clicking the :guilabel:`SiLA 2` button and selecting *Server Overview* :guinum:`❶` in the
 sidebar, you switch to the SiLA 2 add-on (see figure below).
 
 .. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
  
 1. :guilabel:`SiLA 2` button for display of *Server Overview* and connected SiLA 2
    servers.
-2. Tabs for selecting the *Server Overview* or a SiLA 2 server
-3. Button to perform a network scan to find available SiLA 2 servers
-4. Button to connect to all servers in the list
-5. Display of all SiLA 2 servers found in the network or added manually
-6. Button to connect or disconnect from a SiLA 2 server
-7. Button to delete the server from the list
-8. Button for adding a SiLA 2 server manually
-9. Selection box for allowing unencrypted connections.
+2. Button to perform a network scan to find available SiLA 2 servers
+3. Button to connect to all servers in the list
+4. Display of all SiLA 2 servers found in the network or added manually
+5. Selection box for allowing unencrypted connections.
+6. Button for adding a SiLA 2 server manually
+7. Button to connect or disconnect from a SiLA 2 server
+8. Button to delete the server from the list
 
-You can use the sidebar button ❶ or the tabs ❷ to switch between the
+You can use the sidebar button :guinum:`❶` or the view tabs to switch between the
 currently connected SiLA 2 servers and the *Server Overview*. A tab is
 created for each server.
 
@@ -152,24 +152,42 @@ Connecting to a SiLA 2 server
 Connecting to automatically detected servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: Pictures/link.svg
+   :width: 40
+   :align: left
+
 To connect to a SiLA 2 server that was found in the local network via
-SiLA Server Discovery, simply click on the :guilabel:`Connect` icon ❶ in the
-corresponding row in the *Server Overview*. After the connection has
-been successfully established, the *Disconnect* icon ❷ appears instead
+SiLA Server Discovery, simply click on the *Connect* icon :guinum:`❶` in the
+corresponding row in the *Server Overview*. 
+
+.. image:: Pictures/broken_link.svg
+   :width: 40
+   :align: left
+
+After the connection has
+been successfully established, the *Disconnect* icon :guinum:`❷` appears instead
 of the *Connect* icon. By clicking on this icon you can disconnect from
 this device again.
 
 .. image:: Pictures/1000000100000433000000D8B27B749FA02DEB20.png
 
 .. tip::
-   The :guilabel:`Connect-To-All` ❸ button allows you to    
+   .. image:: Pictures/link_multi.svg
+      :width: 40
+      :align: left
+
+   The *Connect-To-All* :guinum:`❸` button allows you to    
    connect to all devices at once, rather than having to   
    connect to each device individually.
 
 .. tip::
+   .. image:: Pictures/wifi.svg
+      :width: 40
+      :align: left
+
    If the software did not find one or more of    
    your SiLA devices, it may help to restart the servers   
-   and run a new network scan ❹. 
+   and run a new network scan :guinum:`❹`. 
 
 .. tip::
    If you close the software while still          
@@ -189,7 +207,9 @@ Normally, communication between SiLA server and client is encrypted.
 However, if one of your devices does not provide encryption, the
 connection attempt will fail with an error message in the event log. For
 local testing, you can still connect to this device if you check 
-:guilabel:`Allow insecure (unencrypted) connection` ❺.
+:guilabel:`Allow insecure (unencrypted) connection` (see figure below).
+
+.. image:: Pictures/allow_unsecure.png
 
 .. admonition:: Attention
    :class: caution
@@ -202,9 +222,11 @@ local testing, you can still connect to this device if you check
 Manually add and connect to a server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: Pictures/add_server.png
+
 If a server in your local network is not found automatically, or if you
 want to connect to a server outside your local network, you must add
-this server manually. To do this, click the :guilabel:`Add server` ❻ button (see
+this server manually. To do this, click the :guilabel:`Add server` :guinum:`❻` button (see
 figure above). The following dialog box appears.
 
 |image25|
@@ -226,54 +248,82 @@ Internet. Usually, these certificates are signed by a trusted
 certificate authority. If you try to connect to a server that uses a
 self-signed certificate, the following dialog box appears:
 
-|image26|
-
-Here you can decide whether or not to connect despite the
-untrusted certificate. By clicking :guilabel:`View Certificate` you get more
-information about the certificate. There you can see, most importantly,
-which institution created and signed the certificate.
+.. image:: Pictures/untrusted_certificate.png
 
 If you trust the certificate, click :guilabel:`Yes` in the dialog box to continue
 the connection, otherwise click :guilabel:`No`. In this case, the connection will
 be aborted.
 
+By clicking :guilabel:`View Certificate` you get more
+information about the certificate. There you can see, most importantly,
+which institution created and signed the certificate.
+
+.. image:: Pictures/untrusted_certificate2.png
+
+
 Control of a SiLA 2 server
 --------------------------
+
+Overview of generic UI
+~~~~~~~~~~~~~~~~~~~~~~~
 
 After you have successfully connected to a SiLA server, you can control
 it via a generic interface. This interface looks the same for any type
 of SiLA server, that is, for any device regardless of the type or
-manufacturer of the device. While this interface allows you to control
-every aspect of a SiLA server, it cannot be used to create complex
-workflows. For this purpose, the script functions provided by the
-plugin, which are presented in Section `SiLA 2 Script Functions`_, are more
-suitable.
+manufacturer of the device. 
+
+.. tip::
+   While this interface allows you to control
+   every aspect of a SiLA server, it cannot be used to create complex
+   workflows. For this purpose, the script functions provided by the
+   plugin, which are presented in Section `SiLA 2 Script Functions`_, are more
+   suitable.
 
 Open the generic interface by selecting the desired server with the 
 :guilabel:`SiLA 2` button in the sidebar 
 (see section `SiLA 2 Basics`_). 
-You will first see all SiLA 2 features provided by the server ❶. If you move the
+You will first see all SiLA 2 features provided by the server :guinum:`❶`. If you move the
 mouse pointer over one of the :guilabel:`i` icons, a tooltip with the
-description of the feature ❷ will appear. By clicking on the feature
-name or the arrow to the left of the name, you can expand the feature.
-Now you can see all available commands and properties of this feature ❸.
-Commands can be found on the left side, properties on the right side.
-With the splitter you can resize the width that is available to the
-commands or properties ❹.
+description of the feature :guinum:`❷` will appear. 
 
-.. image:: Pictures/100000010000051B0000030085F2FF05DAA66F0C.png
+.. image:: Pictures/feature_overview.png
 
-If a command has parameters, metadata or return values, it can also be
-expanded to enter the parameters or metadata and display the return
-values ❺. If a command has no parameters or only one, then the command
-cannot be expanded and at most one input field is displayed directly
-next to the command name ❻. To execute the command, click the :guilabel:`Execute`
-button ❼.
+By clicking on the feature
+name or the arrow to the left of the name, you can expand the feature (see figure below).
+Now you can see all available commands and properties of this feature.
+Commands can be found on the left side  :guinum:`❶`, properties on the right side
+:guinum:`❷`. With the splitter  :guinum:`❸` you can resize the width that is
+available to the commands or properties.
 
-Normally, properties cannot be expanded. Here, only a field with the
-current value of the property is displayed. To the right is a button for
-re-polling the property ❽. Clicking the button triggers one of the
-following two actions:
+.. image:: Pictures/commands_and_properties.png
+
+SiLA Commands UI
+~~~~~~~~~~~~~~~~~~
+
+If a command has parameters metadata or return values,
+such as the :guilabel:`Set Fill Level` command :guinum:`❶` in the figure below, it can also be
+expanded to enter the parameters :guinum:`❷` or metadata and display the return
+values. The following picture shows all commands of the :guilabel:`Pump Fluid Dosing Service`
+feature:
+
+.. image:: Pictures/sila_commands.png
+
+If a command has no parameters or only one, such as the :guilabel:`Generate Flow`
+command in the figure above, then the command  cannot be expanded and at most one
+input field is displayed directly next to the command name :guinum:`❸`. 
+To execute the command, click the :guilabel:`Execute` button :guinum:`❹`.
+
+SiLA Properties UI
+~~~~~~~~~~~~~~~~~~
+
+Normally, properties cannot be expanded. The picture below shows the SiLA properties
+of the :guilabel:`Analog In Channel Provider` feature. Here, only a field with the
+current value of the property is displayed :guinum:`❶`. To the right is a button for
+re-polling the property :guinum:`❷`. 
+
+.. image:: Pictures/sila_properties.png
+
+Clicking the re-polling button button :guinum:`❷` triggers one of the following two actions:
 
 -  If the property is *Unobservable* (see Section `Commands and Properties`_),
    then it is simply queried again by the server.
@@ -284,11 +334,9 @@ following two actions:
 
 It is possible that a property requires metadata. In this case, the
 property can be expanded like a command and the input fields for the
-metadata ❾ appear. After you have entered the metadata, you must query
+metadata :guinum:`❸` appear. After you have entered the metadata, you must query
 the property again or start a new subscription so that this data is sent
 to the server.
-
-.. image:: Pictures/100000010000050F000001275A2A324C15199036.png
 
 .. admonition:: Important
    :class: note
@@ -300,7 +348,10 @@ to the server.
    only works if the property does not require metadata.   
    In this case you have to enter the metadata first and   
    then query the value yourself or start a subscription   
-   yourself.  
+   yourself. 
+
+Terminating a connection to a server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you terminate the connection to a server or the connection is
 automatically terminated, e.g. due to a network error, the interface
@@ -317,6 +368,7 @@ allows you to reopen the view later, for example to see certain
 parameters or command responses. Furthermore, this view is automatically
 reused when the connection to the server is re-established.
 
+
 SiLA 2 Script Functions
 -----------------------
 
@@ -326,7 +378,7 @@ Introduction to SiLA Script Functions
 The SiLA 2 plugin contains various script functions for script-driven
 execution of commands and querying of properties.
 
-|image31|
+.. image:: Pictures/sila_script_functions.png
 
 Execute SiLA Command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -343,16 +395,16 @@ the result of the execution in a variable.
 
 |image34|
 
-You can set the command to be executed ❶, as well
-as the required parameters and metadata ❷ in the configuration area.
+You can set the command to be executed :guinum:`❶`, as well
+as the required parameters and metadata :guinum:`❷` in the configuration area.
 
-In addition, you can enable or disable the :guilabel:`Run to completion` ❸ option
+In addition, you can enable or disable the :guilabel:`Run to completion` :guinum:`❸` option
 for *Observable Commands*. If :guilabel:`Run to completion` is enabled, script
 execution will not continue until the command has been fully executed.
 If this option is not active, the command is only started and then the
 next script function is processed immediately.
 
-If the command has return values, you can also specify variables ❹ in
+If the command has return values, you can also specify variables :guinum:`❹` in
 which these values are to be stored.
 
 .. tip::
@@ -374,11 +426,11 @@ value into a variable.
 
 |image39| 
 
-You can set the property ❶ to be queried and the possible
-required metadata ❷ in the configuration area.
+You can set the property :guinum:`❶` to be queried and the possible
+required metadata :guinum:`❷` in the configuration area.
 
 Enter the name of the variable that is supposed to store the value of
-the read property in the field below ❸. If the property returns a
+the read property in the field below :guinum:`❸`. If the property returns a
 structure of several values, corresponding fields will appear for each
 element of the structure, in which you can enter the individual script
 variables.
@@ -397,7 +449,7 @@ not continue until the condition is met.
 
 |image41|
 
-In the configuration area, first select the property ❶ you
+In the configuration area, first select the property :guinum:`❶` you
 want to check and the optionally required metadata, as described for the
 `Read SiLA Property`_ function.
 
@@ -408,8 +460,8 @@ want to check and the optionally required metadata, as described for the
    be used in this script function.   
 
 In the *Condition* area, you configure the check condition. To do this,
-first select a comparison operator ❷ and then enter the value ❸ to be
-compared with. In the value field ❸ you can also use variables to set
+first select a comparison operator :guinum:`❷` and then enter the value :guinum:`❸` to be
+compared with. In the value field :guinum:`❸` you can also use variables to set
 the check condition.
 
 .. tip::
@@ -437,11 +489,11 @@ To do this, load the script in where you want to replace the servers
 into the script editor. Then select a SiLA 2 function where you want to
 change the server. The configuration interface of the function should be
 grayed out because the corresponding SiLA server is not connected. In
-addition, you will also see a warning message ❶.
+addition, you will also see a warning message :guinum:`❶`.
 
 |image48|
 
-Now click on the icon for changing the SiLA server ❷. The
+Now click on the icon for changing the SiLA server :guinum:`❷`. The
 following dialog box opens:
 
 .. image:: Pictures/10000001000001C600000172BBE267CD9A17CF31.png
@@ -509,10 +561,10 @@ known from other devices:
 
 |image53|
 
-First, open the Plotlogger configuration ❶. There, drag and
-drop the desired SiLA device into the list of plot curves ❷. Then
+First, open the Plotlogger configuration :guinum:`❶`. There, drag and
+drop the desired SiLA device into the list of plot curves :guinum:`❷`. Then
 double-click on the device property cell to select the SiLA property to
-be recorded ❸.
+be recorded :guinum:`❸`.
 
 .. |image25| image:: Pictures/100000000000016F0000009E1716FA5C8D3B4E18.png
 
