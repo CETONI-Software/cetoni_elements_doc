@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. CSV Data Logger Plugin &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/style_override.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Python Add-on" href="../Python_EN/Python_EN.html" />
+    <link rel="prev" title="5. Valve Plugin" href="../qmixv_EN/qmixv_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> CETONI Elements Manual
+            <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">1. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">2. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">3. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">4. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">5. Valve Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. CSV Data Logger Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">6.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-dialogue">6.2. Configuration Dialogue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-the-configuration-dialogue">6.2.1. Open the Configuration Dialogue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview-data-logger-plug-in">6.2.2. Overview Data Logger Plug-in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview-table-logger-channels">6.2.3. Overview Table Logger-Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logger-configuration">6.3. Logger Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-adding-of-channels">6.3.1. Step 1- Adding of Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-select-device-property">6.3.2. Step 2- Select Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-channel-description">6.3.3. Step 3 – Channel Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">6.3.4. Deleting Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-configuration-of-csv-properties">6.3.5. Step 4 – Configuration of CSV Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-file-name-and-folder">6.3.5.1. Select File Name and Folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-the-recording-interval">6.3.5.2. Setting the Recording Interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-the-separating-character">6.3.5.3. Set the Separating Character</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#start-stop-of-the-logging-process">6.4. Start/Stop of the Logging Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-file-data-format">6.5. Log File Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">6.6. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-csv-logger">6.6.1. Start CSV Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-csv-logger">6.6.2. Stop CSV Logger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">7. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">8. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">9. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">6. </span>CSV Data Logger Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/datalogger_EN/datalogger_EN.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csv-data-logger-plugin">
+<h1><span class="section-number">6. </span>CSV Data Logger Plugin<a class="headerlink" href="#csv-data-logger-plugin" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>The data logger plug-in provides the user with a powerful tool to record
+any of the data provided by connected devices in a user-defined time
+interval. Data are written into a CSV file (CSV:
+comma/character-separated values). This text file format is commonly
+used to save and exchange simply-structured data.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>CSV files can be opened and worked with in
+spreadsheet applications, such as Microsoft Excel if the
+correct value-separating and decimal sign has been used.</p>
+</div>
+</section>
+<section id="configuration-dialogue">
+<h2><span class="section-number">6.2. </span>Configuration Dialogue<a class="headerlink" href="#configuration-dialogue" title="Permalink to this headline"></a></h2>
+<section id="open-the-configuration-dialogue">
+<h3><span class="section-number">6.2.1. </span>Open the Configuration Dialogue<a class="headerlink" href="#open-the-configuration-dialogue" title="Permalink to this headline"></a></h3>
+<p><img alt="Figure 1: Toolbar for data logging." src="../_images/10000201000001B600000043E638CC3BBADD620A.png" /></p>
+<p>When the data logging plug-in has
+been loaded, the toolbar will display two additional buttons for the
+configuration of the logging of data <span class="guinum">❶</span> and to start/stop the logging
+process <span class="guinum">❷</span>.</p>
+</section>
+<section id="overview-data-logger-plug-in">
+<h3><span class="section-number">6.2.2. </span>Overview Data Logger Plug-in<a class="headerlink" href="#overview-data-logger-plug-in" title="Permalink to this headline"></a></h3>
+<p>Once the data logging configuration has been activated, the following
+configuration dialogue will be displayed:</p>
+<p><img alt="image4" src="../_images/100002010000038700000200BEF606624A304EEC.png" /></p>
+<p>The configuration dialogue contains the following elements:</p>
+<ol class="arabic simple">
+<li><p><strong>Device List</strong> – displays all devices or modules that provided
+recordable data. The filter selector above is to limit the list to
+specific device types, e.g. valves.</p></li>
+<li><p><strong>Logger Channels</strong> – lists all channels that may be recorded by the
+logger.</p></li>
+<li><p><strong>CSV File Configuration</strong> – allows the user to set various settings
+for the data logging file.</p></li>
+</ol>
+</section>
+<section id="overview-table-logger-channels">
+<h3><span class="section-number">6.2.3. </span>Overview Table Logger-Channels<a class="headerlink" href="#overview-table-logger-channels" title="Permalink to this headline"></a></h3>
+<img alt="../_images/100002010000028A00000098C8649B9656E2A140.png" src="../_images/100002010000028A00000098C8649B9656E2A140.png" />
+<p>The table <span class="guilabel">Logger Channels</span> shows the configuration of the process data
+logger. Each row in that table corresponds to one column in the recorded
+csv file. The following columns may be recorded:</p>
+<ul>
+<li><p><strong>Channel</strong> – shows the channel number of the corresponding channel.</p></li>
+<li><p><strong>Device</strong> – contains the device name for which the data will be
+recorded and its device icon.</p></li>
+<li><p><strong>Property</strong> – this is the name of the device property/process data
+value that will be recorded. Its type (numeric or boolean) can be
+identified by the displayed icon.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004EA000035050000350581CFD983D12D425F1.svg"><img alt="image5" src="../_images/100004EA000035050000350581CFD983D12D425F1.svg" width="40" /></a></p></td>
+<td><p>Numeric value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000034B000035050000350585C9BEED447C4FB81.svg"><img alt="image6" src="../_images/1000034B000035050000350585C9BEED447C4FB81.svg" width="40" /></a></p></td>
+<td><p>Boolean value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000B740000350500003505221106A05ED7DC851.svg"><img alt="image7" src="../_images/10000B740000350500003505221106A05ED7DC851.svg" width="40" /></a></p></td>
+<td><p>Text value</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> – allows you to define a customized description for the
+selected channel. This description will be used as the column header
+in the csv file.</p></li>
+</ul>
+<p>In order to add a channel to the data logging process, simply follow the
+steps below.</p>
+</section>
+</section>
+<section id="logger-configuration">
+<h2><span class="section-number">6.3. </span>Logger Configuration<a class="headerlink" href="#logger-configuration" title="Permalink to this headline"></a></h2>
+<section id="step-1-adding-of-channels">
+<h3><span class="section-number">6.3.1. </span>Step 1- Adding of Channels<a class="headerlink" href="#step-1-adding-of-channels" title="Permalink to this headline"></a></h3>
+<p>Drag-and-Drop the device for which you want to log the data from the
+<span class="guilabel">Device List</span> into the <span class="guilabel">Logger Channels</span> list.
+The new channel will be inserted into the list at the desired
+position (see figure below).</p>
+<img alt="../_images/1000020100000361000001BF5E60484B572C01AB.png" src="../_images/1000020100000361000001BF5E60484B572C01AB.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To simplify the device selection, the device
+list can be filtered according to device type.</p>
+</div>
+</section>
+<section id="step-2-select-device-property">
+<h3><span class="section-number">6.3.2. </span>Step 2- Select Device Property<a class="headerlink" href="#step-2-select-device-property" title="Permalink to this headline"></a></h3>
+<p>In the <span class="guilabel">Logger Channels</span> list you now need to select the
+Property of the device that you want to record. For this,
+double-click into the respective filed within the column <span class="guilabel">Property</span>
+and select the device property from the opening list (see figure below).</p>
+<p><img alt="Figure 4: Selecting the device property that is to be recorded." src="../_images/1000020100000361000001A38444A253627EAD70.png" /></p>
+</section>
+<section id="step-3-channel-description">
+<h3><span class="section-number">6.3.3. </span>Step 3 – Channel Description<a class="headerlink" href="#step-3-channel-description" title="Permalink to this headline"></a></h3>
+<p>In the column <span class="guilabel">Label</span> you can customize the description for each
+channel. This label will be used as the column header of the csv file
+for the selected channel.</p>
+<p><img alt="Figure 5: Customizing the channel label." src="../_images/10000201000002670000009030B373AFA6AF1077.png" /></p>
+<p>To do this, double-click
+into the respective table cell that is to be changed and insert the new
+description (see figure above).</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Upon choosing a new device property, a
+new channel description will be assigned automatically.
+That is, you should change the channel label only once
+the correct device property has been selected.</p>
+</div>
+</section>
+<section id="deleting-channels">
+<h3><span class="section-number">6.3.4. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
+<p>Highlight the desired channels using the mouse to delete one or more
+channels from the list, and then use either the <kbd class="kbd docutils literal notranslate">Delete</kbd> key or the
+<span class="menuselection">Delecte Selection</span> item of the right-click context menu:</p>
+<p><img alt="image14" src="../_images/100000000000012100000091D7BFE42C03BA6ECE.png" /> <img alt="image15" src="../_images/10000000000001220000008F424E5926A933056B.png" /></p>
+<p>To delete the entire channel list, use the context menu item
+<span class="menuselection">Clear Logger</span>.</p>
+</section>
+<section id="step-4-configuration-of-csv-properties">
+<h3><span class="section-number">6.3.5. </span>Step 4 – Configuration of CSV Properties<a class="headerlink" href="#step-4-configuration-of-csv-properties" title="Permalink to this headline"></a></h3>
+<p>In the <span class="guilabel">CSV File Configuration</span> section you can set the global
+properties of the CSV logger as well as the format of the recorded data
+(see figure below).</p>
+<p><img alt="Figure 6: Configuration of global csv properties" src="../_images/10000201000002740000005D7814BAB01380FB40.png" /></p>
+<section id="select-file-name-and-folder">
+<h4><span class="section-number">6.3.5.1. </span>Select File Name and Folder<a class="headerlink" href="#select-file-name-and-folder" title="Permalink to this headline"></a></h4>
+<p>Set the file name and location of the log file via <span class="guilabel">Log Filename</span>
+<span class="guinum">❶</span>. For this, click on the folder symbol on the right, select the target
+folder and give a file name.</p>
+<p><img alt="Figure 7: Setting file name and folder for the log file." src="../_images/100000000000028F000001D742CE00F60CA536D2.png" /></p>
+</section>
+<section id="setting-the-recording-interval">
+<h4><span class="section-number">6.3.5.2. </span>Setting the Recording Interval<a class="headerlink" href="#setting-the-recording-interval" title="Permalink to this headline"></a></h4>
+<p>Set the time interval at which the data of all channels is to be
+recorded via the field <span class="guilabel">Log Interval</span> <span class="guinum">❷</span>. The time unit for the interval
+is seconds and you may set it in 0.1 second increments.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Choose the recording interval as large
+as possible and as small as necessary. This will
+minimize amount of data that will be recorded.</p>
+</div>
+</section>
+<section id="set-the-separating-character">
+<h4><span class="section-number">6.3.5.3. </span>Set the Separating Character<a class="headerlink" href="#set-the-separating-character" title="Permalink to this headline"></a></h4>
+<p>The character that will be used to separate individual data (columns)
+needs to be set via the selection field <span class="guilabel">CSV Separator</span>
+<span class="guinum">❸</span>. Depending on the software that is to be used for data
+evaluation, the character that needs to be used may change.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To obtain a CSV file that can be imported
+into Microsoft Excel, the semicolon (;) should be used.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>All configuration settings of the
+process data logger will be saved upon closing the
+configuration dialogue and are available when the
+application will be restarted.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="start-stop-of-the-logging-process">
+<h2><span class="section-number">6.4. </span>Start/Stop of the Logging Process<a class="headerlink" href="#start-stop-of-the-logging-process" title="Permalink to this headline"></a></h2>
+<a class="reference internal image-reference" href="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg"><img alt="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" class="align-left" height="60" src="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" width="60" /></a>
+<p>Use the relevant toolbar button to start and stop the data
+logging process.</p>
+<p>A new data file will be created each time the logging process is
+started. A time stamp with date and time will be added as a suffix to
+file name <code class="file docutils literal notranslate"><span class="pre">_YYYYMMDD_hhmmss</span></code>. That means, if the file name
+<code class="file docutils literal notranslate"><span class="pre">ProcessDataLog.csv</span></code> has been assigned by the user, starting the logging
+process on November 05, 2012 at 10:32 am and 9 secondswill create a
+logging file with the name <code class="file docutils literal notranslate"><span class="pre">ProcessDataLog_20121105_103209.csv.</span></code>
+This ensures, that a new logging file with a unique time stamp will be
+created each time the logging process is started.</p>
+</section>
+<section id="log-file-data-format">
+<h2><span class="section-number">6.5. </span>Log File Data Format<a class="headerlink" href="#log-file-data-format" title="Permalink to this headline"></a></h2>
+<p>The recorded CSV files have the following structure:</p>
+<ul class="simple">
+<li><p>Each CSV file consists of multiple data sets organized in rows and
+separated by line breaks.</p></li>
+<li><p>Each data set consists of a number of data fields (columns) that are
+separated by a specific character (e.g., semicolon).</p></li>
+<li><p>The first column always contains the relative time point (in seconds)
+of the corresponding data set.</p></li>
+<li><p>The first row shows the channel labels as configured by the user.</p></li>
+</ul>
+<p><img alt="Figure 8: CSV log file opened in Microsoft Excel." src="../_images/10000000000002EF000000E6889ECE76397F99EB.png" /></p>
+<p>To obtain the
+absolute time stamp for a data set, you may simply add an extra column
+to the spreadsheet and calculate the time by adding the data set’s
+relative time to the absolute time given in the file names time stamp.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The absolute time stamp at which logging
+started is given in the file name of the log file.</p>
+</div>
+</section>
+<section id="script-functions">
+<h2><span class="section-number">6.6. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<p>To automate the capture of data or to synchronize data capture with
+other processes, the CSV data logger can be started and stopped using
+script functions. The corresponding functions can be found
+in the <span class="guilabel">Logging</span> category in the list of the available script
+functions.</p>
+<p><img alt="Figure 9: Logger script functions" src="../_images/10000201000001060000008EE8252D88C2E8FBC7.png" /></p>
+<section id="start-csv-logger">
+<h3><span class="section-number">6.6.1. </span>Start CSV Logger<a class="headerlink" href="#start-csv-logger" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg"><img alt="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" class="align-left" height="60" src="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" width="60" /></a>
+<p>This function is used to start the CSV logger with the
+currently configured settings and channels. A new log file is created
+with the current time stamp.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="stop-csv-logger">
+<h3><span class="section-number">6.6.2. </span>Stop CSV Logger<a class="headerlink" href="#stop-csv-logger" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg"><img alt="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg" class="align-left" height="60" src="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg" width="60" /></a>
+<p>This function stops the current logging and closes the open
+log file.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../qmixv_EN/qmixv_EN.html" class="btn btn-neutral float-left" title="5. Valve Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="7. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, CETONI GmbH.
+      <span class="lastupdated">Last updated on May 03, 2022 15:10.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
