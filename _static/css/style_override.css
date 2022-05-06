@@ -66,6 +66,10 @@ body > div.wy-grid-for-nav > nav > div > div.wy-side-nav-search > a::before {
     border-radius: 3px !important;
 }
 
+.wy-side-nav-search .wy-dropdown > a, .wy-side-nav-search > a {
+  font-weight: 200;
+}
+
 /* Use text font for headings */
 h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     font-family: 'kievit';
@@ -137,6 +141,7 @@ body > div.wy-grid-for-nav > nav > div > div.wy-menu.wy-menu-vertical > p > span
 
 .wy-menu-vertical a {
   font-size: 80%;
+  line-height: 14px;
 }
 
 
