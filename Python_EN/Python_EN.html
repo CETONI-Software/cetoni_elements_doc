@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Python Add-on &mdash; CETONI Elements Manual</title>
+  <title>9. Python Add-on &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. SiLA2 Add-on" href="../sila_EN/sila_EN.html" />
-    <link rel="prev" title="7. Process Data Graph" href="../graphlogger_EN/graphlogger_EN.html" /> 
+    <link rel="next" title="10. SiLA2 Add-on" href="../sila_EN/sila_EN.html" />
+    <link rel="prev" title="8. SQL Database Logger" href="../sqllogger_EN/sqllogger_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,50 +59,51 @@
 <li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">5. Valve Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">6. CSV Data Logger Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">7. Process Data Graph</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Python Add-on</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-python-add-on">8.1. Introduction to Python Add-on</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">8.2. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-console">8.3. Python Console</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-python-console">8.3.1. Overview of Python Console</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-python-console">8.3.2. Context Menu of Python Console</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-completion">8.3.3. Code completion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#error-messages">8.3.4. Error messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">8. SQL Database Logger</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Python Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-python-add-on">9.1. Introduction to Python Add-on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">9.2. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-console">9.3. Python Console</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-python-console">9.3.1. Overview of Python Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-python-console">9.3.2. Context Menu of Python Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-completion">9.3.3. Code completion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-messages">9.3.4. Error messages</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#python-modules">8.4. Python Modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-standard-modules">8.4.1. Import standard modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#import-custom-modules">8.4.2. Import custom modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-modules">9.4. Python Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-standard-modules">9.4.1. Import standard modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-custom-modules">9.4.2. Import custom modules</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-application-objects">8.5. Accessing application objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#the-cetoni-elements-module">8.5.1. The cetoni_elements module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#display-properties-and-methods-of-objects">8.5.2. Display properties and methods of objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-device-objects">8.5.3. Using device objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-application-objects">8.5.4. Using application objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-application-objects">9.5. Accessing application objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-cetoni-elements-module">9.5.1. The cetoni_elements module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-properties-and-methods-of-objects">9.5.2. Display properties and methods of objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-device-objects">9.5.3. Using device objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-application-objects">9.5.4. Using application objects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#python-script-function-execute-python-code">8.6. Python Script Function - Execute Python Code</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#python-script-functions-overview">8.6.1. Python Script Functions Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#python-script-editor">8.6.2. Python Script Editor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handle-script-termination-script-abort">8.6.3. Handle script termination - script_abort()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#implementation-of-the-function-logic-in-script-exec">8.6.4. Implementation of the function logic in script_exec()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#script-execution-errors">8.6.5. Script execution errors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-custom-modules">8.6.6. Using custom modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#accessing-script-variables">8.6.7. Accessing script variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-script-function-execute-python-code">9.6. Python Script Function - Execute Python Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-script-functions-overview">9.6.1. Python Script Functions Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-script-editor">9.6.2. Python Script Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handle-script-termination-script-abort">9.6.3. Handle script termination - script_abort()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation-of-the-function-logic-in-script-exec">9.6.4. Implementation of the function logic in script_exec()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script-execution-errors">9.6.5. Script execution errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-custom-modules">9.6.6. Using custom modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-script-variables">9.6.7. Accessing script variables</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#example-scripts">8.7. Example scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#barcode-scanner">8.7.1. Barcode Scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-scripts">9.7. Example scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#barcode-scanner">9.7.1. Barcode Scanner</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#api-reference">8.8. API Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scriptenv">8.8.1. ScriptEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">9.8. API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scriptenv">9.8.1. ScriptEnv</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">9. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">10. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">11. Appendix</a></li>
 </ul>
 
         </div>
@@ -119,7 +120,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">8. </span>Python Add-on</li>
+      <li><span class="section-number">9. </span>Python Add-on</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Python_EN/Python_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -130,9 +131,9 @@
            <div itemprop="articleBody">
              
   <section id="python-add-on">
-<h1><span class="section-number">8. </span>Python Add-on<a class="headerlink" href="#python-add-on" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">9. </span>Python Add-on<a class="headerlink" href="#python-add-on" title="Permalink to this headline"></a></h1>
 <img alt="../_images/python_header.svg" src="../_images/python_header.svg" /><section id="introduction-to-python-add-on">
-<h2><span class="section-number">8.1. </span>Introduction to Python Add-on<a class="headerlink" href="#introduction-to-python-add-on" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.1. </span>Introduction to Python Add-on<a class="headerlink" href="#introduction-to-python-add-on" title="Permalink to this headline"></a></h2>
 <p>The Python add-on allows you to execute Python code in CETONI Elements
 scripts via a corresponding script function. It thus provides an easy
 way to include the Python scripting language in your CETONI Elements
@@ -148,7 +149,7 @@ Python sockets or using complex analysis functions implemented in
 Python.</p>
 </section>
 <section id="installation">
-<h2><span class="section-number">8.2. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.2. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
 <p>The Python add-on is not included in the standard installation package,
 but must be installed additionally as an add-on. The versions of the
 Python add-on and the installed CETONI Elements software should match.
@@ -187,9 +188,9 @@ will not work correctly with other versions.</p>
 </div>
 </section>
 <section id="python-console">
-<h2><span class="section-number">8.3. </span>Python Console<a class="headerlink" href="#python-console" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.3. </span>Python Console<a class="headerlink" href="#python-console" title="Permalink to this headline"></a></h2>
 <section id="overview-of-python-console">
-<h3><span class="section-number">8.3.1. </span>Overview of Python Console<a class="headerlink" href="#overview-of-python-console" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.3.1. </span>Overview of Python Console<a class="headerlink" href="#overview-of-python-console" title="Permalink to this headline"></a></h3>
 <p>The Python add-on has a Python console that allows you to interactively
 enter and execute Python code similar to the standard Python console.
 You can show the Python console from the main menu
@@ -200,7 +201,7 @@ to objects, and it helps you debug problems. If function calls work in
 the console, you can use them in your script.</p>
 </section>
 <section id="context-menu-of-python-console">
-<h3><span class="section-number">8.3.2. </span>Context Menu of Python Console<a class="headerlink" href="#context-menu-of-python-console" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.3.2. </span>Context Menu of Python Console<a class="headerlink" href="#context-menu-of-python-console" title="Permalink to this headline"></a></h3>
 <p>The context menu of the Python console contains the usual commands for
 text editing:</p>
 <p><a class="reference internal" href="../_images/10000201000001F7000000E586F7E58BD20D8C3D.png"><img alt="image12" src="../_images/10000201000001F7000000E586F7E58BD20D8C3D.png" style="width: 13.314cm;" /></a></p>
@@ -216,7 +217,7 @@ lead to a crash of the software.</p>
 </div>
 </section>
 <section id="code-completion">
-<h3><span class="section-number">8.3.3. </span>Code completion<a class="headerlink" href="#code-completion" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.3.3. </span>Code completion<a class="headerlink" href="#code-completion" title="Permalink to this headline"></a></h3>
 <p>The Python console supports you during the typing with a simple code
 completion. I.e., if you have imported modules, then the code completion
 supports you with the source code editing by suitable suggestions, like
@@ -227,7 +228,7 @@ module were imported. After entering <code class="code docutils literal notransl
 for the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object are displayed that start with <code class="code docutils literal notranslate"><span class="pre">get</span></code>.</p>
 </section>
 <section id="error-messages">
-<h3><span class="section-number">8.3.4. </span>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.3.4. </span>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline"></a></h3>
 <p>Errors that occur when executing code in the Python console, as well as
 errors that occur when executing Python code in the Python script
 function, are displayed to you as red text in the Python console.</p>
@@ -235,9 +236,9 @@ function, are displayed to you as red text in the Python console.</p>
 </section>
 </section>
 <section id="python-modules">
-<h2><span class="section-number">8.4. </span>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.4. </span>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline"></a></h2>
 <section id="import-standard-modules">
-<h3><span class="section-number">8.4.1. </span>Import standard modules<a class="headerlink" href="#import-standard-modules" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.4.1. </span>Import standard modules<a class="headerlink" href="#import-standard-modules" title="Permalink to this headline"></a></h3>
 <p>The plugin uses a standard Python installation and thus has access to
 all standard Python modules or to other modules installed via <code class="file docutils literal notranslate"><span class="pre">pip</span></code>. You
 can import a module as usual using the <code class="code docutils literal notranslate"><span class="pre">import</span></code> statement. In the
@@ -245,7 +246,7 @@ following example the <code class="file docutils literal notranslate"><span clas
 <p><a class="reference internal" href="../_images/10000201000001F80000008C5125B8F7F53F8BDD.png"><img alt="image18" src="../_images/10000201000001F80000008C5125B8F7F53F8BDD.png" style="width: 13.34cm;" /></a></p>
 </section>
 <section id="import-custom-modules">
-<h3><span class="section-number">8.4.2. </span>Import custom modules<a class="headerlink" href="#import-custom-modules" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.4.2. </span>Import custom modules<a class="headerlink" href="#import-custom-modules" title="Permalink to this headline"></a></h3>
 <p>If you use your custom modules that you want to distribute or ship with
 your project, you can store them in the <code class="file docutils literal notranslate"><span class="pre">Scripts/Python</span></code> subfolder of
 your current project. This directory is added by the software to the
@@ -267,9 +268,9 @@ in the above folder with the following content:</p>
 </section>
 </section>
 <section id="accessing-application-objects">
-<h2><span class="section-number">8.5. </span>Accessing application objects<a class="headerlink" href="#accessing-application-objects" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.5. </span>Accessing application objects<a class="headerlink" href="#accessing-application-objects" title="Permalink to this headline"></a></h2>
 <section id="the-cetoni-elements-module">
-<h3><span class="section-number">8.5.1. </span>The cetoni_elements module<a class="headerlink" href="#the-cetoni-elements-module" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.1. </span>The cetoni_elements module<a class="headerlink" href="#the-cetoni-elements-module" title="Permalink to this headline"></a></h3>
 <p>The software adds a module <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> to the Python interpreter,
 which can be used to access application objects. After importing the
 module via <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">cetoni_elements</span> <span class="pre">import</span> <span class="pre">*</span></code> you can access these
@@ -284,7 +285,7 @@ and then call the <code class="code docutils literal notranslate"><span class="p
 <p><a class="reference internal" href="../_images/10000201000001F100000088C0C4A7C7C9B93CC8.png"><img alt="image21" src="../_images/10000201000001F100000088C0C4A7C7C9B93CC8.png" style="width: 13.155cm;" /></a></p>
 </section>
 <section id="display-properties-and-methods-of-objects">
-<h3><span class="section-number">8.5.2. </span>Display properties and methods of objects<a class="headerlink" href="#display-properties-and-methods-of-objects" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.2. </span>Display properties and methods of objects<a class="headerlink" href="#display-properties-and-methods-of-objects" title="Permalink to this headline"></a></h3>
 <p>Using the Python function <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> you can display all methods and
 properties of application objects. For example, you can use it to
 display all the functions and properties of the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object.</p>
@@ -303,7 +304,7 @@ properties of a given object.</p>
 </div>
 </section>
 <section id="using-device-objects">
-<h3><span class="section-number">8.5.3. </span>Using device objects<a class="headerlink" href="#using-device-objects" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.3. </span>Using device objects<a class="headerlink" href="#using-device-objects" title="Permalink to this headline"></a></h3>
 <p>You can access device objects using the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code>
 function. To get an overview of available device names you can call the
 <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDeviceNames()</span></code> function.</p>
@@ -367,7 +368,7 @@ py&gt; pump.emptySyringe<span class="o">()</span>
 </div>
 </section>
 <section id="using-application-objects">
-<h3><span class="section-number">8.5.4. </span>Using application objects<a class="headerlink" href="#using-application-objects" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.4. </span>Using application objects<a class="headerlink" href="#using-application-objects" title="Permalink to this headline"></a></h3>
 <p>Similar to device objects, you can also access application objects that
 are no devices. Use the two functions <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> and
 <code class="code docutils literal notranslate"><span class="pre">criptEnv.getObjectNames()</span></code> for this</p>
@@ -399,9 +400,9 @@ software.</p>
 </section>
 </section>
 <section id="python-script-function-execute-python-code">
-<h2><span class="section-number">8.6. </span>Python Script Function - Execute Python Code<a class="headerlink" href="#python-script-function-execute-python-code" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.6. </span>Python Script Function - Execute Python Code<a class="headerlink" href="#python-script-function-execute-python-code" title="Permalink to this headline"></a></h2>
 <section id="python-script-functions-overview">
-<h3><span class="section-number">8.6.1. </span>Python Script Functions Overview<a class="headerlink" href="#python-script-functions-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.1. </span>Python Script Functions Overview<a class="headerlink" href="#python-script-functions-overview" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg"><img alt="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" class="align-left" src="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" width="60px" /></a>
 <p>The Python plugin adds the <code class="code docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">Python</span> <span class="pre">Code</span></code> script
 function to the <span class="guilabel">Core Functions</span> category of the <span class="guilabel">Script Pool</span>:</p>
@@ -452,7 +453,7 @@ other.</p>
 </div>
 </section>
 <section id="python-script-editor">
-<h3><span class="section-number">8.6.2. </span>Python Script Editor<a class="headerlink" href="#python-script-editor" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.2. </span>Python Script Editor<a class="headerlink" href="#python-script-editor" title="Permalink to this headline"></a></h3>
 <p>The Python Script function has a Python code editor to assist you in
 writing Python code.</p>
 <a class="reference internal image-reference" href="../_images/10000201000002220000012B6A5FF31AA3060F79.png"><img alt="../_images/10000201000002220000012B6A5FF31AA3060F79.png" src="../_images/10000201000002220000012B6A5FF31AA3060F79.png" style="width: 14.452cm;" /></a>
@@ -512,7 +513,7 @@ can edit the Python code.</p>
 </div>
 </section>
 <section id="handle-script-termination-script-abort">
-<h3><span class="section-number">8.6.3. </span>Handle script termination - script_abort()<a class="headerlink" href="#handle-script-termination-script-abort" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.3. </span>Handle script termination - script_abort()<a class="headerlink" href="#handle-script-termination-script-abort" title="Permalink to this headline"></a></h3>
 <p>If the running script is terminated via the <span class="guilabel">Terminate Script</span> button of
 the Script Editor (see figure below), then the execution of
 <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> is interrupted and the <code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code> function is
@@ -550,7 +551,7 @@ the global variable <code class="code docutils literal notranslate"><span class=
 </div>
 </section>
 <section id="implementation-of-the-function-logic-in-script-exec">
-<h3><span class="section-number">8.6.4. </span>Implementation of the function logic in script_exec()<a class="headerlink" href="#implementation-of-the-function-logic-in-script-exec" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.4. </span>Implementation of the function logic in script_exec()<a class="headerlink" href="#implementation-of-the-function-logic-in-script-exec" title="Permalink to this headline"></a></h3>
 <p>When implementing the script in <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> you should be careful
 not to use blocking functions or blocking waits. The Python interpreter
 can be interrupted via the <span class="guilabel">Terminate Script</span> button only after the
@@ -599,7 +600,7 @@ This has been implemented in the following example using the
 </div>
 </section>
 <section id="script-execution-errors">
-<h3><span class="section-number">8.6.5. </span>Script execution errors<a class="headerlink" href="#script-execution-errors" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.5. </span>Script execution errors<a class="headerlink" href="#script-execution-errors" title="Permalink to this headline"></a></h3>
 <p>If errors occur during the execution of a script, you will see them in
 the <span class="guilabel">Event Log</span> and in the <span class="guilabel">Python console</span>.
 If you hover over the error message in the event log, you will see a hint
@@ -622,7 +623,7 @@ edit the Python code.</p>
 </div>
 </section>
 <section id="using-custom-modules">
-<h3><span class="section-number">8.6.6. </span>Using custom modules<a class="headerlink" href="#using-custom-modules" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.6. </span>Using custom modules<a class="headerlink" href="#using-custom-modules" title="Permalink to this headline"></a></h3>
 <p>If your script contains very complex and extensive logic, you may want
 to offload the code to an external module and include it using the
 import functionality (see section <a class="reference internal" href="#import-custom-modules">Import custom modules</a>). You can then call
@@ -677,7 +678,7 @@ script in the application.</p>
 </div>
 </section>
 <section id="accessing-script-variables">
-<h3><span class="section-number">8.6.7. </span>Accessing script variables<a class="headerlink" href="#accessing-script-variables" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.7. </span>Accessing script variables<a class="headerlink" href="#accessing-script-variables" title="Permalink to this headline"></a></h3>
 <p>To be able to pass the results of calculations in Python code to the
 running script or to react to values from the script, it is necessary to
 access script variables. To do this, import the <code class="file docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module
@@ -747,9 +748,9 @@ This list is stored in the script variable <code class="code docutils literal no
 </section>
 </section>
 <section id="example-scripts">
-<h2><span class="section-number">8.7. </span>Example scripts<a class="headerlink" href="#example-scripts" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.7. </span>Example scripts<a class="headerlink" href="#example-scripts" title="Permalink to this headline"></a></h2>
 <section id="barcode-scanner">
-<h3><span class="section-number">8.7.1. </span>Barcode Scanner<a class="headerlink" href="#barcode-scanner" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.7.1. </span>Barcode Scanner<a class="headerlink" href="#barcode-scanner" title="Permalink to this headline"></a></h3>
 <p>The following example script shows how the camera support of CETONI
 Elements can be used to implement a barcode scanner using the
 <a class="reference external" href="https://pypi.org/project/pyzbar/">pyzbar</a> module:</p>
@@ -811,9 +812,9 @@ script and can be evaluated further.</p>
 </section>
 </section>
 <section id="api-reference">
-<span id="python-api"></span><h2><span class="section-number">8.8. </span>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
+<span id="python-api"></span><h2><span class="section-number">9.8. </span>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
 <section id="scriptenv">
-<h3><span class="section-number">8.8.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
 <p>The <code class="code docutils literal notranslate"><span class="pre">ScriptEnv`</span></code> object is the central object for accessing available
 devices and application objects.</p>
 <div class="breathe-sectiondef docutils container">
@@ -891,15 +892,15 @@ devices and application objects.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../graphlogger_EN/graphlogger_EN.html" class="btn btn-neutral float-left" title="7. Process Data Graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../sila_EN/sila_EN.html" class="btn btn-neutral float-right" title="9. SiLA2 Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../sqllogger_EN/sqllogger_EN.html" class="btn btn-neutral float-left" title="8. SQL Database Logger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sila_EN/sila_EN.html" class="btn btn-neutral float-right" title="10. SiLA2 Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on May 04, 2022 10:33.
+      <span class="lastupdated">Last updated on May 06, 2022 09:52.
       </span></p>
   </div>
 

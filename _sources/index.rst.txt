@@ -49,6 +49,7 @@ your navigation through this document:
    qmixv_EN/qmixv_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
+   sqllogger_EN/sqllogger_EN.rst
    Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst
    Appendix_EN/Appendix_EN.rst

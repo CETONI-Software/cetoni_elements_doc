@@ -33,7 +33,6 @@ demo license. To view your installed licenses, select
 :menuselection:`Help --> Show License Information` from the main menu.
 
 .. image:: Pictures/1000020100000174000000D78571510911B97AEE.png
-   :width: 9.846cm
 
 The demo license allows you to create device configurations with
 simulated devices and to test all functions of the software.
@@ -64,7 +63,6 @@ Using the menu item :menuselection:`Help --> Show License Information` in the ma
 of the application, you can display an overview of the current licenses:
 
 .. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
-   :width: 12.494cm
 
 Remove Licenses
 ~~~~~~~~~~~~~~~
@@ -308,8 +306,8 @@ Moving Views
 
 To move a view, you must first detach it from its current position.
 There are several ways to do this. The first option is Drag & Drop. To
-do this, click with the left mouse button on the tab of the view ❶ and
-simply drag the view from its position ❷ with the mouse button held
+do this, click with the left mouse button on the tab of the view :guinum:`❶` and
+simply drag the view from its position :guinum:`❷` with the mouse button held
 down. As long as you do not release the mouse button, you can move the
 view freely (see figure below).
 
@@ -362,9 +360,9 @@ If you drag your view over a window that
 already contains several views, additional drop-target markers are
 displayed. This means that you then have additional options for docking
 the view window. You can see this in the figure below. There are the
-outer drop targets ❶, which you already know from the previous section.
+outer drop targets :guinum:`❶`, which you already know from the previous section.
 In addition, there are five other drop targets that are displayed in the
-form of a cross ❷.
+form of a cross :guinum:`❷`.
 
 |Figure 1.17: Drop target markers|
 
@@ -373,8 +371,8 @@ pressed over the individual markers to see the drop preview and to get a
 feel for the possibilities for docking a window.
 
 If you want to dock a view as an additional tab, you can move the mouse
-cursor either over the middle drop-target icon ❶ (see figure below) or
-over the title bar of an already docked view ❷.
+cursor either over the middle drop-target icon :guinum:`❶` (see figure below) or
+over the title bar of an already docked view :guinum:`❷`.
 
 |Figure 1.18: Insert View as Additional Tab|
 
@@ -390,9 +388,9 @@ from the current position and move it to a new position.
 |Figure 1.19: Moving View Groups|
 
 Alternatively, you can detach a view
-group by double-clicking in the title bar ❶ of the group, via the menu
-item :guilabel:`Detach Area` ❷ in the context menu or by clicking the :guilabel:`Detach`
-button in the title bar ❸.
+group by double-clicking in the title bar :guinum:`❶` of the group, via the menu
+item :guilabel:`Detach Area` :guinum:`❷` in the context menu or by clicking the :guilabel:`Detach`
+button in the title bar :guinum:`❸`.
 
 |Figure 1.20: Undock View Group|
 
@@ -403,14 +401,14 @@ view.
 Closing Views and View Groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can close a single view either via the Close button ❶ in the active
-tab or via the menu item :guilabel:`Close` ❷ in the context menu of a tab.
+You can close a single view either via the Close button :guinum:`❶` in the active
+tab or via the menu item :guilabel:`Close` :guinum:`❷` in the context menu of a tab.
 
 |Figure 1.21: Closing View|
 
 A view group can be closed with the :guilabel:`Close`.
-button ❶ in the title bar of the group or with the :guilabel:`Close Area` menu
-item ❷ in the context menu of the view group.
+button :guinum:`❶` in the title bar of the group or with the :guilabel:`Close Area` menu
+item :guinum:`❷` in the context menu of the view group.
 
 |Figure 1.22: Closing View Group|
 
@@ -440,9 +438,6 @@ other groups. To do this, select :guilabel:`Close Other Areas` from the context
 menu of the view group.
 
 .. image:: Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
-   :alt: 
-   :width: 14.504cm
-
 
 Perspectives
 ------------
@@ -468,9 +463,9 @@ toolbar.
 |image19|
 
 When you click on the button, the default perspective is
-loaded. If you click on the arrow next to the button ❶ (see figure
+loaded. If you click on the arrow next to the button :guinum:`❶` (see figure
 below), you will open the menu for selecting a previously created
-perspective ❷.
+perspective :guinum:`❷`.
 
 |Figure 1.26: Opening existing perspective|
 
@@ -481,8 +476,6 @@ the perspectives from the main menu. To do this, select the menu item
 :menuselection:`Window --> Perspective`.
 
 .. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
-   :alt: 
-   :width: 14.531cm
 
 .. tip::
    If you have lost the overview when arranging  
@@ -515,14 +508,14 @@ Perspectives menu.
 |Figure : Manage Perspectives|
 
 A dialog with a list of all perspectives
-is now displayed. In the list ❶ you can select single or multiple
+is now displayed. In the list :guinum:`❶` you can select single or multiple
 perspectives just like in the file explorer. You can use the :kbd:`Shift` key
 to select several related entries. With the help of the :kbd:`Ctrl` key you
 can click several entries one after the other and select them.
 
 |Figure : Deleting Perspectives|
 
-If you then click the :guilabel:`Remove` button ❷,
+If you then click the :guilabel:`Remove` button :guinum:`❷`,
 all selected perspectives will be deleted.
 
 Sidebar
@@ -533,7 +526,6 @@ show a specific view directly. Other buttons allow several views to be
 displayed and display a menu for selecting the view (see figure below).
 
 .. image:: Pictures/10000201000000E10000005F05B9041439F8E1EF.png
-   :width: 5.955cm
 
 .. tip::
    The sidebar, and also all toolbars, can be    
@@ -551,11 +543,15 @@ automatically displayed when an event is written to the log.
 
 |Figure : Event Log View|
 
-|image27|
+.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+   :width: 60
+   :align: left
 
 You can clear the event log by
 pressing the :guilabel:`Clear Event Log` button in the upper right corner of the
 screen (see figure).
+
+|
 
 .. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
    :width: 60
@@ -566,7 +562,6 @@ contents of the event log to a text file. After you have assigned a file
 name, the file is saved and you can open it in any text editor.
 
 .. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
-   :width: 15.88cm
 
 If you want to display the event log view manually, select 
 :menuselection:`Window --> Show View --> Event Log`` from the main menu of the 
@@ -588,7 +583,7 @@ error-free state of the device is reported (example in the figure
 below).
 
 In this example (see figure above), all 3 axes of the rotAXYS sample
-handler report an error ❶. However, the most recent top three messages ❷
+handler report an error :guinum:`❶`. However, the most recent top three messages :guinum:`❷`
 show, that there is no more error and that the device works without
 errors. So you can safely ignore the previous error event.
 
@@ -605,9 +600,7 @@ In the toolbar, you see the :guilabel:`Connect to device` button signified by th
 plug icon (see figure below). Press this button to connect CETONI
 Elements with your device(s).
 
-.. figure:: Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
-   :alt: Connecting your devices
-   :width: 8.334cm
+.. image:: Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
 
 .. admonition:: Important
    :class: note
@@ -668,19 +661,19 @@ from the main menu.
 
 In the dialog window that is then
 displayed, you can configure the new project. First enter a unique
-project name ❶. Then select whether you want to copy the settings of
+project name :guinum:`❶`. Then select whether you want to copy the settings of
 the current project into the new project via 
 :guilabel:`Copy current project settings` or whether you want to start with an 
-empty project via :guilabel:`Create empty project` ❷.
+empty project via :guilabel:`Create empty project` :guinum:`❷`.
 
 Then select the location where the project folder is to be created. If
-the checkbox :guilabel:`Use default location` ❸ is checked, the project
+the checkbox :guilabel:`Use default location` :guinum:`❸` is checked, the project
 will be created in the :file:`Projects` directory of the CETONI Elements data
 folder. If you want to select a different storage location, for
 example, to save the project on an external device, remove the check
-mark ❸ and select the location by clicking the :guilabel:`Browse` button ❹.
+mark :guinum:`❸` and select the location by clicking the :guilabel:`Browse` button :guinum:`❹`.
 
-Complete the creation of the new project by clicking :guilabel:`OK` ❺.
+Complete the creation of the new project by clicking :guilabel:`OK` :guinum:`❺`.
 
 |Figure 1.36: Configuration dialog for creation of a new project|
 
@@ -702,18 +695,18 @@ To open an existing project, select the menu item
 |Figure 1.37: Open an existing project|
 
 In the dialog window that is
-now displayed, you can use the selection box ❶ to select a
+now displayed, you can use the selection box :guinum:`❶` to select a
 project from the standard project directory. You can also select a
 project by typing the project name into the selection box. The
 selection box supports you while typing, through the display of matching
 projects. If your project is not stored in the default directory, click
-the Browse button ❷. You can then select a project directory
+the Browse button :guinum:`❷`. You can then select a project directory
 with the help of a directory selection dialog window (for example, on
 an external device).
 
 |Figure 1.38: Dialog for opening an existing project|
 
-Then open the new project by clicking :guilabel:`OK` ❸.
+Then open the new project by clicking :guilabel:`OK` :guinum:`❸`.
  
 Export current project
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -731,12 +724,12 @@ must first open the project in the software. From the application's main
 menu, select :menuselection:`File --> Export Project`.
 
 In the export window that appears, you can now select which directories
-of the project ❶ are to be exported.
+of the project :guinum:`❶` are to be exported.
 
 |Figure 1.40: Selection of project directories for export|
 
 Click the
-:guilabel:`Select All` ❷ or :guilabel:`Select None` ❸ buttons to select all elements
+:guilabel:`Select All` :guinum:`❷` or :guilabel:`Select None` :guinum:`❸` buttons to select all elements
 or no element.
 
 .. admonition:: Important
@@ -749,13 +742,13 @@ or no element.
    necessary for the transfer of data. 
 
 During the export, you will be informed about the current state of the
-export by the *Event Log* ❶, the *Progress Window* ❷, and the
-*Status Line* ❸.
+export by the *Event Log* :guinum:`❶`, the *Progress Window* :guinum:`❷`, and the
+*Status Line* :guinum:`❸`.
 
 |Figure 1.41: Status display project export|
 
 You can cancel the export
-at any time by clicking the :guilabel:`Cancel` ❹ button.
+at any time by clicking the :guilabel:`Cancel` :guinum:`❹` button.
 
 Importing projects
 ~~~~~~~~~~~~~~~~~~~~
@@ -781,13 +774,13 @@ directory.
    project directory, an import is not possible. 
 
 During the import, you will be informed about the current state of the
-import by the *Event Log* ❶, the *Progress Window* ❷ and the
-*Status Line* ❸.
+import by the *Event Log* :guinum:`❶`, the *Progress Window* :guinum:`❷` and the
+*Status Line* :guinum:`❸`.
 
 |Figure 1.44: Status display project import|
 
 You can cancel the import
-at any time by clicking the :guilabel:`Cancel` ❹ button. After successfully
+at any time by clicking the :guilabel:`Cancel` :guinum:`❹` button. After successfully
 importing the project, the software will offer you to load the imported
 project.
 
@@ -833,14 +826,14 @@ Personalize Color and Style
 
 Via the menu item :menuselection:`Edit --> Settings` in the main menu of the application
 you open the configuration dialog of the application. There you will
-find the *Color & Style* ❶ section with the settings for customizing
+find the *Color & Style* :guinum:`❶` section with the settings for customizing
 the design of the graphical interface.
 
 |image43|
 
 You can customize accent color by selecting a color from the
-palette of predefined colors ❷ or by defining your own color using the
-:guilabel:`Custom Color` button ❸.
+palette of predefined colors :guinum:`❷` or by defining your own color using the
+:guilabel:`Custom Color` button :guinum:`❸`.
 
 .. admonition:: Important
    :class: note
@@ -860,12 +853,10 @@ following two screenshots show examples of a customized interface:
 Example 1: Dark design with alternative accent color
 
 .. image:: Pictures/1000020100000430000002BBC33448126A09A2D3.png
-   :width: 100%
 
 Example 2: Light design with blue accent color
 
 .. image:: Pictures/1000020100000430000002BCC96C31CF5E61404D.png
-   :width: 100%
 
 Restricting Access to the User Interface (UI)
 ---------------------------------------------
@@ -890,12 +881,12 @@ To configure access to the software interface, select
 |Figure 1.46: Open UI Access Configuration|
 
 The configuration dialog
-for UI access is displayed. In the first column ❶ you can see the
+for UI access is displayed. In the first column :guinum:`❶` you can see the
 elements of the user interface that you can hide and show. Within the
 individual groups (e.g. workbenches) the elements are sorted
 alphabetically.
 
-In the second column ❷ you can see the configuration of the
+In the second column :guinum:`❷` you can see the configuration of the
 *Default* mode. This mode is always active when the software is started.
 I.e. this mode is the mode that every user sees without special
 authorizations. For each element, you can choose whether it is visible
@@ -905,7 +896,7 @@ normal users.
 |Figure 1.47: Configuration dialog for UI access configuration|
 
 The
-third column ❸ contains the configuration of the interface for
+third column :guinum:`❸` contains the configuration of the interface for
 access-protected mode. This mode is password protected. This means that
 you can access this mode by entering the password and thus show
 previously hidden operating elements.
@@ -947,107 +938,106 @@ want to leave the protected mode, open the selection dialog again and
 then select the default configuration.
 
 .. |Figure 1.1: First start of CETONI Elements – Startup Screen| image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
-   :width: 100%
+
+
 .. |image4| image:: Pictures/10000201000001D6000000AE5ED5B8BD0CA17D65.png
-   :width: 12.441cm
+
 .. |image5| image:: Pictures/10000201000001ED00000145C29F8E208FCC285C.png
-   :width: 13.049cm
+
 .. |image6| image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png
-   :width: 13.049cm
+
 .. |Figure 1.3: Assign a configuration name| image:: Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
-   :width: 11.43cm
+
 .. |image12| image:: Pictures/10000201000002810000018F6EE2B3E17DBB7FD1.png
-   :width: 12.961cm
+
 .. |Figure 1.4: Restart application| image:: Pictures/100000000000020900000097955C208F8F030D3B.png
-   :width: 13.785cm
+
 .. |Figure 1.5: Export device configuration| image:: Pictures/1000000000000176000000AAFAC8C916053B5D6A.png
-   :width: 9.895cm
+
 .. |Figure 1.7: Displaying the installed software version| image:: Pictures/100000000000023E0000011C5BF7D6D89E212C48.png
-   :width: 15.187cm
+
 .. |Figure 1.9: Displaying Views via the Menu| image:: Pictures/10000201000001BF000000EB5BF27DBB42FBAF06.png
-   :width: 11.83cm
+
 .. |Figure 1.10: Displaying Views for Devices| image:: Pictures/1000020100000221000000ABD10E7731B686C5B3.png
-   :width: 14.425cm
+
 .. |Figure 1.11: Move View via Drag & Drop| image:: Pictures/100002010000036A000001C8BBF4BBC66184FB09.png
-   :width: 100%
+
 .. |Figure 1.12: Detach view from its position via context menu| image:: Pictures/10000201000001310000009DE8129AEE37B00CF4.png
-   :width: 8.073cm
+
 .. |Figure 1.13: Drop target markers| image:: Pictures/10000201000002890000014BCF8FC8087ECC35C5.png
-   :width: 100%
+
 .. |Figure 1.14: Drop Preview Display| image:: Pictures/10000201000002890000014B5699FFD5D09BAADF.png
-   :width: 16.201cm
+
 .. |Figure 1.15: View inserted on the left side| image:: Pictures/10000201000002890000014BC4687441A2A645E3.png
-   :width: 16.201cm
+
 .. |Figure 1.16: View Group| image:: Pictures/1000020100000252000000C9F4392403DF96FF6D.png
-   :width: 15.722cm
+
 .. |Figure 1.17: Drop target markers| image:: Pictures/1000020100000289000000F51BAC327624A0EC0B.png
-   :width: 16.201cm
+
 .. |Figure 1.18: Insert View as Additional Tab| image:: Pictures/1000020100000289000000F59743DC452A74F108.png
-   :width: 16.201cm
+
 .. |Figure 1.19: Moving View Groups| image:: Pictures/10000201000002E4000001531CF5648A1020DCB4.png
-   :width: 16.201cm
+
 .. |Figure 1.20: Undock View Group| image:: Pictures/1000020100000264000000FC1AB96C910DA572FD.png
-   :width: 16.2cm
+
 .. |Figure 1.21: Closing View| image:: Pictures/1000020100000264000000BF3127F5F8B75874DD.png
-   :width: 16.2cm
+
 .. |Figure 1.22: Closing View Group| image:: Pictures/1000020100000264000000BF9FA7CB8EE15E4D72.png
-   :width: 16.2cm
+
 .. |Figure 1.23: Opening the View Menu of a View Group| image:: Pictures/100002010000026D000000D2FF18CEC652F6FACF.png
-   :width: 16.201cm
+
 .. |Figure 1.24: Close all inactive views of a group| image:: Pictures/10000201000002000000006B0A134CD1AC8B3316.png
-   :width: 13.552cm
+
 .. |image19| image:: Pictures/100002010000021A0000002B78422E539BC46AD1.png
-   :width: 14.24cm
+
 .. |Figure 1.26: Opening existing perspective| image:: Pictures/1000020100000220000000E4C70099429E65895A.png
-   :width: 14.399cm
+
 .. |Figure : Create Perspective| image:: Pictures/10000201000000CA00000080463140FE0D508006.png
-   :width: 5.346cm
+
 .. |Figure : Manage Perspectives| image:: Pictures/10000201000001A9000000C56CAD6237DD6652DC.png
-   :width: 11.248cm
+
 .. |Figure : Deleting Perspectives| image:: Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
-   :width: 12.811cm
+
 .. |Figure : Event Log View| image:: Pictures/100002010000026700000079181DA868FE965CCF.png
-   :width: 15.965cm
-.. |image27| image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
-   :width: 1.499cm
+
 .. |Figure : Showing Event Log View| image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
-   :width: 11.753cm
+
 .. |image29| image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
-   :width: 100%
+
 .. |Figure 1.34: Browse project folder| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
-   :width: 10.398cm
+
 .. |Figure 1.35: Creating new project| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
-   :width: 10.398cm
+
 .. |Figure 1.36: Configuration dialog for creation of a new project| image:: Pictures/100000000000025000000166DB408F1FB7BB2D47.png
-   :width: 15.663cm
+
 .. |Figure 1.37: Open an existing project| image:: Pictures/1000000000000170000000A7C5E2BBA82D900D3D.png
-   :width: 9.737cm
+
 .. |Figure 1.38: Dialog for opening an existing project| image:: Pictures/100000000000020B00000124D393F3498C85002B.png
-   :width: 13.838cm
+
 .. |Figure 1.39: Open the project export window| image:: Pictures/10000201000001A8000000BB1B03350B9BEA1D79.png
-   :width: 11.222cm
+
 .. |Figure 1.40: Selection of project directories for export| image:: Pictures/1000020100000298000001FB7D3433258DF59F1D.png
-   :width: 16.201cm
+
 .. |Figure 1.41: Status display project export| image:: Pictures/10000201000002E90000011C77337172831B2410.png
-   :width: 16.201cm
+
 .. |Figure 1.42: Selecting project import| image:: Pictures/10000201000001AA000000C9957BE44F06738675.png
-   :width: 11.275cm
+
 .. |Figure 1.43: Enter project name| image:: Pictures/10000201000001B00000009E14CEAFCC900E13F3.png
-   :width: 11.434cm
+
 .. |Figure 1.44: Status display project import| image:: Pictures/10000201000002E90000011C77337172831B2410.png
-   :width: 16.201cm
+
 .. |image42| image:: Pictures/10000201000001730000009795A0B0ECA50C9747.png
-   :width: 9.82cm
+
 .. |Figure 1.45: Settings dialog| image:: Pictures/100002010000021200000126AC99A172AA6E85CC.png
-   :width: 14.028cm
+
 .. |image43| image:: Pictures/10000201000002890000017285BB5129C447B7B6.png
-   :width: 16.201cm
+
 .. |Figure 1.46: Open UI Access Configuration| image:: Pictures/1000020100000161000000ADAFFCD2193104E170.png
-   :width: 9.343cm
+
 .. |Figure 1.47: Configuration dialog for UI access configuration| image:: Pictures/100002010000023700000105D086995A6867BEE3.png
-   :width: 15.007cm
+
 .. |Figure 1.48: Enter password for UI access mode selection| image:: Pictures/1000020100000283000000ABD9FB0393AF480FE9.png
-   :width: 16.201cm
+
 .. |Figure 1.49: Switching UI Access Mode| image:: Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
-   :width: 9.052cm
+
 

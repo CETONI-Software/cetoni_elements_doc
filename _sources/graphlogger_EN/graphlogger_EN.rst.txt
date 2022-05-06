@@ -284,9 +284,10 @@ Turning the mouse wheel whilst the pointer is within the plot area will
 allow you to adjust the displayed section of a graph by increasing
 (zooming in) or decreasing (zooming out) its zoom level.
 
-
-- |image68| Increase zoom level (zoom in)
-- |image69| Decrease zoom level (zoom out)
+========= ===================================
+|image68| Increase zoom level (zoom in)
+|image69| Decrease zoom level (zoom out)
+========= ===================================
 
 Display Section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -302,13 +303,13 @@ follows (see figure below):
 
 |
 
+.. image:: Pictures/10000000000001FA0000015E46DAC1CBDA6E2854.png
+
 - :guinum:`❶` Using the mouse, left-click-and-hold into the plot area to set the
   first corner of the zoom frame.
 - :guinum:`❷` Move the mouse pointer to define the size of the frame as desired.
 - :guinum:`❸` Releasing the mouse button will finalize the size of the frame. The
   selected area will be scaled to the current graph size (zoom in).
-
-.. image:: Pictures/10000000000001FA0000015E46DAC1CBDA6E2854.png
 
 Auto-Fit & Auto-Scale
 ~~~~~~~~~~~~~~~~~~~~~
@@ -631,10 +632,10 @@ in figure below):
 
 .. |Figure : Display Curve Values| image:: Pictures/100002010000024C000000D8EF633321C7CB7321.png
 
-.. |image68| image:: Pictures/10000000000001EC000002E9E123686A038FFB99.png
+.. |image68| image:: Pictures/Mouse_Wheel_up.png
    :width: 80
 
-.. |image69| image:: Pictures/10000000000001EC000002E9C869BC0EE323BD20.png
+.. |image69| image:: Pictures/Mouse_Wheel_down.png
    :width: 80
 
 .. |image79| image:: Pictures/10000AAD0000350500003505B065E97D3266EBF3.svg

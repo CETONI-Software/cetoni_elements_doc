@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'kievit';
+    src: url('fonts/KievitWebPro-Light.woff');
+    font-weight: 200;
+    font-style: normal;
+    font-feature-settings: "lnum", "pnum";
+  }
+
+  @font-face {
+    font-family: 'kievit-bold';
+    src: url('fonts/KievitWebPro-Bold.woff');
+    font-weight: 200;
+    font-style: normal;
+    font-feature-settings: "lnum", "pnum";
+  }
+
+  body, p {
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 200;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: "kievit", sans-serif;
+    font-size-adjust: none;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-variant-alternates: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-language-override: normal;
+    font-feature-settings: normal;
+    font-variation-settings: normal;    
+  }
+  
+
 .wy-table-responsive table td {
     white-space: normal !important;
 }
@@ -30,8 +68,44 @@ body > div.wy-grid-for-nav > nav > div > div.wy-side-nav-search > a::before {
 
 /* Use text font for headings */
 h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
-    font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: 'kievit';
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 21px;
 }
+
+h1 {
+  font-size: 39px;
+  margin-bottom: 21px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-family: 'kievit-bold';
+  font-size: 19px;
+}
+
+h5 {
+  font-family: 'kievit-bold';
+  font-size: 17px;
+}
+
+h6 {
+  font-family: 'kievit-bold';
+  font-size: 15px;
+}
+
+.rst-content li {
+  margin-bottom: 8px;
+}
+
 
 /* Use "Brand light blue" for ToC heading */
 body > div.wy-grid-for-nav > nav > div > div.wy-menu.wy-menu-vertical > p > span {
@@ -48,12 +122,30 @@ body > div.wy-grid-for-nav > nav > div > div.wy-menu.wy-menu-vertical > p > span
     background-color: #233942 !important;
 }
 
+/*
+.wy-nav-top {
+    background-color: #ffffff !important;
+    border-bottom: 4px solid red;
+  }
+*/
+
+.wy-nav-top a {
+  /*color: #000;*/
+  font-weight: 200;
+  font-size: 24px;
+}
+
+.wy-menu-vertical a {
+  font-size: 80%;
+}
+
+
 /* Customize for CETONI Documentation*/
 .rst-content .guilabel {
-    background:#e7f2fa;
-    border:1px solid #6ab0de;
-    padding: 4px 8px 4px 8px;
-   }
+  background:#e7f2fa;
+  border:1px solid #6ab0de;
+  padding: 4px 8px 4px 8px;
+}
 
 /*rtd theme does not render menuselection, so let's apply guilabel settings to it*/
 .rst-content .menuselection {
@@ -81,7 +173,8 @@ html[data-theme='dark'] .rst-content .menuselection {
     font-family: "Source Code Pro",monospace;
     padding: .2rem .4rem;
     border-radius: .2rem;
-    font-size: 87.5%;
+    font-size: 70%;
+    font-weight: 600;
     /*color: #212121;*/
     background-color: #f2f2f2;
     border: 1px solid #cbcbcb;
@@ -92,7 +185,8 @@ html[data-theme='dark'] .rst-content .kbd {
     font-family: "Source Code Pro",monospace;
     padding: .2rem .4rem;
     border-radius: .2rem;
-    font-size: 87.5%;
+    font-size: 70%;
+    font-weight: 600;
     /*color: #212121;*/
     background-color: #383838;
     border: 1px solid #000000;
@@ -101,6 +195,18 @@ html[data-theme='dark'] .rst-content .kbd {
 
 .guinum {
     color: #dd0000;
-    font-size: 120%;
-    font-weight:700;
+    font-size: 100%;
+    font-weight:400;
+}
+
+/* center all images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wy-nav-content {
+  /*max-width: none;*/
+  max-width: 1024px !important;
 }

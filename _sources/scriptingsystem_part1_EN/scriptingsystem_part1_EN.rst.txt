@@ -67,12 +67,12 @@ function parameters are visible for you (see figure below):
 |Figure 5: Single function in the Script Editor|
 
 On the left side you
-will find the graphic icon of the function ❶. Immediate right of the
-icon at the top ❷ you will find the function name. Status information
-can be found to the right of the function name ❸. For many functions,
+will find the graphic icon of the function :guinum:`❶`. Immediate right of the
+icon at the top :guinum:`❷` you will find the function name. Status information
+can be found to the right of the function name :guinum:`❸`. For many functions,
 these status information are visible only during the execution and are
 subject to change. Directly below the function name is a summary of all
-important function parameters ❹, that you have configured in the
+important function parameters :guinum:`❹`, that you have configured in the
 configuration area.
 
 The *Script Editor* is a movable and dockable window: you may move and
@@ -213,9 +213,9 @@ The configuration area consists of:
 2. input- and control elements of the function
 3. comment box to enter any commentary
 
-The input- and control elements ❷ are different for each script
+The input- and control elements :guinum:`❷` are different for each script
 function. But all functions provide some common controls like the
-function caption ❶ in the header and a comment box ❸ at the bottom of
+function caption :guinum:`❶` in the header and a comment box :guinum:`❸` at the bottom of
 the configuration area.
 
 Changing Function Caption
@@ -277,10 +277,10 @@ Functions are activated via drag & drop from the *Script Pool* to the
 *Script Editor*. To do this, proceed as follows:
 
 1. In the Script Pool, left-click on the function that you want to
-   insert ❶ and hold down the mouse button.
+   insert :guinum:`❶` and hold down the mouse button.
 2. Move the pointer to the desired position within the *Script
    Editor* swindow.
-3. As soon as you release the mouse button ❷, the selected function
+3. As soon as you release the mouse button :guinum:`❷`, the selected function
    will be inserted into the Script Editor.
 
 |Figure 13: Inserting a function into a script via drag-&-drop|
@@ -311,8 +311,8 @@ continuous sequence of functions at the same hierarchy level.
 
 When you select an item
 in the usual way with the left mouse button, the selection is cleared
-and the new item is selected ❶. However, if you press the :kbd:`Shift` key
-while clicking on an item ❷, all items between the current item and the
+and the new item is selected :guinum:`❶`. However, if you press the :kbd:`Shift` key
+while clicking on an item :guinum:`❷`, all items between the current item and the
 clicked item are selected or unselected, depending on the state of the
 clicked item.
 
@@ -409,8 +409,8 @@ Showing Function Tooltip
 If you move the mouse cursor over a function, a tooltip window is
 displayed for this function after a short time (see figure below). In
 this window, you will get all information about this function at a
-glance: function name ❶, user comment or function description ❷ and
-function parameters ❸.
+glance: function name :guinum:`❶`, user comment or function description :guinum:`❷` and
+function parameters :guinum:`❸`.
 
 .. figure:: Pictures/1000020100000204000000DEDBCF89E6569C55A7.png
    :alt: Figure : Showing script function tooltip
@@ -591,9 +591,9 @@ selecting the process data is displayed (see figure below).
 
 In this dialog
 you can select which type of device you want to access in the selection
-box :guilabel:`Filter` ❶. Select a specific device in the selection box 
-:guilabel:`Device` ❷ which contains the filtered list of devices. Finally 
-select the process data to be accessed in the :guilabel:`Property` ❸ field.
+box :guilabel:`Filter` :guinum:`❶`. Select a specific device in the selection box 
+:guilabel:`Device` :guinum:`❷` which contains the filtered list of devices. Finally 
+select the process data to be accessed in the :guilabel:`Property` :guinum:`❸` field.
 
 |Figure 23: Using process data identifiers in input fields|
 
@@ -635,10 +635,10 @@ follows:
 
 **Step 1 – Create a new script**
 
-Click on the button :guilabel:`Create New Script` ❶ to create an empty script.
-Then click on the :guilabel:`Save Script` button ❷ to give the script function a
+Click on the button :guilabel:`Create New Script` :guinum:`❶` to create an empty script.
+Then click on the :guilabel:`Save Script` button :guinum:`❷` to give the script function a
 name and then save it with this name. The name of the script function is
-then displayed in the script editor header ❸. In this example we use the
+then displayed in the script editor header :guinum:`❸`. In this example we use the
 name *AddValues* because we want to implement a simple function that
 adds two values.
 
@@ -653,27 +653,27 @@ are returned by the function to the calling script. Up to 10 function
 parameters and up to 10 return values can be defined for each function.
 
 To define parameters and return values, click with the mouse on a free
-area in the script editor or on the script editor's header ❶ (figure
+area in the script editor or on the script editor's header :guinum:`❶` (figure
 below), where the name of the function is displayed.
 
 |image94|
 
 The script pool now shows the configuration window for the
-script. Here you can add function parameters ❷ or return values ❸ by
+script. Here you can add function parameters :guinum:`❷` or return values :guinum:`❸` by
 clicking on the :guilabel:`Add` buttons.
 
-For this example, click twice on the :guilabel:`Add` button ❷ to add two function
+For this example, click twice on the :guilabel:`Add` button :guinum:`❷` to add two function
 parameters. Then click on the first parameter name (figure below) and
 give it a more meaningful name: *Summand1*:
 
 .. image:: Pictures/10000201000001AD000000BA59BF59476BCC908C.png
 
-Then enter the default value 0 ❷ for the parameter. Now click on the
+Then enter the default value 0 :guinum:`❷` for the parameter. Now click on the
 second parameter name and rename it to *Summand2*.
 
 **Step 3 – Define return values**
 
-Now click once on the :guilabel:`Add` button in the *Return Values* ❶ area 
+Now click once on the :guilabel:`Add` button in the *Return Values* :guinum:`❶` area 
 (figure below) to add a return value. Then click on the first return value name
 and rename it to: *Sum*.
 
@@ -697,17 +697,17 @@ the script and set the type of the variable to *JavaScript Expression*.
 
 .. image:: Pictures/1000020100000256000000F4FC5255AD8336787C.png
 
-In the :guilabel:`Name` field, enter the name ❶ (see figure below) of the variable
+In the :guilabel:`Name` field, enter the name :guinum:`❶` (see figure below) of the variable
 which should store the value – in this case, the variable :code:`$Sum`. 
-In the input field for the JavaScript code ❷ you can now enter the addition of
+In the input field for the JavaScript code :guinum:`❷` you can now enter the addition of
 the two variables :code:`$Summand1` and :code:`$Summand2`.
 
 .. image:: Pictures/10000201000001A60000010A9B2821B16D5BA0B3.png
 
 Now save the script function. Next, you can test the script function.
-Click on the :guilabel:`Run Script` button ❶ (figure below) - no error should
+Click on the :guilabel:`Run Script` button :guinum:`❶` (figure below) - no error should
 occur and the result of the addition should be displayed in the script
-editor in the *Set Variable* function ❷.
+editor in the *Set Variable* function :guinum:`❷`.
 
 .. image:: Pictures/10000201000002670000013365D1FE2B80D7A609.png
 
@@ -716,10 +716,10 @@ If errors occur, correct them and save the script function again.
 Use your own script functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Click on the button :guilabel:`Create New Script` ❶ to create an empty script.
-Then click on the :guilabel:`Save Script` button ❷ to give the script function a
+Click on the button :guilabel:`Create New Script` :guinum:`❶` to create an empty script.
+Then click on the :guilabel:`Save Script` button :guinum:`❷` to give the script function a
 name and then save it with this name. The name of the script function is
-then displayed in the script editor header ❸. In this example we use the
+then displayed in the script editor header :guinum:`❸`. In this example we use the
 name *CustomScriptFunctionTest*.
 
 .. image:: Pictures/10000201000001A5000000664758F62E1016AF5B.png
@@ -775,12 +775,12 @@ with the corresponding settings can be opened via the menu item
 
 You can now configure the
 script autostart in the Settings dialog of the application. First select
-the settings category *Scripting* ❶. Now you can activate the script
-autostart ❷ in the right area. You can select the script file to be
-loaded and executed via the :guilabel:`Autostart Scriptfile` ❸ input field. If
+the settings category *Scripting* :guinum:`❶`. Now you can activate the script
+autostart :guinum:`❷` in the right area. You can select the script file to be
+loaded and executed via the :guilabel:`Autostart Scriptfile` :guinum:`❸` input field. If
 this field is empty, the script is executed which is loaded when the
 application is started, i.e. the script which was open when the
-application was last used. Finish the configuration by clicking :guilabel:`OK` ❹.
+application was last used. Finish the configuration by clicking :guilabel:`OK` :guinum:`❹`.
 
 If you want the software to start up automatically and execute a script
 after your computer has booted, then proceed as follows:
@@ -806,8 +806,8 @@ should react to such errors in the global settings dialog
 
 |Figure 25: Error Handling Settings|
  
-First select the *Settings* category Scripting ❶. In the  
-:guilabel:`Script Error Reaction` section ❷ you can now configure the 
+First select the *Settings* category Scripting :guinum:`❶`. In the  
+:guilabel:`Script Error Reaction` section :guinum:`❷` you can now configure the 
 reaction in case of an error. 
 
 You can select the following options:
@@ -825,7 +825,7 @@ You can select the following options:
    script by checking the status of this error variable after a function
    call.
 
-Complete the configuration by clicking on OK ❸
+Complete the configuration by clicking on OK :guinum:`❸`
 
 .. |Figure 1: Script system overview| image:: Pictures/10000201000003C9000001AAB18C614061F55B68.png
 
