@@ -14,7 +14,7 @@
     font-feature-settings: "lnum", "pnum";
   }
 
-  body, p {
+  body {
     font-style: normal;
     font-variant-caps: normal;
     font-weight: 200;
@@ -140,7 +140,7 @@ body > div.wy-grid-for-nav > nav > div > div.wy-menu.wy-menu-vertical > p > span
 }
 
 .wy-menu-vertical a {
-  font-size: 80%;
+  font-size: 85%;
   line-height: 14px;
 }
 

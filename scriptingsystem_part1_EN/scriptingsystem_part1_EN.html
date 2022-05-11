@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Script System &mdash; CETONI Elements Manual</title>
+  <title>3. Script System &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Generic Script Functions" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" />
-    <link rel="prev" title="1. CETONI Elements - An Overview" href="../QmixElementsADS_EN/QmixElementsADS_EN.html" /> 
+    <link rel="next" title="4. Generic Script Functions" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" />
+    <link rel="prev" title="2. CETONI Elements - An Overview" href="../QmixElementsADS_EN/QmixElementsADS_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,61 +52,62 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">1. CETONI Elements - An Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Script System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-to-script-system">2.1. Introduction to to Script System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#script-pool">2.2. Script Pool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#script-editor">2.3. Script Editor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-script-editor">2.3.1. Introduction to Script Editor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#toolbar">2.3.2. Toolbar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-script-editor">2.3.3. Context Menu of Script Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Script System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-to-script-system">3.1. Introduction to to Script System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-pool">3.2. Script Pool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-editor">3.3. Script Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-script-editor">3.3.1. Introduction to Script Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toolbar">3.3.2. Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-script-editor">3.3.3. Context Menu of Script Editor</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#script-configuration-panel">2.4. Script Configuration Panel</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-script-configuration-panel">2.4.1. Overview of Script Configuration Panel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-function-caption">2.4.2. Changing Function Caption</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enter-comment">2.4.3. Enter Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-configuration-panel">3.4. Script Configuration Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-script-configuration-panel">3.4.1. Overview of Script Configuration Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-function-caption">3.4.2. Changing Function Caption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enter-comment">3.4.3. Enter Comment</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#programming">2.5. Programming</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#adding-functions">2.5.1. Adding Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#selecting-functions">2.5.2. Selecting Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#moving-functions">2.5.3. Moving Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-functions">2.5.4. Deleting Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#copying-functions">2.5.5. Copying Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grouping-functions">2.5.6. Grouping Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#editing-function-parameters">2.5.7. Editing Function Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#showing-function-tooltip">2.5.8. Showing Function Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programming">3.5. Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-functions">3.5.1. Adding Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-functions">3.5.2. Selecting Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-functions">3.5.3. Moving Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-functions">3.5.4. Deleting Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copying-functions">3.5.5. Copying Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grouping-functions">3.5.6. Grouping Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-function-parameters">3.5.7. Editing Function Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showing-function-tooltip">3.5.8. Showing Function Tooltip</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#variables">2.6. Variables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-variables">2.6.1. Introduction to variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-variables">2.6.2. Setting Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#naming-variables">2.6.3. Naming Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#visibility-range-of-variables-scope">2.6.4. Visibility Range of Variables (Scope)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-variables">2.6.5. Using Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#auto-completion-of-variable-names">2.6.6. Auto-Completion of Variable Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">3.6. Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-variables">3.6.1. Introduction to variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-variables">3.6.2. Setting Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming-variables">3.6.3. Naming Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visibility-range-of-variables-scope">3.6.4. Visibility Range of Variables (Scope)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-variables">3.6.5. Using Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-completion-of-variable-names">3.6.6. Auto-Completion of Variable Names</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#device-property-identifiers">2.7. Device Property Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#programming-your-own-script-functions">2.8. Programming your own script functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-script-function">2.8.1. Create a script function</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#use-your-own-script-functions">2.8.2. Use your own script functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device-property-identifiers">3.7. Device Property Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programming-your-own-script-functions">3.8. Programming your own script functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-script-function">3.8.1. Create a script function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-your-own-script-functions">3.8.2. Use your own script functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#script-autostart">2.9. Script Autostart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#script-error-handling">2.10. Script Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-autostart">3.9. Script Autostart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-error-handling">3.10. Script Error Handling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">3. Generic Script Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">4. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">5. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">6. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">7. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">8. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">9. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">10. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">11. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">4. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">6. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">7. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">8. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">9. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">10. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">11. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">12. Appendix</a></li>
 </ul>
 
         </div>
@@ -123,7 +124,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">2. </span>Script System</li>
+      <li><span class="section-number">3. </span>Script System</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -134,9 +135,9 @@
            <div itemprop="articleBody">
              
   <section id="script-system">
-<h1><span class="section-number">2. </span>Script System<a class="headerlink" href="#script-system" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">3. </span>Script System<a class="headerlink" href="#script-system" title="Permalink to this headline"></a></h1>
 <section id="introduction-to-to-script-system">
-<h2><span class="section-number">2.1. </span>Introduction to to Script System<a class="headerlink" href="#introduction-to-to-script-system" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.1. </span>Introduction to to Script System<a class="headerlink" href="#introduction-to-to-script-system" title="Permalink to this headline"></a></h2>
 <p>The software provides a powerful scripting system to set up automated
 process sequences.</p>
 <p><img alt="Figure 1: Script system overview" src="../_images/10000201000003C9000001AAB18C614061F55B68.png" /></p>
@@ -153,7 +154,7 @@ individual script functions.</p></li>
 </ol>
 </section>
 <section id="script-pool">
-<h2><span class="section-number">2.2. </span>Script Pool<a class="headerlink" href="#script-pool" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.2. </span>Script Pool<a class="headerlink" href="#script-pool" title="Permalink to this headline"></a></h2>
 <p>Activate the <span class="guilabel">Scripting</span> button in the side bar to show the <em>Script
 Pool</em>.</p>
 <p><img alt="Figure 2: Show Script Pool" src="../_images/10000201000001BC00000116F459D83094022ABD.png" /></p>
@@ -169,9 +170,9 @@ double-click on the category name (figure below).</p>
 <p><img alt="Figure 3: Script Pool – Expanded view (2) of individual category functions." src="../_images/100002010000022E0000017D7475090392B8F4E9.png" /></p>
 </section>
 <section id="script-editor">
-<h2><span class="section-number">2.3. </span>Script Editor<a class="headerlink" href="#script-editor" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.3. </span>Script Editor<a class="headerlink" href="#script-editor" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-script-editor">
-<span id="introduction-script-editor"></span><h3><span class="section-number">2.3.1. </span>Introduction to Script Editor<a class="headerlink" href="#introduction-to-script-editor" title="Permalink to this headline"></a></h3>
+<span id="introduction-script-editor"></span><h3><span class="section-number">3.3.1. </span>Introduction to Script Editor<a class="headerlink" href="#introduction-to-script-editor" title="Permalink to this headline"></a></h3>
 <p>The <em>Script Editor</em> is used for the graphic programming of scripts. The
 following items are numbered in the figure below:</p>
 <ol class="arabic simple">
@@ -217,7 +218,7 @@ readability</p></li>
 </ul>
 </section>
 <section id="toolbar">
-<h3><span class="section-number">2.3.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.3.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16%" />
@@ -271,7 +272,7 @@ system over the script editor and drop it there.</p>
 </div>
 </section>
 <section id="context-menu-of-script-editor">
-<h3><span class="section-number">2.3.3. </span>Context Menu of Script Editor<a class="headerlink" href="#context-menu-of-script-editor" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.3.3. </span>Context Menu of Script Editor<a class="headerlink" href="#context-menu-of-script-editor" title="Permalink to this headline"></a></h3>
 <p>If you click with the right mouse button on any function within the
 <em>Script Editor</em>, a context menu appears to quickly access additional
 actions (figure below).</p>
@@ -345,9 +346,9 @@ button on the function of choice and select
 </section>
 </section>
 <section id="script-configuration-panel">
-<h2><span class="section-number">2.4. </span>Script Configuration Panel<a class="headerlink" href="#script-configuration-panel" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.4. </span>Script Configuration Panel<a class="headerlink" href="#script-configuration-panel" title="Permalink to this headline"></a></h2>
 <section id="overview-of-script-configuration-panel">
-<h3><span class="section-number">2.4.1. </span>Overview of Script Configuration Panel<a class="headerlink" href="#overview-of-script-configuration-panel" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.4.1. </span>Overview of Script Configuration Panel<a class="headerlink" href="#overview-of-script-configuration-panel" title="Permalink to this headline"></a></h3>
 <p>The configuration panel contains all controls for configuring the script
 function that is currently selected in the <em>Script Editor</em>.</p>
 <p><img alt="Figure 9: Script Configuration Area" src="../_images/100002010000021A0000012F07608C2B70720CC7.png" /></p>
@@ -363,7 +364,7 @@ function caption <span class="guinum">❶</span> in the header and a comment box
 the configuration area.</p>
 </section>
 <section id="changing-function-caption">
-<h3><span class="section-number">2.4.2. </span>Changing Function Caption<a class="headerlink" href="#changing-function-caption" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.4.2. </span>Changing Function Caption<a class="headerlink" href="#changing-function-caption" title="Permalink to this headline"></a></h3>
 <p>In the header of the configuration area you can change the caption of
 the function. It allows you to use “talking” function names that make it
 a lot easier for you or third parties to read and understand your
@@ -401,7 +402,7 @@ speaking, application-specific function names.</p>
 </div>
 </section>
 <section id="enter-comment">
-<h3><span class="section-number">2.4.3. </span>Enter Comment<a class="headerlink" href="#enter-comment" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.4.3. </span>Enter Comment<a class="headerlink" href="#enter-comment" title="Permalink to this headline"></a></h3>
 <p>In the comment field you can enter a comment that will allow other users
 to understand your scripts better and to follow the flow of execution
 easier.</p>
@@ -414,9 +415,9 @@ that function.</p>
 </section>
 </section>
 <section id="programming">
-<h2><span class="section-number">2.5. </span>Programming<a class="headerlink" href="#programming" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.5. </span>Programming<a class="headerlink" href="#programming" title="Permalink to this headline"></a></h2>
 <section id="adding-functions">
-<h3><span class="section-number">2.5.1. </span>Adding Functions<a class="headerlink" href="#adding-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.1. </span>Adding Functions<a class="headerlink" href="#adding-functions" title="Permalink to this headline"></a></h3>
 <p>Functions are activated via drag &amp; drop from the <em>Script Pool</em> to the
 <em>Script Editor</em>. To do this, proceed as follows:</p>
 <ol class="arabic simple">
@@ -444,7 +445,7 @@ function tree, the function is added at the end.</p></li>
 </ol>
 </section>
 <section id="selecting-functions">
-<h3><span class="section-number">2.5.2. </span>Selecting Functions<a class="headerlink" href="#selecting-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.2. </span>Selecting Functions<a class="headerlink" href="#selecting-functions" title="Permalink to this headline"></a></h3>
 <p>To move, copy or delete functions, you must first select them. You can
 either select a single function by clicking on it, or you can select a
 continuous sequence of functions at the same hierarchy level.</p>
@@ -457,7 +458,7 @@ clicked item are selected or unselected, depending on the state of the
 clicked item.</p>
 </section>
 <section id="moving-functions">
-<h3><span class="section-number">2.5.3. </span>Moving Functions<a class="headerlink" href="#moving-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.3. </span>Moving Functions<a class="headerlink" href="#moving-functions" title="Permalink to this headline"></a></h3>
 <p>Analogous to inserting a new function from the <em>Script Pool</em>, you can
 move the functions to new positions within the function tree via
 drag &amp; drop. Again, the same insertion rules apply as above.</p>
@@ -482,7 +483,7 @@ dragging and dropping.</p>
 </div>
 </section>
 <section id="deleting-functions">
-<h3><span class="section-number">2.5.4. </span>Deleting Functions<a class="headerlink" href="#deleting-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.4. </span>Deleting Functions<a class="headerlink" href="#deleting-functions" title="Permalink to this headline"></a></h3>
 <p>There are two ways to delete functions:</p>
 <ol class="arabic simple">
 <li><p>Select the functions you want to delete and then click the context
@@ -492,7 +493,7 @@ key of your keyboard.</p></li>
 </ol>
 </section>
 <section id="copying-functions">
-<h3><span class="section-number">2.5.5. </span>Copying Functions<a class="headerlink" href="#copying-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.5. </span>Copying Functions<a class="headerlink" href="#copying-functions" title="Permalink to this headline"></a></h3>
 <p>Similarly, functions can be copied either by using the context menu via
 the mouse or using key combinations via the keyboard. If you work with
 the context menu, simply select <em>Copy</em> and then <em>Paste</em> from the menu
@@ -513,7 +514,7 @@ keyboard and <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd cla
 simply repeat steps 3 and 4 (above).</p>
 </section>
 <section id="grouping-functions">
-<h3><span class="section-number">2.5.6. </span>Grouping Functions<a class="headerlink" href="#grouping-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.6. </span>Grouping Functions<a class="headerlink" href="#grouping-functions" title="Permalink to this headline"></a></h3>
 <p>To improve the clarity and readability of your script, you can quickly
 and easily group sequences of functions into function sequences. To do
 this, simply select a contiguous set of functions, and then click
@@ -524,14 +525,14 @@ by a function sequence containing the selected functions.</p>
 <p><img alt="image76" src="../_images/10000201000002AD000000B45887FBE2E338C1B1.png" /></p>
 </section>
 <section id="editing-function-parameters">
-<h3><span class="section-number">2.5.7. </span>Editing Function Parameters<a class="headerlink" href="#editing-function-parameters" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.7. </span>Editing Function Parameters<a class="headerlink" href="#editing-function-parameters" title="Permalink to this headline"></a></h3>
 <p>As soon as you select a function from the function tree, the operating
 elements appear in the <em>Script Configuration</em> area that allow you to
 configure the selected function. Edit the function parameters as
 required.</p>
 </section>
 <section id="showing-function-tooltip">
-<h3><span class="section-number">2.5.8. </span>Showing Function Tooltip<a class="headerlink" href="#showing-function-tooltip" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.5.8. </span>Showing Function Tooltip<a class="headerlink" href="#showing-function-tooltip" title="Permalink to this headline"></a></h3>
 <p>If you move the mouse cursor over a function, a tooltip window is
 displayed for this function after a short time (see figure below). In
 this window, you will get all information about this function at a
@@ -543,9 +544,9 @@ function parameters <span class="guinum">❸</span>.</p>
 </section>
 </section>
 <section id="variables">
-<h2><span class="section-number">2.6. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.6. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-variables">
-<span id="variables-introduction"></span><h3><span class="section-number">2.6.1. </span>Introduction to variables<a class="headerlink" href="#introduction-to-variables" title="Permalink to this headline"></a></h3>
+<span id="variables-introduction"></span><h3><span class="section-number">3.6.1. </span>Introduction to variables<a class="headerlink" href="#introduction-to-variables" title="Permalink to this headline"></a></h3>
 <p>The script system of supports the use of variables. Within script
 programs, variables serve as containers for calculated and device
 values. Their values are generated during program execution from, for
@@ -555,7 +556,7 @@ values stored in these containers, e.g., to trigger value-dependent
 events.</p>
 </section>
 <section id="setting-variables">
-<h3><span class="section-number">2.6.2. </span>Setting Variables<a class="headerlink" href="#setting-variables" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.6.2. </span>Setting Variables<a class="headerlink" href="#setting-variables" title="Permalink to this headline"></a></h3>
 <p>Before variables may be used by a script, such variables need to be
 defined. There are two possibilities to setup variables:</p>
 <ol class="arabic simple">
@@ -567,7 +568,7 @@ variables by default, such as the counter of the
 </ol>
 </section>
 <section id="naming-variables">
-<span id="id1"></span><h3><span class="section-number">2.6.3. </span>Naming Variables<a class="headerlink" href="#naming-variables" title="Permalink to this headline"></a></h3>
+<span id="id1"></span><h3><span class="section-number">3.6.3. </span>Naming Variables<a class="headerlink" href="#naming-variables" title="Permalink to this headline"></a></h3>
 <p>There are some important requirements to keep in mind when naming
 variables: Every variable is called within a program script via an
 essentially freely definable name. This name serves to uniqly
@@ -591,7 +592,7 @@ to check the results of calculations.</p>
 </div>
 </section>
 <section id="visibility-range-of-variables-scope">
-<h3><span class="section-number">2.6.4. </span>Visibility Range of Variables (Scope)<a class="headerlink" href="#visibility-range-of-variables-scope" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.6.4. </span>Visibility Range of Variables (Scope)<a class="headerlink" href="#visibility-range-of-variables-scope" title="Permalink to this headline"></a></h3>
 <p>The visibility range (scope) of a variable is that part of the program
 within which that variable is visible, i.e., available. Scripts
 are trees with an essentially unlimited number of branches and levels; a
@@ -628,7 +629,7 @@ will use „newer“ value instead.</p>
 </div>
 </section>
 <section id="using-variables">
-<h3><span class="section-number">2.6.5. </span>Using Variables<a class="headerlink" href="#using-variables" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.6.5. </span>Using Variables<a class="headerlink" href="#using-variables" title="Permalink to this headline"></a></h3>
 <p>Variables can be used with all functions that support them. Calling a
 variable to, e.g., set or calculate a value, requires the use of the
 dollar symbol ($) as a prefix: To use (call write to) the variable <em>a</em>,
@@ -660,7 +661,7 @@ data via device property identifiers
 </div>
 </section>
 <section id="auto-completion-of-variable-names">
-<h3><span class="section-number">2.6.6. </span>Auto-Completion of Variable Names<a class="headerlink" href="#auto-completion-of-variable-names" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.6.6. </span>Auto-Completion of Variable Names<a class="headerlink" href="#auto-completion-of-variable-names" title="Permalink to this headline"></a></h3>
 <p>Input boxes that support the use of variables, feature auto-completion
 to aid the selection and input of valid variable names: Upon inserting
 the $-symbol, a list will appear that contains all variable names
@@ -675,7 +676,7 @@ from that pre-filtered list. Accept the selection by pressing the
 </section>
 </section>
 <section id="device-property-identifiers">
-<span id="id2"></span><h2><span class="section-number">2.7. </span>Device Property Identifiers<a class="headerlink" href="#device-property-identifiers" title="Permalink to this headline"></a></h2>
+<span id="id2"></span><h2><span class="section-number">3.7. </span>Device Property Identifiers<a class="headerlink" href="#device-property-identifiers" title="Permalink to this headline"></a></h2>
 <p>Nearly all input fields that support variables (see
 <a class="reference internal" href="#using-variables">Using Variables</a>)
 allow for direct access of device process data via device property
@@ -711,9 +712,9 @@ user.</p>
 device and used as function parameter for the script function.</p>
 </section>
 <section id="programming-your-own-script-functions">
-<span id="id3"></span><h2><span class="section-number">2.8. </span>Programming your own script functions<a class="headerlink" href="#programming-your-own-script-functions" title="Permalink to this headline"></a></h2>
+<span id="id3"></span><h2><span class="section-number">3.8. </span>Programming your own script functions<a class="headerlink" href="#programming-your-own-script-functions" title="Permalink to this headline"></a></h2>
 <section id="create-a-script-function">
-<h3><span class="section-number">2.8.1. </span>Create a script function<a class="headerlink" href="#create-a-script-function" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.8.1. </span>Create a script function<a class="headerlink" href="#create-a-script-function" title="Permalink to this headline"></a></h3>
 <p>In addition to the script functions available in the script pool, you
 have the option of programming your own script functions to use them
 later in your scripts. To implement an own script function, proceed as
@@ -775,7 +776,7 @@ editor in the <em>Set Variable</em> function <span class="guinum">❷</span>.</p
 <p>If errors occur, correct them and save the script function again.</p>
 </section>
 <section id="use-your-own-script-functions">
-<h3><span class="section-number">2.8.2. </span>Use your own script functions<a class="headerlink" href="#use-your-own-script-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">3.8.2. </span>Use your own script functions<a class="headerlink" href="#use-your-own-script-functions" title="Permalink to this headline"></a></h3>
 <p>Click on the button <span class="guilabel">Create New Script</span> <span class="guinum">❶</span> to create an empty script.
 Then click on the <span class="guilabel">Save Script</span> button <span class="guinum">❷</span> to give the script function a
 name and then save it with this name. The name of the script function is
@@ -811,7 +812,7 @@ components.</p>
 </section>
 </section>
 <section id="script-autostart">
-<h2><span class="section-number">2.9. </span>Script Autostart<a class="headerlink" href="#script-autostart" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.9. </span>Script Autostart<a class="headerlink" href="#script-autostart" title="Permalink to this headline"></a></h2>
 <p>The script system can be configured to automatically load and start a
 script after successfully connecting to the device hardware. The dialog
 with the corresponding settings can be opened via the menu item
@@ -840,7 +841,7 @@ autostart</p></li>
 </ol>
 </section>
 <section id="script-error-handling">
-<h2><span class="section-number">2.10. </span>Script Error Handling<a class="headerlink" href="#script-error-handling" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.10. </span>Script Error Handling<a class="headerlink" href="#script-error-handling" title="Permalink to this headline"></a></h2>
 <p>Errors may occur during the execution of individual script functions,
 e.g. if parameters are outside the value range or if errors occur during
 communication with devices. You can configure how the script system
@@ -873,15 +874,15 @@ call.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../QmixElementsADS_EN/QmixElementsADS_EN.html" class="btn btn-neutral float-left" title="1. CETONI Elements - An Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" class="btn btn-neutral float-right" title="3. Generic Script Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../QmixElementsADS_EN/QmixElementsADS_EN.html" class="btn btn-neutral float-left" title="2. CETONI Elements - An Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" class="btn btn-neutral float-right" title="4. Generic Script Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on May 05, 2022 14:31.
+      <span class="lastupdated">Last updated on May 11, 2022 08:05.
       </span></p>
   </div>
 

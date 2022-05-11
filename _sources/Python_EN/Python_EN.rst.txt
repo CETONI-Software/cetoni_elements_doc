@@ -22,6 +22,8 @@ parsing files, accessing databases, TCP/IP network communication via
 Python sockets or using complex analysis functions implemented in
 Python.
 
+.. _python-installation:
+
 Installation
 ------------
 

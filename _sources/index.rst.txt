@@ -42,10 +42,12 @@ your navigation through this document:
    :hidden:
    :numbered:
 
+   Installation_EN/Installation_EN.rst
    QmixElementsADS_EN/QmixElementsADS_EN.rst
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
    qmixio_EN/qmixio_EN.rst
+   qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst

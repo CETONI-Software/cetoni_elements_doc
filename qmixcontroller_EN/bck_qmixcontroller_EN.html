@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controller Plugin &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/style_override.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> CETONI Elements Manual
+            <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">3. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">4. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">10. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">11. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">12. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">13. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Controller Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/qmixcontroller_EN/bck_qmixcontroller_EN.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="controller-plugin">
+<h1>Controller Plugin<a class="headerlink" href="#controller-plugin" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>The Controller plugin is used to integrate the CETONI controller
+modules into the CETONI Elements software and to allow the creation of dynamic
+user defined control channels. The following hardware modules are
+supported:</p>
+<ul class="simple">
+<li><p><em>Qmix Q-</em> - thermoelectric cooling module</p></li>
+<li><p><em>Qmix Q+</em> - two-channel heating module</p></li>
+<li><p><em>Qmix TC</em> – tow channel controller module for external heating- /
+cooling-systems (i.e. for connecting syringe heating)</p></li>
+</ul>
+<p><a class="reference internal" href="../_images/10000000000001D5000000F75FCDB73E.png"><img alt="Figure 1: Controller Channel list" src="../_images/10000000000001D5000000F75FCDB73E.png" style="width: 12.411cm; height: 6.541cm;" /></a></p>
+</section>
+<section id="controller-channel-list">
+<h2>Controller Channel List<a class="headerlink" href="#controller-channel-list" title="Permalink to this headline"></a></h2>
+<p>All controller channels are shown in the <span class="guilabel">Controller Channels</span> list.
+You can identify the different types of channels (cooling module Q-,
+heating module Q+…) by the different signs in front of the module
+names (see Figure above). The list of controller channels is a
+<a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">view</span></a>,
+that you can move freely at any time to another position in the
+graphic interface by dragging and dropping the title bar, or you can
+move it out of the interface to become a separate window.</p>
+<p>The channel list shows all the available controller channels in
+tabular form. The following columns are present:</p>
+<ul class="simple">
+<li><p><strong>Controller</strong> - shows the name of the controller module and indicates
+its type by a sign.</p></li>
+<li><p><strong>On</strong> - indicates by a green LED whether the controller is switched on
+or off. Click the LED to switch the control loop on / off.</p></li>
+<li><p><strong>Setpoint</strong> -contains the set setpoint of the controller channel</p></li>
+<li><p><strong>Actual Value</strong> - shows the actual value</p></li>
+</ul>
+<section id="channel-types">
+<h3>Channel types<a class="headerlink" href="#channel-types" title="Permalink to this headline"></a></h3>
+<p>The following types of channels are currently supported:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004AA90000387200003872C4D36C50.svg"><img alt="image1" height="1.27cm" src="../_images/10004AA90000387200003872C4D36C50.svg" width="1.27cm" /></a></p></td>
+<td><p>Snowflake icon: Qmix Q- cooling modules</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100051AC0000387200003872CA0648E8.svg"><img alt="image2" height="1.27cm" src="../_images/100051AC0000387200003872CA0648E8.svg" width="1.27cm" /></a></p></td>
+<td><p>Thermometer icon: Qmix Q+ heating modules</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100046F500003872000038724548056A.svg"><img alt="image3" height="1.27cm" src="../_images/100046F500003872000038724548056A.svg" width="1.27cm" /></a></p></td>
+<td><p>Control curve icon: dynamically generated, custom channels</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="changing-channel-names">
+<h3>Changing channel names<a class="headerlink" href="#changing-channel-names" title="Permalink to this headline"></a></h3>
+<p>You can change the name of a channel at any time and, for example,
+assign a name suitable for your particular application.</p>
+<p><a class="reference internal" href="../_images/10000000000001D5000000F7561B0C23.png"><img alt="Figure 2: Changing channel names" src="../_images/10000000000001D5000000F7561B0C23.png" style="width: 12.409cm; height: 6.535cm;" /></a>You change a name by the following
+steps:</p>
+<ol class="arabic simple">
+<li><p>Double-click the table cell containing the name you want to change.</p></li>
+<li><p>Enter the new name in the Editing window which now appears (Figure
+above).</p></li>
+<li><p>Complete your entry by pressing the <em>Return</em> key.</p></li>
+</ol>
+</section>
+<section id="switching-control-devices-on-off">
+<h3>Switching control devices on / off<a class="headerlink" href="#switching-control-devices-on-off" title="Permalink to this headline"></a></h3>
+<p><a class="reference internal" href="../_images/10000000000001D5000000D144CCA89A.png"><img alt="Figure 3: Switching control devices on/off" src="../_images/10000000000001D5000000D144CCA89A.png" style="width: 12.411cm; height: 5.53cm;" /></a>To switch the controller
+on or off, simply click the LED of the channel you want to switch.</p>
+</section>
+<section id="entering-setpoint">
+<h3>Entering setpoint<a class="headerlink" href="#entering-setpoint" title="Permalink to this headline"></a></h3>
+<p>To input a setpoint, double-click in the Setpoint column of the channel
+with the setpoint you want to change. Now enter the setpoint in the
+Editing window that opens (Figure below) or use the arrow buttons to
+raise or lower the setpoint incrementally.</p>
+</section>
+</section>
+<section id="figure-4-changing-setpointcontext-menu-for-control-channels">
+<h2><a class="reference internal" href="../_images/10000000000001D5000000F728D7F291.png"><img alt="Figure 4: Changing setpoint" src="../_images/10000000000001D5000000F728D7F291.png" style="width: 12.411cm; height: 6.541cm;" /></a>Context menu for control channels<a class="headerlink" href="#figure-4-changing-setpointcontext-menu-for-control-channels" title="Permalink to this headline"></a></h2>
+<p>By right-klick into the control channel list you can display a context
+menu with additional functions.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/100002010000022300000129ACB2B97D.png"><img alt="Figure 5: Opening the context menu" src="../_images/100002010000022300000129ACB2B97D.png" style="width: 14.478cm; height: 7.862cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 5: Opening the context menu</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The context menu contains the following menu items:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000BB30000388E0000388E998532D4.svg"><img alt="image18" height="1.27cm" src="../_images/10000BB30000388E0000388E998532D4.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Configure Channel…</em></p>
+<p>Opens the configuration dialog of the channel for
+configuring all channel parameters.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000046A0000388E0000388EB24BAE1A.svg"><img alt="image19" height="1.27cm" src="../_images/1000046A0000388E0000388EB24BAE1A.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Restore Default Settings</em></p>
+<p>Restores the default settings of the channel.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100002C10000388E0000388E08119BA0.svg"><img alt="image20" height="1.27cm" src="../_images/100002C10000388E0000388E08119BA0.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Reset Calibration</em></p>
+<p>Resets the two-point scaling to scale factor 1 and
+offset 0</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100010A40000388E0000388EA92DC2A7.svg"><img alt="image21" height="1.27cm" src="../_images/100010A40000388E0000388EA92DC2A7.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Configure scaling…</em></p>
+<p>Opens the configuration dialog displaying the page for
+configuration of the controller scaling.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AC700003872000038724DFCC517.svg"><img alt="image22" height="1.27cm" src="../_images/10000AC700003872000038724DFCC517.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Select PID parameters…</em></p>
+<p>Opens the configuration dialog displaying the page for
+configuration of the PID control parameters.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100015FC00003872000038727653FE88.svg"><img alt="image23" height="1.27cm" src="../_images/100015FC00003872000038727653FE88.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Delete user channel</em></p>
+<p>If the selected channel is a user-specified channel, it
+is deleted by selecting this menu item. For other
+channels this menu item is disabled.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100015DE0000387200003872946736F7.svg"><img alt="image24" height="1.27cm" src="../_images/100015DE0000387200003872946736F7.svg" width="1.27cm" /></a></p></td>
+<td><p><em>Create user channel</em></p>
+<p>Opens up the wizard for creating user-specified control
+channels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configure-channel-settings">
+<h2>Configure Channel Settings<a class="headerlink" href="#configure-channel-settings" title="Permalink to this headline"></a></h2>
+<p>For opening the scaling configuration dialog select <em>Configure channel</em>
+in the <a class="reference external" href="#1.3.Contextmenuforcontrolchannels|outline">context menu</a>
+of the control channel. (see section <a class="reference external" href="#anchor-3">1.3</a>)</p>
+<p><a class="reference internal" href="../_images/100002010000034C000001C3C2B07A89.png"><img alt="Figure 6: Configure scaling" src="../_images/100002010000034C000001C3C2B07A89.png" style="width: 16.2cm; height: 8.655cm;" /></a>The configuration of the general channel
+settings and the calibration of the controller channels are identical to
+the configuration of the I/O channels of the Qmix I/O Plugin. For a
+detailed description read the section <a class="reference external" href="#8.3.I/OChannelConfiguration|outline">I/O Channel
+Configuration</a>.</p>
+</section>
+<section id="selection-and-configuration-of-controller-parameters">
+<h2>Selection and configuration of controller parameters<a class="headerlink" href="#selection-and-configuration-of-controller-parameters" title="Permalink to this headline"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
+<p>To set the optimal control behavior, you can adjust the controller
+parameters of each single channel. For this you can either choose from a
+list of predefined PID parameter sets or create new parameter sets.</p>
+<p>To access the controller parameters selection, choose <em>Select PID
+parameters</em> from the controller channel <a class="reference external" href="#1.3.Contextmenuforcontrolchannels|outline">context
+menu</a>.</p>
+<p><a class="reference internal" href="../_images/100002010000034C000002287E739DAD.png"><img alt="Figure 7: Selecting a control parameter set" src="../_images/100002010000034C000002287E739DAD.png" style="width: 15.979cm; height: 10.449cm;" /></a>The upper area shows the
+current parameters of the device ❶ (<em>Current Channel Parameters</em>). In
+the lower area you will find a list of <em>PID Parameter Presets</em> ❷.</p>
+</section>
+<section id="changing-controller-parameters">
+<h3>Changing controller parameters<a class="headerlink" href="#changing-controller-parameters" title="Permalink to this headline"></a></h3>
+<p>To edit the current controller parameters, double-click with the mouse
+in the <em>Current Channel Parameters</em> area in the field you want to change
+and enter the new value:</p>
+</section>
+<section id="figure-8-changing-controller-parametersselecting-a-pid-parameter-preset">
+<h3><a class="reference internal" href="../_images/100002010000025A0000008921C42A7E.png"><img alt="Figure 8: Changing controller parameters" src="../_images/100002010000025A0000008921C42A7E.png" style="width: 15.933cm; height: 3.627cm;" /></a>Selecting a PID Parameter Preset<a class="headerlink" href="#figure-8-changing-controller-parametersselecting-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
+<p><a class="reference internal" href="../_images/100002010000034C00000228CAC67298.png"><img alt="Figure 9: Selecting a PID Parameter Preset" src="../_images/100002010000034C00000228CAC67298.png" style="width: 16.201cm; height: 10.596cm;" /></a>Select a PID Preset from
+the table of available presets by left-clicking on it ❶ and then click
+on the <em>Apply Preset</em> <em>❷</em>button to apply the control parameters. The
+values in the <em>Current Channel Parameters</em> ❸ area are updated with the
+new values from the preset. Complete the configuration by clicking the
+<em>Ok</em> <em>❹</em>button.</p>
+<p>The PID parameter presets already contain default controller parameter
+sets for different Qmix devices like Qmix Q+, Qmix Q- or Qmix TC or
+certain accessories, i.e. syringe heating or tube heating..</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100010E9000004F6000004F6591F4F08.svg"><img alt="image27" height="1.799cm" src="../_images/100010E9000004F6000004F6591F4F08.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Hint</strong>. For optimum adaptation to the controlled
+systems in your application, you can create your own
+parameter sets with controller parameters.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="creating-a-pid-parameter-preset">
+<h3>Creating a PID Parameter Preset<a class="headerlink" href="#creating-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
+<p>By selecting the <em>CreatePreset</em> button ❶ you create a new set of
+controller parameters ❷. (see figure below) You can then edit the
+individual values of the parameter set. Then you can edit the individual
+values of the parameter set by double-clicking in a field ❸ and entering
+a new value.</p>
+<p><a class="reference internal" href="../_images/1000020100000335000000F62671DF1C.png"><img alt="Figure 10: Creating a PID Parameter Preset" src="../_images/1000020100000335000000F62671DF1C.png" style="width: 16.2cm; height: 4.852cm;" /></a>Enter a meaningful, unique
+name for each parameter set and adapt the controller parameters to the
+controlled system in your application. For finding adequate controller
+parameters proceed as described in section <a class="reference external" href="#1.8.Procedureforsettingcontrollerparameters|outline">Procedure for setting
+controller
+parameters</a>.</p>
+</section>
+<section id="deleting-pid-parameter-presets">
+<h3>Deleting PID Parameter Presets<a class="headerlink" href="#deleting-pid-parameter-presets" title="Permalink to this headline"></a></h3>
+<p>Select a set of controller parameters from the table ❶ and left-click
+the <em>Delete Selected Preset</em> button ❷ for deleting it. (see figure
+below).</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/1000020100000333000000D15C7BAB96.png"><img alt="Figure 11: Deleting a PID parameter set" src="../_images/1000020100000333000000D15C7BAB96.png" style="width: 16.2cm; height: 4.133cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11: Deleting a PID parameter set</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6D37A7C0C.svg"><img alt="image30" height="1.799cm" src="../_images/10000D67000004F6000004F6D37A7C0C.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Important</strong>. Predefined controller parameters are
+locked and can not be deleted. Locked parameters can be
+recognized in the table by the lock symbol.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="user-defined-control-channels">
+<h2>User defined control channels<a class="headerlink" href="#user-defined-control-channels" title="Permalink to this headline"></a></h2>
+<section id="introduction-1">
+<span id="id1"></span><h3>Introduction<a class="headerlink" href="#introduction-1" title="Permalink to this headline"></a></h3>
+<p>You can create customized control channels using arbitrary device
+properties for control loop input and output. Thus using i.e. a pressure
+measurement channel of a Qmix p device and a neMESYS syringe pump you
+can build up a pressure control.</p>
+</section>
+<section id="creating-control-channels">
+<h3>Creating control channels<a class="headerlink" href="#creating-control-channels" title="Permalink to this headline"></a></h3>
+<p>By right-clicking the control channel list and selecting the button
+<em>Create user channel</em> you open the dialog for creating control channels.</p>
+<p><a class="reference internal" href="../_images/100002010000022300000129BD54D696.png"><img alt="Figure 12: Open controller channel creation dialog" src="../_images/100002010000022300000129BD54D696.png" style="width: 14.478cm; height: 7.862cm;" /></a>In the
+configuration wizard that is displayed now, proceed as follows:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../_images/1000020100000340000001A6ED2C69A6.png"><img alt="Figure 13: Selecting input and output values of the controller channel" src="../_images/1000020100000340000001A6ED2C69A6.png" style="width: 16.2cm; height: 8.214cm;" /></a> Select the device that provides the measurement value
+(controller input) of the controller.</p></li>
+<li><p> Select the device property that is used as measurement value.</p></li>
+<li><p> Select the device that provides the control value (controller
+output) of the controller.</p></li>
+<li><p> Select the device property that is used as control value.</p></li>
+<li><p> Click <em>Next</em> in order to proceed.</p></li>
+</ol>
+<p>The final page of the wizard allows configuration of controller channel
+parameters as described in section <a class="reference external" href="#1.5.Selectionandconfigurationofcontrollerparameters|outline">Selection and configuration of
+controller
+parameters</a>.
+You complete the control channel creation by clicking the <em>Finish</em>
+button.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100010E9000004F6000004F6591F4F08.svg"><img alt="image33" height="1.799cm" src="../_images/100010E9000004F6000004F6591F4F08.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Hint</strong>. You can change the controller parameters at
+any later time and adapt them perfectly to your
+controlled system.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="changing-the-output-value-scaling-or-unit">
+<h3>Changing the output value scaling or unit<a class="headerlink" href="#changing-the-output-value-scaling-or-unit" title="Permalink to this headline"></a></h3>
+<p>The output value is determined by the PID control algorithm and written
+to the output device without any scaling information. This means that
+you need to adjust the controller parameters, in particular the control
+value limits, each time you change the scaling or the unit of the
+appropriate device. With a neMESYS dosing module this is also true if
+you change the syringe size.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6D37A7C0C.svg"><img alt="image36" height="1.799cm" src="../_images/10000D67000004F6000004F6D37A7C0C.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Important</strong>. If you change the scaling or unit of a
+device beeing part of a control loop you must check the
+control parameters and adjust them if necessary. With a
+neMESYS dosing module this also applies if you change
+the syringe.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="controller-script-functions">
+<h2>Controller Script Functions<a class="headerlink" href="#controller-script-functions" title="Permalink to this headline"></a></h2>
+<section id="introduction-2">
+<span id="id2"></span><h3>Introduction<a class="headerlink" href="#introduction-2" title="Permalink to this headline"></a></h3>
+<p>The Qmix controller plugin contains a script function for changing the
+controller parameters from a script. This makes it possible to achieve,
+for example, time controlled temperature curves.</p>
+</section>
+<section id="figure-14-qmix-controller-script-functionsset-controller-param">
+<h3><a class="reference internal" href="../_images/10000201000001240000007754114FA5.png"><img alt="Figure 14: Qmix controller script functions" src="../_images/10000201000001240000007754114FA5.png" style="width: 7.728cm; height: 3.149cm;" /></a>Set Controller Param<a class="headerlink" href="#figure-14-qmix-controller-script-functionsset-controller-param" title="Permalink to this headline"></a></h3>
+<p><a class="reference internal" href="../_images/1000067B0000388E0000388E578BCCCA.svg"><img alt="image37" height="2cm" src="../_images/1000067B0000388E0000388E578BCCCA.svg" width="2cm" /></a>With this function, you can transfer a new setpoint to the
+controller channel or switch the control loop on or off. To switch it on
+and off, simply click the <em>Control loop on / off</em> LED in the
+configuration area (see figure below).</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/10000000000001A7000000C4FD6D097D.png"><img alt="Figure 15: Configuration of the controller script function" src="../_images/10000000000001A7000000C4FD6D097D.png" style="width: 11.19cm; height: 5.189cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 15: Configuration of the controller script function</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pid-control-function">
+<h3>PID Control Function<a class="headerlink" href="#pid-control-function" title="Permalink to this headline"></a></h3>
+<section id="introduction-3">
+<span id="id3"></span><h4>Introduction<a class="headerlink" href="#introduction-3" title="Permalink to this headline"></a></h4>
+<p><a class="reference internal" href="../_images/10000B740000388E0000388E0BB445FF.svg"><img alt="image38" height="2cm" src="../_images/10000B740000388E0000388E0BB445FF.svg" width="2cm" /></a><em>This function implements a PID controller using a PID
+algorithm for applications that require an efficient algorithm. The PID
+algorithm features control output range limiting with integrator
+anti-windup.</em></p>
+<p><em>Currently, the Proportional-Integral-Derivative (PID) algorithm is the
+most common control algorithm used in industry. Often, people use PID to
+control processes that include heating and cooling systems, fluid level
+monitoring, flow control, and pressure control. In PID control, you must
+specify a process variable and a setpoint. The process variable is the
+system parameter you want to control, such as temperature, pressure, or
+flow rate, and the setpoint is the desired value for the parameter you
+are controlling. A PID controller determines a controller output value,
+such as the heater power or valve position. The controller applies the
+controller output value to the system, which in turn drives the process
+variable toward the setpoint value.</em></p>
+</section>
+<section id="configuration">
+<h4><em>Configuration</em><a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h4>
+<p><em>In the configuration area of this function you can configure all
+parameters required for proper PID control.</em></p>
+<p><em>Youneed to configure the following parameters:</em></p>
+<ol class="arabic simple">
+<li><p>* Actual Value Input – this parameter specifies the measured value
+of the process variable being controlled. This value is equal to the
+feedback value of the feedback control loop. Enter a variable name
+here,or enter a*<a class="reference external" href="#1.7.DevicePropertyIdentifiers|outline">Device Property
+Identifier</a><em>in order
+to directly read specific process data of a certain device.</em></p></li>
+<li><p>* Setpoint– specifies the setpoint value, or desired value, of
+the process variable being controlled. You can enter a fixed value
+(like 50°C) or you can pass the value in a variable.*</p></li>
+<li><p>* Control Loop Parameters– specify the proportional
+gain(<em>**K*</em><em>), integral time(</em><strong>TI</strong><em>), and
+derivative time(</em><strong>TD</strong><em>)parameters of the controllerand
+thus directly affect the control characteristic of the controller.</em></p></li>
+</ol>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/10000201000001F400000208F1F44DB1.png"><img alt="Figure : PID Control function configuration" src="../_images/10000201000001F400000208F1F44DB1.png" style="width: 13.234cm; height: 13.764cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure : PID Control function configuration</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><p>* Controller Output–<em>*This section groups all settings for the
+controller output.Control Value Output returns the control output
+of the PID algorithm that is applied to the controlled process. I.e.
+if you implemented a temperature control loop, theControl Value
+Outputwould be the heating power that must be generated from the
+heater. Enter a variable name of a variable that can store the output
+value or use a</em><a class="reference external" href="#1.7.DevicePropertyIdentifiers|outline">Device Property
+Identifier</a><em>to write
+the value directly into a device property of a certain device.</em></p>
+<p><a class="reference internal" href="../_images/10000000000001D7000000C159F1FF85.png"><img alt="Figure : Enter process data identifier via context menu" src="../_images/10000000000001D7000000C159F1FF85.png" style="width: 12.462cm; height: 5.106cm;" /></a></p>
+<p>With the parameters U<sub>max</sub> and U<sub>min</sub> you limit the
+range of the controller output. If you e.g. control the heating power
+via a 0 – 5 V analog output, then enter 0 for U<sub>min</sub>and 5
+for U<sub>max</sub>. If the control algorithm generates values that are
+outside of this range, they will be limited to the range
+automatically.</p>
+</li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100010E9000004F6000004F6591F4F08.svg"><img alt="image41" height="1.799cm" src="../_images/100010E9000004F6000004F6591F4F08.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Hint</strong>. You can use the PID control function to
+implement a P, PI or PD controller by simply setting
+the unneeded PID gains to 0.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pid-control-parameters">
+<h4><em>PID control parameters</em><a class="headerlink" href="#pid-control-parameters" title="Permalink to this headline"></a></h4>
+<p><em>A set of PID control parameters contains a proportional, an integral
+and a derivative part.</em></p>
+<section id="proportional-part">
+<h5><em>Proportional part</em><a class="headerlink" href="#proportional-part" title="Permalink to this headline"></a></h5>
+<p><em>The proportional part computes the control deviation from the setpoint
+(W) and the actual value (X)</em></p>
+<p><em>and multiplied with the proportional gain, gives it as control value
+(Y) to the controlled system. The following equation shows the
+proportional part.</em></p>
+</section>
+<section id="integral-part">
+<h5><em>Integral part</em><a class="headerlink" href="#integral-part" title="Permalink to this headline"></a></h5>
+<p><em>Mathematics forms the integral part the area enclosed by control
+deviation and timeline.If there is a contant control error, the
+integral part grows ramp shape.</em></p>
+<p><em>For a constant control deviation the equation is:</em></p>
+<div class="math notranslate nohighlight">
+\[Y_{\mathit{t0}}:\]</div>
+<p>Control value at the beginning of the observation</p>
+<p><em>Integration time</em></p>
+<p><em>If the actual value equals the setpoint the control value does not
+change. The control value built up by the integral part remains and will
+not decrease until the actual value exceeds the setpoint value. With
+controlled systems containing a delay line the integral part eliminates
+the steady-state error which a proportional controller is not capable
+of. In general the following equation holds for the integral part.</em></p>
+<p><em>With the integration time the speed of the controller can be changed.
+The smaller T</em><sub>I</sub><em>the faster the integral part builts up a
+control value. The given equation states that the proportional gain K,
+too, impacts the integral part. In QmixElements the integral part can
+only be configured in conjunction with the proportional part. Thus the
+following equation applies:</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D67000004F6000004F6D37A7C0C.svg"><img alt="image44" height="1.799cm" src="../_images/10000D67000004F6000004F6D37A7C0C.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Important</strong>. The integral part compensates the
+steady-state control error.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="derivative-part">
+<h5><em>Derivative Part</em><a class="headerlink" href="#derivative-part" title="Permalink to this headline"></a></h5>
+<p><em>The derivative part counteracts changes in the actual value.Two
+scenarios can be considered with respect to the effect of derivative
+part.</em></p>
+<ul class="simple">
+<li><p><em>After the actual value has reached a stable final value, it is
+decreasing because of a disturbance suddenly occurred. The derivative
+part gives an additional control value that helps increasing the
+actual value.</em></p></li>
+<li><p><em>If the setpoint value is increased, the actual value increases too.
+The derivative part recognizes the increasing actual value and slows
+down by an additional negative control value starting up to the
+target value.</em></p></li>
+</ul>
+<p><em>In practical use the derivative part occurs only in combination with a
+proportional part. The controllerequation is:</em></p>
+<p>The bigger the proportional gain K and the derivative time T<sub>D</sub>
+the bigger the effect of the derivative part and the stronger the change
+of the actual value is counteracted.</p>
+</section>
+<section id="summary">
+<h5>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h5>
+<p>The following table summarizes the effect of the different control
+parameters.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>PID parameter</p></td>
+<td><p>Regulating on a
+disturbance of the
+controlled system</p></td>
+<td><p>Start-up of the
+setpoint</p></td>
+</tr>
+<tr class="row-even"><td><p>K higher</p></td>
+<td><p>stronger repsonse
+(reduced damping)</p></td>
+<td><p>faster start-up</p></td>
+</tr>
+<tr class="row-odd"><td><p>K smaller</p></td>
+<td><p>weaker response
+(increased damping)</p></td>
+<td><p>slower start-up</p></td>
+</tr>
+<tr class="row-even"><td><p>TI higher</p></td>
+<td><p>weaker repsonse,
+particularly on
+short-term
+disturbances, the
+controller has only a
+weak response</p></td>
+<td><p>Slower start-up and
+compensation of the
+steady-state error</p></td>
+</tr>
+<tr class="row-odd"><td><p>TI smaller</p></td>
+<td><p>stronger repsonse,
+particularly on
+short-term
+disturbances, the
+controller has only a
+weak response</p></td>
+<td><p>faster start-up and
+compensation of the
+steady-state error
+(Overshooting if
+T<sub>I</sub> is too
+small)</p></td>
+</tr>
+<tr class="row-even"><td><p>TD higher</p></td>
+<td><p>stronger repsonse</p></td>
+<td><p>slower start-up
+(stronger reaction
+against changes in
+actual value)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TD smaller</p></td>
+<td><p>weaker response</p></td>
+<td><p>faster start-up (weaker
+reaction against
+changes in actual
+value)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="programming-the-control-loop">
+<h4><em>Programming the control loop</em><a class="headerlink" href="#programming-the-control-loop" title="Permalink to this headline"></a></h4>
+<p><em>This section shows you how to realize a complete PID control loop in a
+script program by using the PID control function.</em></p>
+<p><a class="reference internal" href="../_images/10000201000001A3000000BAB53FB1F8.png"><img alt="Figure : PID controller example scripts" src="../_images/10000201000001A3000000BAB53FB1F8.png" style="width: 11.09cm; height: 4.923cm;" /></a><em>To implement a control loop,
+proceed as follows:</em></p>
+<ol class="arabic simple">
+<li><p>* <em>*The controller must be called cyclically in a fixed time
+interval. For this, you should use a loop. In this case, use a
+conditional loop (</em><a class="reference external" href="#1.9.3.ConditionalLoop|outline">Conditional
+Loop</a><em>) with the loop condition
+1. The condition 1 is always true and the loop runs forever and never
+stops, except the user stops program execution manually.</em></p></li>
+<li><p>* Now create aPID Controlfunction within the loopand configure
+all parameters.*</p></li>
+<li><p> Inside the loop you need to place a <a class="reference external" href="#1.10.2.Delay|outline">Delay
+Function</a> to insert a defined delay time
+200 milliseconds. This time determines the frequency, with which the
+control algorithm is called and hence the <em>dt</em> that is used in the
+algorithm for the calculation of the control parameters.</p></li>
+</ol>
+<p>Now you have built a control loop that reads the current temperature via
+an analog input, computes an output value in the PID control function,
+which is then used with an analog output for adjusting the heating
+power.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100010E9000004F6000004F6591F4F08.svg"><img alt="image47" height="1.799cm" src="../_images/100010E9000004F6000004F6591F4F08.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Hint</strong>. According to control theory, a control system
+must sample a physical process at a rate about 10 times
+faster than the fastest time constant in the physical
+process. For example, a time constant of 60 s is
+typical for a temperature control loop in a small
+system. In this case, a cycle time of about 6 s is
+sufficient. Faster cycling offers no improvement in
+performance</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="how-to-set-controller-parameters">
+<h2>How to set controller parameters<a class="headerlink" href="#how-to-set-controller-parameters" title="Permalink to this headline"></a></h2>
+<section id="closed-control-loop-and-pid-controller-equation">
+<h3>Closed control loop and PID controller equation<a class="headerlink" href="#closed-control-loop-and-pid-controller-equation" title="Permalink to this headline"></a></h3>
+<p>The controller (e.g. PID controller) and the controlled system (e.g.
+temperature-controlled system) together make up a feedback system, the
+closed control loop. (see figure below)</p>
+<p><a class="reference internal" href="../_images/1000020100000345000000BBD9E22878.png"><img alt="Figure 19: Closed control loop" src="../_images/1000020100000345000000BBD9E22878.png" style="width: 14.002cm; height: 3.127cm;" /></a>A PID-controller determines the
+control value <em>u</em> at the time t<sub>1</sub> using the following equation:</p>
+<div class="math notranslate nohighlight">
+\[u{{(t_{1})} = {{K_{p} \cdot e} + {\frac{{K_{p} \cdot \Delta}t}{T_{i}} \cdot {\sum\limits_{t = t_{0}}^{{t_{1} - \Delta}t}e}} + K_{p}}}T_{d}\frac{\Delta y}{\Delta t}\]</div>
+<p>The control value contains 3 shares.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="math notranslate nohighlight">
+\[K_{p} \cdot e\]</div>
+</td>
+<td><p>The proportional share (P) forms
+by means of the factor
+K<sub>p</sub> the direct effect of
+the control error on the control
+value.</p></td>
+</tr>
+<tr class="row-even"><td><div class="math notranslate nohighlight">
+\[\frac{K_\]</div>
+<p>{p}}{T_{i}} cdot {sumlimits_{
+t = t_{0}}^{{t_{1} - Delta}t}e}</p>
+</td>
+<td><p>The integral share (I) computes
+the sum of the error over the
+time and by means of K <sub>p</sub>
+and the time constant
+T <sub>i</sub>  maps it to the
+control value. The bigger
+K <sub>p</sub> and the smaller
+T <sub>i</sub>the bigger the
+integral share of the control
+value.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="math notranslate nohighlight">
+\[K_{\]</div>
+<p>p}T_{d}frac{Delta y}{Delta t}</p>
+</td>
+<td><p>The differential share depends
+on the temporal change of the
+actual value that is mapped to
+the control value by
+K<sub>p</sub>and T<sub>d</sub>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="preparations-for-setting-controller-parameters-in-qmixelements">
+<h3>Preparations for setting controller parameters in QmixElements<a class="headerlink" href="#preparations-for-setting-controller-parameters-in-qmixelements" title="Permalink to this headline"></a></h3>
+<p>Initially make the plot of the datalogger plugin show the measurement
+value and the control value to you. (refer to section <a class="reference external" href="#18.ProcessDataGraph|outline">Process Data
+Graph</a>) ❶ It is recommended to do the
+same with the setpoint value. It is not necessary but facilitates
+orientation within the plot. (see figure below)</p>
+<p><a class="reference internal" href="../_images/100002010000033E000001B1025EE03C.png"><img alt="Figure 20: Configuration of the graphical logger for setting controller parameters" src="../_images/100002010000033E000001B1025EE03C.png" style="width: 16.2cm; height: 8.451cm;" /></a>The setting for <em>Log Interval ❷</em>depends on the change
+frequency of the actual value. You should get a useful graph if you set
+<em>Log Interval</em> to the sample time used by your control channel. (see
+section <a class="reference external" href="#anchor-23">1.8.3</a>)</p>
+</section>
+<section id="choosing-the-sample-time">
+<h3>Choosing the sample time<a class="headerlink" href="#choosing-the-sample-time" title="Permalink to this headline"></a></h3>
+<p>The time between 2 computations of the control value is defined as
+sample time. The smaller the sample time the more often the control
+value is calculated. As a rule of thumb you can keep in mind that the
+sample time should not be higher than one tenth of the smallest time
+constant in the closed control loop. Experiences have shown that the
+following values achieved useful results (stable control) with the
+appropriate devices.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 72%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Application</p></td>
+<td><p>Sample Time (ms)</p></td>
+</tr>
+<tr class="row-even"><td><p>Qmix Q+</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pressure control using neMESYS and Qmix p</p></td>
+<td><p>50</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100010E9000004F6000004F6591F4F08.svg"><img alt="image50" height="1.799cm" src="../_images/100010E9000004F6000004F6591F4F08.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Hint</strong>. For the sample time choose values that are
+less than or equal to 1/10 of the smallest time
+constant occurring in the control loop.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setting-the-control-value-limits">
+<h3>Setting the control value limits<a class="headerlink" href="#setting-the-control-value-limits" title="Permalink to this headline"></a></h3>
+<p>You can limit the minimum (U<sub>min</sub>) and the maximum
+(U<sub>max</sub>) control value of the QmixElements controllers. The
+control value should have a sufficient stroke in order to reach the
+desired setpoint values. But you should also take care not to damage the
+controlled system by choosing to large control value limits. (e.g. too
+high flow rate of a neMESYS dosing module in a pressure controlled
+system leads to damage of the fluidic system) You should test the
+control value limits by temporarily acting with them on your controlled
+system. (e.g. dose with a neMESYS dosing module using a flowrate equal
+to the control value limit) Futhermore you have to choose a value
+assumed by the controller if the control channel is disabled
+(U<sub>disabled</sub>) which is usually zero.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000E5F000004F6000004F66881F879.svg"><img alt="image53" height="1.799cm" src="../_images/10000E5F000004F6000004F66881F879.svg" width="1.799cm" /></a></p></td>
+<td><p><strong>Attention</strong>. Insufficient limitation of the control
+value can lead to damage of the controlled system.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="determination-of-pi-control-parameters-using-the-example-of-a-temperature-control-system">
+<h3>Determination of PI control parameters using the example of a temperature control system<a class="headerlink" href="#determination-of-pi-control-parameters-using-the-example-of-a-temperature-control-system" title="Permalink to this headline"></a></h3>
+<p>A temperature control system usually makes up a delay line containing
+one or more delay time constants. It can often be approximated by a
+first-order delay line. The appropriate step response function is:</p>
+<div class="math notranslate nohighlight">
+\[F{{(s)} = \frac{K_{s}}{1 + \mathit{sT}_{1}}}\]</div>
+<p>Setting the controller parameters targets the compensation of the delay
+time constant T<sub>1</sub>and adapting the controller gain K<sub>p</sub>
+in order to reach an efficient control behaviour. In practice
+T<sub>1</sub>is often unknown, but you can gradually approach to a
+useful result using the following procedure.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/200001A400004F5700005F5D087845C2.svm"><img alt="Figure 21: PI-controller setting for a first-order delay line" src="../_images/200001A400004F5700005F5D087845C2.svm" style="width: 14.002cm; height: 16.828cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 21: PI-controller setting for a first-order delay line</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><p>Please choose the values for Sample Time, U<sub>min</sub>,
+U<sub>max</sub> und U<sub>disabled</sub> according to the
+recommendations of the sections <a class="reference external" href="#anchor-24">1.8.3</a> and
+<a class="reference external" href="#anchor-25">1.8.4</a>. Disable the differential and integral share
+by setting the controller time constants to 0. This leads to a
+simplified controller equation.</p>
+<div class="math notranslate nohighlight">
+\[U = {K_{p} \cdot e}\]</div>
+<p>Set a moderate value for the proportional gain. Keep in mind that by
+means of K<sub>p</sub> the control error immediately impacts the
+control value. Choosing a too big value for K<sub>p</sub>can drive
+the controller into saturation.</p>
+</li>
+<li><p>Give a setpoint step to your control loop, i.e. by changing the
+setpoint temperature from room temperature to 50°C and activating
+the control channel. (see section <a class="reference external" href="#anchor-2">1.2.4</a> and
+<a class="reference external" href="#anchor-1">1.2.3</a>)</p></li>
+<li><p>Providing a first-order delay line the actual value will behave
+according to the following figure.</p>
+<p><a href="#id9"><span class="problematic" id="id10">|Figure 22: Temperature control using P-controller with different
+K\ p values|</span></a>Depending on chosen controller proportional gain
+K<sub>p</sub> the actual value will vary quickly settle near the
+setpoint value. Due to the fact that a proportional controller is
+not able to fully compensate a delay line, a steady-state error
+establishes. If K<sub>p</sub> is set too low, the actual value
+approaches only very slowly the target value. (see curve for
+K<sub>p</sub> = 1 in figure above) If K<sub>p</sub> is set to high, the
+actual value overshoots, optionally oscillates about the setpoint.
+(see curve for Kp = 50 in figure above) In the provided example the
+actual value reaches a steady-state quickly without overshooting
+using K<sub>p</sub>=3. This is why we use that value for further
+optimizations.</p>
+</li>
+<li><p>In the next step set T<sub>i</sub>in a way that the steady-state
+error is compensated. You should begin using a large time constant
+T<sub>i</sub> which means a small integral share.</p></li>
+<li><p>Give a setpoint step to your control loop, i.e. by changing the
+setpoint temperature from room temperature to 50°C and activating
+the control channel. (see section <a class="reference external" href="#anchor-2">1.2.4</a> and
+<a class="reference external" href="#anchor-1">1.2.3</a>)</p></li>
+<li><p>Lower the time constant T<sub>i</sub> if you want to reduce time for
+permanently reaching the setpoint value. Please notify that a time
+constant T<sub>i</sub> set to small (large integral share) can lead to
+the control loop oscillating. In the provided figure you can see
+that T<sub>i</sub>=260s leads to a good result. The actual value
+matches the setpoint value and the system does not oscillate. Using
+T<sub>i</sub>=1000s the setpoint is not reached within the
+illustrated time range and T<sub>i</sub>=20s leads to the system
+overshooting heavily. (see figure below)</p></li>
+<li><p><a class="reference internal" href="../_images/10000000000001A7000000C4FD6D097D.png"><img alt="Figure 23: Configuration Set Controller Param function" src="../_images/10000000000001A7000000C4FD6D097D.png" style="width: 11.19cm; height: 5.189cm;" /></a><a class="reference internal" href="../_images/200001A6000086B60000573CAE468B35.svm"><img alt="Figure 24: PI temperature-controller using Kp=3 and variable Ti values" src="../_images/200001A6000086B60000573CAE468B35.svm" style="width: 14.002cm; height: 9.066cm;" /></a>In
+many cases (i.e. temperature control) a PI controller is sufficient.
+There is no steady-state error and the dynamic behaviour is
+satisfactory. If the controller shall be robust with respect to
+sudden disturbances, it might be useful to include a differential
+component. A detailed consideration of control stability, control
+behaviour with respect to setpoint changes and disturbances is
+beyond the scope of this practical introduction. Reference is
+therefore made at this point on the control engineering literature.</p></li>
+<li><p>Now create a PID parameter preset with the values you have
+determined and assign a unique name.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, CETONI GmbH.
+      <span class="lastupdated">Last updated on May 11, 2022 08:43.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
