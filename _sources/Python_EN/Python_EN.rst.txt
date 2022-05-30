@@ -6,6 +6,17 @@ Python Add-on
 Introduction to Python Add-on
 ------------------------------
 
+.. admonition:: Attention
+   :class: caution
+
+   The CETONI Elements Python Add-on allows you to control and automate processes
+   using Python scripting language. 
+   Check the created scripts/programs as well as parameter entries before you 
+   execute them for the first time! CETONI assumes no liability for direct and/or
+   indirect damage to your system or external hardware and software components
+   caused by the scripts/programs you have created or by the use of parameters
+   that are not suitable or unfavorable for your specific application.
+
 The Python add-on allows you to execute Python code in CETONI Elements
 scripts via a corresponding script function. It thus provides an easy
 way to include the Python scripting language in your CETONI Elements

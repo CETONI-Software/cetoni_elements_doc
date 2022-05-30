@@ -4,6 +4,16 @@ Script System
 Introduction to to Script System
 ---------------------------------------
 
+.. admonition:: Attention
+   :class: caution
+
+   The CETONI Elements Script system allows you to control and automate processes. 
+   Check the created scripts/programs as well as parameter entries before you 
+   execute them for the first time! CETONI assumes no liability for direct and/or
+   indirect damage to your system or external hardware and software components
+   caused by the scripts/programs you have created or by the entry of parameters
+   that are not suitable or unfavorable for your specific application.
+
 The software provides a powerful scripting system to set up automated
 process sequences.
 
