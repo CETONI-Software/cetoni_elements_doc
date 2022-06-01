@@ -1,7 +1,9 @@
-Welcome to CETONI Elements documentation!
+CETONI Elements Online Manual
 =========================================
 
 .. image:: _static/splashscreen_dark.jpg
+
+**Welcome to CETONI Elements documentation!**
 
 The CETONI Elements software is a modular laboratory automation solution for
 controlling and automating all CETONI devices and for integrating and automating 
@@ -46,6 +48,7 @@ your navigation through this document:
    QmixElementsADS_EN/QmixElementsADS_EN.rst
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
+   javascript_EN/javascript_EN.rst
    qmixio_EN/qmixio_EN.rst
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst

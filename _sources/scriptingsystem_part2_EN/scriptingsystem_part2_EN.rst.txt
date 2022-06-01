@@ -623,6 +623,29 @@ In the section :ref:`programming-your-own-script-functions` you
 will find detailed instructions on how to create your own script
 functions.
 
+Execute JavaScript Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/javascript_logo.svg
+   :align: left
+   :width: 60px
+
+This function allows you to execute JavaScript code in the script
+system of the application. When you insert the function into your
+script, you will see the initial JavaScript code in the configuration
+area.
+
+.. image:: Pictures/javascript_script_function_config.png
+
+When the script is executed, it is loaded by the JavaScript engine and then
+the :code:`main()` function is called. I.e. this function is the main
+function of the script and the logic should be implemented there.
+
+.. tip::
+   Read the section :ref:`Using JavaScript` for a detailed
+   introduction into the use of JavaScript for Script programming and how to use
+   this function.
+
 Function Sequences
 --------------------
 

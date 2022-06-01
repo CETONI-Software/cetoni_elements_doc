@@ -92,9 +92,9 @@ Overview of Python Console
 The Python add-on has a Python console that allows you to interactively
 enter and execute Python code similar to the standard Python console.
 You can show the Python console from the main menu 
-(:menuselection:`Window --> Show View --> Python Console`):
+(:menuselection:`Window --> Show View --> Scripting --> Python Console`):
 
-|image11|
+.. image:: Pictures/10000201000001EB00000073BDF3384E8179E4AB.png
 
 In the Python console, you can try out commands, test access
 to objects, and it helps you debug problems. If function calls work in
@@ -108,8 +108,8 @@ text editing:
 
 |image12|
 
-To delete the contents of the console, select :guilabel:`Clear` ❶ in
-the context menu or click the trash can icon ❷ in the title bar.
+To delete the contents of the console, select :guilabel:`Clear` :guinum:`❶` in
+the context menu or click the trash can icon :guinum:`❷` in the title bar.
 
 .. admonition:: Attention
    :class: caution
@@ -132,7 +132,7 @@ you are used to it from other code editors.
 |image16|
 
 In the example above all functions from the *cetoni_elements*
-module were imported. After entering :code:`ScriptEnv.get``, matching functions
+module were imported. After entering :code:`ScriptEnv.get`, matching functions
 for the :code:`ScriptEnv` object are displayed that start with :code:`get`.
 
 Error messages
@@ -418,7 +418,6 @@ The Python Script function has a Python code editor to assist you in
 writing Python code.
 
 .. image:: Pictures/10000201000002220000012B6A5FF31AA3060F79.png
-   :width: 14.452cm
 
 The editor has the following features
 
@@ -824,7 +823,7 @@ API Reference
 ScriptEnv
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :code:`ScriptEnv`` object is the central object for accessing available 
+The :code:`ScriptEnv` object is the central object for accessing available 
 devices and application objects.
 
 .. doxygenclass:: Python::CScriptEnvAccess
@@ -835,37 +834,36 @@ devices and application objects.
     :membergroups: scripting
 
 .. |image4| image:: Pictures/10000201000001F300000184E6B4E02B1D179B7A.png
-.. |image11| image:: Pictures/10000201000001EB00000073BDF3384E8179E4AB.png
-   :width: 12.996cm
+
 .. |image12| image:: Pictures/10000201000001F7000000E586F7E58BD20D8C3D.png
-   :width: 13.314cm
+
 .. |image16| image:: Pictures/10000201000001F80000008CC938D11BE28032EE.png
-   :width: 13.34cm
+
 .. |image17| image:: Pictures/10000201000001EF00000062B50A9A0A013ADF8C.png
-   :width: 13.102cm
+
 .. |image18| image:: Pictures/10000201000001F80000008C5125B8F7F53F8BDD.png
-   :width: 13.34cm
+
 .. |image19| image:: Pictures/100002010000025D00000083173EACC09611440F.png
-   :width: 16.013cm
+
 .. |image20| image:: Pictures/100002010000021E0000007B7A4EF3D62F1DF696.png
-   :width: 14.346cm
+
 .. |image21| image:: Pictures/10000201000001F100000088C0C4A7C7C9B93CC8.png
-   :width: 13.155cm
+
 .. |image22| image:: Pictures/10000201000002260000007A3CE2023C617A29C5.png
-   :width: 14.557cm
+
 .. |image26| image:: Pictures/1000020100000240000000AEB0E9BCC2CF19CA4A.png
-   :width: 15.245cm
+
 .. |image44| image:: Pictures/10000201000001E7000000A78827B788FF6CF36C.png
-   :width: 12.891cm
+
 .. |image54| image:: Pictures/10000201000001950000009E1928E5F4B3BBCE66.png
-   :width: 10.719cm
+
 .. |image55| image:: Pictures/10000201000001F60000006B04A15868149985AC.png
-   :width: 13.287cm
+
 .. |image59| image:: Pictures/1000020100000299000000B54BF487EBAF7E8E66.png
-   :width: 16.201cm
+
 .. |image60| image:: Pictures/10000201000001D000000061F880AB480C04AA56.png
-   :width: 12.28cm
+
 .. |image64| image:: Pictures/100002010000018E0000004E45BDDA2F2CB1A1E9.png
-   :width: 10.534cm
+
 .. |image65| image:: Pictures/1000020100000157000000475414DB3324BBC74A.png
-   :width: 9.079cm
+
