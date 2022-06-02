@@ -1,7 +1,7 @@
 Script System
 =============
 
-Introduction to to Script System
+Introduction to the Script System
 ---------------------------------------
 
 .. admonition:: Attention
@@ -22,7 +22,7 @@ process sequences.
 The script system work bench
 consists of the following three main parts:
 
-1. *Script Editor –* shows the script programmed by the user as a
+1. *Script Editor* – shows the script programmed by the user as a
    function tree. It also features buttons for controlling script files
    and their execution.
 2. *Script Pool* – contains all available script functions ordered in

@@ -91,6 +91,11 @@ parameters, you will get a list of available functions and objects:
 
 .. image:: Pictures/js_console_help_no_param.png
 
+If you pass the global object via :code:`help(this)`, then you will get
+a list of all :ref:`built-in objects<Standard built-in objects>` in the global scope:
+
+.. image:: Pictures/js_console_help_built_in.png
+
 If you pass an object or function name as parameter to the help function,
 like :code:`help(ScriptEnv)`, you will get detailed information about the given
 object such as type :guinum:`❶`, properties :guinum:`❷`, methods :guinum:`❸` and 
@@ -477,6 +482,17 @@ Exception   :code:`console.exception` prints an error message together with the 
 Standard built-in objects
 ---------------------------
 
+The JavaScript engine has a number of standard buil-in objects in the global
+scope. One of these objects is the **global object** that can be accessed using the
+:code:`this` operator. To list all built-in objects, you just need to call the
+:ref:`help function<Getting Help>` with the global object like this: :code:`help(this)`.
+
+.. image:: Pictures/js_console_help_built_in.png
+
+If you would like to see the properties and functions of a specific built-in
+object, such as :code:`Math`, you just need to call help passing this object:
+:code:`help(Math)`.
+
 For a detailed list of buit-in objects supported by the embedded JavaScript engine,
 please refer to the Qt documentation:
 
@@ -551,6 +567,113 @@ modes to help you to decide which one to use:
    * - Suitable for
      - short scripts or calculations
      - complex scripts with blocking function calls and delays
+
+Accessing signals and slots in scripts
+--------------------------------------
+
+The embedded JavaScript engine offers the capability to use signals and slots.
+Signals are emitted by an object when its internal state has changed in some way.
+A slot is called when a signal connected to it is emitted. Slots are normal 
+functions and can be called normally; their only special feature is that signals 
+can be connected to them. If you connect to a signal, the receiver can be a 
+regular slot of another object or a JavaScript function. The most
+common case is when you connect the signal to an anonymous function:
+
+.. code-block:: javascript
+
+   pump.dosageFinished.connect(function() {
+       console.log('dosage finished!');
+   });
+
+If you need to undo the connection, you will need to store the function in a variable:
+
+.. code-block:: javascript
+
+   function dosageFinished() {
+      console.log('dosage finished!')
+   }
+
+   pump.dosageFinished.connect(dosageFinished);
+   //...
+   pump.dosageFinished.disconnect(dosageFinished);
+
+You can also connect the signal to a signal or slot of another exposed object. 
+In the following example we connect the :code:`dosageFinished` signal of *pump2* 
+to the :code:`stopPumping` slot of *pump1*. This will automatically stop *pump1*
+if *pump2* stops:
+
+.. code-block:: javascript
+
+   pump1 = ScriptEnv.getDevice("peRISYS_S_1");
+   pump2 = ScriptEnv.getDevice("peRISYS_S_2");
+   pump2.dosageFinished.connect(pump1.stopPumping)
+
+The following example is a little bit more complex and shows, how to use
+concurrent execution together with a signal connection.
+
+.. code-block:: javascript
+   :linenos:
+
+   function onDosageFinished() {
+      print("onDosageFinished");
+      ScriptEnv.leave();
+   }
+
+   // Implement your script logic in this function
+   // Avoid blocking function calls
+   function main() {
+      pump = ScriptEnv.getDevice("Nemesys_S_1");
+      if (typeof ScriptEnv.Initialized == "undefined") {
+         ScriptEnv.Initialized = true;
+         print("Connecting signal")
+         pump.dosageFinished.connect(onDosageFinished);
+      }  
+      pump.aspirate(0.01, 0.01);
+      return ScriptEnv.KEEP_RUNNING;
+   }
+
+The code in line 10 to 14 connects the :code:`dosageFinished` signal of the pump
+to the JavaScript function :code:`onDosageFinished`. 
+
+.. code-block:: javascript
+
+   if (typeof ScriptEnv.Initialized == "undefined") {
+      ScriptEnv.Initialized = true;
+      print("Connecting signal")
+      pump.dosageFinished.connect(onDosageFinished);
+   }  
+
+The sourrounding check
+:code:`if (typeof ScriptEnv.Initialized == "undefined")` ensures, that there
+will be only one connection if the function is called multiple times. If we do
+not use this check, then a new connection is created each time the function
+is called. 
+
+In the next two lines, the pump aspiration is started and the :code:`main()` 
+script function returns :code:`ScriptEnv.KEEP_RUNNING` to indicated, that script
+execution should not stop if main function is finished.
+
+.. code-block:: javascript
+
+   pump.aspirate(0.01, 0.01);
+   return ScriptEnv.KEEP_RUNNING;
+
+The scripting system will stay in this script function, until the pump finished
+dosage. In this case, the JavaScript function :code:`onDosageFinished()` will
+be called. 
+
+.. code-block:: javascript
+
+   function onDosageFinished() {
+      print("onDosageFinished");
+      ScriptEnv.leave();
+   }
+
+The function prints a message to the console and calls 
+:code:`ScriptEnv.leave()` to signal the script function, that the function has
+finished and that the next script function can be executed. This example shows,
+how to execute a longer running task and end the script function when the task
+has finished.
 
 API Reference
 --------------

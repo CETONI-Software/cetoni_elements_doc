@@ -52,6 +52,7 @@ your navigation through this document:
    qmixio_EN/qmixio_EN.rst
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
+   tubingpump_EN/tubingpump_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
    sqllogger_EN/sqllogger_EN.rst
