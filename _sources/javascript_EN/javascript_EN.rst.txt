@@ -42,16 +42,16 @@ In the JavaScript console, you can try out commands, test access
 to objects, and it helps you debug problems. If function calls work in
 the console, you can use them in your script.
 
-Context Menu of JavaScript Console
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 The context menu of the JavaScript console contains the usual commands for
 text editing:
 
 .. image:: Pictures/javascript_console_context_menu.png
 
-To delete the contents of the console, select :guilabel:`Clear` :guinum:`❶` in
-the context menu or click the trash can icon :guinum:`❷` in the title bar.
+You have three options to delete the content of the JavaScript console:
+
+- select :menuselection:`Clear` :guinum:`❶` in the context menu
+- click the trash can icon :guinum:`❷` in the title bar
+- enter the :code:`clear()` command in the console
 
 .. admonition:: Attention
    :class: caution
@@ -61,7 +61,6 @@ the context menu or click the trash can icon :guinum:`❷` in the title bar.
    process or during normal operation or productive use.   
    Incorrect input or access to resources can possibly     
    lead to a crash of the software.  
-
 
 Code completion
 ~~~~~~~~~~~~~~~

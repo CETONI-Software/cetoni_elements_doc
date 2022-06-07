@@ -46,6 +46,7 @@ your navigation through this document:
 
    Installation_EN/Installation_EN.rst
    QmixElementsADS_EN/QmixElementsADS_EN.rst
+   qmixdevices_EN/qmixdevices_EN.rst
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
    javascript_EN/javascript_EN.rst
@@ -53,6 +54,7 @@ your navigation through this document:
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
    tubingpump_EN/tubingpump_EN.rst
+   balance_EN/balance_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
    sqllogger_EN/sqllogger_EN.rst

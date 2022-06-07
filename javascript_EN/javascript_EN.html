@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Using JavaScript &mdash; CETONI Elements Manual</title>
+  <title>6. Using JavaScript &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. I/O Plugin" href="../qmixio_EN/qmixio_EN.html" />
-    <link rel="prev" title="4. Generic Script Functions" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" /> 
+    <link rel="next" title="7. I/O Plugin" href="../qmixio_EN/qmixio_EN.html" />
+    <link rel="prev" title="5. Generic Script Functions" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,50 +54,51 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">3. Script System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">4. Generic Script Functions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Using JavaScript</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-support-in-cetoni-elements">5.1. JavaScript Support in CETONI Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-console">5.2. JavaScript Console</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-javascript-console">5.2.1. Overview of JavaScript Console</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-javascript-console">5.2.2. Context Menu of JavaScript Console</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-completion">5.2.3. Code completion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#error-messages">5.2.4. Error messages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#getting-help">5.2.5. Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Using JavaScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-support-in-cetoni-elements">6.1. JavaScript Support in CETONI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-console">6.2. JavaScript Console</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-javascript-console">6.2.1. Overview of JavaScript Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-completion">6.2.2. Code completion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-messages">6.2.3. Error messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-help">6.2.4. Getting Help</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-application-objects">5.3. Accessing application objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#using-device-objects">5.3.1. Using device objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-application-objects">5.3.2. Using application objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-application-objects">6.3. Accessing application objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-device-objects">6.3.1. Using device objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-application-objects">6.3.2. Using application objects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-script-function">5.4. JavaScript Script Function</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#javascript-script-function-overview">5.4.1. JavaScript Script Function Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#javascript-editor">5.4.2. JavaScript Editor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#implementation-of-the-function-logic-in-main">5.4.3. Implementation of the function logic in main()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#script-execution-errors">5.4.4. Script execution errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-script-function">6.4. JavaScript Script Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-script-function-overview">6.4.1. JavaScript Script Function Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-editor">6.4.2. JavaScript Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation-of-the-function-logic-in-main">6.4.3. Implementation of the function logic in main()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script-execution-errors">6.4.4. Script execution errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#debugging-javascript-code">5.5. Debugging JavaScript Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#standard-built-in-objects">5.6. Standard built-in objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#concurrent-execution">5.7. Concurrent Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-signals-and-slots-in-scripts">5.8. Accessing signals and slots in scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api-reference">5.9. API Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scriptenv">5.9.1. ScriptEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging-javascript-code">6.5. Debugging JavaScript Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standard-built-in-objects">6.6. Standard built-in objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concurrent-execution">6.7. Concurrent Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-signals-and-slots-in-scripts">6.8. Accessing signals and slots in scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">6.9. API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scriptenv">6.9.1. ScriptEnv</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">6. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">7. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">8. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">9. Tubing Pump Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">10. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">11. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">12. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">13. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">14. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">15. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
 </ul>
 
         </div>
@@ -114,7 +115,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">5. </span>Using JavaScript</li>
+      <li><span class="section-number">6. </span>Using JavaScript</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/javascript_EN/javascript_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -125,9 +126,9 @@
            <div itemprop="articleBody">
              
   <section id="using-javascript">
-<h1><span class="section-number">5. </span>Using JavaScript<a class="headerlink" href="#using-javascript" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">6. </span>Using JavaScript<a class="headerlink" href="#using-javascript" title="Permalink to this headline"></a></h1>
 <section id="javascript-support-in-cetoni-elements">
-<h2><span class="section-number">5.1. </span>JavaScript Support in CETONI Elements<a class="headerlink" href="#javascript-support-in-cetoni-elements" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.1. </span>JavaScript Support in CETONI Elements<a class="headerlink" href="#javascript-support-in-cetoni-elements" title="Permalink to this headline"></a></h2>
 <div class="caution admonition">
 <p class="admonition-title">Attention</p>
 <p>The CETONI Elements Script System Add-on allows you to control and automate processes
@@ -148,9 +149,9 @@ scripts.</p>
 may simplify the implementation of complex calculations.</p>
 </section>
 <section id="javascript-console">
-<h2><span class="section-number">5.2. </span>JavaScript Console<a class="headerlink" href="#javascript-console" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.2. </span>JavaScript Console<a class="headerlink" href="#javascript-console" title="Permalink to this headline"></a></h2>
 <section id="overview-of-javascript-console">
-<h3><span class="section-number">5.2.1. </span>Overview of JavaScript Console<a class="headerlink" href="#overview-of-javascript-console" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.1. </span>Overview of JavaScript Console<a class="headerlink" href="#overview-of-javascript-console" title="Permalink to this headline"></a></h3>
 <p>The script system provides a JavaScript console that allows you to interactively
 enter and execute JavaScript code similar to the Python console.
 You can show the JavaScript console from the main menu
@@ -159,14 +160,15 @@ You can show the JavaScript console from the main menu
 <p>In the JavaScript console, you can try out commands, test access
 to objects, and it helps you debug problems. If function calls work in
 the console, you can use them in your script.</p>
-</section>
-<section id="context-menu-of-javascript-console">
-<h3><span class="section-number">5.2.2. </span>Context Menu of JavaScript Console<a class="headerlink" href="#context-menu-of-javascript-console" title="Permalink to this headline"></a></h3>
 <p>The context menu of the JavaScript console contains the usual commands for
 text editing:</p>
 <img alt="../_images/javascript_console_context_menu.png" src="../_images/javascript_console_context_menu.png" />
-<p>To delete the contents of the console, select <span class="guilabel">Clear</span> <span class="guinum">❶</span> in
-the context menu or click the trash can icon <span class="guinum">❷</span> in the title bar.</p>
+<p>You have three options to delete the content of the JavaScript console:</p>
+<ul class="simple">
+<li><p>select <span class="menuselection">Clear</span> <span class="guinum">❶</span> in the context menu</p></li>
+<li><p>click the trash can icon <span class="guinum">❷</span> in the title bar</p></li>
+<li><p>enter the <code class="code docutils literal notranslate"><span class="pre">clear()</span></code> command in the console</p></li>
+</ul>
 <div class="caution admonition">
 <p class="admonition-title">Attention</p>
 <p>Risk of malfunction or data loss !
@@ -177,7 +179,7 @@ lead to a crash of the software.</p>
 </div>
 </section>
 <section id="code-completion">
-<h3><span class="section-number">5.2.3. </span>Code completion<a class="headerlink" href="#code-completion" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.2. </span>Code completion<a class="headerlink" href="#code-completion" title="Permalink to this headline"></a></h3>
 <p>The JavaScript console supports you during typing with a simple code
 completion.</p>
 <img alt="../_images/js_console_code_completion.png" src="../_images/js_console_code_completion.png" />
@@ -185,13 +187,13 @@ completion.</p>
 with <code class="code docutils literal notranslate"><span class="pre">Nemes</span></code>.</p>
 </section>
 <section id="error-messages">
-<h3><span class="section-number">5.2.4. </span>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.3. </span>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline"></a></h3>
 <p>Errors that occur when executing code in the JavaScript console are displayed to
 you as red text:</p>
 <img alt="../_images/js_console_error.png" src="../_images/js_console_error.png" />
 </section>
 <section id="getting-help">
-<h3><span class="section-number">5.2.5. </span>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.4. </span>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline"></a></h3>
 <p>You can use the global <code class="code docutils literal notranslate"><span class="pre">help()</span></code> command, to find out more about the available
 objects and functions. If you use the <code class="code docutils literal notranslate"><span class="pre">help()</span></code> command without any
 parameters, you will get a list of available functions and objects:</p>
@@ -212,12 +214,12 @@ properties of a given object.</p>
 </section>
 </section>
 <section id="accessing-application-objects">
-<h2><span class="section-number">5.3. </span>Accessing application objects<a class="headerlink" href="#accessing-application-objects" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.3. </span>Accessing application objects<a class="headerlink" href="#accessing-application-objects" title="Permalink to this headline"></a></h2>
 <p>The <strong>ScriptEnv</strong> object is the central object for accessing
 available devices and application objects. Use <code class="code docutils literal notranslate"><span class="pre">help(ScriptEnv)</span></code> command
 to get a list of available methods and properties of this object.</p>
 <section id="using-device-objects">
-<h3><span class="section-number">5.3.1. </span>Using device objects<a class="headerlink" href="#using-device-objects" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.3.1. </span>Using device objects<a class="headerlink" href="#using-device-objects" title="Permalink to this headline"></a></h3>
 <p>You can access device objects using the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code>
 function. To get an overview of available device names you can call the
 <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDeviceNames()</span></code> function.</p>
@@ -280,7 +282,7 @@ js&gt; pump.emptySyringe<span class="o">()</span>
 </div>
 </section>
 <section id="using-application-objects">
-<h3><span class="section-number">5.3.2. </span>Using application objects<a class="headerlink" href="#using-application-objects" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.3.2. </span>Using application objects<a class="headerlink" href="#using-application-objects" title="Permalink to this headline"></a></h3>
 <p>Similar to device objects, you can also access application objects that
 are no devices. Use the two functions <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> and
 <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObjectNames()</span></code> for this</p>
@@ -311,9 +313,9 @@ software.</p>
 </section>
 </section>
 <section id="javascript-script-function">
-<h2><span class="section-number">5.4. </span>JavaScript Script Function<a class="headerlink" href="#javascript-script-function" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.4. </span>JavaScript Script Function<a class="headerlink" href="#javascript-script-function" title="Permalink to this headline"></a></h2>
 <section id="javascript-script-function-overview">
-<h3><span class="section-number">5.4.1. </span>JavaScript Script Function Overview<a class="headerlink" href="#javascript-script-function-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.4.1. </span>JavaScript Script Function Overview<a class="headerlink" href="#javascript-script-function-overview" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/javascript_logo.svg"><img alt="../_images/javascript_logo.svg" class="align-left" src="../_images/javascript_logo.svg" width="60px" /></a>
 <p>The <code class="code docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">JavaScript</span> <span class="pre">Code</span></code> script function is available in the
 <span class="guilabel">Core Functions</span> category of the <span class="guilabel">Script Pool</span>:</p>
@@ -343,7 +345,7 @@ also available in the script function.</p>
 use of JavaScript functions in parallel sequences.</p>
 </section>
 <section id="javascript-editor">
-<h3><span class="section-number">5.4.2. </span>JavaScript Editor<a class="headerlink" href="#javascript-editor" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.4.2. </span>JavaScript Editor<a class="headerlink" href="#javascript-editor" title="Permalink to this headline"></a></h3>
 <p>The JavaScript Script function has a JavaScript code editor to assist you in
 writing JavaScript code.</p>
 <img alt="../_images/javascript_editor.png" src="../_images/javascript_editor.png" />
@@ -403,7 +405,7 @@ can edit the JavaScript code.</p>
 </div>
 </section>
 <section id="implementation-of-the-function-logic-in-main">
-<h3><span class="section-number">5.4.3. </span>Implementation of the function logic in main()<a class="headerlink" href="#implementation-of-the-function-logic-in-main" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.4.3. </span>Implementation of the function logic in main()<a class="headerlink" href="#implementation-of-the-function-logic-in-main" title="Permalink to this headline"></a></h3>
 <p>When implementing the script in <code class="code docutils literal notranslate"><span class="pre">main()</span></code> you should be careful
 not to use blocking functions or blocking waits. Normally the JavaScript engine
 runs the JavaScript code in the main UI thread and using blocking function
@@ -448,7 +450,7 @@ JavaScript source code.</p>
 </div>
 </section>
 <section id="script-execution-errors">
-<h3><span class="section-number">5.4.4. </span>Script execution errors<a class="headerlink" href="#script-execution-errors" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.4.4. </span>Script execution errors<a class="headerlink" href="#script-execution-errors" title="Permalink to this headline"></a></h3>
 <p>If errors occur during the execution of a script, you will see them in
 the <span class="guilabel">Event Log</span>. If you hover over the error message in the event log,
 you will see a hint window with details:</p>
@@ -468,7 +470,7 @@ edit the JavaScript source code.</p>
 </section>
 </section>
 <section id="debugging-javascript-code">
-<h2><span class="section-number">5.5. </span>Debugging JavaScript Code<a class="headerlink" href="#debugging-javascript-code" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.5. </span>Debugging JavaScript Code<a class="headerlink" href="#debugging-javascript-code" title="Permalink to this headline"></a></h2>
 <p>When you develop a script function with JavaScript, there are many ways to
 debug possible issues that you may face. The sections below describe, how to use
 the JavaScript console API to debug your JavaScript code.</p>
@@ -561,7 +563,7 @@ trace of JavaScript execution at the point where it is called.</p></td>
 </table>
 </section>
 <section id="standard-built-in-objects">
-<h2><span class="section-number">5.6. </span>Standard built-in objects<a class="headerlink" href="#standard-built-in-objects" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.6. </span>Standard built-in objects<a class="headerlink" href="#standard-built-in-objects" title="Permalink to this headline"></a></h2>
 <p>The JavaScript engine has a number of standard buil-in objects in the global
 scope. One of these objects is the <strong>global object</strong> that can be accessed using the
 <code class="code docutils literal notranslate"><span class="pre">this</span></code> operator. To list all built-in objects, you just need to call the
@@ -578,7 +580,7 @@ reference documentation:</p>
 <p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects</a></p>
 </section>
 <section id="concurrent-execution">
-<h2><span class="section-number">5.7. </span>Concurrent Execution<a class="headerlink" href="#concurrent-execution" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.7. </span>Concurrent Execution<a class="headerlink" href="#concurrent-execution" title="Permalink to this headline"></a></h2>
 <p>Normally the JavaScript code is executed in the main UI thread. If you would
 like to implement long running JavaScript code with blocking function calls
 or longer delays, you should consider concurrent execution in a dedicated
@@ -645,7 +647,7 @@ modes to help you to decide which one to use:</p>
 </table>
 </section>
 <section id="accessing-signals-and-slots-in-scripts">
-<h2><span class="section-number">5.8. </span>Accessing signals and slots in scripts<a class="headerlink" href="#accessing-signals-and-slots-in-scripts" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.8. </span>Accessing signals and slots in scripts<a class="headerlink" href="#accessing-signals-and-slots-in-scripts" title="Permalink to this headline"></a></h2>
 <p>The embedded JavaScript engine offers the capability to use signals and slots.
 Signals are emitted by an object when its internal state has changed in some way.
 A slot is called when a signal connected to it is emitted. Slots are normal
@@ -735,9 +737,9 @@ how to execute a longer running task and end the script function when the task
 has finished.</p>
 </section>
 <section id="api-reference">
-<h2><span class="section-number">5.9. </span>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.9. </span>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
 <section id="scriptenv">
-<h3><span class="section-number">5.9.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.9.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
 <p>The <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object is the central object for accessing available
 devices and application objects.</p>
 <div class="breathe-sectiondef docutils container">
@@ -869,15 +871,15 @@ devices and application objects.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" class="btn btn-neutral float-left" title="4. Generic Script Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../qmixio_EN/qmixio_EN.html" class="btn btn-neutral float-right" title="6. I/O Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html" class="btn btn-neutral float-left" title="5. Generic Script Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../qmixio_EN/qmixio_EN.html" class="btn btn-neutral float-right" title="7. I/O Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 02, 2022 15:07.
+      <span class="lastupdated">Last updated on Jun 07, 2022 11:04.
       </span></p>
   </div>
 

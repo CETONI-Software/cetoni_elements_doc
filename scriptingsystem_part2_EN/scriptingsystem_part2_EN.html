@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Generic Script Functions &mdash; CETONI Elements Manual</title>
+  <title>5. Generic Script Functions &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Using JavaScript" href="../javascript_EN/javascript_EN.html" />
-    <link rel="prev" title="3. Script System" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" /> 
+    <link rel="next" title="6. Using JavaScript" href="../javascript_EN/javascript_EN.html" />
+    <link rel="prev" title="4. Script System" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,94 +54,97 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">3. Script System</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Generic Script Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#core-functions">4.1. Core Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#core-functions-overview">4.1.1. Core Functions Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#interrupt-script">4.1.2. Interrupt Script</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#show-message">4.1.3. Show Message</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#show-message-function-configuration">4.1.3.1. Show Message Function Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#displaying-variables-content-or-process-data">4.1.3.2. Displaying variables content or process data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Generic Script Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-functions">5.1. Core Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-functions-overview">5.1.1. Core Functions Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-script">5.1.2. Interrupt Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-message">5.1.3. Show Message</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#show-message-function-configuration">5.1.3.1. Show Message Function Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#displaying-variables-content-or-process-data">5.1.3.2. Displaying variables content or process data</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#create-variable">4.1.4. Create Variable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#types-of-variables">4.1.4.1. Types of Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#calculating-using-variables">4.1.4.2. Calculating using Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#operators">4.1.4.3. Operators</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#operator-precedence">4.1.4.4. Operator Precedence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#examples">4.1.4.5. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-variable">5.1.4. Create Variable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-of-variables">5.1.4.1. Types of Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculating-using-variables">5.1.4.2. Calculating using Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators">5.1.4.3. Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operator-precedence">5.1.4.4. Operator Precedence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">5.1.4.5. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#set-variable">4.1.5. Set Variable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-property-variable">4.1.6. Create Property Variable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#variable-declaration-sequence">4.1.7. Variable Declaration Sequence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#user-input">4.1.8. User Input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#script-function-call">4.1.9. Script Function Call</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#execute-javascript-code">4.1.10. Execute JavaScript Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-variable">5.1.5. Set Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-property-variable">5.1.6. Create Property Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-declaration-sequence">5.1.7. Variable Declaration Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-input">5.1.8. User Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script-function-call">5.1.9. Script Function Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execute-javascript-code">5.1.10. Execute JavaScript Code</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#function-sequences">4.2. Function Sequences</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-function-sequences">4.2.1. Introduction to Function Sequences</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#counting-loop">4.2.2. Counting Loop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conditional-loop">4.2.3. Conditional Loop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#configuration-simple-mode">4.2.3.1. Configuration - Simple Mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configuration-javascript-expression">4.2.3.2. Configuration - JavaScript Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-sequences">5.2. Function Sequences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-function-sequences">5.2.1. Introduction to Function Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counting-loop">5.2.2. Counting Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-loop">5.2.3. Conditional Loop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-simple-mode">5.2.3.1. Configuration - Simple Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-javascript-expression">5.2.3.2. Configuration - JavaScript Expression</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#function-sequence">4.2.4. Function Sequence</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#naming-a-function-sequence">4.2.4.1. Naming a Function Sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-function-parameters-and-return-values">4.2.4.2. Add function parameters and return values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loading-a-function-sequence">4.2.4.3. Loading a Function Sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#convert-selection-to-function-sequence">4.2.4.4. Convert Selection to Function Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-sequence">5.2.4. Function Sequence</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#naming-a-function-sequence">5.2.4.1. Naming a Function Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-function-parameters-and-return-values">5.2.4.2. Add function parameters and return values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-a-function-sequence">5.2.4.3. Loading a Function Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#convert-selection-to-function-sequence">5.2.4.4. Convert Selection to Function Sequence</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#conditional-sequence">4.2.5. Conditional Sequence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parallel-sequence">4.2.6. Parallel Sequence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#break">4.2.7. Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-sequence">5.2.5. Conditional Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-sequence">5.2.6. Parallel Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#break">5.2.7. Break</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#time-functions">4.3. Time Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#time-functions-overview">4.3.1. Time Functions Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#delay">4.3.2. Delay</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sample-configuration">4.3.2.1. Sample Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time-functions">5.3. Time Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-functions-overview">5.3.1. Time Functions Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay">5.3.2. Delay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sample-configuration">5.3.2.1. Sample Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#wait-until">4.3.3. Wait Until</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#start-timer">4.3.4. Start Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wait-for-timer">4.3.5. Wait for Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#read-timer">4.3.6. Read Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-until">5.3.3. Wait Until</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-timer">5.3.4. Start Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-timer">5.3.5. Wait for Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-timer">5.3.6. Read Timer</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#device-functions">4.4. Device Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-device-functions">4.4.1. Introduction to Device Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#read-device-property">4.4.2. Read Device Property</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#write-device-property">4.4.3. Write Device Property</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wait-for-device-property">4.4.4. Wait For Device Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device-functions">5.4. Device Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-device-functions">5.4.1. Introduction to Device Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-device-property">5.4.2. Read Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-device-property">5.4.3. Write Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-device-property">5.4.4. Wait For Device Property</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#logging">4.5. Logging</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#clear-event-log">4.5.1. Clear Event Log</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#export-event-log">4.5.2. Export Event Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging">5.5. Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clear-event-log">5.5.1. Clear Event Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-event-log">5.5.2. Export Event Log</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#data-storage">4.6. Data Storage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#open-settings-file">4.6.1. Open Settings File</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#read-setting">4.6.2. Read Setting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#write-setting">4.6.3. Write Setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-storage">5.6. Data Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-settings-file">5.6.1. Open Settings File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-setting">5.6.2. Read Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-setting">5.6.3. Write Setting</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">5. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">6. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">7. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">8. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">9. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">10. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">11. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">12. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">13. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">14. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
 </ul>
 
         </div>
@@ -158,7 +161,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">4. </span>Generic Script Functions</li>
+      <li><span class="section-number">5. </span>Generic Script Functions</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -169,7 +172,7 @@
            <div itemprop="articleBody">
              
   <section id="generic-script-functions">
-<h1><span class="section-number">4. </span>Generic Script Functions<a class="headerlink" href="#generic-script-functions" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">5. </span>Generic Script Functions<a class="headerlink" href="#generic-script-functions" title="Permalink to this headline"></a></h1>
 <p>The <em>Script System</em> comes with a set of generic, or core, functions that
 control the program flow. These functions are always available
 irrespective of the activated plug-ins. You will find these functions in
@@ -179,15 +182,15 @@ and <span class="guilabel">Time Functions</span> (figure below).</p>
 <img alt="Figure 1.1.1: Generic script functions" src="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" />
 </figure>
 <section id="core-functions">
-<h2><span class="section-number">4.1. </span>Core Functions<a class="headerlink" href="#core-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.1. </span>Core Functions<a class="headerlink" href="#core-functions" title="Permalink to this headline"></a></h2>
 <section id="core-functions-overview">
-<h3><span class="section-number">4.1.1. </span>Core Functions Overview<a class="headerlink" href="#core-functions-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.1. </span>Core Functions Overview<a class="headerlink" href="#core-functions-overview" title="Permalink to this headline"></a></h3>
 <p>The category Core Functions contains functions that control program flow
 and the use of variables.</p>
 <p><img alt="Figure 1.1.2: List of core functions" src="../_images/100002010000016C000000F4AB94CEE86128C9B1.png" /></p>
 </section>
 <section id="interrupt-script">
-<h3><span class="section-number">4.1.2. </span>Interrupt Script<a class="headerlink" href="#interrupt-script" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.2. </span>Interrupt Script<a class="headerlink" href="#interrupt-script" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100003260000350500003505F1A465AE7BF98CC3.svg"><img alt="../_images/100003260000350500003505F1A465AE7BF98CC3.svg" class="align-left" src="../_images/100003260000350500003505F1A465AE7BF98CC3.svg" width="60" /></a>
 <p>This function allows you to pause script execution. The user
 may then continue the script at a later time.</p>
@@ -196,7 +199,7 @@ may then continue the script at a later time.</p>
 </div>
 </section>
 <section id="show-message">
-<span id="id1"></span><h3><span class="section-number">4.1.3. </span>Show Message<a class="headerlink" href="#show-message" title="Permalink to this headline"></a></h3>
+<span id="id1"></span><h3><span class="section-number">5.1.3. </span>Show Message<a class="headerlink" href="#show-message" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000490000034EB000034EB215655F378C8DAF2.svg"><img alt="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" class="align-left" src="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" width="60" /></a>
 <p>The Show Message function allows you to display a message
 to the user and optionally interrupt script execution. It is well suited
@@ -211,7 +214,7 @@ a message window…</p>
 listed in chronological order. The optional Message Box always displays
 the last message.</p>
 <section id="show-message-function-configuration">
-<h4><span class="section-number">4.1.3.1. </span>Show Message Function Configuration<a class="headerlink" href="#show-message-function-configuration" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.3.1. </span>Show Message Function Configuration<a class="headerlink" href="#show-message-function-configuration" title="Permalink to this headline"></a></h4>
 <p>When configuring the message function, you can configure the following
 options:</p>
 <p><img alt="Figure 1.1.5: Message configuration panel" src="../_images/100002010000020D0000012597ED6FC376B353A6.png" /></p>
@@ -290,7 +293,7 @@ interrupted. Execution can be continued by clicking the
 </table>
 </section>
 <section id="displaying-variables-content-or-process-data">
-<h4><span class="section-number">4.1.3.2. </span>Displaying variables content or process data<a class="headerlink" href="#displaying-variables-content-or-process-data" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.3.2. </span>Displaying variables content or process data<a class="headerlink" href="#displaying-variables-content-or-process-data" title="Permalink to this headline"></a></h4>
 <p>In the <span class="guilabel">Message</span> field of the function, you can also use variables
 (like <code class="code docutils literal notranslate"><span class="pre">$Volume</span></code>) or <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#device-property-identifiers"><span class="std std-ref">Device property Identifiers</span></a>
 (like <code class="code docutils literal notranslate"><span class="pre">$$neMESYS1.SyringeFillLevel</span></code>).
@@ -322,7 +325,7 @@ Show Message function is executed.</p>
 </section>
 </section>
 <section id="create-variable">
-<span id="id2"></span><h3><span class="section-number">4.1.4. </span>Create Variable<a class="headerlink" href="#create-variable" title="Permalink to this headline"></a></h3>
+<span id="id2"></span><h3><span class="section-number">5.1.4. </span>Create Variable<a class="headerlink" href="#create-variable" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000119100003872000038728AF29595FE1DD321.svg"><img alt="../_images/1000119100003872000038728AF29595FE1DD321.svg" class="align-left" src="../_images/1000119100003872000038728AF29595FE1DD321.svg" width="60" /></a>
 <p>With <em>Create Variable</em> you can define a new variable and
 assign a name, a type hint, and a value to that variable (see figure below):</p>
@@ -343,7 +346,7 @@ the variable.</p></li>
 $ symbol.</p>
 </div>
 <section id="types-of-variables">
-<h4><span class="section-number">4.1.4.1. </span>Types of Variables<a class="headerlink" href="#types-of-variables" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.4.1. </span>Types of Variables<a class="headerlink" href="#types-of-variables" title="Permalink to this headline"></a></h4>
 <p>The variables in the script system are not typed and can hold a wide
 variety of values. For example, a numeric value can be assigned to a
 variable when it is created and a text can be stored in the same
@@ -435,7 +438,7 @@ s_M_1.DosedVolume</p></td>
 </table>
 </section>
 <section id="calculating-using-variables">
-<h4><span class="section-number">4.1.4.2. </span>Calculating using Variables<a class="headerlink" href="#calculating-using-variables" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.4.2. </span>Calculating using Variables<a class="headerlink" href="#calculating-using-variables" title="Permalink to this headline"></a></h4>
 <p>If you set the variable type to <em>JavaScript Expression</em>, you can define an
 expression in the field <span class="guilabel">Value</span> that is to be calculated during run
 time. This expression may include other variables to use their
@@ -473,7 +476,7 @@ signs like <a class="reference internal" href="../scriptingsystem_part1_EN/scrip
 only of the device name without any additional device property.</p>
 </section>
 <section id="operators">
-<h4><span class="section-number">4.1.4.3. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.4.3. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline"></a></h4>
 <p>The following tables summarize available operators and their syntax:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -593,7 +596,7 @@ NOT</p></td>
 </table>
 </section>
 <section id="operator-precedence">
-<h4><span class="section-number">4.1.4.4. </span>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.4.4. </span>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline"></a></h4>
 <p>Operator precedence determines the order in which operators are evaluated.
 Operators with higher precedence are evaluated first.</p>
 <table class="docutils align-default">
@@ -638,10 +641,10 @@ various operators are executed according to your needs. Refer to the
 <a class="reference external" href="https://docs.w3cub.com/javascript/operators/operator_precedence">JavaScript specification</a> for more details about operator precedence.</p>
 </section>
 <section id="examples">
-<h4><span class="section-number">4.1.4.5. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.1.4.5. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h4>
 <p><em>…for the use ofCalculation</em> variables:</p>
 <section id="example-1">
-<h5><span class="section-number">4.1.4.5.1. </span>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.1. </span>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline"></a></h5>
 <p>Adding two variables <em>a</em> and <em>b</em> and storing the result as a third
 variable <em>c</em>:</p>
 <table class="docutils align-default">
@@ -660,7 +663,7 @@ variable <em>c</em>:</p>
 </table>
 </section>
 <section id="example-2">
-<h5><span class="section-number">4.1.4.5.2. </span>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.2. </span>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline"></a></h5>
 <p>Multiplication of the variable <em>Speed</em> with 5 and storing the result as
 the same variable:</p>
 <table class="docutils align-default">
@@ -679,7 +682,7 @@ the same variable:</p>
 </table>
 </section>
 <section id="example-3">
-<h5><span class="section-number">4.1.4.5.3. </span>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.3. </span>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline"></a></h5>
 <p>Connecting the two Boolean variables <em>SwitchedOn</em> and <em>CheckOk</em> with the
 logical AND and save the result as the variable <em>TurnOn</em>:</p>
 <table class="docutils align-default">
@@ -698,7 +701,7 @@ logical AND and save the result as the variable <em>TurnOn</em>:</p>
 </table>
 </section>
 <section id="example-4">
-<h5><span class="section-number">4.1.4.5.4. </span>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.4. </span>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline"></a></h5>
 <p>You want to assign the current flow rate of the pump <em>Nemesys_M_1</em> to
 the variable <em>$Flow</em>.</p>
 <table class="docutils align-default">
@@ -717,7 +720,7 @@ the variable <em>$Flow</em>.</p>
 </table>
 </section>
 <section id="example-5">
-<h5><span class="section-number">4.1.4.5.5. </span>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.5. </span>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline"></a></h5>
 <p>You want to create an array with 4 flow rates and assign it to the
 <em>$TargetFlows</em> variable.</p>
 <table class="docutils align-default">
@@ -736,7 +739,7 @@ the variable <em>$Flow</em>.</p>
 </table>
 </section>
 <section id="example-6">
-<h5><span class="section-number">4.1.4.5.6. </span>Example 6<a class="headerlink" href="#example-6" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.6. </span>Example 6<a class="headerlink" href="#example-6" title="Permalink to this headline"></a></h5>
 <p>The <em>$TargetFlows</em> variable contains an array of 4 numeric values. You
 want to assign the third value in the array to the
 <em>$NextFlow</em> variable. The index for the array access is numbered
@@ -757,7 +760,7 @@ starting from 0. I.e. to access the third element the index is 2.</p>
 </table>
 </section>
 <section id="example-7">
-<h5><span class="section-number">4.1.4.5.7. </span>Example 7<a class="headerlink" href="#example-7" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.7. </span>Example 7<a class="headerlink" href="#example-7" title="Permalink to this headline"></a></h5>
 <p>You want to store an array with the two current values of the pressure
 sensors <em>QmixP_1_Pressure1</em> and <em>QmixP_1_Pressure2</em> in the variable
 <em>$Pressures</em>.</p>
@@ -777,7 +780,7 @@ sensors <em>QmixP_1_Pressure1</em> and <em>QmixP_1_Pressure2</em> in the variabl
 </table>
 </section>
 <section id="example-8">
-<h5><span class="section-number">4.1.4.5.8. </span>Example 8<a class="headerlink" href="#example-8" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.1.4.5.8. </span>Example 8<a class="headerlink" href="#example-8" title="Permalink to this headline"></a></h5>
 <p>You want to store a device reference of the <em>Nemesys_M_1</em> pump in the
 variable <em>$Process Pump</em> to be able to pass it to a function later.</p>
 <table class="docutils align-default">
@@ -798,7 +801,7 @@ variable <em>$Process Pump</em> to be able to pass it to a function later.</p>
 </section>
 </section>
 <section id="set-variable">
-<h3><span class="section-number">4.1.5. </span>Set Variable<a class="headerlink" href="#set-variable" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.5. </span>Set Variable<a class="headerlink" href="#set-variable" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000132400003872000038722A8DDCED1A890F1C.svg"><img alt="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" class="align-left" src="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" width="60" /></a>
 <p>With <em>Set Variable</em> you can assign a new value to an already
 existing variable. The configuration of the variable is equivalent to
@@ -821,7 +824,7 @@ the function <a class="reference internal" href="#id2">Create Variable</a>.</p>
 </div>
 </section>
 <section id="create-property-variable">
-<h3><span class="section-number">4.1.6. </span>Create Property Variable<a class="headerlink" href="#create-property-variable" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.6. </span>Create Property Variable<a class="headerlink" href="#create-property-variable" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001162000038720000387269894D0D5041B1EE.svg"><img alt="../_images/10001162000038720000387269894D0D5041B1EE.svg" class="align-left" src="../_images/10001162000038720000387269894D0D5041B1EE.svg" width="60" /></a>
 <p>Use this function to create a special variable that is
 associated with a certain property of a certain device. Via this
@@ -862,7 +865,7 @@ for calculations and value storage.</p>
 </div>
 </section>
 <section id="variable-declaration-sequence">
-<h3><span class="section-number">4.1.7. </span>Variable Declaration Sequence<a class="headerlink" href="#variable-declaration-sequence" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.7. </span>Variable Declaration Sequence<a class="headerlink" href="#variable-declaration-sequence" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg"><img alt="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" class="align-left" src="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" width="60" /></a>
 <p>With the variable Declaration Sequence you can combine
 variables that you declare with <a class="reference internal" href="#id2">Create Variable</a> or <a class="reference internal" href="#create-property-variable">Create Property
@@ -879,7 +882,7 @@ also group variables that logically belong together, making it easier
 for the user to find specific variables.</p>
 </section>
 <section id="user-input">
-<h3><span class="section-number">4.1.8. </span>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.8. </span>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001DE9000038720000387289754B44B2610975.svg"><img alt="../_images/10001DE9000038720000387289754B44B2610975.svg" class="align-left" src="../_images/10001DE9000038720000387289754B44B2610975.svg" width="60" /></a>
 <p>This function allows the reading of a single input value
 (number or text) into an existing variable. In the configuration area of
@@ -903,7 +906,7 @@ during execution of the script function (see figure below).</p></li>
 <img alt="../_images/10000201000000E80000009E6FFCCC92FBEB562A.png" src="../_images/10000201000000E80000009E6FFCCC92FBEB562A.png" />
 </section>
 <section id="script-function-call">
-<h3><span class="section-number">4.1.9. </span>Script Function Call<a class="headerlink" href="#script-function-call" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.9. </span>Script Function Call<a class="headerlink" href="#script-function-call" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C101.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" class="align-left" src="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" width="60" /></a>
 <p>Script Function Calls allow you to integrate your own scripts
 as functions. I.e. just as you create functions as reusable modules in
@@ -920,7 +923,7 @@ will find detailed instructions on how to create your own script
 functions.</p>
 </section>
 <section id="execute-javascript-code">
-<h3><span class="section-number">4.1.10. </span>Execute JavaScript Code<a class="headerlink" href="#execute-javascript-code" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.1.10. </span>Execute JavaScript Code<a class="headerlink" href="#execute-javascript-code" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/javascript_logo1.svg"><img alt="../_images/javascript_logo1.svg" class="align-left" src="../_images/javascript_logo1.svg" width="60px" /></a>
 <p>This function allows you to execute JavaScript code in the script
 system of the application. When you insert the function into your
@@ -939,9 +942,9 @@ this function.</p>
 </section>
 </section>
 <section id="function-sequences">
-<h2><span class="section-number">4.2. </span>Function Sequences<a class="headerlink" href="#function-sequences" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.2. </span>Function Sequences<a class="headerlink" href="#function-sequences" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-function-sequences">
-<span id="function-sequence-overview"></span><h3><span class="section-number">4.2.1. </span>Introduction to Function Sequences<a class="headerlink" href="#introduction-to-function-sequences" title="Permalink to this headline"></a></h3>
+<span id="function-sequence-overview"></span><h3><span class="section-number">5.2.1. </span>Introduction to Function Sequences<a class="headerlink" href="#introduction-to-function-sequences" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure : List of function sequences" src="../_images/1000020100000100000000C3B3C3827EFC5DBC99.png" /></p>
 <p>The Function Sequences category
 contains various types of function sequences. Function sequences are
@@ -950,7 +953,7 @@ Function Sequence is called, all script functions contained within
 this sequence are executed.</p>
 </section>
 <section id="counting-loop">
-<span id="id3"></span><h3><span class="section-number">4.2.2. </span>Counting Loop<a class="headerlink" href="#counting-loop" title="Permalink to this headline"></a></h3>
+<span id="id3"></span><h3><span class="section-number">5.2.2. </span>Counting Loop<a class="headerlink" href="#counting-loop" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg"><img alt="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" class="align-left" src="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" width="60" /></a>
 <p>The Counting Loop function allows for multiple sequential
 executions of the same function(s) within that loop. The number of times
@@ -993,7 +996,7 @@ changing the counting variable.</p>
 </div>
 </section>
 <section id="conditional-loop">
-<h3><span class="section-number">4.2.3. </span>Conditional Loop<a class="headerlink" href="#conditional-loop" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.3. </span>Conditional Loop<a class="headerlink" href="#conditional-loop" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg"><img alt="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" class="align-left" src="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" width="60" /></a>
 <p>This conditional loop function is used for multiple execution
 of functions within the loop as long as the loop condition set at its
@@ -1006,7 +1009,7 @@ as long as the loop condition holds true.</em></p>
 <p>There are two ways to set the parameters for loop checking: a simple mode
 and as a JavaScript expression.</p>
 <section id="configuration-simple-mode">
-<h4><span class="section-number">4.2.3.1. </span>Configuration - Simple Mode<a class="headerlink" href="#configuration-simple-mode" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.3.1. </span>Configuration - Simple Mode<a class="headerlink" href="#configuration-simple-mode" title="Permalink to this headline"></a></h4>
 <p>In the configuration panel, you may choose the simple mode to
 comfortably set the loop conditions directly via the Graphic User
 Interface – simply uncheck <em>JavaScript Expression</em> <span class="guinum">❶</span>. The following
@@ -1029,7 +1032,7 @@ the comparison operator.</p></li>
 from <span class="guinum">❷</span> is to be compared with.</p></li>
 </ul>
 <section id="sample-configuration-simple-mode">
-<h5><span class="section-number">4.2.3.1.1. </span>Sample Configuration: Simple Mode<a class="headerlink" href="#sample-configuration-simple-mode" title="Permalink to this headline"></a></h5>
+<h5><span class="section-number">5.2.3.1.1. </span>Sample Configuration: Simple Mode<a class="headerlink" href="#sample-configuration-simple-mode" title="Permalink to this headline"></a></h5>
 <p>The loop condition to be checked against is whether a the variable
 <code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <em>25.000,31</em>.</p>
 <table class="docutils align-default">
@@ -1062,7 +1065,7 @@ the variable <code class="code docutils literal notranslate"><span class="pre">$
 </section>
 </section>
 <section id="configuration-javascript-expression">
-<h4><span class="section-number">4.2.3.2. </span>Configuration - JavaScript Expression<a class="headerlink" href="#configuration-javascript-expression" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.3.2. </span>Configuration - JavaScript Expression<a class="headerlink" href="#configuration-javascript-expression" title="Permalink to this headline"></a></h4>
 <p>Whereas the simple mode provides the user with a graphical interface,
 the JavaScript mode allows to directly insert an JavaScript expression
 with variable names and mathematical and logical expression.</p>
@@ -1082,7 +1085,7 @@ delay of 10ms – 100ms is sufficient.</p>
 </section>
 </section>
 <section id="function-sequence">
-<h3><span class="section-number">4.2.4. </span>Function Sequence<a class="headerlink" href="#function-sequence" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.4. </span>Function Sequence<a class="headerlink" href="#function-sequence" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000944000038720000387225245FA0499799FC1.svg"><img alt="../_images/10000944000038720000387225245FA0499799FC1.svg" class="align-left" src="../_images/10000944000038720000387225245FA0499799FC1.svg" width="60" /></a>
 <p>The <em>Function Sequence</em> is used to group functions. This makes navigation in the
 function tree easier, since the function sequence can be collapsed if necessary.
@@ -1093,14 +1096,14 @@ an empty function sequence. Then you can conveniently move or copy the entire
 sequence and thus reuse it in different places in the program.</p>
 <p><img alt="Figure 1.1.17: Function sequence configuration" src="../_images/10000201000001C800000183A3E022ED20FA32CC.png" /></p>
 <section id="naming-a-function-sequence">
-<h4><span class="section-number">4.2.4.1. </span>Naming a Function Sequence<a class="headerlink" href="#naming-a-function-sequence" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.4.1. </span>Naming a Function Sequence<a class="headerlink" href="#naming-a-function-sequence" title="Permalink to this headline"></a></h4>
 <p>A function sequence may be given a name; that name will then be shown
 in the function tree. This simplifies navigation in particular with
 larger numbers of function sequences. To do this, simply enter the name
 by double-clicking the <span class="guilabel">Caption Field</span> (Figure above ❶).</p>
 </section>
 <section id="add-function-parameters-and-return-values">
-<h4><span class="section-number">4.2.4.2. </span>Add function parameters and return values<a class="headerlink" href="#add-function-parameters-and-return-values" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.4.2. </span>Add function parameters and return values<a class="headerlink" href="#add-function-parameters-and-return-values" title="Permalink to this headline"></a></h4>
 <p>You can access variables defined outside the function sequence from
 within the function sequence. Alternatively, you can also define
 function parameters and return values. <em>Function parameters</em> are values
@@ -1117,7 +1120,7 @@ parameter names above the input fields (figure below):</p>
 <p><img alt="image77" src="../_images/10000201000001570000008695AB6CE95EA00D6D.png" /></p>
 </section>
 <section id="loading-a-function-sequence">
-<h4><span class="section-number">4.2.4.3. </span>Loading a Function Sequence<a class="headerlink" href="#loading-a-function-sequence" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.4.3. </span>Loading a Function Sequence<a class="headerlink" href="#loading-a-function-sequence" title="Permalink to this headline"></a></h4>
 <p>The <em>Function Sequence</em> also allows the loading of pre-stored scripts:
 You may load a script, which you have created and saved previously, into
 your current function sequence. To do this, just click on the
@@ -1127,7 +1130,7 @@ make changes to the loaded function sequence without affecting the external
 script.</p>
 </section>
 <section id="convert-selection-to-function-sequence">
-<h4><span class="section-number">4.2.4.4. </span>Convert Selection to Function Sequence<a class="headerlink" href="#convert-selection-to-function-sequence" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.2.4.4. </span>Convert Selection to Function Sequence<a class="headerlink" href="#convert-selection-to-function-sequence" title="Permalink to this headline"></a></h4>
 <p>To improve the clarity and readability of your script, you can quickly
 and easily group sequences of functions into function sequences. To do
 this, simply select a contiguous set of functions, and then click
@@ -1139,7 +1142,7 @@ the selected functions.</p>
 </section>
 </section>
 <section id="conditional-sequence">
-<h3><span class="section-number">4.2.5. </span>Conditional Sequence<a class="headerlink" href="#conditional-sequence" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.5. </span>Conditional Sequence<a class="headerlink" href="#conditional-sequence" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100010E0000038720000387245E0E2D44AF732BF.svg"><img alt="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" class="align-left" src="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" width="60" /></a>
 <p>The conditional sequence contains a set of script functions that will be
 executed only if the check condition in the conditional sequence header is true.
@@ -1151,7 +1154,7 @@ can be described as follows:</p>
 of the <a class="reference internal" href="#conditional-loop">Conditional Loop</a>.</p>
 </section>
 <section id="parallel-sequence">
-<h3><span class="section-number">4.2.6. </span>Parallel Sequence<a class="headerlink" href="#parallel-sequence" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.6. </span>Parallel Sequence<a class="headerlink" href="#parallel-sequence" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000F0500003872000038726C61F7339CE41618.svg"><img alt="../_images/10000F0500003872000038726C61F7339CE41618.svg" class="align-left" src="../_images/10000F0500003872000038726C61F7339CE41618.svg" width="60" /></a>
 <p>This script function enables the parallel execution of functions or function
 sequences. The configuration of this script function is identical to the
@@ -1177,7 +1180,7 @@ difficult to find errors in parallel sequences.</p>
 </div>
 </section>
 <section id="break">
-<h3><span class="section-number">4.2.7. </span>Break<a class="headerlink" href="#break" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.7. </span>Break<a class="headerlink" href="#break" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000CF40000387200003872240B44CEBEA58C98.svg"><img alt="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" class="align-left" src="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" width="60" /></a>
 <p>This function causes the enclosing function sequence to
 terminate. This works with all function sequences from the <a class="reference internal" href="#function-sequences">Function
@@ -1197,9 +1200,9 @@ and the function sequence ❶ above it if the condition is true.</p>
 </section>
 </section>
 <section id="time-functions">
-<h2><span class="section-number">4.3. </span>Time Functions<a class="headerlink" href="#time-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.3. </span>Time Functions<a class="headerlink" href="#time-functions" title="Permalink to this headline"></a></h2>
 <section id="time-functions-overview">
-<h3><span class="section-number">4.3.1. </span>Time Functions Overview<a class="headerlink" href="#time-functions-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.1. </span>Time Functions Overview<a class="headerlink" href="#time-functions-overview" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure : List of timing functions" src="../_images/1000020100000145000000ACCA98E3B49CC6CFEB.png" /></p>
 <p>This category contains functions to
 enable a time-controlled program flow. The execution of scripts may be
@@ -1207,7 +1210,7 @@ suspended for a certain amount of time or can be interrupted to wait for
 certain timer events.</p>
 </section>
 <section id="delay">
-<h3><span class="section-number">4.3.2. </span>Delay<a class="headerlink" href="#delay" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.2. </span>Delay<a class="headerlink" href="#delay" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100007700000350500003505BC110D46A028D1D8.svg"><img alt="../_images/100007700000350500003505BC110D46A028D1D8.svg" class="align-left" src="../_images/100007700000350500003505BC110D46A028D1D8.svg" width="60" /></a>
 <p>The <em>Delay</em> function interrupts program execution for a
 configurable length of time. You can set the delay time (hours, minutes,
@@ -1217,7 +1220,7 @@ seconds, or milliseconds) in the configuration area (see figure below).</p>
 assign any values to the input fields and you can freely mix variables and
 values with each other.</p>
 <section id="sample-configuration">
-<h4><span class="section-number">4.3.2.1. </span>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this headline"></a></h4>
+<h4><span class="section-number">5.3.2.1. </span>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this headline"></a></h4>
 <p>If you e.g. would like to set a delay of 10 minutes and 15 seconds, you
 can do so by very different assignments of the input fields:</p>
 <table class="docutils align-default">
@@ -1260,7 +1263,7 @@ can do so by very different assignments of the input fields:</p>
 </section>
 </section>
 <section id="wait-until">
-<h3><span class="section-number">4.3.3. </span>Wait Until<a class="headerlink" href="#wait-until" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.3. </span>Wait Until<a class="headerlink" href="#wait-until" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000087800003505000035058C9536180430C275.svg"><img alt="../_images/1000087800003505000035058C9536180430C275.svg" class="align-left" src="../_images/1000087800003505000035058C9536180430C275.svg" width="60" /></a>
 <p>You can delay program execution until a precisely defined
 date and time with the <em>Wait until</em> function. Program execution is not
@@ -1277,7 +1280,7 @@ effective delay can again be executed.</p>
 </div>
 </section>
 <section id="start-timer">
-<h3><span class="section-number">4.3.4. </span>Start Timer<a class="headerlink" href="#start-timer" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.4. </span>Start Timer<a class="headerlink" href="#start-timer" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000095E0000350500003505163F47DDE33790B9.svg"><img alt="../_images/1000095E0000350500003505163F47DDE33790B9.svg" class="align-left" src="../_images/1000095E0000350500003505163F47DDE33790B9.svg" width="60" /></a>
 <p>This function starts a millisecond timer which can be waited
 for with the <a class="reference internal" href="#wait-for-timer">Wait for Timer</a> function (see below) or whose current
@@ -1295,7 +1298,7 @@ Timer</a> function.</p>
 </div>
 </section>
 <section id="wait-for-timer">
-<h3><span class="section-number">4.3.5. </span>Wait for Timer<a class="headerlink" href="#wait-for-timer" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.5. </span>Wait for Timer<a class="headerlink" href="#wait-for-timer" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000D500000350500003505855C71628C55D85A.svg"><img alt="../_images/10000D500000350500003505855C71628C55D85A.svg" class="align-left" src="../_images/10000D500000350500003505855C71628C55D85A.svg" width="60" /></a>
 <p>This function interrupts the further program execution until
 the <em>Timer Running Time</em> configured in this function has elapsed for the
@@ -1309,7 +1312,7 @@ for example, run a function or function sequence along a timer function
 in a <a class="reference internal" href="#parallel-sequence">Parallel Sequence</a>.</p>
 </section>
 <section id="read-timer">
-<h3><span class="section-number">4.3.6. </span>Read Timer<a class="headerlink" href="#read-timer" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.3.6. </span>Read Timer<a class="headerlink" href="#read-timer" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg"><img alt="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" class="align-left" src="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" width="60" /></a>
 <p>With this function you can read out the current millisecond
 value of a particular timer and store it in a variable. You can then use
@@ -1319,9 +1322,9 @@ example.</p>
 </section>
 </section>
 <section id="device-functions">
-<h2><span class="section-number">4.4. </span>Device Functions<a class="headerlink" href="#device-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.4. </span>Device Functions<a class="headerlink" href="#device-functions" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-device-functions">
-<span id="device-fucntions-introduction"></span><h3><span class="section-number">4.4.1. </span>Introduction to Device Functions<a class="headerlink" href="#introduction-to-device-functions" title="Permalink to this headline"></a></h3>
+<span id="device-fucntions-introduction"></span><h3><span class="section-number">5.4.1. </span>Introduction to Device Functions<a class="headerlink" href="#introduction-to-device-functions" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure : Generic device functions" src="../_images/10000201000001020000006F96BE123CCB58B612.png" /></p>
 <p>The script system comes with a
 number of generic script functions for accessing devices (device process
@@ -1330,7 +1333,7 @@ the loaded plugins. You find these generic device functions in the
 category <em>Device Functions</em>.</p>
 </section>
 <section id="read-device-property">
-<h3><span class="section-number">4.4.2. </span>Read Device Property<a class="headerlink" href="#read-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.4.2. </span>Read Device Property<a class="headerlink" href="#read-device-property" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg"><img alt="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" class="align-left" src="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" width="60" /></a>
 <p>This function allows you to read process data from a device and save it to a
 variable.</p>
@@ -1359,7 +1362,7 @@ previously defined variable names.</p>
 </div>
 </section>
 <section id="write-device-property">
-<h3><span class="section-number">4.4.3. </span>Write Device Property<a class="headerlink" href="#write-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.4.3. </span>Write Device Property<a class="headerlink" href="#write-device-property" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg"><img alt="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" class="align-left" src="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" width="60" /></a>
 <p>This function is for writing process data from devices. In
 the input field ❶ enter the value to be written. You can also use
@@ -1373,7 +1376,7 @@ devices and device properties, which allow write access.</p>
 property.</p>
 </section>
 <section id="wait-for-device-property">
-<h3><span class="section-number">4.4.4. </span>Wait For Device Property<a class="headerlink" href="#wait-for-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.4.4. </span>Wait For Device Property<a class="headerlink" href="#wait-for-device-property" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002565000034EB000034EB5C19DADB200F9112.svg"><img alt="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" class="align-left" src="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" width="60" /></a>
 <p>This function allows a script to wait for a specific device
 property to reach a predefined condition. Once this condition is
@@ -1398,12 +1401,12 @@ device ❶ meets the condition ❷ ❸:</em></p>
 </section>
 </section>
 <section id="logging">
-<h2><span class="section-number">4.5. </span>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.5. </span>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h2>
 <p>The Logging category contains script functions for controlling various
 log functions and accessing the event log.</p>
 <p><img alt="image108" src="../_images/10000201000000F7000000576ADB75F680C601FE.png" /></p>
 <section id="clear-event-log">
-<h3><span class="section-number">4.5.1. </span>Clear Event Log<a class="headerlink" href="#clear-event-log" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.5.1. </span>Clear Event Log<a class="headerlink" href="#clear-event-log" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/clear_event_log.svg"><img alt="../_images/clear_event_log.svg" class="align-left" src="../_images/clear_event_log.svg" width="60" /></a>
 <p>This script function deletes all entries from the event log
 window of the application.</p>
@@ -1413,7 +1416,7 @@ window of the application.</p>
 </div>
 </section>
 <section id="export-event-log">
-<h3><span class="section-number">4.5.2. </span>Export Event Log<a class="headerlink" href="#export-event-log" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.5.2. </span>Export Event Log<a class="headerlink" href="#export-event-log" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/export_event_log.svg"><img alt="../_images/export_event_log.svg" class="align-left" src="../_images/export_event_log.svg" width="60" /></a>
 <p>The export function exports the contents of the Event Log
 window to a text file. Click on the folder icon in the configuration
@@ -1425,12 +1428,12 @@ that you keep the location in the Log folder of the current project.</p>
 </section>
 </section>
 <section id="data-storage">
-<h2><span class="section-number">4.6. </span>Data Storage<a class="headerlink" href="#data-storage" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.6. </span>Data Storage<a class="headerlink" href="#data-storage" title="Permalink to this headline"></a></h2>
 <p>This category contains functions for reading data from files and for storing
 data persistently.</p>
 <img alt="../_images/data_storage_category.png" src="../_images/data_storage_category.png" />
 <section id="open-settings-file">
-<h3><span class="section-number">4.6.1. </span>Open Settings File<a class="headerlink" href="#open-settings-file" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.6.1. </span>Open Settings File<a class="headerlink" href="#open-settings-file" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/open_settings_file.svg"><img alt="../_images/open_settings_file.svg" class="align-left" src="../_images/open_settings_file.svg" width="60" /></a>
 <p>This function opens a settings file <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> for reading / writing data persistently.
 An *.ini file is a structured data file that consits of sections and keys.
@@ -1457,7 +1460,7 @@ created. You can now use the variable in the <a class="reference internal" href=
 functions to provide a valid and properly initialized settings object.</p>
 </section>
 <section id="read-setting">
-<h3><span class="section-number">4.6.2. </span>Read Setting<a class="headerlink" href="#read-setting" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.6.2. </span>Read Setting<a class="headerlink" href="#read-setting" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/settings_read.svg"><img alt="../_images/settings_read.svg" class="align-left" src="../_images/settings_read.svg" width="60" /></a>
 <p>This function reads a single value from settings file. If the setting doesn’t
 exist, the function returns the given optional <span class="guilabel">Default Value</span>.
@@ -1479,7 +1482,7 @@ to provide the <span class="guilabel">Settings Group</span> <em>SyingeConfig</em
 the file and stores it into the given script variable <code class="code docutils literal notranslate"><span class="pre">$SyringeLength</span></code>.</p>
 </section>
 <section id="write-setting">
-<h3><span class="section-number">4.6.3. </span>Write Setting<a class="headerlink" href="#write-setting" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.6.3. </span>Write Setting<a class="headerlink" href="#write-setting" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/settings_write.svg"><img alt="../_images/settings_write.svg" class="align-left" src="../_images/settings_write.svg" width="60" /></a>
 <p>This function writes a single value into a settings file. If the key given in
 <span class="guilabel">Key</span> field already exists, the previous value is overwritten. To use
@@ -1509,15 +1512,15 @@ file:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" class="btn btn-neutral float-left" title="3. Script System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../javascript_EN/javascript_EN.html" class="btn btn-neutral float-right" title="5. Using JavaScript" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" class="btn btn-neutral float-left" title="4. Script System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../javascript_EN/javascript_EN.html" class="btn btn-neutral float-right" title="6. Using JavaScript" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 01, 2022 08:41.
+      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
       </span></p>
   </div>
 

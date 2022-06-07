@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. I/O Plugin &mdash; CETONI Elements Manual</title>
+  <title>7. I/O Plugin &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Controller Plugin" href="../qmixcontroller_EN/qmixcontroller_EN.html" />
-    <link rel="prev" title="5. Using JavaScript" href="../javascript_EN/javascript_EN.html" /> 
+    <link rel="next" title="8. Controller Plugin" href="../qmixcontroller_EN/qmixcontroller_EN.html" />
+    <link rel="prev" title="6. Using JavaScript" href="../javascript_EN/javascript_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,65 +54,68 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">3. Script System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">4. Generic Script Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">5. Using JavaScript</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. I/O Plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#i-o-plugin-overview">6.1. I/O Plugin Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#list-of-i-o-channels">6.2. List of I/O channels</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#channel-types">6.2.1. Channel types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grouped-display">6.2.2. Grouped display</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#search-i-o-channels">6.2.3. Search I/O channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#change-item-scaling">6.2.4. Change Item Scaling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. I/O Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-plugin-overview">7.1. I/O Plugin Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-i-o-channels">7.2. List of I/O channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#channel-types">7.2.1. Channel types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grouped-display">7.2.2. Grouped display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-i-o-channels">7.2.3. Search I/O channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-item-scaling">7.2.4. Change Item Scaling</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#set-outputs">6.3. Set outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#i-o-channel-configuration">6.4. I/O Channel Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#changing-channel-captions">6.4.1. Changing channel captions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#activating-the-configuration-dialog">6.4.2. Activating the Configuration Dialog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-dialog">6.4.3. Configuration Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-outputs">7.3. Set outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-channel-configuration">7.4. I/O Channel Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-channel-captions">7.4.1. Changing channel captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activating-the-configuration-dialog">7.4.2. Activating the Configuration Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-dialog">7.4.3. Configuration Dialog</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#calibration">6.5. Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-sensor-scaling">6.6. Configure Sensor Scaling</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sensor-scaling-overview">6.6.1. Sensor Scaling Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#select-physical-quantity">6.6.2. Select Physical Quantity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#two-point-scaling">6.6.3. Two-Point Scaling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#limits">6.6.4. Limits</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#user-specific-scaling">6.6.5. User-specific Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration">7.5. Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-sensor-scaling">7.6. Configure Sensor Scaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-scaling-overview">7.6.1. Sensor Scaling Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-physical-quantity">7.6.2. Select Physical Quantity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#two-point-scaling">7.6.3. Two-Point Scaling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limits">7.6.4. Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-specific-scaling">7.6.5. User-specific Scaling</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#scaling-presets">6.7. Scaling presets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#virtual-channels">6.8. Virtual Channels</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#creating-virtual-channels">6.8.1. Creating virtual channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-to-virtual-channels-from-a-script-program">6.8.2. Access to virtual channels from a script program</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-virtual-channels">6.8.3. Deleting virtual channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-presets">7.7. Scaling presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtual-channels">7.8. Virtual Channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-virtual-channels">7.8.1. Creating virtual channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-to-virtual-channels-from-a-script-program">7.8.2. Access to virtual channels from a script program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-virtual-channels">7.8.3. Deleting virtual channels</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#i-o-script-functions">6.9. I/O Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-i-o-script-functions">6.9.1. Introduction to I/O Script Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-digital-out">6.9.2. Set Digital Out</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-analog-out">6.9.3. Set Analog Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-script-functions">7.9. I/O Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-i-o-script-functions">7.9.1. Introduction to I/O Script Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-digital-out">7.9.2. Set Digital Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-analog-out">7.9.3. Set Analog Out</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#supported-beckhoff-i-o-terminals">6.10. Supported Beckhoff I/O Terminals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#digital-input-terminals">6.10.1. Digital Input Terminals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#digital-output-terminals">6.10.2. Digital Output Terminals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#analog-input-terminals">6.10.3. Analog Input Terminals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#analog-output-terminals">6.10.4. Analog Output Terminals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#special-terminals">6.10.5. Special Terminals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-beckhoff-i-o-terminals">7.10. Supported Beckhoff I/O Terminals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#digital-input-terminals">7.10.1. Digital Input Terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digital-output-terminals">7.10.2. Digital Output Terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analog-input-terminals">7.10.3. Analog Input Terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analog-output-terminals">7.10.4. Analog Output Terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-terminals">7.10.5. Special Terminals</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">7. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">8. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">9. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">10. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">11. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">12. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">13. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">14. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
 </ul>
 
         </div>
@@ -129,7 +132,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">6. </span>I/O Plugin</li>
+      <li><span class="section-number">7. </span>I/O Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qmixio_EN/qmixio_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -140,16 +143,16 @@
            <div itemprop="articleBody">
              
   <section id="i-o-plugin">
-<h1><span class="section-number">6. </span>I/O Plugin<a class="headerlink" href="#i-o-plugin" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">7. </span>I/O Plugin<a class="headerlink" href="#i-o-plugin" title="Permalink to this headline"></a></h1>
 <section id="i-o-plugin-overview">
-<h2><span class="section-number">6.1. </span>I/O Plugin Overview<a class="headerlink" href="#i-o-plugin-overview" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.1. </span>I/O Plugin Overview<a class="headerlink" href="#i-o-plugin-overview" title="Permalink to this headline"></a></h2>
 <p>The I/O plugin is used to integrate various CETONI I/O modules into
 the CETONI Elements software and for displaying I/O channels of other
 devices like Nemaxys positioning systems or Nemesys syringe pumps.</p>
 <img alt="../_images/10000201000001F6000001EFFBB551A475EADF72.png" src="../_images/10000201000001F6000001EFFBB551A475EADF72.png" />
 </section>
 <section id="list-of-i-o-channels">
-<h2><span class="section-number">6.2. </span>List of I/O channels<a class="headerlink" href="#list-of-i-o-channels" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.2. </span>List of I/O channels<a class="headerlink" href="#list-of-i-o-channels" title="Permalink to this headline"></a></h2>
 <p>All available I/O channels are shown in the I/O channels view.
 You can distinguish the different types of I/Os (AI: analogue input, AO:
 analogue output, DI: digital input, DO: digital output, Pressure:
@@ -168,7 +171,7 @@ of output channels, this is the value that is output, and in the case
 of input channels the value read from the device.</p></li>
 </ul>
 <section id="channel-types">
-<h3><span class="section-number">6.2.1. </span>Channel types<a class="headerlink" href="#channel-types" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.1. </span>Channel types<a class="headerlink" href="#channel-types" title="Permalink to this headline"></a></h3>
 <p>The following types of channel are currently supported:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -207,7 +210,7 @@ of input channels the value read from the device.</p></li>
 </table>
 </section>
 <section id="grouped-display">
-<h3><span class="section-number">6.2.2. </span>Grouped display<a class="headerlink" href="#grouped-display" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.2. </span>Grouped display<a class="headerlink" href="#grouped-display" title="Permalink to this headline"></a></h3>
 <p>By default, the I/O channels are displayed in groups. This means that
 the channels of a certain device are grouped under the device name, so
 that a tree-like structure is created. I.e., you can show or hide the
@@ -236,7 +239,7 @@ display of the I/O channels in list form.</p>
 <p><img alt="Figure 4: Display of I/O channels without grouping." src="../_images/10000201000002410000010956222D3E3459DF4B.png" /></p>
 </section>
 <section id="search-i-o-channels">
-<h3><span class="section-number">6.2.3. </span>Search I/O channels<a class="headerlink" href="#search-i-o-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.3. </span>Search I/O channels<a class="headerlink" href="#search-i-o-channels" title="Permalink to this headline"></a></h3>
 <p>If you want to quickly search for a specific channel in the list,
 right-click in the first column (<em>I/O Channel</em>) and select
 <span class="guilabel">Search in column</span> from the context menu.</p>
@@ -247,7 +250,7 @@ search term. If you select an entry, the corresponding channel is
 displayed in the I/O list and is highlighted in color.</p>
 </section>
 <section id="change-item-scaling">
-<h3><span class="section-number">6.2.4. </span>Change Item Scaling<a class="headerlink" href="#change-item-scaling" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.4. </span>Change Item Scaling<a class="headerlink" href="#change-item-scaling" title="Permalink to this headline"></a></h3>
 <p>In order to increase clarity or improve readability, the display of the
 list entries can be switched between three sizes. To do this, choose
 <span class="guilabel">Set Item Scaling</span> from the context menu and then select the required
@@ -256,7 +259,7 @@ size:</p>
 </section>
 </section>
 <section id="set-outputs">
-<h2><span class="section-number">6.3. </span>Set outputs<a class="headerlink" href="#set-outputs" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.3. </span>Set outputs<a class="headerlink" href="#set-outputs" title="Permalink to this headline"></a></h2>
 <p>The values of output channels can be changed by the user. Output
 channels include digital and analog output channels as well as virtual
 channels. Digital output channels can be switched on and off by clicking
@@ -274,9 +277,9 @@ the channel and then start typing on the keyboard.</p>
 you to change the values of virtual channels.</p>
 </section>
 <section id="i-o-channel-configuration">
-<h2><span class="section-number">6.4. </span>I/O Channel Configuration<a class="headerlink" href="#i-o-channel-configuration" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.4. </span>I/O Channel Configuration<a class="headerlink" href="#i-o-channel-configuration" title="Permalink to this headline"></a></h2>
 <section id="changing-channel-captions">
-<h3><span class="section-number">6.4.1. </span>Changing channel captions<a class="headerlink" href="#changing-channel-captions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.4.1. </span>Changing channel captions<a class="headerlink" href="#changing-channel-captions" title="Permalink to this headline"></a></h3>
 <p>You can change the caption of each channel at any time, for example, to
 assign a memorable name suitable for your particular application. You
 may change a caption by the following steps:</p>
@@ -289,7 +292,7 @@ below).</p></li>
 <p><img alt="Figure 8: Changing a channel name" src="../_images/1000020100000210000000CFEE86A61E8D9261A1.png" /></p>
 </section>
 <section id="activating-the-configuration-dialog">
-<h3><span class="section-number">6.4.2. </span>Activating the Configuration Dialog<a class="headerlink" href="#activating-the-configuration-dialog" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.4.2. </span>Activating the Configuration Dialog<a class="headerlink" href="#activating-the-configuration-dialog" title="Permalink to this headline"></a></h3>
 <p>In addition to customizing the name, for most I/O channels there are
 additional parameters that may be configured, such as the scaling of
 analog in- and outputs. You will find these configuration parameters in
@@ -301,7 +304,7 @@ I/O channel list and select the context menu item
 <span class="guilabel">Configure channel</span> (figure above).</p>
 </section>
 <section id="configuration-dialog">
-<h3><span class="section-number">6.4.3. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.4.3. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h3>
 <p>In the configuration dialog you can configure all accessible parameters
 of an analog in- and output channel:</p>
 <img alt="../_images/1000020100000212000001862DB8297006D93319.png" src="../_images/1000020100000212000001862DB8297006D93319.png" />
@@ -371,7 +374,7 @@ setting – clicking <span class="guilabel">OK</span> is not required.</p>
 </section>
 </section>
 <section id="calibration">
-<h2><span class="section-number">6.5. </span>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.5. </span>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline"></a></h2>
 <p>With the two-point calibration you can correct measurement deviations of
 a channel. To do this, you record the measured value of the channel at
 two points <span class="guinum">❶</span> and <span class="guinum">❷</span> <span class="guilabel">Value</span> and enter the actual corrected
@@ -390,9 +393,9 @@ must check the calibration and adjust it if necessary.</p>
 </div>
 </section>
 <section id="configure-sensor-scaling">
-<h2><span class="section-number">6.6. </span>Configure Sensor Scaling<a class="headerlink" href="#configure-sensor-scaling" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.6. </span>Configure Sensor Scaling<a class="headerlink" href="#configure-sensor-scaling" title="Permalink to this headline"></a></h2>
 <section id="sensor-scaling-overview">
-<h3><span class="section-number">6.6.1. </span>Sensor Scaling Overview<a class="headerlink" href="#sensor-scaling-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.6.1. </span>Sensor Scaling Overview<a class="headerlink" href="#sensor-scaling-overview" title="Permalink to this headline"></a></h3>
 <p>For analogue channels that support the connection of sensors (such as
 voltage or current measurement inputs), you can configure
 sensor-specific scaling. This allows you to connect sensors to the
@@ -402,7 +405,7 @@ click on <span class="guilabel">Scaling Configuration</span> in the configuratio
 <p><img alt="Figure 12: Configuration scaling parameters" src="../_images/10000201000002B700000137795168A3F5C0861B.png" /></p>
 </section>
 <section id="select-physical-quantity">
-<h3><span class="section-number">6.6.2. </span>Select Physical Quantity<a class="headerlink" href="#select-physical-quantity" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.6.2. </span>Select Physical Quantity<a class="headerlink" href="#select-physical-quantity" title="Permalink to this headline"></a></h3>
 <p>In the <em>Physical Quantity</em> pane <span class="guinum">❶</span>, select the physical quantity to be
 measured with the sensor. If the desired sensor type is not supported in
 the <span class="guilabel">Type</span> selection box, simply select the <em>Custom</em> type for a
@@ -414,7 +417,7 @@ you. The unit must be compatible with the selected physical quantity
 (e.g., bar, psi, Pa or atm for pressure sensors).</p>
 </section>
 <section id="two-point-scaling">
-<h3><span class="section-number">6.6.3. </span>Two-Point Scaling<a class="headerlink" href="#two-point-scaling" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.6.3. </span>Two-Point Scaling<a class="headerlink" href="#two-point-scaling" title="Permalink to this headline"></a></h3>
 <p>The two-point scaling <span class="guinum">❷</span> is used to configure the conversion between the
 analog measured values of the I/O channel (for example in mV or mA) and
 the sensor readings of the sensor connected thereto (for example, bar or
@@ -437,7 +440,7 @@ to the units in the data sheet of the sensor.</p>
 </div>
 </section>
 <section id="limits">
-<h3><span class="section-number">6.6.4. </span>Limits<a class="headerlink" href="#limits" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.6.4. </span>Limits<a class="headerlink" href="#limits" title="Permalink to this headline"></a></h3>
 <p>In the <em>Limits</em> <span class="guinum">❸</span> pane you define the measuring range of the sensor. In
 many cases, this range matches the range that you entered in two-point
 scaling pane. Therefore, the values for the two-point scaling are
@@ -451,7 +454,7 @@ setting – clicking <span class="guilabel">OK</span> is not required.</p>
 </div>
 </section>
 <section id="user-specific-scaling">
-<h3><span class="section-number">6.6.5. </span>User-specific Scaling<a class="headerlink" href="#user-specific-scaling" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.6.5. </span>User-specific Scaling<a class="headerlink" href="#user-specific-scaling" title="Permalink to this headline"></a></h3>
 <p>If you are using a sensor which is not yet supported in the <span class="guilabel">Type</span>
 selection box, simply select the sensor type <span class="guilabel">Custom</span> <span class="guinum">❶</span>. In this case,
 the input field measuring unit <span class="guinum">❷</span> is grayed out, since automatic unit
@@ -460,7 +463,7 @@ conversion is no longer possible.</p>
 </section>
 </section>
 <section id="scaling-presets">
-<h2><span class="section-number">6.7. </span>Scaling presets<a class="headerlink" href="#scaling-presets" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.7. </span>Scaling presets<a class="headerlink" href="#scaling-presets" title="Permalink to this headline"></a></h2>
 <p>Some analog input and output channels offer a choice of predefined
 configurations. These include pressure sensor configurations for the
 analog inputs of Nemesys syringe pump devices.</p>
@@ -485,9 +488,9 @@ in the channel context menu (see figure below).</p>
 <img alt="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" src="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" />
 </section>
 <section id="virtual-channels">
-<h2><span class="section-number">6.8. </span>Virtual Channels<a class="headerlink" href="#virtual-channels" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.8. </span>Virtual Channels<a class="headerlink" href="#virtual-channels" title="Permalink to this headline"></a></h2>
 <section id="creating-virtual-channels">
-<h3><span class="section-number">6.8.1. </span>Creating virtual channels<a class="headerlink" href="#creating-virtual-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.8.1. </span>Creating virtual channels<a class="headerlink" href="#creating-virtual-channels" title="Permalink to this headline"></a></h3>
 <p>The software allows the creation of virtual I/O channels. These channels
 are not assigned to a physical I/O device, but they are a kind of
 memory. You can write values into virtual channels and read them out
@@ -511,14 +514,14 @@ grouping is disabled, the newly created virtual channel is inserted at
 the end of the list.</p>
 </section>
 <section id="access-to-virtual-channels-from-a-script-program">
-<h3><span class="section-number">6.8.2. </span>Access to virtual channels from a script program<a class="headerlink" href="#access-to-virtual-channels-from-a-script-program" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.8.2. </span>Access to virtual channels from a script program<a class="headerlink" href="#access-to-virtual-channels-from-a-script-program" title="Permalink to this headline"></a></h3>
 <p>To access virtual channels out of script programs (read and
 write access), you can use the script functions from the category
 <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#device-functions"><span class="std std-ref">Device Functions</span></a> (figure below).</p>
 <p><img alt="Figure 19: Read and write access to virtual channels" src="../_images/100002010000010B000000720E021D287C297538.png" /></p>
 </section>
 <section id="deleting-virtual-channels">
-<h3><span class="section-number">6.8.3. </span>Deleting virtual channels<a class="headerlink" href="#deleting-virtual-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.8.3. </span>Deleting virtual channels<a class="headerlink" href="#deleting-virtual-channels" title="Permalink to this headline"></a></h3>
 <p>To delete a virtual channel, click with the right mouse button on the
 channel in the I/O channel list, and then select from the context menu
 the item <span class="guilabel">Delete virtual channel</span> (figure below).</p>
@@ -526,15 +529,15 @@ the item <span class="guilabel">Delete virtual channel</span> (figure below).</p
 </section>
 </section>
 <section id="i-o-script-functions">
-<h2><span class="section-number">6.9. </span>I/O Script Functions<a class="headerlink" href="#i-o-script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.9. </span>I/O Script Functions<a class="headerlink" href="#i-o-script-functions" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-i-o-script-functions">
-<h3><span class="section-number">6.9.1. </span>Introduction to I/O Script Functions<a class="headerlink" href="#introduction-to-i-o-script-functions" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.9.1. </span>Introduction to I/O Script Functions<a class="headerlink" href="#introduction-to-i-o-script-functions" title="Permalink to this headline"></a></h3>
 <p>The I/O plugin contains script functions for switching digital
 outputs and setting the values of analogue outputs.</p>
 <p><img alt="Figure 21: I/O script functions" src="../_images/1000020100000123000000778D7426E56265EAC3.png" /></p>
 </section>
 <section id="set-digital-out">
-<h3><span class="section-number">6.9.2. </span>Set Digital Out<a class="headerlink" href="#set-digital-out" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.9.2. </span>Set Digital Out<a class="headerlink" href="#set-digital-out" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000064300003505000035054FDB6D797453998C.svg"><img alt="../_images/1000064300003505000035054FDB6D797453998C.svg" class="align-left" src="../_images/1000064300003505000035054FDB6D797453998C.svg" width="60" /></a>
 <p>You use this function to set/delete a digital output from a
 script. Select the digital channel in the configuration area of the
@@ -544,7 +547,7 @@ function and then set the desired output value.</p>
 </div>
 </section>
 <section id="set-analog-out">
-<h3><span class="section-number">6.9.3. </span>Set Analog Out<a class="headerlink" href="#set-analog-out" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.9.3. </span>Set Analog Out<a class="headerlink" href="#set-analog-out" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000F0E00003505000035054CE4E2663723FE52.svg"><img alt="../_images/10000F0E00003505000035054CE4E2663723FE52.svg" class="align-left" src="../_images/10000F0E00003505000035054CE4E2663723FE52.svg" width="60" /></a>
 <p>With this function, you can write a value from a script to an
 analogue output channel. Select the analogue channel in the
@@ -559,13 +562,13 @@ used for calculations or to carry out value-specific functions.</p>
 </section>
 </section>
 <section id="supported-beckhoff-i-o-terminals">
-<h2><span class="section-number">6.10. </span>Supported Beckhoff I/O Terminals<a class="headerlink" href="#supported-beckhoff-i-o-terminals" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.10. </span>Supported Beckhoff I/O Terminals<a class="headerlink" href="#supported-beckhoff-i-o-terminals" title="Permalink to this headline"></a></h2>
 <p>The I/O plugin supports the modular CETONI QmixIO-B module.</p>
 <img alt="../_images/QmixIO-B_IO-Module.jpg" src="../_images/QmixIO-B_IO-Module.jpg" />
 <p>The following list shows all Beckhoff bus terminals that are supported by the
 software:</p>
 <section id="digital-input-terminals">
-<h3><span class="section-number">6.10.1. </span>Digital Input Terminals<a class="headerlink" href="#digital-input-terminals" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.10.1. </span>Digital Input Terminals<a class="headerlink" href="#digital-input-terminals" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/dig_in.svg"><img alt="../_images/dig_in.svg" class="align-left" src="../_images/dig_in.svg" width="60" /></a>
 <p>The software should work with all
 <a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/">KL1xxx</a>
@@ -604,7 +607,7 @@ the I/O plugin.</p>
 </table>
 </section>
 <section id="digital-output-terminals">
-<h3><span class="section-number">6.10.2. </span>Digital Output Terminals<a class="headerlink" href="#digital-output-terminals" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.10.2. </span>Digital Output Terminals<a class="headerlink" href="#digital-output-terminals" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/dig_out.svg"><img alt="../_images/dig_out.svg" class="align-left" src="../_images/dig_out.svg" width="60" /></a>
 <p>The software should work with all
 <a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/">KL2xxx</a>
@@ -661,7 +664,7 @@ the I/O plugin.</p>
 </table>
 </section>
 <section id="analog-input-terminals">
-<h3><span class="section-number">6.10.3. </span>Analog Input Terminals<a class="headerlink" href="#analog-input-terminals" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.10.3. </span>Analog Input Terminals<a class="headerlink" href="#analog-input-terminals" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/analog_in.svg"><img alt="../_images/analog_in.svg" class="align-left" src="../_images/analog_in.svg" width="60" /></a>
 <p>The following analog input terminals are supported by the I/O plugin:</p>
 <div class="line-block">
@@ -737,7 +740,7 @@ the I/O plugin.</p>
 </table>
 </section>
 <section id="analog-output-terminals">
-<h3><span class="section-number">6.10.4. </span>Analog Output Terminals<a class="headerlink" href="#analog-output-terminals" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.10.4. </span>Analog Output Terminals<a class="headerlink" href="#analog-output-terminals" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/analog_out.svg"><img alt="../_images/analog_out.svg" class="align-left" src="../_images/analog_out.svg" width="60" /></a>
 <p>The following analog output terminals are supported by the I/O plugin:</p>
 <div class="line-block">
@@ -789,7 +792,7 @@ the I/O plugin.</p>
 </table>
 </section>
 <section id="special-terminals">
-<h3><span class="section-number">6.10.5. </span>Special Terminals<a class="headerlink" href="#special-terminals" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.10.5. </span>Special Terminals<a class="headerlink" href="#special-terminals" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/special_terminals.svg"><img alt="../_images/special_terminals.svg" class="align-left" src="../_images/special_terminals.svg" width="60" /></a>
 <p>The following special terminals are supported by the I/O plugin:</p>
 <div class="line-block">
@@ -820,15 +823,15 @@ the I/O plugin.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../javascript_EN/javascript_EN.html" class="btn btn-neutral float-left" title="5. Using JavaScript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../qmixcontroller_EN/qmixcontroller_EN.html" class="btn btn-neutral float-right" title="7. Controller Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../javascript_EN/javascript_EN.html" class="btn btn-neutral float-left" title="6. Using JavaScript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../qmixcontroller_EN/qmixcontroller_EN.html" class="btn btn-neutral float-right" title="8. Controller Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 01, 2022 08:38.
+      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
       </span></p>
   </div>
 
