@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>14. SQL Database Logger &mdash; CETONI Elements Manual</title>
+  <title>15. SQL Database Logger &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="15. Python Add-on" href="../Python_EN/Python_EN.html" />
-    <link rel="prev" title="13. Process Data Graph" href="../graphlogger_EN/graphlogger_EN.html" /> 
+    <link rel="next" title="16. Python Add-on" href="../Python_EN/Python_EN.html" />
+    <link rel="prev" title="14. Process Data Graph" href="../graphlogger_EN/graphlogger_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,35 +58,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">14. SQL Database Logger</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sql-logger-configuration-dialog">14.1. SQL Logger Configuration Dialog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#database-settings">14.2. Database Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sql-logger-configuration">14.3. SQL Logger Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-1-add-channels">14.3.1. Step 1- Add Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-select-device-property">14.3.2. Step 2- Select Device Property</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-3-configure-sample-interval">14.3.3. Step 3 – Configure Sample Interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-4-set-channel-label">14.3.4. Step 4 – Set Channel Label</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">14.3.5. Deleting Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys1_setup_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. SQL Database Logger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sql-logger-configuration-dialog">15.1. SQL Logger Configuration Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-settings">15.2. Database Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sql-logger-configuration">15.3. SQL Logger Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-add-channels">15.3.1. Step 1- Add Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-select-device-property">15.3.2. Step 2- Select Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-configure-sample-interval">15.3.3. Step 3 – Configure Sample Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-set-channel-label">15.3.4. Step 4 – Set Channel Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">15.3.5. Deleting Channels</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#database-schema">14.4. Database Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#script-functions">14.5. Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#start-sql-logger">14.5.1. Start SQL Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-sql-logger">14.5.2. Stop SQL Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-schema">15.4. Database Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">15.5. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-sql-logger">15.5.1. Start SQL Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-sql-logger">15.5.2. Stop SQL Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trigger-sql-data-logging">15.5.3. Trigger SQL Data Logging</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
 </ul>
 
         </div>
@@ -103,7 +105,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">14. </span>SQL Database Logger</li>
+      <li><span class="section-number">15. </span>SQL Database Logger</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/sqllogger_EN/sqllogger_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -114,7 +116,7 @@
            <div itemprop="articleBody">
              
   <section id="sql-database-logger">
-<h1><span class="section-number">14. </span>SQL Database Logger<a class="headerlink" href="#sql-database-logger" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">15. </span>SQL Database Logger<a class="headerlink" href="#sql-database-logger" title="Permalink to this headline"></a></h1>
 <p>The SQL database logger enables logging of process data into an SQL database.
 The logger is not intended to record process data at very high sample rates but
 to log important process data over a longer period of time to document
@@ -122,13 +124,13 @@ experiments or automated processes in the laboratory.</p>
 <p>The SQL database logger supports various databases such as SQLite, MySQL or
 PostgreSQL. It has been tested with SQLite and MySQL databases.</p>
 <section id="sql-logger-configuration-dialog">
-<h2><span class="section-number">14.1. </span>SQL Logger Configuration Dialog<a class="headerlink" href="#sql-logger-configuration-dialog" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.1. </span>SQL Logger Configuration Dialog<a class="headerlink" href="#sql-logger-configuration-dialog" title="Permalink to this headline"></a></h2>
 <img alt="../_images/toolbar_sql_logger_buttons.png" src="../_images/toolbar_sql_logger_buttons.png" />
 <p>When the data logging plug-in has
 been loaded, the toolbar will display two additional buttons for the
 configuration of the SQL database logger <span class="guinum">❶</span> and to start/stop the logging
 process <span class="guinum">❷</span>.</p>
-<a class="reference internal image-reference" href="../_images/sql_log_config.svg"><img alt="../_images/sql_log_config.svg" class="align-left" height="60" src="../_images/sql_log_config.svg" width="60" /></a>
+<a class="reference internal image-reference" href="../_images/sql_log_config.svg"><img alt="../_images/sql_log_config.svg" class="align-left" src="../_images/sql_log_config.svg" width="60" /></a>
 <p>Click the <span class="guilabel">Configure SQL Logger</span> button to open the configuration dialog.
 The following configuration dialog will be displayed:</p>
 <img alt="../_images/sql_logger_config_dialog.png" src="../_images/sql_logger_config_dialog.png" />
@@ -176,7 +178,7 @@ selected channel.</p></li>
 </ul>
 </section>
 <section id="database-settings">
-<h2><span class="section-number">14.2. </span>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.2. </span>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline"></a></h2>
 <p>To configure the database settings, click the
 <span class="guilabel">Configure Database Connection</span> button in the configuration dialog.</p>
 <img alt="../_images/config_db_connection.png" src="../_images/config_db_connection.png" />
@@ -226,9 +228,9 @@ as soon as you have successfully checked your database connection.</p>
 </div>
 </section>
 <section id="sql-logger-configuration">
-<h2><span class="section-number">14.3. </span>SQL Logger Configuration<a class="headerlink" href="#sql-logger-configuration" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.3. </span>SQL Logger Configuration<a class="headerlink" href="#sql-logger-configuration" title="Permalink to this headline"></a></h2>
 <section id="step-1-add-channels">
-<h3><span class="section-number">14.3.1. </span>Step 1- Add Channels<a class="headerlink" href="#step-1-add-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.1. </span>Step 1- Add Channels<a class="headerlink" href="#step-1-add-channels" title="Permalink to this headline"></a></h3>
 <p>Drag-and-Drop the device for which you want to log the data from the
 <span class="guilabel">Device List</span> <span class="guinum">❶</span> into the <span class="guilabel">Logger Channels</span> <span class="guinum">❷</span>
 list. The new channel will be inserted into the list at the desired
@@ -241,7 +243,7 @@ list can be filtered according to device type.</p>
 </div>
 </section>
 <section id="step-2-select-device-property">
-<h3><span class="section-number">14.3.2. </span>Step 2- Select Device Property<a class="headerlink" href="#step-2-select-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.2. </span>Step 2- Select Device Property<a class="headerlink" href="#step-2-select-device-property" title="Permalink to this headline"></a></h3>
 <p>In the <span class="guilabel">Logger Channels</span> list you now need to select the
 Property of the device that you want to record. For this,
 double-click into the respective field within the column <span class="guilabel">Property</span>
@@ -249,7 +251,7 @@ and select the device property from the opening list (see figure below).</p>
 <img alt="../_images/property_selection.png" src="../_images/property_selection.png" />
 </section>
 <section id="step-3-configure-sample-interval">
-<h3><span class="section-number">14.3.3. </span>Step 3 – Configure Sample Interval<a class="headerlink" href="#step-3-configure-sample-interval" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.3. </span>Step 3 – Configure Sample Interval<a class="headerlink" href="#step-3-configure-sample-interval" title="Permalink to this headline"></a></h3>
 <p>You can set a different sample interval for each individual logger channel.
 The minimum sample time is 1 second. To configure the log interval double-click
 into the respective field within the column <span class="guilabel">Interval (s)</span> and enter
@@ -264,7 +266,7 @@ and stored into the database.</p>
 </div>
 </section>
 <section id="step-4-set-channel-label">
-<h3><span class="section-number">14.3.4. </span>Step 4 – Set Channel Label<a class="headerlink" href="#step-4-set-channel-label" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.4. </span>Step 4 – Set Channel Label<a class="headerlink" href="#step-4-set-channel-label" title="Permalink to this headline"></a></h3>
 <p>In the column <span class="guilabel">Label</span> you can customize the description for each
 channel. You can use this column to add additional information, a meaningful
 name or a SI unit identifier.</p>
@@ -282,7 +284,7 @@ the correct device property has been selected.</p>
 <p>The device property and the label are seperate columns in the SQL table</p>
 </section>
 <section id="deleting-channels">
-<h3><span class="section-number">14.3.5. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.5. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
 <p>Highlight the desired channels using the mouse to delete one or more
 channels from the list, and then use either the <kbd class="kbd docutils literal notranslate">Delete</kbd> key or the
 <span class="menuselection">Delecte Selection</span> item of the right-click context menu:</p>
@@ -292,7 +294,7 @@ channels from the list, and then use either the <kbd class="kbd docutils literal
 </section>
 </section>
 <section id="database-schema">
-<h2><span class="section-number">14.4. </span>Database Schema<a class="headerlink" href="#database-schema" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.4. </span>Database Schema<a class="headerlink" href="#database-schema" title="Permalink to this headline"></a></h2>
 <p>The SQL logger uses the following database schema to store its data:</p>
 <a class="reference internal image-reference" href="../_images/eer_diagram.svg"><img alt="../_images/eer_diagram.svg" src="../_images/eer_diagram.svg" width="600px" /></a>
 <p>The schema consists of two tables. The first table is
@@ -365,7 +367,7 @@ data labeled with <strong>Flowmeter (ml/s)</strong>:</p>
 <img alt="../_images/mysql_tbl_log_data_query.png" src="../_images/mysql_tbl_log_data_query.png" />
 </section>
 <section id="script-functions">
-<h2><span class="section-number">14.5. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.5. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
 <p>To automate the data logging or to synchronize data logging with
 other processes, the SQL database logger can be started and stopped using
 script functions. The corresponding functions can be found
@@ -373,7 +375,7 @@ in the <span class="guilabel">Logging</span> category in the list of the availab
 functions.</p>
 <img alt="../_images/sql_logger_script_functions.png" src="../_images/sql_logger_script_functions.png" />
 <section id="start-sql-logger">
-<h3><span class="section-number">14.5.1. </span>Start SQL Logger<a class="headerlink" href="#start-sql-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.5.1. </span>Start SQL Logger<a class="headerlink" href="#start-sql-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/sql_log_start.svg"><img alt="../_images/sql_log_start.svg" class="align-left" src="../_images/sql_log_start.svg" width="60" /></a>
 <p>This function is used to start the SQL logger with the
 currently configured settings and channels.</p>
@@ -382,9 +384,21 @@ currently configured settings and channels.</p>
 </div>
 </section>
 <section id="stop-sql-logger">
-<h3><span class="section-number">14.5.2. </span>Stop SQL Logger<a class="headerlink" href="#stop-sql-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.5.2. </span>Stop SQL Logger<a class="headerlink" href="#stop-sql-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/sql_log_stop.svg"><img alt="../_images/sql_log_stop.svg" class="align-left" src="../_images/sql_log_stop.svg" width="60" /></a>
 <p>This function stops logging into SQL database.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="trigger-sql-data-logging">
+<h3><span class="section-number">15.5.3. </span>Trigger SQL Data Logging<a class="headerlink" href="#trigger-sql-data-logging" title="Permalink to this headline"></a></h3>
+<a class="reference internal image-reference" href="../_images/sql_log_trigger.svg"><img alt="../_images/sql_log_trigger.svg" class="align-left" src="../_images/sql_log_trigger.svg" width="60" /></a>
+<p>This function triggers the immediate logging of all channels of the SQL logger.
+Normally the data will be logged with the configured <a class="reference internal" href="#step-3-configure-sample-interval"><span class="std std-ref">interval</span></a>.
+If you would like to force the immediate logging of all channels, for example
+if you would like to capture the current state of all channels if a certain
+event occurrs, then you can use this function.</p>
 </section>
 </section>
 </section>
@@ -393,15 +407,15 @@ currently configured settings and channels.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../graphlogger_EN/graphlogger_EN.html" class="btn btn-neutral float-left" title="13. Process Data Graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="15. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../graphlogger_EN/graphlogger_EN.html" class="btn btn-neutral float-left" title="14. Process Data Graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="16. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
+      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
       </span></p>
   </div>
 

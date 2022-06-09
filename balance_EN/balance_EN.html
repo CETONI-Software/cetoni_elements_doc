@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11. Balances Plugin &mdash; CETONI Elements Manual</title>
+  <title>12. Balances Plugin &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. CSV Data Logger Plugin" href="../datalogger_EN/datalogger_EN.html" />
-    <link rel="prev" title="10. Tubing Pump Plugin" href="../tubingpump_EN/tubingpump_EN.html" /> 
+    <link rel="next" title="13. CSV Data Logger Plugin" href="../datalogger_EN/datalogger_EN.html" />
+    <link rel="prev" title="11. Tubing Pump Plugin" href="../tubingpump_EN/tubingpump_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,32 +58,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Balances Plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-balances-plugin">11.1. Introduction to Balances Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration-of-sartorius-scales">11.2. Configuration of Sartorius Scales</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#device-rs232-menu">11.2.1. Device / RS232 Menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#device-usb-menu">11.2.2. Device / USB Menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#data-out-com-sbi-menu">11.2.3. DATA.OUT. / COM. SBI Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys1_setup_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Balances Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-balances-plugin">12.1. Introduction to Balances Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-of-sartorius-scales">12.2. Configuration of Sartorius Scales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#device-rs232-menu">12.2.1. Device / RS232 Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-usb-menu">12.2.2. Device / USB Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-out-com-sbi-menu">12.2.3. DATA.OUT. / COM. SBI Menu</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-a-scale-to-a-cetoni-elements-device-configuration">11.3. Adding a scale to a CETONI Elements device configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#operation">11.4. Operation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#display-read-the-values">11.4.1. Display / Read the values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tare-balance">11.4.2. Tare balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-scale-to-a-cetoni-elements-device-configuration">12.3. Adding a scale to a CETONI Elements device configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operation">12.4. Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display-read-the-values">12.4.1. Display / Read the values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tare-balance">12.4.2. Tare balance</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
 </ul>
 
         </div>
@@ -100,7 +101,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">11. </span>Balances Plugin</li>
+      <li><span class="section-number">12. </span>Balances Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/balance_EN/balance_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,10 +112,10 @@
            <div itemprop="articleBody">
              
   <section id="balances-plugin">
-<h1><span class="section-number">11. </span>Balances Plugin<a class="headerlink" href="#balances-plugin" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">12. </span>Balances Plugin<a class="headerlink" href="#balances-plugin" title="Permalink to this headline"></a></h1>
 <img alt="../_images/Balance_Header.png" src="../_images/Balance_Header.png" />
 <section id="introduction-to-balances-plugin">
-<h2><span class="section-number">11.1. </span>Introduction to Balances Plugin<a class="headerlink" href="#introduction-to-balances-plugin" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">12.1. </span>Introduction to Balances Plugin<a class="headerlink" href="#introduction-to-balances-plugin" title="Permalink to this headline"></a></h2>
 <p>This plugin is for integrating external laboratory balances into the
 software. The following devices are currently supported:</p>
 <table class="docutils align-default">
@@ -135,28 +136,28 @@ software. The following devices are currently supported:</p>
 </table>
 </section>
 <section id="configuration-of-sartorius-scales">
-<h2><span class="section-number">11.2. </span>Configuration of Sartorius Scales<a class="headerlink" href="#configuration-of-sartorius-scales" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">12.2. </span>Configuration of Sartorius Scales<a class="headerlink" href="#configuration-of-sartorius-scales" title="Permalink to this headline"></a></h2>
 <p>In order for the scale to work optimally with the software,
 please set the following parameters on the device:</p>
 <section id="device-rs232-menu">
-<h3><span class="section-number">11.2.1. </span>Device / RS232 Menu<a class="headerlink" href="#device-rs232-menu" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">12.2.1. </span>Device / RS232 Menu<a class="headerlink" href="#device-rs232-menu" title="Permalink to this headline"></a></h3>
 <p>In the DEVICE / RS232 menu, activate the following values marked in red:</p>
 <img alt="../_images/10000201000003DA000002F7CD3B422CA333C488.png" src="../_images/10000201000003DA000002F7CD3B422CA333C488.png" />
 </section>
 <section id="device-usb-menu">
-<h3><span class="section-number">11.2.2. </span>Device / USB Menu<a class="headerlink" href="#device-usb-menu" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">12.2.2. </span>Device / USB Menu<a class="headerlink" href="#device-usb-menu" title="Permalink to this headline"></a></h3>
 <p>In the DEVICE / USB menu, activate the following values marked in red:</p>
 <img alt="../_images/10000201000003DA000002F7CD3B422CA333C488.png" src="../_images/10000201000003DA000002F7CD3B422CA333C488.png" />
 </section>
 <section id="data-out-com-sbi-menu">
-<h3><span class="section-number">11.2.3. </span>DATA.OUT. / COM. SBI Menu<a class="headerlink" href="#data-out-com-sbi-menu" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">12.2.3. </span>DATA.OUT. / COM. SBI Menu<a class="headerlink" href="#data-out-com-sbi-menu" title="Permalink to this headline"></a></h3>
 <p>In the DATA.OUT. / COM. SBI menu, activate the following values marked
 in red:</p>
 <img alt="../_images/10000201000003CC0000020A56B0A6CD74551F66.png" src="../_images/10000201000003CC0000020A56B0A6CD74551F66.png" />
 </section>
 </section>
 <section id="adding-a-scale-to-a-cetoni-elements-device-configuration">
-<h2><span class="section-number">11.3. </span>Adding a scale to a CETONI Elements device configuration<a class="headerlink" href="#adding-a-scale-to-a-cetoni-elements-device-configuration" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">12.3. </span>Adding a scale to a CETONI Elements device configuration<a class="headerlink" href="#adding-a-scale-to-a-cetoni-elements-device-configuration" title="Permalink to this headline"></a></h2>
 <p>In the <em>Device Configurator</em>, simply add a scale to the current device
 configuration using drag &amp; drop or double-click <span class="guinum">❶</span>. Then save the device
 configuration <span class="guinum">❷</span> and activate it by clicking the <span class="guilabel">Activate Configuration</span>
@@ -164,9 +165,9 @@ button <span class="guinum">❸</span>.</p>
 <img alt="../_images/1000020100000327000001CE56CDCFBB84CBB896.png" src="../_images/1000020100000327000001CE56CDCFBB84CBB896.png" />
 </section>
 <section id="operation">
-<h2><span class="section-number">11.4. </span>Operation<a class="headerlink" href="#operation" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">12.4. </span>Operation<a class="headerlink" href="#operation" title="Permalink to this headline"></a></h2>
 <section id="display-read-the-values">
-<h3><span class="section-number">11.4.1. </span>Display / Read the values<a class="headerlink" href="#display-read-the-values" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">12.4.1. </span>Display / Read the values<a class="headerlink" href="#display-read-the-values" title="Permalink to this headline"></a></h3>
 <p>For each balance that has been added to the device configuration, an
 analogue input channel is displayed in the list of I/O channels. In the
 picture below, this is the <span class="guilabel">Sartorius Balance 1</span> channel.</p>
@@ -176,7 +177,7 @@ the <em>Value</em> column. Like any other analogue channel, this channel can be
 added in the graphical logger or CSV logger or read in the script.</p>
 </section>
 <section id="tare-balance">
-<h3><span class="section-number">11.4.2. </span>Tare balance<a class="headerlink" href="#tare-balance" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">12.4.2. </span>Tare balance<a class="headerlink" href="#tare-balance" title="Permalink to this headline"></a></h3>
 <p>To tare the balance, right-click on the channel <span class="guinum">❶</span> and then select
 <span class="menuselection">Tare balance</span> <span class="guinum">❷</span> from the context menu.</p>
 <img alt="../_images/10000201000001DA000000CA6CD29A54C4B5F66A.png" src="../_images/10000201000001DA000000CA6CD29A54C4B5F66A.png" />
@@ -193,15 +194,15 @@ the property <code class="code docutils literal notranslate"><span class="pre">T
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../tubingpump_EN/tubingpump_EN.html" class="btn btn-neutral float-left" title="10. Tubing Pump Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../datalogger_EN/datalogger_EN.html" class="btn btn-neutral float-right" title="12. CSV Data Logger Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../tubingpump_EN/tubingpump_EN.html" class="btn btn-neutral float-left" title="11. Tubing Pump Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../datalogger_EN/datalogger_EN.html" class="btn btn-neutral float-right" title="13. CSV Data Logger Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 07, 2022 11:04.
+      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
       </span></p>
   </div>
 

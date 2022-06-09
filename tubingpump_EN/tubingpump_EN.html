@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Tubing Pump Plugin &mdash; CETONI Elements Manual</title>
+  <title>11. Tubing Pump Plugin &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Balances Plugin" href="../balance_EN/balance_EN.html" />
-    <link rel="prev" title="9. Valve Plugin" href="../qmixv_EN/qmixv_EN.html" /> 
+    <link rel="next" title="12. Balances Plugin" href="../balance_EN/balance_EN.html" />
+    <link rel="prev" title="10. Valve Plugin" href="../qmixv_EN/qmixv_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,33 +58,34 @@
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Tubing Pump Plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-tubing-pump-plugin">10.1. Introduction to Tubing Pump Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tubing-pump-operating-panel">10.2. Tubing Pump Operating Panel</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#operating-parameters">10.2.1. Operating Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pump-caption">10.2.2. Pump Caption</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tubing-configuration">10.2.3. Tubing Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys1_setup_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Tubing Pump Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-tubing-pump-plugin">11.1. Introduction to Tubing Pump Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tubing-pump-operating-panel">11.2. Tubing Pump Operating Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operating-parameters">11.2.1. Operating Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pump-caption">11.2.2. Pump Caption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tubing-configuration">11.2.3. Tubing Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#manual-dosing">10.3. Manual Dosing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#script-functions">10.4. Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pump-volume">10.4.1. Pump Volume</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#generate-flow">10.4.2. Generate Flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-pumping">10.4.3. Stop Pumping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-dosing">11.3. Manual Dosing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">11.4. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pump-volume">11.4.1. Pump Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-flow">11.4.2. Generate Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-pumping">11.4.3. Stop Pumping</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
 </ul>
 
         </div>
@@ -101,7 +102,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">10. </span>Tubing Pump Plugin</li>
+      <li><span class="section-number">11. </span>Tubing Pump Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/tubingpump_EN/tubingpump_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -112,9 +113,9 @@
            <div itemprop="articleBody">
              
   <section id="tubing-pump-plugin">
-<h1><span class="section-number">10. </span>Tubing Pump Plugin<a class="headerlink" href="#tubing-pump-plugin" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">11. </span>Tubing Pump Plugin<a class="headerlink" href="#tubing-pump-plugin" title="Permalink to this headline"></a></h1>
 <section id="introduction-to-tubing-pump-plugin">
-<h2><span class="section-number">10.1. </span>Introduction to Tubing Pump Plugin<a class="headerlink" href="#introduction-to-tubing-pump-plugin" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.1. </span>Introduction to Tubing Pump Plugin<a class="headerlink" href="#introduction-to-tubing-pump-plugin" title="Permalink to this headline"></a></h2>
 <img alt="../_images/1000000000000068000000579F580EDEB3E6712F.png" class="align-left" src="../_images/1000000000000068000000579F580EDEB3E6712F.png" />
 <p>Press the <span class="guilabel">Tubing Pump</span> button in the side bar to show the tubing
 pump view. The view shows the operating panels for all tubing pumps.</p>
@@ -124,9 +125,9 @@ pump view. The view shows the operating panels for all tubing pumps.</p>
 <img alt="../_images/10000000000002370000016FE8244C6EB3A2238E.png" src="../_images/10000000000002370000016FE8244C6EB3A2238E.png" />
 </section>
 <section id="tubing-pump-operating-panel">
-<h2><span class="section-number">10.2. </span>Tubing Pump Operating Panel<a class="headerlink" href="#tubing-pump-operating-panel" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.2. </span>Tubing Pump Operating Panel<a class="headerlink" href="#tubing-pump-operating-panel" title="Permalink to this headline"></a></h2>
 <section id="operating-parameters">
-<h3><span class="section-number">10.2.1. </span>Operating Parameters<a class="headerlink" href="#operating-parameters" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.2.1. </span>Operating Parameters<a class="headerlink" href="#operating-parameters" title="Permalink to this headline"></a></h3>
 <img alt="../_images/10000000000000BC0000016FB42FD11BDAB75F52.png" src="../_images/10000000000000BC0000016FB42FD11BDAB75F52.png" />
 <ol class="arabic simple">
 <li><p>Pump Caption (customizable)</p></li>
@@ -137,13 +138,13 @@ pump view. The view shows the operating panels for all tubing pumps.</p>
 </ol>
 </section>
 <section id="pump-caption">
-<h3><span class="section-number">10.2.2. </span>Pump Caption<a class="headerlink" href="#pump-caption" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.2.2. </span>Pump Caption<a class="headerlink" href="#pump-caption" title="Permalink to this headline"></a></h3>
 <p>You can change the caption of each pump at any time to reflect the
 function or fluids of the respective pump. To change the caption label,
 directly click the description <span class="guinum">❶</span> and type in the new name.</p>
 </section>
 <section id="tubing-configuration">
-<h3><span class="section-number">10.2.3. </span>Tubing Configuration<a class="headerlink" href="#tubing-configuration" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.2.3. </span>Tubing Configuration<a class="headerlink" href="#tubing-configuration" title="Permalink to this headline"></a></h3>
 <p>The input box <span class="guilabel">Tube</span> <span class="guinum">❷</span> shows the name of the currently configured
 tubing. Click on the wrench symbol right of the input area to change
 the tubing configuration. This will open the <em>Tube Selection</em> dialog
@@ -164,7 +165,7 @@ the configuration by clicking <span class="guilabel">OK</span>.</p>
 </section>
 </section>
 <section id="manual-dosing">
-<h2><span class="section-number">10.3. </span>Manual Dosing<a class="headerlink" href="#manual-dosing" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.3. </span>Manual Dosing<a class="headerlink" href="#manual-dosing" title="Permalink to this headline"></a></h2>
 <p>Proceed as follows to configure a manual dosing task:</p>
 <img alt="../_images/10000000000000BC000000EA4601210AAF5F0BB0.png" src="../_images/10000000000000BC000000EA4601210AAF5F0BB0.png" />
 <ol class="arabic simple">
@@ -197,13 +198,13 @@ volume value.</p>
 </div>
 </section>
 <section id="script-functions">
-<h2><span class="section-number">10.4. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.4. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
 <p>The plugin offers a number of script functions which can be used to
 program automatic sequences or for time-controlled dosing of liquids.
 The following script functions are available:</p>
 <img alt="../_images/100002010000013E00000090BB3C192C92C4530C.png" src="../_images/100002010000013E00000090BB3C192C92C4530C.png" />
 <section id="pump-volume">
-<h3><span class="section-number">10.4.1. </span>Pump Volume<a class="headerlink" href="#pump-volume" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.4.1. </span>Pump Volume<a class="headerlink" href="#pump-volume" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000090100003505000035055D465DF5B68FF7A7.svg"><img alt="../_images/1000090100003505000035055D465DF5B68FF7A7.svg" class="align-left" src="../_images/1000090100003505000035055D465DF5B68FF7A7.svg" width="60" /></a>
 <p>With this function, you can pump a specific volume at a
 precisely defined flow rate. You can set all the parameters in the
@@ -226,7 +227,7 @@ flow rate and volume) you can enter variables.</p>
 </div>
 </section>
 <section id="generate-flow">
-<h3><span class="section-number">10.4.2. </span>Generate Flow<a class="headerlink" href="#generate-flow" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.4.2. </span>Generate Flow<a class="headerlink" href="#generate-flow" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000990000035050000350554270FC6A841A39C.svg"><img alt="../_images/10000990000035050000350554270FC6A841A39C.svg" class="align-left" src="../_images/10000990000035050000350554270FC6A841A39C.svg" width="60" /></a>
 <p>This function is used to generate a constant flow rate. In
 the configuration area, you can select the dosing module and set the
@@ -235,7 +236,7 @@ script function is not executed until the module has stopped or reached
 one of the limit positions.</p>
 </section>
 <section id="stop-pumping">
-<h3><span class="section-number">10.4.3. </span>Stop Pumping<a class="headerlink" href="#stop-pumping" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">11.4.3. </span>Stop Pumping<a class="headerlink" href="#stop-pumping" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg"><img alt="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg" class="align-left" src="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg" width="60" /></a>
 <p>You can immediately stop an active dosing process of a pump
 with this function.</p>
@@ -247,15 +248,15 @@ with this function.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../qmixv_EN/qmixv_EN.html" class="btn btn-neutral float-left" title="9. Valve Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../balance_EN/balance_EN.html" class="btn btn-neutral float-right" title="11. Balances Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../qmixv_EN/qmixv_EN.html" class="btn btn-neutral float-left" title="10. Valve Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../balance_EN/balance_EN.html" class="btn btn-neutral float-right" title="12. Balances Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
+      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
       </span></p>
   </div>
 

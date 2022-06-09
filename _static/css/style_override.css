@@ -178,7 +178,7 @@ html[data-theme='dark'] .rst-content .menuselection {
     font-family: "Source Code Pro",monospace;
     padding: .2rem .4rem;
     border-radius: .2rem;
-    font-size: 70%;
+    font-size: 80%;
     font-weight: 600;
     /*color: #212121;*/
     background-color: #f2f2f2;
@@ -190,7 +190,7 @@ html[data-theme='dark'] .rst-content .kbd {
     font-family: "Source Code Pro",monospace;
     padding: .2rem .4rem;
     border-radius: .2rem;
-    font-size: 70%;
+    font-size: 80%;
     font-weight: 600;
     /*color: #212121;*/
     background-color: #383838;
@@ -216,4 +216,64 @@ img {
 .wy-nav-content {
   /*max-width: none;*/
   max-width: 1024px !important;
+}
+
+
+.rst-content p.rubric {
+  margin-bottom: 10px;
+  font-size: 105%;
+  font-weight: 900;
+}
+
+
+.steps > li::marker {
+  content: "(" counter(list, decimal) ")\a0";
+  padding-left: 0px;
+  font-weight: 900;
+}
+
+.steps > li {
+  counter-increment: list;
+  margin-left: 30px !important;
+}
+
+
+.guinums {
+    padding: 0;
+    counter-reset: li-counter
+}
+
+.guinums>li {
+    list-style: none;
+    position: relative;
+    padding-left: 3.875rem;
+    padding-top: 1.2875rem;
+    border-radius: .25rem;
+    list-style: none !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+.guinums>li *:last-child {
+    margin-bottom: 0
+}
+
+.guinums>li:before {
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 1.8em;
+    width: 1.8em;
+    line-height: 1.8em;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    content: counter(li-counter, decimal);
+    counter-increment: li-counter;
+    font-weight: normal;
+    font-family: 'kievit-bold';
 }

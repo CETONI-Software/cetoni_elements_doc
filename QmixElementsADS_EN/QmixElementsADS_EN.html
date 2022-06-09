@@ -107,7 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#global-settings">2.14. Global Settings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#open-settings-dialog">2.14.1. Open settings dialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#general-settings">2.14.2. General Settings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#auto-connect">2.14.2.1. Auto Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-connect">Auto Connect</a></li>
 </ul>
 </li>
 </ul>
@@ -125,17 +125,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">8. Controller Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys1_setup_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
 </ul>
 
         </div>
@@ -223,10 +224,11 @@ you will work with a demo license again.</p>
 <h2><span class="section-number">2.3. </span>Device Configurations<a class="headerlink" href="#device-configurations" title="Permalink to this headline"></a></h2>
 <p>You have
 to install and load a device configuration, in order to be able to
-control your devices with the software. A device configuration is a
-collection of configuration files, which describe the configuration of
-all devices and modules, which together form a complex system or device.
-In the startup screen you can see all ways to get to a valid device
+control your devices with the software. A device configuration is a folder
+with a set of XML files which contain a complete description of the
+configuration of all devices in the current setup. Only devices that are
+properly configured in the device configuration are available in the CETONI
+Elements software. In the startup screen you can see all ways to get to a valid device
 configuration:</p>
 <p><img alt="Figure 1.1: First start of CETONI Elements – Startup Screen" src="../_images/1000020100000422000002BE2B654AE685AA4D8E.png" /></p>
 <section id="create-configuration">
@@ -237,8 +239,8 @@ device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
 Configurator, which is integrated in CETONI Elements. For detailed
-instructions on how to create device configurations, see Device Configurator
-section.</p>
+instructions on how to create device configurations, see
+<a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html#creating-device-configurations"><span class="std std-ref">Device Configurator</span></a> section.</p>
 </section>
 <section id="open-configuration">
 <h3><span class="section-number">2.3.2. </span>Open Configuration<a class="headerlink" href="#open-configuration" title="Permalink to this headline"></a></h3>
@@ -817,7 +819,7 @@ close the dialog.</p>
 <section id="general-settings">
 <h3><span class="section-number">2.14.2. </span>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this headline"></a></h3>
 <section id="auto-connect">
-<h4><span class="section-number">2.14.2.1. </span>Auto Connect<a class="headerlink" href="#auto-connect" title="Permalink to this headline"></a></h4>
+<h4>Auto Connect<a class="headerlink" href="#auto-connect" title="Permalink to this headline"></a></h4>
 <p>If this option is enabled, CETONI Elements automatically connects to the
 attached devices after startup. If you register CETONI Elements.exe in
 the Windows <em>Autostart</em>, you can start the CETONI Elements software
@@ -934,7 +936,7 @@ then select the default configuration.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
+      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
       </span></p>
   </div>
 

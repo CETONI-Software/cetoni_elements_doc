@@ -22,7 +22,6 @@ process :guinum:`❷`.
 
 .. image:: Pictures/sql_log_config.svg
    :width: 60
-   :height: 60
    :align: left
 
 Click the :guilabel:`Configure SQL Logger` button to open the configuration dialog.
@@ -329,6 +328,21 @@ Stop SQL Logger
    :align: left
 
 This function stops logging into SQL database.
+
+|
+
+Trigger SQL Data Logging
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/sql_log_trigger.svg
+   :width: 60
+   :align: left
+
+This function triggers the immediate logging of all channels of the SQL logger.
+Normally the data will be logged with the configured :ref:`interval<Step 3 – Configure Sample Interval>`.
+If you would like to force the immediate logging of all channels, for example
+if you would like to capture the current state of all channels if a certain
+event occurrs, then you can use this function.
 
 
 .. |numeric_prop| image:: Pictures/numeric_property.svg

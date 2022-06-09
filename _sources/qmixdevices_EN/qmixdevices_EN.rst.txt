@@ -161,7 +161,7 @@ may occur. If the device configuration was created with another software
 version, you will receive a warning message when the application is
 started.
 
-|image37|
+.. image:: Pictures/outdated_device_config.png
 
 If you see this warning, you should open the device
 configuration in the *Device Configurator*, save it and then configure
@@ -172,6 +172,8 @@ Creating a sample device configuration
 
 The following example describes the creation of a device configuration
 containing a Nemesys S dosing module and a Qmix Q+ module.
+
+.. rst-class:: steps
 
 #. :ref:`Start the Device Configurator<Starting the Device Configurator>`
 #. Left-click on the Nemesys S dosing module listed in the device list
@@ -297,6 +299,8 @@ Extending an existing device configuration
 
 The following example shows how you can add another device to the
 configuration created in the previous section.
+
+.. rst-class:: steps
 
 #. :ref:`Start the Device Configurator<Starting the Device Configurator>`
 #. After start of the Device Configurator the device configuration

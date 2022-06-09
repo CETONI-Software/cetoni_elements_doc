@@ -77,10 +77,11 @@ Device Configurations
 
 You have
 to install and load a device configuration, in order to be able to
-control your devices with the software. A device configuration is a
-collection of configuration files, which describe the configuration of
-all devices and modules, which together form a complex system or device.
-In the startup screen you can see all ways to get to a valid device
+control your devices with the software. A device configuration is a folder 
+with a set of XML files which contain a complete description of the 
+configuration of all devices in the current setup. Only devices that are 
+properly configured in the device configuration are available in the CETONI 
+Elements software. In the startup screen you can see all ways to get to a valid device
 configuration:
 
 |Figure 1.1: First start of CETONI Elements – Startup Screen|
@@ -98,8 +99,8 @@ device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
 Configurator, which is integrated in CETONI Elements. For detailed
-instructions on how to create device configurations, see Device Configurator
-section.
+instructions on how to create device configurations, see 
+:ref:`Device Configurator<Creating Device Configurations>` section.
 
 Open Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Controller Plugin &mdash; CETONI Elements Manual</title>
+  <title>9. Controller Plugin &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Valve Plugin" href="../qmixv_EN/qmixv_EN.html" />
-    <link rel="prev" title="7. I/O Plugin" href="../qmixio_EN/qmixio_EN.html" /> 
+    <link rel="next" title="10. Valve Plugin" href="../qmixv_EN/qmixv_EN.html" />
+    <link rel="prev" title="8. I/O Plugin" href="../qmixio_EN/qmixio_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,63 +60,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">7. I/O Plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Controller Plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">8.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#controller-channel-list">8.2. Controller Channel List</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#channel-types">8.2.1. Channel types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-channel-names">8.2.2. Changing channel names</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#switching-control-devices-on-off">8.2.3. Switching control devices on / off</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#entering-setpoint">8.2.4. Entering setpoint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys1_setup_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Controller Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">9.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controller-channel-list">9.2. Controller Channel List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#channel-types">9.2.1. Channel types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-channel-names">9.2.2. Changing channel names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switching-control-devices-on-off">9.2.3. Switching control devices on / off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entering-setpoint">9.2.4. Entering setpoint</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#context-menu-for-control-channels">8.3. Context menu for control channels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-channel-settings">8.4. Configure Channel Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#selection-and-configuration-of-controller-parameters">8.5. Selection and configuration of controller parameters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">8.5.1. Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-controller-parameters">8.5.2. Changing controller parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#selecting-a-pid-parameter-preset">8.5.3. Selecting a PID Parameter Preset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-a-pid-parameter-preset">8.5.4. Creating a PID Parameter Preset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-pid-parameter-presets">8.5.5. Deleting PID Parameter Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#context-menu-for-control-channels">9.3. Context menu for control channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-channel-settings">9.4. Configure Channel Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selection-and-configuration-of-controller-parameters">9.5. Selection and configuration of controller parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">9.5.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-controller-parameters">9.5.2. Changing controller parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-a-pid-parameter-preset">9.5.3. Selecting a PID Parameter Preset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-pid-parameter-preset">9.5.4. Creating a PID Parameter Preset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-pid-parameter-presets">9.5.5. Deleting PID Parameter Presets</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#user-defined-control-channels">8.6. User defined control channels</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#user-defined-control-channels-introduction">8.6.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-control-channels">8.6.2. Creating control channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-the-output-value-scaling-or-unit">8.6.3. Changing the output value scaling or unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-defined-control-channels">9.6. User defined control channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-defined-control-channels-introduction">9.6.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-control-channels">9.6.2. Creating control channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-output-value-scaling-or-unit">9.6.3. Changing the output value scaling or unit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#controller-script-functions">8.7. Controller Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-controller-script-functions">8.7.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-controller-param">8.7.2. Set Controller Param</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pid-control-function">8.7.3. PID Control Function</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#introduction-pid-control-function">8.7.3.1. Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configuration">8.7.3.2. Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pid-control-parameters">8.7.3.3. PID control parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#programming-the-control-loop">8.7.3.4. Programming the control loop</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-set-controller-parameters">8.8. How to set controller parameters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#closed-control-loop-and-pid-controller-equation">8.8.1. Closed control loop and PID controller equation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#preparations-for-setting-controller-parameters">8.8.2. Preparations for setting controller parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#choosing-the-sample-time">8.8.3. Choosing the sample time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-the-control-value-limits">8.8.4. Setting the control value limits</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#determination-of-pi-parameters">8.8.5. Determination of PI parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controller-script-functions">9.7. Controller Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-controller-script-functions">9.7.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-controller-param">9.7.2. Set Controller Param</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pid-control-function">9.7.3. PID Control Function</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-pid-control-function">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pid-control-parameters">PID control parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programming-the-control-loop">Programming the control loop</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">9. Valve Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">10. Tubing Pump Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">11. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">12. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">13. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">14. SQL Database Logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">15. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">16. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">17. Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-controller-parameters">9.8. How to set controller parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#closed-control-loop-and-pid-controller-equation">9.8.1. Closed control loop and PID controller equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparations-for-setting-controller-parameters">9.8.2. Preparations for setting controller parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choosing-the-sample-time">9.8.3. Choosing the sample time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-the-control-value-limits">9.8.4. Setting the control value limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#determination-of-pi-parameters">9.8.5. Determination of PI parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
 </ul>
 
         </div>
@@ -133,7 +134,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">8. </span>Controller Plugin</li>
+      <li><span class="section-number">9. </span>Controller Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qmixcontroller_EN/qmixcontroller_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -144,9 +145,9 @@
            <div itemprop="articleBody">
              
   <section id="controller-plugin">
-<h1><span class="section-number">8. </span>Controller Plugin<a class="headerlink" href="#controller-plugin" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">9. </span>Controller Plugin<a class="headerlink" href="#controller-plugin" title="Permalink to this headline"></a></h1>
 <section id="introduction">
-<h2><span class="section-number">8.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p>The Controller plugin is used to integrate the CETONI controller
 modules into the CETONI Elements software and to allow the creation of dynamic
 user defined control channels. The following hardware modules are
@@ -161,7 +162,7 @@ syringe pumps)</p></li>
 </ul>
 </section>
 <section id="controller-channel-list">
-<h2><span class="section-number">8.2. </span>Controller Channel List<a class="headerlink" href="#controller-channel-list" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.2. </span>Controller Channel List<a class="headerlink" href="#controller-channel-list" title="Permalink to this headline"></a></h2>
 <p>All controller channels are shown in the <span class="guilabel">Controller Channels</span> list.</p>
 <p><img alt="Figure 1: Controller Channel list" src="../_images/10000000000001D5000000F75FCDB73E.png" /></p>
 <p>You can identify the different types of channels (cooling module Q-,
@@ -182,7 +183,7 @@ or off. Click the LED to switch the control loop on / off.</p></li>
 <li><p><strong>Actual Value</strong> - shows the actual value</p></li>
 </ul>
 <section id="channel-types">
-<h3><span class="section-number">8.2.1. </span>Channel types<a class="headerlink" href="#channel-types" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.2.1. </span>Channel types<a class="headerlink" href="#channel-types" title="Permalink to this headline"></a></h3>
 <p>The following types of channels are currently supported:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -203,7 +204,7 @@ or off. Click the LED to switch the control loop on / off.</p></li>
 </table>
 </section>
 <section id="changing-channel-names">
-<h3><span class="section-number">8.2.2. </span>Changing channel names<a class="headerlink" href="#changing-channel-names" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.2.2. </span>Changing channel names<a class="headerlink" href="#changing-channel-names" title="Permalink to this headline"></a></h3>
 <p>You can change the name of a channel at any time and, for example,
 assign a name suitable for your particular application.</p>
 <p><img alt="Figure 2: Changing channel names" src="../_images/10000000000001D5000000F7561B0C23.png" /></p>
@@ -216,13 +217,13 @@ above).</p></li>
 </ol>
 </section>
 <section id="switching-control-devices-on-off">
-<h3><span class="section-number">8.2.3. </span>Switching control devices on / off<a class="headerlink" href="#switching-control-devices-on-off" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.2.3. </span>Switching control devices on / off<a class="headerlink" href="#switching-control-devices-on-off" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure 3: Switching control devices on/off" src="../_images/10000000000001D5000000D144CCA89A.png" /></p>
 <p>To switch the controller on or off, simply click the LED of the channel you
 want to switch.</p>
 </section>
 <section id="entering-setpoint">
-<h3><span class="section-number">8.2.4. </span>Entering setpoint<a class="headerlink" href="#entering-setpoint" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.2.4. </span>Entering setpoint<a class="headerlink" href="#entering-setpoint" title="Permalink to this headline"></a></h3>
 <p>To input a setpoint, double-click in the <span class="guilabel">Setpoint</span> column of the channel
 with the setpoint you want to change. Now enter the setpoint in the
 editing window that opens (Figure below) or use the arrow buttons to
@@ -231,7 +232,7 @@ raise or lower the setpoint incrementally.</p>
 </section>
 </section>
 <section id="context-menu-for-control-channels">
-<h2><span class="section-number">8.3. </span>Context menu for control channels<a class="headerlink" href="#context-menu-for-control-channels" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.3. </span>Context menu for control channels<a class="headerlink" href="#context-menu-for-control-channels" title="Permalink to this headline"></a></h2>
 <p>By right-click into the control channel list you can display a context
 menu with additional functions.</p>
 <img alt="../_images/100002010000022300000129ACB2B97D.png" src="../_images/100002010000022300000129ACB2B97D.png" />
@@ -288,7 +289,7 @@ channels.</p>
 </table>
 </section>
 <section id="configure-channel-settings">
-<h2><span class="section-number">8.4. </span>Configure Channel Settings<a class="headerlink" href="#configure-channel-settings" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.4. </span>Configure Channel Settings<a class="headerlink" href="#configure-channel-settings" title="Permalink to this headline"></a></h2>
 <p>For opening the scaling configuration dialog select <span class="menuselection">Configure channel</span>
 in the context menu of the control channel.</p>
 <p><img alt="Figure 6: Configure scaling" src="../_images/100002010000034C000001C3C2B07A89.png" /></p>
@@ -298,9 +299,9 @@ the configuration of the I/O channels of the <a class="reference internal" href=
 detailed description read the section <a class="reference internal" href="../qmixio_EN/qmixio_EN.html#i-o-channel-configuration"><span class="std std-ref">I/O Channel Configuration</span></a>.</p>
 </section>
 <section id="selection-and-configuration-of-controller-parameters">
-<h2><span class="section-number">8.5. </span>Selection and configuration of controller parameters<a class="headerlink" href="#selection-and-configuration-of-controller-parameters" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.5. </span>Selection and configuration of controller parameters<a class="headerlink" href="#selection-and-configuration-of-controller-parameters" title="Permalink to this headline"></a></h2>
 <section id="overview">
-<h3><span class="section-number">8.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
 <p>To set the optimal control behavior, you can adjust the controller
 parameters of each single channel. For this you can either choose from a
 list of predefined PID parameter sets or create new parameter sets.</p>
@@ -313,14 +314,14 @@ menu.</p>
 of <span class="guilabel">PID Parameter Presets</span> <span class="guinum">❷</span>.</p>
 </section>
 <section id="changing-controller-parameters">
-<h3><span class="section-number">8.5.2. </span>Changing controller parameters<a class="headerlink" href="#changing-controller-parameters" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.2. </span>Changing controller parameters<a class="headerlink" href="#changing-controller-parameters" title="Permalink to this headline"></a></h3>
 <p>To edit the current controller parameters, double-click with the mouse
 in the <span class="guilabel">Current Channel Parameters</span> area in the field you want to change
 and enter the new value:</p>
 <p><img alt="Figure 8: Changing controller parameters" src="../_images/100002010000025A0000008921C42A7E.png" /></p>
 </section>
 <section id="selecting-a-pid-parameter-preset">
-<h3><span class="section-number">8.5.3. </span>Selecting a PID Parameter Preset<a class="headerlink" href="#selecting-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.3. </span>Selecting a PID Parameter Preset<a class="headerlink" href="#selecting-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure 9: Selecting a PID Parameter Preset" src="../_images/100002010000034C00000228CAC67298.png" /></p>
 <p>Select a PID Preset from
 the table of available presets by left-clicking on it <span class="guinum">❶</span> and then click
@@ -339,7 +340,7 @@ parameter sets with controller parameters.</p>
 </div>
 </section>
 <section id="creating-a-pid-parameter-preset">
-<h3><span class="section-number">8.5.4. </span>Creating a PID Parameter Preset<a class="headerlink" href="#creating-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.4. </span>Creating a PID Parameter Preset<a class="headerlink" href="#creating-a-pid-parameter-preset" title="Permalink to this headline"></a></h3>
 <p>By selecting the <span class="guilabel">Create Preset</span> button <span class="guinum">❶</span> you create a new set of
 controller parameters <span class="guinum">❷</span>. (see figure below) You can then edit the
 individual values of the parameter set by double-clicking in a field <span class="guinum">❸</span>
@@ -351,7 +352,7 @@ controlled system in your application. For finding adequate controller
 parameters proceed as described in section <a class="reference internal" href="#how-to-set-controller-parameters"><span class="std std-ref">How to set controller parameters</span></a>.</p>
 </section>
 <section id="deleting-pid-parameter-presets">
-<h3><span class="section-number">8.5.5. </span>Deleting PID Parameter Presets<a class="headerlink" href="#deleting-pid-parameter-presets" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.5.5. </span>Deleting PID Parameter Presets<a class="headerlink" href="#deleting-pid-parameter-presets" title="Permalink to this headline"></a></h3>
 <p>Select a set of controller parameters from the table <span class="guinum">❶</span> and left-click
 the <span class="guilabel">Delete Selected Preset</span> button <span class="guinum">❷</span> for deleting it. (see figure
 below).</p>
@@ -365,16 +366,16 @@ recognized in the table by the lock symbol.</p>
 </section>
 </section>
 <section id="user-defined-control-channels">
-<h2><span class="section-number">8.6. </span>User defined control channels<a class="headerlink" href="#user-defined-control-channels" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.6. </span>User defined control channels<a class="headerlink" href="#user-defined-control-channels" title="Permalink to this headline"></a></h2>
 <section id="user-defined-control-channels-introduction">
-<span id="id1"></span><h3><span class="section-number">8.6.1. </span>Introduction<a class="headerlink" href="#user-defined-control-channels-introduction" title="Permalink to this headline"></a></h3>
+<span id="id1"></span><h3><span class="section-number">9.6.1. </span>Introduction<a class="headerlink" href="#user-defined-control-channels-introduction" title="Permalink to this headline"></a></h3>
 <p>You can create customized control channels using arbitrary device
 properties for control loop input and output. Thus using i.e. a pressure
 measurement channel of a QmixP device and a Nemesys syringe pump you
 can build up a pressure control.</p>
 </section>
 <section id="creating-control-channels">
-<h3><span class="section-number">8.6.2. </span>Creating control channels<a class="headerlink" href="#creating-control-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.2. </span>Creating control channels<a class="headerlink" href="#creating-control-channels" title="Permalink to this headline"></a></h3>
 <p>By right-clicking the control channel list and selecting the menu item
 <span class="menuselection">Create user channel</span> in the context menu, you open the dialog
 for creating custom control channels.</p>
@@ -401,7 +402,7 @@ controlled system.</p>
 </div>
 </section>
 <section id="changing-the-output-value-scaling-or-unit">
-<h3><span class="section-number">8.6.3. </span>Changing the output value scaling or unit<a class="headerlink" href="#changing-the-output-value-scaling-or-unit" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.6.3. </span>Changing the output value scaling or unit<a class="headerlink" href="#changing-the-output-value-scaling-or-unit" title="Permalink to this headline"></a></h3>
 <p>The output value is determined by the PID control algorithm and written
 to the output device without any scaling information. This means that
 you need to adjust the controller parameters, in particular the control
@@ -419,16 +420,16 @@ the syringe.</p>
 </section>
 </section>
 <section id="controller-script-functions">
-<h2><span class="section-number">8.7. </span>Controller Script Functions<a class="headerlink" href="#controller-script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.7. </span>Controller Script Functions<a class="headerlink" href="#controller-script-functions" title="Permalink to this headline"></a></h2>
 <section id="introduction-controller-script-functions">
-<span id="id2"></span><h3><span class="section-number">8.7.1. </span>Introduction<a class="headerlink" href="#introduction-controller-script-functions" title="Permalink to this headline"></a></h3>
+<span id="id2"></span><h3><span class="section-number">9.7.1. </span>Introduction<a class="headerlink" href="#introduction-controller-script-functions" title="Permalink to this headline"></a></h3>
 <p>The controller plugin contains script functions for changing the
 controller parameters from a script. This makes it possible to achieve,
 for example, time controlled temperature curves.</p>
 <p><img alt="Figure 14: Qmix controller script functions" src="../_images/10000201000001240000007754114FA5.png" /></p>
 </section>
 <section id="set-controller-param">
-<h3><span class="section-number">8.7.2. </span>Set Controller Param<a class="headerlink" href="#set-controller-param" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.7.2. </span>Set Controller Param<a class="headerlink" href="#set-controller-param" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000067B0000388E0000388E578BCCCA.svg"><img alt="../_images/1000067B0000388E0000388E578BCCCA.svg" class="align-left" src="../_images/1000067B0000388E0000388E578BCCCA.svg" width="60" /></a>
 <p>With this function, you can transfer a new setpoint to the
 controller channel or switch the control loop on or off. To switch it on
@@ -440,9 +441,9 @@ configuration area (see figure below).</p>
 <img alt="../_images/10000000000001A7000000C4FD6D097D.png" src="../_images/10000000000001A7000000C4FD6D097D.png" />
 </section>
 <section id="pid-control-function">
-<h3><span class="section-number">8.7.3. </span>PID Control Function<a class="headerlink" href="#pid-control-function" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.7.3. </span>PID Control Function<a class="headerlink" href="#pid-control-function" title="Permalink to this headline"></a></h3>
 <section id="introduction-pid-control-function">
-<span id="id3"></span><h4><span class="section-number">8.7.3.1. </span>Introduction<a class="headerlink" href="#introduction-pid-control-function" title="Permalink to this headline"></a></h4>
+<span id="id3"></span><h4>Introduction<a class="headerlink" href="#introduction-pid-control-function" title="Permalink to this headline"></a></h4>
 <a class="reference internal image-reference" href="../_images/10000B740000388E0000388E0BB445FF.svg"><img alt="../_images/10000B740000388E0000388E0BB445FF.svg" class="align-left" src="../_images/10000B740000388E0000388E0BB445FF.svg" width="60" /></a>
 <p>This function implements a PID controller using a PID
 algorithm for applications that require an efficient algorithm. The PID
@@ -461,7 +462,7 @@ controller output value to the system, which in turn drives the process
 variable toward the setpoint value.</p>
 </section>
 <section id="configuration">
-<h4><span class="section-number">8.7.3.2. </span>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h4>
+<h4>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h4>
 <p>In the configuration area of this function you can configure all
 parameters required for proper PID control.</p>
 <p>You need to configure the following parameters:</p>
@@ -505,11 +506,11 @@ the unneeded PID gains to 0.</p>
 </div>
 </section>
 <section id="pid-control-parameters">
-<h4><span class="section-number">8.7.3.3. </span>PID control parameters<a class="headerlink" href="#pid-control-parameters" title="Permalink to this headline"></a></h4>
+<h4>PID control parameters<a class="headerlink" href="#pid-control-parameters" title="Permalink to this headline"></a></h4>
 <p>A set of PID control parameters contains a proportional, an integral
 and a derivative part.</p>
 <section id="proportional-part">
-<h5><span class="section-number">8.7.3.3.1. </span>Proportional part<a class="headerlink" href="#proportional-part" title="Permalink to this headline"></a></h5>
+<h5>Proportional part<a class="headerlink" href="#proportional-part" title="Permalink to this headline"></a></h5>
 <p>The proportional part computes the control deviation from the setpoint
 (W) and the actual value (X)</p>
 <a class="reference internal image-reference" href="../_images/math_01.png"><img alt="../_images/math_01.png" src="../_images/math_01.png" style="width: 93.4px; height: 22.400000000000002px;" /></a>
@@ -519,7 +520,7 @@ proportional part.</p>
 <a class="reference internal image-reference" href="../_images/math_02.png"><img alt="../_images/math_02.png" src="../_images/math_02.png" style="width: 61.800000000000004px; height: 13.4px;" /></a>
 </section>
 <section id="integral-part">
-<h5><span class="section-number">8.7.3.3.2. </span>Integral part<a class="headerlink" href="#integral-part" title="Permalink to this headline"></a></h5>
+<h5>Integral part<a class="headerlink" href="#integral-part" title="Permalink to this headline"></a></h5>
 <p>Mathematics forms the integral part the area enclosed by control
 deviation and timeline. If there is a contant control error, the
 integral part grows ramp shape.</p>
@@ -550,7 +551,7 @@ steady-state control error.</p>
 </div>
 </section>
 <section id="derivative-part">
-<h5><span class="section-number">8.7.3.3.3. </span>Derivative Part<a class="headerlink" href="#derivative-part" title="Permalink to this headline"></a></h5>
+<h5>Derivative Part<a class="headerlink" href="#derivative-part" title="Permalink to this headline"></a></h5>
 <p>The derivative part counteracts changes in the actual value. Two
 scenarios can be considered with respect to the effect of derivative
 part.</p>
@@ -572,7 +573,7 @@ the bigger the effect of the derivative part and the stronger the change
 of the actual value is counteracted.</p>
 </section>
 <section id="summary">
-<h5><span class="section-number">8.7.3.3.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h5>
+<h5>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h5>
 <p>The following table summarizes the effect of the different control
 parameters.</p>
 <table class="docutils align-default">
@@ -645,7 +646,7 @@ value)</p></td>
 </section>
 </section>
 <section id="programming-the-control-loop">
-<h4><span class="section-number">8.7.3.4. </span>Programming the control loop<a class="headerlink" href="#programming-the-control-loop" title="Permalink to this headline"></a></h4>
+<h4>Programming the control loop<a class="headerlink" href="#programming-the-control-loop" title="Permalink to this headline"></a></h4>
 <p>This section shows you how to realize a complete PID control loop in a
 script program by using the PID control function.</p>
 <p><img alt="Figure : PID controller example scripts" src="../_images/10000201000001A3000000BAB53FB1F8.png" /></p>
@@ -682,9 +683,9 @@ performance</p>
 </section>
 </section>
 <section id="how-to-set-controller-parameters">
-<h2><span class="section-number">8.8. </span>How to set controller parameters<a class="headerlink" href="#how-to-set-controller-parameters" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.8. </span>How to set controller parameters<a class="headerlink" href="#how-to-set-controller-parameters" title="Permalink to this headline"></a></h2>
 <section id="closed-control-loop-and-pid-controller-equation">
-<h3><span class="section-number">8.8.1. </span>Closed control loop and PID controller equation<a class="headerlink" href="#closed-control-loop-and-pid-controller-equation" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.1. </span>Closed control loop and PID controller equation<a class="headerlink" href="#closed-control-loop-and-pid-controller-equation" title="Permalink to this headline"></a></h3>
 <p>The controller (e.g. PID controller) and the controlled system (e.g.
 temperature-controlled system) together make up a feedback system, the
 closed control loop. (see figure below)</p>
@@ -729,7 +730,7 @@ K<sub>p</sub>and T<sub>d</sub>.</p></td>
 </table>
 </section>
 <section id="preparations-for-setting-controller-parameters">
-<h3><span class="section-number">8.8.2. </span>Preparations for setting controller parameters<a class="headerlink" href="#preparations-for-setting-controller-parameters" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.2. </span>Preparations for setting controller parameters<a class="headerlink" href="#preparations-for-setting-controller-parameters" title="Permalink to this headline"></a></h3>
 <p>Initially make the plot of the datalogger plugin show the measurement
 value and the control value to you. (refer to section <a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html#process-data-graph"><span class="std std-ref">Process Data Graph</span></a>) <span class="guinum">❶</span> It is recommended to do the
 same with the setpoint value. It is not necessary but facilitates
@@ -741,7 +742,7 @@ frequency of the actual value. You should get a useful graph if you set
 section).</p>
 </section>
 <section id="choosing-the-sample-time">
-<h3><span class="section-number">8.8.3. </span>Choosing the sample time<a class="headerlink" href="#choosing-the-sample-time" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.3. </span>Choosing the sample time<a class="headerlink" href="#choosing-the-sample-time" title="Permalink to this headline"></a></h3>
 <p>The time between 2 computations of the control value is defined as
 sample time. The smaller the sample time the more often the control
 value is calculated. As a rule of thumb you can keep in mind that the
@@ -776,7 +777,7 @@ constant occurring in the control loop.</p>
 </div>
 </section>
 <section id="setting-the-control-value-limits">
-<h3><span class="section-number">8.8.4. </span>Setting the control value limits<a class="headerlink" href="#setting-the-control-value-limits" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.4. </span>Setting the control value limits<a class="headerlink" href="#setting-the-control-value-limits" title="Permalink to this headline"></a></h3>
 <p>You can limit the minimum (U<sub>min</sub>) and the maximum
 (U<sub>max</sub>) control value of the controllers. The
 control value should have a sufficient stroke in order to reach the
@@ -796,7 +797,7 @@ value can lead to damage of the controlled system.</p>
 </div>
 </section>
 <section id="determination-of-pi-parameters">
-<h3><span class="section-number">8.8.5. </span>Determination of PI parameters<a class="headerlink" href="#determination-of-pi-parameters" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">9.8.5. </span>Determination of PI parameters<a class="headerlink" href="#determination-of-pi-parameters" title="Permalink to this headline"></a></h3>
 <p>A temperature control system usually makes up a delay line containing
 one or more delay time constants. It can often be approximated by a
 first-order delay line. The appropriate step response function is:</p>
@@ -882,15 +883,15 @@ determined and assign a unique name.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../qmixio_EN/qmixio_EN.html" class="btn btn-neutral float-left" title="7. I/O Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../qmixv_EN/qmixv_EN.html" class="btn btn-neutral float-right" title="9. Valve Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../qmixio_EN/qmixio_EN.html" class="btn btn-neutral float-left" title="8. I/O Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../qmixv_EN/qmixv_EN.html" class="btn btn-neutral float-right" title="10. Valve Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 07, 2022 11:00.
+      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
       </span></p>
   </div>
 

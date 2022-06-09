@@ -42,7 +42,7 @@ your navigation through this document:
    :maxdepth: 2
    :caption: Contents:
    :hidden:
-   :numbered:
+   :numbered: 3
 
    Installation_EN/Installation_EN.rst
    QmixElementsADS_EN/QmixElementsADS_EN.rst
@@ -50,6 +50,7 @@ your navigation through this document:
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
    javascript_EN/javascript_EN.rst
+   nemesys_EN/nemesys1_setup_EN.rst
    qmixio_EN/qmixio_EN.rst
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
