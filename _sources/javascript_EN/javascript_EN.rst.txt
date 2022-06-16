@@ -690,3 +690,35 @@ devices and application objects.
     :members-only:
     :membergroups: scripting
 
+
+QFile
+~~~~~~~~
+
+The :code:`QFile` class provides an interface for reading from and writing to 
+files. It is a wrapper for the `QFile <https://doc.qt.io/qt-5/qfile.html>`_ class
+from the Qt framework.
+
+.. doxygenclass:: QtLabb::Script::CScriptQFile
+    :project: python
+    :path: ../doxygen/xml
+    :members:
+
+
+QSqlDatabase
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. doxygenclass:: QtLabb::Script::CScriptQSqlDatabase
+    :project: python
+    :path: ../doxygen/xml
+    :members:
+    :undoc-members:
+
+
+QSqlQuery
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. doxygenclass:: QtLabb::Script::CScriptQSqlQuery
+    :project: python
+    :path: ../doxygen/xml
+    :members:
+    :undoc-members:

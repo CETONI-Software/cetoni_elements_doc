@@ -591,3 +591,4 @@ the control panel of the pump.
 
 .. |Figure 26: Deleting external valve| image:: Pictures/10000000000001AC00000091DBC619732FF93701.png
 
+.. include:: nemesys2_directcontrol_EN.rst

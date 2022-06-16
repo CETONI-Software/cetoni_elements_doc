@@ -84,6 +84,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#accessing-signals-and-slots-in-scripts">6.8. Accessing signals and slots in scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#api-reference">6.9. API Reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scriptenv">6.9.1. ScriptEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qfile">6.9.2. QFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qsqldatabase">6.9.3. QSqlDatabase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qsqlquery">6.9.4. QSqlQuery</a></li>
 </ul>
 </li>
 </ul>
@@ -745,27 +748,87 @@ has finished.</p>
 devices and application objects.</p>
 <div class="breathe-sectiondef docutils container">
 <dl class="cpp enum">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCodeE">
-<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCodeE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCodeE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ad8d1ef42d08293676bf7461ab71be6cc"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MainFunctionReturnCode</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCodeE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eMainFunctionReturnCode</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The main function return code. </p>
 <p>Normally the script execution finishes, if the JavaScript main() function is left. To indicate, that script execution should not finish, i.e. if you would like to wait for a certain event or signal, then your main function can return KEEP_RUNNING, to indicate, that you would like to stay in the current script function.</p>
 <p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">FINISH</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">ScriptFinish</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
  </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode6FINISHE">
-<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode6FINISHE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode6FINISHE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ad8d1ef42d08293676bf7461ab71be6cca1deb1313dd1e8fe8771c9a39cce83fa3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FINISH</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode6FINISHE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScriptFinish</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>finish current script function </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode12KEEP_RUNNINGE">
-<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode12KEEP_RUNNINGE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode12KEEP_RUNNINGE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ad8d1ef42d08293676bf7461ab71be6cca154fad9aada7b1ed8cc9d74e0e0f4a86"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEEP_RUNNING</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess22MainFunctionReturnCode12KEEP_RUNNINGE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScriptKeepRunning</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>keep the JavaScript engine running and stay in current script </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eProjectLocation</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This enum describes the different locations that can be queried using <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37"><span class="std std-ref">projectPath()</span></a> function. </p>
+<p>The following example shows, how to get the data path of the current project:</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">projectPath</span><span class="p">(</span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">LocationData</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationProject</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>location of the current project directory </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationConfigurations</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>ConfigurationsLocation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationLog</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>LogLocation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationScripts</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>ScriptsLocation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationPictures</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>PicturesLocation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationVideos</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>VideosLocations. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationData</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>DataLocation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationSettings</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>location where application can store settings and configuration files </p>
 </dd></dl>
 
 </dd></dl>
@@ -863,7 +926,475 @@ devices and application objects.</p>
  </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess11projectPathEi">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess11projectPathEi"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess11projectPathEi"></span><span id="QtLabb::Script::CScriptEnvAccess::projectPath__iC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">projectPath</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11projectPathEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the absolute path of a certain data location in the current project. </p>
+<p>
+The following example shows, how to get the data path of the current project:</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">projectPath</span><span class="p">(</span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">LocationData</span><span class="p">);</span><span class="w"></span>
+<span class="n">path</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;/TestFile1.txt&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;This is just a test test&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">();</span><span class="w"></span>
+</pre></div>
 </div>
+</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9"><span class="std std-ref">eProjectLocation</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Location</strong> – Location identifier (see eProjectLocation enum)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="qfile">
+<h3><span class="section-number">6.9.2. </span>QFile<a class="headerlink" href="#qfile" title="Permalink to this headline"></a></h3>
+<p>The <code class="code docutils literal notranslate"><span class="pre">QFile</span></code> class provides an interface for reading from and writing to
+files. It is a wrapper for the <a class="reference external" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> class
+from the Qt framework.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFileE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFileE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFileE"></span><span id="QtLabb::Script::CScriptQFile"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Script</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQFile</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFileE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrapper for QFile object. </p>
+<p>The QFile class provides an interface for reading from and writing to files. The file name is usually passed in the constructor, but it can be set at any time using <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d"><span class="std std-ref">setFileName()</span></a>. QFile expects the file separator to be ‘/’ regardless of operating system. The use of other separators (e.g., ‘') is not supported. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlagE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlagE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlagE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OpenModeFlag</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlagE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This enum is used with <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"><span class="std std-ref">open()</span></a> to describe the mode in which a device is opened. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a93933c7b8ce9ab9c12411338d1f80d1a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeNotOpen</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3897825a0a50455b527ec544efb07627"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeReadOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a232357858b02da2b9323d27cbe8a21bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeWriteOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10aa4f49d99bf48a4843254c8eec533454f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeReadWrite</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10ae84b6af3903f26830faa6879300d1afa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeAppend</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a89ebc69f866cc4041ce89fad1fb1c040"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeTruncate</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a83210927f28b8ae24881d1ce4f606dc3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeText</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3bf499aed113a4a71bdd66cee40c971b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeUnbuffered</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a47420c9282a5893edbe84d517b632fac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeNewOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a924e83f029974c98e2e190481a5e242a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeExistingOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile5closeEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile5closeEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile5closeEv"></span><span id="QtLabb::Script::CScriptQFile::close"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a175862fb83360515c0f454840aa3177d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile5closeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes the file. </p>
+<p>Calls flush() and closes the file. Errors from flush are ignored. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4copyERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4copyERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4copyERK7QString"></span><span id="QtLabb::Script::CScriptQFile::copy__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4copyERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Copies the file named <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to newName. </p>
+<p>This file is closed before it is copied. If the copied file is a symbolic link (symlink), the file it refers to is copied, not the link itself. With the exception of permissions, which are copied, no other file metadata is copied. Returns true if successful; otherwise returns false. Note that if a file with the name newName already exists, <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4"><span class="std std-ref">copy()</span></a> returns false. This means QFile will not overwrite it. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString"></span><span id="QtLabb::Script::CScriptQFile::CScriptQFile__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a9e419758b80f4b7df949e3b8b0645c35"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructs a new file object to represent the file with the specified name. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="s">&quot;C:/temp/test1.txt&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile11errorStringEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile11errorStringEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile11errorStringEv"></span><span id="QtLabb::Script::CScriptQFile::errorStringC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ad4d1284536fa8ad66c535f78452b401f"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">errorString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile11errorStringEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a human-readable description of the last device error that occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile6existsEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile6existsEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile6existsEv"></span><span id="QtLabb::Script::CScriptQFile::existsC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a519e60d707b7082cafb94568e3d88bbd"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exists</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile6existsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns true if the file specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> exists; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile8fileNameEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile8fileNameEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile8fileNameEv"></span><span id="QtLabb::Script::CScriptQFile::fileNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fileName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile8fileNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile6isOpenEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile6isOpenEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile6isOpenEv"></span><span id="QtLabb::Script::CScriptQFile::isOpenC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab47c1c4a8fd39a8cec1882d2832486a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile6isOpenEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns true if the device is open; otherwise returns false. </p>
+<p>A file is open if it can be read from and/or written to. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile11moveToTrashEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile11moveToTrashEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile11moveToTrashEv"></span><span id="QtLabb::Script::CScriptQFile::moveToTrash"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab25ea89875c88b5e803678a9e2a5ec3a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">moveToTrash</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile11moveToTrashEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Moves the file specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to the trash. </p>
+<p>Returns true if successful, and sets the <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to the path at which the file can be found within the trash; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4openEi">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4openEi"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4openEi"></span><span id="QtLabb::Script::CScriptQFile::open__i"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4openEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Opens the file with the given open mode. </p>
+<p>Returns true if successful; otherwise returns false.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="s">&quot;C:/temp/test1.txt&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4readE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4readE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4readE6qint64"></span><span id="QtLabb::Script::CScriptQFile::read__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a56502f9f52a2c26e8e6b1dd64585feeb"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4readE6qint64" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reads at most maxSize bytes from the device, and returns the data read as a QByteArray. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile7readAllEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile7readAllEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile7readAllEv"></span><span id="QtLabb::Script::CScriptQFile::readAll"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a14797a28271e3fc2f5c1a108347973f9"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile7readAllEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reads all remaining data from the device, and returns it as a byte array. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile8readLineE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile8readLineE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile8readLineE6qint64"></span><span id="QtLabb::Script::CScriptQFile::readLine__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a0c7ff50e5b241dab8e6c0fec86761130"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLine</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile8readLineE6qint64" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reads a line from the device, but no more than maxSize characters, and returns the result as a byte array. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile6removeEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile6removeEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile6removeEv"></span><span id="QtLabb::Script::CScriptQFile::remove"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a82a346b6fa25d04e613c3d058b0b719d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile6removeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Removes the file specified by the fileName given. </p>
+<p>Returns true if successful; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile6renameERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile6renameERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile6renameERK7QString"></span><span id="QtLabb::Script::CScriptQFile::rename__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rename</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile6renameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Renames the file currently specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to newName. </p>
+<p>Returns true if successful; otherwise returns false.</p>
+<p>If a file with the name newName already exists, <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216"><span class="std std-ref">rename()</span></a> returns false (i.e., QFile will not overwrite it).</p>
+<p>The file is closed before it is renamed.</p>
+<p>If the rename operation fails, Qt will attempt to copy this file’s contents to newName, and then remove this file, keeping only newName. If that copy operation fails or this file can’t be removed, the destination file newName is removed to restore the old state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4seekE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4seekE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4seekE6qint64"></span><span id="QtLabb::Script::CScriptQFile::seek__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4seekE6qint64" title="Permalink to this definition"></a><br /></dt>
+<dd><p>For random-access devices, this function sets the current position to pos, returning true on success, or false if an error occurred. </p>
+<p>For sequential devices, the default behavior is to do nothing and return false.</p>
+<p>Seeking beyond the end of a file: If the position is beyond the end of a file, then <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a"><span class="std std-ref">seek()</span></a> will not immediately extend the file. If a write is performed at this position, then the file will be extended. The content of the file between the previous end of file and the newly written data is UNDEFINED and varies between platforms and file systems. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile11setFileNameERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile11setFileNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile11setFileNameERK7QString"></span><span id="QtLabb::Script::CScriptQFile::setFileName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFileName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">FileName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile11setFileNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the name of the file. </p>
+<p>The name can have no path, a relative path, or an absolute path. Do not call this function if the file has already been opened. If the file name has no path or a relative path, the path used will be the application’s current directory path at the time of the <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"><span class="std std-ref">open()</span></a> call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile5writeERK10QByteArray">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile5writeERK10QByteArray"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile5writeERK10QByteArray"></span><span id="QtLabb::Script::CScriptQFile::write__QByteArrayCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a86be775c6f69ff4bca53fd0494a1f1d6"></span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile5writeERK10QByteArray" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Writes the content of byteArray to the device. </p>
+<p>Returns the number of bytes that were actually written, or -1 if an error occurred. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="qsqldatabase">
+<h3><span class="section-number">6.9.3. </span>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Permalink to this headline"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseE">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabaseE"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabaseE"></span><span id="QtLabb::Script::CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Script</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSQLDatabase object to use it in JavaScript. </p>
+<p>The following code shows, how to open a database connection in JavaScript and how to execute a simple query</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QSqlDatabase</span><span class="p">();</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">createConnection</span><span class="p">(</span><span class="s">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;JsScript&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">databaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;C:/Users/Public/Documents/QmixElements/Projects/Entwicklung/Log/ProcessDataDbLog.sqlite&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">();</span><span class="w"></span>
+<span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">recordValues</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::createConnection__QStringCR.QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7619d0e0b59af6304c34883a501b55e6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::createQuery__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7d3feae47966f90792203cdd3c2f97aa"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">createQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad9a23c8cce86b4b5d270749185497198"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::databaseNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a80a380862f1c075985b62fc102e7181d"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">databaseName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7driversEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase7driversEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase7driversEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::driversC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1af53355cbd7349d517f4fe6cfe22ce06e"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drivers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7driversEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::executeQuery__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a6cbd0a3d5930ac47c5811b636d9d2e2a"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">executeQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::fields__QStringCRC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afb4c0065f5bc9b6526e3e6e86aa0c94f"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fields</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tablename</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::hostNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7b92eb8a5607a53e3c5b8e9749b03107"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hostName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::isOpenC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1adbcd3271407ef0fb7207a4c2ff5583a8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::isValidC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a4702bf509d01a908b377e71d313e3036"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::lastErrorC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a061fcec611628433656a7b3c8191de97"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase4openEv">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase4openEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase4openEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::open"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a3b660f9a8775c67cf7737bef897fce4d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase4openEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::passwordC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1abc687667b1cfb579b499e5151211eaa2"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase4portEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase4portEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase4portEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::portC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1af29fb1ca388aa846a9147a8724d87000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">port</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase4portEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::qSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a8ed2dd4f88a7400d9a7df6a2323f1388"></span><span class="n"><span class="pre">QSqlDatabase</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the internal database object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setDatabaseName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a78ebea9d5a05051edea81fb5a6cf485b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDatabaseName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setHostName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad7eaec52b99b67c3f635972e4aab8006"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHostName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setPassword__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a5a33125154f8ea83f0e6d07538844dbe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPassword</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">password</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase7setPortEi">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase7setPortEi"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase7setPortEi"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setPort__i"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ae570688191ff5395e75a93f42d8f06d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPort</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase7setPortEi" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setUrl__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ae8aade98e025dfab478c1f54d43490d7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUrl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Url</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setUserName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afe6f37747c1ddec313f4956306a0d6a8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUserName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::tablesC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afdbae709e32e8234f08ab0eddbf7e1f8"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tables</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase3urlEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase3urlEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase3urlEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::urlC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1aa9e7bfc27c53156f112c97dcccc65308"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">url</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase3urlEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv">
+<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::userNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a4c53122c2c579c19ffc087d43055d26b"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">userName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseD0Ev">
+<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabaseD0Ev"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabaseD0Ev"></span><span id="QtLabb::Script::CScriptQSqlDatabase::~CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad664ea46124435037ef94ebdd3b242a2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="qsqlquery">
+<h3><span class="section-number">6.9.4. </span>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Permalink to this headline"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQueryE">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQueryE"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQueryE"></span><span id="QtLabb::Script::CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Script</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQueryE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSqlQuery to use it in JavaScript. </p>
+<p>There are several options how to execute a query. The first option is, to call the executeQuery() function of the database object:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>The second option is, to create the query via the database object and to execute it later:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>or you create the query object and the pass the actual query to the executeQuery() function</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">();</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>If you want to insert data into the database, then you can build the complete query string with JavaScript or you can use the bindValues() function with placeholders like in the code below:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;INSERT INTO person (id, forename, surename) VALUES (?, ?, ?)&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">bindValues</span><span class="p">([</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bart&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Simpson&quot;</span><span class="p">]);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="QtLabb::Script::CScriptQSqlQuery::bindValues__QVariantListCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a972bdf1126a7798b971c4dc7ca1fda48"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bindValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="QtLabb::Script::CScriptQSqlQuery::CScriptQSqlQuery__QSqlQueryCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a1a2d5781f65f79684f7b577f9a83fd5d"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QSqlQuery</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1ae223e9a528641cba62769e485b704667"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery4execERK7QString">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery4execERK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery4execERK7QString"></span><span id="QtLabb::Script::CScriptQSqlQuery::exec__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a2a9864cf1b4eef437de5d989ffc64976"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery4execERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::lastErrorC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a9689e55e2f87f7ace13c0f0738f49c89"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery4nextEv">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery4nextEv"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery4nextEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::next"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a6029278384d92bf77acd453d5d9a7003"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery4nextEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString"></span><span id="QtLabb::Script::CScriptQSqlQuery::prepare__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a2bc82d9d44c92c33b40ac5d90a7572a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prepare</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery6recordEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery6recordEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery6recordEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::recordC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a188a838407bf61454bd1a6e130ee771d"></span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">record</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery6recordEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::recordValuesC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a04d6f6127b65045d9780885d42e258a5"></span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQueryD0Ev">
+<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQueryD0Ev"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQueryD0Ev"></span><span id="QtLabb::Script::CScriptQSqlQuery::~CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1ab19ef4832742a1f45833ee772a51fbfc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQueryD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -880,7 +1411,7 @@ devices and application objects.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 09, 2022 13:42.
+      <span class="lastupdated">Last updated on Jun 16, 2022 14:32.
       </span></p>
   </div>
 
