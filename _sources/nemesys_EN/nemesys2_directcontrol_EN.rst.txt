@@ -599,6 +599,9 @@ about the problems encountered.
 
 When you click the :guilabel:`Stop All` button :guinum:`❷`, all pumps are stopped immediately.
 
+|
+|
+
 .. |Figure 6: Selecting the Pressure Monitoring Configuration| image:: Pictures/1000020100000144000000B30A56CA320F030E21.png
 
 .. |monitoring1| image:: Pictures/100002010000006B0000006B365777AF0E6D78EE.png

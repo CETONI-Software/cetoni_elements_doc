@@ -22,6 +22,8 @@ process sequences.
 The script system work bench
 consists of the following three main parts:
 
+.. rst-class:: guinums
+
 1. *Script Editor* – shows the script programmed by the user as a
    function tree. It also features buttons for controlling script files
    and their execution.
@@ -61,6 +63,8 @@ Introduction to Script Editor
 
 The *Script Editor* is used for the graphic programming of scripts. The
 following items are numbered in the figure below:
+
+.. rst-class:: guinums
 
 1. *Toolbar* – is for loading, saving, and controlling the sequence of
    scripts.

@@ -260,20 +260,20 @@ img {
 }
 
 .guinums>li:before {
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: block;
     position: absolute;
     top: 1rem;
     left: 1rem;
-    height: 1.8em;
-    width: 1.8em;
-    line-height: 1.8em;
+    height: 1.6em;
+    width: 1.6em;
+    line-height: 1.6em;
     text-align: center;
     background-color: red;
     color: #fff;
     border-radius: 50%;
     content: counter(li-counter, decimal);
     counter-increment: li-counter;
-    font-weight: normal;
-    font-family: 'kievit-bold';
+    font-weight: bold;
+    font-family: 'arial';
 }
