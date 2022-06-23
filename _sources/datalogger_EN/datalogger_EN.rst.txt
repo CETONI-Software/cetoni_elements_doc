@@ -38,6 +38,8 @@ configuration dialogue will be displayed:
 
 The configuration dialogue contains the following elements:
 
+.. rst-class:: guinums
+
 1. **Device List** – displays all devices or modules that provided
    recordable data. The filter selector above is to limit the list to
    specific device types, e.g. valves.

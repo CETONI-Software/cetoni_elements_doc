@@ -306,7 +306,7 @@ functions:
    * - Undo
      - :kbd:`Ctrl` + :kbd:`Z` or context menu
    * - Redo
-     - :kbd:`Ctrl` + :kbd:`Y` or contexte menu
+     - :kbd:`Ctrl` + :kbd:`Y` or context menu
 
 .. admonition:: Important
    :class: note
@@ -492,7 +492,7 @@ If you would like to see the properties and functions of a specific built-in
 object, such as :code:`Math`, you just need to call help passing this object:
 :code:`help(Math)`.
 
-For a detailed list of buit-in objects supported by the embedded JavaScript engine,
+For a detailed list of built-in objects supported by the embedded JavaScript engine,
 please refer to the Qt documentation:
 
 https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
@@ -642,7 +642,7 @@ to the JavaScript function :code:`onDosageFinished`.
       pump.dosageFinished.connect(onDosageFinished);
    }  
 
-The sourrounding check
+The surrounding check
 :code:`if (typeof ScriptEnv.Initialized == "undefined")` ensures, that there
 will be only one connection if the function is called multiple times. If we do
 not use this check, then a new connection is created each time the function
@@ -702,23 +702,3 @@ from the Qt framework.
     :project: python
     :path: ../doxygen/xml
     :members:
-
-
-QSqlDatabase
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. doxygenclass:: QtLabb::Script::CScriptQSqlDatabase
-    :project: python
-    :path: ../doxygen/xml
-    :members:
-    :undoc-members:
-
-
-QSqlQuery
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. doxygenclass:: QtLabb::Script::CScriptQSqlQuery
-    :project: python
-    :path: ../doxygen/xml
-    :members:
-    :undoc-members:

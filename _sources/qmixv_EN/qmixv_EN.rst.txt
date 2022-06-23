@@ -8,10 +8,12 @@ The valve plugin is used to control
 
 .. image:: Pictures/valve_devices_numbered.jpg
 
-- :guinum:`❶` CETONI QmixV valve modules
-- :guinum:`❷` valve devices that are part of other devices (i.e. valves
-  mounted on Nemesys syringe pumps)
-- :guinum:`❸` supported valves from other manufacturers (e.g. VICI valves)
+.. rst-class:: guinums
+
+#. CETONI QmixV valve modules
+#. valve devices that are part of other devices (i.e. valves
+   mounted on Nemesys syringe pumps)
+#. supported valves from other manufacturers (e.g. VICI valves)
 
 Valve Device List
 --------------------
@@ -68,25 +70,27 @@ You can give each valve position an individual name in the software, and
 so configure the names of the valve positions to suit your application.
 Perform the following steps to change the names of the valve positions.
 
-(1) Make a right mouse click in the line of the table of the valve for
-    which you want to rename the positions.
+.. rst-class:: steps
+
+#. Make a right mouse click in the line of the table of the valve for
+   which you want to rename the positions.
 
    |Figure 4: Open valve configuration|
 
-(2) Select the :guilabel:`Configure valve positions...` menu item in the context
-    menu, that is being displayed.
-(3) A configuration dialog opens (Figure below), which consists of a
-    valve selection box :guinum:`❶` and the list of valve positions :guinum:`❷`.
+#. Select the :guilabel:`Configure valve positions...` menu item in the context
+   menu, that is being displayed.
+#. A configuration dialog opens (Figure below), which consists of a
+   valve selection box :guinum:`❶` and the list of valve positions :guinum:`❷`.
 
    |Figure 5: Open valve configuration|
 
-(4) Double click the line in the
-    table containing the valve position you want to name.
-(5) An Editing window :guinum:`❸` opens in the table cell, in which you can enter
-    the new name of the valve position.
-(6) Confirm your entry by pressing the :kbd:`Return` key.
-(7) You can close the configuration dialog when you have named all the
-    valve positions.
+#. Double click the line in the
+   table containing the valve position you want to name.
+#. An Editing window :guinum:`❸` opens in the table cell, in which you can enter
+   the new name of the valve position.
+#. Confirm your entry by pressing the :kbd:`Return` key.
+#. You can close the configuration dialog when you have named all the
+   valve positions.
 
 From now on, the valve positions will always be shown with the new names
 in all areas of the software.

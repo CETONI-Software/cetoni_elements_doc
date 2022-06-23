@@ -100,6 +100,8 @@ Overview
 
 The Device Configurator is divided into the following three parts:
 
+.. rst-class:: guinums
+
 1. **Toolbar** – Functions for creating, loading and saving device
    configurations, as well as starting the Device Configuration Wizard. 
 2. **Device List** – Selection of available devices.

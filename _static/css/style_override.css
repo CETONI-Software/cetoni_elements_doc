@@ -269,7 +269,7 @@ img {
     width: 1.6em;
     line-height: 1.6em;
     text-align: center;
-    background-color: red;
+    background-color: #dd0000;
     color: #fff;
     border-radius: 50%;
     content: counter(li-counter, decimal);

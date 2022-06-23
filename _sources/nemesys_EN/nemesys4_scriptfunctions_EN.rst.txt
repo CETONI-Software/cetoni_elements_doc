@@ -171,6 +171,6 @@ Execute Reference Move
    :align: left
 
 This function allows you to start a reference move from the
-script. With the parameter :guilabel:`Run To Completion`` you can specify whether
+script. With the parameter :guilabel:`Run To Completion` you can specify whether
 the function is terminated after starting the reference move or after
 completion of reference move.

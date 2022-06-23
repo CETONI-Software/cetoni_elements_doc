@@ -219,7 +219,7 @@ display all the functions and properties of the :code:`ScriptEnv` object.
 Alternatively, all application objects also have a :code:`help()`
 function that provides a clearer display of an object's properties and
 methods. In the figure below you can see the call of :code:`ScriptEnv.help()`.
-The console shows the :code:`Properties` ❶ and methods (:code:`Slots` ❷) of the
+The console shows the :code:`Properties` :guinum:`❶` and methods (:code:`Slots` :guinum:`❷`) of the
 :code:`ScriptEnv` object:
 
 .. image:: Pictures/10000201000002260000011A8780E1969FECAAC9.png

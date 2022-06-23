@@ -114,7 +114,7 @@ The following fields must be filled in:
 - **Database Driver**: the database driver that matches your database
 - **Server Hostname or IP**: the hostname or IP address of the server running the
   database. In this example the MySQL database runs locally and we use localhost
-- **Port**: theserver port number to connect to database. In this example whe
+- **Port**: the server port number to connect to database. In this example whe
   use localhost as hostname and therefore the port does not matter
 - **Database Name**: name of the database to use for data logging
 - **User Name**: database user to use for database access
@@ -200,7 +200,7 @@ the label text.
    That is, you should change the channel label only once  
    the correct device property has been selected. 
 
-The device property and the label are seperate columns in the SQL table
+The device property and the label are separate columns in the SQL table
 
 Deleting Channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -255,7 +255,7 @@ entry is missing, it will get added. Changing the label of a channel in the
 
 The analog input **Nemesys_S_1_AnIN1** property
 **ActualValue** (process data identifier :code:`Nemesys_S_1_AnIN1.ActualValue`)
-was used to log different pysical quantities in various experiments: 
+was used to log different physical quantities in various experiments: 
 
 - the temperature of a shaker unit in °C
 - the ozon concentration in %
@@ -351,13 +351,13 @@ This function triggers the immediate logging of all channels of the SQL logger.
 Normally the data will be logged with the configured :ref:`interval<Step 3 – Configure Sample Interval>`.
 If you would like to force the immediate logging of all channels, for example
 if you would like to capture the current state of all channels if a certain
-event occurrs, then you can use this function.
+event occurs, then you can use this function.
 
 
 JavaScript Database Access
 --------------------------------
 
-The Databse Add-on provides some functionality, to access SQL databases from
+The Database Add-on provides some functionality, to access SQL databases from
 :ref:`JavaScript code <Using JavaScript>`. If you enter the :code:`help()` 
 command in th JavaScript Console, you should see the database objects
 such as `QSqlDatabase`_ or `QSqlQuery`_.

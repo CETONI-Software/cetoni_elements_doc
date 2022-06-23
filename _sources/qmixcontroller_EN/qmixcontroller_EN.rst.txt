@@ -11,11 +11,13 @@ supported:
 
 .. image:: Pictures/controller_devices.png
 
-- :guinum:`❶` **Qmix Q-** - thermoelectric cooling module
-- :guinum:`❷` **Qmix Q+** - two-channel heating module
-- :guinum:`❸` **Qmix TC** - two channel controller module for external
-  heating-cooling-systems (i.e. for connecting syringe heating mounted on Nemesys
-  syringe pumps)
+.. rst-class:: guinums
+
+#. **Qmix Q-** - thermoelectric cooling module
+#. **Qmix Q+** - two-channel heating module
+#. **Qmix TC** - two channel controller module for external
+   heating-cooling-systems (i.e. for connecting syringe heating mounted on Nemesys
+   syringe pumps)
 
 Controller Channel List
 ------------------------------------------------------------
@@ -357,6 +359,8 @@ parameters required for proper PID control.
 
 You need to configure the following parameters:
 
+.. rst-class:: guinums
+
 1. **Actual Value Input** – this parameter specifies the measured value
    of the process variable being controlled. This value is equal to the
    feedback value of the feedback control loop. Enter a variable name
@@ -535,6 +539,8 @@ script program by using the PID control function.
 |Figure : PID controller example scripts|
 
 To implement a control loop, proceed as follows:
+
+.. rst-class:: guinums
 
 1. The controller must be called cyclically in a fixed time
    interval. For this, you should use a loop. In this case, use a

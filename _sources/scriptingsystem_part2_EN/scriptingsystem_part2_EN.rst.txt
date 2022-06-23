@@ -8,7 +8,6 @@ the categories :guilabel:`Core Functions` , :guilabel:`Function Sequences`,
 and :guilabel:`Time Functions` (figure below).
 
 .. figure:: Pictures/100002010000016C000002591AF7FEE5FA0D46F1.png
-   :alt: Figure 1.1.1: Generic script functions
 
 Core Functions
 --------------
@@ -68,6 +67,8 @@ options:
 
 |Figure 1.1.5: Message configuration panel|
 
+.. rst-class:: guinums
+
 1. Enter your message text into the :guilabel:`Message` field.
 2. Select the type of message you want to display in the 
    :guilabel:`Message Type` group. Depending on the message type, the relevant icon appears
@@ -81,7 +82,7 @@ options:
    there is a check mark in this field, the complete script execution is
    interrupted until the user continues the program execution. If you
    display a message window with a :guilabel:`Show Message Box`, you should not
-   select this option and use option ❺ instead.
+   select this option and use option :guinum:`❺` instead.
 5. Here you can select whether the script execution will be continued
    after clicking :guilabel:`OK` in the message box window.
 
@@ -144,12 +145,14 @@ variable (see figure below).
 
 E.g. you can enter the following text in the message input field:
 
-*The contents of variable A is $A.*
+.. centered::
+   *The contents of variable A is $A.*
 
 If the variable :code:`$A` contains the value 25.3 at runtime, then the
 function will display the following message:
 
-*The contents of variable A is 25.3.*
+.. centered::
+   *The contents of variable A is 25.3.*
 
 .. tip::
    You can display the contents of variables      
@@ -178,12 +181,14 @@ assign a name, a type hint, and a value to that variable (see figure below):
 
 |Figure 1.1.7: Configuration of a variable|
 
+.. rst-class:: guinums
+
 1. **Name** – set a unique
    name for your variable. For details concerning the naming of
    variables, please refer to section :ref:`naming-variables`.
 2. **Type** – choose the kind of variable you want to set.
 3. **Value** – give the variable a value or, if the variable is of the
-   type *JavaScript Excpression*, enter the JavaScript code to calculate
+   type *JavaScript Expression*, enter the JavaScript code to calculate
    the variable.
 
 .. tip::
@@ -258,9 +263,9 @@ name, which starts with a dollar $ sign.
 
 You can also directly read the properties / process data of a device
 within a JavasScript expression and include it in a calculation. In the
-following example, the variable :code:`$Flow` ❶ is calculated as a twentieth
-of the device property :code:`$$Nemesys_M_1.MaxFlow` ❷. Device properties
-can be easily added using the context menu entry *Insert device property* ❸.
+following example, the variable :code:`$Flow` :guinum:`❶` is calculated as a twentieth
+of the device property :code:`$$Nemesys_M_1.MaxFlow` :guinum:`❷`. Device properties
+can be easily added using the context menu entry *Insert device property* :guinum:`❸`.
 
 .. image:: Pictures/10000201000001E7000000D09DED5F410BD67FC9.png
 
@@ -370,7 +375,7 @@ various operators are executed according to your needs. Refer to the
 Examples
 ^^^^^^^^
 
-*...\ for the use of\ Calculation* variables:
+The following examples show how to use variables for calculations:
 
 Example 1
 '''''''''
@@ -522,22 +527,23 @@ variable. Whenever you read the value of this variable from within a
 script function, automatically the current value of the connected device
 property is read.
 
-You can set the name of the variable in the input box :guilabel:`Variable` ❶
+You can set the name of the variable in the input box :guilabel:`Variable` :guinum:`❶`
 (figure above). Select the device you want to access from the drop-down
-list :guilabel:`Device` ❸, which lists all devices that are part of the current
+list :guilabel:`Device` :guinum:`❸`, which lists all devices that are part of the current
 configuration. To simplify the search for a device, you can filter the
 device list by selecting an appropriate filter (device type) from the
-:guilabel:`Filter` drop-down field ❷.
+:guilabel:`Filter` drop-down field :guinum:`❷`.
 
 After the device has been selected, use the last drop-down list
-:guilabel:`Property` ❹ to select the device property, the process data value that
+:guilabel:`Property` :guinum:`❹` to select the device property, the process data value that
 you want to access.
 
 In summary, this function can be described as follows:
 
-*"Assign the device property ❹ of the device ❸ to the variable ❶ and
-return the device property value if a read access on the variable takes
-place."*
+.. centered:: 
+   "Assign the device property :guinum:`❹` of the device :guinum:`❸` to the variable :guinum:`❶` and
+   return the device property value if a read access on the variable takes
+   place."
 
 .. admonition:: Important
    :class: note
@@ -584,6 +590,8 @@ following parameters:
 
 |Figure : Configuration User Input function|
 
+.. rst-class:: guinums
+
 1. **Label Text** – Here you
    specify a text that will be displayed to the user during the
    execution of the function above the input field as a label and
@@ -613,10 +621,10 @@ script system in the form of external scripts.
 
 .. image:: Pictures/10000201000001E1000001A9C4192918D20FBB5B.png
 
-External script functions can have 0 – 10 input parameters ❶ and 0 – 10
-return values ❷. This allows you to pass values to the script (e.g.
+External script functions can have 0 – 10 input parameters :guinum:`❶` and 0 – 10
+return values :guinum:`❷`. This allows you to pass values to the script (e.g.
 numeric values or variables) and read return values from the script and
-store them in script variables. :guilabel:`Script File` ❸ shows you the path to
+store them in script variables. :guilabel:`Script File` :guinum:`❸` shows you the path to
 the external script file that is executed when the script is invoked.
 
 In the section :ref:`programming-your-own-script-functions` you
@@ -682,12 +690,12 @@ support the use of variables may then use this variable to execute specific
 tasks or to perform additional calculations.
 
 The number of loops may be defined explicitly, by setting a number, or
-implicitly, via a variable that returns a number (figure below, ❶).
+implicitly, via a variable that returns a number (figure below, :guinum:`❶`).
 
 |image62|
 
 Additionally, you can assign a custom name to the Counter Variable of
-the present loop function (figure above, ❷). Within this loop, other
+the present loop function (figure above, :guinum:`❷`). Within this loop, other
 functions may access the current loop count via this variable and use it
 for further calculations. This may be used, e.g., to control
 incremental moves of positioning systems.
@@ -732,8 +740,9 @@ or skipped if the termination condition is false.
 
 Spelled out, the *Conditional Loop* function reads as follows:
 
-*Repeat the loop and execute the function(s) contained within that loop
-as long as the loop condition holds true.*
+.. centered:: 
+   "Repeat the loop and execute the function(s) contained within that loop
+   as long as the loop condition holds true.""
 
 There are two ways to set the parameters for loop checking: a simple mode 
 and as a JavaScript expression.
@@ -747,26 +756,27 @@ Interface – simply uncheck *JavaScript Expression* :guinum:`❶`. The followin
 parameters may be set:
 
 .. figure:: Pictures/10000201000001FF000001568EF29AE39EE9077E.png
-   :alt: Figure : Configuration panel for conditional loops – basic mode
 
-- :guinum:`❶` **JavaScript Expression** – this button is to toggle between the
-  simple mode and `JavaScript Expression mode <Configuration - JavaScript Expression>`_
-  (see section below).
-- :guinum:`❷` **Name** – Enter the name of the variable whose value is to be compared or checked in 
-  the condition. The variable is on the left side of the comparison condition
-  and must start with a dollar sign $ (such as :code:`$FlowRate`).
-- :guinum:`❸` **Type** – allows you to give a type hint to the variable and thus toggle 
-  the controls in the Condition section.
-- :guinum:`❹` **Comparison operator** – with the combo box you can conveniently select 
-  the comparison operator.
-- :guinum:`❺` **Comparison condition** – the value or a variable that the variable
-  from :guinum:`❷` is to be compared with.
+.. rst-class:: guinums
+
+#. **JavaScript Expression** – this button is to toggle between the
+   simple mode and `JavaScript Expression mode <Configuration - JavaScript Expression>`_
+   (see section below).
+#. **Name** – Enter the name of the variable whose value is to be compared or checked in 
+   the condition. The variable is on the left side of the comparison condition
+   and must start with a dollar sign :code:`$` (such as :code:`$FlowRate`).
+#. **Type** – allows you to give a type hint to the variable and thus toggle 
+   the controls in the Condition section.
+#. **Comparison operator** – with the combo box you can conveniently select 
+   the comparison operator.
+#. **Comparison condition** – the value or a variable that the variable
+   from :guinum:`❷` is to be compared with.
 
 Sample Configuration: Simple Mode
 '''''''''''''''''''''''''''''''''
 
 The loop condition to be checked against is whether a the variable
-:code:`$Position` is smaller than or the same as *25.000,31*.
+:code:`$Position` is smaller than or the same as **25000,31**.
 
 ========================= ================ ==================== =====================
 Variable Name :guinum:`❷` Type :guinum:`❸` Operator :guinum:`❹` Condition :guinum:`❺`
@@ -780,7 +790,7 @@ The script editor shows the complete mathematical expression:
 
 The resulting
 expression effects that the loop will be rerun as long as the value of
-the variable :code:`$Position` is smaller than or the same as *25.000,31*.
+the variable :code:`$Position` is smaller than or the same as **25000,31**.
 
 Configuration - JavaScript Expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -828,7 +838,7 @@ Naming a Function Sequence
 A function sequence may be given a name; that name will then be shown
 in the function tree. This simplifies navigation in particular with
 larger numbers of function sequences. To do this, simply enter the name
-by double-clicking the :guilabel:`Caption Field` (Figure above ❶).
+by double-clicking the :guilabel:`Caption Field` (Figure above :guinum:`❶`).
 
 Add function parameters and return values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -844,7 +854,7 @@ sequence then only access the function parameters and not the external
 variables. This improves encapsulation and makes the function more
 independent of external variables and thus easier to maintain.
 
-You can add function parameters ❷ or return values ❸ by clicking the
+You can add function parameters :guinum:`❷` or return values :guinum:`❸` by clicking the
 :guilabel:`Add` buttons. Assign meaningful parameter names by clicking the
 parameter names above the input fields (figure below):
 
@@ -856,7 +866,7 @@ Loading a Function Sequence
 The *Function Sequence* also allows the loading of pre-stored scripts:
 You may load a script, which you have created and saved previously, into
 your current function sequence. To do this, just click on the
-:guilabel:`Load from script file` button (figure above, ❹) and select the
+:guilabel:`Load from script file` button (figure above, :guinum:`❹`) and select the
 desired file. The scripts are loaded into the current script. I.e. you can
 make changes to the loaded function sequence without affecting the external
 script.
@@ -889,7 +899,8 @@ If the check condition is not true at the time of script execution, then the
 conditional sequence is simply skipped. In text form, the function execution 
 can be described as follows:
 
-*If the check condition is true, then execute the functions within the sequence.*
+.. centered::
+   "If the check condition is true, then execute the functions within the sequence."
 
 The configuration of the conditional sequence is identical to the configuration 
 of the `Conditional Loop`_.
@@ -943,12 +954,12 @@ value 0, only the sequence containing the break function is terminated.
 If the value is 1, the sequence that is one level higher is also
 terminated, and so on.
 
-If, for example, you want to terminate a `Function Sequence`_ ❶ when a
-certain condition occurs, insert a `Conditional Sequence`_ ❷ into the
+If, for example, you want to terminate a `Function Sequence`_ :guinum:`❶` when a
+certain condition occurs, insert a `Conditional Sequence`_ :guinum:`❷` into the
 function sequence to check the termination condition and a break
-function ❸ with the termination depth 1 into this conditional sequence.
-The break function ❸ will then terminate the conditional sequence ❷
-and the function sequence ❶ above it if the condition is true.
+function :guinum:`❸` with the termination depth 1 into this conditional sequence.
+The break function :guinum:`❸` will then terminate the conditional sequence :guinum:`❷`
+and the function sequence :guinum:`❶` above it if the condition is true.
 
 .. image:: Pictures/1000020100000175000000A03698480BFF00A770.png
 
@@ -1100,11 +1111,11 @@ This function allows you to read process data from a device and save it to a
 variable. 
 
 Select the device you want to access from the drop-down list
-:guilabel:`Device` ❷, which lists all devices that are part of the current
+:guilabel:`Device` :guinum:`❷`, which lists all devices that are part of the current
 configuration. To simplify the search for a device, you can filter the
 device list by selecting an appropriate filter (device type) from the
-:guilabel:`Filter` drop-down field ❶. After the device has been selected, use
-the last drop-down list :guilabel:`Property` ❸ to select the device property
+:guilabel:`Filter` drop-down field :guinum:`❶`. After the device has been selected, use
+the last drop-down list :guilabel:`Property` :guinum:`❸` to select the device property
 that you want to access.
 
 .. admonition:: Important
@@ -1113,14 +1124,15 @@ that you want to access.
    Only devices and device properties are   
    displayed that allow read access.   
 
-In the input field :guilabel:`Variable` ❹, enter the name of the variable into
+In the input field :guilabel:`Variable` :guinum:`❹`, enter the name of the variable into
 which the value is to be saved during script runtime (figure below).
 
 |Figure : Reading device property set-up panel|
 
 In abbreviated form, the set-up follows the following logic:
 
-*Read from device ❷ the value of parameter ❸ and save it into variable ❹*.
+.. centered::
+   Read from device :guinum:`❷` the value of parameter :guinum:`❸` and save it into variable :guinum:`❹`.
 
 .. tip::
    When entering a name, the auto-complete      
@@ -1135,17 +1147,17 @@ Write Device Property
    :align: left
 
 This function is for writing process data from devices. In
-the input field ❶ enter the value to be written. You can also use
+the input field :guinum:`❶` enter the value to be written. You can also use
 variables or `Device Property Identifiers <#1.7.Device Property Identifiers|outline>`__ in this field.
 
 In the configuration panel (figure below), select the device and the
-appropriate device property that you want to write ❷ as described for
-function `Read Device Property`_. The device selection controls ❷ only show 
+appropriate device property that you want to write :guinum:`❷` as described for
+function `Read Device Property`_. The device selection controls :guinum:`❷` only show 
 devices and device properties, which allow write access.
 
 |Figure : Scriptconfiguration Write Device Property|
 
-The value in the input field ❶ is then written at run time in the selected device
+The value in the input field :guinum:`❶` is then written at run time in the selected device
 property.
 
 Wait For Device Property
@@ -1160,21 +1172,21 @@ property to reach a predefined condition. Once this condition is
 fulfilled, the script will resume.
 
 In the configuration panel (figure below), select the device and the
-appropriate device property that you want to monitor ❶ as described for
+appropriate device property that you want to monitor :guinum:`❶` as described for
 function `Read Device Property`_.
 
 .. figure:: Pictures/10000201000001DE0000013FEB6E6B812107306F.png
-   :alt: Figure : Script configuration Wait for Device Property
 
 In the  *Condition* section you can configure the condition that is to
-be checked against. First define an *operator* ❷ and then the *target
-value* ❸ the device parameter is to be compared with. In the value
-field ❸, you can also use variables to set a test condition.
+be checked against. First define an *operator* :guinum:`❷` and then the *target
+value* :guinum:`❸` the device parameter is to be compared with. In the value
+field :guinum:`❸`, you can also use variables to set a test condition.
 
 In short, the above set-up procedure reads as follows:
 
-*Continue script execution, if the selected property of the
-device ❶ meets the condition ❷ ❸:*
+.. centered::
+   Continue script execution, if the selected property of the
+   device :guinum:`❶` meets the condition :guinum:`❷` :guinum:`❸`.
 
 .. tip::
    Script Variables (such as :code:`$Value` can be used as test / comparison condition.
@@ -1234,7 +1246,7 @@ Open Settings File
    :align: left
 
 This function opens a settings file :file:`*.ini` for reading / writing data persistently.
-An \*.ini file is a structured data file that consits of sections and keys.
+An \*.ini file is a structured data file that consists of sections and keys.
 The name of a section in the \*.ini file is always entered inside square brackets.
 The name of a key is always on a separate line and the content is assigned by the 
 :code:`=` char. The following example shows a typical \*.ini file:
@@ -1254,7 +1266,7 @@ The file has two sections (:code:`SyringeConfig` and :code:`Variables`) and each
 section contains a number of key-value pairs.
 
 To open a settings file or to create a new one, you need to provide a filename :guinum:`❶`
-and a script variable :guinum:`❷` to store the created settings file object. 
+and a script variable :guinum:`❷`` to store the created settings file object. 
 
 .. image:: Pictures/open_settings_file.png
 

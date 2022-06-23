@@ -799,6 +799,8 @@ application was last used. Finish the configuration by clicking :guilabel:`OK` :
 If you want the software to start up automatically and execute a script
 after your computer has booted, then proceed as follows:
 
+.. rst-class:: steps
+
 1. Insert :program:`QmixElements.exe` into the *Windows Autostart* to start the
    software automatically after booting the computer.
 2. Open the dialog with the global settings via the main menu of the

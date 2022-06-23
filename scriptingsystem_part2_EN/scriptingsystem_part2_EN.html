@@ -142,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">15. Database Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
@@ -180,7 +180,7 @@ irrespective of the activated plug-ins. You will find these functions in
 the categories <span class="guilabel">Core Functions</span> , <span class="guilabel">Function Sequences</span>,
 and <span class="guilabel">Time Functions</span> (figure below).</p>
 <figure class="align-default">
-<img alt="Figure 1.1.1: Generic script functions" src="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" />
+<img alt="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" src="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" />
 </figure>
 <section id="core-functions">
 <h2><span class="section-number">5.1. </span>Core Functions<a class="headerlink" href="#core-functions" title="Permalink to this headline"></a></h2>
@@ -219,7 +219,7 @@ the last message.</p>
 <p>When configuring the message function, you can configure the following
 options:</p>
 <p><img alt="Figure 1.1.5: Message configuration panel" src="../_images/100002010000020D0000012597ED6FC376B353A6.png" /></p>
-<ol class="arabic simple">
+<ol class="guinums arabic simple">
 <li><p>Enter your message text into the <span class="guilabel">Message</span> field.</p></li>
 <li><p>Select the type of message you want to display in the
 <span class="guilabel">Message Type</span> group. Depending on the message type, the relevant icon appears
@@ -233,7 +233,7 @@ whether the message should appear in the <em>Event Log</em>
 there is a check mark in this field, the complete script execution is
 interrupted until the user continues the program execution. If you
 display a message window with a <span class="guilabel">Show Message Box</span>, you should not
-select this option and use option ❺ instead.</p></li>
+select this option and use option <span class="guinum">❺</span> instead.</p></li>
 <li><p>Here you can select whether the script execution will be continued
 after clicking <span class="guilabel">OK</span> in the message box window.</p></li>
 </ol>
@@ -305,11 +305,11 @@ of available variables is displayed, from which you can select a
 variable (see figure below).</p>
 <p><img alt="Figure 1.1.6: Using variables in Show Message function" src="../_images/10000201000001DB000000D68C630A99C4BAD6D1.png" /></p>
 <p>E.g. you can enter the following text in the message input field:</p>
-<p><em>The contents of variable A is $A.</em></p>
-<p>If the variable <code class="code docutils literal notranslate"><span class="pre">$A</span></code> contains the value 25.3 at runtime, then the
+<p class="centered">
+<strong><em>The contents of variable A is $A.</em></strong></p><p>If the variable <code class="code docutils literal notranslate"><span class="pre">$A</span></code> contains the value 25.3 at runtime, then the
 function will display the following message:</p>
-<p><em>The contents of variable A is 25.3.</em></p>
-<div class="admonition tip">
+<p class="centered">
+<strong><em>The contents of variable A is 25.3.</em></strong></p><div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can display the contents of variables
 using the Show Message function, e.g. to check the
@@ -331,13 +331,13 @@ Show Message function is executed.</p>
 <p>With <em>Create Variable</em> you can define a new variable and
 assign a name, a type hint, and a value to that variable (see figure below):</p>
 <p><img alt="Figure 1.1.7: Configuration of a variable" src="../_images/10000201000001F70000012A4F7D758AE083075A.png" /></p>
-<ol class="arabic simple">
+<ol class="guinums arabic simple">
 <li><p><strong>Name</strong> – set a unique
 name for your variable. For details concerning the naming of
 variables, please refer to section <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#naming-variables"><span class="std std-ref">Naming Variables</span></a>.</p></li>
 <li><p><strong>Type</strong> – choose the kind of variable you want to set.</p></li>
 <li><p><strong>Value</strong> – give the variable a value or, if the variable is of the
-type <em>JavaScript Excpression</em>, enter the JavaScript code to calculate
+type <em>JavaScript Expression</em>, enter the JavaScript code to calculate
 the variable.</p></li>
 </ol>
 <div class="admonition tip">
@@ -454,9 +454,9 @@ previously defined variables.</p>
 </div>
 <p>You can also directly read the properties / process data of a device
 within a JavasScript expression and include it in a calculation. In the
-following example, the variable <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code> ❶ is calculated as a twentieth
-of the device property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.MaxFlow</span></code> ❷. Device properties
-can be easily added using the context menu entry <em>Insert device property</em> ❸.</p>
+following example, the variable <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code> <span class="guinum">❶</span> is calculated as a twentieth
+of the device property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.MaxFlow</span></code> <span class="guinum">❷</span>. Device properties
+can be easily added using the context menu entry <em>Insert device property</em> <span class="guinum">❸</span>.</p>
 <img alt="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" src="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -643,7 +643,7 @@ various operators are executed according to your needs. Refer to the
 </section>
 <section id="examples">
 <h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h4>
-<p><em>…for the use ofCalculation</em> variables:</p>
+<p>The following examples show how to use variables for calculations:</p>
 <section id="example-1">
 <h5>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline"></a></h5>
 <p>Adding two variables <em>a</em> and <em>b</em> and storing the result as a third
@@ -845,20 +845,20 @@ configuration panel to connect a device property permanently with a
 variable. Whenever you read the value of this variable from within a
 script function, automatically the current value of the connected device
 property is read.</p>
-<p>You can set the name of the variable in the input box <span class="guilabel">Variable</span> ❶
+<p>You can set the name of the variable in the input box <span class="guilabel">Variable</span> <span class="guinum">❶</span>
 (figure above). Select the device you want to access from the drop-down
-list <span class="guilabel">Device</span> ❸, which lists all devices that are part of the current
+list <span class="guilabel">Device</span> <span class="guinum">❸</span>, which lists all devices that are part of the current
 configuration. To simplify the search for a device, you can filter the
 device list by selecting an appropriate filter (device type) from the
-<span class="guilabel">Filter</span> drop-down field ❷.</p>
+<span class="guilabel">Filter</span> drop-down field <span class="guinum">❷</span>.</p>
 <p>After the device has been selected, use the last drop-down list
-<span class="guilabel">Property</span> ❹ to select the device property, the process data value that
+<span class="guilabel">Property</span> <span class="guinum">❹</span> to select the device property, the process data value that
 you want to access.</p>
 <p>In summary, this function can be described as follows:</p>
-<p><em>“Assign the device property ❹ of the device ❸ to the variable ❶ and
+<p class="centered">
+<strong>“Assign the device property <span class="guinum">❹</span> of the device <span class="guinum">❸</span> to the variable <span class="guinum">❶</span> and
 return the device property value if a read access on the variable takes
-place.”</em></p>
-<div class="note admonition">
+place.”</strong></p><div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Property variables can not be used to
 store values during calculations— use normal variables
@@ -890,7 +890,7 @@ for the user to find specific variables.</p>
 the <em>User Input</em> function (see figure below), you can configure the
 following parameters:</p>
 <p><img alt="Figure : Configuration User Input function" src="../_images/10000201000001B5000001065756B50B196B91FF.png" /></p>
-<ol class="arabic simple">
+<ol class="guinums arabic simple">
 <li><p><strong>Label Text</strong> – Here you
 specify a text that will be displayed to the user during the
 execution of the function above the input field as a label and
@@ -914,10 +914,10 @@ as functions. I.e. just as you create functions as reusable modules in
 other programming languages, you can also call your own functions in the
 script system in the form of external scripts.</p>
 <img alt="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" src="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" />
-<p>External script functions can have 0 – 10 input parameters ❶ and 0 – 10
-return values ❷. This allows you to pass values to the script (e.g.
+<p>External script functions can have 0 – 10 input parameters <span class="guinum">❶</span> and 0 – 10
+return values <span class="guinum">❷</span>. This allows you to pass values to the script (e.g.
 numeric values or variables) and read return values from the script and
-store them in script variables. <span class="guilabel">Script File</span> ❸ shows you the path to
+store them in script variables. <span class="guilabel">Script File</span> <span class="guinum">❸</span> shows you the path to
 the external script file that is executed when the script is invoked.</p>
 <p>In the section <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#programming-your-own-script-functions"><span class="std std-ref">Programming your own script functions</span></a> you
 will find detailed instructions on how to create your own script
@@ -965,10 +965,10 @@ the loop is to be run is defined in the configuration area
 support the use of variables may then use this variable to execute specific
 tasks or to perform additional calculations.</p>
 <p>The number of loops may be defined explicitly, by setting a number, or
-implicitly, via a variable that returns a number (figure below, ❶).</p>
+implicitly, via a variable that returns a number (figure below, <span class="guinum">❶</span>).</p>
 <p><img alt="image62" src="../_images/10000201000001FA0000007BEEA293AE47742C49.png" /></p>
 <p>Additionally, you can assign a custom name to the Counter Variable of
-the present loop function (figure above, ❷). Within this loop, other
+the present loop function (figure above, <span class="guinum">❷</span>). Within this loop, other
 functions may access the current loop count via this variable and use it
 for further calculations. This may be used, e.g., to control
 incremental moves of positioning systems.</p>
@@ -1005,9 +1005,9 @@ beginning is met. The termination condition in the loop header is
 checked before each iteration of the loop. The loop execution is stopped
 or skipped if the termination condition is false.</p>
 <p>Spelled out, the <em>Conditional Loop</em> function reads as follows:</p>
-<p><em>Repeat the loop and execute the function(s) contained within that loop
-as long as the loop condition holds true.</em></p>
-<p>There are two ways to set the parameters for loop checking: a simple mode
+<p class="centered">
+<strong>“Repeat the loop and execute the function(s) contained within that loop
+as long as the loop condition holds true.””</strong></p><p>There are two ways to set the parameters for loop checking: a simple mode
 and as a JavaScript expression.</p>
 <section id="configuration-simple-mode">
 <h4>Configuration - Simple Mode<a class="headerlink" href="#configuration-simple-mode" title="Permalink to this headline"></a></h4>
@@ -1016,26 +1016,26 @@ comfortably set the loop conditions directly via the Graphic User
 Interface – simply uncheck <em>JavaScript Expression</em> <span class="guinum">❶</span>. The following
 parameters may be set:</p>
 <figure class="align-default">
-<img alt="Figure : Configuration panel for conditional loops – basic mode" src="../_images/10000201000001FF000001568EF29AE39EE9077E.png" />
+<img alt="../_images/10000201000001FF000001568EF29AE39EE9077E.png" src="../_images/10000201000001FF000001568EF29AE39EE9077E.png" />
 </figure>
-<ul class="simple">
-<li><p><span class="guinum">❶</span> <strong>JavaScript Expression</strong> – this button is to toggle between the
+<ol class="guinums arabic simple">
+<li><p><strong>JavaScript Expression</strong> – this button is to toggle between the
 simple mode and <a class="reference external" href="Configuration-JavaScriptExpression">JavaScript Expression mode</a>
 (see section below).</p></li>
-<li><p><span class="guinum">❷</span> <strong>Name</strong> – Enter the name of the variable whose value is to be compared or checked in
+<li><p><strong>Name</strong> – Enter the name of the variable whose value is to be compared or checked in
 the condition. The variable is on the left side of the comparison condition
-and must start with a dollar sign $ (such as <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>).</p></li>
-<li><p><span class="guinum">❸</span> <strong>Type</strong> – allows you to give a type hint to the variable and thus toggle
+and must start with a dollar sign <code class="code docutils literal notranslate"><span class="pre">$</span></code> (such as <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>).</p></li>
+<li><p><strong>Type</strong> – allows you to give a type hint to the variable and thus toggle
 the controls in the Condition section.</p></li>
-<li><p><span class="guinum">❹</span> <strong>Comparison operator</strong> – with the combo box you can conveniently select
+<li><p><strong>Comparison operator</strong> – with the combo box you can conveniently select
 the comparison operator.</p></li>
-<li><p><span class="guinum">❺</span> <strong>Comparison condition</strong> – the value or a variable that the variable
+<li><p><strong>Comparison condition</strong> – the value or a variable that the variable
 from <span class="guinum">❷</span> is to be compared with.</p></li>
-</ul>
+</ol>
 <section id="sample-configuration-simple-mode">
 <h5>Sample Configuration: Simple Mode<a class="headerlink" href="#sample-configuration-simple-mode" title="Permalink to this headline"></a></h5>
 <p>The loop condition to be checked against is whether a the variable
-<code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <em>25.000,31</em>.</p>
+<code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <strong>25000,31</strong>.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -1062,7 +1062,7 @@ from <span class="guinum">❷</span> is to be compared with.</p></li>
 <p><img alt="Figure 1.1.15: Example for a Conditional Loop" src="../_images/100002010000016F000000B71ED1E13FA12FB8D2.png" /></p>
 <p>The resulting
 expression effects that the loop will be rerun as long as the value of
-the variable <code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <em>25.000,31</em>.</p>
+the variable <code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <strong>25000,31</strong>.</p>
 </section>
 </section>
 <section id="configuration-javascript-expression">
@@ -1101,7 +1101,7 @@ sequence and thus reuse it in different places in the program.</p>
 <p>A function sequence may be given a name; that name will then be shown
 in the function tree. This simplifies navigation in particular with
 larger numbers of function sequences. To do this, simply enter the name
-by double-clicking the <span class="guilabel">Caption Field</span> (Figure above ❶).</p>
+by double-clicking the <span class="guilabel">Caption Field</span> (Figure above <span class="guinum">❶</span>).</p>
 </section>
 <section id="add-function-parameters-and-return-values">
 <h4>Add function parameters and return values<a class="headerlink" href="#add-function-parameters-and-return-values" title="Permalink to this headline"></a></h4>
@@ -1115,7 +1115,7 @@ values can be defined for each function sequence. The functions in the
 sequence then only access the function parameters and not the external
 variables. This improves encapsulation and makes the function more
 independent of external variables and thus easier to maintain.</p>
-<p>You can add function parameters ❷ or return values ❸ by clicking the
+<p>You can add function parameters <span class="guinum">❷</span> or return values <span class="guinum">❸</span> by clicking the
 <span class="guilabel">Add</span> buttons. Assign meaningful parameter names by clicking the
 parameter names above the input fields (figure below):</p>
 <p><img alt="image77" src="../_images/10000201000001570000008695AB6CE95EA00D6D.png" /></p>
@@ -1125,7 +1125,7 @@ parameter names above the input fields (figure below):</p>
 <p>The <em>Function Sequence</em> also allows the loading of pre-stored scripts:
 You may load a script, which you have created and saved previously, into
 your current function sequence. To do this, just click on the
-<span class="guilabel">Load from script file</span> button (figure above, ❹) and select the
+<span class="guilabel">Load from script file</span> button (figure above, <span class="guinum">❹</span>) and select the
 desired file. The scripts are loaded into the current script. I.e. you can
 make changes to the loaded function sequence without affecting the external
 script.</p>
@@ -1150,8 +1150,8 @@ executed only if the check condition in the conditional sequence header is true.
 If the check condition is not true at the time of script execution, then the
 conditional sequence is simply skipped. In text form, the function execution
 can be described as follows:</p>
-<p><em>If the check condition is true, then execute the functions within the sequence.</em></p>
-<p>The configuration of the conditional sequence is identical to the configuration
+<p class="centered">
+<strong>“If the check condition is true, then execute the functions within the sequence.”</strong></p><p>The configuration of the conditional sequence is identical to the configuration
 of the <a class="reference internal" href="#conditional-loop">Conditional Loop</a>.</p>
 </section>
 <section id="parallel-sequence">
@@ -1191,12 +1191,12 @@ level the enclosing function sequences are terminated. With the default
 value 0, only the sequence containing the break function is terminated.
 If the value is 1, the sequence that is one level higher is also
 terminated, and so on.</p>
-<p>If, for example, you want to terminate a <a class="reference internal" href="#function-sequence">Function Sequence</a> ❶ when a
-certain condition occurs, insert a <a class="reference internal" href="#conditional-sequence">Conditional Sequence</a> ❷ into the
+<p>If, for example, you want to terminate a <a class="reference internal" href="#function-sequence">Function Sequence</a> <span class="guinum">❶</span> when a
+certain condition occurs, insert a <a class="reference internal" href="#conditional-sequence">Conditional Sequence</a> <span class="guinum">❷</span> into the
 function sequence to check the termination condition and a break
-function ❸ with the termination depth 1 into this conditional sequence.
-The break function ❸ will then terminate the conditional sequence ❷
-and the function sequence ❶ above it if the condition is true.</p>
+function <span class="guinum">❸</span> with the termination depth 1 into this conditional sequence.
+The break function <span class="guinum">❸</span> will then terminate the conditional sequence <span class="guinum">❷</span>
+and the function sequence <span class="guinum">❶</span> above it if the condition is true.</p>
 <img alt="../_images/1000020100000175000000A03698480BFF00A770.png" src="../_images/1000020100000175000000A03698480BFF00A770.png" />
 </section>
 </section>
@@ -1339,23 +1339,23 @@ category <em>Device Functions</em>.</p>
 <p>This function allows you to read process data from a device and save it to a
 variable.</p>
 <p>Select the device you want to access from the drop-down list
-<span class="guilabel">Device</span> ❷, which lists all devices that are part of the current
+<span class="guilabel">Device</span> <span class="guinum">❷</span>, which lists all devices that are part of the current
 configuration. To simplify the search for a device, you can filter the
 device list by selecting an appropriate filter (device type) from the
-<span class="guilabel">Filter</span> drop-down field ❶. After the device has been selected, use
-the last drop-down list <span class="guilabel">Property</span> ❸ to select the device property
+<span class="guilabel">Filter</span> drop-down field <span class="guinum">❶</span>. After the device has been selected, use
+the last drop-down list <span class="guilabel">Property</span> <span class="guinum">❸</span> to select the device property
 that you want to access.</p>
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Only devices and device properties are
 displayed that allow read access.</p>
 </div>
-<p>In the input field <span class="guilabel">Variable</span> ❹, enter the name of the variable into
+<p>In the input field <span class="guilabel">Variable</span> <span class="guinum">❹</span>, enter the name of the variable into
 which the value is to be saved during script runtime (figure below).</p>
 <p><img alt="Figure : Reading device property set-up panel" src="../_images/10000201000001DE000001244F9C5E31F069E4F2.png" /></p>
 <p>In abbreviated form, the set-up follows the following logic:</p>
-<p><em>Read from device ❷ the value of parameter ❸ and save it into variable ❹</em>.</p>
-<div class="admonition tip">
+<p class="centered">
+<strong>Read from device <span class="guinum">❷</span> the value of parameter <span class="guinum">❸</span> and save it into variable <span class="guinum">❹</span>.</strong></p><div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When entering a name, the auto-complete
 feature will provide you with a selection of all
@@ -1366,14 +1366,14 @@ previously defined variable names.</p>
 <h3><span class="section-number">5.4.3. </span>Write Device Property<a class="headerlink" href="#write-device-property" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg"><img alt="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" class="align-left" src="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" width="60" /></a>
 <p>This function is for writing process data from devices. In
-the input field ❶ enter the value to be written. You can also use
+the input field <span class="guinum">❶</span> enter the value to be written. You can also use
 variables or <a class="reference external" href="#1.7.DevicePropertyIdentifiers|outline">Device Property Identifiers</a> in this field.</p>
 <p>In the configuration panel (figure below), select the device and the
-appropriate device property that you want to write ❷ as described for
-function <a class="reference internal" href="#read-device-property">Read Device Property</a>. The device selection controls ❷ only show
+appropriate device property that you want to write <span class="guinum">❷</span> as described for
+function <a class="reference internal" href="#read-device-property">Read Device Property</a>. The device selection controls <span class="guinum">❷</span> only show
 devices and device properties, which allow write access.</p>
 <p><img alt="Figure : Scriptconfiguration Write Device Property" src="../_images/10000201000001DE00000122138AE1DCD5FBF187.png" /></p>
-<p>The value in the input field ❶ is then written at run time in the selected device
+<p>The value in the input field <span class="guinum">❶</span> is then written at run time in the selected device
 property.</p>
 </section>
 <section id="wait-for-device-property">
@@ -1383,19 +1383,19 @@ property.</p>
 property to reach a predefined condition. Once this condition is
 fulfilled, the script will resume.</p>
 <p>In the configuration panel (figure below), select the device and the
-appropriate device property that you want to monitor ❶ as described for
+appropriate device property that you want to monitor <span class="guinum">❶</span> as described for
 function <a class="reference internal" href="#read-device-property">Read Device Property</a>.</p>
 <figure class="align-default">
-<img alt="Figure : Script configuration Wait for Device Property" src="../_images/10000201000001DE0000013FEB6E6B812107306F.png" />
+<img alt="../_images/10000201000001DE0000013FEB6E6B812107306F.png" src="../_images/10000201000001DE0000013FEB6E6B812107306F.png" />
 </figure>
 <p>In the  <em>Condition</em> section you can configure the condition that is to
-be checked against. First define an <em>operator</em> ❷ and then the <em>target
-value</em> ❸ the device parameter is to be compared with. In the value
-field ❸, you can also use variables to set a test condition.</p>
+be checked against. First define an <em>operator</em> <span class="guinum">❷</span> and then the <em>target
+value</em> <span class="guinum">❸</span> the device parameter is to be compared with. In the value
+field <span class="guinum">❸</span>, you can also use variables to set a test condition.</p>
 <p>In short, the above set-up procedure reads as follows:</p>
-<p><em>Continue script execution, if the selected property of the
-device ❶ meets the condition ❷ ❸:</em></p>
-<div class="admonition tip">
+<p class="centered">
+<strong>Continue script execution, if the selected property of the
+device <span class="guinum">❶</span> meets the condition <span class="guinum">❷</span> <span class="guinum">❸</span>.</strong></p><div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Script Variables (such as <code class="code docutils literal notranslate"><span class="pre">$Value</span></code> can be used as test / comparison condition.</p>
 </div>
@@ -1437,7 +1437,7 @@ data persistently.</p>
 <h3><span class="section-number">5.6.1. </span>Open Settings File<a class="headerlink" href="#open-settings-file" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/open_settings_file.svg"><img alt="../_images/open_settings_file.svg" class="align-left" src="../_images/open_settings_file.svg" width="60" /></a>
 <p>This function opens a settings file <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> for reading / writing data persistently.
-An *.ini file is a structured data file that consits of sections and keys.
+An *.ini file is a structured data file that consists of sections and keys.
 The name of a section in the *.ini file is always entered inside square brackets.
 The name of a key is always on a separate line and the content is assigned by the
 <code class="code docutils literal notranslate"><span class="pre">=</span></code> char. The following example shows a typical *.ini file:</p>
@@ -1454,7 +1454,7 @@ The name of a key is always on a separate line and the content is assigned by th
 <p>The file has two sections (<code class="code docutils literal notranslate"><span class="pre">SyringeConfig</span></code> and <code class="code docutils literal notranslate"><span class="pre">Variables</span></code>) and each
 section contains a number of key-value pairs.</p>
 <p>To open a settings file or to create a new one, you need to provide a filename <span class="guinum">❶</span>
-and a script variable <span class="guinum">❷</span> to store the created settings file object.</p>
+and a script variable <span class="guinum">❷`</span> to store the created settings file object.</p>
 <img alt="../_images/open_settings_file.png" src="../_images/open_settings_file.png" />
 <p>If the file exists, it will be opened. If it does not exist yet, it will be
 created. You can now use the variable in the <a class="reference internal" href="#read-setting">Read Setting</a> and <a class="reference internal" href="#write-setting">Write Setting</a>
@@ -1521,7 +1521,7 @@ file:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 20, 2022 08:11.
+      <span class="lastupdated">Last updated on Jun 23, 2022 11:37.
       </span></p>
   </div>
 

@@ -237,7 +237,8 @@ The application window of the software consists of the following
 central components:
 
 .. figure:: Pictures/100002010000040500000272304B3AA146FD9FA5.png
-   :alt: Overview of application Main window
+
+.. rst-class:: guinums
 
 1. `Title bar`_
 2. Main menu

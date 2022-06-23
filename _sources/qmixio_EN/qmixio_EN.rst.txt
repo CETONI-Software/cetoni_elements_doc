@@ -174,24 +174,26 @@ of an analog in- and output channel:
 
 .. image:: Pictures/1000020100000212000001862DB8297006D93319.png
 
-- :guinum:`❶` The title bar shows the name of the channel you are configuring.
-- :guinum:`❷` In the toolbar you can find the actions you can perform:
+.. rst-class:: guinums
 
-  +-----------+---------------------------------------------------------------+
-  | |image21| | **Restore default settings** By clicking this button,         |
-  |           | all parameters (channel name, decimal points, scaling,        |
-  |           | *etc*.) are reset to their original values.                   |
-  +-----------+---------------------------------------------------------------+
-  | |image22| | **Select Scaling Preset** - opens a selection dialog          |
-  |           | with predefined `Scaling Presets`_.                           |
-  +-----------+---------------------------------------------------------------+
-  | |image23| | **Reset Calibration**- resets the calibration of the          |
-  |           | channel to the default settings (offset = 0, factor =         |
-  |           | 1).                                                           |
-  +-----------+---------------------------------------------------------------+
+#. The title bar shows the name of the channel you are configuring.
+#. In the toolbar you can find the actions you can perform:
 
-- :guinum:`❸` Here you can configure the general settings of the channel, such as
-  name, decimal places or unit of measurement:
+   +-----------+---------------------------------------------------------------+
+   | |image21| | **Restore default settings** By clicking this button,         |
+   |           | all parameters (channel name, decimal points, scaling,        |
+   |           | *etc*.) are reset to their original values.                   |
+   +-----------+---------------------------------------------------------------+
+   | |image22| | **Select Scaling Preset** - opens a selection dialog          |
+   |           | with predefined `Scaling Presets`_.                           |
+   +-----------+---------------------------------------------------------------+
+   | |image23| | **Reset Calibration**- resets the calibration of the          |
+   |           | channel to the default settings (offset = 0, factor =         |
+   |           | 1).                                                           |
+   +-----------+---------------------------------------------------------------+
+
+#. Here you can configure the general settings of the channel, such as
+   name, decimal places or unit of measurement:
 
    -  *Caption* – Here you can set a new name for that channel, which is
       then displayed in the channel list.
@@ -205,12 +207,12 @@ of an analog in- and output channel:
    -  *Decimals* – This field is to set the number of decimal points of
       the scaled unit of measurement.
 
-- :guinum:`❹` In the *Calibration* area, you can compensate measurement value
-  deviations of channels by means of calibration.
-- :guinum:`❺` For channels that support the connection of sensors (for example,
-  voltage or current measuring inputs), you can display the operating
-  elements for configuring the scaling of the sensor. To do this, click
-  *Sensor / Actuator Configuration*.
+#. In the *Calibration* area, you can compensate measurement value
+   deviations of channels by means of calibration.
+#. For channels that support the connection of sensors (for example,
+   voltage or current measuring inputs), you can display the operating
+   elements for configuring the scaling of the sensor. To do this, click
+   *Sensor / Actuator Configuration*.
 
 .. tip::
    All changes will be activated only after      

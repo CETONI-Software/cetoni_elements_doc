@@ -16,6 +16,8 @@ the process data graphs or show the logging view via the main menu
 The main elements of the process data graph area are as
 follows:
 
+.. rst-class:: guinums
+
 1. **Logging button** – Click this to show the process data graphs.
 2. **View Menu**- this can also be used to show and hide the process data
    graph
@@ -95,6 +97,7 @@ sections:
 
 |Figure 1: Configuration dialog of the graphic data logger|
 
+.. rst-class:: guinums
 
 1. **Device List** – shows all devices that return data that may be
    logged. The filter selection box allows to pre-select a specific
@@ -305,11 +308,13 @@ follows (see figure below):
 
 .. image:: Pictures/10000000000001FA0000015E46DAC1CBDA6E2854.png
 
-- :guinum:`❶` Using the mouse, left-click-and-hold into the plot area to set the
-  first corner of the zoom frame.
-- :guinum:`❷` Move the mouse pointer to define the size of the frame as desired.
-- :guinum:`❸` Releasing the mouse button will finalize the size of the frame. The
-  selected area will be scaled to the current graph size (zoom in).
+.. rst-class:: guinums
+
+#. Using the mouse, left-click-and-hold into the plot area to set the
+   first corner of the zoom frame.
+#. Move the mouse pointer to define the size of the frame as desired.
+#. Releasing the mouse button will finalize the size of the frame. The
+   selected area will be scaled to the current graph size (zoom in).
 
 Auto-Fit & Auto-Scale
 ~~~~~~~~~~~~~~~~~~~~~

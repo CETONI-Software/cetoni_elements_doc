@@ -85,8 +85,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#api-reference">6.9. API Reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scriptenv">6.9.1. ScriptEnv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#qfile">6.9.2. QFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qsqldatabase">6.9.3. QSqlDatabase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qsqlquery">6.9.4. QSqlQuery</a></li>
 </ul>
 </li>
 </ul>
@@ -99,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">14. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sqllogger_EN/sqllogger_EN.html">15. SQL Database Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">15. Database Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">18. Appendix</a></li>
@@ -394,7 +392,7 @@ functions:</p>
 <td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Z</kbd> or context menu</p></td>
 </tr>
 <tr class="row-even"><td><p>Redo</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Y</kbd> or contexte menu</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Y</kbd> or context menu</p></td>
 </tr>
 </tbody>
 </table>
@@ -576,7 +574,7 @@ scope. One of these objects is the <strong>global object</strong> that can be ac
 <p>If you would like to see the properties and functions of a specific built-in
 object, such as <code class="code docutils literal notranslate"><span class="pre">Math</span></code>, you just need to call help passing this object:
 <code class="code docutils literal notranslate"><span class="pre">help(Math)</span></code>.</p>
-<p>For a detailed list of buit-in objects supported by the embedded JavaScript engine,
+<p>For a detailed list of built-in objects supported by the embedded JavaScript engine,
 please refer to the Qt documentation:</p>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html">https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html</a></p>
 <p>For a detailed documentation of the build-in objects, please refer to the JavaScript
@@ -713,7 +711,7 @@ to the JavaScript function <code class="code docutils literal notranslate"><span
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The sourrounding check
+<p>The surrounding check
 <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">(typeof</span> <span class="pre">ScriptEnv.Initialized</span> <span class="pre">==</span> <span class="pre">&quot;undefined&quot;)</span></code> ensures, that there
 will be only one connection if the function is called multiple times. If we do
 not use this check, then a new connection is created each time the function
@@ -1160,242 +1158,6 @@ from the Qt framework.</p>
 </dd></dl>
 
 </section>
-<section id="qsqldatabase">
-<h3><span class="section-number">6.9.3. </span>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Permalink to this headline"></a></h3>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseE">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabaseE"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabaseE"></span><span id="QtLabb::Script::CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Script</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Wrapper for QSQLDatabase object to use it in JavaScript. </p>
-<p>The following code shows, how to open a database connection in JavaScript and how to execute a simple query</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QSqlDatabase</span><span class="p">();</span><span class="w"></span>
-<span class="n">db</span><span class="p">.</span><span class="n">createConnection</span><span class="p">(</span><span class="s">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;JsScript&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">db</span><span class="p">.</span><span class="n">databaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;C:/Users/Public/Documents/QmixElements/Projects/Entwicklung/Log/ProcessDataDbLog.sqlite&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">();</span><span class="w"></span>
-<span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">recordValues</span><span class="p">());</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::createConnection__QStringCR.QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7619d0e0b59af6304c34883a501b55e6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::createQuery__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7d3feae47966f90792203cdd3c2f97aa"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">createQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11createQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad9a23c8cce86b4b5d270749185497198"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase19CScriptQSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::databaseNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a80a380862f1c075985b62fc102e7181d"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">databaseName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase12databaseNameEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7driversEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase7driversEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase7driversEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::driversC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1af53355cbd7349d517f4fe6cfe22ce06e"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drivers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7driversEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::executeQuery__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a6cbd0a3d5930ac47c5811b636d9d2e2a"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">executeQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12executeQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::fields__QStringCRC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afb4c0065f5bc9b6526e3e6e86aa0c94f"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fields</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tablename</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6fieldsERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::hostNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a7b92eb8a5607a53e3c5b8e9749b03107"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hostName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8hostNameEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::isOpenC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1adbcd3271407ef0fb7207a4c2ff5583a8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6isOpenEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::isValidC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a4702bf509d01a908b377e71d313e3036"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase7isValidEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::lastErrorC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a061fcec611628433656a7b3c8191de97"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase4openEv">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase4openEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase4openEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::open"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a3b660f9a8775c67cf7737bef897fce4d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase4openEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::passwordC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1abc687667b1cfb579b499e5151211eaa2"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8passwordEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase4portEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase4portEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase4portEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::portC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1af29fb1ca388aa846a9147a8724d87000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">port</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase4portEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::qSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a8ed2dd4f88a7400d9a7df6a2323f1388"></span><span class="n"><span class="pre">QSqlDatabase</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase12qSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the internal database object. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setDatabaseName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a78ebea9d5a05051edea81fb5a6cf485b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDatabaseName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase15setDatabaseNameERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setHostName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad7eaec52b99b67c3f635972e4aab8006"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHostName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setHostNameERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setPassword__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a5a33125154f8ea83f0e6d07538844dbe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPassword</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">password</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setPasswordERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase7setPortEi">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase7setPortEi"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase7setPortEi"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setPort__i"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ae570688191ff5395e75a93f42d8f06d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPort</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase7setPortEi" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setUrl__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ae8aade98e025dfab478c1f54d43490d7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUrl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Url</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase6setUrlERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="QtLabb::Script::CScriptQSqlDatabase::setUserName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afe6f37747c1ddec313f4956306a0d6a8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUserName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabase11setUserNameERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::tablesC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1afdbae709e32e8234f08ab0eddbf7e1f8"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tables</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase6tablesEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase3urlEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase3urlEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase3urlEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::urlC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1aa9e7bfc27c53156f112c97dcccc65308"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">url</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase3urlEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv">
-<span id="_CPPv3NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv"></span><span id="_CPPv2NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv"></span><span id="QtLabb::Script::CScriptQSqlDatabase::userNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1a4c53122c2c579c19ffc087d43055d26b"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">userName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script19CScriptQSqlDatabase8userNameEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseD0Ev">
-<span id="_CPPv3N6QtLabb6Script19CScriptQSqlDatabaseD0Ev"></span><span id="_CPPv2N6QtLabb6Script19CScriptQSqlDatabaseD0Ev"></span><span id="QtLabb::Script::CScriptQSqlDatabase::~CScriptQSqlDatabase"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlDatabase_1ad664ea46124435037ef94ebdd3b242a2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script19CScriptQSqlDatabaseD0Ev" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-</section>
-<section id="qsqlquery">
-<h3><span class="section-number">6.9.4. </span>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Permalink to this headline"></a></h3>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQueryE">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQueryE"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQueryE"></span><span id="QtLabb::Script::CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Script</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQueryE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Wrapper for QSqlQuery to use it in JavaScript. </p>
-<p>There are several options how to execute a query. The first option is, to call the executeQuery() function of the database object:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<p>The second option is, to create the query via the database object and to execute it later:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<p>or you create the query object and the pass the actual query to the executeQuery() function</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">();</span><span class="w"></span>
-<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<p>If you want to insert data into the database, then you can build the complete query string with JavaScript or you can use the bindValues() function with placeholders like in the code below:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;INSERT INTO person (id, forename, surename) VALUES (?, ?, ?)&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">q</span><span class="p">.</span><span class="n">bindValues</span><span class="p">([</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bart&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Simpson&quot;</span><span class="p">]);</span><span class="w"></span>
-<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="QtLabb::Script::CScriptQSqlQuery::bindValues__QVariantListCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a972bdf1126a7798b971c4dc7ca1fda48"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bindValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery10bindValuesERK12QVariantList" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="QtLabb::Script::CScriptQSqlQuery::CScriptQSqlQuery__QSqlQueryCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a1a2d5781f65f79684f7b577f9a83fd5d"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QSqlQuery</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1ae223e9a528641cba62769e485b704667"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery16CScriptQSqlQueryEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery4execERK7QString">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery4execERK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery4execERK7QString"></span><span id="QtLabb::Script::CScriptQSqlQuery::exec__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a2a9864cf1b4eef437de5d989ffc64976"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery4execERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv">
-<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::lastErrorC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a9689e55e2f87f7ace13c0f0738f49c89"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery4nextEv">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery4nextEv"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery4nextEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::next"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a6029278384d92bf77acd453d5d9a7003"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery4nextEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString"></span><span id="QtLabb::Script::CScriptQSqlQuery::prepare__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a2bc82d9d44c92c33b40ac5d90a7572a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prepare</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQuery7prepareERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery6recordEv">
-<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery6recordEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery6recordEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::recordC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a188a838407bf61454bd1a6e130ee771d"></span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">record</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery6recordEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv">
-<span id="_CPPv3NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv"></span><span id="QtLabb::Script::CScriptQSqlQuery::recordValuesC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1a04d6f6127b65045d9780885d42e258a5"></span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptQSqlQuery12recordValuesEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptQSqlQueryD0Ev">
-<span id="_CPPv3N6QtLabb6Script16CScriptQSqlQueryD0Ev"></span><span id="_CPPv2N6QtLabb6Script16CScriptQSqlQueryD0Ev"></span><span id="QtLabb::Script::CScriptQSqlQuery::~CScriptQSqlQuery"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQSqlQuery_1ab19ef4832742a1f45833ee772a51fbfc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptQSqlQueryD0Ev" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-</section>
 </section>
 </section>
 
@@ -1411,7 +1173,7 @@ from the Qt framework.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 20, 2022 08:36.
+      <span class="lastupdated">Last updated on Jun 23, 2022 11:52.
       </span></p>
   </div>
 

@@ -131,6 +131,8 @@ By clicking the :guilabel:`SiLA 2` button and selecting *Server Overview* :guinu
 sidebar, you switch to the SiLA 2 add-on (see figure below).
 
 .. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
+
+.. rst-class:: guinums
  
 1. :guilabel:`SiLA 2` button for display of *Server Overview* and connected SiLA 2
    servers.

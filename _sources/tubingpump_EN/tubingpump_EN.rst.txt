@@ -23,6 +23,8 @@ Operating Parameters
 
 .. image:: Pictures/10000000000000BC0000016FB42FD11BDAB75F52.png
 
+.. rst-class:: guinums
+
 #. Pump Caption (customizable)
 #. Tubing configuration (inner diameter)
 #. Target value (flow rate, volume)
@@ -67,6 +69,8 @@ Manual Dosing
 Proceed as follows to configure a manual dosing task:
 
 .. image:: Pictures/10000000000000BC000000EA4601210AAF5F0BB0.png
+
+.. rst-class:: guinums
 
 1. Enter your target flow rate in the :guilabel:`Flow` input box. A
    negative flow value causes a change in the rotating direction of the
