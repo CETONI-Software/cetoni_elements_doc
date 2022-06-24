@@ -61,4 +61,5 @@ your navigation through this document:
    database_EN/database_EN.rst
    Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst
+   spectroscopy_EN/spectroscopy_EN.rst
    Appendix_EN/Appendix_EN.rst
