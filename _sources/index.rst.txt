@@ -55,6 +55,7 @@ your navigation through this document:
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
    tubingpump_EN/tubingpump_EN.rst
+   rotaxys_EN/rotaxys_EN.rst
    balance_EN/balance_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst

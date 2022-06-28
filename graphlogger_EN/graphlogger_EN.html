@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>14. Process Data Graph &mdash; CETONI Elements Manual</title>
+  <title>15. Process Data Graph &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="15. Database Add-on" href="../database_EN/database_EN.html" />
-    <link rel="prev" title="13. CSV Data Logger Plugin" href="../datalogger_EN/datalogger_EN.html" /> 
+    <link rel="next" title="16. Database Add-on" href="../database_EN/database_EN.html" />
+    <link rel="prev" title="14. CSV Data Logger Plugin" href="../datalogger_EN/datalogger_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -63,55 +63,56 @@
 <li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">9. Controller Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">10. Valve Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">12. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">13. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Process Data Graph</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">14.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#toolbar">14.2. Toolbar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration-dialog">14.3. Configuration Dialog</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">14.3.1. Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plot-curves-table">14.3.2. Plot Curves Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">14. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Process Data Graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">15.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">15.2. Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-dialog">15.3. Configuration Dialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">15.3.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plot-curves-table">15.3.2. Plot Curves Table</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-data-logging">14.4. Configure data logging</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-1-adding-channels">14.4.1. Step 1 – Adding Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-selecting-the-device-property">14.4.2. Step 2 – Selecting the Device Property</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-3-changing-the-channel-label">14.4.3. Step 3 – Changing the Channel Label</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">14.4.4. Deleting Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-4-defining-the-recording-interval">14.4.5. Step 4 – Defining the Recording Interval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-data-logging">15.4. Configure data logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-adding-channels">15.4.1. Step 1 – Adding Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-selecting-the-device-property">15.4.2. Step 2 – Selecting the Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-changing-the-channel-label">15.4.3. Step 3 – Changing the Channel Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">15.4.4. Deleting Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-defining-the-recording-interval">15.4.5. Step 4 – Defining the Recording Interval</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#start-stop-data-logging">14.5. Start/Stop Data Logging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#diagram-navigation-use">14.6. Diagram Navigation &amp; Use</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#diagram-navigation-overview">14.6.1. Diagram Navigation Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-the-displayed-section">14.6.2. Changing the Displayed Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#display-curve-values">14.6.3. Display Curve Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#zooming-via-the-mouse-wheel">14.6.4. Zooming via the Mouse Wheel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#display-section">14.6.5. Display Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#auto-fit-auto-scale">14.6.6. Auto-Fit &amp; Auto-Scale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#show-hide-individual-curves">14.6.7. Show/Hide Individual Curves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#select-curve-color">14.6.8. Select Curve Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exporting-plot-image">14.6.9. Exporting Plot Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#csv-export">14.6.10. CSV Export</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-of-diagram-data">14.6.11. Deleting of Diagram Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#switching-the-scaling-of-the-x-axis">14.6.12. Switching the scaling of the X-axis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#saving-plot-data">14.6.13. Saving plot data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#loading-plot-data">14.6.14. Loading plot data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-stop-data-logging">15.5. Start/Stop Data Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagram-navigation-use">15.6. Diagram Navigation &amp; Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagram-navigation-overview">15.6.1. Diagram Navigation Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-displayed-section">15.6.2. Changing the Displayed Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-curve-values">15.6.3. Display Curve Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zooming-via-the-mouse-wheel">15.6.4. Zooming via the Mouse Wheel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-section">15.6.5. Display Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-fit-auto-scale">15.6.6. Auto-Fit &amp; Auto-Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-hide-individual-curves">15.6.7. Show/Hide Individual Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-curve-color">15.6.8. Select Curve Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-plot-image">15.6.9. Exporting Plot Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-export">15.6.10. CSV Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-of-diagram-data">15.6.11. Deleting of Diagram Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switching-the-scaling-of-the-x-axis">15.6.12. Switching the scaling of the X-axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-plot-data">15.6.13. Saving plot data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-plot-data">15.6.14. Loading plot data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#script-functions">14.7. Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#start-plot-logger">14.7.1. Start Plot Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-plot-logger">14.7.2. Stop Plot Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#export-plot-data">14.7.3. Export Plot Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">15.7. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-plot-logger">15.7.1. Start Plot Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-plot-logger">15.7.2. Stop Plot Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-plot-data">15.7.3. Export Plot Data</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">15. Database Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">16. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">17. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">18. Spectroscopy Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">19. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">16. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">17. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">18. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">19. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">20. Appendix</a></li>
 </ul>
 
         </div>
@@ -128,7 +129,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">14. </span>Process Data Graph</li>
+      <li><span class="section-number">15. </span>Process Data Graph</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/graphlogger_EN/graphlogger_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -139,9 +140,9 @@
            <div itemprop="articleBody">
              
   <section id="process-data-graph">
-<h1><span class="section-number">14. </span>Process Data Graph<a class="headerlink" href="#process-data-graph" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">15. </span>Process Data Graph<a class="headerlink" href="#process-data-graph" title="Permalink to this headline"></a></h1>
 <section id="introduction">
-<h2><span class="section-number">14.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p>In addition to the ability to record data in CSV files, the data logger
 plug-in allows you to visualize process data. This allows for real-time
 visualization of, e.g., process data changes. Use the push button
@@ -165,7 +166,7 @@ start and stop the recording and to navigate the display.</p></li>
 </ol>
 </section>
 <section id="toolbar">
-<h2><span class="section-number">14.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16%" />
@@ -236,9 +237,9 @@ reloaded into the plot</p></td>
 </table>
 </section>
 <section id="configuration-dialog">
-<h2><span class="section-number">14.3. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.3. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h2>
 <section id="overview">
-<h3><span class="section-number">14.3.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg"><img alt="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" class="align-left" height="60" src="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" width="60" /></a>
 <p>Click on the button <span class="guilabel">Configure process data graph</span> in the
 toolbar to open the configuration dialog. This opens
@@ -256,7 +257,7 @@ to configure the data recording.</p></li>
 </ol>
 </section>
 <section id="plot-curves-table">
-<h3><span class="section-number">14.3.2. </span>Plot Curves Table<a class="headerlink" href="#plot-curves-table" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.3.2. </span>Plot Curves Table<a class="headerlink" href="#plot-curves-table" title="Permalink to this headline"></a></h3>
 <p><img alt="image48" src="../_images/100002010000028A000000981427A41273C77599.png" /></p>
 <p><em>Plot Curves</em> tabulates the selected configuration of the
 graphic data logger. Each row represents exactly one curve in the
@@ -294,9 +295,9 @@ proceed as detailed in the following sections.</p>
 </section>
 </section>
 <section id="configure-data-logging">
-<h2><span class="section-number">14.4. </span>Configure data logging<a class="headerlink" href="#configure-data-logging" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.4. </span>Configure data logging<a class="headerlink" href="#configure-data-logging" title="Permalink to this headline"></a></h2>
 <section id="step-1-adding-channels">
-<h3><span class="section-number">14.4.1. </span>Step 1 – Adding Channels<a class="headerlink" href="#step-1-adding-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.4.1. </span>Step 1 – Adding Channels<a class="headerlink" href="#step-1-adding-channels" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure 2: Adding a channel to the channel list" src="../_images/1000020100000361000001BF969DF3B35F4C3EBA.png" /></p>
 <p>To add a channel you first have to add the relevant device to the <em>Device List</em>of the <em>Plot
 Logger Configuration.</em> To do this, move the relevant item from the
@@ -310,7 +311,7 @@ device list may be filtered for a relevant device type.</p>
 </div>
 </section>
 <section id="step-2-selecting-the-device-property">
-<h3><span class="section-number">14.4.2. </span>Step 2 – Selecting the Device Property<a class="headerlink" href="#step-2-selecting-the-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.4.2. </span>Step 2 – Selecting the Device Property<a class="headerlink" href="#step-2-selecting-the-device-property" title="Permalink to this headline"></a></h3>
 <p>Select the device property that you want to record by double clicking
 into the <span class="guilabel">Property</span> field of the respective channel from
 <span class="guilabel">Plot Curves</span> table. This will display a drop-down list with all available
@@ -319,7 +320,7 @@ below).</p>
 <p><img alt="Figure 3: Selecting the device property to be recorded" src="../_images/1000020100000361000001A36B73334ECCAE6878.png" /></p>
 </section>
 <section id="step-3-changing-the-channel-label">
-<h3><span class="section-number">14.4.3. </span>Step 3 – Changing the Channel Label<a class="headerlink" href="#step-3-changing-the-channel-label" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.4.3. </span>Step 3 – Changing the Channel Label<a class="headerlink" href="#step-3-changing-the-channel-label" title="Permalink to this headline"></a></h3>
 <p>You may give a recorded property a customized name by changing the
 description in the column <span class="guilabel">Label</span>. This label will also be used to
 identify the respective curve in the diagram. To do this, double click
@@ -335,7 +336,7 @@ changed after the device property has been selected.</p>
 </div>
 </section>
 <section id="deleting-channels">
-<h3><span class="section-number">14.4.4. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.4.4. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
 <p>In order to delete one or multiple channels from the <span class="guilabel">Plot Curves</span>
 list, first you have to mark the respective channels using the
 computer mouse. Now you may use either the keyboard’s <kbd class="kbd docutils literal notranslate">Delete</kbd> key or
@@ -346,7 +347,7 @@ context menu.</p>
 <span class="menuselection">Clear Logger</span> item of the context menu.</p>
 </section>
 <section id="step-4-defining-the-recording-interval">
-<h3><span class="section-number">14.4.5. </span>Step 4 – Defining the Recording Interval<a class="headerlink" href="#step-4-defining-the-recording-interval" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.4.5. </span>Step 4 – Defining the Recording Interval<a class="headerlink" href="#step-4-defining-the-recording-interval" title="Permalink to this headline"></a></h3>
 <p><img alt="Figure 5: Configuration of the data logger interval" src="../_images/100000000000016D00000079FAA9B0F9A29F6352.png" /></p>
 <p>The <span class="guilabel">Log Interval</span> input box in the <span class="guilabel">Logger Configuration</span>
 section is to define the time interval at which data points for all channels are
@@ -363,7 +364,7 @@ the <em>Plot Logger Configuration</em> dialog.</p>
 </section>
 </section>
 <section id="start-stop-data-logging">
-<h2><span class="section-number">14.5. </span>Start/Stop Data Logging<a class="headerlink" href="#start-stop-data-logging" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.5. </span>Start/Stop Data Logging<a class="headerlink" href="#start-stop-data-logging" title="Permalink to this headline"></a></h2>
 <a class="reference internal image-reference" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" class="align-left" height="60" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="60" /></a>
 <p>The data logging process may be started/stopped via the
 relevant button in the toolbar.</p>
@@ -372,9 +373,9 @@ relevant button in the toolbar.</p>
 </div>
 </section>
 <section id="diagram-navigation-use">
-<h2><span class="section-number">14.6. </span>Diagram Navigation &amp; Use<a class="headerlink" href="#diagram-navigation-use" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.6. </span>Diagram Navigation &amp; Use<a class="headerlink" href="#diagram-navigation-use" title="Permalink to this headline"></a></h2>
 <section id="diagram-navigation-overview">
-<h3><span class="section-number">14.6.1. </span>Diagram Navigation Overview<a class="headerlink" href="#diagram-navigation-overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.1. </span>Diagram Navigation Overview<a class="headerlink" href="#diagram-navigation-overview" title="Permalink to this headline"></a></h3>
 <p>The processdata graphing plug-in offers a number of possibilities to
 customize the way data are displayed. This includes resizing parts of a
 curve and showing or hiding individual curves.</p>
@@ -390,7 +391,7 @@ measurement units.</p>
 with a number of additional functions.</p>
 </section>
 <section id="changing-the-displayed-section">
-<h3><span class="section-number">14.6.2. </span>Changing the Displayed Section<a class="headerlink" href="#changing-the-displayed-section" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.2. </span>Changing the Displayed Section<a class="headerlink" href="#changing-the-displayed-section" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg"><img alt="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" class="align-left" height="60" src="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" width="60" /></a>
 <p>The <em>Pan Tool</em> provides you with a simple way to move the
 displayed section of the plot area. It may be activated via its toolbar
@@ -403,13 +404,13 @@ will deactivate the auto-scaling of the diagram axes.</p>
 </div>
 </section>
 <section id="display-curve-values">
-<h3><span class="section-number">14.6.3. </span>Display Curve Values<a class="headerlink" href="#display-curve-values" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.3. </span>Display Curve Values<a class="headerlink" href="#display-curve-values" title="Permalink to this headline"></a></h3>
 <p>When the <em>Pan Tool</em> is active, you can move the mouse pointer over a
 curve to display the value at that specific position.</p>
 <p><img alt="Figure : Display Curve Values" src="../_images/100002010000024C000000D8EF633321C7CB7321.png" /></p>
 </section>
 <section id="zooming-via-the-mouse-wheel">
-<h3><span class="section-number">14.6.4. </span>Zooming via the Mouse Wheel<a class="headerlink" href="#zooming-via-the-mouse-wheel" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.4. </span>Zooming via the Mouse Wheel<a class="headerlink" href="#zooming-via-the-mouse-wheel" title="Permalink to this headline"></a></h3>
 <p>Turning the mouse wheel whilst the pointer is within the plot area will
 allow you to adjust the displayed section of a graph by increasing
 (zooming in) or decreasing (zooming out) its zoom level.</p>
@@ -429,7 +430,7 @@ allow you to adjust the displayed section of a graph by increasing
 </table>
 </section>
 <section id="display-section">
-<h3><span class="section-number">14.6.5. </span>Display Section<a class="headerlink" href="#display-section" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.5. </span>Display Section<a class="headerlink" href="#display-section" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg"><img alt="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" class="align-left" height="60" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" width="60" /></a>
 <p>The <em>Zoom Tool</em> allows you to directly select a specific area
 of the plot and increase its resolution. To do this, please proceed as
@@ -447,7 +448,7 @@ selected area will be scaled to the current graph size (zoom in).</p></li>
 </ol>
 </section>
 <section id="auto-fit-auto-scale">
-<h3><span class="section-number">14.6.6. </span>Auto-Fit &amp; Auto-Scale<a class="headerlink" href="#auto-fit-auto-scale" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.6. </span>Auto-Fit &amp; Auto-Scale<a class="headerlink" href="#auto-fit-auto-scale" title="Permalink to this headline"></a></h3>
 <p>The toolbar and the context menu both contain a number of tools to
 adjust what is displayed in the diagram, in particular to ensure that
 all or specific data are visible.</p>
@@ -487,7 +488,7 @@ plot section will deactivate auto-scaling.</p>
 </div>
 </section>
 <section id="show-hide-individual-curves">
-<h3><span class="section-number">14.6.7. </span>Show/Hide Individual Curves<a class="headerlink" href="#show-hide-individual-curves" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.7. </span>Show/Hide Individual Curves<a class="headerlink" href="#show-hide-individual-curves" title="Permalink to this headline"></a></h3>
 <p>To improve scaling and visibility, you may show or hide individual
 curves. To do this, right-click the desired item in the plot legend and
 select the desired function to either hide the corresponding curve only
@@ -500,7 +501,7 @@ the menu item <span class="menuselection">Show all curves</span> (see figure bel
 <img alt="../_images/1000000000000109000001041C877E8A24D5AB94.png" src="../_images/1000000000000109000001041C877E8A24D5AB94.png" />
 </section>
 <section id="select-curve-color">
-<h3><span class="section-number">14.6.8. </span>Select Curve Color<a class="headerlink" href="#select-curve-color" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.8. </span>Select Curve Color<a class="headerlink" href="#select-curve-color" title="Permalink to this headline"></a></h3>
 <p>To choose a different curve color, right click an item in the plot
 legend. From the context menu select the menu item <span class="menuselection">Select Color</span>
 (see figure below).</p>
@@ -511,7 +512,7 @@ color.</p>
 <img alt="../_images/100002010000020A000001B855540FDC883B53CF.png" src="../_images/100002010000020A000001B855540FDC883B53CF.png" />
 </section>
 <section id="exporting-plot-image">
-<h3><span class="section-number">14.6.9. </span>Exporting Plot Image<a class="headerlink" href="#exporting-plot-image" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.9. </span>Exporting Plot Image<a class="headerlink" href="#exporting-plot-image" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg"><img alt="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" class="align-left" height="60" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" width="60" /></a>
 <p>You may export a picture of the current diagram using the
 right-click context menu and selecting <span class="menuselection">Export plot image</span>.</p>
@@ -528,7 +529,7 @@ type <span class="guinum">❷</span>. The export function supports standard imag
 <p>To close the dialog and to start the image export, click <span class="guilabel">Save</span> <span class="guinum">❸</span>.</p>
 </section>
 <section id="csv-export">
-<h3><span class="section-number">14.6.10. </span>CSV Export<a class="headerlink" href="#csv-export" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.10. </span>CSV Export<a class="headerlink" href="#csv-export" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg"><img alt="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" class="align-left" height="60" src="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" width="60" /></a>
 <p>You can export all diagram data to a CSV file using the
 <span class="menuselection">Export CSV file</span> menu item.</p>
@@ -537,7 +538,7 @@ type <span class="guinum">❷</span>. The export function supports standard imag
 </div>
 </section>
 <section id="deleting-of-diagram-data">
-<h3><span class="section-number">14.6.11. </span>Deleting of Diagram Data<a class="headerlink" href="#deleting-of-diagram-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.11. </span>Deleting of Diagram Data<a class="headerlink" href="#deleting-of-diagram-data" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100019CB000035050000350509AD2B23340F765E.svg"><img alt="../_images/100019CB000035050000350509AD2B23340F765E.svg" class="align-left" height="60" src="../_images/100019CB000035050000350509AD2B23340F765E.svg" width="60" /></a>
 <p>You may clear the plot area and delete all data recorded
 since the start of the present recording using the context menu item
@@ -545,7 +546,7 @@ since the start of the present recording using the context menu item
 <img alt="../_images/100002010000010D000000D1835EC0ADB6A09475.png" src="../_images/100002010000010D000000D1835EC0ADB6A09475.png" />
 </section>
 <section id="switching-the-scaling-of-the-x-axis">
-<h3><span class="section-number">14.6.12. </span>Switching the scaling of the X-axis<a class="headerlink" href="#switching-the-scaling-of-the-x-axis" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.12. </span>Switching the scaling of the X-axis<a class="headerlink" href="#switching-the-scaling-of-the-x-axis" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100018130000350500003505CADD59D81E3150FD.svg"><img alt="../_images/100018130000350500003505CADD59D81E3150FD.svg" class="align-left" height="60" src="../_images/100018130000350500003505CADD59D81E3150FD.svg" width="60" /></a>
 <p>You can switch the scaling of the X-axis between two
 different modes. By default, the X axis displays an absolute date/time
@@ -563,7 +564,7 @@ time at which the recording was started.</p>
 <img alt="../_images/100002010000010D000000C7FB8978837EA08B41.png" src="../_images/100002010000010D000000C7FB8978837EA08B41.png" />
 </section>
 <section id="saving-plot-data">
-<h3><span class="section-number">14.6.13. </span>Saving plot data<a class="headerlink" href="#saving-plot-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.13. </span>Saving plot data<a class="headerlink" href="#saving-plot-data" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000040D000035050000350542F550057A626C6D.svg"><img alt="../_images/1000040D000035050000350542F550057A626C6D.svg" class="align-left" height="60" src="../_images/1000040D000035050000350542F550057A626C6D.svg" width="60" /></a>
 <p>If you click the <span class="guilabel">Save Plot Data</span> button, all plot data will
 be saved to a file <code class="file docutils literal notranslate"><span class="pre">*.dat</span></code> that can be loaded back into the plot
@@ -573,7 +574,7 @@ later.</p>
 </div>
 </section>
 <section id="loading-plot-data">
-<h3><span class="section-number">14.6.14. </span>Loading plot data<a class="headerlink" href="#loading-plot-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.6.14. </span>Loading plot data<a class="headerlink" href="#loading-plot-data" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000044C000035050000350571A7475A9B633EF8.svg"><img alt="../_images/1000044C000035050000350571A7475A9B633EF8.svg" class="align-left" height="60" src="../_images/1000044C000035050000350571A7475A9B633EF8.svg" width="60" /></a>
 <p>By clicking the <span class="guilabel">Load Plot Data</span> button, plot data that was
 previously saved with <span class="guilabel">Save Plot Data</span> can be loaded back into the
@@ -586,7 +587,7 @@ curves may be loaded.</p>
 </section>
 </section>
 <section id="script-functions">
-<h2><span class="section-number">14.7. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">15.7. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
 <p><img alt="Figure 13: Logger script functions" src="../_images/10000201000001330000006F1CA99CCDC5308AD8.png" /></p>
 <p>To automate the capture of data or
 to synchronize data capture with other processes, the graphical plot
@@ -594,7 +595,7 @@ logger can be started and stopped using script functions.
 The corresponding functions can be found in the <span class="guilabel">Logging</span> category in
 the list of the available script functions.</p>
 <section id="start-plot-logger">
-<h3><span class="section-number">14.7.1. </span>Start Plot Logger<a class="headerlink" href="#start-plot-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.7.1. </span>Start Plot Logger<a class="headerlink" href="#start-plot-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" class="align-left" height="60" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="60" /></a>
 <p>This function is used to start the graphical logger with the
 currently configured settings and channels. The current content of the
@@ -607,7 +608,7 @@ plot is not deleted.</p>
 plot data before logging. Starts.</p>
 </section>
 <section id="stop-plot-logger">
-<h3><span class="section-number">14.7.2. </span>Stop Plot Logger<a class="headerlink" href="#stop-plot-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.7.2. </span>Stop Plot Logger<a class="headerlink" href="#stop-plot-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg"><img alt="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg" class="align-left" height="60" src="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg" width="60" /></a>
 <p>This function stops the current logging of process data into
 the process data plot.</p>
@@ -616,7 +617,7 @@ the process data plot.</p>
 </div>
 </section>
 <section id="export-plot-data">
-<h3><span class="section-number">14.7.3. </span>Export Plot Data<a class="headerlink" href="#export-plot-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">15.7.3. </span>Export Plot Data<a class="headerlink" href="#export-plot-data" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001130000035050000350554D46258E4776750.svg"><img alt="../_images/10001130000035050000350554D46258E4776750.svg" class="align-left" height="60" src="../_images/10001130000035050000350554D46258E4776750.svg" width="60" /></a>
 <p>This function allows you to export the plot data to different
 formats. In the configuration area you can choose the file name and the
@@ -637,15 +638,15 @@ in figure below):</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../datalogger_EN/datalogger_EN.html" class="btn btn-neutral float-left" title="13. CSV Data Logger Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../database_EN/database_EN.html" class="btn btn-neutral float-right" title="15. Database Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../datalogger_EN/datalogger_EN.html" class="btn btn-neutral float-left" title="14. CSV Data Logger Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../database_EN/database_EN.html" class="btn btn-neutral float-right" title="16. Database Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 24, 2022 15:22.
+      <span class="lastupdated">Last updated on Jun 28, 2022 08:04.
       </span></p>
   </div>
 
