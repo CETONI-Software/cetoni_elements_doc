@@ -65,7 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">12. Rotaxys / Nemaxys Plugins</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">12.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sidebar">12.2. Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#positioning-sidebar">12.2. Positioning Sidebar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#toolbar">12.3. Toolbar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#control-pad">12.4. Control Pad</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#rotaxys">12.4.1. Rotaxys</a></li>
@@ -168,11 +168,15 @@
 <h1><span class="section-number">12. </span>Rotaxys / Nemaxys Plugins<a class="headerlink" href="#rotaxys-nemaxys-plugins" title="Permalink to this headline"></a></h1>
 <section id="introduction">
 <h2><span class="section-number">12.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
-<p>This plugin supports the control and visualization of
+<p>These plugins support the control and visualization of
 various CETONI positioning systems such as Rotaxys and Nemaxys devices.
-For each device a <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> is created that provides all UI elements to manually
-control a single device (see image below).</p>
+For each device a <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> is created that provides all UI elements
+to manually control a single device (see image below).</p>
 <img alt="../_images/10000201000003DC00000264E20C70B3.png" src="../_images/10000201000003DC00000264E20C70B3.png" />
+<p>You can show a View for a specific device via the main menu item
+<span class="menuselection">Window → Show View → Rotaxys</span> or
+<span class="menuselection">Window → Show View → Nemaxys</span> or via the corresponding
+buttons in the application <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#application-sidebar"><span class="std std-ref">Sidebar</span></a>.</p>
 <p>Such a view mainly consists of the following components:</p>
 <ol class="guinums arabic simple">
 <li><p>Toolbar</p></li>
@@ -183,8 +187,8 @@ control a single device (see image below).</p>
 <li><p>Status Bar</p></li>
 </ol>
 </section>
-<section id="sidebar">
-<h2><span class="section-number">12.2. </span>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline"></a></h2>
+<section id="positioning-sidebar">
+<h2><span class="section-number">12.2. </span>Positioning Sidebar<a class="headerlink" href="#positioning-sidebar" title="Permalink to this headline"></a></h2>
 <img alt="../_images/10000201000000AF0000012F9C3F78B4.png" src="../_images/10000201000000AF0000012F9C3F78B4.png" />
 <p>In the sidebar, which can be turned on and turned off, you can
 find additional controls to configure and control your positioning
@@ -255,9 +259,8 @@ by the axis system and it is the start and end point of
 the 360 ° rotation range</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004F40000388E0000388E24B4D5C8.svg"><img alt="image38" src="../_images/100004F40000388E0000388E24B4D5C8.svg" width="40" /></a></p></td>
-<td><p>Configure zero angle - the zero angle is never crossed
-by the axis system and it is the start and end point of
-the 360 ° rotation range</p></td>
+<td><p>Find Home - Executes a reference move to find the home
+position of the device</p></td>
 </tr>
 </tbody>
 </table>
@@ -361,7 +364,10 @@ will not cause collisions when the tool tip is lowered.</p>
 <h2><span class="section-number">12.5. </span>Positioning Map<a class="headerlink" href="#positioning-map" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-positioning-map">
 <h3><span class="section-number">12.5.1. </span>Introduction to Positioning Map<a class="headerlink" href="#introduction-to-positioning-map" title="Permalink to this headline"></a></h3>
-<p>With the positioning map you can position the positioning system in the
+<p>The positioning map is a top view of the XY plane of your axis system.
+It shows the travel range and and the worktable configuration of your device.</p>
+<img alt="../_images/positioning_map.png" src="../_images/positioning_map.png" />
+<p>With the positioning map you can position your axis system in the
 XY plane by clicking points on the positioning map. The magnification of
 the positioning map can be changed via the context menu in fixed steps
 or continuously adjusted with the mouse wheel.</p>
@@ -596,6 +602,11 @@ selected from now on.</p></li>
 </section>
 <section id="configuring-the-rotaxys-360-worktable">
 <h2><span class="section-number">12.10. </span>Configuring the Rotaxys 360 Worktable<a class="headerlink" href="#configuring-the-rotaxys-360-worktable" title="Permalink to this headline"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This feature is available only for Rotaxys 360 devices. If you have a Nemaxys
+or Rotaxys device, then skip this section.</p>
+</div>
 <section id="load-a-work-table-configuration">
 <h3><span class="section-number">12.10.1. </span>Load a work table configuration<a class="headerlink" href="#load-a-work-table-configuration" title="Permalink to this headline"></a></h3>
 <p>For the Rotaxys 360 positioning system, the individual microtiter plates
@@ -1016,7 +1027,7 @@ variables.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 28, 2022 08:35.
+      <span class="lastupdated">Last updated on Jun 29, 2022 13:42.
       </span></p>
   </div>
 

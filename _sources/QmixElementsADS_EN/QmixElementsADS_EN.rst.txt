@@ -520,6 +520,8 @@ can click several entries one after the other and select them.
 If you then click the :guilabel:`Remove` button :guinum:`❷`,
 all selected perspectives will be deleted.
 
+.. _application-sidebar:
+
 Sidebar
 -------
 

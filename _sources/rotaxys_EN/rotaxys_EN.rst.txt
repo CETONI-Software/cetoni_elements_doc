@@ -4,12 +4,17 @@ Rotaxys / Nemaxys Plugins
 Introduction
 ------------
 
-This plugin supports the control and visualization of
+These plugins support the control and visualization of
 various CETONI positioning systems such as Rotaxys and Nemaxys devices.
-For each device a :ref:`View <views>` is created that provides all UI elements to manually
-control a single device (see image below). 
+For each device a :ref:`View <views>` is created that provides all UI elements
+to manually control a single device (see image below). 
 
-.. image:: ./Pictures/10000201000003DC00000264E20C70B3.png
+.. image:: Pictures/10000201000003DC00000264E20C70B3.png
+
+You can show a View for a specific device via the main menu item
+:menuselection:`Window --> Show View --> Rotaxys` or 
+:menuselection:`Window --> Show View --> Nemaxys` or via the corresponding
+buttons in the application :ref:`Sidebar <application-sidebar>`.
 
 Such a view mainly consists of the following components:
 
@@ -22,10 +27,10 @@ Such a view mainly consists of the following components:
 5. Sidebar
 6. Status Bar
 
-Sidebar
--------
+Positioning Sidebar
+---------------------
 
-.. image:: ./Pictures/10000201000000AF0000012F9C3F78B4.png
+.. image:: Pictures/10000201000000AF0000012F9C3F78B4.png
 
 In the sidebar, which can be turned on and turned off, you can
 find additional controls to configure and control your positioning
@@ -79,9 +84,8 @@ Toolbar
 |           | by the axis system and it is the start and end point of |
 |           | the 360 ° rotation range                                |
 +-----------+---------------------------------------------------------+
-| |image38| | Configure zero angle - the zero angle is never crossed  |
-|           | by the axis system and it is the start and end point of |
-|           | the 360 ° rotation range                                |
+| |image38| | Find Home - Executes a reference move to find the home  |
+|           | position of the device                                  |
 +-----------+---------------------------------------------------------+
 
 Control Pad
@@ -156,7 +160,12 @@ Positioning Map
 Introduction to Positioning Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With the positioning map you can position the positioning system in the
+The positioning map is a top view of the XY plane of your axis system.
+It shows the travel range and and the worktable configuration of your device.
+
+.. image:: Pictures/positioning_map.png
+
+With the positioning map you can position your axis system in the
 XY plane by clicking points on the positioning map. The magnification of
 the positioning map can be changed via the context menu in fixed steps
 or continuously adjusted with the mouse wheel.
@@ -195,7 +204,7 @@ The positioning map can be used in two different modes:
 -  Free positioning mode
 -  Container positioning mode
 
-.. image:: ./Pictures/10000D0D0000387200003872DC49EFEE.svg
+.. image:: Pictures/10000D0D0000387200003872DC49EFEE.svg
    :width: 60
    :align: left
 
@@ -204,7 +213,7 @@ button in the toolbar or with the context menu of the positioning map.
 The current position of the device is indicated by a green cross
 on the positioning map (Figure below).
 
-.. image:: ./Pictures/100000000000021B000001883AC10950.png
+.. image:: Pictures/100000000000021B000001883AC10950.png
 
 .. admonition:: Important
    :class: note
@@ -216,7 +225,7 @@ on the positioning map (Figure below).
 Free positioning mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ./Pictures/100002010000026F00000160893A15AD.png
+.. image:: Pictures/100002010000026F00000160893A15AD.png
 
 With free positioning, you can travel
 to all positions within a permissible area. The permissible area is
@@ -235,7 +244,7 @@ or single wells in a titerplate to position. As
 soon as you have clicked the target container, the system automatically moves
 to the centre of the selected container.
 
-.. image:: ./Pictures/10000000000001820000011C044844B8.png
+.. image:: Pictures/10000000000001820000011C044844B8.png
 
 The selected target container :guinum:`❶` is coloured with the current 
 highlight color.
@@ -245,12 +254,12 @@ Open context menu
 
 Right-click on the positioning map to open the context menu.
 
-.. image:: ./Pictures/100002010000026400000183CB728E2F.png
+.. image:: Pictures/100002010000026400000183CB728E2F.png
 
 Z panel for Positioning the Z axis
 ----------------------------------
 
-.. image:: ./Pictures/100002010000008400000179E985566C.png
+.. image:: Pictures/100002010000008400000179E985566C.png
 
 The Z panel on the right of the positioning map shows you the current
 position of the vertical axis, and gives you a number of ways of
@@ -277,7 +286,7 @@ To assign the current position, right mouse click one of the two
 buttons, and then select :menuselection:`Assign actual position` 
 from the context menu (see Figure below).
 
-.. image:: ./Pictures/10000201000001260000005F5060C7EB.png
+.. image:: Pictures/10000201000001260000005F5060C7EB.png
 
 The assigned position is saved in
 the configuration data, and is still present when the software is
@@ -292,7 +301,7 @@ The numerical height indicator shows you the current height of the axis
 in millimeters. A bar in the graphic display shows the current position
 of the axis within the range of travel.
 
-.. image:: ./Pictures/1000020100000077000000F2F26E6F5B.png
+.. image:: Pictures/1000020100000077000000F2F26E6F5B.png
 
 .. rst-class:: guinums
   
@@ -323,12 +332,12 @@ Status Bar
 You can read the current XY position and the current status of the
 device in the status bar of the Rotaxys working area at all times.
 
-.. image:: ./Pictures/10000201000001A40000003D95DACEE7.png
+.. image:: Pictures/10000201000001A40000003D95DACEE7.png
 
 Z-Axis safety stroke
 ----------------------------------------------------
 
-.. image:: ./Pictures/10000B3C0000388E0000388EB899FB65.svg
+.. image:: Pictures/10000B3C0000388E0000388EB899FB65.svg
    :width: 60
    :align: left
 
@@ -339,7 +348,7 @@ collisions with sample vessels or other objects on the worktable.
 
 |
 
-.. image:: ./Pictures/10000C840000387200003872CDFFD2CA.svg
+.. image:: Pictures/10000C840000387200003872CDFFD2CA.svg
    :width: 60
    :align: left
 
@@ -365,7 +374,7 @@ currently configured well plate. You can configure new well plates in
 the software and assign it to Rotaxys device. To do this, select the
 main menu item :menuselection:`Edit --> Configure Well Plate` (see figure below).
 
-.. image:: ./Pictures/1000000000000185000000A437A90768.png
+.. image:: Pictures/1000000000000185000000A437A90768.png
 
 The configuration
 dialogue for well plates appears. This configuration dialogue is
@@ -384,7 +393,7 @@ If the list of available well plates :guinum:`❶` already contains a suitable
 plate, simply select it by clicking on it and confirm the selection by
 clicking the :guilabel:`OK` button in the configuration dialogue.
 
-.. image:: ./Pictures/100000000000029A0000020185A439FC.png
+.. image:: Pictures/100000000000029A0000020185A439FC.png
 
 Creating a new well plate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -426,6 +435,10 @@ To create a new well plate, perform the following steps:
 Configuring the Rotaxys 360 Worktable
 --------------------------------------
 
+.. tip::
+   This feature is available only for Rotaxys 360 devices. If you have a Nemaxys
+   or Rotaxys device, then skip this section.
+
 Load a work table configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -440,7 +453,7 @@ interface of the corresponding Rotaxys 360 device. Then select
 :menuselection:`Device --> rotAXYS 360 --> Load Table Configuration`
 from the main menu.
 
-.. image:: ./Pictures/10000201000001F90000016C8210A438.png
+.. image:: Pictures/10000201000001F90000016C8210A438.png
 
 Then, in the file
 selection dialog that appears, select the configuration file for the
@@ -448,7 +461,7 @@ work table and load it. The graphical representation of the work table
 is then immediately updated to the new configuration (see figure example
 configuration).
 
-.. image:: ./Pictures/100002010000029700000167F3466823.png
+.. image:: Pictures/100002010000029700000167F3466823.png
 
 Restore standard work table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -457,7 +470,7 @@ To restore the default work table, select
 :menuselection:`Device --> rotAXYS 360 --> Restore Default Table` from the main 
 menu.
 
-.. image:: ./Pictures/10000201000001D2000000ACD92863B0.png
+.. image:: Pictures/10000201000001D2000000ACD92863B0.png
 
 Zero angle configuration
 ------------------------
@@ -466,7 +479,7 @@ The Rotaxys 360 axis system has an operation angle which is
 theoretically greater than 360 degrees. In order to prevent entanglement
 of the hose for fluid dosing, the turning range is limited to 360 °.
 
-.. image:: ./Pictures/10000000000001F4000001F443D41FA1.png
+.. image:: Pictures/10000000000001F4000001F443D41FA1.png
 
 The zero angle ist the angle that
 will never be crossed by the positioning system. It is the start- and
@@ -475,7 +488,7 @@ two sample containers that you would like to process, the positioning
 system will choose the longer route in the opposite direction, so as not
 to cross the zero angle.
 
-.. image:: ./Pictures/10000DA30000388E0000388E5B234FC2.svg
+.. image:: Pictures/10000DA30000388E0000388E5B234FC2.svg
    :width: 60
    :align: left
 
@@ -493,7 +506,7 @@ freely set the zero angle in the range from 0 - 360 °.
 SpaceMouse Support
 ------------------------------------
 
-.. image:: ./Pictures/10000000000001BC000001A5A8497856.png
+.. image:: Pictures/10000000000001BC000001A5A8497856.png
 
 The `SpaceMouse <https://3dconnexion.com/us/product/spacemouse-compact/>`_
 is an intuitive input device which allows you to control all axes 
@@ -506,7 +519,7 @@ http://www.cetoni.de/englisch/service/downloads_software.html
 or on disk (CD or USB stick) you received when you purchased the
 software. Install the driver to use the SpaceMouse.
 
-.. image:: ./Pictures/1000000000000500000002D03030564E.png
+.. image:: Pictures/1000000000000500000002D03030564E.png
 
 Position the SpaceMouse device, so that the cable leads away from
 you and that the **3D Connexion** label is readable from your position.
@@ -540,7 +553,7 @@ Positioning rotary axis
 In order to position the rotary axis, rotate the SpaceMouse cap
 clockwise or counter-clockwise.
 
-.. image:: ./Pictures/100000000000023C00000157E76FE648.png
+.. image:: Pictures/100000000000023C00000157E76FE648.png
 
 The speed of
 the axes can be determined by the strength of the deflection of the
@@ -560,7 +573,7 @@ front or rear. To move the radius-axis to the outer radius, press away
 the control element from you. To move the radius axis to the centre of
 the rotation axis, pull the cap to your direction.
 
-.. image:: ./Pictures/10000000000001BA0000016A872C4EFA.png
+.. image:: Pictures/10000000000001BA0000016A872C4EFA.png
 
 Vertical axis positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -569,7 +582,7 @@ To position the Z-axis, press down the cap or pull it to the top. The
 Z-axis is moved in the direction in which you move the control element
 of the SpaceMouse.
 
-.. image:: ./Pictures/1000000000000153000002091D224344.png
+.. image:: Pictures/1000000000000153000002091D224344.png
 
 Positioning Nemaxys with SpaceMouse
 ----------------------------------------------
@@ -598,7 +611,7 @@ To control the X-axis movement, slide the SpaceMouse's control in
 the desired direction. Push the controller to the left, to move the
 X-axis leftwards and push it to the right to move the axis rightwards.
 
-.. image:: ./Pictures/100000000000021E0000012A75C2B620.png
+.. image:: Pictures/100000000000021E0000012A75C2B620.png
 
 The speed of the
 axes can be determined by the strength of the deflection of the Space
@@ -613,7 +626,7 @@ precisely control axis speeds.
 Positioning Y-axis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ./Pictures/10000000000001BA0000016A872C4EFA.png
+.. image:: Pictures/10000000000001BA0000016A872C4EFA.png
 
 To move the Y-axis
 towards the back of the device, press the controller forward. To move
@@ -628,7 +641,7 @@ controller towards you.
 Vertical axis positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ./Pictures/1000000000000153000002091D224344.png
+.. image:: Pictures/1000000000000153000002091D224344.png
 
 To position the Z-axis, press down the cap or pull it to the top. The
 Z-axis is moved in the direction in which you move the control element
@@ -642,7 +655,7 @@ supports control of individual axis devices. This may be necessary if
 your axis system has additional tool axes (like second Z-axis or
 rotation axis) which are not part of the XYZ-multi-axis control.
 
-.. image:: ./Pictures/10000000000001DC000000DF02C90C52.png
+.. image:: Pictures/10000000000001DC000000DF02C90C52.png
 
 You can show / hide
 the window for single axis control via the main menu item 
@@ -666,7 +679,7 @@ window:
    long as the buttons are pressed and stops immediately if a button is
    released.
 
-   .. image:: ./Pictures/10000000000001620000013436ED2B99.png
+   .. image:: Pictures/10000000000001620000013436ED2B99.png
 
 3. In the **Velocity** area you can adjust the speed of axis move.
 
@@ -688,7 +701,7 @@ in the main menu :menuselection:`Device --> rotAXYS --> Find Home`
 (see Figure below). If you have a neMAXYS system, you can start the 
 calibration via  :menuselection:`Device --> neMAXYS --> Find Home`.
 
-.. image:: ./Pictures/10000201000001DD00000099ECA5B3B8.png
+.. image:: Pictures/10000201000001DD00000099ECA5B3B8.png
 
 Positioning Script Functions
 ----------------------------
@@ -697,12 +710,12 @@ The plugin offers a number of script functions
 required for integrating the cetoni positioning systems in the CETONI Elements
 scripting system. The following script functions are available:
 
-.. image:: ./Pictures/100002010000013E000000C4FF06E1BD.png
+.. image:: Pictures/100002010000013E000000C4FF06E1BD.png
 
 Move XY
 ~~~~~~~~~~
 
-.. image:: ./Pictures/1000668B0000388E0000388EDE73FA6F.svg
+.. image:: Pictures/1000668B0000388E0000388EDE73FA6F.svg
    :width: 60
    :align: left
 
@@ -714,7 +727,7 @@ specific position (for example with the :ref:`positioning map <positioning map>`
 and then assign the current position values to the script function with the
 :guilabel:`Capture Actual Position` button (see Figure below).
 
-.. image:: ./Pictures/1000000000000222000001A467F71F03.png
+.. image:: Pictures/1000000000000222000001A467F71F03.png
 
 If you make no further
 adjustments, all positionings are carried out with the maximum possible
@@ -733,7 +746,7 @@ function
 Move Z
 ~~~~~~
 
-.. image:: ./Pictures/100028D60000388E0000388E7FEE4E05.svg
+.. image:: Pictures/100028D60000388E0000388E7FEE4E05.svg
    :width: 60
    :align: left
 
@@ -746,7 +759,7 @@ Z-axis manually to a specific position (for example with the
 current Z position to the script function with the 
 :guilabel:`Capture Actual Position` button.
 
-.. image:: ./Pictures/10000000000001F80000011DC4B4D896.png
+.. image:: Pictures/10000000000001F80000011DC4B4D896.png
 
 If you make no further
 adjustments, the positioning is carried out with the maximum possible
@@ -779,7 +792,7 @@ whether the next function
 Find Home
 ~~~~~~~~~
 
-.. image:: ./Pictures/100004F40000388E0000388E24B4D5C8.svg
+.. image:: Pictures/100004F40000388E0000388E24B4D5C8.svg
    :width: 60
    :align: left
 
@@ -793,7 +806,7 @@ been completed.
 Move Axis
 ~~~~~~~~~
 
-.. image:: ./Pictures/1000083F0000388E0000388E79629C8E.svg
+.. image:: Pictures/1000083F0000388E0000388E79629C8E.svg
    :width: 60
    :align: left
 
@@ -806,7 +819,7 @@ Alternatively, you can move the axis manually to a specific position
 and then assign the current position to the script function with the 
 :guilabel:`Capture Position` button.
 
-.. image:: ./Pictures/10000000000001F50000011DA0097ABC.png
+.. image:: Pictures/10000000000001F50000011DA0097ABC.png
 
 If you make no further
 adjustments, the positioning is carried out with the maximum possible
@@ -832,7 +845,7 @@ whether the next function
 Move to container
 ~~~~~~~~~~~~~~~~~
 
-.. image:: ./Pictures/10001F860000387200003872C360796C.svg
+.. image:: Pictures/10001F860000387200003872C360796C.svg
    :width: 60
    :align: left
 
@@ -852,7 +865,7 @@ values from 0 to 7 in the row input field. If the container has only one
 single cavity (e.g. beaker or fluid tank) the input fields
 for row and column are greyed out.
 
-.. image:: ./Pictures/1000000000000235000001BE75B30F65.png
+.. image:: Pictures/1000000000000235000001BE75B30F65.png
 
 If you make no further
 adjustments, all positionings are carried out with the maximum possible
@@ -875,112 +888,112 @@ whether the next function
    wells of a well plate in a loop using the loop counter 
    variables. 
 
-.. |image26| image:: ./Pictures/10000CF90000388E0000388E1FD1A88B.svg
+.. |image26| image:: Pictures/10000CF90000388E0000388E1FD1A88B.svg
    :width: 40
-.. |image27| image:: ./Pictures/10000D410000388E0000388E35A2B3B1.svg
+.. |image27| image:: Pictures/10000D410000388E0000388E35A2B3B1.svg
    :width: 40
-.. |image28| image:: ./Pictures/100009990000388E0000388E1BA93A61.svg
+.. |image28| image:: Pictures/100009990000388E0000388E1BA93A61.svg
    :width: 40
-.. |image29| image:: ./Pictures/100006470000388E0000388E347518E6.svg
+.. |image29| image:: Pictures/100006470000388E0000388E347518E6.svg
    :width: 40
-.. |image30| image:: ./Pictures/100005ED0000388E0000388ED759EE76.svg
+.. |image30| image:: Pictures/100005ED0000388E0000388ED759EE76.svg
    :width: 40
-.. |image31| image:: ./Pictures/10000D0D0000387200003872DC49EFEE.svg
+.. |image31| image:: Pictures/10000D0D0000387200003872DC49EFEE.svg
    :width: 40
-.. |image32| image:: ./Pictures/10006A1200003872000038721E5AEA51.svg
+.. |image32| image:: Pictures/10006A1200003872000038721E5AEA51.svg
    :width: 40
-.. |image33| image:: ./Pictures/10004B2D000038720000387201D5E26F.svg
+.. |image33| image:: Pictures/10004B2D000038720000387201D5E26F.svg
    :width: 40
-.. |image34| image:: ./Pictures/10000DBF0000388E0000388EA99541AC.svg
+.. |image34| image:: Pictures/10000DBF0000388E0000388EA99541AC.svg
    :width: 40
-.. |image35| image:: ./Pictures/10000B3C0000388E0000388EB899FB65.svg
+.. |image35| image:: Pictures/10000B3C0000388E0000388EB899FB65.svg
    :width: 40
-.. |image36| image:: ./Pictures/10000C840000387200003872CDFFD2CA.svg
+.. |image36| image:: Pictures/10000C840000387200003872CDFFD2CA.svg
    :width: 40
-.. |image37| image:: ./Pictures/10000DA30000388E0000388E5B234FC2.svg
+.. |image37| image:: Pictures/10000DA30000388E0000388E5B234FC2.svg
    :width: 40
-.. |image38| image:: ./Pictures/100004F40000388E0000388E24B4D5C8.svg
+.. |image38| image:: Pictures/100004F40000388E0000388E24B4D5C8.svg
    :width: 40
 
-.. |image48| image:: ./Pictures/100000000000008E0000008ADFC67101.png
+.. |image48| image:: Pictures/100000000000008E0000008ADFC67101.png
    :width: 120
-.. |image49| image:: ./Pictures/100000000000008E0000008A4C967708.png
+.. |image49| image:: Pictures/100000000000008E0000008A4C967708.png
    :width: 120
-.. |image50| image:: ./Pictures/100000000000008E0000008ABA97D8C2.png
+.. |image50| image:: Pictures/100000000000008E0000008ABA97D8C2.png
    :width: 120
-.. |image51| image:: ./Pictures/100000000000008E0000008AF56DAD39.png
+.. |image51| image:: Pictures/100000000000008E0000008AF56DAD39.png
    :width: 120
-.. |image52| image:: ./Pictures/100000000000008E0000008A4BC0171B.png
+.. |image52| image:: Pictures/100000000000008E0000008A4BC0171B.png
    :width: 120
-.. |image53| image:: ./Pictures/100000000000008E0000008A43243293.png
+.. |image53| image:: Pictures/100000000000008E0000008A43243293.png
    :width: 120
-.. |image54| image:: ./Pictures/100000000000008E0000008A8EC74FBF.png
+.. |image54| image:: Pictures/100000000000008E0000008A8EC74FBF.png
    :width: 120
-.. |image55| image:: ./Pictures/100000000000008E0000008A42F68D0D.png
+.. |image55| image:: Pictures/100000000000008E0000008A42F68D0D.png
    :width: 120
-.. |image56| image:: ./Pictures/100000000000008E0000008A0D0CF8F6.png
+.. |image56| image:: Pictures/100000000000008E0000008A0D0CF8F6.png
    :width: 120
-.. |image57| image:: ./Pictures/100000000000008E0000008AB3A142D4.png
+.. |image57| image:: Pictures/100000000000008E0000008AB3A142D4.png
    :width: 120
-.. |image58| image:: ./Pictures/1000000000000227000000DC165AEB92.png
+.. |image58| image:: Pictures/1000000000000227000000DC165AEB92.png
    :width: 4.489cm
    :height: 1.792cm
-.. |image59| image:: ./Pictures/10000000000000E9000000DA41A245E6.png
+.. |image59| image:: Pictures/10000000000000E9000000DA41A245E6.png
    :width: 1.91cm
    :height: 1.79cm
-.. |image60| image:: ./Pictures/1000000000000227000000DC165AEB92.png
+.. |image60| image:: Pictures/1000000000000227000000DC165AEB92.png
    :width: 4.489cm
    :height: 1.792cm
-.. |image61| image:: ./Pictures/10000000000000E9000000DA41A245E6.png
+.. |image61| image:: Pictures/10000000000000E9000000DA41A245E6.png
    :width: 1.91cm
    :height: 1.79cm
-.. |image62| image:: ./Pictures/1000000000000227000000DC165AEB92.png
+.. |image62| image:: Pictures/1000000000000227000000DC165AEB92.png
    :width: 4.489cm
-.. |image63| image:: ./Pictures/10000000000000E9000000DA41A245E6.png
+.. |image63| image:: Pictures/10000000000000E9000000DA41A245E6.png
    :width: 1.91cm
-.. |image67| image:: ./Pictures/10000000000001EC000002E98AB54170.png
+.. |image67| image:: Pictures/10000000000001EC000002E98AB54170.png
    :width: 2.5cm
-.. |image68| image:: ./Pictures/10000000000001EC000002E9389967B0.png
+.. |image68| image:: Pictures/10000000000001EC000002E9389967B0.png
    :width: 2.5cm
-.. |image69| image:: ./Pictures/10000000000001EC000002E9F2BF7149.png
+.. |image69| image:: Pictures/10000000000001EC000002E9F2BF7149.png
    :width: 2.5cm
-.. |image70| image:: ./Pictures/100002010000018300000083E415CE9E.png
-.. |image82| image:: ./Pictures/1000000000000222000001B52D5E1599.png
-.. |image83| image:: ./Pictures/10000000000000F6000000A48331D83C.png
-.. |image85| image:: ./Pictures/100000000000015E00000176CAF82C1C.png
+.. |image70| image:: Pictures/100002010000018300000083E415CE9E.png
+.. |image82| image:: Pictures/1000000000000222000001B52D5E1599.png
+.. |image83| image:: Pictures/10000000000000F6000000A48331D83C.png
+.. |image85| image:: Pictures/100000000000015E00000176CAF82C1C.png
    :width: 6.807cm
-.. |image86| image:: ./Pictures/10000000000001F4000001F46EE2C177.png
+.. |image86| image:: Pictures/10000000000001F4000001F46EE2C177.png
    :width: 6.807cm
-.. |image88| image:: ./Pictures/10000000000000DF000000CCCD58FB2B.png
+.. |image88| image:: Pictures/10000000000000DF000000CCCD58FB2B.png
    :width: 2.09cm
    :height: 1.91cm
-.. |image89| image:: ./Pictures/1000000000000116000000E97F22C917.png
+.. |image89| image:: Pictures/1000000000000116000000E97F22C917.png
    :width: 2.09cm
    :height: 1.75cm
-.. |image90| image:: ./Pictures/100000000000009D000000DF60858E32.png
+.. |image90| image:: Pictures/100000000000009D000000DF60858E32.png
    :width: 1.291cm
    :height: 1.834cm
-.. |image91| image:: ./Pictures/10000000000000DF000000CCCD58FB2B.png
+.. |image91| image:: Pictures/10000000000000DF000000CCCD58FB2B.png
    :width: 2.09cm
    :height: 1.91cm
-.. |image92| image:: ./Pictures/1000000000000116000000E97F22C917.png
+.. |image92| image:: Pictures/1000000000000116000000E97F22C917.png
    :width: 2.09cm
    :height: 1.75cm
-.. |image93| image:: ./Pictures/100000000000009D000000DF60858E32.png
+.. |image93| image:: Pictures/100000000000009D000000DF60858E32.png
    :width: 1.291cm
    :height: 1.834cm
-.. |image94| image:: ./Pictures/10000000000000DF000000CCCD58FB2B.png
+.. |image94| image:: Pictures/10000000000000DF000000CCCD58FB2B.png
    :width: 80
-.. |image95| image:: ./Pictures/1000000000000116000000E97F22C917.png
+.. |image95| image:: Pictures/1000000000000116000000E97F22C917.png
    :width: 80
-.. |image96| image:: ./Pictures/100000000000009D000000DF60858E32.png
+.. |image96| image:: Pictures/100000000000009D000000DF60858E32.png
    :width: 80
-.. |image103| image:: ./Pictures/10000000000000C40000008BD9BAE182.png
+.. |image103| image:: Pictures/10000000000000C40000008BD9BAE182.png
    :width: 80
-.. |image104| image:: ./Pictures/1000000000000116000000E97F22C917.png
+.. |image104| image:: Pictures/1000000000000116000000E97F22C917.png
    :width: 80
-.. |image105| image:: ./Pictures/100000000000009D000000DF60858E32.png
+.. |image105| image:: Pictures/100000000000009D000000DF60858E32.png
    :width: 80
-.. |image137| image:: ./Pictures/10001F860000387200003872C360796C.svg
+.. |image137| image:: Pictures/10001F860000387200003872C360796C.svg
    :width: 2cm
    :height: 2cm
