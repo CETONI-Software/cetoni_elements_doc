@@ -59,10 +59,14 @@ file :file:`devices.db`, you should import it now.
    database import.
 
 #. Confirm the query by left-clicking the :guilabel:`Yes` button.
+
    |Figure 2: Query for device database import|
+
 #. A file selection dialog opens. Select the database file :file:`devices.db` located in the
    root directory of the CETONI Elements CD (see figure below).
+   
    |Figure 3: Device database import dialog|
+   
 #. The device configurator now has an actual device database available.
 
 .. admonition:: Important

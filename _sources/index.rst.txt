@@ -57,6 +57,9 @@ your navigation through this document:
    tubingpump_EN/tubingpump_EN.rst
    rotaxys_EN/rotaxys_EN.rst
    balance_EN/balance_EN.rst
+   cameraview_EN/cameraview_EN.rst
+   imageanalysis_EN/imageanalysis_EN.rst
+   videobuilder_EN/videobuilder_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
    database_EN/database_EN.rst

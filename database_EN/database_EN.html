@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>16. Database Add-on &mdash; CETONI Elements Manual</title>
+  <title>19. Database Add-on &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="17. Python Add-on" href="../Python_EN/Python_EN.html" />
-    <link rel="prev" title="15. Process Data Graph" href="../graphlogger_EN/graphlogger_EN.html" /> 
+    <link rel="next" title="20. Python Add-on" href="../Python_EN/Python_EN.html" />
+    <link rel="prev" title="18. Process Data Graph" href="../graphlogger_EN/graphlogger_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -65,13 +65,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">14. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">15. Process Data Graph</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">16. Database Add-on</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sql-database-logger">16.1. SQL Database Logger</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sql-logger-configuration-dialog">16.1.1. SQL Logger Configuration Dialog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#database-settings">16.1.2. Database Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sql-logger-configuration">16.1.3. SQL Logger Configuration</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">14. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">15. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">16. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">17. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">18. Process Data Graph</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">19. Database Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sql-database-logger">19.1. SQL Database Logger</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sql-logger-configuration-dialog">19.1.1. SQL Logger Configuration Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-settings">19.1.2. Database Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-logger-configuration">19.1.3. SQL Logger Configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#step-1-add-channels">Step 1- Add Channels</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-select-device-property">Step 2- Select Device Property</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-3-configure-sample-interval">Step 3 – Configure Sample Interval</a></li>
@@ -79,31 +82,31 @@
 <li class="toctree-l4"><a class="reference internal" href="#deleting-channels">Deleting Channels</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#database-schema">16.1.4. Database Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-schema">19.1.4. Database Schema</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#script-functions">16.2. Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#start-sql-logger">16.2.1. Start SQL Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-sql-logger">16.2.2. Stop SQL Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#trigger-sql-data-logging">16.2.3. Trigger SQL Data Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">19.2. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-sql-logger">19.2.1. Start SQL Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-sql-logger">19.2.2. Stop SQL Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trigger-sql-data-logging">19.2.3. Trigger SQL Data Logging</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-database-access">16.3. JavaScript Database Access</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-1-sqlite-database-query">16.3.1. Example 1 - SQLite Database Query</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-2-create-sqlite-database-schema">16.3.2. Example 2 - Create SQLite Database Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-database-access">19.3. JavaScript Database Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-sqlite-database-query">19.3.1. Example 1 - SQLite Database Query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-create-sqlite-database-schema">19.3.2. Example 2 - Create SQLite Database Schema</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-api-reference">16.4. JavaScript API Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#qsqldatabase">16.4.1. QSqlDatabase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qsqlquery">16.4.2. QSqlQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-api-reference">19.4. JavaScript API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qsqldatabase">19.4.1. QSqlDatabase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qsqlquery">19.4.2. QSqlQuery</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">17. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">18. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">19. Spectroscopy Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">20. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">23. Appendix</a></li>
 </ul>
 
         </div>
@@ -120,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">16. </span>Database Add-on</li>
+      <li><span class="section-number">19. </span>Database Add-on</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/database_EN/database_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -131,12 +134,12 @@
            <div itemprop="articleBody">
              
   <section id="database-add-on">
-<h1><span class="section-number">16. </span>Database Add-on<a class="headerlink" href="#database-add-on" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">19. </span>Database Add-on<a class="headerlink" href="#database-add-on" title="Permalink to this headline"></a></h1>
 <p>The database Add-on adds SQL database support. It allows you to log process
 data values into a SQL database via the SQL Data Logger and it provides support
 for executing SQL queries.</p>
 <section id="sql-database-logger">
-<h2><span class="section-number">16.1. </span>SQL Database Logger<a class="headerlink" href="#sql-database-logger" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">19.1. </span>SQL Database Logger<a class="headerlink" href="#sql-database-logger" title="Permalink to this headline"></a></h2>
 <p>The SQL database logger enables logging of process data into an SQL database.
 The logger is not intended to record process data at very high sample rates but
 to log important process data over a longer period of time to document
@@ -144,7 +147,7 @@ experiments or automated processes in the laboratory.</p>
 <p>The SQL database logger supports various databases such as SQLite, MySQL or
 PostgreSQL. It has been tested with SQLite and MySQL databases.</p>
 <section id="sql-logger-configuration-dialog">
-<h3><span class="section-number">16.1.1. </span>SQL Logger Configuration Dialog<a class="headerlink" href="#sql-logger-configuration-dialog" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.1.1. </span>SQL Logger Configuration Dialog<a class="headerlink" href="#sql-logger-configuration-dialog" title="Permalink to this headline"></a></h3>
 <img alt="../_images/toolbar_sql_logger_buttons.png" src="../_images/toolbar_sql_logger_buttons.png" />
 <p>When the data logging plug-in has
 been loaded, the toolbar will display two additional buttons for the
@@ -198,7 +201,7 @@ selected channel.</p></li>
 </ul>
 </section>
 <section id="database-settings">
-<h3><span class="section-number">16.1.2. </span>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.1.2. </span>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline"></a></h3>
 <p>To configure the database settings, click the
 <span class="guilabel">Configure Database Connection</span> button in the configuration dialog.</p>
 <img alt="../_images/config_db_connection.png" src="../_images/config_db_connection.png" />
@@ -248,7 +251,7 @@ as soon as you have successfully checked your database connection.</p>
 </div>
 </section>
 <section id="sql-logger-configuration">
-<h3><span class="section-number">16.1.3. </span>SQL Logger Configuration<a class="headerlink" href="#sql-logger-configuration" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.1.3. </span>SQL Logger Configuration<a class="headerlink" href="#sql-logger-configuration" title="Permalink to this headline"></a></h3>
 <section id="step-1-add-channels">
 <h4>Step 1- Add Channels<a class="headerlink" href="#step-1-add-channels" title="Permalink to this headline"></a></h4>
 <p>Drag-and-Drop the device for which you want to log the data from the
@@ -314,7 +317,7 @@ channels from the list, and then use either the <kbd class="kbd docutils literal
 </section>
 </section>
 <section id="database-schema">
-<h3><span class="section-number">16.1.4. </span>Database Schema<a class="headerlink" href="#database-schema" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.1.4. </span>Database Schema<a class="headerlink" href="#database-schema" title="Permalink to this headline"></a></h3>
 <p>The SQL logger uses the following database schema to store its data:</p>
 <a class="reference internal image-reference" href="../_images/eer_diagram.svg"><img alt="../_images/eer_diagram.svg" src="../_images/eer_diagram.svg" width="600px" /></a>
 <p>The schema consists of two tables. The first table is
@@ -388,7 +391,7 @@ data labeled with <strong>Flowmeter (ml/s)</strong>:</p>
 </section>
 </section>
 <section id="script-functions">
-<h2><span class="section-number">16.2. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">19.2. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
 <p>To automate the data logging or to synchronize data logging with
 other processes, the SQL database logger can be started and stopped using
 script functions. The corresponding functions can be found
@@ -396,7 +399,7 @@ in the <span class="guilabel">Logging</span> category in the list of the availab
 functions.</p>
 <img alt="../_images/sql_logger_script_functions.png" src="../_images/sql_logger_script_functions.png" />
 <section id="start-sql-logger">
-<h3><span class="section-number">16.2.1. </span>Start SQL Logger<a class="headerlink" href="#start-sql-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.2.1. </span>Start SQL Logger<a class="headerlink" href="#start-sql-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/sql_log_start.svg"><img alt="../_images/sql_log_start.svg" class="align-left" src="../_images/sql_log_start.svg" width="60" /></a>
 <p>This function is used to start the SQL logger with the
 currently configured settings and channels.</p>
@@ -405,7 +408,7 @@ currently configured settings and channels.</p>
 </div>
 </section>
 <section id="stop-sql-logger">
-<h3><span class="section-number">16.2.2. </span>Stop SQL Logger<a class="headerlink" href="#stop-sql-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.2.2. </span>Stop SQL Logger<a class="headerlink" href="#stop-sql-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/sql_log_stop.svg"><img alt="../_images/sql_log_stop.svg" class="align-left" src="../_images/sql_log_stop.svg" width="60" /></a>
 <p>This function stops logging into SQL database.</p>
 <div class="line-block">
@@ -413,7 +416,7 @@ currently configured settings and channels.</p>
 </div>
 </section>
 <section id="trigger-sql-data-logging">
-<h3><span class="section-number">16.2.3. </span>Trigger SQL Data Logging<a class="headerlink" href="#trigger-sql-data-logging" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.2.3. </span>Trigger SQL Data Logging<a class="headerlink" href="#trigger-sql-data-logging" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/sql_log_trigger.svg"><img alt="../_images/sql_log_trigger.svg" class="align-left" src="../_images/sql_log_trigger.svg" width="60" /></a>
 <p>This function triggers the immediate logging of all channels of the SQL logger.
 Normally the data will be logged with the configured <a class="reference internal" href="#step-3-configure-sample-interval"><span class="std std-ref">interval</span></a>.
@@ -423,14 +426,14 @@ event occurs, then you can use this function.</p>
 </section>
 </section>
 <section id="javascript-database-access">
-<h2><span class="section-number">16.3. </span>JavaScript Database Access<a class="headerlink" href="#javascript-database-access" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">19.3. </span>JavaScript Database Access<a class="headerlink" href="#javascript-database-access" title="Permalink to this headline"></a></h2>
 <p>The Database Add-on provides some functionality, to access SQL databases from
 <a class="reference internal" href="../javascript_EN/javascript_EN.html#using-javascript"><span class="std std-ref">JavaScript code</span></a>. If you enter the <code class="code docutils literal notranslate"><span class="pre">help()</span></code>
 command in th JavaScript Console, you should see the database objects
 such as <a class="reference internal" href="#qsqldatabase">QSqlDatabase</a> or <a class="reference internal" href="#qsqlquery">QSqlQuery</a>.</p>
 <img alt="../_images/database_help.png" src="../_images/database_help.png" />
 <section id="example-1-sqlite-database-query">
-<h3><span class="section-number">16.3.1. </span>Example 1 - SQLite Database Query<a class="headerlink" href="#example-1-sqlite-database-query" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.3.1. </span>Example 1 - SQLite Database Query<a class="headerlink" href="#example-1-sqlite-database-query" title="Permalink to this headline"></a></h3>
 <p>The following example code shows, how to use the database objects in a
 JavaScript function to execute a SQL query for an SQLite database:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
@@ -452,7 +455,7 @@ JavaScript function to execute a SQL query for an SQLite database:</p>
 </div>
 </section>
 <section id="example-2-create-sqlite-database-schema">
-<h3><span class="section-number">16.3.2. </span>Example 2 - Create SQLite Database Schema<a class="headerlink" href="#example-2-create-sqlite-database-schema" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.3.2. </span>Example 2 - Create SQLite Database Schema<a class="headerlink" href="#example-2-create-sqlite-database-schema" title="Permalink to this headline"></a></h3>
 <p>The following example shows, how to create the following database schema in
 an SQLite database uns JavaScript code:</p>
 <a class="reference internal image-reference" href="../_images/create_schema_javascript.svg"><img alt="../_images/create_schema_javascript.svg" src="../_images/create_schema_javascript.svg" width="100%" /></a>
@@ -516,9 +519,9 @@ an SQLite database uns JavaScript code:</p>
 </section>
 </section>
 <section id="javascript-api-reference">
-<h2><span class="section-number">16.4. </span>JavaScript API Reference<a class="headerlink" href="#javascript-api-reference" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">19.4. </span>JavaScript API Reference<a class="headerlink" href="#javascript-api-reference" title="Permalink to this headline"></a></h2>
 <section id="qsqldatabase">
-<h3><span class="section-number">16.4.1. </span>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.4.1. </span>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Permalink to this headline"></a></h3>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabaseE">
 <span id="_CPPv3N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="DbPlugin::CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DbPlugin</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabaseE" title="Permalink to this definition"></a><br /></dt>
@@ -668,7 +671,7 @@ an SQLite database uns JavaScript code:</p>
 
 </section>
 <section id="qsqlquery">
-<h3><span class="section-number">16.4.2. </span>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">19.4.2. </span>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Permalink to this headline"></a></h3>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQueryE">
 <span id="_CPPv3N8DbPlugin16CScriptQSqlQueryE"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQueryE"></span><span id="DbPlugin::CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DbPlugin</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQueryE" title="Permalink to this definition"></a><br /></dt>
@@ -760,15 +763,15 @@ an SQLite database uns JavaScript code:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../graphlogger_EN/graphlogger_EN.html" class="btn btn-neutral float-left" title="15. Process Data Graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="17. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../graphlogger_EN/graphlogger_EN.html" class="btn btn-neutral float-left" title="18. Process Data Graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Python_EN/Python_EN.html" class="btn btn-neutral float-right" title="20. Python Add-on" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 29, 2022 13:42.
+      <span class="lastupdated">Last updated on Jul 12, 2022 10:56.
       </span></p>
   </div>
 

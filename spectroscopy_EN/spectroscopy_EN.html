@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>19. Spectroscopy Add-on &mdash; CETONI Elements Manual</title>
+  <title>22. Spectroscopy Add-on &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="20. Appendix" href="../Appendix_EN/Appendix_EN.html" />
-    <link rel="prev" title="18. SiLA2 Add-on" href="../sila_EN/sila_EN.html" /> 
+    <link rel="next" title="23. Appendix" href="../Appendix_EN/Appendix_EN.html" />
+    <link rel="prev" title="21. SiLA2 Add-on" href="../sila_EN/sila_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -65,74 +65,77 @@
 <li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">14. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">15. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">16. Database Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">17. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">18. SiLA2 Add-on</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">19. Spectroscopy Add-on</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">19.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">19.2. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#toolbar">19.3. Toolbar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spectrum-live-display">19.4. Spectrum Live Display</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameter-control-elements">19.5. Parameter Control Elements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">19.5.1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">14. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">15. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">16. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">17. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">18. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">19. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA2 Add-on</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">22. Spectroscopy Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">22.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">22.2. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">22.3. Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spectrum-live-display">22.4. Spectrum Live Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-control-elements">22.5. Parameter Control Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">22.5.1. Overview</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#spectra-acquisition">19.6. Spectra Acquisition</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-controls-for-spectra-acquisition">19.6.1. Overview of controls for spectra acquisition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-the-integration-time">19.6.2. Setting the Integration Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#automatically-determining-integration-time">19.6.3. Automatically determining Integration Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pre-processing-the-spectrum">19.6.4. Pre-processing the Spectrum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#spectra-acquisition">22.6. Spectra Acquisition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-controls-for-spectra-acquisition">22.6.1. Overview of controls for spectra acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-the-integration-time">22.6.2. Setting the Integration Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatically-determining-integration-time">22.6.3. Automatically determining Integration Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-processing-the-spectrum">22.6.4. Pre-processing the Spectrum</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#scans-to-average">Scans To Average</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#filter-width">Filter Width</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#nonlinearity-correction">Nonlinearity Correction</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#selecting-the-x-axis-unit">19.6.5. Selecting the X-Axis Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-the-x-axis-unit">22.6.5. Selecting the X-Axis Unit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#baseline-correction">19.7. Baseline Correction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-baseline-correction-controls">19.7.1. Overview of baseline correction controls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#baseline-algorithms">19.7.2. Baseline Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#baseline-correction">22.7. Baseline Correction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-baseline-correction-controls">22.7.1. Overview of baseline correction controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baseline-algorithms">22.7.2. Baseline Algorithms</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#vancouver-raman-algorithm">Vancouver Raman AlgorithM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rolling-ball-algorithm">Rolling Ball Algorithm</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#peak-detection">19.8. Peak-Detection</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-peak-detection-settings">19.8.1. Overview of peak detection settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#peak-detection">22.8. Peak-Detection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-peak-detection-settings">22.8.1. Overview of peak detection settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#removing-dark-spectrum-background-spectrum">19.9. Removing Dark Spectrum / Background Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#saving-spectrum-data-and-spectrometer-settings">19.10. Saving Spectrum Data and Spectrometer Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-spectrometer-settings">19.11. Loading Spectrometer Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#saving-a-spectrum-image">19.12. Saving a Spectrum Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#converting-analyze-iq-files-to-csv">19.13. Converting Analyze IQ files to CSV</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-spectral-data-with-the-spectra-viewer">19.14. Loading and displaying spectral data with the Spectra Viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#realtime-analysis-using-analysis-channels">19.15. Realtime Analysis using Analysis Channels</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-realtime-analysis">19.15.1. Introduction to Realtime Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#spectrum-integration">19.15.2. Spectrum Integration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#chemometric-analysis">19.15.3. Chemometric Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removing-dark-spectrum-background-spectrum">22.9. Removing Dark Spectrum / Background Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-spectrum-data-and-spectrometer-settings">22.10. Saving Spectrum Data and Spectrometer Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-spectrometer-settings">22.11. Loading Spectrometer Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-a-spectrum-image">22.12. Saving a Spectrum Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-analyze-iq-files-to-csv">22.13. Converting Analyze IQ files to CSV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-spectral-data-with-the-spectra-viewer">22.14. Loading and displaying spectral data with the Spectra Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#realtime-analysis-using-analysis-channels">22.15. Realtime Analysis using Analysis Channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-realtime-analysis">22.15.1. Introduction to Realtime Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spectrum-integration">22.15.2. Spectrum Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chemometric-analysis">22.15.3. Chemometric Analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#spectroscopy-script-functions">19.16. Spectroscopy Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#write-spectrum-file">19.16.1. Write Spectrum File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spectroscopy-script-functions">22.16. Spectroscopy Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#write-spectrum-file">22.16.1. Write Spectrum File</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#analyze-iq-add-on">19.17. Analyze IQ Add-on</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-analyze-iq-add-on">19.17.1. Introduction to Analyze IQ Add-on</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#importing-license-data">19.17.2. Importing License Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#generating-spectral-data-for-model-building">19.17.3. Generating Spectral Data for Model Building</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#preparing-the-dataset">19.17.4. Preparing the Dataset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#import-spectra-into-analyze-iq">19.17.5. Import spectra into Analyze IQ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#importing-analysis-models">19.17.6. Importing Analysis Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyze-iq-add-on">22.17. Analyze IQ Add-on</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-analyze-iq-add-on">22.17.1. Introduction to Analyze IQ Add-on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-license-data">22.17.2. Importing License Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generating-spectral-data-for-model-building">22.17.3. Generating Spectral Data for Model Building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-the-dataset">22.17.4. Preparing the Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-spectra-into-analyze-iq">22.17.5. Import spectra into Analyze IQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-analysis-models">22.17.6. Importing Analysis Models</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">20. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">23. Appendix</a></li>
 </ul>
 
         </div>
@@ -149,7 +152,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">19. </span>Spectroscopy Add-on</li>
+      <li><span class="section-number">22. </span>Spectroscopy Add-on</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/spectroscopy_EN/spectroscopy_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -160,9 +163,9 @@
            <div itemprop="articleBody">
              
   <section id="spectroscopy-add-on">
-<h1><span class="section-number">19. </span>Spectroscopy Add-on<a class="headerlink" href="#spectroscopy-add-on" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">22. </span>Spectroscopy Add-on<a class="headerlink" href="#spectroscopy-add-on" title="Permalink to this headline"></a></h1>
 <section id="installation">
-<h2><span class="section-number">19.1. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.1. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
 <p>The spectroscopy plugin is not part of the standard installation package
 and must be installed as add-on. The versions of the spectroscopy plugin
 and the installed CETONI Elements software should match. For example, if
@@ -199,7 +202,7 @@ license.</p>
 </div>
 </section>
 <section id="introduction">
-<h2><span class="section-number">19.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p>Clicking the <span class="guilabel">Spectroscopy</span> button <span class="guinum">❺</span> in the sidebar will take you to
 the Spectroscopy Plugin (see image below).</p>
 <figure class="align-default">
@@ -216,7 +219,7 @@ spectrometers. One tab is created for each spectrometer.</p></li>
 </ol>
 </section>
 <section id="toolbar">
-<h2><span class="section-number">19.3. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.3. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -269,7 +272,7 @@ document</p></td>
 </table>
 </section>
 <section id="spectrum-live-display">
-<h2><span class="section-number">19.4. </span>Spectrum Live Display<a class="headerlink" href="#spectrum-live-display" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.4. </span>Spectrum Live Display<a class="headerlink" href="#spectrum-live-display" title="Permalink to this headline"></a></h2>
 <p>The spectrum live display shows the
 current, last recorded spectrum following all processing steps.</p>
 <img alt="../_images/100002010000029B00000177ABD966992CA135D7.png" src="../_images/100002010000029B00000177ABD966992CA135D7.png" />
@@ -288,9 +291,9 @@ curve, the window follows the mouse pointer and the values inside are
 continuously updated.</p>
 </section>
 <section id="parameter-control-elements">
-<h2><span class="section-number">19.5. </span>Parameter Control Elements<a class="headerlink" href="#parameter-control-elements" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.5. </span>Parameter Control Elements<a class="headerlink" href="#parameter-control-elements" title="Permalink to this headline"></a></h2>
 <section id="overview">
-<h3><span class="section-number">19.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
 <p>The controls are used to set the parameters for acquisition and
 pre-processing of spectra. They are arranged in the order in which
 processing is carried out from top to bottom.</p>
@@ -308,15 +311,15 @@ changes right away.</p>
 </section>
 </section>
 <section id="spectra-acquisition">
-<h2><span class="section-number">19.6. </span>Spectra Acquisition<a class="headerlink" href="#spectra-acquisition" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.6. </span>Spectra Acquisition<a class="headerlink" href="#spectra-acquisition" title="Permalink to this headline"></a></h2>
 <section id="overview-of-controls-for-spectra-acquisition">
-<h3><span class="section-number">19.6.1. </span>Overview of controls for spectra acquisition<a class="headerlink" href="#overview-of-controls-for-spectra-acquisition" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.6.1. </span>Overview of controls for spectra acquisition<a class="headerlink" href="#overview-of-controls-for-spectra-acquisition" title="Permalink to this headline"></a></h3>
 <p>In the <em>Spectrum Acquisition</em> area you will find all controls for
 setting the acquisition parameters.</p>
 <img alt="../_images/100002010000014A00000119C9464256E497BB42.png" src="../_images/100002010000014A00000119C9464256E497BB42.png" />
 </section>
 <section id="setting-the-integration-time">
-<h3><span class="section-number">19.6.2. </span>Setting the Integration Time<a class="headerlink" href="#setting-the-integration-time" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.6.2. </span>Setting the Integration Time<a class="headerlink" href="#setting-the-integration-time" title="Permalink to this headline"></a></h3>
 <p>The integration time correlates with the exposure time of the
 spectrometer’s CCD. It is the time period in which the detector can
 collect photons.</p>
@@ -346,7 +349,7 @@ that the software is no longer responsive.</p>
 </div>
 </section>
 <section id="automatically-determining-integration-time">
-<h3><span class="section-number">19.6.3. </span>Automatically determining Integration Time<a class="headerlink" href="#automatically-determining-integration-time" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.6.3. </span>Automatically determining Integration Time<a class="headerlink" href="#automatically-determining-integration-time" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100013ED000034EB000034EBCC5E333393A120A7.svg"><img alt="../_images/100013ED000034EB000034EBCC5E333393A120A7.svg" class="align-left" src="../_images/100013ED000034EB000034EBCC5E333393A120A7.svg" width="60" /></a>
 <p>If you click the button for automatic integration time
 determination in the toolbar, the software will attempt to control the
@@ -356,7 +359,7 @@ the spectrum reaches 80% of the maximum sensor value (saturation).</p>
 clicking the button again.</p>
 </section>
 <section id="pre-processing-the-spectrum">
-<h3><span class="section-number">19.6.4. </span>Pre-processing the Spectrum<a class="headerlink" href="#pre-processing-the-spectrum" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.6.4. </span>Pre-processing the Spectrum<a class="headerlink" href="#pre-processing-the-spectrum" title="Permalink to this headline"></a></h3>
 <p>Pre-processing live spectrums can contribute to an improved
 signal-to-noise ratio (SNR). This reduces interference, while improving
 spectrum quality. Spectral smoothing makes it possible to determine
@@ -399,7 +402,7 @@ the CCD sensor’s output signal.</p>
 </section>
 </section>
 <section id="selecting-the-x-axis-unit">
-<h3><span class="section-number">19.6.5. </span>Selecting the X-Axis Unit<a class="headerlink" href="#selecting-the-x-axis-unit" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.6.5. </span>Selecting the X-Axis Unit<a class="headerlink" href="#selecting-the-x-axis-unit" title="Permalink to this headline"></a></h3>
 <img alt="../_images/10000000000000A8000000859C4F5349C1A99934.png" src="../_images/10000000000000A8000000859C4F5349C1A99934.png" />
 <p>You can choose from various units for the x-axis:</p>
 <table class="docutils align-default">
@@ -441,9 +444,9 @@ wavelength of the laser</p></td>
 </section>
 </section>
 <section id="baseline-correction">
-<h2><span class="section-number">19.7. </span>Baseline Correction<a class="headerlink" href="#baseline-correction" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.7. </span>Baseline Correction<a class="headerlink" href="#baseline-correction" title="Permalink to this headline"></a></h2>
 <section id="overview-of-baseline-correction-controls">
-<h3><span class="section-number">19.7.1. </span>Overview of baseline correction controls<a class="headerlink" href="#overview-of-baseline-correction-controls" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.7.1. </span>Overview of baseline correction controls<a class="headerlink" href="#overview-of-baseline-correction-controls" title="Permalink to this headline"></a></h3>
 <p>In the <em>Baseline Correction</em> section you will find all settings for
 real-time baseline correction:</p>
 <img alt="../_images/100002010000014B000000F9E97A1A85837E0B1C.png" src="../_images/100002010000014B000000F9E97A1A85837E0B1C.png" />
@@ -470,7 +473,7 @@ baseline to visually check its quality (see figure below).</p>
 will find the settings for the selected baseline algorithm <span class="guinum">❷</span>.</p>
 </section>
 <section id="baseline-algorithms">
-<h3><span class="section-number">19.7.2. </span>Baseline Algorithms<a class="headerlink" href="#baseline-algorithms" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.7.2. </span>Baseline Algorithms<a class="headerlink" href="#baseline-algorithms" title="Permalink to this headline"></a></h3>
 <section id="vancouver-raman-algorithm">
 <h4>Vancouver Raman AlgorithM<a class="headerlink" href="#vancouver-raman-algorithm" title="Permalink to this headline"></a></h4>
 <p>The Vancouver Raman algorithm has been developed for automated
@@ -518,9 +521,9 @@ the minimum and maximum points to identify the baseline.</p></li>
 </section>
 </section>
 <section id="peak-detection">
-<h2><span class="section-number">19.8. </span>Peak-Detection<a class="headerlink" href="#peak-detection" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.8. </span>Peak-Detection<a class="headerlink" href="#peak-detection" title="Permalink to this headline"></a></h2>
 <section id="overview-of-peak-detection-settings">
-<h3><span class="section-number">19.8.1. </span>Overview of peak detection settings<a class="headerlink" href="#overview-of-peak-detection-settings" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.8.1. </span>Overview of peak detection settings<a class="headerlink" href="#overview-of-peak-detection-settings" title="Permalink to this headline"></a></h3>
 <p>The peaks of a spectrum can be viewed as its “unique fingerprint”. A
 substance or mixture of substances can be identified by the horizontal
 position of its peaks. In addition, the intensity of main and side peaks
@@ -566,7 +569,7 @@ minimum peak intensity or smoothen the spectrum.</p>
 </section>
 </section>
 <section id="removing-dark-spectrum-background-spectrum">
-<h2><span class="section-number">19.9. </span>Removing Dark Spectrum / Background Spectrum<a class="headerlink" href="#removing-dark-spectrum-background-spectrum" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.9. </span>Removing Dark Spectrum / Background Spectrum<a class="headerlink" href="#removing-dark-spectrum-background-spectrum" title="Permalink to this headline"></a></h2>
 <p>Dark spectrum is the expected signal level in the absence of light.
 Background spectrum is the expected signal level in the absence of a
 sample. By deducting the dark / background spectrum from the currently
@@ -585,7 +588,7 @@ background spectrum and lets you repeat the recording of the background
 spectrum.</p>
 </section>
 <section id="saving-spectrum-data-and-spectrometer-settings">
-<h2><span class="section-number">19.10. </span>Saving Spectrum Data and Spectrometer Settings<a class="headerlink" href="#saving-spectrum-data-and-spectrometer-settings" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.10. </span>Saving Spectrum Data and Spectrometer Settings<a class="headerlink" href="#saving-spectrum-data-and-spectrometer-settings" title="Permalink to this headline"></a></h2>
 <a class="reference internal image-reference" href="../_images/100014960000350500003505735D254F89BBCCEB.svg"><img alt="../_images/100014960000350500003505735D254F89BBCCEB.svg" class="align-left" src="../_images/100014960000350500003505735D254F89BBCCEB.svg" width="60" /></a>
 <p>Save your spectrum data as a text file by clicking the
 respective symbol in the toolbar. You can save the recorded spectrum as
@@ -638,7 +641,7 @@ convert them to CSV format at any time later using the
 </div>
 </section>
 <section id="loading-spectrometer-settings">
-<h2><span class="section-number">19.11. </span>Loading Spectrometer Settings<a class="headerlink" href="#loading-spectrometer-settings" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.11. </span>Loading Spectrometer Settings<a class="headerlink" href="#loading-spectrometer-settings" title="Permalink to this headline"></a></h2>
 <a class="reference internal image-reference" href="../_images/10001A5A0000350500003505B28BB34041B3E522.svg"><img alt="../_images/10001A5A0000350500003505B28BB34041B3E522.svg" class="align-left" src="../_images/10001A5A0000350500003505B28BB34041B3E522.svg" width="60" /></a>
 <p>All spectrometer settings can be loaded from previously saved
 .aiq files. Click on the icon for loading spectrometer settings <code class="file docutils literal notranslate"><span class="pre">*.aiq</span></code>
@@ -648,7 +651,7 @@ and select an <code class="file docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="saving-a-spectrum-image">
-<h2><span class="section-number">19.12. </span>Saving a Spectrum Image<a class="headerlink" href="#saving-a-spectrum-image" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.12. </span>Saving a Spectrum Image<a class="headerlink" href="#saving-a-spectrum-image" title="Permalink to this headline"></a></h2>
 <a class="reference internal image-reference" href="../_images/100014E3000034EB000034EBE5DD307BDB0E90BB.svg"><img alt="../_images/100014E3000034EB000034EBE5DD307BDB0E90BB.svg" class="align-left" src="../_images/100014E3000034EB000034EBE5DD307BDB0E90BB.svg" width="60" /></a>
 <p>By clicking the respective button in the toolbar you can save
 the current image of the spectrum live display as a PNG file or a vector
@@ -661,7 +664,7 @@ different directory in the dialog.</p>
 <p>Click on the save button <span class="guinum">❷</span> to save the image.</p>
 </section>
 <section id="converting-analyze-iq-files-to-csv">
-<h2><span class="section-number">19.13. </span>Converting Analyze IQ files to CSV<a class="headerlink" href="#converting-analyze-iq-files-to-csv" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.13. </span>Converting Analyze IQ files to CSV<a class="headerlink" href="#converting-analyze-iq-files-to-csv" title="Permalink to this headline"></a></h2>
 <p>If you have saved your spectral data in Analyze IQ format <code class="file docutils literal notranslate"><span class="pre">*.aiq</span></code>, you can
 convert them to CVS format at any time later. In the main menu you will
 find the menu item <span class="menuselection">Edit → Convert AIQ to CSV file</span>.
@@ -670,7 +673,7 @@ file as a CSV file with the same file name and the file extension <code class="f
 <img alt="../_images/100002010000016D0000010D5B651B135FBFA208.png" src="../_images/100002010000016D0000010D5B651B135FBFA208.png" />
 </section>
 <section id="loading-and-displaying-spectral-data-with-the-spectra-viewer">
-<h2><span class="section-number">19.14. </span>Loading and displaying spectral data with the Spectra Viewer<a class="headerlink" href="#loading-and-displaying-spectral-data-with-the-spectra-viewer" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.14. </span>Loading and displaying spectral data with the Spectra Viewer<a class="headerlink" href="#loading-and-displaying-spectral-data-with-the-spectra-viewer" title="Permalink to this headline"></a></h2>
 <p>The <em>Spectra Viewer</em> provides you with a tool for opening and viewing
 stored spectral data in Analyze IQ format <code class="file docutils literal notranslate"><span class="pre">*.aiq</span></code> or in CSV format
 <code class="file docutils literal notranslate"><span class="pre">*.txt</span></code>. To open the Spectra Viewer, select
@@ -709,9 +712,9 @@ current image in the Spectra Viewer as a PDF or image file.</p>
 </div>
 </section>
 <section id="realtime-analysis-using-analysis-channels">
-<h2><span class="section-number">19.15. </span>Realtime Analysis using Analysis Channels<a class="headerlink" href="#realtime-analysis-using-analysis-channels" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.15. </span>Realtime Analysis using Analysis Channels<a class="headerlink" href="#realtime-analysis-using-analysis-channels" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-realtime-analysis">
-<h3><span class="section-number">19.15.1. </span>Introduction to Realtime Analysis<a class="headerlink" href="#introduction-to-realtime-analysis" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.15.1. </span>Introduction to Realtime Analysis<a class="headerlink" href="#introduction-to-realtime-analysis" title="Permalink to this headline"></a></h3>
 <p>Analysis channels let you analyze recorded spectral data online and
 integrate the results into QmixElements script programing. This gives
 you a powerful tool to analyze spectral data online and use the results
@@ -748,7 +751,7 @@ context menu.</p>
 <img alt="../_images/10000000000001DF000000D382294C592C92D8DB.png" src="../_images/10000000000001DF000000D382294C592C92D8DB.png" />
 </section>
 <section id="spectrum-integration">
-<h3><span class="section-number">19.15.2. </span>Spectrum Integration<a class="headerlink" href="#spectrum-integration" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.15.2. </span>Spectrum Integration<a class="headerlink" href="#spectrum-integration" title="Permalink to this headline"></a></h3>
 <p>The integration function lets you measure the intensity of spectral data
 within a certain bandwidth or the intensity of the signal at a certain
 wavelength. Begin by setting the bandwidth in the configuration dialog
@@ -765,7 +768,7 @@ applied and a new analysis channel is created or the currently selected
 channel updated.</p>
 </section>
 <section id="chemometric-analysis">
-<h3><span class="section-number">19.15.3. </span>Chemometric Analysis<a class="headerlink" href="#chemometric-analysis" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.15.3. </span>Chemometric Analysis<a class="headerlink" href="#chemometric-analysis" title="Permalink to this headline"></a></h3>
 <p>Chemometric analysis allows the quantitative and qualitative
 determination of concentrations of individual substances in a mixture of
 substances. You will need a paid license for the Analyze IQ realtime
@@ -789,12 +792,12 @@ a substance mixture using the value 0 (absent) or 1 (present).</p>
 </section>
 </section>
 <section id="spectroscopy-script-functions">
-<h2><span class="section-number">19.16. </span>Spectroscopy Script Functions<a class="headerlink" href="#spectroscopy-script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.16. </span>Spectroscopy Script Functions<a class="headerlink" href="#spectroscopy-script-functions" title="Permalink to this headline"></a></h2>
 <p>The spectroscopy plugin contains various script functions for
 script-controlled spectrum recording.</p>
 <img alt="../_images/10000000000001030000006529CA263118B37D56.png" src="../_images/10000000000001030000006529CA263118B37D56.png" />
 <section id="write-spectrum-file">
-<h3><span class="section-number">19.16.1. </span>Write Spectrum File<a class="headerlink" href="#write-spectrum-file" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.16.1. </span>Write Spectrum File<a class="headerlink" href="#write-spectrum-file" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001C570000350500003505E6F32F564847474D.svg"><img alt="../_images/10001C570000350500003505E6F32F564847474D.svg" class="align-left" src="../_images/10001C570000350500003505E6F32F564847474D.svg" width="60" /></a>
 <p>This function lets you write the current spectrum to a text
 file <code class="file docutils literal notranslate"><span class="pre">*.txt</span></code> or Analyze IQ file <code class="file docutils literal notranslate"><span class="pre">*.aiq</span></code>. First, select the
@@ -832,9 +835,9 @@ respective meta data field (see image below).</p>
 </section>
 </section>
 <section id="analyze-iq-add-on">
-<h2><span class="section-number">19.17. </span>Analyze IQ Add-on<a class="headerlink" href="#analyze-iq-add-on" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">22.17. </span>Analyze IQ Add-on<a class="headerlink" href="#analyze-iq-add-on" title="Permalink to this headline"></a></h2>
 <section id="introduction-to-analyze-iq-add-on">
-<h3><span class="section-number">19.17.1. </span>Introduction to Analyze IQ Add-on<a class="headerlink" href="#introduction-to-analyze-iq-add-on" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.1. </span>Introduction to Analyze IQ Add-on<a class="headerlink" href="#introduction-to-analyze-iq-add-on" title="Permalink to this headline"></a></h3>
 <p>The Analyze IQ add-on allows you to integrate powerful chemometric
 analysis functions of Analyze IQ into the QmixElements software.</p>
 <p>In practical applications the analysis of substance mixtures or mixed
@@ -867,7 +870,7 @@ analysis channels it can be used for realtime analysis of substance
 mixtures.</p>
 </section>
 <section id="importing-license-data">
-<h3><span class="section-number">19.17.2. </span>Importing License Data<a class="headerlink" href="#importing-license-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.2. </span>Importing License Data<a class="headerlink" href="#importing-license-data" title="Permalink to this headline"></a></h3>
 <img alt="../_images/100000000000015F000000AB601EAD6DCEE2D509.png" src="../_images/100000000000015F000000AB601EAD6DCEE2D509.png" />
 <p>To be able to use the Analyze
 IQ add-on you will need a valid license file. You will receive this
@@ -880,7 +883,7 @@ server.</p>
 <img alt="../_images/100000000000025200000083F1434245C5549A11.png" src="../_images/100000000000025200000083F1434245C5549A11.png" />
 </section>
 <section id="generating-spectral-data-for-model-building">
-<h3><span class="section-number">19.17.3. </span>Generating Spectral Data for Model Building<a class="headerlink" href="#generating-spectral-data-for-model-building" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.3. </span>Generating Spectral Data for Model Building<a class="headerlink" href="#generating-spectral-data-for-model-building" title="Permalink to this headline"></a></h3>
 <p>The software can store spectral data in aiq file format,
 greatly simplifying model building in Analyze IQ software. For the
 modelling of classification models (substance present yes/no) or
@@ -909,7 +912,7 @@ that you want to use for building this specific model.</p>
 </div>
 </section>
 <section id="preparing-the-dataset">
-<h3><span class="section-number">19.17.4. </span>Preparing the Dataset<a class="headerlink" href="#preparing-the-dataset" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.4. </span>Preparing the Dataset<a class="headerlink" href="#preparing-the-dataset" title="Permalink to this headline"></a></h3>
 <p>In the Analyze IQ User Manuel you will find the section <em>Preparing the
 Dataset</em>. The subheading <em>Import from Multiple Spectrum Files</em> describes
 how you can create a model from several individual spectrum files in a
@@ -972,7 +975,7 @@ below).</p>
 <img alt="../_images/1000020100000181000000A8C8DF05F0B9F4E8F7.png" src="../_images/1000020100000181000000A8C8DF05F0B9F4E8F7.png" />
 </section>
 <section id="import-spectra-into-analyze-iq">
-<h3><span class="section-number">19.17.5. </span>Import spectra into Analyze IQ<a class="headerlink" href="#import-spectra-into-analyze-iq" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.5. </span>Import spectra into Analyze IQ<a class="headerlink" href="#import-spectra-into-analyze-iq" title="Permalink to this headline"></a></h3>
 <p>When you create a new analysis model in Analyze IQ, all you need to do
 is to import the recorded spectra and the created CSV file, and you are
 ready to start modeling immediately:</p>
@@ -991,7 +994,7 @@ then use again in the CETONI Elements software for automatic analyses. The
 following section explains how this works.</p>
 </section>
 <section id="importing-analysis-models">
-<h3><span class="section-number">19.17.6. </span>Importing Analysis Models<a class="headerlink" href="#importing-analysis-models" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">22.17.6. </span>Importing Analysis Models<a class="headerlink" href="#importing-analysis-models" title="Permalink to this headline"></a></h3>
 <p>You will need completed analysis models to perform chemometric analyses.
 These models ():file:<code class="xref any docutils literal notranslate"><span class="pre">*.aiqm</span></code> files) must be imported through CETONI Elements in
 order to be added to the <em>Analyze IQ RealTime server</em>. To import these
@@ -1023,15 +1026,15 @@ spectral data recording.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../sila_EN/sila_EN.html" class="btn btn-neutral float-left" title="18. SiLA2 Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Appendix_EN/Appendix_EN.html" class="btn btn-neutral float-right" title="20. Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../sila_EN/sila_EN.html" class="btn btn-neutral float-left" title="21. SiLA2 Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Appendix_EN/Appendix_EN.html" class="btn btn-neutral float-right" title="23. Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jun 29, 2022 12:02.
+      <span class="lastupdated">Last updated on Jul 12, 2022 09:32.
       </span></p>
   </div>
 
