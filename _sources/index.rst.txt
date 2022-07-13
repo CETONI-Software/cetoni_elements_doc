@@ -66,4 +66,5 @@ your navigation through this document:
    Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
+   daq_EN/daq_EN.rst
    Appendix_EN/Appendix_EN.rst

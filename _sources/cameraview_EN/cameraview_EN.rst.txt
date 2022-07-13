@@ -219,7 +219,7 @@ camera device :guinum:`❶`. The :guilabel:`Image File` section  :guinum:`❷` i
 to set the file path and file name of the captures image files. 
 Subsequently you may set whether the camera settings should be used unaltered
 :guinum:`❷` :guilabel:`Keep Camera Settings` or whether to reset them to 
-pre-defined and saved values :guinum:`:guinum:`❸`` :guilabel:`Change Camera Settings` 
+pre-defined and saved values :guinum:`❸` :guilabel:`Change Camera Settings` 
 before capturing an image.
 
 .. image:: Pictures/1000000000000203000000F6E0EBC144.png

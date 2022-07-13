@@ -241,7 +241,7 @@ Adjusting the Size of a Measuring Box
 .. image:: ./Pictures/1000020100000203000000BA99B95279.png
 
 To change the size
-of a measuring box, move the cursor to one of the check marks at the
+of a measuring box, move the cursor to one of the 8 square drag handles at the
 corners or the sides of the box (figure below). The cursor will change
 to a double-sided arrow :guinum:`❶`, which indicates that you can now resizing the
 box by dragging the respective mark to a new position.
