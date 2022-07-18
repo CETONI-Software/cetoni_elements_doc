@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>23. DAQ Add-on &mdash; CETONI Elements Manual</title>
+  <title>24. DAQ Add-on &mdash; CETONI Elements Manual</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="24. Appendix" href="../Appendix_EN/Appendix_EN.html" />
-    <link rel="prev" title="22. Spectroscopy Add-on" href="../spectroscopy_EN/spectroscopy_EN.html" /> 
+    <link rel="next" title="25. Appendix" href="../Appendix_EN/Appendix_EN.html" />
+    <link rel="prev" title="23. Spectroscopy Add-on" href="../spectroscopy_EN/spectroscopy_EN.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -65,59 +65,60 @@
 <li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">14. Camera Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">15. Image Analysis Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">16. Video Builder Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">17. CSV Data Logger Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">18. Process Data Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">19. Database Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">20. Python Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA2 Add-on</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">23. DAQ Add-on</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">23.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">23.2. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#toolbar">23.3. Toolbar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration-dialog">23.4. Configuration Dialog</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">23.4.1. Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#daq-channels-table">23.4.2. DAQ Channels Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">18. CSV Data Logger Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">19. Process Data Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_EN/Python_EN.html">21. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">22. SiLA2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">23. Spectroscopy Add-on</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">24. DAQ Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">24.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">24.2. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">24.3. Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-dialog">24.4. Configuration Dialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">24.4.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daq-channels-table">24.4.2. DAQ Channels Table</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-data-acquistion">23.5. Configure data acquistion</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-1-adding-channels">23.5.1. Step 1 – Adding Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-selecting-the-device-property">23.5.2. Step 2 – Selecting the Device Property</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-3-changing-the-channel-label">23.5.3. Step 3 – Changing the Channel Label</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">23.5.4. Deleting Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-4-defining-the-sample-rate">23.5.5. Step 4 – Defining the Sample Rate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-5-configuring-the-log-file">23.5.6. Step 5 – Configuring the Log File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-data-acquistion">24.5. Configure data acquistion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-adding-channels">24.5.1. Step 1 – Adding Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-selecting-the-device-property">24.5.2. Step 2 – Selecting the Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-changing-the-channel-label">24.5.3. Step 3 – Changing the Channel Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">24.5.4. Deleting Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-defining-the-sample-rate">24.5.5. Step 4 – Defining the Sample Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-configuring-the-log-file">24.5.6. Step 5 – Configuring the Log File</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#start-stop-data-logging">23.6. Start/Stop Data Logging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#diagram-navigation-use">23.7. Diagram Navigation &amp; Use</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">23.7.1. Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-the-displayed-section">23.7.2. Changing the Displayed Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#display-curve-values">23.7.3. Display Curve Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#zooming-via-the-mouse-wheel">23.7.4. Zooming via the Mouse Wheel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#defining-a-display-section">23.7.5. Defining a Display Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#auto-fit-auto-scale">23.7.6. Auto-Fit &amp; Auto-Scale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#show-hide-individual-curves">23.7.7. Show/Hide Individual Curves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#select-curve-color">23.7.8. Select Curve Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exporting-plot-image">23.7.9. Exporting Plot Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deletion-of-diagram-data">23.7.10. Deletion of Diagram Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#switching-the-scaling-of-the-x-axis">23.7.11. Switching the scaling of the X-axis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-stop-data-logging">24.6. Start/Stop Data Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagram-navigation-use">24.7. Diagram Navigation &amp; Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">24.7.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-displayed-section">24.7.2. Changing the Displayed Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-curve-values">24.7.3. Display Curve Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zooming-via-the-mouse-wheel">24.7.4. Zooming via the Mouse Wheel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defining-a-display-section">24.7.5. Defining a Display Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-fit-auto-scale">24.7.6. Auto-Fit &amp; Auto-Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-hide-individual-curves">24.7.7. Show/Hide Individual Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-curve-color">24.7.8. Select Curve Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-plot-image">24.7.9. Exporting Plot Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deletion-of-diagram-data">24.7.10. Deletion of Diagram Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switching-the-scaling-of-the-x-axis">24.7.11. Switching the scaling of the X-axis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#script-functions">23.8. Script Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#start-plot-logger">23.8.1. Start Plot Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-plot-logger">23.8.2. Stop Plot Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-functions">24.8. Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-plot-logger">24.8.1. Start Plot Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-plot-logger">24.8.2. Stop Plot Logger</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#importing-log-files">23.9. Importing Log Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pattern-scan">23.10. Pattern Scan</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-and-running-the-pattern-scan">23.10.1. Configuring and Running the Pattern Scan</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-an-existing-pattern-scanner">23.10.2. Using an Existing Pattern Scanner</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enabling-disabling-pattern-recognition-for-a-plot-curve">23.10.3. Enabling / Disabling Pattern Recognition for a Plot Curve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#result-analysis">23.10.4. Result Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-log-files">24.9. Importing Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pattern-scan">24.10. Pattern Scan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-and-running-the-pattern-scan">24.10.1. Configuring and Running the Pattern Scan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-an-existing-pattern-scanner">24.10.2. Using an Existing Pattern Scanner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enabling-disabling-pattern-recognition-for-a-plot-curve">24.10.3. Enabling / Disabling Pattern Recognition for a Plot Curve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#result-analysis">24.10.4. Result Analysis</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#carrying-out-a-results-analysis">Carrying Out a Results Analysis</a></li>
 </ul>
@@ -126,7 +127,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">24. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
 </ul>
 
         </div>
@@ -143,7 +144,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">23. </span>DAQ Add-on</li>
+      <li><span class="section-number">24. </span>DAQ Add-on</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/daq_EN/daq_EN.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -154,9 +155,9 @@
            <div itemprop="articleBody">
              
   <section id="daq-add-on">
-<h1><span class="section-number">23. </span>DAQ Add-on<a class="headerlink" href="#daq-add-on" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">24. </span>DAQ Add-on<a class="headerlink" href="#daq-add-on" title="Permalink to this headline"></a></h1>
 <section id="installation">
-<h2><span class="section-number">23.1. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.1. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
 <p>The DAQ Add-on is not part of the standard installation package and must
 be installed as add-on. The versions of the DAQ Add-on and the installed
 CETONI Elements software should match. For example, if you want to
@@ -185,7 +186,7 @@ an administrator.</p>
 </div>
 </section>
 <section id="introduction">
-<h2><span class="section-number">23.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p>The DAQ Plugin serves data logging and evaluation at high sample rates
 (&gt; 1000 samples per second). Devices with a high data acquisition rate
 are supported (i.e. . National Instruments USB 600x multi-function I/O
@@ -211,7 +212,7 @@ start and stop the recording and to navigate the display.</p></li>
 </ol>
 </section>
 <section id="toolbar">
-<h2><span class="section-number">23.3. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.3. </span>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16%" />
@@ -271,9 +272,9 @@ displayed section.</p></td>
 </table>
 </section>
 <section id="configuration-dialog">
-<h2><span class="section-number">23.4. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.4. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Permalink to this headline"></a></h2>
 <section id="overview">
-<h3><span class="section-number">23.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg"><img alt="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg" class="align-left" src="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg" width="60" /></a>
 <p>Click on the button <em>Configure data acquisition</em> in the
 toolbar to open the configuration dialog.</p>
@@ -295,7 +296,7 @@ the process data graph.</p></li>
 </ol>
 </section>
 <section id="daq-channels-table">
-<h3><span class="section-number">23.4.2. </span>DAQ Channels Table<a class="headerlink" href="#daq-channels-table" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.4.2. </span>DAQ Channels Table<a class="headerlink" href="#daq-channels-table" title="Permalink to this headline"></a></h3>
 <img alt="../_images/10000201000002340000009A60C2C459DC16C006.png" src="../_images/10000201000002340000009A60C2C459DC16C006.png" />
 <p>The table <span class="guilabel">DAQ Channels</span> shows the
 configured data acquisition channels in tabular form. Each row in the
@@ -334,9 +335,9 @@ following sections.</p>
 </section>
 </section>
 <section id="configure-data-acquistion">
-<h2><span class="section-number">23.5. </span>Configure data acquistion<a class="headerlink" href="#configure-data-acquistion" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.5. </span>Configure data acquistion<a class="headerlink" href="#configure-data-acquistion" title="Permalink to this headline"></a></h2>
 <section id="step-1-adding-channels">
-<h3><span class="section-number">23.5.1. </span>Step 1 – Adding Channels<a class="headerlink" href="#step-1-adding-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.1. </span>Step 1 – Adding Channels<a class="headerlink" href="#step-1-adding-channels" title="Permalink to this headline"></a></h3>
 <img alt="../_images/10000000000002CC00000188EAF4D5DCF6382AA7.png" src="../_images/10000000000002CC00000188EAF4D5DCF6382AA7.png" />
 <p>To add a channel you <span class="guilabel">Logger Channels</span>
 table. To do this, move the relevant item from the
@@ -350,7 +351,7 @@ device list may be filtered for a relevant device type.</p>
 </div>
 </section>
 <section id="step-2-selecting-the-device-property">
-<h3><span class="section-number">23.5.2. </span>Step 2 – Selecting the Device Property<a class="headerlink" href="#step-2-selecting-the-device-property" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.2. </span>Step 2 – Selecting the Device Property<a class="headerlink" href="#step-2-selecting-the-device-property" title="Permalink to this headline"></a></h3>
 <p>Select the device property that you want to record by double clicking
 into the <span class="guilabel">Property</span> field of the respective channel from
 <span class="guilabel">DAQ Channels</span> table. This will display a drop-down list with all available
@@ -359,7 +360,7 @@ below).</p>
 <img alt="../_images/10000000000002CC0000016B456742182C113BB4.png" src="../_images/10000000000002CC0000016B456742182C113BB4.png" />
 </section>
 <section id="step-3-changing-the-channel-label">
-<h3><span class="section-number">23.5.3. </span>Step 3 – Changing the Channel Label<a class="headerlink" href="#step-3-changing-the-channel-label" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.3. </span>Step 3 – Changing the Channel Label<a class="headerlink" href="#step-3-changing-the-channel-label" title="Permalink to this headline"></a></h3>
 <p>In the Label column you can assign a label to each channel. This label
 will later be displayed in the legend of the graph as the curve label.
 To change the label, double-click in the <span class="guilabel">Label</span> table cell
@@ -374,7 +375,7 @@ changed <strong>after</strong> the device property has been selected.</p>
 </div>
 </section>
 <section id="deleting-channels">
-<h3><span class="section-number">23.5.4. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.4. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Permalink to this headline"></a></h3>
 <p>In order to delete one or multiple channels from the <span class="guilabel">DAQ Channels</span>
 list, first you have to mark the respective channels using
 the computer mouse. Now you may use either the keyboard’s <kbd class="kbd docutils literal notranslate">Delete</kbd> key
@@ -385,7 +386,7 @@ context menu.</p>
 <span class="menuselection">Clear Logger</span> item of the context menu.</p>
 </section>
 <section id="step-4-defining-the-sample-rate">
-<h3><span class="section-number">23.5.5. </span>Step 4 – Defining the Sample Rate<a class="headerlink" href="#step-4-defining-the-sample-rate" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.5. </span>Step 4 – Defining the Sample Rate<a class="headerlink" href="#step-4-defining-the-sample-rate" title="Permalink to this headline"></a></h3>
 <p>In the field <span class="guilabel">Sample Rate (Hz)</span> you can define the frequency measurement
 values are written into the plot and the log file at. The maximum sample
 rate depends on the measurement frequency of the hardware in use.</p>
@@ -407,7 +408,7 @@ over several days or use the graphical logger instead.</p>
 the <em>Logger Configuration</em> dialog.</p>
 </section>
 <section id="step-5-configuring-the-log-file">
-<h3><span class="section-number">23.5.6. </span>Step 5 – Configuring the Log File<a class="headerlink" href="#step-5-configuring-the-log-file" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.5.6. </span>Step 5 – Configuring the Log File<a class="headerlink" href="#step-5-configuring-the-log-file" title="Permalink to this headline"></a></h3>
 <p>In this section you can enter the log file <span class="guinum">❶</span> the measurement values
 are written into in addition to the graphical plot. Furthermore you can
 define the separator character the measurement values of the different
@@ -416,7 +417,7 @@ channels are separated from each other with <span class="guinum">❷</span>.</p>
 </section>
 </section>
 <section id="start-stop-data-logging">
-<h2><span class="section-number">23.6. </span>Start/Stop Data Logging<a class="headerlink" href="#start-stop-data-logging" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.6. </span>Start/Stop Data Logging<a class="headerlink" href="#start-stop-data-logging" title="Permalink to this headline"></a></h2>
 <a class="reference internal image-reference" href="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg"><img alt="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" class="align-left" src="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" width="60" /></a>
 <p>The data logging process may be started/stopped via the
 relevant button in the toolbar.</p>
@@ -425,9 +426,9 @@ relevant button in the toolbar.</p>
 </div>
 </section>
 <section id="diagram-navigation-use">
-<h2><span class="section-number">23.7. </span>Diagram Navigation &amp; Use<a class="headerlink" href="#diagram-navigation-use" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.7. </span>Diagram Navigation &amp; Use<a class="headerlink" href="#diagram-navigation-use" title="Permalink to this headline"></a></h2>
 <section id="id1">
-<h3><span class="section-number">23.7.1. </span>Overview<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.1. </span>Overview<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
 <p>The DAQ plug-in offers a number of possibilities to customize the way
 data are displayed. This includes resizing parts of a curve and showing
 or hiding individual curves. The diagram consists of a plot area <span class="guinum">❶</span> plus
@@ -441,7 +442,7 @@ variety of very different values and measurement units.</p>
 a number of additional functions.</p>
 </section>
 <section id="changing-the-displayed-section">
-<h3><span class="section-number">23.7.2. </span>Changing the Displayed Section<a class="headerlink" href="#changing-the-displayed-section" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.2. </span>Changing the Displayed Section<a class="headerlink" href="#changing-the-displayed-section" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg"><img alt="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" class="align-left" src="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" width="60" /></a>
 <p>The <em>Pan Tool</em> provides you with a simple way to move the
 displayed section of the plot area. It may be activated via its toolbar
@@ -454,13 +455,13 @@ will deactivate the auto-scaling of the diagram axes.</p>
 </div>
 </section>
 <section id="display-curve-values">
-<h3><span class="section-number">23.7.3. </span>Display Curve Values<a class="headerlink" href="#display-curve-values" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.3. </span>Display Curve Values<a class="headerlink" href="#display-curve-values" title="Permalink to this headline"></a></h3>
 <p>When the <em>Pan Tool</em> is active, you can move the mouse pointer over a
 curve to display the value at that specific position.</p>
 <img alt="../_images/1000020100000255000000C02731E793C603A163.png" src="../_images/1000020100000255000000C02731E793C603A163.png" />
 </section>
 <section id="zooming-via-the-mouse-wheel">
-<h3><span class="section-number">23.7.4. </span>Zooming via the Mouse Wheel<a class="headerlink" href="#zooming-via-the-mouse-wheel" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.4. </span>Zooming via the Mouse Wheel<a class="headerlink" href="#zooming-via-the-mouse-wheel" title="Permalink to this headline"></a></h3>
 <p>Turning the mouse wheel whilst the pointer is within the plot area will
 allow you to adjust the displayed section of a graph by increasing
 (zooming in) or decreasing (zooming out) its zoom level.</p>
@@ -480,7 +481,7 @@ allow you to adjust the displayed section of a graph by increasing
 </table>
 </section>
 <section id="defining-a-display-section">
-<h3><span class="section-number">23.7.5. </span>Defining a Display Section<a class="headerlink" href="#defining-a-display-section" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.5. </span>Defining a Display Section<a class="headerlink" href="#defining-a-display-section" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg"><img alt="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" class="align-left" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" width="60" /></a>
 <p>The <em>Zoom Tool</em> allows you to directly select a specific area
 of the plot and increase its resolution. To do this, please proceed as
@@ -495,7 +496,7 @@ selected area will be scaled to the current graph size (zoom in).</p></li>
 <img alt="../_images/10000000000001FA0000015E46DAC1CBDA6E2854.png" src="../_images/10000000000001FA0000015E46DAC1CBDA6E2854.png" />
 </section>
 <section id="auto-fit-auto-scale">
-<h3><span class="section-number">23.7.6. </span>Auto-Fit &amp; Auto-Scale<a class="headerlink" href="#auto-fit-auto-scale" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.6. </span>Auto-Fit &amp; Auto-Scale<a class="headerlink" href="#auto-fit-auto-scale" title="Permalink to this headline"></a></h3>
 <p>The toolbar and the context menu both contain a number of tools to
 adjust what is displayed in the diagram, in particular to ensure that
 all or specific data are visible.</p>
@@ -535,7 +536,7 @@ plot section will deactivate auto-scaling.</p>
 </div>
 </section>
 <section id="show-hide-individual-curves">
-<h3><span class="section-number">23.7.7. </span>Show/Hide Individual Curves<a class="headerlink" href="#show-hide-individual-curves" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.7. </span>Show/Hide Individual Curves<a class="headerlink" href="#show-hide-individual-curves" title="Permalink to this headline"></a></h3>
 <p>To improve scaling and visibility, you may show or hide individual
 curves. To do this, right-click the desired item in the plot legend and
 select the desired function to either hide the corresponding curve only
@@ -545,10 +546,10 @@ select the desired function to either hide the corresponding curve only
 <p>To revert to displaying all
 curves, activate the context menu from within the plot area and select
 the menu item <span class="menuselection">Show all curves</span> (see figure below).</p>
-<img alt="../_images/1000000000000109000001041C877E8A24D5AB941.png" src="../_images/1000000000000109000001041C877E8A24D5AB941.png" />
+<img alt="../_images/1000000000000109000001041C877E8A24D5AB94.png" src="../_images/1000000000000109000001041C877E8A24D5AB94.png" />
 </section>
 <section id="select-curve-color">
-<h3><span class="section-number">23.7.8. </span>Select Curve Color<a class="headerlink" href="#select-curve-color" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.8. </span>Select Curve Color<a class="headerlink" href="#select-curve-color" title="Permalink to this headline"></a></h3>
 <p>To choose a different curve color, right click an item in the plot
 legend. From the context menu select the menu item <span class="menuselection">Select Color</span>
 (see figure below).</p>
@@ -559,7 +560,7 @@ color.</p>
 <img alt="../_images/1000000000000222000001B58F8CFB4F56DCF4FD.png" src="../_images/1000000000000222000001B58F8CFB4F56DCF4FD.png" />
 </section>
 <section id="exporting-plot-image">
-<h3><span class="section-number">23.7.9. </span>Exporting Plot Image<a class="headerlink" href="#exporting-plot-image" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.9. </span>Exporting Plot Image<a class="headerlink" href="#exporting-plot-image" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg"><img alt="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" class="align-left" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" width="60" /></a>
 <p>You may export a picture
 of the current diagram using the toolbar or the right-click context menu and selecting
@@ -574,31 +575,31 @@ vector graphic formats (<code class="file docutils literal notranslate"><span cl
 <p>To close the dialog and to start the image export, click <span class="guilabel">Save</span><span class="guinum">❸</span>.</p>
 </section>
 <section id="deletion-of-diagram-data">
-<h3><span class="section-number">23.7.10. </span>Deletion of Diagram Data<a class="headerlink" href="#deletion-of-diagram-data" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.10. </span>Deletion of Diagram Data<a class="headerlink" href="#deletion-of-diagram-data" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100019CB000035050000350509AD2B23340F765E.svg"><img alt="../_images/100019CB000035050000350509AD2B23340F765E.svg" class="align-left" src="../_images/100019CB000035050000350509AD2B23340F765E.svg" width="60" /></a>
 <p>You may clear the plot area and delete all data recorded
 since the start of the present recording using the context menu item
 <span class="menuselection">Clear plot data</span>. Recording will resume from this point.</p>
-<img alt="../_images/100002010000010D000000D1835EC0ADB6A094751.png" src="../_images/100002010000010D000000D1835EC0ADB6A094751.png" />
+<img alt="../_images/100002010000010D000000D1835EC0ADB6A09475.png" src="../_images/100002010000010D000000D1835EC0ADB6A09475.png" />
 </section>
 <section id="switching-the-scaling-of-the-x-axis">
-<h3><span class="section-number">23.7.11. </span>Switching the scaling of the X-axis<a class="headerlink" href="#switching-the-scaling-of-the-x-axis" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.7.11. </span>Switching the scaling of the X-axis<a class="headerlink" href="#switching-the-scaling-of-the-x-axis" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/100018130000350500003505CADD59D81E3150FD.svg"><img alt="../_images/100018130000350500003505CADD59D81E3150FD.svg" class="align-left" src="../_images/100018130000350500003505CADD59D81E3150FD.svg" width="60" /></a>
 <p>You can switch the scaling of the X-axis between two
 different modes. By default, the X axis displays an absolute date/time
 stamp.</p>
-<img alt="../_images/100002010000022B0000006E35B772A9B9B293D21.png" src="../_images/100002010000022B0000006E35B772A9B9B293D21.png" />
+<img alt="../_images/100002010000022B0000006E35B772A9B9B293D2.png" src="../_images/100002010000022B0000006E35B772A9B9B293D2.png" />
 <p>You can switch the
 X-axis to display the relative time in seconds and milliseconds. This
 means that the event t<sub>0</sub> marks the point in time at which the
 recording was started.</p>
 <p>To toggle the axis, right-click in the diagram and select
 <span class="menuselection">Toggle X-axis scale</span> from the context menu.</p>
-<img alt="../_images/100002010000010D000000C7FB8978837EA08B411.png" src="../_images/100002010000010D000000C7FB8978837EA08B411.png" />
+<img alt="../_images/100002010000010D000000C7FB8978837EA08B41.png" src="../_images/100002010000010D000000C7FB8978837EA08B41.png" />
 </section>
 </section>
 <section id="script-functions">
-<h2><span class="section-number">23.8. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.8. </span>Script Functions<a class="headerlink" href="#script-functions" title="Permalink to this headline"></a></h2>
 <img alt="../_images/10000201000000FB0000005C7BE945F338BAE398.png" src="../_images/10000201000000FB0000005C7BE945F338BAE398.png" />
 <p>To automate the capture of data or
 to synchronize data capture with other processes, the data acquisition
@@ -606,7 +607,7 @@ can be started and stopped using QmixElements script functions. The
 corresponding functions can be found in the <span class="guilabel">DAQ</span> category in the list
 of the available script functions.</p>
 <section id="start-plot-logger">
-<h3><span class="section-number">23.8.1. </span>Start Plot Logger<a class="headerlink" href="#start-plot-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.8.1. </span>Start Plot Logger<a class="headerlink" href="#start-plot-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg"><img alt="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" class="align-left" src="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" width="60" /></a>
 <p>This function is used to start the data acquisition with the
 currently configured settings and channels. The current content of the
@@ -616,7 +617,7 @@ plot is not deleted.</p>
 </div>
 </section>
 <section id="stop-plot-logger">
-<h3><span class="section-number">23.8.2. </span>Stop Plot Logger<a class="headerlink" href="#stop-plot-logger" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.8.2. </span>Stop Plot Logger<a class="headerlink" href="#stop-plot-logger" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg"><img alt="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg" class="align-left" src="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg" width="60" /></a>
 <p>This function stops data acquisition.</p>
 <div class="line-block">
@@ -625,7 +626,7 @@ plot is not deleted.</p>
 </section>
 </section>
 <section id="importing-log-files">
-<h2><span class="section-number">23.9. </span>Importing Log Files<a class="headerlink" href="#importing-log-files" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.9. </span>Importing Log Files<a class="headerlink" href="#importing-log-files" title="Permalink to this headline"></a></h2>
 <p>The DAQ add-on offers the functionality to read recorded log-files into
 the plot. The tool for importing log files is able to recognize related
 log files of a long-term recording and import all related log files in
@@ -660,11 +661,11 @@ plot together with the file name.</p>
 </ol>
 </section>
 <section id="pattern-scan">
-<h2><span class="section-number">23.10. </span>Pattern Scan<a class="headerlink" href="#pattern-scan" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">24.10. </span>Pattern Scan<a class="headerlink" href="#pattern-scan" title="Permalink to this headline"></a></h2>
 <p>The DAQ add-on offers the possibility to search plot curves for patterns
 and mark them in the graphical plot.</p>
 <section id="configuring-and-running-the-pattern-scan">
-<h3><span class="section-number">23.10.1. </span>Configuring and Running the Pattern Scan<a class="headerlink" href="#configuring-and-running-the-pattern-scan" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.10.1. </span>Configuring and Running the Pattern Scan<a class="headerlink" href="#configuring-and-running-the-pattern-scan" title="Permalink to this headline"></a></h3>
 <p>The following simple example explains pattern recognition based on the
 recognition of square wave signals.</p>
 <ol class="steps arabic">
@@ -753,7 +754,7 @@ the plot curves being examined. The report file is also written.</p>
 </ol>
 </section>
 <section id="using-an-existing-pattern-scanner">
-<h3><span class="section-number">23.10.2. </span>Using an Existing Pattern Scanner<a class="headerlink" href="#using-an-existing-pattern-scanner" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.10.2. </span>Using an Existing Pattern Scanner<a class="headerlink" href="#using-an-existing-pattern-scanner" title="Permalink to this headline"></a></h3>
 <p>Once you have configured a pattern scanner, you can assign it to a
 variety of other plot curves. Proceed as follows:</p>
 <ol class="steps arabic">
@@ -769,14 +770,14 @@ click <span class="guilabel">OK</span>.</p>
 </ol>
 </section>
 <section id="enabling-disabling-pattern-recognition-for-a-plot-curve">
-<h3><span class="section-number">23.10.3. </span>Enabling / Disabling Pattern Recognition for a Plot Curve<a class="headerlink" href="#enabling-disabling-pattern-recognition-for-a-plot-curve" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.10.3. </span>Enabling / Disabling Pattern Recognition for a Plot Curve<a class="headerlink" href="#enabling-disabling-pattern-recognition-for-a-plot-curve" title="Permalink to this headline"></a></h3>
 <p>To enable or disable the pattern recognition for a plot curve,
 right-click on the plot curve <span class="guinum">❶</span> and select
 <span class="menuselection">Enable / Disable Pattern Scan</span> <span class="guinum">❷</span>.</p>
 <img alt="../_images/100002010000013C000000F65410305BA939F782.png" src="../_images/100002010000013C000000F65410305BA939F782.png" />
 </section>
 <section id="result-analysis">
-<h3><span class="section-number">23.10.4. </span>Result Analysis<a class="headerlink" href="#result-analysis" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">24.10.4. </span>Result Analysis<a class="headerlink" href="#result-analysis" title="Permalink to this headline"></a></h3>
 <section id="id2">
 <h4>Overview<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
 <p>Using the result analysis for pattern recognition, you can compare the
@@ -843,15 +844,15 @@ occurred after 12.9 seconds.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../spectroscopy_EN/spectroscopy_EN.html" class="btn btn-neutral float-left" title="22. Spectroscopy Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Appendix_EN/Appendix_EN.html" class="btn btn-neutral float-right" title="24. Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../spectroscopy_EN/spectroscopy_EN.html" class="btn btn-neutral float-left" title="23. Spectroscopy Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Appendix_EN/Appendix_EN.html" class="btn btn-neutral float-right" title="25. Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jul 13, 2022 12:57.
+      <span class="lastupdated">Last updated on Jul 18, 2022 10:06.
       </span></p>
   </div>
 
