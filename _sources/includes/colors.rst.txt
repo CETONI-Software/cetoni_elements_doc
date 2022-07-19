@@ -1,0 +1,3 @@
+.. Color profiles for Sphinx.
+
+.. role:: red_bg

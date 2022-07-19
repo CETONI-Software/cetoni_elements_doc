@@ -573,6 +573,7 @@ The following simple example explains pattern recognition based on the
 recognition of square wave signals.
 
 .. rst-class:: steps
+   
 #. A plot curve is given, which contains square wave signals with a
    width between 5 and 8 seconds and a peak value of 5V.
 

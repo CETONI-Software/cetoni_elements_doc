@@ -511,7 +511,7 @@ the metadata is saved in a file with the extension aiq.
 .. tip::
    If you save files in AIQ format, you can       
    convert them to CSV format at any time later using the  
-   `Convert AIQ to CSV file`_ feature. 
+   `Converting Analyze IQ files to CSV`_ feature. 
 
 Loading Spectrometer Settings
 -----------------------------
@@ -966,9 +966,9 @@ Importing Analysis Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will need completed analysis models to perform chemometric analyses.
-These models ():file:`*.aiqm` files) must be imported through CETONI Elements in
+These models (:file:`*.aiqm` files) must be imported through CETONI Elements in
 order to be added to the *Analyze IQ RealTime server*. To import these
-model files go to E:menuselection:`Edit --> Import Analyze IQ Model`.
+model files go to :menuselection:`Edit --> Import Analyze IQ Model`.
 
 .. image:: Pictures/1000000000000177000000B044D45C5DD87F2BF6.png
 

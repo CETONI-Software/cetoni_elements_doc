@@ -5,16 +5,16 @@ Introduction
 ------------
 
 .. image:: Pictures/100000000000006000000061CD30E97F.png
-   :width: 60
+   :width: 80
    :align: left
 
-Press the button *LED Array* in the side bar or use the menu item 
+Press the button :guilabel:`LED Array` in the side bar or use the menu item 
 :menuselection:`Window --> Show View --> LED Array` to show the
 :ref:`View <views>` of  the LED Array plug-in (figure below).
 
 .. image:: Pictures/1000000000000382000002BC2FE3AAFD.png
 
-The workbench contains a separate control panel for each connected 
+The LED Array View contains a separate control panel for each connected 
 LED array device.
 
 Hardware Version
@@ -449,9 +449,9 @@ Select the relevant LED channel from the configuration menu :guilabel:`Analog Ou
 .. |image6| image:: Pictures/100000000000010E0000022483DA82B5.png
 .. |image7| image:: Pictures/10000000000001090000022462F0E95C.png
 .. |image19| image:: Pictures/10000000000004C90000026AF43AB254.png
-   :height: 200
+   :width: 350
 .. |image20| image:: Pictures/10000000000003890000026A2EE7BB04.png
-   :height: 200
+   :width: 250
 .. |image21| image:: Pictures/1000000000000111000000C6D2F2FCCA.png
 .. |image22| image:: Pictures/10000000000000EA00000078FE1034F4.png
 

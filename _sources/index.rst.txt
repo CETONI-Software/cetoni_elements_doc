@@ -68,4 +68,5 @@ your navigation through this document:
    sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
    daq_EN/daq_EN.rst
+   canopentools_EN/canopentools_EN.rst
    Appendix_EN/Appendix_EN.rst
