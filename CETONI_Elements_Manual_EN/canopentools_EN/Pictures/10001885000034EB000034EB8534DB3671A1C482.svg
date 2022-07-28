@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg32"
+   sodipodi:docname="objdic_write.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>spreadsheet row icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-175.72881"
+     inkscape:cy="256"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg32" />
+  <title
+     id="title2">spreadsheet row icon</title>
+  <desc
+     id="desc4">spreadsheet row icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g30"
+     transform="translate(-32,-32)">
+    <polygon
+       points="144,128 464,128 464,432 144,432 "
+       id="polygon6"
+       style="fill:#ffffff" />
+    <polygon
+       points="144,344 376.6,128 464,128 464,432 144,432 "
+       id="polygon8"
+       style="fill:#dff3fd" />
+    <polygon
+       points="48,128 128,128 128,432 48,432 "
+       id="polygon10"
+       style="fill:#b1e3fb" />
+    <polygon
+       points="118.15,368 128,368 128,432 49.25,432 "
+       id="polygon12"
+       style="fill:#7fd3f9" />
+    <path
+       d="m 464,128 h 16 V 448 H 32 V 128 h 16 v 64 h 80 v -64 h 16 v 64 h 96 v -64 h 16 v 64 h 96 v -64 h 16 v 64 h 96 z M 48,432 h 80 V 368 H 48 Z m 0,-80 h 80 V 288 H 48 Z m 0,-80 h 80 V 208 H 48 Z m 416,160 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m 224,-80 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m 224,-80 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z"
+       id="path14"
+       inkscape:connector-curvature="0"
+       style="fill:#4ec1f5" />
+    <path
+       d="m 464,128 h 16 V 448 H 32 L 49.25,432 H 128 v -64 h -9.85 L 144,344 v 8 h 96 v -64 h -35.7 l 17.25,-16 H 240 V 254.85 L 256,240 v 32 h 96 V 208 H 290.45 L 307.7,192 H 352 V 150.85 L 368,136 v 56 h 96 z m 0,304 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m 224,-80 v -64 h -96 v 64 z m -112,0 v -64 h -96 v 64 z m 112,-80 v -64 h -96 v 64 z"
+       id="path16"
+       inkscape:connector-curvature="0"
+       style="fill:#28b5f5" />
+    <path
+       d="m 48,32 h 416 c 8.8,0 16,7.2 16,16 v 80 H 32 V 48 c 0,-8.8 7.2,-16 16,-16 z"
+       id="path18"
+       inkscape:connector-curvature="0"
+       style="fill:#0299e3" />
+    <path
+       d="m 475.15,36.5 c 3,2.95 4.85,7 4.85,11.5 v 80 H 376.6 Z"
+       id="path20"
+       inkscape:connector-curvature="0"
+       style="fill:#0287cf" />
+    <polygon
+       points="32,192 480,192 480,288 32,288 "
+       id="polygon22"
+       style="fill:#ff9f00" />
+    <polygon
+       points="307.7,192 480,192 480,288 204.3,288 "
+       id="polygon24"
+       style="fill:#ff8d00" />
+    <path
+       d="m 48,208 h 80 v 64 H 48 Z m 320,0 h 96 v 64 h -96 z m -112,0 h 96 v 64 h -96 z m -112,0 h 96 v 64 h -96 z"
+       id="path26"
+       inkscape:connector-curvature="0"
+       style="fill:#ffc928" />
+    <path
+       d="M 221.55,272 240,254.85 V 272 Z M 256,240 290.45,208 H 352 v 64 h -96 z m 112,-32 h 96 v 64 h -96 z"
+       id="path28"
+       inkscape:connector-curvature="0"
+       style="fill:#ffb100" />
+  </g>
+  <g
+     id="g4340"
+     transform="matrix(0.75242318,0,0,0.75242318,128.57455,126.69376)">
+    <polygon
+       id="polygon4342"
+       points="75,360 335.2,99.8 340.85,99.8 425.7,184.65 425.7,190.3 165.5,450.5 105.4,420.1 "
+       style="fill:#fbd734" />
+    <polygon
+       id="polygon4344"
+       points="425.7,190.3 165.5,450.5 105.4,420.1 383.3,142.2 425.7,184.65 "
+       style="fill:#f9bf2c" />
+    <polygon
+       id="polygon4346"
+       points="27.1,498.4 32.05,452.85 75,360 165.5,450.5 72.65,493.45 "
+       style="fill:#f5b673" />
+    <polygon
+       id="polygon4348"
+       points="165.5,450.5 72.65,493.45 27.1,498.4 120.25,405.25 "
+       style="fill:#f5a557" />
+    <path
+       id="path4350"
+       d="m 32.05,452.85 40.6,40.6 -37.85,17.5 c -5.65,2.6 -12,0.5 -16.4,-3.85 -4.4,-4.4 -6.45,-10.75 -3.85,-16.4 z"
+       inkscape:connector-curvature="0"
+       style="fill:#445a64" />
+    <path
+       id="path4352"
+       d="m 18.4,507.1 33.95,-33.95 20.3,20.3 -37.85,17.5 c -5.65,2.6 -12,0.5 -16.4,-3.85 z"
+       inkscape:connector-curvature="0"
+       style="fill:#36464e" />
+    <path
+       id="path4354"
+       d="m 437,20.6 67.9,67.85 c 6.25,6.25 6.25,16.4 0,22.65 L 448.35,167.65 357.8,77.15 414.4,20.6 c 6.2,-6.25 16.4,-6.25 22.6,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#d74214" />
+    <path
+       id="path4356"
+       d="m 470.95,54.55 33.95,33.9 c 6.25,6.25 6.25,16.4 0,22.65 L 448.35,167.65 403.1,122.4 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#bd360c" />
+    <polygon
+       id="polygon4358"
+       points="357.8,77.15 448.35,167.65 425.7,190.3 335.2,99.8 "
+       style="fill:#ebedef" />
+    <polygon
+       id="polygon4360"
+       points="403.1,122.4 448.35,167.65 425.7,190.3 380.45,145.05 "
+       style="fill:#cdd7db" />
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/../venv/Scripts/python.exe",
+    "esbonio.sphinx.confDir": "${workspaceFolder}",
+    "esbonio.server.enabled": true,
+    "cSpell.words": [
+        "CETONI",
+        "guinum",
+        "menuselection",
+        "Nemesys",
+        "Qmix"
+    ]
+}

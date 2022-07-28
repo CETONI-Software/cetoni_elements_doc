@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4764"
+   sodipodi:docname="media_record2.svg"
+   inkscape:version="0.92.0 r15299">
+  <metadata
+     id="metadata4770">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>media record icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4768" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4766"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-32.542373"
+     inkscape:cy="256"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4764" />
+  <title
+     id="title4746">media record icon</title>
+  <desc
+     id="desc4748">media record icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g5325"
+     transform="matrix(1.5555556,0,0,1.5555556,-142.22222,-142.22222)">
+    <path
+       d="m 256,112 c 79.55,0 144,64.45 144,144 0,79.55 -64.45,144 -144,144 -79.55,0 -144,-64.45 -144,-144 0,-79.55 64.45,-144 144,-144 z"
+       id="path4754"
+       inkscape:connector-curvature="0"
+       style="fill:#ebedef" />
+    <path
+       d="m 400,256 c 0,79.55 -64.45,144 -144,144 -79.55,0 -144,-64.45 -144,-144 z"
+       id="path4756"
+       inkscape:connector-curvature="0"
+       style="fill:#cdd7db" />
+    <path
+       d="m 256,144 c 61.85,0 112,50.15 112,112 0,61.85 -50.15,112 -112,112 -61.85,0 -112,-50.15 -112,-112 0,-61.85 50.15,-112 112,-112 z"
+       id="path4758"
+       inkscape:connector-curvature="0"
+       style="fill:#d74214" />
+    <path
+       d="m 368,256 c 0,61.85 -50.15,112 -112,112 -61.85,0 -112,-50.15 -112,-112 z"
+       id="path4760"
+       inkscape:connector-curvature="0"
+       style="fill:#bd360c" />
+  </g>
+</svg>
