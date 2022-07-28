@@ -1,0 +1,1 @@
+pandoc qmixv_EN.odt -o qmixv_EN.rst --extract-media=.
