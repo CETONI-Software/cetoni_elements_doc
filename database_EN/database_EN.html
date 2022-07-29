@@ -526,17 +526,239 @@ an SQLite database uns JavaScript code:</p>
 <h2><span class="section-number">20.4. </span>JavaScript API Reference<a class="headerlink" href="#javascript-api-reference" title="Permalink to this headline"></a></h2>
 <section id="qsqldatabase">
 <h3><span class="section-number">20.4.1. </span>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Permalink to this headline"></a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find file: C:\CodingXP\CETONI-GitHub\cetoni_elements_doc\CETONI_Elements_Manual_EN\_build\doxygen\xml\index.xml</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabaseE">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="DbPlugin::CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DbPlugin</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabaseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSQLDatabase object to use it in JavaScript. </p>
+<p>The following code shows, how to open a database connection in JavaScript and how to execute a simple query</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QSqlDatabase</span><span class="p">();</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">createConnection</span><span class="p">(</span><span class="s">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;JsScript&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">setDatabaseName</span><span class="p">(</span><span class="s">&quot;C:/Users/Public/Documents/QmixElements/Projects/Entwicklung/Log/ProcessDataDbLog.sqlite&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">();</span><span class="w"></span>
+<span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">recordValues</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 </div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::createConnection__QStringCR.QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae002d08b936088700317dbac8f9584c1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::createQuery__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a3ca41f48e74e85d5dc5caa3c919a2d03"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">createQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="DbPlugin::CScriptQSqlDatabase::CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7211479a3c959719d70f723a33f80c52"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::databaseNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a104ae2b4bdcd6d1403f80f2366e176e1"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">databaseName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase7driversEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase7driversEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase7driversEv"></span><span id="DbPlugin::CScriptQSqlDatabase::driversC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac644814a14c86c690afd13a55171dd72"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drivers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase7driversEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::executeQuery__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac50a8e80b1abb79c9c38875c04c2bb0e"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">executeQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::fields__QStringCRC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a4cd4e88488b0cbd3a36b39898ec60184"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fields</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tablename</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8hostNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8hostNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8hostNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::hostNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a65d603b2c0d3cf43056d9790fff70652"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hostName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8hostNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6isOpenEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6isOpenEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6isOpenEv"></span><span id="DbPlugin::CScriptQSqlDatabase::isOpenC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a0a6c6f6c77c76768afd59886da60781b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6isOpenEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase7isValidEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase7isValidEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase7isValidEv"></span><span id="DbPlugin::CScriptQSqlDatabase::isValidC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a726b40660f13d495d23536a9c4316311"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase7isValidEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv"></span><span id="DbPlugin::CScriptQSqlDatabase::lastErrorC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab68935edaa8c64474347d8d95dc52ca6"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase4openEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase4openEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase4openEv"></span><span id="DbPlugin::CScriptQSqlDatabase::open"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae7b722e955fb081ce3406bf78388405b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase4openEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8passwordEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8passwordEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8passwordEv"></span><span id="DbPlugin::CScriptQSqlDatabase::passwordC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a492bcbae6e344a78a04a139ba18ecb43"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8passwordEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase4portEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase4portEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase4portEv"></span><span id="DbPlugin::CScriptQSqlDatabase::portC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aa31876577c32a607414120013a808bd2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">port</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase4portEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="DbPlugin::CScriptQSqlDatabase::qSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7ffd47db405d965e485450d09eab184a"></span><span class="n"><span class="pre">QSqlDatabase</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the internal database object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setDatabaseName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ad81e5047f6fd5e7cb2041a445c5e6cf2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDatabaseName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setHostName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aae8537672db9ab3281bd2b5650b5a2b0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHostName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setPassword__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a8149e2219173eccc90ddc40a5a41e941"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPassword</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">password</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase7setPortEi">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase7setPortEi"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase7setPortEi"></span><span id="DbPlugin::CScriptQSqlDatabase::setPort__i"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1af37db571469bc9c7fc6fdc1c939710cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPort</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase7setPortEi" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setUrl__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aff0854ac30eb045e1a7d8a8bfe691c44"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUrl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Url</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setUserName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac72acd07faca3dedfe0803dfe9891c5f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUserName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6tablesEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6tablesEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6tablesEv"></span><span id="DbPlugin::CScriptQSqlDatabase::tablesC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aedfbb90ce1cce419937c7a0666d6863e"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tables</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6tablesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase3urlEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase3urlEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase3urlEv"></span><span id="DbPlugin::CScriptQSqlDatabase::urlC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7db1458d62b1d8e430b55cbdcf44d42c"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">url</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase3urlEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8userNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8userNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8userNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::userNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a08e1bed7f6198c8d5b8878d27446d132"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">userName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8userNameEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabaseD0Ev">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabaseD0Ev"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabaseD0Ev"></span><span id="DbPlugin::CScriptQSqlDatabase::~CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab557d305c983758444e658a8ed3e98f6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabaseD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 <section id="qsqlquery">
 <h3><span class="section-number">20.4.2. </span>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Permalink to this headline"></a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find file: C:\CodingXP\CETONI-GitHub\cetoni_elements_doc\CETONI_Elements_Manual_EN\_build\doxygen\xml\index.xml</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQueryE">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQueryE"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQueryE"></span><span id="DbPlugin::CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DbPlugin</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQueryE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSqlQuery to use it in JavaScript. </p>
+<p>There are several options how to execute a query. The first option is, to call the executeQuery() function of the database object:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
 </div>
+</p>
+<p>The second option is, to create the query via the database object and to execute it later:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>or you create the query object and the pass the actual query to the executeQuery() function</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">();</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>If you want to insert data into the database, then you can build the complete query string with JavaScript or you can use the bindValues() function with placeholders like in the code below:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;INSERT INTO person (id, forename, surename) VALUES (?, ?, ?)&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">bindValues</span><span class="p">([</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bart&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Simpson&quot;</span><span class="p">]);</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="DbPlugin::CScriptQSqlQuery::bindValues__QVariantListCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a7b8f13d10c2a4fd8e4acda2155bfa9fe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bindValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery__QSqlQueryCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1aff1c1c2d483136321a4ce8aabe972eae"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QSqlQuery</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1aa10938b4fe0171b21d0c5d9f7212f881"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery4execERK7QString">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery4execERK7QString"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery4execERK7QString"></span><span id="DbPlugin::CScriptQSqlQuery::exec__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a53a348680bcf9a3b62c455d073745db0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery4execERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery9lastErrorEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery9lastErrorEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery9lastErrorEv"></span><span id="DbPlugin::CScriptQSqlQuery::lastErrorC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a29ae276e28ec52a6ad3027f870e9b8d5"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery9lastErrorEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery4nextEv">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery4nextEv"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery4nextEv"></span><span id="DbPlugin::CScriptQSqlQuery::next"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a09f69f37121b8958ce34481705b12e2d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery4nextEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery7prepareERK7QString">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery7prepareERK7QString"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery7prepareERK7QString"></span><span id="DbPlugin::CScriptQSqlQuery::prepare__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a2dfd70e8856eff140fc5a0710dd71990"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prepare</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery7prepareERK7QString" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery6recordEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery6recordEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery6recordEv"></span><span id="DbPlugin::CScriptQSqlQuery::recordC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a723ca57ad17006b122b52314dc11cff7"></span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">record</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery6recordEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery12recordValuesEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery12recordValuesEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery12recordValuesEv"></span><span id="DbPlugin::CScriptQSqlQuery::recordValuesC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a65d45bf5cab220d5e9ba1c5af81caf71"></span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery12recordValuesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQueryD0Ev">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQueryD0Ev"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQueryD0Ev"></span><span id="DbPlugin::CScriptQSqlQuery::~CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1ad4a3bc9bf4db021ee964950801d9ebda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQueryD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -553,7 +775,7 @@ an SQLite database uns JavaScript code:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jul 29, 2022 08:38.
+      <span class="lastupdated">Last updated on Jul 29, 2022 14:04.
       </span></p>
   </div>
 
