@@ -19,7 +19,7 @@ Valve Device List
 --------------------
 
 The plugin mainly consists of the valve device list,
-which is displayed as a separate view in the graphical user interface. 
+which is displayed as a separate view in the graphical user interface.
 
 |Figure 1: QmixV valve device list|
 
@@ -37,7 +37,7 @@ Editing valve names
 ~~~~~~~~~~~~~~~~~~~
 
 You can change the name of a valve at any time and, for example, assign
-a name suitable for your particular application. You change a name by the 
+a name suitable for your particular application. You change a name by the
 following steps:
 
 |Figure 2: change valve name|
@@ -115,7 +115,7 @@ If the valve is not switched, it is either connected incorrectly or you
 are switching the wrong output. If the valve switches, you can continue
 creating the valve in the software.
 
-To do this, right-click in the list of valves and then select 
+To do this, right-click in the list of valves and then select
 :menuselection:`Create Valve` from the context menu.
 
 |FFfFigure 7: Open dialog for valve creation|
@@ -124,8 +124,8 @@ The dialog for creating and configuring a valve is now displayed.
 
 |Figure 8: Dialog for valve creation and configuration|
 
-In the window, first select the type of valve you have connected in the field 
-:guilabel:`Valve Type` :guinum:`❶`. Then you must configure the digital outputs 
+In the window, first select the type of valve you have connected in the field
+:guilabel:`Valve Type` :guinum:`❶`. Then you must configure the digital outputs
 for the valve in the *Dig-Out Channels* table. Depending on the valve type, these can be
 one or more outputs. To configure an output, double-click in the table
 cell :guinum:`❷` for this channel and then select the corresponding digital output
@@ -139,9 +139,9 @@ created with the :guilabel:`Create Valve` function get the prefix :code:`DO_` to
 indicate that they are valves controlled by digital outputs.
 
 .. tip::
-   Valves created with the *Create Valve*         
-   function can be identified by the prefix :code:`DO_` in    
-   the valve list.  
+   Valves created with the *Create Valve*
+   function can be identified by the prefix :code:`DO_` in
+   the valve list.
 
 Deleting Valves
 ---------------
@@ -157,20 +157,20 @@ item.
 .. admonition:: Important
    :class: note
 
-   Valves created and configured with the    
-   *Device Configurator*, or that are part of other         
-   devices, cannot be deleted with :guilabel:`Delete Valve` menu      
-   item.   
+   Valves created and configured with the
+   *Device Configurator*, or that are part of other
+   devices, cannot be deleted with :guilabel:`Delete Valve` menu
+   item.
 
 Valve Script Functions
 ----------------------
 
 |Figure 10: Qmix valve script functions|
 
-The Qmix valve plugin contains a script function for switching the Qmix valves 
+The Qmix valve plugin contains a script function for switching the Qmix valves
 from a script.
 
-Switch Valve 
+Switch Valve
 ~~~~~~~~~~~~
 
 .. image:: Pictures/10002F3400003505000035057520F6A9E5AEC280.svg
@@ -185,19 +185,40 @@ preview image visualizes the selected target position :guinum:`❸`.
 .. image:: Pictures/10000000000001A3000000A14DDC5565A638D882.png
 
 Both selection boxes support the use of variables. That means, in the device
-selection box :guinum:`❶` you can use a variable that contains a valve device reference. 
+selection box :guinum:`❶` you can use a variable that contains a valve device reference.
 In the target position selection box :guinum:`❷` you can use a script variable
 that contains a target position index.
 
-The following example shows a script, that creates two variables :guinum:`❶`. The 
+The following example shows a script, that creates two variables :guinum:`❶`. The
 :code:`$ProcessValve` variable stores the device reference to valve device
 **Valve_0**. The :code:`$RefillPosition` variable stores the valve target
 position for syringe refill.
 
 .. image:: Pictures/switch_valve_variables.png
 
-These variables are then used in the *Switch Valve* script :guinum:`❷` for the 
+These variables are then used in the *Switch Valve* script :guinum:`❷` for the
 :guilabel:`Valve` and :guilabel:`Target Position` definition.
+
+
+Supported VICI Valves
+---------------------
+
+The Valve Plugin supports VICI valves that use a universal actuator with a USB or RS-232 interface.
+
+.. image:: Pictures/VICI_Valve.jpg
+
+The following list shows all types of VICI valves that are supported by the software:
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 0
+
+   * - |image-vici-10pos11port|
+     - 10 Position dead-end selector (SD) valve (e.g. `low pressure <https://www.vici.com/vval/sd.php>`_, `high pressure <https://www.vici.com/vval/sduw.php>`_)
+   * - |image-vici-6pos7port|
+     - 6 Position dead-end selector (SD) valve (e.g. `low pressure <https://www.vici.com/vval/sd.php>`_, `high pressure <https://www.vici.com/vval/sduw.php>`_)
+   * - |image-vici-2pos6port|
+     - 6 Port injector valve (e.g. `GC injectors <https://www.vici.com/vval/vval_gc.php>`_, `HPLC injectors <https://www.vici.com/vval/vval_hplc.php>`_)
 
 
 
@@ -217,6 +238,13 @@ These variables are then used in the *Switch Valve* script :guinum:`❷` for the
 
 .. |Figure 8: Dialog for valve creation and configuration| image:: Pictures/100002010000022800000141A28095D6BFFF3542.png
 
-
 .. |Figure 10: Qmix valve script functions| image:: Pictures/10000201000000F70000003E8592638162A9459E.png
 
+.. |image-vici-10pos11port| image:: Pictures/10Pos11Port_PositionIcon0.svg
+   :width: 60
+
+.. |image-vici-6pos7port| image:: Pictures/6Pos7Port_PositionIcon0.svg
+   :width: 60
+
+.. |image-vici-2pos6port| image:: Pictures/2Pos6Port_PositionIcon1.svg
+   :width: 60

@@ -843,72 +843,9 @@ script and can be evaluated further.</p>
 <h3><span class="section-number">21.8.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Permalink to this headline"></a></h3>
 <p>The <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object is the central object for accessing available
 devices and application objects.</p>
-<div class="breathe-sectiondef docutils container">
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv">
-<span id="_CPPv3NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="Python::CScriptEnvAccess::getDeviceNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDeviceNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns a tuple with all device names that can be accessed from Python. </p>
-<p>Use the device name when calling the <code class="docutils literal notranslate"><a class="reference internal" href="#classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"><span class="std std-ref"><span class="pre">getDevice()</span></span></a></code> function to get the corresponding device object. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString">
-<span id="_CPPv3NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="Python::CScriptEnvAccess::getDevice__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"></span><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CDevice</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the device object for the given device name. </p>
-<p>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s">&quot;Nemesys_S_1&quot;</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv">
-<span id="_CPPv3NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="Python::CScriptEnvAccess::getObjectNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObjectNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns a list of all registered application objects that are not devices and that can be accessed from Python, such as the graphical logger. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString">
-<span id="_CPPv3NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="Python::CScriptEnvAccess::getObject__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getObject</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the object with the given object name <code class="docutils literal notranslate"><span class="pre">Name</span></code>. </p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getObject</span><span class="p">(</span><span class="s">&quot;ProcessDataGraph&quot;</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString">
-<span id="_CPPv3NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="Python::CScriptEnvAccess::getVar__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">VarName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the value of a certain script variable. </p>
-<p>The variable name needs to start with a dollar sign.</p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getVar</span><span class="p">(</span><span class="s">&quot;$FlowRate&quot;</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant">
-<span id="_CPPv3N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="_CPPv2N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="Python::CScriptEnvAccess::setVar__QStringCR.QVariantCR"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Sets the value of the script variable to the given value. </p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVar</span><span class="p">(</span><span class="s">&quot;$TargetPos&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6Python16CScriptEnvAccess7setVarsEK11QVariantMap">
-<span id="_CPPv3N6Python16CScriptEnvAccess7setVarsEK11QVariantMap"></span><span id="_CPPv2N6Python16CScriptEnvAccess7setVarsEK11QVariantMap"></span><span id="Python::CScriptEnvAccess::setVars__QVariantMapC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a94259e9a9d31737b8940a7c7d9dd4b87"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVars</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Python16CScriptEnvAccess7setVarsEK11QVariantMap" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Sets multiple script variables using a Python dictionary. </p>
-<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVars</span><span class="p">({</span><span class="s">&quot;$Value1&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$Value2&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">})</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find file: C:\CodingXP\CETONI-GitHub\cetoni_elements_doc\CETONI_Elements_Manual_EN\_build\doxygen\xml\index.xml</p>
 </div>
 </section>
 </section>
@@ -926,7 +863,7 @@ devices and application objects.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CETONI GmbH.
-      <span class="lastupdated">Last updated on Jul 19, 2022 10:45.
+      <span class="lastupdated">Last updated on Jul 29, 2022 08:38.
       </span></p>
   </div>
 
