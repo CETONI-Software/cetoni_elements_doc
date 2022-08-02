@@ -10,7 +10,7 @@ gerätespezifischen Plugins. Dies erkennen Sie daran, dass Ihnen von der
 Software der Startbildschirm angezeigt wird (Abbildung unten).
 
 .. image:: ./Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
-   :alt: Abbildung 1.1: Erster Start – Startbildschirm
+   :alt: Erster Start – Startbildschirm
 
 Um mit der Software
 ihre Geräte ansteuern zu können, müssen Sie eine Gerätekonfiguration
@@ -101,7 +101,7 @@ oder Gerät bilden. Im Startbildschirm sehen Sie alle Möglichkeiten,
 eine entsprechende Gerätekonfiguration zu laden:
 
 .. image:: ./Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
-   :alt: Abbildung 1.1: Erster Start – Startbildschirm
+   :alt: Erster Start – Startbildschirm
 
 Gerätekonfiguration erstellen  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -179,12 +179,12 @@ folgenden Schritte durch:
    werden soll.
 
      .. image:: ./Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
-      :alt: Abbildung 1.3: Konfigurationsnamen vergeben
+      :alt: Konfigurationsnamen vergeben
 
 #. Bestätigen Sie den Neustart der Anwendung.
 
      .. image:: ./Pictures/100000000000020900000097955C208F8F030D3B.png
-      :alt: Abbildung 1.4: Anwendung neu starten
+      :alt: Anwendung neu starten
 
 Nach diesen Schritten sollte die Software nun mit der gewählten Konfiguration 
 geladen werden.
@@ -205,7 +205,7 @@ Gerätekonfiguration zu exportieren, wählen Sie im Hauptmenü den
 Punkt :menuselection:`Device --> Export Configuration`.
 
 .. image:: ./Pictures/1000000000000176000000AAFAC8C916053B5D6A.png
-   :alt: Abbildung 1.5: Gerätekonfiguration exportieren
+   :alt: Gerätekonfiguration exportieren
 
 Gerätekonfigurationen werden als komprimierte :file:`*.qcf` Dateien exportiert.
 
@@ -320,7 +320,7 @@ entsprechenden Menüpunkt an, um den View einzublenden (siehe Abbildung
 unten).
 
 .. image:: ./Pictures/10000201000001BF000000EB5BF27DBB42FBAF06.png
-   :alt: Abbildung 1.9: Views über das Menü einblenden
+   :alt: Views über das Menü einblenden
 
 
 Bei verschiedenen
@@ -329,7 +329,7 @@ Geräten kann es sein, dass für jedes Gerät ein eigener View existiert
 Gruppe zusammengefasst und können einzeln eingeblendet werden.
 
 .. image:: ./Pictures/1000020100000221000000ABD10E7731B686C5B3.png
-   :alt: Abbildung 1.10: Views für Geräte einblenden
+   :alt: Views für Geräte einblenden
 
 
 Alternativ können Sie auch
@@ -348,7 +348,7 @@ die Maustaste nicht loslassen, können Sie den View frei verschieben
 (siehe Abbildung unten).
 
 .. image:: ./Pictures/100002010000036A000001C8BBF4BBC66184FB09.png
-   :alt: Abbildung 1.11: View via Drag & Drop verschieben
+   :alt: View via Drag & Drop verschieben
 
 Alternativ können Sie
 den View auch durch einen Doppelklick auf den Reiter aus seiner Position
@@ -357,7 +357,7 @@ Klicken Sie dafür mit der rechten Maustaste in den Karteireiter und
 wählen Sie aus dem Kontextmenü den Punkt :guilabel:`Detach`.
 
 .. image:: ./Pictures/10000201000001310000009DE8129AEE37B00CF4.png
-   :alt: Abbildung 1.12: View via Kontextmenü aus seiner Position lösen
+   :alt: View via Kontextmenü aus seiner Position lösen
 
 Wenn
 Sie den View aus seiner Position herausgelöst haben, wird der View in
@@ -378,7 +378,7 @@ das Fenster eingefügt werden kann. Wenn Ihr Zielfenster nur einen View
 enthält, sehen Sie nur 5 Drop-Targets.
 
 .. image:: ./Pictures/10000201000002890000014BCF8FC8087ECC35C5.png
-   :alt: Abbildung 1.13: Drop-Target Markierungen
+   :alt: Drop-Target Markierungen
 
 Wenn Sie den Mauszeiger über
 ein *Drop-Target* bewegen, während Sie ein Fenster verschieben, dann wird
@@ -386,14 +386,13 @@ Ihnen über einen farbigen Rahmen (*Drop Preview*) angezeigt, an welche
 Position (*Dock Area*) der View eingefügt werden würde.
 
 .. image:: ./Pictures/10000201000002890000014B5699FFD5D09BAADF.png
-   :alt: Abbildung 1.14
 
 Wenn Sie nun die Maustaste über der Zielmarkierung loslassen, wird das
 das Fenster an der durch das Drop-Preview gekennzeichneten Position
 eingefügt.
 
 .. image:: ./Pictures/10000201000002890000014BC4687441A2A645E3.png
-   :alt: Abbildung 1.15: View auf der linken Seite eingefügt
+   :alt: View auf der linken Seite eingefügt
 
 Wenn Sie als
 Drop-Target das Symbol in der Mitte des Fensters wählen, dann wird der
@@ -401,7 +400,7 @@ neue View als ein zusätzlicher Karteireiter auf der Position des dort
 vorhandenen Views eingefügt.
 
 .. image:: ./Pictures/1000020100000252000000C9F4392403DF96FF6D.png
-   :alt: Abbildung 1.16: View Gruppe
+   :alt: View Gruppe
 
 Wenn Sie das Ihr View über ein Fenster
 ziehen, welches bereits mehrere Views enthält, dann werden Ihnen
@@ -413,7 +412,7 @@ es noch fünf weitere Drop-Targets, die in Form eines Kreuzes angezeigt
 werden :guinum:`❷`.
 
 .. image:: ./Pictures/1000020100000289000000F51BAC327624A0EC0B.png
-   :alt: Abbildung 1.17: Drop-Target Markierungen
+   :alt: Drop-Target Markierungen
 
 Bewegen Sie das Fenster bei
 gedrückter Maustaste über die einzelnen Markierungen das Drop-Preview zu
@@ -426,7 +425,7 @@ Sie den Mauspfeil entweder über das mittlere Drop-Target Symbol
 bereits angedockten Views :guinum:`❷`.
 
 .. image:: ./Pictures/1000020100000289000000F59743DC452A74F108.png
-   :alt: Abbildung 1.18: View als zusätzlichen Karteireiter einfügen
+   :alt: View als zusätzlichen Karteireiter einfügen
 
 
 View-Gruppen verschieben
@@ -440,7 +439,7 @@ Abbildung unten). Sie können nun die komplette Gruppe via Drag & Drop
 aus der aktuellen Position herauslösen und verschieben.
 
 .. image:: ./Pictures/10000201000002E4000001531CF5648A1020DCB4.png
-   :alt: Abbildung 1.19: View-Gruppen verschieben
+   :alt: View-Gruppen verschieben
 
 Alternativ können Sie eine
 View-Gruppe auch herauslösen durch einen Doppelklick in die Titelleiste
@@ -449,7 +448,7 @@ Kontextmenü oder durch Anklicken der :guilabel:`Detach` Schaltfläche in der
 Titelleiste :guinum:`❸`.
 
 .. image:: ./Pictures/1000020100000264000000FC1AB96C910DA572FD.png
-   :alt: Abbildung 1.20: View-Gruppe abdocken
+   :alt: View-Gruppe abdocken
 
 Eine View-Gruppe oder ein Fester
 mit mehreren Views können Sie genau so andocken wie ein Fenster mit nur
@@ -463,7 +462,7 @@ Einen einzelnen View können Sie entweder über die Schließen-Schaltfläche
 :guilabel:`Close` :guinum:`❷` im Kontextmenü eines Karteireiters.
 
 .. image:: ./Pictures/1000020100000264000000BF3127F5F8B75874DD.png
-   :alt: Abbildung 1.21: View schließen
+   :alt: View schließen
 
 Eine View-Gruppe kann mit der
 Schließen-Schaltfläche :guinum:`❶` in der Titelleiste der Gruppe oder mit dem
@@ -471,7 +470,7 @@ Menüpunkt :guilabel:`Close Area` :guinum:`❷` im Kontextmenü der View-Gruppe 
 werden.
 
 .. image:: ./Pictures/1000020100000264000000BF9FA7CB8EE15E4D72.png
-   :alt: Abbildung 1.22: View-Gruppen schließen
+   :alt: View-Gruppen schließen
 
 
 Nützliches bei der Arbeit mit Views
@@ -486,7 +485,7 @@ mit allen Views der Gruppe aufrufen und darüber den entsprechenden View
 wählen.
 
 .. image:: ./Pictures/100002010000026D000000D2FF18CEC652F6FACF.png
-   :alt: Abbildung 1.23: View-Menü einer View-Gruppe aufrufen
+   :alt: View-Menü einer View-Gruppe aufrufen
 
 
 Wenn Sie in einer
@@ -495,7 +494,7 @@ alle Views außer den gerade aktiven View schließen. Wählen Sie dafür im
 Kontextmenü des aktiven Karteireiters den Punkt :guilabel:`Close Others`.
 
 .. image:: ./Pictures/10000201000002000000006B0A134CD1AC8B3316.png
-   :alt: Abbildung 1.24: Alle inaktiven Views einer Gruppe schließen
+   :alt: Alle inaktiven Views einer Gruppe schließen
 
 Wenn Sie
 in einem Fenster, z.B. im Hauptfenster der Anwendung, schnell
@@ -504,7 +503,7 @@ alle anderen Gruppen schließen. Wählen Sie dafür aus dem Kontextmenü der
 View-Gruppe den Menüpunkt :guilabel:`Close Other Areas`.
 
 .. image:: ./Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
-   :alt: Abbildung 1.25: Alle anderen View-Gruppen schließen
+   :alt: Alle anderen View-Gruppen schließen
 
 
 Perspektiven
@@ -538,7 +537,7 @@ Schaltfläche klicken :guinum:`❶` (siehe Abbildung unten), öffnen Sie das Men
 zur Auswahl einer vorher angelegten Perspektive :guinum:`❷`.
 
 .. image:: ./Pictures/1000020100000220000000E4C70099429E65895A.png
-   :alt: Abbildung 1.26: Vorhandene Perspektive öffnen
+   :alt: Vorhandene Perspektive öffnen
 
 Wenn Sie eine
 Perspektive anklicken, werden die Views in der Oberfläche so angeordnet
@@ -547,7 +546,7 @@ Sie auf die Perspektiven auf über das Hauptmenü zugreifen. Wählen Sie
 dafür den Menüpunkt :menuselection:`Window --> Perspective`.
 
 .. image:: ./Pictures/1000020100000225000000F171D95022C6176EB6.png
-   :alt: Abbildung 1.27: Arbeiten mit Perspektiven über das Hauptmenü
+   :alt: Arbeiten mit Perspektiven über das Hauptmenü
 
 .. admonition:: Tipp
    :class: tip
@@ -573,7 +572,7 @@ in dem Eingabedialog einen eindeutigen Namen für diese Perspektive ein
 und klicken Sie :guilabel:`OK`.
 
 .. image:: ./Pictures/10000201000000CA00000080463140FE0D508006.png
-   :alt: Abbildung 1.28: Perspektive anlegen
+   :alt: Perspektive anlegen
 
 Die neue Perspektive ist nun im Perspektiv-Menü verfügbar.
 
@@ -584,7 +583,7 @@ Um Perspektiven zu löschen, wählen Sie im Perspektivemenü den Menüpunkt
 :guilabel:`Manage Perspectives`.
 
 .. image:: ./Pictures/10000201000001A9000000C56CAD6237DD6652DC.png
-   :alt: Abbildung 1.29: Perspektiven verwalten
+   :alt: Perspektiven verwalten
  
 Es wird nun ein Dialog mit
 einer Liste aller Perspektiven angezeigt. In der Liste (:guinum:`❶`) können Sie
@@ -594,7 +593,7 @@ zusammenhängende Einträge auswählen. Mit Hilfe der :kbd:`Ctrl`-Taste können
 Sie mehrere Einträge hintereinander anklicken und damit auswählen.
 
 .. image:: ./Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
-   :alt: Abbildung 1.30: Perspektiven löschen
+   :alt: Perspektiven löschen
 
 Wenn Sie dann die Schaltfläche
 :guilabel:`Remove` (:guinum:`❷`) klicken, werden alle ausgewählten Perspektiven gelöscht.
@@ -630,7 +629,7 @@ Ereignisprotokoll wird automatisch eingeblendet, wenn ein Ereignis in
 das Protokoll geschrieben wird.
 
 .. image:: ./Pictures/100002010000026700000079181DA868FE965CCF.png
-   :alt: Abbildung 1.31: Ereignisprotokoll
+   :alt: Ereignisprotokoll
 
 .. image:: ./Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
    :width: 60
@@ -657,7 +656,7 @@ Möchten Sie das Ereignisprotokoll manuell einblenden, wählen Sie im
 Hauptmenü der Anwendung den Punkt :menuselection:`Window --> Show View --> Event Log`.
 
 .. image:: ./Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
-   :alt: Abbildung 1.32: Event Log View einblenden
+   :alt: Event Log View einblenden
 
 Das Ereignisprotokoll listet
 die einzelnen Ereignisse in zeitlicher Abfolge auf. Das neueste Ereignis
@@ -692,7 +691,7 @@ mit einem Steckersymbol (siehe Abbildung unten). Drücken Sie
 diese Schaltfläche, um eine Verbindung zum Gerät herzustellen.
 
 .. figure:: ./Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
-   :alt: Abbildung 1.33: Verbindung zum Gerät herstellen
+   :alt: Verbindung zum Gerät herstellen
 
 .. admonition:: Wichtig
    :class: note
@@ -724,7 +723,7 @@ im Hauptmenü den Menüpunkt :menuselection:`File --> Browse Project Folder` wä
 das aktuelle Projekt im Dateiexplorer geöffnet.
 
 .. image:: ./Pictures/1000000000000189000000B4EABB56CB8A567B96.png
-   :alt: Abbildung 1.34: Projektverzeichnis im Dateiexplorer öffnen
+   :alt: Projektverzeichnis im Dateiexplorer öffnen
 
 Im Dateiexplorer sehen Sie alle projektspezifischen Daten des Projektes.
 Jedes Projekt hat eine feste Struktur von Dateien und
@@ -754,7 +753,7 @@ Wählen Sie im Hauptmenü den Punkt :menuselection:`File --> New Project` um ein
 Projekt zu erstellen.
 
 .. image:: ./Pictures/1000000000000189000000B4EABB56CB8A567B96.png
-   :alt: Abbildung 1.35: Neues Projekt erstellen
+   :alt: Neues Projekt erstellen
 
 In dem Dialog, der Ihnen
 dann angezeigt wird, können Sie das neue Projekt konfigurieren. Vergeben
@@ -775,7 +774,7 @@ Schließen Sie die Erstellung des neuen Projektes durch
 Anklicken von :guilabel:`OK` :guinum:`❺` ab.
 
 .. image:: ./Pictures/100000000000025000000166DB408F1FB7BB2D47.png
-   :alt: Abbildung 1.36: Konfigurationsdialog für Erstellung eines neuen Projektes
+   :alt: Konfigurationsdialog für Erstellung eines neuen Projektes
 
 .. admonition:: Wichtig
    :class: note
@@ -794,7 +793,7 @@ Wählen Sie zum Öffnen eines vorhandenen Projektes im Hauptmenü den
 Menüpunkt :menuselection:`File --> Open Project` .
 
 .. image:: ./Pictures/1000000000000170000000A7C5E2BBA82D900D3D.png
-   :alt: Abbildung 1.37: Vorhandenes Projekt öffnen
+   :alt: Vorhandenes Projekt öffnen
 
 In dem Dialog der Ihnen
 nun angezeigt wird, können Sie über die Auswahlbox :guinum:`❶` ein Projekt
@@ -807,7 +806,7 @@ Verzeichnisauswahldialog das gewünschte Projektverzeichnis (z.B. auf
 einem externen Datenträger) auswählen.
 
 .. image:: ./Pictures/100000000000020B00000124D393F3498C85002B.png
-   :alt: Abbildung 1.38: Dialog zum Öffnen eines vorhandenen Projektes
+   :alt: Dialog zum Öffnen eines vorhandenen Projektes
 
 Öffnen
 Sie das neue Projekt dann durch Anklicken von :guilabel:`OK` :guinum:`❸`.
@@ -823,7 +822,7 @@ Export auswählen, in eine komprimierte Projektdatei (:file:`.qpr`)
 gespeichert.
 
 .. image:: ./Pictures/10000201000001A8000000BB1B03350B9BEA1D79.png
-   :alt: Abbildung 1.39: Projektexport aufrufen
+   :alt: Projektexport aufrufen
 
 
 Um ein Projekt zu exportieren, müssen Sie zuerst das Projekt in der
@@ -835,7 +834,7 @@ auswählen, welche Verzeichnisse des Projekts exportiert werden
 sollen :guinum:`❶`.
 
 .. image:: ./Pictures/1000020100000298000001FB7D3433258DF59F1D.png
-   :alt: Abbildung 1.40: Auswahl der Projektverzeichnisse für den Export
+   :alt: Auswahl der Projektverzeichnisse für den Export
 
 Klicken Sie die Schaltflächen :guilabel:`Select All` :guinum:`❷` oder
 :guilabel:`Select None` :guinum:`❸` an, um alle Elemente oder kein Element auszuwählen.
@@ -855,7 +854,7 @@ Während des Exports erhalten Sie durch das Ereignis-Protokoll
 :guinum:`❸` Informationen zum aktuellen Stand des Exports.
 
 .. image:: ./Pictures/10000201000002E90000011C77337172831B2410.png
-   :alt: Abbildung 1.41: Statusanzeige Projektexport
+   :alt: Statusanzeige Projektexport
 
 Sie können den Export
 jederzeit durch Anklicken der :guilabel:`Cancel`-Schaltfläche :guinum:`❹` abbrechen.
@@ -868,7 +867,7 @@ Software importieren. Wählen Sie dafür im Hauptmenü den Menüpunkt
 :menuselection:`File --> Import Project`.
 
 .. image:: ./Pictures/10000201000001AA000000C9957BE44F06738675.png
-   :alt: Abbildung 1.42: Projektimport aufrufen
+   :alt: Projektimport aufrufen
 
 In dem Dateiauswahldialog,
 der Ihnen nun angezeigt wird, wählen Sie die Projektdatei (:file:`*.qpr`) aus,
@@ -877,7 +876,7 @@ dem Sie den Namen eingeben, unter dem das importierte Projekt im
 Projektverzeichnis gespeichert werden soll.
 
 .. image:: ./Pictures/10000201000001B00000009E14CEAFCC900E13F3.png
-   :alt: Abbildung 1.43: Projektnamen eingeben
+   :alt: Projektnamen eingeben
 
 .. admonition:: Wichtig
    :class: note
@@ -892,7 +891,7 @@ Ereignis-Protokoll (*Event-Log*) :guinum:`❶`, das *Progress-Fenster* :guinum:`
 der Statuszeile :guinum:`❸` Informationen zum aktuellen Stand des Imports.
 
 .. image:: ./Pictures/10000201000002E90000011C77337172831B2410.png
-   :alt: Abbildung 1.44: Statusanzeige Projektexport
+   :alt: Statusanzeige Projektexport
 
 Sie können den Import
 jederzeit durch Anklicken der :guilabel:`Cancel`-Schaltfläche :guinum:`❹` abbrechen. Nach
@@ -915,7 +914,7 @@ Sie den Konfigurationsdialog für die globalen Applikationseinstellungen
 aufrufen.
 
 .. image:: ./Pictures/100002010000021200000126AC99A172AA6E85CC.png
-   :alt: Abbildung 1.45: Settings Dialog
+   :alt: Settings Dialog
 
 Hier finden Sie auf der linken Seite
 die unterschiedlichen Einstellungskategorien. Wählen Sie dort eine
@@ -1000,7 +999,7 @@ Um den Zugriff auf die Softwareoberfläche zu konfigurieren, wählen Sie
 im Hauptmenü den Punkt :menuselection:`Edit --> Configure UI Access`.
 
 .. image:: ./Pictures/1000020100000161000000ADAFFCD2193104E170.png
-   :alt: Abbildung 1.46: UI Acces Konfiguration aufrufen
+   :alt: UI Acces Konfiguration aufrufen
 
 Der Konfigurationsdialog für den UI Zugriff wird Ihnen angezeigt. In der
 ersten Spalte :guinum:`❶` sehen Sie die Elemente der Bedienoberfläche, die
@@ -1015,7 +1014,7 @@ in der Oberfläche sichtbar oder ausgeblendet ist. So können Sie einfach
 Bedienelemente vor normalen Anwendern verbergen.
 
 .. image:: ./Pictures/100002010000023700000105D086995A6867BEE3.png
-   :alt: Abbildung 1.47: Konfigurationsdialog für den UI Zugriff
+   :alt: Konfigurationsdialog für den UI Zugriff
 
 Die dritte Spalte :guinum:`❸` enthält die Konfiguration der Oberfläche für
 den zugangsgeschützten Modus. Dieser Modus ist durch ein Passwort
@@ -1034,7 +1033,7 @@ in die entsprechende Zelle der dritten Spalte doppelt klicken und das
 Passwort eingeben.
 
 .. image:: ./Pictures/1000020100000283000000ABD9FB0393AF480FE9.png
-   :alt: Abbildung 1.48: Passwort für UI Zugriff eingeben
+   :alt: Passwort für UI Zugriff eingeben
 
 Wenn Sie die
 Konfiguration fertiggestellt haben, klicken Sie auf die Schaltfläche
@@ -1057,7 +1056,7 @@ Standard Modus konfiguriert haben. Um den geschützten Modus aufzurufen,
 wählen Sie im Hauptmenü den Punkt :menuselection:`Edit --> Select UI Access Mode`.
 
 .. image:: ./Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
-   :alt: Abbildung 1.49: Modus für den UI Zugriff auswählen
+   :alt: Modus für den UI Zugriff auswählen
 
 Die Oberfläche
 wird sofort nach der Auswahl entsprechend der Konfiguration angepasst.

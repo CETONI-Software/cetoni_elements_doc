@@ -49,10 +49,9 @@ Navigation durch dieses Dokument unterstützen:
 
    Installation_DE/Installation_DE.rst
    QmixElementsADS_DE/QmixElementsADS_DE.rst
+   qmixdevices_DE/qmixdevices_DE.rst
 
 ..
-   
-   qmixdevices_EN/qmixdevices_EN.rst
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
    javascript_EN/javascript_EN.rst
