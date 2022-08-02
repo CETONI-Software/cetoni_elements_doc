@@ -17,7 +17,7 @@ Aufruf des Gerätekonfigurators
 Sie starten den Gerätekonfigurator durch Auswahl des Menüpunktes 
 :menuselection:`Device --> Create Configuration` im Hauptmenü.
 
-.. image:: ./Pictures/1000020100000142000000E460C63C6ECF459963.png
+.. image:: Pictures/1000020100000142000000E460C63C6ECF459963.png
    :alt: Aufruf Gerätekonfigurator
 
  
@@ -28,7 +28,7 @@ Hilfe des Konfigurationsassistenten :guinum:`❶` konfigurieren. Eine nicht
 aktivierte Software-Version erkennen Sie an einer Warnmeldung in der
 Statusleiste des Gerätekonfigurators :guinum:`❷` (siehe Abbildung unten).
 
-.. figure:: ./Pictures/1000020100000335000001D8DF2765F4CE46116A.png
+.. figure:: Pictures/1000020100000335000001D8DF2765F4CE46116A.png
    :alt: nicht aktivierte Version des Gerätekonfigurators
 
 .. admonition:: Wichtig
@@ -69,14 +69,14 @@ Sie diese importieren.
 
 #. Bestätigen sie die Abfrage durch Linksklick auf die Schaltfläche :guilabel:`Yes`.
 
-   .. image:: ./Pictures/100002010000021400000104F1C5A4A3FB36B583.png
+   .. image:: Pictures/100002010000021400000104F1C5A4A3FB36B583.png
       :alt: Abfrage Gerätedatenbankimport  
 
 #. Es öffnet sich ein
    Dateidialog. Wählen sie die Datenbankdatei :file:`devices.db`, die sich im
    Wurzelverzeichnis der mitgelieferten CETONI Elements CD befindet (siehe Abbildung unten).
 
-   .. image:: ./Pictures/100002010000030C000001D07377795B057AC007.png
+   .. image:: Pictures/100002010000030C000001D07377795B057AC007.png
       :alt: Dateidialog Gerätedatenbank  
 
 #. Der Gerätekonfigurator verfügt jetzt über eine aktuelle Gerätedatenbank.
@@ -95,7 +95,7 @@ nicht möchten, dass CETONI Elements sie weiter nach einer
 Gerätedatenbank fragt, setzen sie den Haken bei :guilabel:`Do not ask me again` und
 klicken sie auf die Schaltfläche :guilabel:`No` (siehe Abbildung unten).
 
-.. image:: ./Pictures/10000201000002140000010401848AB92A244C42.png
+.. image:: Pictures/10000201000002140000010401848AB92A244C42.png
    :alt: Abfrage Gerätedatenbank
 
 Wenn sie zukünftig eine
@@ -103,7 +103,7 @@ Gerätedatenbank importieren möchten, erreichen sie den Import-Dialog
 über den Menüpunkt :menuselection:`Device → Import Device Database` des Hauptmenüs
 (siehe Abbildung unten).
 
-.. image:: ./Pictures/100002010000012C000000D9432772F445244F1B.png
+.. image:: Pictures/100002010000012C000000D9432772F445244F1B.png
    :alt: Menüpunkt Gerätedatenbank importieren
 
 .. admonition:: Tipp
@@ -117,7 +117,7 @@ Gerätedatenbank importieren möchten, erreichen sie den Import-Dialog
 Übersicht
 ---------
 
-.. image:: ./Pictures/10000201000003A8000002551C97F93586909741.png
+.. image:: Pictures/10000201000003A8000002551C97F93586909741.png
    :alt: Übersicht Gerätekonfigurator
 
 Der Gerätekonfigurator
@@ -162,7 +162,7 @@ Die Werkzeugleiste enthält folgende Funktionen:
 Der Konfigurationsassistent
 ---------------------------
 
-.. image:: ./Pictures/1000020100000386000002786DDB775867DDCAEB.png
+.. image:: Pictures/1000020100000386000002786DDB775867DDCAEB.png
    :alt: Der Konfigurationsassistent
 
 Der *Konfigurationsassistent* unterstützt Sie bei der Integration ihrer Geräte
@@ -218,7 +218,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 
        Sie können Geräte via Drag & Drop oder durch Doppelklick hinzufügen.  
 
-   .. image:: ./Pictures/1000020100000315000001F95769560860DF416C.png
+   .. image:: Pictures/1000020100000315000001F95769560860DF416C.png
       :alt: Erstellen der Gerätekonfiguration
 
    .. admonition:: Tipp
@@ -263,7 +263,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
       dürfen sich keine anderen eingeschalteten Geräte am
       Basismodul befinden.
 
-   .. image:: ./Pictures/10000201000003860000027872DE1FBA980DE172.png
+   .. image:: Pictures/10000201000003860000027872DE1FBA980DE172.png
 
    .. admonition:: Wichtig
       :class: note
@@ -279,14 +279,14 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 
 #. Die Nemesys S Pumpe wird konfiguriert. Dies kann einige Sekunden dauern.
 
-   .. image:: ./Pictures/1000020100000386000002783B7DFF9EE7B610D1.png
+   .. image:: Pictures/1000020100000386000002783B7DFF9EE7B610D1.png
       :alt: Gerät wird konfiguriert
 
 #. Der Konfigurationsassistent zeigt Ihnen die erfolgreiche
    Konfiguration der Nemesys S Pumpe an. Klicken sie mit der linken
    Maustaste auf die Schaltfläche :guilabel:`Next` um fortzufahren.
 
-   .. image:: ./Pictures/1000020100000386000002780368D5E4C23E8331.png
+   .. image:: Pictures/1000020100000386000002780368D5E4C23E8331.png
       :alt: Gerätekonfiguration erfolgreich
    
 #. Der Konfigurationsassistent fordert sie auf, folgende Schritte zu tätigen:
@@ -309,7 +309,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
       Moduls, dürfen sich keine anderen eingeschalteten Geräte
       Basismodul befinden.
 
-   .. image:: ./Pictures/100002010000038600000278BB49B91B78BAF742.png
+   .. image:: Pictures/100002010000038600000278BB49B91B78BAF742.png
       :alt: Konfiguriertes Gerät trennen   
 
 #. Klicken Sie :guilabel:`Next`, um das QmixQ+ Modul zu konfigurieren.
@@ -319,7 +319,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    neue Gerätekonfiguration und startet nach dem Beenden des
    Konfigurationsassistenten neu.
 
-   .. image:: ./Pictures/10000201000002DC000001E9CA80FBFC63198D1D.png
+   .. image:: Pictures/10000201000002DC000001E9CA80FBFC63198D1D.png
       :alt: Gerätekonfiguration aktivieren
 
 #. Bereiten sie den Neustart von CETONI Elements mit der erstellten Konfiguration vor:
@@ -333,12 +333,12 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    -  Schließen sie den Konfigurationsassistenten durch Betätigen der
       Schaltfläche :guilabel:`Finish` ab.
 
-   .. image:: ./Pictures/10000201000002DC000001E960A7B6801635EFFC.png
+   .. image:: Pictures/10000201000002DC000001E960A7B6801635EFFC.png
       :alt: Abschluss des Konfigurationsassistenten
   
 #. Bestätigen sie den Neustart der Software mit der neuen Konfiguration.
 
-   .. image:: ./Pictures/1000020100000209000000973518A94FC04F6523.png
+   .. image:: Pictures/1000020100000209000000973518A94FC04F6523.png
       :alt: Neustart von CETONI Elements bestätigen
    
 #. CETONI Elements steht Ihnen nun mit den Funktionen der Nemesys S Pumpe und
@@ -360,14 +360,14 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
    wurde. Die grünen Haken über den Geräten bedeuten ihnen, dass die
    Geräte bereits konfiguriert wurden.
 
-   .. image:: ./Pictures/1000020100000495000002DBC4E00C234E4AF418.png
+   .. image:: Pictures/1000020100000495000002DBC4E00C234E4AF418.png
       :alt: Anzeige der geladenen Konfiguration
 
 #. Möchten Sie eine andere Konfiguration als die, die derzeit von der CETONI
    Elements Software geladen wurde, ändern, müssen sie diese über die
    Schaltfläche :guilabel:`Open` in der Werkzeugleiste aufrufen.
 
-   .. image:: ./Pictures/100002010000025F000000564EB0B2BD3EA73911.png
+   .. image:: Pictures/100002010000025F000000564EB0B2BD3EA73911.png
       :alt: Laden einer Gerätekonfiguration
 
 #. Fügen Sie, wie im vorangegangenen Abschnitt beschrieben, ein weiteres Gerät durch Drag
@@ -375,7 +375,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
    dass das Gerät noch nicht konfiguriert wurde. Die Konfiguration ist
    in diesem Zustand noch nicht verwendbar.
 
-   .. image:: ./Pictures/1000020100000495000002DBE574762DF8C08052.png
+   .. image:: Pictures/1000020100000495000002DBE574762DF8C08052.png
       :alt: Hinzufügen eines Gerätes zu einer bestehenden Konfiguration
 
    .. admonition:: Wichtig
@@ -388,7 +388,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
 #. Starten sie den *Konfigurationsassistenten* durch Anklicken der
    Schaltfläche :guilabel:`Configure`.
 
-   .. image:: ./Pictures/100002010000026E0000005A49AF5264C0E989FD.png
+   .. image:: Pictures/100002010000026E0000005A49AF5264C0E989FD.png
       :alt: Starte den Konfigurationsassistenten
 
 #. Wenn die Software bereits mit den angeschlossenen Geräten
@@ -398,7 +398,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
    automatisch neu zu starten. Klicken sie auf die Schaltfläche :guilabel:`Yes`,
    wenn sie den Konfigurationsprozess fortsetzen möchten.
 
-   .. image:: ./Pictures/1000020100000214000000B9F911FCCD726CA849.png
+   .. image:: Pictures/1000020100000214000000B9F911FCCD726CA849.png
       :alt: Neustart des Gerätekonfigurators
 
 #. Es startet der aus dem vorangegangenen Abschnitt bekannte Konfigurationsablauf. Auf
@@ -406,13 +406,13 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
    bereits konfigurierte Geräte vom Konfigurationsprozess
    auszuschließen. Setzen sie den Haken neben :guilabel:`Skip configured devices`.
 
-   .. image:: ./Pictures/10000201000002DC000001A6F3562502AF0DE59C.png
+   .. image:: Pictures/10000201000002DC000001A6F3562502AF0DE59C.png
       :alt: konfigurierte Geräte auslassen
 
 #. Der *Konfigurationsassistent* fährt nun direkt mit der Konfiguration des
    neu hinzugefügten Gerätes (im Beispiel Qmix P) fort.
 
-   .. image:: ./Pictures/10000201000002DC000001C34265519F69AC6D55.png
+   .. image:: Pictures/10000201000002DC000001C34265519F69AC6D55.png
       :alt: Konfiguration des neuen Gerätes
 
 #. Führen sie den Konfigurationsablauf auf die gleiche Weise wie beim Neuerstellen
@@ -429,7 +429,7 @@ gegen ein neues getauscht haben. Klicken Sie dazu einfach mit der
 rechten Maustaste auf das Gerät, welches konfiguriert werden soll und
 wählen Sie den Menüpunkt :menuselection:`Configure`.
 
-.. image:: ./Pictures/1000020100000432000002BB096CA19B52A6276F.png
+.. image:: Pictures/1000020100000432000002BB096CA19B52A6276F.png
    :alt: Einzelgerät konfigurieren
 
 Der Konfigurationsassistent führt Sie nun durch die Konfiguration des einzelnen Gerätes.
@@ -450,7 +450,7 @@ Geräten. Um ein einzelnes Gerät zu simulieren gehen Sie wie folgt vor.
    simulieren möchten.
 #. Klicken sie mit der linken Maustaste auf die Schaltfläche :guilabel:`Simulate`.
 
-   .. image:: ./Pictures/100002010000024900000114FAB67531E84DD8FF.png
+   .. image:: Pictures/100002010000024900000114FAB67531E84DD8FF.png
       :alt: Simulieren eines einzelnen Gerätes
 
 #. Das Gerät wird hierauf als simuliertes Gerät gekennzeichnet. Speichern Sie die
@@ -458,13 +458,13 @@ Geräten. Um ein einzelnes Gerät zu simulieren gehen Sie wie folgt vor.
    Gerätekonfiguration laden, wird Ihnen das Gerät als simuliertes
    Gerät zur Verfügung stehen.
 
-   .. image:: ./Pictures/100002010000024500000103CAAD327CC34BFAE1.png
+   .. image:: Pictures/100002010000024500000103CAAD327CC34BFAE1.png
       :alt: Simuliertes Gerät
 
 Eine gesamte Gerätekonfiguration simulieren Sie, indem sie die Schaltfläche
 :guilabel:`Simulate All` in der Hauptwerkzeugleiste mit der linken Maustaste anklicken.
 
-.. image:: ./Pictures/10000201000003A4000001AB6990B251D2B11E55.png
+.. image:: Pictures/10000201000003A4000001AB6990B251D2B11E55.png
    :alt: Simulieren einer gesamten Gerätekonfiguration
 
 
@@ -492,14 +492,14 @@ haben, werden keine optionalen Add-On-Plugins verfügbar sein.
 Dementsprechend ist die Funktion für die Konfiguration von optionalen
 Add-On-Plugins deaktiviert (siehe Abbildung unten).
 
-.. image:: ./Pictures/100002010000023E000000515D00BAB8AAC98C98.png
+.. image:: Pictures/100002010000023E000000515D00BAB8AAC98C98.png
    :alt: Funktion zur Auswahl von optionalen Add-On-Plugins bei Standard-CETONI Elements-Installation
 
 Haben Sie ein CETONI
 Elements-Add-On installiert, welches optionale Plugins enthält, ist
 diese Funktion verfügbar (siehe Abbildung unten).
 
-.. image:: ./Pictures/100002010000025100000053D81EEF100715C18F.png
+.. image:: Pictures/100002010000025100000053D81EEF100715C18F.png
    :alt: Funktion zur Auswahl von optionalen Add-On-Plugins, wenn optionale Plugins verfügbar sind
 
 .. admonition:: Wichtig
@@ -519,14 +519,14 @@ klicken, erscheint der Auswahldialog für Add-On-Plugins. In der unteren
 Hälfte des Dialogs befindet sich eine Tabelle, in der alle verfügbaren
 optionalen Add-On-Plugins angezeigt werden (siehe Abbildung unten).
 
-.. image:: ./Pictures/10000201000001F1000001F405E5F7AACBD5FB5C.png
+.. image:: Pictures/10000201000001F1000001F405E5F7AACBD5FB5C.png
    :alt: Add-On-Plugins-Auswahldialog mit verfügbaren optionalen Plugins
 
 Sie können sich Informationen über das Add-On-Plugin anzeigen
 lassen, indem Sie mit der Maus über den jeweiligen Tabelleneintrag
 fahren (siehe Abbildung unten).
 
-.. image:: ./Pictures/100002010000031B000001207309E46F4E0A2038.png
+.. image:: Pictures/100002010000031B000001207309E46F4E0A2038.png
    :alt: Einblenden von Detailinformationen zum Add-On-Plugin
 
 Um ihrer Gerätekonfiguration ein optionales
@@ -535,26 +535,26 @@ und klicken anschließend auf :guilabel:`Ok` :guinum:`❷`. Zum Abschluss müsse
 Konfiguration speichern :guinum:`❸`, um die Änderungen dauerhaft zu übernehmen
 (siehe Abbildung unten).
 
-.. image:: ./Pictures/1000020100000394000002698426A6B470626331.png
+.. image:: Pictures/1000020100000394000002698426A6B470626331.png
    :alt: Hinzufügen eines Add-On-Plugins zu einer Konfiguration
 
 
 
 
 
-.. |image26| image:: ./Pictures/100016B7000034EB000034EBF007ABD978022879.svg
+.. |image26| image:: Pictures/100016B7000034EB000034EBF007ABD978022879.svg
    :width: 40
-.. |image27| image:: ./Pictures/1000069300003505000035059CEEC88E17AC3A44.svg
+.. |image27| image:: Pictures/1000069300003505000035059CEEC88E17AC3A44.svg
    :width: 40
-.. |image28| image:: ./Pictures/10000CE50000350500003505303BFDEECD65BB70.svg
+.. |image28| image:: Pictures/10000CE50000350500003505303BFDEECD65BB70.svg
    :width: 40
-.. |image29| image:: ./Pictures/1000173B0000387200003872AFCF364C5ED9850F.svg
+.. |image29| image:: Pictures/1000173B0000387200003872AFCF364C5ED9850F.svg
    :width: 40
-.. |image30| image:: ./Pictures/100011C0000034EB000034EBDA043906CEBA5F5A.svg
+.. |image30| image:: Pictures/100011C0000034EB000034EBDA043906CEBA5F5A.svg
    :width: 40
-.. |image31| image:: ./Pictures/10000AD00000350500003505C47905C00A889D90.svg
+.. |image31| image:: Pictures/10000AD00000350500003505C47905C00A889D90.svg
    :width: 40
-.. |image32| image:: ./Pictures/10002680000034EB000034EBD15B809B1EA625C8.svg
+.. |image32| image:: Pictures/10002680000034EB000034EBD15B809B1EA625C8.svg
    :width: 40
-.. |image33| image:: ./Pictures/10001BD3000034EB000034EBF4CF559786D64E36.svg
+.. |image33| image:: Pictures/10001BD3000034EB000034EBF4CF559786D64E36.svg
    :width: 40

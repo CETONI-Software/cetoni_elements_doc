@@ -50,9 +50,10 @@ Navigation durch dieses Dokument unterstützen:
    Installation_DE/Installation_DE.rst
    QmixElementsADS_DE/QmixElementsADS_DE.rst
    qmixdevices_DE/qmixdevices_DE.rst
+   scriptingsystem_part1_DE/scriptingsystem_part1_DE.rst
 
 ..
-   scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
+   
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
    javascript_EN/javascript_EN.rst
    nemesys_EN/nemesys1_setup_EN.rst
