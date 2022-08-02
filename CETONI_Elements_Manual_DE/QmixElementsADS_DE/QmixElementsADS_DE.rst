@@ -838,8 +838,7 @@ sollen :guinum:`❶`.
    :alt: Abbildung 1.40: Auswahl der Projektverzeichnisse für den Export
 
 Klicken Sie die Schaltflächen :guilabel:`Select All` :guinum:`❷` oder
-:guilabel:`Select None` :guinum:`❸` an, 
- um alle Elemente oder kein Element auszuwählen.
+:guilabel:`Select None` :guinum:`❸` an, um alle Elemente oder kein Element auszuwählen.
  
 .. admonition:: Wichtig
    :class: note
