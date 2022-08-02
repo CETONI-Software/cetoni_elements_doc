@@ -135,34 +135,36 @@ Perform the following steps to import an existing device configuration:
    automatically and you don't need to perform the         
    following steps. 
 
-(1) Select the :menuselection:`Device --> Import Configuration` menu item from the main
-    menu.
+.. rst-class:: steps
 
-.. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
+#. Select the :menuselection:`Device --> Import Configuration` menu item from the main
+   menu.
 
-(2) Now select whether you
-    want to import a folder with a device configuration (:guilabel:`Import Folder`) 
-    or a compressed device configuration file (:guilabel:`Import .qcf File`). 
-    On the installation media that came with your device, the
-    device configurations are stored in folders. Therefore, select the
-    item :guilabel:`Import Folder`.
+   .. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
 
-.. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
+#. Now select whether you
+   want to import a folder with a device configuration (:guilabel:`Import Folder`) 
+   or a compressed device configuration file (:guilabel:`Import .qcf File`). 
+   On the installation media that came with your device, the
+   device configurations are stored in folders. Therefore, select the
+   item :guilabel:`Import Folder`.
 
-(3) In the dialog that now opens, select the :file:`DeviceConfiguration`
-    directory on the installation CD or browse to another directory
-    containing a valid device configuration.
+   .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
 
-|image12|
+#. In the dialog that now opens, select the :file:`DeviceConfiguration`
+   directory on the installation CD or browse to another directory
+   containing a valid device configuration.
 
-(4) Now enter a unique name for the configuration under which it will be
-    stored on your computer.
+   |image12|
 
-|Figure 1.3: Assign a configuration name|
+#. Now enter a unique name for the configuration under which it will be
+   stored on your computer.
 
-(5) Acknowledge the query to restart the application.
+   |Figure 1.3: Assign a configuration name|
 
-|Figure 1.4: Restart application|
+#. Acknowledge the query to restart the application.
+
+   |Figure 1.4: Restart application|
 
 After completing these steps, the software with the device-specific plugins will 
 start to load.
