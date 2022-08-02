@@ -48,9 +48,10 @@ Navigation durch dieses Dokument unterstützen:
    :numbered: 3
 
    Installation_DE/Installation_DE.rst
+   QmixElementsADS_DE/QmixElementsADS_DE.rst
 
 ..
-   QmixElementsADS_EN/QmixElementsADS_EN.rst
+   
    qmixdevices_EN/qmixdevices_EN.rst
    scriptingsystem_part1_EN/scriptingsystem_part1_EN.rst
    scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
