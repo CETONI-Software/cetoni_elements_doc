@@ -179,7 +179,6 @@ klicken, wird ein Kontextmenü mit zusätzlichen Aktionen eingeblendet
 (siehe Abbildung unten).
 
 .. image:: Pictures/100002010000014400000150DF1BE1DD8FC0A460.png
-
    :alt: Kontextmenü Script Editor
 
 Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
@@ -248,6 +247,8 @@ der Scriptfunktion, die aktuell im *Script Editor* ausgewählt ist.
    :alt: Script Konfigurationsbereich
 
 Der Konfigurationsbereich besteht aus:
+
+.. rst-class:: guinums
 
 1. Kopfzeile mit der Bezeichnung der aktuell ausgewählten Funktion
 2. Eingabe- und Bedienelemente der Funktion
@@ -630,7 +631,7 @@ verwenden.
    Verwendung von Variablen unterstützen können Sie auch   
    direkt über Prozessdatenbezeichner auf                  
    Geräteprozessdaten zugreifen                            
-   (siehe `Device Property Identifiers`_).
+   (siehe `Device Properties (Prozessdaten)`_).
    
 
 Autovervollständigung von Variablennamen
@@ -660,7 +661,7 @@ Device Properties (Prozessdaten)
 --------------------------------
 
 In fast allen Eingabefeldern, welche die Verwendung von Variablen
-unterstützen (siehe `Using Variables`_),
+unterstützen (siehe `Verwendung von Variablen`_),
 können Sie auf Prozessdaten (*Device Properties*) von Geräten auch
 direkt zugreifen. Klicken Sie dafür einfach mit der rechten Maustaste in
 das Eingabefeld und wählen Sie den Menüpunkt *Insert device property*
@@ -760,7 +761,7 @@ aussagekräftigeren Namen: *Summand1*:
 
 .. image:: Pictures/10000201000001AD000000BA59BF59476BCC908C.png
 
-Tragen Sie dann für den Parameter den Default Wert 0 ein ❷.
+Tragen Sie dann für den Parameter den Default Wert 0 ein :guinum:`❷`.
 Klicken Sie nun auf den zweiten Parameternamen und benennen Sie diesen
 um in *Summand2.*
 

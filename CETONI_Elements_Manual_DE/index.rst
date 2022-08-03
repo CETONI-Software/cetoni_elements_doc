@@ -52,9 +52,9 @@ Navigation durch dieses Dokument unterstützen:
    qmixdevices_DE/qmixdevices_DE.rst
    scriptingsystem_part1_DE/scriptingsystem_part1_DE.rst
 
+
 ..
-   
-   scriptingsystem_part2_EN/scriptingsystem_part2_EN.rst
+      scriptingsystem_part2_DE/scriptingsystem_part2_DE.rst
    javascript_EN/javascript_EN.rst
    nemesys_EN/nemesys1_setup_EN.rst
    qmixio_EN/qmixio_EN.rst
