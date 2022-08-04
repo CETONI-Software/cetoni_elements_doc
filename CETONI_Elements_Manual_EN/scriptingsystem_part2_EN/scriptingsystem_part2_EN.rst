@@ -108,7 +108,7 @@ Depending on the options selected, this function works like this:
       -  
       -  A message is written to the event log and script execution is          
          interrupted. The execution can be continued by clicking the 
-         :guilabel:`Run Scrip` button in the script toolbar.
+         :guilabel:`Run Script` button in the script toolbar.
    *  -  :fa:`check`
       -  :fa:`check`
       -  
@@ -1063,7 +1063,7 @@ This function interrupts the further program execution until
 the *Timer Running Time* configured in this function has elapsed for the
 selected timer. A timer with the configured timer name must have been
 started before via the function `Start Timer`_. If the timer
-hass already expired when this function is called, the program execution
+has already expired when this function is called, the program execution
 continues without interruption.
 
 With the two above functions, `Start Timer`_ and `Wait for Timer`_ , it

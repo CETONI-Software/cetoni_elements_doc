@@ -164,7 +164,7 @@ image below).
    If you have already assigned pressure sensors  
    image10  to your pumps that are displayed on the front panel,     
    these sensors are automatically selected here, and you   
-   can proceed immediately by clicking ::guilabel:`Next >`.
+   can proceed immediately by clicking :guilabel:`Next >`.
 
 Pressure-controlled Switching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
