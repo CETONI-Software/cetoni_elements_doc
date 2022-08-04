@@ -51,12 +51,11 @@ Navigation durch dieses Dokument unterstützen:
    QmixElementsADS_DE/QmixElementsADS_DE.rst
    qmixdevices_DE/qmixdevices_DE.rst
    scriptingsystem_part1_DE/scriptingsystem_part1_DE.rst
-
+   scriptingsystem_part2_DE/scriptingsystem_part2_DE.rst
+   nemesys_DE/nemesys1_setup_DE.rst
+   
 
 ..
-      scriptingsystem_part2_DE/scriptingsystem_part2_DE.rst
-   javascript_EN/javascript_EN.rst
-   nemesys_EN/nemesys1_setup_EN.rst
    qmixio_EN/qmixio_EN.rst
    qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst

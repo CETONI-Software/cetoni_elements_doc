@@ -5,7 +5,7 @@ Introduction
 ------------
 
 The Nemesys Plugin is for controlling the CETONI Nemesys syringe pumps.
-In the Nemesys View (figure above), operating panels are displayed for all
+In the Nemesys View (figure below), operating panels are displayed for all
 existing and configured syringe pumps.
 
 |Figure 1: Nemesys workspace|
@@ -117,7 +117,7 @@ Introduction to Force Monitoring
 
 The latest pumps in the Nemesys range (Nemesys M and Nemesys S) have an
 internal force sensor to monitor the force with which the syringe
-plunger is pressed into the syringe. This serves to minimise the risk of
+plunger is pressed into the syringe. This serves to minimize the risk of
 damage to the device, the syringes and the application.
 
 Each pump has a fixed maximum force value at which dosing stops:
