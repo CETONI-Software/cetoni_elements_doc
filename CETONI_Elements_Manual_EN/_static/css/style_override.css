@@ -78,32 +78,42 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     margin-top: 21px;
 }
 
-h1 {
+.rst-content h1 {
   font-size: 39px;
   margin-bottom: 21px;
 }
 
-h2 {
+.rst-content h2 {
   font-size: 32px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
-h3 {
+.rst-content h3 {
   font-size: 26px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
-h4 {
+.rst-contenth4 {
   font-family: 'kievit-bold';
   font-size: 19px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
-h5 {
+.rst-contenth5 {
   font-family: 'kievit-bold';
   font-size: 17px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
-h6 {
+.rst-content h6 {
   font-family: 'kievit-bold';
   font-size: 15px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .rst-content li {
@@ -211,10 +221,29 @@ html[data-theme='dark'] .rst-content .kbd {
 }
 
 /* center all images */
-img {
+.rst-content img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+
+.rst-content section > img {
+  margin-bottom: 48px;
+  margin-top: 48px; 
+}
+
+
+/* give images in text some more space */
+.rst-content td img {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.rst-content .admonition {
+  margin-bottom: 48px !important;
+  margin-top: 48px !important;  
 }
 
 .inlineimg img {
