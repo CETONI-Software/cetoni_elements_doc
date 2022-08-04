@@ -309,7 +309,6 @@ anderen Anwendern ermöglicht, Ihr Script besser zu verstehen und dem
 Programmablauf leichter zu folgen.
 
 .. image:: Pictures/1000020100000204000000DEFE8A94073FF71C98.png
-
    :alt: Script Funktion Kommentare
 
 Wenn Sie im *Script Editor*
@@ -514,9 +513,9 @@ verwendet werden können, müssen die Variablen angelegt werden. Es gibt
 zwei Varianten zum Anlegen von Variablen:
 
 1. Explizit: Variablen werden explizit vom Anwender definiert, z.B.
-   durch die Funktion :ref:`create-variable`.
+   durch die Funktion :ref:`variable_erzeugen`.
 2. Implizit: Das Anlegen erfolgt implizit über Funktionen, die Variablen
-   anbieten, wie z.B. durch die Funktion :ref:`counting-loop`, deren
+   anbieten, wie z.B. durch die Funktion :ref:`zählschleife`, deren
    Schleifenzähler eine Variable ist.
 
 .. _naming-variables:
@@ -852,7 +851,7 @@ konfiguriert sein:
 .. image:: Pictures/10000201000001D1000001A86EEBD1F62A2FEFFD.png
 
 Fügen Sie als letzte Funktion nun eine *ShowMessage* Funktion hinzu, um
-den Wert der Variable:code:`$Result` auszugeben. Tragen Sie im Feld :guilabel:`Message`
+den Wert der Variable :code:`$Result` auszugeben. Tragen Sie im Feld :guilabel:`Message`
 folgendes ein:
 
 .. image:: Pictures/10000201000001D300000094BED5B208580C66A3.png
@@ -861,7 +860,7 @@ Ihr Script sollte nun wie folgt aussehen:
 
 .. image:: Pictures/100002010000017D000000CE262C3B7A1191FE4E.png
 
-Führen Sie das Script jetzt aus. Die :ref:`show-message` Funktion sollte
+Führen Sie das Script jetzt aus. Die :ref:`nachricht_anzeigen` Funktion sollte
 Ihnen nun das Ergebnis des Aufrufs von :file:`AddValues.qsc` in einem Fenster
 und im Ereignisprotokoll anzeigen.
 
@@ -920,7 +919,7 @@ der Anwendung ).
 .. image:: Pictures/1000020100000212000001260ED49998B5EBA7FD.png
 
 Im Settings-Dialog der Anwendung können Sie nun das Fehlerverhalten konfigurieren. Wählen Sie
-dafür zuerst die Settings Kategorie *Scripting * :guinum:`❶` aus. Nun können Sie
+dafür zuerst die Settings Kategorie *Scripting* :guinum:`❶` aus. Nun können Sie
 rechts im Bereich :guilabel:`Script Error Reaction` :guinum:`❷` die Reaktion im Fehlerfall
 konfigurieren. Folgende Möglichkeiten können Sie auswählen:
 

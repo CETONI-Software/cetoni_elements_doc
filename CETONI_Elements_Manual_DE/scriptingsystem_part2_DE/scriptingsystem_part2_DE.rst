@@ -32,9 +32,9 @@ Script unterbrechen – *Interrupt Script*
 Mit dieser Funktion können Sie die Skriptausführung
 unterbrechen. Der Anwender kann das Script dann später jederzeit fortsetzen.
 
-.. _nachricht_anzeigen:
-
 |
+
+.. _nachricht_anzeigen:
 
 Nachricht anzeigen – *Show Message*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -677,6 +677,8 @@ Scriptfunktionen, die eine Reihe (Sequenz) von Funktionen aufnehmen
 können. Wird eine Funktionssequenz ausgeführt, bedeutet das, dass alle
 Scriptfunktionen die sich in dieser Sequenz befinden ausgeführt werden.
 
+.. _zählschleife:
+
 Zählschleife – *Counting Loop*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1152,6 +1154,8 @@ Variablen speichern. Diesen Variablenwert können Sie dann z.B. mit der
 -Funktion anzeigen lassen. Damit können Sie z.B. die Zeiten von
 Programmabläufen in Ihrem Script messen und ausgeben.
 
+.. _gerätefunktionen:
+
 Gerätefunktionen – *Device Functions*
 -------------------------------------
 
@@ -1322,7 +1326,7 @@ Die Funktion speichert die exportierte Datei mit einem
 Zeitstempel, z.B. :file:`EventLog_20220121_161653.txt`.
 
 Funktionen zur Datenspeicherung
------------------
+--------------------------------
 
 Diese Kategorie enthält Funktionen zum Lesen von Daten aus Dateien und zum 
 dauerhaften Speichern von Daten.
@@ -1368,7 +1372,7 @@ Funktionen verwenden, um ein gültiges und korrekt initialisiertes Einstellungso
 .. _werte_lesen:
 
 Werte lesen - *Read Setting*
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/settings_read.svg
    :width: 60
@@ -1402,7 +1406,7 @@ der Datei und speichert ihn in der angegebenen Skriptvariablen :code:`$SyringeLe
 .. _werte_schreiben:
 
 Werte schreiben - *Write Setting*
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/settings_write.svg
    :width: 60

@@ -442,7 +442,7 @@ Zugriff auf virtuelle Kanäle aus Scriptprogrammen
 
 Um auf die virtuellen Kanäle aus Scriptprogrammen heraus zuzugreifen
 (Werte zu lesen und zu schreiben), können Sie die Funktionen aus der
-Kategorie :ref:`Device Functions` verwenden.
+Kategorie :ref:`Gerätefunktionen<gerätefunktionen>` verwenden.
 
 .. image:: Pictures/100002010000010B000000720E021D287C297538.png
    :alt: Virtuelle Kanäle schreiben und lesen

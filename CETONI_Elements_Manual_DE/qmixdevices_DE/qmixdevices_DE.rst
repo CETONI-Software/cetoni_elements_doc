@@ -204,7 +204,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 .. rst-class:: steps
 
 #. Starten sie den Gerätekonfigurator wie in Abschnitt
-   :ref:`Start the Device Configurator<Starting the Device Configurator>` beschrieben.
+   :ref:`Aufruf des Gerätekonfigurators` beschrieben.
 #. Klicken sie mit der linken Maustaste auf die Nemesys S Spritzenpumpe
    in der Geräteliste :guinum:`❶` und halten sie diese gedrückt.
 #. Ziehen sie die Nemesys S Pumpe mit gedrückter Maustaste in die
@@ -354,7 +354,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
 .. rst-class:: steps
 
 #. Starten sie den Gerätekonfigurator wie in Abschnitt 
-   :ref:`Device Configurator<Starting the Device Configurator>` beschrieben.
+   :ref:`Aufruf des Gerätekonfigurators` beschrieben.
 #. Nach dem Start des Gerätekonfigurators wird die Konfiguration
    angezeigt, die momentan durch die CETONI Elements Software geladen
    wurde. Die grünen Haken über den Geräten bedeuten ihnen, dass die

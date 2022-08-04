@@ -79,7 +79,8 @@ exclude_patterns = [
     '.DS_Store', 
     'venv', 
     'ReadTheDocs.md',
-    'Appendix_EN/content/*'
+    'Appendix_EN/content/*',
+    '*/*.inc.rst'
 ]
 
 # Set a bullet character for :menuselection: role

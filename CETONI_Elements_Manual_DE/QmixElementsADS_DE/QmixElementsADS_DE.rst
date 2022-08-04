@@ -115,7 +115,7 @@ Gerätekonfiguration erstellen
 Gerätekonfigurationen erstellen. Um einzelne Geräte oder komplette
 Systeme bestehend aus mehreren Einzelgeräten in CETONI Elements zu
 benutzen, müssen Sie eine Gerätekonfiguration erstellen. Hierfür
-verwenden Sie den :ref:`Device Configurator<Creating Device Configurations>`,
+verwenden Sie den :ref:`Gerätekonfigurator<Erstellen von Gerätekonfigurationen>`,
 welcher in CETONI Elements
 integriert ist.
 
@@ -127,7 +127,7 @@ Gerätekonfiguration öffnen
 Mit dieser Schaltfläche können Sie eine vorhandene Gerätekonfiguration laden, die zuvor auf Ihrem System installiert wurde.
 
 Gerätekonfiguration importieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000201000000960000009603BB5C04B1480424.png
    :width: 2cm
