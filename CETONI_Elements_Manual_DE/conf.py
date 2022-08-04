@@ -20,9 +20,12 @@ from sphinx.roles import MenuSelection
 
 # -- Project information -----------------------------------------------------
 
-project = 'CETONI Elements Handbuch'
+project = 'CETONI Elements Manual'
 copyright = '2022, CETONI GmbH'
 author = 'CETONI GmbH'
+html_show_copyright = True
+html_show_sphinx = True
+html_show_sourcelink = False
 
 # The full version, including alpha/beta/rc tags
 release = '20220504'
@@ -160,7 +163,7 @@ html_favicon = '_static/favicon.png'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 html_logo = '_static/logo_cetoni_elements4.svg'
-html_title = 'CETONI Elements Handbuch'
+html_title = 'CETONI Elements Manual'
 html_last_updated_fmt = '%b %d, %Y %H:%M'
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -180,6 +183,6 @@ suppress_warnings = ['autosectionlabel.*']
 
 # -- Internationalisation ----------------------------------------------------
 
-#language = 'en'
+language = 'de'
 #locale_dirs = ['locale/']   # path is example but recommended.
 #gettext_compact = False     # optional.
