@@ -19,13 +19,12 @@ process sequences.
 
 |Figure 1: Script system overview|
 
-The script system work bench
-consists of the following three main parts:
+The script system user interface consists of two single views:
 
 .. rst-class:: guinums
 
-1. *Script Editor* – shows the script programmed by the user as a
-   function tree. It also features buttons for controlling script files
+1. *Script Editor* – this :ref:`View<Views>` shows the script programmed by the
+   user as a  function tree. It also features buttons for controlling script files
    and their execution.
 2. *Script Pool* – contains all available script functions ordered in
    device categories.
@@ -34,6 +33,9 @@ consists of the following three main parts:
 
 Script Pool
 -----------
+
+Overview
+~~~~~~~~~~~~
 
 Activate the :guilabel:`Scripting` button in the side bar to show the *Script
 Pool*.
@@ -51,7 +53,24 @@ The user can open or close the categories in the *Script Pool* at any
 time. To open or close the function list of a category, simply
 double-click on the category name (figure below).
 
-|Figure 3: Script Pool – Expanded view (2) of individual category functions.|
+.. image:: Pictures/100002010000022E0000017D7475090392B8F4E9.png
+
+Script Pool Context Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open the context menu by right clicking into the script pool:
+
++-----------+---------------------------------------------------------+
+| |editfun| | Opens the selected *User Library* function for          |
+|           | editing.                                                |
++-----------+---------------------------------------------------------+
+| |folder|  | Opens the *User Library* folder in file explorer        |
++-----------+---------------------------------------------------------+
+| |expand|  | Expands all categories                                  |
++-----------+---------------------------------------------------------+
+| |collapse|| Collapses all categories                                |
++-----------+---------------------------------------------------------+
+
 
 Script Editor
 ---------------
@@ -166,6 +185,10 @@ The following functions are
 available from the context menu:
 
 +-----------+---------------------------------------------------------+
+| |editfun| | Opens the selected :ref:`Script Function Call` for      |
+|           | editing (only when right clicking on a                  |
+|           | Script Function Call)                                   |
++-----------+---------------------------------------------------------+
 | |image52| | Moves the selected function one position up             |
 +-----------+---------------------------------------------------------+
 | |image53| | Moves the selected function one position down           |
@@ -174,6 +197,9 @@ available from the context menu:
 +-----------+---------------------------------------------------------+
 | |image55| | Inserts the functions from the clipboard before the     |
 |           | selected function                                       |
++-----------+---------------------------------------------------------+
+| |duplica| | Duplicates the selected function. This is a combination |
+|           | of copy and paste in one single step.                   |
 +-----------+---------------------------------------------------------+
 | |image56| | Deletes the selected functions                          |
 +-----------+---------------------------------------------------------+
@@ -185,9 +211,9 @@ available from the context menu:
 |           | structure your script, make it clearer and improve      |
 |           | readibilty.                                             |
 +-----------+---------------------------------------------------------+
-| |image59| | Expands all functions in the script                     |
+| |expand|  | Expands all functions in the script                     |
 +-----------+---------------------------------------------------------+
-| |image60| | Collapses all functions in the script so that only the  |
+| |collapse|| Collapses all functions in the script so that only the  |
 |           | topmost function level is visible                       |
 +-----------+---------------------------------------------------------+
 | |image61| | Changes the scaling of the display of the script        |
@@ -976,8 +1002,6 @@ Complete the configuration by clicking on OK :guinum:`❸`
 
 .. |Figure 2: Show Script Pool| image:: Pictures/10000201000001BC00000116F459D83094022ABD.png
 
-.. |Figure 3: Script Pool – Expanded view (2) of individual category functions.| image:: Pictures/100002010000022E0000017D7475090392B8F4E9.png
-
 .. |Figure 4: Script editor panel| image:: Pictures/100002010000025A00000168CC93E6B2FBB4D916.png
 
 .. |Figure 5: Single function in the Script Editor| image:: Pictures/1000020100000272000000627C834EF46698FB03.png
@@ -1091,4 +1115,20 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |Figure 24: Script autostart configuration| image:: Pictures/100002010000022600000126F6C3DD9DEA793D3B.png
 
 .. |Figure 25: Error Handling Settings| image:: Pictures/1000020100000212000001260ED49998B5EBA7FD.png
+
+.. |expand| image:: Pictures/expand-all2.svg
+   :width: 40
+
+.. |collapse| image:: Pictures/collapse-all2.svg
+   :width: 40
+
+.. |duplica| image:: Pictures/duplicate.svg
+   :width: 40
+
+.. |editfun| image:: Pictures/edit_function.svg
+   :width: 40
+
+.. |folder| image:: Pictures/folder.svg
+   :width: 40
+
 

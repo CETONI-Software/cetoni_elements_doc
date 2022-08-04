@@ -78,6 +78,7 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     margin-top: 21px;
 }
 
+
 .rst-content h1 {
   font-size: 39px;
   margin-bottom: 21px;
@@ -95,14 +96,14 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
   margin-bottom: 1em;
 }
 
-.rst-contenth4 {
+.rst-content h4 {
   font-family: 'kievit-bold';
   font-size: 19px;
   margin-top: 2em;
   margin-bottom: 1em;
 }
 
-.rst-contenth5 {
+.rst-content h5 {
   font-family: 'kievit-bold';
   font-size: 17px;
   margin-top: 2em;
