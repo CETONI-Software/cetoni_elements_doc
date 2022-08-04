@@ -349,7 +349,7 @@ analog inputs of Nemesys syringe pump devices.
 |Figure 14: Opening predefined configurations dialog|
 
 To select a
-predefined configuration proceed as follows. Right-click the respective
+predefined configuration proceed as follows, right-click the respective
 analog channel in order to show the context menu (see figure below).
 Choose :guilabel:`Select scaling preset.` A dialog containing a selection of
 scaling presets appears (figure below). Select the preset you are going
