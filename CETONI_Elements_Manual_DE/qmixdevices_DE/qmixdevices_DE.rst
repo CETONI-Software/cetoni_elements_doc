@@ -36,7 +36,7 @@ Statusleiste des Gerätekonfigurators :guinum:`❷` (siehe Abbildung unten).
 
    Wenn Sie Ihre echten Geräte konfigurieren möchten, aktivieren Sie Ihre Lizenz,
    bevor Sie den *Gerätekonfigurator* starten. Eine Anleitung dazu finden Sie im
-   Kapitel `Lizenz aktivieren <#4.4.Lizenz aktivieren|outline>`_.
+   Kapitel :ref:`Lizenzen aktivieren`.
 
 Importieren einer Gerätedatenbank
 ---------------------------------

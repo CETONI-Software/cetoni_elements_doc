@@ -100,7 +100,7 @@ Fehlfunktionen des Hardware-Gerätetreibers führen kann.
 Deaktivieren Sie bitte in den Energioptionen das selektive Energiesparen
 für USB-Anschlüsse, um Verbindungsabbrüche zum Gerät zu vermeiden:
 
-//.. image:: Pictures/10000201000001B2000001D8E9B73119A885DCC9.png
+.. image:: Pictures/10000201000001B4000001D8B5FAC825645DA2C5.png
 
 .. admonition:: Achtung
    :class: caution
