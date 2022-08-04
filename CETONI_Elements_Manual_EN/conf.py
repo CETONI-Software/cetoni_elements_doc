@@ -23,6 +23,9 @@ from sphinx.roles import MenuSelection
 project = 'CETONI Elements Manual'
 copyright = '2022, CETONI GmbH'
 author = 'CETONI GmbH'
+html_show_copyright = True
+html_show_sphinx = True
+html_show_sourcelink = False
 
 # The full version, including alpha/beta/rc tags
 release = '20220504'
@@ -180,6 +183,6 @@ suppress_warnings = ['autosectionlabel.*']
 
 # -- Internationalisation ----------------------------------------------------
 
-#language = 'en'
+language = 'en'
 #locale_dirs = ['locale/']   # path is example but recommended.
 #gettext_compact = False     # optional.
