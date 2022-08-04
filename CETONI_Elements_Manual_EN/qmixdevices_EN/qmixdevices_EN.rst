@@ -58,6 +58,8 @@ file :file:`devices.db`, you should import it now.
    the CETONI Elements software and you can skip the device 
    database import.
 
+.. rst-class:: steps
+
 #. Confirm the query by left-clicking the :guilabel:`Yes` button.
 
    |Figure 2: Query for device database import|
@@ -387,6 +389,8 @@ This is useful if you want create CETONI Elements
 scripts using devices not available at the moment. The CETONI Elements
 demo configuration for example completely consists of simulated devices.
 Proceed as follows in order to simulate a single device:
+
+.. rst-class:: steps
 
 #. In the device configuration right-click the device you want to
    simulate.

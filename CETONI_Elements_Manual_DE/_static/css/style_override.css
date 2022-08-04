@@ -274,6 +274,7 @@ html[data-theme='dark'] .rst-content .kbd {
 .steps > li {
   counter-increment: list;
   margin-left: 30px !important;
+  margin-top: 1.2em;
 }
 
 
