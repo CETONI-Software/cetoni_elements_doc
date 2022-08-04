@@ -19,13 +19,12 @@ process sequences.
 
 |Figure 1: Script system overview|
 
-The script system work bench
-consists of the following three main parts:
+The script system user interface consists of two single views:
 
 .. rst-class:: guinums
 
-1. *Script Editor* – shows the script programmed by the user as a
-   function tree. It also features buttons for controlling script files
+1. *Script Editor* – this :ref:`View<Views>` shows the script programmed by the
+   user as a  function tree. It also features buttons for controlling script files
    and their execution.
 2. *Script Pool* – contains all available script functions ordered in
    device categories.
@@ -34,6 +33,9 @@ consists of the following three main parts:
 
 Script Pool
 -----------
+
+Overview
+~~~~~~~~~~~~
 
 Activate the :guilabel:`Scripting` button in the side bar to show the *Script
 Pool*.
@@ -51,7 +53,24 @@ The user can open or close the categories in the *Script Pool* at any
 time. To open or close the function list of a category, simply
 double-click on the category name (figure below).
 
-|Figure 3: Script Pool – Expanded view (2) of individual category functions.|
+.. image:: Pictures/100002010000022E0000017D7475090392B8F4E9.png
+
+Script Pool Context Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open the context menu by right clicking into the script pool:
+
++-----------+---------------------------------------------------------+
+| |editfun| | Opens the selected *User Library* function for          |
+|           | editing.                                                |
++-----------+---------------------------------------------------------+
+| |folder|  | Opens the *User Library* folder in file explorer        |
++-----------+---------------------------------------------------------+
+| |expand|  | Expands all categories                                  |
++-----------+---------------------------------------------------------+
+| |collapse|| Collapses all categories                                |
++-----------+---------------------------------------------------------+
+
 
 Script Editor
 ---------------
@@ -166,6 +185,10 @@ The following functions are
 available from the context menu:
 
 +-----------+---------------------------------------------------------+
+| |editfun| | Opens the selected :ref:`Script Function Call` for      |
+|           | editing (only when right clicking on a                  |
+|           | Script Function Call)                                   |
++-----------+---------------------------------------------------------+
 | |image52| | Moves the selected function one position up             |
 +-----------+---------------------------------------------------------+
 | |image53| | Moves the selected function one position down           |
@@ -174,6 +197,9 @@ available from the context menu:
 +-----------+---------------------------------------------------------+
 | |image55| | Inserts the functions from the clipboard before the     |
 |           | selected function                                       |
++-----------+---------------------------------------------------------+
+| |duplica| | Duplicates the selected function. This is a combination |
+|           | of copy and paste in one single step.                   |
 +-----------+---------------------------------------------------------+
 | |image56| | Deletes the selected functions                          |
 +-----------+---------------------------------------------------------+
@@ -185,9 +211,9 @@ available from the context menu:
 |           | structure your script, make it clearer and improve      |
 |           | readibilty.                                             |
 +-----------+---------------------------------------------------------+
-| |image59| | Expands all functions in the script                     |
+| |expand|  | Expands all functions in the script                     |
 +-----------+---------------------------------------------------------+
-| |image60| | Collapses all functions in the script so that only the  |
+| |collapse|| Collapses all functions in the script so that only the  |
 |           | topmost function level is visible                       |
 +-----------+---------------------------------------------------------+
 | |image61| | Changes the scaling of the display of the script        |
@@ -718,7 +744,65 @@ the two variables :code:`$Summand1` and :code:`$Summand2`.
 
 .. image:: Pictures/10000201000001A60000010A9B2821B16D5BA0B3.png
 
-Now save the script function. Next, you can test the script function.
+**Step 5 – Give the function a meaningful name**
+
+Click into the function name label :guinum:`❶` and give the function a meaningful, 
+unique, short and descriptive name. This name will be shown in the script editor as
+the function name later. Here we use the Name **Add Values** :guinum:`❷`:
+
+.. image:: Pictures/function_name.png
+
+**Step 6 – Add an optional comment**
+
+Click into the :guilabel:`Comment` field and add a n optional comment that helps
+the user of your function to understand its parameters, return value and its
+usage:
+
+.. image:: Pictures/function_comment.png
+
+**Step 6 – Assign an optional custom icon**
+
+If you use your functions in the script, the standard icon will be the icon of
+the **Script Function Call**:
+
+.. image:: Pictures/10002495000034EB000034EB5801BA1011E76C10.svg
+   :width: 60
+
+If you would like to improve your function with a custom SVG icon, then click
+the :guilabel:`Select Icon` button.  The software shows an icon selection dialog 
+with a library of all icons loaded in the software. You can select an icon, 
+by double-clicking it :guinum:`❸`. 
+
+.. image:: Pictures/icon_library.png
+
+You have two
+options, two filter the icon library. The first option is to select a certain
+plug-in from the list :guinum:`❶`, if you are interested only in icons from 
+this plugin. The second option is, to enter a filter expression into the 
+filter text box :guinum:`❷`. You can combine both filter options:
+
+.. image:: Pictures/filtered_icon_library.png
+
+If you do not find an icon in the library, you can load a custom SVG icon by
+clicking the :guilabel:`Load Custom SVG Icon` button below the icon list. Here 
+in this example we use this option to choose a custom sum icon. As soon as you
+have selected the icon, the icon of the function in the script editor :guinum:`❶` 
+and in the configuration panel :guinum:`❷` is updated:
+
+.. image:: Pictures/script_function_icons.png
+
+.. tip::
+   If you would like to restore the default icon, click the :guilabel:`Clear Icon`
+   button in the script function configuration panel.
+
+**Step 7 – Save the function**
+
+If you have finished all your modifications, the you should save the final 
+function again.
+
+**Step 8 – Test your function**
+
+Finally you can test your new script function.
 Click on the :guilabel:`Run Script` button :guinum:`❶` (figure below) - no error should
 occur and the result of the addition should be displayed in the script
 editor in the *Set Variable* function :guinum:`❷`.
@@ -726,6 +810,7 @@ editor in the *Set Variable* function :guinum:`❷`.
 .. image:: Pictures/10000201000002670000013365D1FE2B80D7A609.png
 
 If errors occur, correct them and save the script function again.
+
 
 Use your own script functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -736,7 +821,7 @@ name and then save it with this name. The name of the script function is
 then displayed in the script editor header :guinum:`❸`. In this example we use the
 name *CustomScriptFunctionTest*.
 
-.. image:: Pictures/10000201000001A5000000664758F62E1016AF5B.png
+.. image:: Pictures/custom_script_function_test01.png
 
 Add a *Create Variable* function to the script as the first function and
 configure the function as follows.
@@ -751,8 +836,10 @@ into the script as the second function.
 
 A file selection dialogue pops up where you can select the external
 script function to be called by the script. Select the example function
-:file:`AddValues.qsc` that we created in the previous section. For the
-function parameters *Summand1* and *Summand2*, enter two values as a
+:file:`AddValues.qsc` that we created in the previous section. The
+function is inserted. The script editor :guinum:`❶` and the configuration
+panel :guinum:`❷` both show the custom icon. For the
+function parameters *Summand1* and *Summand2* :guinum:`❸`, enter two values as a
 test, e.g. 4 and 3. You can also use script variables in these fields.
 Enter the variable :code:`$Result` in the return parameter *Sum*. In other
 words, the return value of *Sum* is stored in the variable :code:`$Result`.
@@ -761,7 +848,7 @@ The function should now be configured as follows:
 .. image:: Pictures/10000201000001D1000001A86EEBD1F62A2FEFFD.png
 
 Now add a *ShowMessage* function as the last function to output the
-value of the :code:`$Result`` variable. Enter the following in the 
+value of the :code:`$Result` variable. Enter the following in the 
 :guilabel:`Message` field:
 
 .. image:: Pictures/10000201000001D300000094BED5B208580C66A3.png
@@ -773,9 +860,77 @@ Your script should now look like this:
 Now run the script. The :ref:`show-message` function should show you the
 result of the call to :file:`AddValues.qsc` in a window and in the event log.
 
-By using your own script functions, you can structure your script and
-break it down into reusable and easily maintainable individual
-components.
+.. tip::
+   By using your own script functions, you can structure your script and
+   break it down into reusable and easily maintainable individual
+   components.
+
+Edit script function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To edit a script function later, you just need to open it in the script editor.
+You can do this directly from the Script Editor by right-clicking on a custom 
+function and selecting the context menu item :menuselection:`Edit Selected Function`.
+
+.. image:: Pictures/script_editor_edit_script_functions.png
+
+.. admonition:: Important
+   :class: note
+
+   Opening a script function for editing will replace the current open script
+   in the Script Editor with the script to be edited.
+
+Script User Library
+-------------------
+
+The `Script Pool`_ contains an initially empty *User Library* category.
+This category enables a project specific grouping of custom script functions 
+in a kind of user library. This allows quick access to frequently used functions
+and quick  addition of user-specific functions to the script editor via
+drag & drop.
+
+.. image:: Pictures/user_library.png
+
+The *User Library* category shows the content of the :file:`UserLibrary` folder
+inside of the current project :file:`Scripts` folder. To browse the content
+of the this folder in the file explorer, just right click into the *User Library*
+category and select the menu item :menuselection:`Browse User Library Folder`.
+
+.. image:: Pictures/browse_user_library_folder.png
+
+To add functions to the *User Library* category, you just need to save them
+into the :file:`UserLibrary` folder or any sub folder inside of the
+:file:`UserLibrary` folder or you use your file explorer to copy the functions 
+into the :file:`UserLibrary` folder. When you have added new functions
+to the *User Library*, you need to refresh the user library. To do this,
+right click into the *User Library* category and select the menu item
+:menuselection:`Refresh User Library`.
+
+.. admonition:: Important
+   :class: note
+
+   To display newly added functions in the *User Library* you need to refresh
+   the library via context menu item :menuselection:`Refresh User Library`.
+
+The *User Library* category also 
+takes into account subdirectories in the :file:`UserLibrary` folder. 
+That means, subdirectories will be shown as folders in the *User Library* category.
+
+.. image:: Pictures/user_library_folders.png
+
+By default each folder is shown with a folder symbol :guinum:`❶` but you can
+provide a custom icon for each folder. Just copy an :file:`SVG` icon with
+the same name into a folder, to set it as folder icon. In the example above
+the *User Library* contains the folder :file:`Robot Functions`. This folder
+contains the file :file:`Robot Functions.svg`. If the software detects an
+SVG icon in a folder with the same name like the folder, it will set it as
+folder icon :guinum:`❷` in the Script Pool.
+
+To open a user function from the *User Library* for editing in the `Script Editor`_ 
+right-click on the function and select the context menu item
+:menuselection:`Edit Selected Function`.
+
+.. image:: Pictures/script_pool_edit_function.png
 
 Script Autostart
 ----------------
@@ -846,8 +1001,6 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |Figure 1: Script system overview| image:: Pictures/10000201000003C9000001AAB18C614061F55B68.png
 
 .. |Figure 2: Show Script Pool| image:: Pictures/10000201000001BC00000116F459D83094022ABD.png
-
-.. |Figure 3: Script Pool – Expanded view (2) of individual category functions.| image:: Pictures/100002010000022E0000017D7475090392B8F4E9.png
 
 .. |Figure 4: Script editor panel| image:: Pictures/100002010000025A00000168CC93E6B2FBB4D916.png
 
@@ -962,4 +1115,20 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |Figure 24: Script autostart configuration| image:: Pictures/100002010000022600000126F6C3DD9DEA793D3B.png
 
 .. |Figure 25: Error Handling Settings| image:: Pictures/1000020100000212000001260ED49998B5EBA7FD.png
+
+.. |expand| image:: Pictures/expand-all2.svg
+   :width: 40
+
+.. |collapse| image:: Pictures/collapse-all2.svg
+   :width: 40
+
+.. |duplica| image:: Pictures/duplicate.svg
+   :width: 40
+
+.. |editfun| image:: Pictures/edit_function.svg
+   :width: 40
+
+.. |folder| image:: Pictures/folder.svg
+   :width: 40
+
 
