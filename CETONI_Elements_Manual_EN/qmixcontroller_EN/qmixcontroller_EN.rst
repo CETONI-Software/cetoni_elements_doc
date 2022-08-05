@@ -65,10 +65,12 @@ assign a name suitable for your particular application.
 
 You change a name by the following steps:
 
-1. Double-click the table cell containing the name you want to change.
-2. Enter the new name in the Editing window which now appears (Figure
+.. rst-class:: steps
+
+#. Double-click the table cell containing the name you want to change.
+#. Enter the new name in the Editing window which now appears (Figure
    above).
-3. Complete your entry by pressing the :kbd:`Return` key.
+#. Complete your entry by pressing the :kbd:`Return` key.
 
 Switching control devices on / off
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -693,76 +695,78 @@ useful result using the following procedure.
 
 .. image:: Pictures/graph01.png
 
-(1) Choose the values for Sample Time, U\ :sub:`min`,
-    U\ :sub:`max` und U\ :sub:`disabled` according to the
-    recommendations in the previous sections. Disable the differential and 
-    integral share by setting the controller time constants to 0. This leads to a
-    simplified controller equation.
+.. rst-class:: steps
 
-    .. math:: U = {K_{p} \cdot e}
+#. Choose the values for Sample Time, U\ :sub:`min`,
+   U\ :sub:`max` und U\ :sub:`disabled` according to the
+   recommendations in the previous sections. Disable the differential and 
+   integral share by setting the controller time constants to 0. This leads to a
+   simplified controller equation.
+
+   .. math:: U = {K_{p} \cdot e}
+
+   Set a moderate value for the proportional gain. Keep in mind that by
+   means of K\ :sub:`p` the control error immediately impacts the
+   control value. Choosing a too big value for K\ :sub:`p`\ can drive
+   the controller into saturation.
+
+#. Give a setpoint step to your control loop, i.e. by changing the
+   setpoint temperature from room temperature to 50°C and activating
+   the control channel. (see section :ref:`Entering setpoint` and
+   :ref:`Switching control devices on / off`)
+
+#. Providing a first-order delay line the actual value will behave
+   according to the following figure.
+
+   .. image:: Pictures/graph02.png
    
-    Set a moderate value for the proportional gain. Keep in mind that by
-    means of K\ :sub:`p` the control error immediately impacts the
-    control value. Choosing a too big value for K\ :sub:`p`\ can drive
-    the controller into saturation.
+   Depending on chosen controller proportional gain
+   K\ :sub:`p` the actual value will vary quickly settle near the
+   setpoint value. Due to the fact that a proportional controller is
+   not able to fully compensate a delay line, a steady-state error
+   establishes. If K\ :sub:`p` is set too low, the actual value
+   approaches only very slowly the target value. (see curve for
+   K\ :sub:`p` = 1 in figure above) If K\ :sub:`p` is set to high, the
+   actual value overshoots, optionally oscillates about the setpoint.
+   (see curve for Kp = 50 in figure above) In the provided example the
+   actual value reaches a steady-state quickly without overshooting
+   using K\ :sub:`p`\ =3. This is why we use that value for further
+   optimizations.
 
-(2) Give a setpoint step to your control loop, i.e. by changing the
-    setpoint temperature from room temperature to 50°C and activating
-    the control channel. (see section :ref:`Entering setpoint` and
-    :ref:`Switching control devices on / off`)
+#. In the next step set T\ :sub:`i`\ in a way that the steady-state
+   error is compensated. You should begin using a large time constant
+   T\ :sub:`i` which means a small integral share.
 
-(3) Providing a first-order delay line the actual value will behave
-    according to the following figure.
+#. Give a setpoint step to your control loop, i.e. by changing the
+   setpoint temperature from room temperature to 50°C and activating
+   the control channel.  (see section :ref:`Entering setpoint` and
+   :ref:`Switching control devices on / off`)
 
-    .. image:: Pictures/graph02.png
-    
-    Depending on chosen controller proportional gain
-    K\ :sub:`p` the actual value will vary quickly settle near the
-    setpoint value. Due to the fact that a proportional controller is
-    not able to fully compensate a delay line, a steady-state error
-    establishes. If K\ :sub:`p` is set too low, the actual value
-    approaches only very slowly the target value. (see curve for
-    K\ :sub:`p` = 1 in figure above) If K\ :sub:`p` is set to high, the
-    actual value overshoots, optionally oscillates about the setpoint.
-    (see curve for Kp = 50 in figure above) In the provided example the
-    actual value reaches a steady-state quickly without overshooting
-    using K\ :sub:`p`\ =3. This is why we use that value for further
-    optimizations.
+#. Lower the time constant T\ :sub:`i` if you want to reduce time for
+   permanently reaching the setpoint value. Please notify that a time
+   constant T\ :sub:`i` set to small (large integral share) can lead to
+   the control loop oscillating. In the provided figure you can see
+   that T\ :sub:`i`\ =260s leads to a good result. The actual value
+   matches the setpoint value and the system does not oscillate. Using
+   T\ :sub:`i`\ =1000s the setpoint is not reached within the
+   illustrated time range and T\ :sub:`i`\ =20s leads to the system
+   overshooting heavily. (see figure below)
 
-(4) In the next step set T\ :sub:`i`\ in a way that the steady-state
-    error is compensated. You should begin using a large time constant
-    T\ :sub:`i` which means a small integral share.
+   .. image:: Pictures/10000000000001A7000000C4FD6D097D.png
 
-(5) Give a setpoint step to your control loop, i.e. by changing the
-    setpoint temperature from room temperature to 50°C and activating
-    the control channel.  (see section :ref:`Entering setpoint` and
-    :ref:`Switching control devices on / off`)
-
-(6) Lower the time constant T\ :sub:`i` if you want to reduce time for
-    permanently reaching the setpoint value. Please notify that a time
-    constant T\ :sub:`i` set to small (large integral share) can lead to
-    the control loop oscillating. In the provided figure you can see
-    that T\ :sub:`i`\ =260s leads to a good result. The actual value
-    matches the setpoint value and the system does not oscillate. Using
-    T\ :sub:`i`\ =1000s the setpoint is not reached within the
-    illustrated time range and T\ :sub:`i`\ =20s leads to the system
-    overshooting heavily. (see figure below)
-
-    .. image:: Pictures/10000000000001A7000000C4FD6D097D.png
-
-(7) In many cases (i.e. temperature control) a PI controller is sufficient.
-    There is no steady-state error and the dynamic behaviour is
-    satisfactory. If the controller shall be robust with respect to
-    sudden disturbances, it might be useful to include a differential
-    component. A detailed consideration of control stability, control
-    behaviour with respect to setpoint changes and disturbances is
-    beyond the scope of this practical introduction. Reference is
-    therefore made at this point on the control engineering literature.
+#. In many cases (i.e. temperature control) a PI controller is sufficient.
+   There is no steady-state error and the dynamic behaviour is
+   satisfactory. If the controller shall be robust with respect to
+   sudden disturbances, it might be useful to include a differential
+   component. A detailed consideration of control stability, control
+   behaviour with respect to setpoint changes and disturbances is
+   beyond the scope of this practical introduction. Reference is
+   therefore made at this point on the control engineering literature.
 
    .. image:: Pictures/graph03.png
 
-(8) Now create a PID parameter preset with the values you have
-    determined and assign a unique name.
+#. Now create a PID parameter preset with the values you have
+   determined and assign a unique name.
 
 
 
