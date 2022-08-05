@@ -20,17 +20,20 @@ Prozessabläufe zu automatisieren.
 .. image:: Pictures/10000201000003C9000001AAB18C614061F55B68.png
    :alt: Script-System Übersicht
 
-Das Script-System besteht aus den folgenden drei Bereichen:
+Die Benutzeroberfläche des Skriptsystems besteht aus zwei einzelnen Ansichten:
 
 .. rst-class:: guinums
 
-1. *Script Editor*- enthält das vom Anwender programmierte Script.
+1. *Script Editor*- enthält das vom Anwender programmierte Script (siehe :ref:`Views<Views (Ansichten)>`).
 2. *Script Pool* - enthält alle verfügbaren Scriptfunktionen.
 3. *Script-Konfiguration* - dient zur Konfiguration der Parameter einer
    Scriptfunktion, die im Scripteditor ausgewählt ist
 
 Script Pool
 -----------
+
+Überblick
+~~~~~~~~~~~~
 
 Um den *Script Pool* einzublenden, aktivieren Sie auf der Seitenleiste die
 Schaltfläche :guilabel:`Scripting`.
@@ -52,6 +55,23 @@ werden.
 
 Zum Ein-:guinum:`❶` & Ausklappen :guinum:`❷` der Funktionen einer Kategorie, klicken Sie
 einfach auf den Kategorienamen (Abbildung oben).
+
+Script Pool Kontextmenü
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Öffnen Sie das Kontextmenü, indem Sie mit der rechten Maustaste auf den Skript-Pool klicken:
+
++-----------+---------------------------------------------------------+
+| |editfun| | Öffnet die ausgewählte Funktion *User Library*          |
+|           | zur Bearbeitung.                                        |
++-----------+---------------------------------------------------------+
+| |folder|  | Öffnet den Ordner *Benutzerbibliothek* im Datei-Explorer|
++-----------+---------------------------------------------------------+
+| |expand|  | Erweitert alle Kategorien                               |
++-----------+---------------------------------------------------------+
+| |collapse|| Klappt alle Kategorien zusammen                         |
++-----------+---------------------------------------------------------+
+
 
 Script Editor
 -------------
@@ -184,6 +204,10 @@ klicken, wird ein Kontextmenü mit zusätzlichen Aktionen eingeblendet
 Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 
 +-----------+---------------------------------------------------------+
+| |editfun| | Öffnet den ausgewählten :ref:`Skriptfunktionsaufruf`    |
+|           | zur Bearbeitung (nur bei Rechtsklick auf einen          |
+|           | Skriptfunktionsaufruf)                                  |
++-----------+---------------------------------------------------------+
 | |image52| | Verschiebt die ausgewählte Funktion um eine Position    |
 |           | nach oben                                               |
 +-----------+---------------------------------------------------------+
@@ -196,6 +220,10 @@ Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 | |image55| | Fügt die Funktionen aus der Zwischenablage vor die      |
 |           | ausgewählte Funktion ein                                |
 +-----------+---------------------------------------------------------+
+| |duplica| | Dupliziert die ausgewählte Funktion. Dies ist eine      |
+|           | Kombination aus Kopieren und Einfügen in einem          |
+|           | einzigen Schritt.                                       |
++-----------+---------------------------------------------------------+
 | |image56| | Löscht die ausgewählten Funktionen                      |
 +-----------+---------------------------------------------------------+
 | |image57| | Löscht alle Funktionen im Script                        |
@@ -206,9 +234,9 @@ Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 |           | so ihr Script strukturieren und übersichtlicher         |
 |           | gestalten.                                              |
 +-----------+---------------------------------------------------------+
-| |image59| | Klappt alle Funktionen im Script auf                    |
+| |expand|  | Klappt alle Funktionen im Script auf                    |
 +-----------+---------------------------------------------------------+
-| |image60| | Klappt alle Funktionen im Script ein so dass nur noch   |
+| |collapse|| Klappt alle Funktionen im Script ein so dass nur noch   |
 |           | die oberste Funktionsebene zu sehen ist                 |
 +-----------+---------------------------------------------------------+
 | |image61| | Ändert die Skalierung der Darstellung der               |
@@ -802,8 +830,71 @@ der beiden Variablen :code:`$Summand1` und :code:`$Summand2` eintragen.
 
 .. image:: Pictures/10000201000001A60000010A9B2821B16D5BA0B3.png
 
-Speichern Sie die Scriptfunktion nun ab. Jetzt können Sie die
-Scriptfunktion testen. Klicken Sie auf die :guilabel:`Run Script`-Schaltfläche 
+**Schritt 5 - Geben Sie der Funktion einen aussagekräftigen Namen**   
+
+Klicken Sie in das Feld für den Funktionsnamen :guinum:`❶` und geben Sie der 
+Funktion einen aussagekräftigen, eindeutigen, kurzen und beschreibenden Namen. 
+Dieser Name wird später im Skript-Editor später als Funktionsname angezeigt. 
+Hier verwenden wir den Namen **Add Values** (Werte hinzufügen) :guinum:`❷`:
+
+.. image:: Pictures/function_name.png
+
+**Schritt 6 - Fügen Sie einen optionalen Kommentar hinzu**
+
+Klicken Sie in das Feld :guilabel:`Comment` und fügen Sie einen optionalen 
+Kommentar hinzu, der dem der dem Benutzer Ihrer Funktion hilft, ihre Parameter, 
+ihren Rückgabewert und ihre Verwendung nachzuvollziehen:
+
+.. image:: Pictures/function_comment.png
+
+**Schritt 6 - Zuweisen eines optionalen benutzerdefinierten Symbols**
+
+Wenn Sie Ihre Funktionen im Skript verwenden, wird das Standardsymbol das 
+Symbol des **Skript-Funktionsaufrufs**:
+
+.. image:: Pictures/10002495000034EB000034EB5801BA1011E76C10.svg
+   :width: 60
+
+Wenn Sie Ihre Funktion mit einem benutzerdefinierten SVG-Symbol erweitern möchten, 
+dann klicken Sie auf die Schaltfläche :guilabel:`Select Icon`.
+Die Software zeigt einen Symbolauswahldialog mit einer Bibliothek aller in der 
+Software geladenen Icons. Sie können ein Symbol auswählen, indem Sie es doppelt 
+anklicken :guinum:`❸`. 
+
+.. image:: Pictures/icon_library.png
+
+Sie haben zwei Möglichkeiten, die Symbolbibliothek zu filtern. Die erste 
+Möglichkeit ist, ein bestimmtes Plugin aus der Liste :guinum:`❶` auszuwählen, 
+wenn Sie ausschließlich an Icons aus diesem Plugin interessiert sind. Die zweite 
+Möglichkeit ist die Eingabe eines Filterausdrucks in das Filter-Textfeld 
+:guinum:`❷` einzugeben. Sie können beide Filteroptionen kombinieren:
+
+.. image:: Pictures/filtered_icon_library.png
+
+Wenn Sie kein Symbol in der Bibliothek finden, können Sie ein benutzerdefiniertes 
+SVG-Symbol laden, indem Sie auf die Schaltfläche :guilabel:`Load Custom SVG Icon`
+unterhalb der Symbolliste klicken. In diesem Beispiel verwenden wir diese Option, 
+um ein benutzerdefiniertes Summensymbol auszuwählen. Sobald Sie das Icon ausgewählt 
+haben, wird das Icon der Funktion im Skripteditor :guinum:`❶` und im 
+Konfigurationspanel :guinum:`❷` aktualisiert:
+
+.. image:: Pictures/script_function_icons.png
+
+.. admonition:: Tipp
+   :class: tip
+
+   Wenn Sie das Standardsymbol wiederherstellen möchten, klicken Sie auf die 
+   Schaltfläche :guilabel:`Clear Icon` im Konfigurationsbereich der Skriptfunktion.
+
+**Schritt 7 - Speichern der Funktion**
+
+Wenn Sie alle Ihre Änderungen vorgenommen haben, sollten Sie die endgültige 
+Funktion erneut speichern.
+
+**Step 8 – Test your function**
+
+Jetzt können Sie die Scriptfunktion testen. 
+Klicken Sie auf die :guilabel:`Run Script`-Schaltfläche 
 :guinum:`❶` (Abbildung unten) – es sollte kein Fehler auftreten und das Ergebnis 
 der Addition sollte im Scripteditor in der *Set Variable* Funktion angezeigt
 werden :guinum:`❷`.
@@ -824,7 +915,7 @@ diesem Namen zu speichern. Der Name der Scriptfunktion wird dann im Kopf
 des Scripteditors angezeigt :guinum:`❸`. In diesem Beispiel verwenden wir den
 Namen *CustomScriptFunctionTest*.
 
-.. image:: Pictures/1000020100000212000001260ED49998B5EBA7FD.png
+.. image:: Pictures/custom_script_function_test01.png
 
 Fügen Sie als erste Funktion eine *Create Variable* Funktion zum Script
 hinzu und konfigurieren Sie die Funktion wie folgt.
@@ -838,9 +929,11 @@ Fügen Sie nun als zweite Funktion einen *Script Function Call* aus der
    :width: 60
 
 Es öffnet sich ein Dateiauswahldialog, in dem Sie die externe
-Scriptfunktion auswählen können, die vom Script aufgerufen werden soll.
+Scriptfunktion auswählen können, die vom Script :guinum:`❶` aufgerufen werden soll.
 Wählen Sie hier die Beispielfunktion :file:`AddValues.qsc`, die wir im
-vorherigen Abschnitt erstellt haben. Geben Sie für die
+vorherigen Abschnitt erstellt haben. Die Funktion wird eingefügt. Der Skript-Editor 
+:guinum:`❶` und das Konfigurationspanel :guinum:`❷` zeigen beide das 
+benutzerdefinierte Symbol. Geben Sie für die
 Funktionsparameter *Summand1* und *Summand2* testweise zwei Werte ein,
 z.B. 4 und 3. Sie können in diesen Feldern auch Scriptvariablen
 verwenden. Tragen Sie im Rückgabeparameter *Sum* die Variable
@@ -864,9 +957,85 @@ Führen Sie das Script jetzt aus. Die :ref:`nachricht_anzeigen` Funktion sollte
 Ihnen nun das Ergebnis des Aufrufs von :file:`AddValues.qsc` in einem Fenster
 und im Ereignisprotokoll anzeigen.
 
-Durch die Verwendung von eigenen Scriptfunktionen können Sie Ihr Script
-strukturieren und in wiederverwendbare und gut wartbare
-Einzelkomponenten zerlegen.
+.. admonition:: Tipp
+   :class: tip
+
+   Durch die Verwendung von eigenen Scriptfunktionen können Sie Ihr Script
+   strukturieren und in wiederverwendbare und gut wartbare
+   Einzelkomponenten zerlegen.
+
+Skriptfunktion bearbeiten
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Um eine Skriptfunktion später zu bearbeiten, müssen Sie sie nur im Skript-Editor 
+öffnen. Sie können dies direkt im Skript-Editor tun, indem Sie mit der rechten 
+Maustaste auf eine benutzerdefinierte Funktion klicken und den Kontextmenüeintrag 
+:menuselection:`Edit Selected Function` wählen.
+
+.. image:: Pictures/script_editor_edit_script_functions.png
+
+.. admonition:: Wichtig
+   :class: note
+
+   Wenn Sie eine Skriptfunktion zur Bearbeitung öffnen, wird das aktuell geöffnete 
+   Skript im Skript-Editor durch das zu bearbeitende Skript ersetzt.
+
+Skript-Benutzerbibliothek
+--------------------------
+
+Der `Script Pool`_ enthält eine anfänglich leere Kategorie *User Library* (Benutzerbibliothek). 
+Diese Kategorie ermöglicht eine projektspezifische Gruppierung von benutzerdefinierten 
+Skriptfunktionen in einer Art Benutzerbibliothek. Dies ermöglicht einen schnellen 
+Zugriff auf häufig verwendete Funktionen und das schnelle Hinzufügen von 
+benutzerspezifischen Funktionen in den Skript-Editor per Drag & Drop.
+
+.. image:: Pictures/user_library.png
+
+Die Kategorie *User Library* zeigt den Inhalt des Ordners :file:`UserLibrary` 
+innerhalb des aktuellen Projektordners :file:`Scripts`. Zum Durchsuchen des 
+Inhalts dieses Ordners im Dateiexplorer zu durchsuchen, klicken Sie einfach mit 
+der rechten Maustaste in die Kategorie *User Library* und 
+wählen Sie den Menüpunkt :menuselection:`Browse User Library Folder`.
+
+.. image:: Pictures/browse_user_library_folder.png
+
+Um Funktionen zur Kategorie *User Library* hinzuzufügen, 
+müssen Sie sie einfach im Ordner :file:`UserLibrary` oder einem beliebigen 
+Unterordner innerhalb des Ordners :file:`UserLibrary` speichern oder Sie 
+verwenden Ihren Datei-Explorer, um die Funktionen in den Ordner :file:`UserLibrary` 
+zu kopieren. Wenn Sie neue Funktionen zur *User Library* hinzugefügt haben, müssen 
+Sie die Benutzerbibliothek aktualisieren. Klicken Sie dazu mit der rechten 
+Maustaste in die Kategorie *User Library* und wählen Sie den Menüpunkt 
+:menuselection:`Refresh User Library`.
+
+.. admonition:: Wichtig
+   :class: note
+
+   Um neu hinzugefügte Funktionen in der *User Library* anzuzeigen, müssen Sie 
+   die die Bibliothek über den Kontextmenüpunkt :menuselection:`Refresh User Library` 
+   aktualisieren.
+
+Die Kategorie *User Library* berücksichtigt auch Unterverzeichnisse im Ordner 
+:file:`UserLibrary`. Das heißt, Unterverzeichnisse werden als Ordner in der 
+Kategorie *User Library* angezeigt.
+
+.. image:: Pictures/user_library_folders.png
+
+Standardmäßig wird jeder Ordner mit einem Ordnersymbol :guinum:`❶` angezeigt, 
+aber Sie können für jeden Ordner ein eigenes Symbol erstellen. Kopieren Sie einfach 
+ein :file:`SVG`-Symbol mit demselben Namen in einen Ordner, um es als Ordnersymbol 
+festzulegen. Im obigen Beispiel enthält die *User Library* den Ordner 
+:file:`Robot Functions`. Dieser Ordner enthält die Datei 
+:file:`Robot Functions.svg`. Wenn die Software ein SVG-Symbol in einem Ordner 
+mit demselben Namen wie der Ordner erkennt, wird es als Ordnersymbol :guinum:`❷` 
+im Script Pool festgelegt.
+
+Um eine Benutzerfunktion aus der *User Library* zur Bearbeitung im `Skript-Editor` 
+zu öffnen, klicken Sie mit der rechten Maustaste auf die Funktion und wählen den 
+Kontextmenüpunkt :menuselection:`Edit Selected Function`.
+
+.. image:: Pictures/script_pool_edit_function.png
+
 
 Script Autostart
 ----------------
@@ -896,15 +1065,15 @@ dann gehen Sie wie folgt vor:
 
 .. rst-class:: steps
 
-1. Tragen Sie *QmixElements.exe* in den *Windows Autostart* ein, um die
+1. Tragen Sie **QmixElements.exe** in den *Windows Autostart* ein, um die
    Software nach dem Hochfahren des Rechners automatisch zu starten.
 2. Öffnen Sie den Dialog mit den globalen Einstellungen über das
-   Hauptmenü der Anwendung (*Edit → Settings*).
+   Hauptmenü der Anwendung (:menuselection:`Edit → Settings`).
 3. Wählen Sie die Einstellungskategorie *General* und aktivieren Sie die
-   Option *Enable auto connect*. Das bewirkt, dass sich die Software
+   Option :menuselection:`Auto connect`. Das bewirkt, dass sich die Software
    nach dem Start automatisch zu den angeschlossenen Geräten verbindet.
 4. Wählen Sie dann die Einstellungskategorie Scripting um den Script
-   Autostart zu konfigurieren
+   Autostart zu konfigurieren.
 
 Script Fehlerbehandlung
 -----------------------
@@ -987,3 +1156,19 @@ Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`�
 
 .. |image67| image:: Pictures/100002010000012C0000009A8EA2B85DC0AE3CC8.png
 .. |image68| image:: Pictures/100002010000012C0000009B3D05CC276B4F0D6F.png
+
+
+.. |expand| image:: Pictures/expand-all2.svg
+   :width: 40
+
+.. |collapse| image:: Pictures/collapse-all2.svg
+   :width: 40
+
+.. |duplica| image:: Pictures/duplicate.svg
+   :width: 40
+
+.. |editfun| image:: Pictures/edit_function.svg
+   :width: 40
+
+.. |folder| image:: Pictures/folder.svg
+   :width: 40   
