@@ -563,6 +563,8 @@ The following analog input terminals are supported by the I/O plugin:
      - Description
    * - `KL3021 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3021.html>`_
      - 1 channel analog input 4..20mA - 0,3% 12Bit
+   * - `KL3022 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3022.html>`_
+     - 2-channel analog input 4…20 mA, 12 bit, differential
    * - `KL3054 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3054.html>`_
      - 4 channel analog input 4..20mA - 12 bit, single ended
    * - `KL3102 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3102.html>`_
