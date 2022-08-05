@@ -182,19 +182,19 @@ mouse navigation mode. To do this, follow these steps:
 
 .. rst-class:: steps
 
-(1) Click the middle mouse button within the positioning map
+#. Click the middle mouse button within the positioning map
 
-    |image69|
+   |image69|
 
-(2) It is now displayed a navigation cross and the free
-    navigation mode is activated
+#. It is now displayed a navigation cross and the free
+   navigation mode is activated
 
-    |image70|
+   |image70|
 
-(3) You can now move the mouse to scroll the visible area of
-    the positioning map. The further you move the mouse away from the
-    on-screen navigation cross, the faster the positioning map is
-    scrolled.
+#. You can now move the mouse to scroll the visible area of
+   the positioning map. The further you move the mouse away from the
+   on-screen navigation cross, the faster the positioning map is
+   scrolled.
 
 Positioning modes
 ~~~~~~~~~~~~~~~~~
