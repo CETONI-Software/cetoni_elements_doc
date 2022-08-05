@@ -54,9 +54,9 @@ Navigation durch dieses Dokument unterstützen:
    scriptingsystem_part2_DE/scriptingsystem_part2_DE.rst
    nemesys_DE/nemesys1_setup_DE.rst
    qmixio_DE/qmixio_DE.rst
+   qmixcontroller_DE/qmixcontroller_DE.rst
 
 ..
-   qmixcontroller_EN/qmixcontroller_EN.rst
    qmixv_EN/qmixv_EN.rst
    tubingpump_EN/tubingpump_EN.rst
    rotaxys_EN/rotaxys_EN.rst

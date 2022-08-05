@@ -198,10 +198,10 @@ folgenden Bedienelemente
    ausführen können:
 
    +-----------+---------------------------------------------------------------+
-   | |image21| | **Restore default settings** – durch Anklicken dieser Schalt- |
-   |           | fläche können sie alle Parameter (Kanalname, Nachkommastellen,|
-   |           | Skalierung, *etc*...) wieder auf Ihre Standartwerte zurück-   |
-   |           | setzen.                                                       |
+   | |image21| | **Restore default settings** – durch Anklicken dieser         |
+   |           | Schaltfläche können sie alle Parameter (Kanalname,            |
+   |           | Nachkommastellen, Skalierung, *etc*...) wieder auf Ihre       |
+   |           | Standardwerte zurücksetzen.                                   |
    +-----------+---------------------------------------------------------------+
    | |image22| | **Select Scaling Preset** – öffnet ein Auswahldialog mit      |
    |           | vordefinierten :ref:`Skalierungseinstellungen                 |
@@ -500,11 +500,214 @@ gesetzt werden soll.
 Diese Funktion unterstützt die Verwendung von Variablen. D.h., im Feld
 :guilabel:`Value` können Sie, statt eines Wertes, den Namen einer Variablen
 eintragen, die den analogen Ausgangswert zur Laufzeit des Scripts
-enthält (siehe Abbildung unten).
+enthält (siehe Abbildung unten). Diese Variable kann dann anschließend für 
+Berechnungen oder zur Ausführung von wertbezogenen Funktionen verwendet werden.
 
 .. image:: Pictures/1000020100000218000000BA59FD4FDF9E3D6F7B.png
    :alt: Set Analog Out Scriptkonfiguration
 
+
+Unterstützte Beckhoff I/O-Module
+---------------------------------
+
+Das I/O-Plugin unterstützt das modulare CETONI QmixIO-B-Modul.
+
+.. image:: Pictures/QmixIO-B_IO-Module.jpg
+
+Die folgende Liste zeigt alle Beckhoff Bussysteme, die von der Software 
+unterstützt werden:
+
+Digitale Eingangsterminals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/dig_in.svg
+   :width: 60
+   :align: left
+
+Die Software sollte mit allen 
+`KL1xxx <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/>`_ 
+digitalen Eingangsklemmen funktionieren. Die folgenden Klemmen wurden bereits mit dem 
+dem I/O-Plugin getestet.   
+
+|
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Terminal ID
+     - Beschreibung
+   * - `KL1104 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1104.html>`_
+     - 4-Kanal-Digitaleingang 24 V DC, 3 ms, 2-/3-Leiteranschluss
+   * - `KL1124 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1124.html>`_
+     - 4-Kanal-Digitaleingang 5 V DC
+   * - `KL1404 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1404.html>`_
+     - 4-Kanal-Digitaleingang 24 V DC
+   * - `KL1408 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1408.html>`_
+     - 8-Kanal-Digitaleingang 24 V DC
+   * - `KL1862 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1862.html>`_
+     - 16-Kanal-Digitaleingang 24 V DC, 3 ms, Flachbandkabelanschluss
+
+
+Digitale Ausgangsterminals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/dig_out.svg
+   :width: 60
+   :align: left
+
+Die Software sollte mit allen 
+`KL2xxx <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/>`_ 
+digitalen Ausgangsklemmen funktionieren. Die folgenden Klemmen wurden bereits 
+mit dem dem I/O-Plugin getestet.  
+
+|
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Terminal ID
+     - Beschreibung
+   * - `KL2012 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2012.html>`_
+     - 2-Kanal-Digitalausgang, 24 V DC, 0,5 A
+   * - `KL2022 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2022.html>`_
+     - 2-Kanal-Digitalausgang, 24 V DC, 2 A
+   * - `KL2114 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2114.html>`_
+     - 4-Kanal-Digitalausgang, 24 VDC
+   * - `KL2124 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2124.html>`_
+     - 4-Kanal-Digitalausgang, 5 V DC
+   * - `KL2404 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2404.html>`_
+     - 4-Kanal-Digitalausgang, 24 V DC, 0,5 A, 2-Leiter-Anschluss
+   * - `KL2408 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2408.html>`_
+     - 8-Kanal-Digitalausgang, 24 V DC, 0,5 A, 2-Leiter-Anschluss
+   * - `KL2442 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2442.html>`_
+     - 2 Kanal Digitalausgang, 24 V DC, 2 x 4 A/1 x 8 A
+   * - `KL2612 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2612.html>`_
+     - 2-Kanal-Relaisausgang, 125 V AC/30 V DC
+   * - `KL2634 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2634.html>`_
+     - 4-Kanal-Relaisausgang, 250 V AC/30 V DC
+   * - `KL2808 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2808.html>`_
+     - 8-Kanal-Digitalausgang, 24V, 0,5 A
+   * - `KL2872 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2872.html>`_
+     - 16-Kanal-Digitalausgang, 24V, 0,5 A, Flachbandkabel
+
+
+Analoge Eingangsterminals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/analog_in.svg
+   :width: 60
+   :align: left
+
+Die folgenden analogen Eingangsterminals werden vom E/A-Plugin unterstützt:
+
+|
+|
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Terminal ID
+     - Beschreibung
+   * - `KL3021 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3021.html>`_
+     - 1-Kanal-Analogeingang 4..20mA - 0,3% 12Bit
+   * - `KL3054 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3054.html>`_
+     - 4-Kanal-Analogeingang 4..20mA - 12 Bit, single ended
+   * - `KL3102 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3102.html>`_
+     - 2-Kanal-Analogeingang -10V..+10V
+   * - `KL3152 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3152.html>`_
+     - 2-Kanal-Analogeingang 4..20mA - 0.05% 16 Bit
+   * - `KL3162 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3162.html>`_
+     - 2-Kanal-Analogeingang 0..10V - 0.05% 16 Bit
+   * - `KL3201 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3201.html>`_
+     - 1-Kanal PT100 RTD
+   * - `KL3202 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3202.html>`_
+     - 2-Kanal PT100 RTD
+   * - `KL3204 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3204.html>`_
+     - 4-Kanal PT100 RTD
+   * - `KL3214 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3214.html>`_
+     - 4-Kanal PT100 RTD 3-Draht-Verbindung
+   * - `KL3222 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3222.html>`_
+     - 2-Kanal PT100 RTD, hochpräzise
+   * - `KL3312 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3312.html>`_
+     - 2-Kanal-Thermoelement-Eingang
+   * - `KL3314 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3314.html>`_
+     - 4-Kanal-Thermoelement-Eingang
+   * - `KL3404 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3404.html>`_
+     - 4-Kanal-Analogeingang -10V..+10V, 12 Bit, single-ended
+   * - `KL3408 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3408.html>`_
+     - 8-Kanal-Analogeingang -10V..+10V, 12 Bit, single-ended
+   * - `KL3444 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3444.html>`_
+     - 4-Kanal-Analogeingang 0..20mA, 12 bit, single-ended
+   * - `KL3454 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3454.html>`_
+     - 4-Kanal-Analogeingang 4..20mA, 12 bit, single-ended
+   * - `KL3464 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3464.html>`_
+     - 4-Kanal-Analogeingang 0..10V, 12 bit, single-ended
+   * - `KL3468 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3468.html>`_
+     - 8-Kanal-Analogeingang 0..10V, 12 bit, single-ended
+
+
+Analoge Ausgangsterminals
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/analog_out.svg
+   :width: 60
+   :align: left
+
+Die folgenden analogen Ausgangsterminals werden vom I/O-Plugin unterstützt:
+
+|
+|
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Terminal ID
+     - Beschreibung
+   * - `KL4002 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4002.html>`_
+     - 2-Kanal-Analogausgang 0..10, 12 Bit, differenziell
+   * - `KL4004 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4004.html>`_
+     - 4-Kanal-Analogausgang 0..10, 12 Bit, differenziell
+   * - `KL4022 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4022.html>`_
+     - 2-Kanal-Analogausgang 4..20mA, 12 Bit, single-ended
+   * - `KL4112 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4112.html>`_
+     - 2-Kanal-Analogausgang 0..20mA, 16 bit, single-ended
+   * - `KL4132 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4132.html>`_
+     - 2-Kanal-Analogausgang -10..10V, 16 bit, differenziell
+   * - `KL4404 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4404.html>`_
+     - 4-Kanal-Analogausgang 0..10V, 12 Bit, single-ended
+   * - `KL4408 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4408.html>`_
+     - 8-Kanal-Analogausgang 0..10V, 12 bit, single-ended
+   * - `KL4414 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4414.html>`_
+     - 4-Kanal-Analogausgang 0..20mA, 12 bit, single-ended
+   * - `KL4424 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4424.html>`_
+     - 4-Kanal-Analogausgang 4..20mA, 12 bit, single-ended
+   * - `KL4434 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4434.html>`_
+     - 4-Kanal-Analogausgang -10V..+10V, 12 bit, single-ended
+
+Spezielle Terminals
+~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/special_terminals.svg
+   :width: 60
+   :align: left
+
+Die folgenden speziellen Terminals werden vom I/O-Plugin unterstützt:
+
+|
+|
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Terminal ID
+     - Beschreibung
+   * - `KL1501 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl1xxx-digital-input/kl1501.html>`_
+     - 1-Kanal-Digitaleingang, Zähler, 24 V DC, 100 kHz
 
 
 .. |image1| image:: Pictures/analog_in.svg
