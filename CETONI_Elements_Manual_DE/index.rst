@@ -57,9 +57,9 @@ Navigation durch dieses Dokument unterstützen:
    qmixcontroller_DE/qmixcontroller_DE.rst
    qmixv_DE/qmixv_DE.rst
    tubingpump_DE/tubingpump_DE.rst
+   rotaxys_DE/rotaxys_DE.rst
 
 ..
-   rotaxys_EN/rotaxys_EN.rst
    balance_EN/balance_EN.rst
    ledarray_EN/ledarray_EN.rst
    cameraview_EN/cameraview_EN.rst

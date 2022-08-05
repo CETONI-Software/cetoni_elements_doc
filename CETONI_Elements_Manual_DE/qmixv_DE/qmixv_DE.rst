@@ -131,7 +131,7 @@ korrekt angeschlossen ist und schaltet.
 
 
 Klicken Sie dafür bei dem entsprechenden Kanal auf
-die LED in der Spalte „:guilabel:`On`“ um die digitalen Kanäle aus- und wieder
+die LED in der Spalte :guilabel:`On` um die digitalen Kanäle aus- und wieder
 einzuschalten. Überprüfen Sie, ob das Ventil beim Umschalten des
 digitalen Ausgangs geschaltet wird. Wird das Ventil nicht geschaltet,
 ist es entweder falsch angeschlossen oder Sie schalten den falschen
@@ -239,8 +239,7 @@ von :guilabel:`Valve` und :guilabel:`Target Position` verwendet.
 Unterstützte VICI-Ventile
 --------------------------
 
-Das Valve Plugin unterstützt VICI-Ventile, die einen Universalantrieb mit USB- 
-oder RS-232-Schnittstelle verwenden.
+Das Valve Plugin unterstützt VICI-Ventile mit USB- oder RS-232-Schnittstelle.
 
 .. image:: Pictures/VICI_Valve.jpg
 
