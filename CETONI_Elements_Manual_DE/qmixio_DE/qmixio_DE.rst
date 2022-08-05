@@ -613,8 +613,10 @@ Die folgenden analogen Eingangsterminals werden vom E/A-Plugin unterstützt:
      - Beschreibung
    * - `KL3021 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3021.html>`_
      - 1-Kanal-Analogeingang 4..20mA - 0,3% 12Bit
+   * - `KL3022 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3022.html>`_
+     - 2-Kanal-Analogeingang 4...20 mA, 12 Bit, differenziell
    * - `KL3054 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3054.html>`_
-     - 4-Kanal-Analogeingang 4..20mA - 12 Bit, single ended
+     - 4-Kanal-Analogeingang 4..20mA - 12 Bit, single-ended
    * - `KL3102 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3102.html>`_
      - 2-Kanal-Analogeingang -10V..+10V
    * - `KL3152 <https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3152.html>`_
