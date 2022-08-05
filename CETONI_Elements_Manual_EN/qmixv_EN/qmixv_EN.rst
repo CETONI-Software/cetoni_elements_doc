@@ -4,7 +4,8 @@ Valve Plugin
 Introduction to Valve Plugin
 --------------------------------
 
-The valve plugin is used to control
+The valve plugin is used to control QmixV valve modules or valves that are part 
+of other devices (e.g. valves of Nemesys syringe pumps).
 
 .. image:: Pictures/valve_devices_numbered.jpg
 
@@ -42,10 +43,12 @@ following steps:
 
 |Figure 2: change valve name|
 
-1. Double-click the table cell containing the name you want to change.
-2. Enter the new name in the Editing window which now appears (see
+.. rst-class:: steps
+
+#. Double-click the table cell containing the name you want to change.
+#. Enter the new name in the Editing window which now appears (see
    Figure above)
-3. Complete your changes by pressing the :kbd:`Return` key.
+#. Complete your changes by pressing the :kbd:`Return` key.
 
 Switching valve position
 ~~~~~~~~~~~~~~~~~~~~~~~~
