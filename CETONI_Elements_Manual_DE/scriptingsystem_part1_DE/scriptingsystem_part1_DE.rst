@@ -204,7 +204,8 @@ klicken, wird ein Kontextmenü mit zusätzlichen Aktionen eingeblendet
 Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 
 +-----------+---------------------------------------------------------+
-| |editfun| | Öffnet den ausgewählten :ref:`Skriptfunktionsaufruf`    |
+| |editfun| | Öffnet den ausgewählten                                 |
+|           | :ref:`Skriptfunktionsaufruf<script_function_call>`      |
 |           | zur Bearbeitung (nur bei Rechtsklick auf einen          |
 |           | Skriptfunktionsaufruf)                                  |
 +-----------+---------------------------------------------------------+
@@ -1030,7 +1031,7 @@ festzulegen. Im obigen Beispiel enthält die *User Library* den Ordner
 mit demselben Namen wie der Ordner erkennt, wird es als Ordnersymbol :guinum:`❷` 
 im Script Pool festgelegt.
 
-Um eine Benutzerfunktion aus der *User Library* zur Bearbeitung im `Skript-Editor` 
+Um eine Benutzerfunktion aus der *User Library* zur Bearbeitung im `Skript-Editor`_
 zu öffnen, klicken Sie mit der rechten Maustaste auf die Funktion und wählen den 
 Kontextmenüpunkt :menuselection:`Edit Selected Function`.
 
