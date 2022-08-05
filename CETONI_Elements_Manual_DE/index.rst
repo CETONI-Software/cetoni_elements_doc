@@ -55,9 +55,9 @@ Navigation durch dieses Dokument unterstützen:
    nemesys_DE/nemesys1_setup_DE.rst
    qmixio_DE/qmixio_DE.rst
    qmixcontroller_DE/qmixcontroller_DE.rst
+   qmixv_DE/qmixv_DE.rst
 
 ..
-   qmixv_EN/qmixv_EN.rst
    tubingpump_EN/tubingpump_EN.rst
    rotaxys_EN/rotaxys_EN.rst
    balance_EN/balance_EN.rst
