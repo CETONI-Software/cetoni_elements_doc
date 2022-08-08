@@ -27,8 +27,8 @@ wird (siehe Abbildung unten).
 
    Um einen beliebigen analogen Eingang als       
    Druckmesseingang verwenden zu können, müssen Sie diesen  
-   ggf. vorher konfigurieren. Details zur :ref:`Konfiguration von 
-   I/O-Kanälen` finden Sie im Kapitel zum Qmix I/O Plugin. 
+   ggf. vorher konfigurieren. Details zur :ref:` I/O-Kanal Konfiguration` 
+   finden Sie im Kapitel zum Qmix I/O Plugin. 
 
 Um einer Pumpen einen Drucksensor zuzuweisen, ziehen Sie den Drucksensor
 einfach aus der Liste der I/O-Kanäle per Drag & Drop auf das Frontpanel
