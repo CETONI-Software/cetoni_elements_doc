@@ -62,9 +62,9 @@ Navigation durch dieses Dokument unterstützen:
    ledarray_DE/ledarray_DE.rst
    cameraview_DE/cameraview_DE.rst
    imageanalysis_DE/imageanalysis_DE.rst
+   videobuilder_DE/videobuilder_DE.rst
 
 ..
-   videobuilder_EN/videobuilder_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
    database_EN/database_EN.rst
