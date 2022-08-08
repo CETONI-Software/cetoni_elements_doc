@@ -794,7 +794,7 @@ folgendes Verfahren schrittweise einem brauchbaren Ergebnis annähern.
 #. Beaufschlagen sie ihren Regelkreis mit einem Sollgrößensprung, zum
    Beispiel indem sie die Solltemperatur von Raumtemperatur auf 50°C
    ändern und die Regelung aktivieren. (siehe Abschnitt
-   :ref:`Entering setpoint` und :ref:`Switching control devices on / off`)
+   :ref:`Sollwert eingeben` und :ref:`Regelung ein- / ausschalten`)
 
 #. Bei einer Verzögerungsstrecke 1. Ordnung wird sich der Istwert wie
    in folgender Abbildung dargestellt verhalten.
@@ -823,7 +823,7 @@ folgendes Verfahren schrittweise einem brauchbaren Ergebnis annähern.
 #. Beaufschlagen sie ihren Regelkreis mit einem Sollgrößensprung, zum
    Beispiel indem sie die Solltemperatur von Raumtemperatur auf 50°C
    ändern und die Regelung aktivieren. (siehe Abschnitt
-   :ref:`Entering setpoint` und :ref:`Switching control devices on / off`)
+   :ref:`Sollwert eingeben` und :ref:`Regelung ein- / ausschalten`)
 
 #. Sie können die Zeitkonstante T\ :sub:`i` verringern, wenn sie die
    Zeit bis zum dauerhaften Erreichen des Sollwertes verringern

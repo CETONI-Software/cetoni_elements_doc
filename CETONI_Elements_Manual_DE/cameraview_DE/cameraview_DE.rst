@@ -13,8 +13,8 @@ Windows DirectShow Kameras.
    :alt: Kamera Livebild und Bildbetrachter
 
 Die Abbildung oben
-zeigt eine typische Arbeitsumgebung bestehend aus dem :ref:`View <views>` 
-in einem Werkzeugfenster :guinum:`❶` und dem :ref:`Image Analysis View <image analysis plugin>` 
+zeigt eine typische Arbeitsumgebung bestehend aus dem :ref:`View <Views (Ansichten)>` 
+in einem Werkzeugfenster :guinum:`❶` und dem :ref:`Bildbetrachter / Bildanalyse Plugin` 
 :guinum:`❷` im zentralen Arbeitsbereich der Anwendung zur Anzeige aufgenommener Bilder.
 
 
@@ -117,7 +117,7 @@ Anklicken der Schaltfläche :guilabel:`Record Video` stoppen.
 |image22| Videoaufzeichnung aktiv
 ========= ==========================
 
-Über die Ereignisanzeige (:ref:`Event Log <event log>`) der Anwendung erhalten Sie
+Über das :ref:`Ereignisprotokoll` der Anwendung erhalten Sie
 Statusinformationen zur Aufzeichnung und zum Dateinamen unter dem die
 Videodatei gespeichert wurde.
 

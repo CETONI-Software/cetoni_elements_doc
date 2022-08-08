@@ -72,7 +72,7 @@ Flussrate einstellen. Wenn der Parameter :guilabel:`Run to completion` aktiv ist
 wird die nächste Skriptfunktion erst bearbeitet, wenn das Modul gestoppt
 wurde oder eine der Endlagen erreicht hat. Die Konfiguration der
 Parameter entspricht der Funktion :ref:`Volumendosierung 
-<Funktion Volumendosierung - Dose Volume>`.
+<funktion volumendosierung - *pump volume*>`.
 
 .. admonition:: Tipp
    :class: tip
@@ -94,7 +94,7 @@ dosiert dann solange, bis der Ziel-Füllstand erreicht ist. Das
 Dosiermodul, den Füllstand und die Flussrate können Sie im
 Konfigurationsbereich dieser Funktion einstellen. Die Konfiguration der
 Parameter entspricht der Funktion :ref:`Volumendosierung 
-<Funktion Volumendosierung - Dose Volume>`.
+<funktion volumendosierung - *pump volume*>`.
 
 Funktion Kontinuierlicher Fluss – *Continuous Flow*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
