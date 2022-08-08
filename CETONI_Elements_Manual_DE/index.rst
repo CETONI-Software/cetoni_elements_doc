@@ -66,9 +66,9 @@ Navigation durch dieses Dokument unterstützen:
    datalogger_DE/datalogger_DE.rst
    graphlogger_DE/graphlogger_DE.rst
    Python_DE/Python_DE.rst
+   sila_DE/sila_DE.rst
 
 ..
-   sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
    daq_EN/daq_EN.rst
    canopentools_EN/canopentools_EN.rst
