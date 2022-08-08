@@ -35,7 +35,7 @@ Filmerstellung
 
 Um einen Film zu erstellen, gehen Sie wie folgt vor:
 
-**Schritt 1 - Bilddateien auswählen**
+:step:`Schritt 1 - Bilddateien auswählen`
 
 .. image:: Pictures/folder.svg
    :width: 60
@@ -51,7 +51,7 @@ Ordner durch Drücken der Schaltfläche :guilabel:`Choose` :guinum:`❷` wählen
 .. image:: ./Pictures/10000000000002B8000001D0ABD946FD.png
    :alt: Ordner mit Bilddateien auswählen
 
-**Schritt 2 – Filmerstellung parametrieren**
+:step:`Schritt 2 – Filmerstellung parametrieren`
 
 Im Bereich *Video Parameters* können Sie nun die Parameter der
 Filmerstellung konfigurieren.
@@ -96,7 +96,7 @@ Schaltfläche :guilabel:`Activate Deshaker`.
    Durch die Entwacklung verlängert sich die   
    Zeit für die Filmerstellung.     
 
-**Schritt 3 – Filmerstellung starten**
+:step:`Schritt 3 – Filmerstellung starten`
 
 .. image:: Pictures/movie_run.svg
    :width: 60

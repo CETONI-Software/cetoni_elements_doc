@@ -221,6 +221,15 @@ html[data-theme='dark'] .rst-content .kbd {
     line-height: 14px;
 }
 
+.step {
+
+  font-family: 'kievit-bold';
+  font-size: 19px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+}
+
 /* center all images */
 .rst-content img {
   display: block;

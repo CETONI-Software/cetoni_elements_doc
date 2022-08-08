@@ -749,7 +749,8 @@ stehen, haben Sie die Möglichkeit, eigene Scriptfunktionen zu
 programmieren und diese dann später in Ihren Scripten zu verwenden. Um
 eine eigene Scriptfunktion zu implementieren, gehen Sie wie folgt vor:
 
-**Schritt 1 - Ein neues Script erstellen**
+
+:step:`Schritt 1 - Ein neues Script erstellen`
 
 Klicken Sie auf die Schaltfläche :guilabel:`Create New Script` :guinum:`❶` 
 um ein leeres Script zu erzeugen. Klicken Sie anschließend auf die Schaltfläche 
@@ -762,7 +763,8 @@ Werte addiert.
 
 .. image:: Pictures/10000201000001E300000081C08337AF408A77E5.png
 
-**Schritt 2 - Funktionsparameter definieren**
+
+:step:`Schritt 2 - Funktionsparameter definieren`
 
 Sie können für Ihre Funktion Funktionsparameter und Rückgabewerte
 definieren. Funktionsparameter sind Werte, die beim Aufruf der Funktion
@@ -793,7 +795,8 @@ Tragen Sie dann für den Parameter den Default Wert 0 ein :guinum:`❷`.
 Klicken Sie nun auf den zweiten Parameternamen und benennen Sie diesen
 um in *Summand2.*
 
-**Schritt 3 - Rückgabewerte definieren**
+
+:step:`Schritt 3 - Rückgabewerte definieren`
 
 Klicken Sie jetzt einmal auf die :guilabel:`Add` Schaltfläche im Bereich *Return
 Values* :guinum:`❶` (Abbildung unten) um einen Rückgabewert hinzuzufügen. Klicken
@@ -808,7 +811,7 @@ folgt aussehen:
 
 .. image:: Pictures/100002010000024C0000019005AB068207394D76.png
 
-**Schritt 4 - Funktionslogik implementieren**
+:step:`Schritt 4 - Funktionslogik implementieren`
 
 Alle Funktionsparameter und Rückgabewerte stehen innerhalb des Scriptes
 als Variablen zur Verfügung, die gelesen und geschrieben werden können.
@@ -831,7 +834,8 @@ der beiden Variablen :code:`$Summand1` und :code:`$Summand2` eintragen.
 
 .. image:: Pictures/10000201000001A60000010A9B2821B16D5BA0B3.png
 
-**Schritt 5 - Geben Sie der Funktion einen aussagekräftigen Namen**   
+
+:step:`Schritt 5 - Geben Sie der Funktion einen aussagekräftigen Namen`
 
 Klicken Sie in das Feld für den Funktionsnamen :guinum:`❶` und geben Sie der 
 Funktion einen aussagekräftigen, eindeutigen, kurzen und beschreibenden Namen. 
@@ -840,7 +844,8 @@ Hier verwenden wir den Namen **Add Values** (Werte hinzufügen) :guinum:`❷`:
 
 .. image:: Pictures/function_name.png
 
-**Schritt 6 - Fügen Sie einen optionalen Kommentar hinzu**
+
+:step:`Schritt 6 - Fügen Sie einen optionalen Kommentar hinzu`
 
 Klicken Sie in das Feld :guilabel:`Comment` und fügen Sie einen optionalen 
 Kommentar hinzu, der dem der dem Benutzer Ihrer Funktion hilft, ihre Parameter, 
@@ -848,7 +853,8 @@ ihren Rückgabewert und ihre Verwendung nachzuvollziehen:
 
 .. image:: Pictures/function_comment.png
 
-**Schritt 6 - Zuweisen eines optionalen benutzerdefinierten Symbols**
+
+:step:`Schritt 7 - Zuweisen eines optionalen benutzerdefinierten Symbols`
 
 Wenn Sie Ihre Funktionen im Skript verwenden, wird das Standardsymbol das 
 Symbol des **Skript-Funktionsaufrufs**:
@@ -887,12 +893,14 @@ Konfigurationspanel :guinum:`❷` aktualisiert:
    Wenn Sie das Standardsymbol wiederherstellen möchten, klicken Sie auf die 
    Schaltfläche :guilabel:`Clear Icon` im Konfigurationsbereich der Skriptfunktion.
 
-**Schritt 7 - Speichern der Funktion**
+
+:step:`Schritt 8 - Speichern der Funktion`
 
 Wenn Sie alle Ihre Änderungen vorgenommen haben, sollten Sie die endgültige 
 Funktion erneut speichern.
 
-**Step 8 – Test your function**
+
+:step:`Schritt 9 – Die Funktion testen`
 
 Jetzt können Sie die Scriptfunktion testen. 
 Klicken Sie auf die :guilabel:`Run Script`-Schaltfläche 

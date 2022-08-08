@@ -64,9 +64,9 @@ Navigation durch dieses Dokument unterstützen:
    imageanalysis_DE/imageanalysis_DE.rst
    videobuilder_DE/videobuilder_DE.rst
    datalogger_DE/datalogger_DE.rst
+   graphlogger_DE/graphlogger_DE.rst
 
 ..
-   graphlogger_EN/graphlogger_EN.rst
    database_EN/database_EN.rst
    Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst

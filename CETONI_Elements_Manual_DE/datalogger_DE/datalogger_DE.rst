@@ -92,7 +92,7 @@ folgende Schritte durch.
 Datenprotokollierung konfigurieren
 -----------------------------------
 
-**Schritt 1 - Kanäle hinzufügen**
+:step:`Schritt 1 - Kanäle hinzufügen`
 
 Ziehen Sie aus
 der Geräteliste :guilabel:`Device List` das Gerät, von dem Sie Prozessdaten aufzeichnen möchten,
@@ -110,7 +110,7 @@ Abbildung unten).
    Sie die Geräteliste nach Gerätetyp filtern. 
 
 
-**Schritt 2 - Geräteeigenschaft auswählen**
+:step:`Schritt 2 - Geräteeigenschaft auswählen`
 
 Wählen Sie nun im Bereich der Logger-Kanäle :guilabel:`Logger Channels` die
 Geräteeigenschaft aus (*Property*), die Sie aufzeichnen möchten. Klicken
@@ -123,7 +123,7 @@ Abbildung unten).
    :alt: Geräteeigenschaft zum Aufzeichnen auswählen
 
 
-**Schritt 3 - Kanalbeschreibung**
+:step:`Schritt 3 - Kanalbeschreibung`
 
 In der Spalte :guilabel:`Label` können Sie für jeden Kanal eine eigene
 Beschriftung vergeben. Diese Beschriftung wird später dann in der
@@ -160,7 +160,7 @@ Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
 Kontextmenü den Punkt :menuselection:`Clear Logger` auswählen.
 
 
-**Schritt 4 – CSV Eigenschaften konfigurieren**
+:step:`Schritt 4 – CSV Eigenschaften konfigurieren`
 
 Im Bereich :guilabel:`CSV File Configuration` können Sie globale Eigenschaften 
 des CSV Loggers und zum

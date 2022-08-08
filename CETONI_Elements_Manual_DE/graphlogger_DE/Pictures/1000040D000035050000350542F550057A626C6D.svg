@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <style/>
+ <title>floppy disk icon</title>
+ <desc>floppy disk icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+ <path d="m480 48v416c0 8.8-7.2 16-16 16h-400l-32-32v-400c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16z" fill="#28b5f5"/>
+ <path d="m480 48v416c0 8.8-7.2 16-16 16h-208v-448h208c8.8 0 16 7.2 16 16z" fill="#0299e3"/>
+ <path d="m96 32h320v224c0 8.8-7.2 16-16 16h-288c-8.8 0-16-7.2-16-16z" fill="#dff3fd"/>
+ <path d="m256 32h160v224c0 8.8-7.2 16-16 16h-144z" fill="#b1e3fb"/>
+ <path d="m416 208v48c0 8.8-7.2 16-16 16h-288c-8.8 0-16-7.2-16-16v-48z" fill="#f98b00"/>
+ <path d="m416 208v48c0 8.8-7.2 16-16 16h-144v-64z" fill="#f37c00"/>
+ <path d="m384 336v144h-256v-144c0-8.8 7.2-16 16-16h224c8.8 0 16 7.2 16 16zm-224 0v112h64v-112z" fill="#ebedef"/>
+ <path d="m384 336v144h-128v-160h112c8.8 0 16 7.2 16 16z" fill="#cdd7db"/>
+</svg>
