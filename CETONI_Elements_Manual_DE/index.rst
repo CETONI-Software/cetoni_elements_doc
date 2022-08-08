@@ -60,9 +60,9 @@ Navigation durch dieses Dokument unterstützen:
    rotaxys_DE/rotaxys_DE.rst
    balance_DE/balance_DE.rst
    ledarray_DE/ledarray_DE.rst
+   cameraview_DE/cameraview_DE.rst
 
 ..
-   cameraview_EN/cameraview_EN.rst
    imageanalysis_EN/imageanalysis_EN.rst
    videobuilder_EN/videobuilder_EN.rst
    datalogger_EN/datalogger_EN.rst
