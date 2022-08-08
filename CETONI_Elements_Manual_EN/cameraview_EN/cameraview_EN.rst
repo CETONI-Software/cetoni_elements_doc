@@ -276,7 +276,7 @@ location for the video file in the :guilabel:`Video Filename` field.
    Every video file name will be appended   
    with a time stamp that identifies the start of its      
    recording. This is, when you have defined the file name 
-   as :file:`Video.avi`` the resulting file will be saved as        
+   as :file:`Video.avi` the resulting file will be saved as        
    :file:`Video_20130522_154502.avi`. 
 
 By clicking :guilabel:`Extended Settings` :guinum:`❸` you can display 
