@@ -27,21 +27,21 @@ Menü „GERAET“ / „RS232“
 
 Aktivieren Sie im Menü *GERAET / RS232* die rot markierten Werte:
 
-.. image:: Pictures/10000201000003DA000002F7CD3B422CA333C488.png
+.. image:: Pictures/10000201000003E9000003139BC03875F46B9199.png
 
 Menü „GERAET“ / „USB“
 ^^^^^^^^^^^^^^^^^^^^^
 
 Aktivieren Sie im Menü *GERAET / USB* die rot markierten Werte:
 
-.. image:: Pictures/10000201000003DA000002F7CD3B422CA333C488.png
+.. image:: Pictures/10000201000003E9000003139BC03875F46B9199.png
 
 Menü „DAT.AUSG“ / „KOMM.SBI“
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Aktivieren Sie im Menü *DAT.AUSG / KOMM.SBI* die rot markierten Werte:
 
-.. image:: Pictures/10000201000003CC0000020A56B0A6CD74551F66.png
+.. image:: Pictures/10000201000003EC00000220041D7D61FBFDFD93.png
 
 
 Hinzufügen der Waage zu einer CETONI Elements Gerätekonfiguration

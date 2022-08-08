@@ -65,12 +65,14 @@ Navigation durch dieses Dokument unterstützen:
    videobuilder_DE/videobuilder_DE.rst
    datalogger_DE/datalogger_DE.rst
    graphlogger_DE/graphlogger_DE.rst
+   Python_DE/Python_DE.rst
 
 ..
-   database_EN/database_EN.rst
-   Python_EN/Python_EN.rst
    sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
    daq_EN/daq_EN.rst
    canopentools_EN/canopentools_EN.rst
    Appendix_EN/Appendix_EN.rst
+
+   missing: javascript_EN/javascript_EN.rst
+            database_DE/database_DE.rst
