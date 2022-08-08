@@ -59,9 +59,9 @@ Navigation durch dieses Dokument unterstützen:
    tubingpump_DE/tubingpump_DE.rst
    rotaxys_DE/rotaxys_DE.rst
    balance_DE/balance_DE.rst
+   ledarray_DE/ledarray_DE.rst
 
 ..
-   ledarray_EN/ledarray_EN.rst
    cameraview_EN/cameraview_EN.rst
    imageanalysis_EN/imageanalysis_EN.rst
    videobuilder_EN/videobuilder_EN.rst
