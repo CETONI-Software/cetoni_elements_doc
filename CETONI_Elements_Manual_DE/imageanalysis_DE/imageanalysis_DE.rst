@@ -287,7 +287,7 @@ Maßrechteck löschen
 ~~~~~~~~~~~~~~~~~~~~
 
 Sie können ein einzelnes Maßrechteck löschen, indem Sie es durch
-Anklicken auswählen und dann die :kbd:`Entfernen`-Taste drücken.
+Anklicken auswählen und dann die :kbd:`Delete`-Taste drücken.
 
 .. image:: Pictures/measure_items_clear.svg
    :width: 60

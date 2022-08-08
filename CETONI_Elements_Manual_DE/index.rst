@@ -63,9 +63,9 @@ Navigation durch dieses Dokument unterstützen:
    cameraview_DE/cameraview_DE.rst
    imageanalysis_DE/imageanalysis_DE.rst
    videobuilder_DE/videobuilder_DE.rst
+   datalogger_DE/datalogger_DE.rst
 
 ..
-   datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
    database_EN/database_EN.rst
    Python_EN/Python_EN.rst
