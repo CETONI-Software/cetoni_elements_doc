@@ -94,7 +94,7 @@ the :guilabel:`Activate Deshaker` button to enable video stabilization.
    The de-shaking step will increase the     
    time for building a video.  
 
-Step 2 – Start Video Assembly
+Step 3 – Start Video Assembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/movie_run.svg
