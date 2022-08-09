@@ -915,26 +915,28 @@ whether the next function
 .. |image38| image:: Pictures/100004F40000388E0000388E24B4D5C8.svg
    :width: 40
 
-.. |image48| image:: Pictures/100000000000008E0000008ADFC67101.png
+.. |image48| image:: Pictures/rotaxys_control_pad_left.svg
    :width: 120
-.. |image49| image:: Pictures/100000000000008E0000008A4C967708.png
+.. |image49| image:: Pictures/rotaxys_control_pad_right.svg
    :width: 120
-.. |image50| image:: Pictures/100000000000008E0000008ABA97D8C2.png
+.. |image50| image:: Pictures/rotaxys_control_pad_up.svg
    :width: 120
-.. |image51| image:: Pictures/100000000000008E0000008AF56DAD39.png
+.. |image51| image:: Pictures/rotaxys_control_pad_down.svg
    :width: 120
-.. |image52| image:: Pictures/100000000000008E0000008A4BC0171B.png
+.. |image52| image:: Pictures/rotaxys_control_pad_center.svg
    :width: 120
-.. |image53| image:: Pictures/100000000000008E0000008A43243293.png
+
+.. |image53| image:: Pictures/nemaxys_control_pad_left.svg
    :width: 120
-.. |image54| image:: Pictures/100000000000008E0000008A8EC74FBF.png
+.. |image54| image:: Pictures/nemaxys_control_pad_right.svg
    :width: 120
-.. |image55| image:: Pictures/100000000000008E0000008A42F68D0D.png
+.. |image55| image:: Pictures/nemaxys_control_pad_up.svg
    :width: 120
-.. |image56| image:: Pictures/100000000000008E0000008A0D0CF8F6.png
+.. |image56| image:: Pictures/nemaxys_control_pad_down.svg
    :width: 120
-.. |image57| image:: Pictures/100000000000008E0000008AB3A142D4.png
+.. |image57| image:: Pictures/nemaxys_control_pad_center.svg
    :width: 120
+
 .. |image58| image:: Pictures/1000000000000227000000DC165AEB92.png
    :width: 4.489cm
    :height: 1.792cm
