@@ -66,6 +66,7 @@ Navigation durch dieses Dokument unterstützen:
    videobuilder_DE/videobuilder_DE.rst
    datalogger_DE/datalogger_DE.rst
    graphlogger_DE/graphlogger_DE.rst
+   database_DE/database_DE.rst
    Python_DE/Python_DE.rst
    sila_DE/sila_DE.rst
    spectroscopy_DE/spectroscopy_DE.rst
@@ -74,5 +75,3 @@ Navigation durch dieses Dokument unterstützen:
 
 ..
    Appendix_EN/Appendix_EN.rst
-
-   missing: database_DE/database_DE.rst
