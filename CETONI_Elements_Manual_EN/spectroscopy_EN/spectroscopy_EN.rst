@@ -486,7 +486,7 @@ adding metadata is now displayed.
 .. image:: Pictures/100002010000023A000001672761D4486A02C31D.png
 
 Here you can add additional information
-such as sample name or sample quantity to the \*.aiq file by clicking
+such as sample name or sample quantity to the :file:`*.aiq` file by clicking
 :guilabel:`Add Meta Data`. After clicking :guilabel:`Add Meta Data`, the input 
 window for selecting the metadata name and entering the value appears.
 
@@ -755,7 +755,7 @@ measurement, the sample or the device as part of the file :guinum:`❸`.
 
    Metadata are saved only if you select the Analyze IQ format :file:`*.aiq`.  
 
-Click on the :guilabel:`Add Meta Data`` button to add a meta data field. Now select
+Click on the :guilabel:`Add Meta Data` button to add a meta data field. Now select
 the meta data field in the dialog box :guinum:`❶` and then go to the entry
 field :guinum:`❷` and enter the value you want to assign to the meta data
 field.

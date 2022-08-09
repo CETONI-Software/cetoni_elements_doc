@@ -272,13 +272,13 @@ Permanently saving / restoring Device Parameters
 
 Any object dictionary entries you created will be lost when the device
 is turned off or reset. In order to permanently save device parameters
-to the non-volatile device memory, you have to click on Node: Store
-Parameters in the toolbar (see image below) after writing the entry.
+to the non-volatile device memory, you have to click on :guilabel:`Node: Store Parameters` 
+in the toolbar (see image below) after writing the entry.
 
 .. image:: Pictures/10000000000001DD0000004A6E055D00F9054433.png
 
 If you want to restore a device's default parameters (factory
-settings), click on Node: Restore Default Parameters in the toolbar.
+settings), click on :guilabel:`Node: Restore Default Parameters` in the toolbar.
 
 .. image:: Pictures/10000000000001DD0000004A09AD8BC5DCC8D0EF.png
 
@@ -372,8 +372,8 @@ Toolbar
 The Trace-List
 ~~~~~~~~~~~~~~
 
-In the trace list, all messages are displayed in chronological order, i.
-e. older messages are at the top of the list and more current messages
+In the trace list, all messages are displayed in chronological order, i.e. 
+older messages are at the top of the list and more current messages
 are at the bottom of the list. The last entry in the list is always the
 last recorded message.
 
