@@ -69,9 +69,9 @@ Navigation durch dieses Dokument unterstützen:
    sila_DE/sila_DE.rst
    spectroscopy_DE/spectroscopy_DE.rst
    daq_DE/daq_DE.rst
+   canopentools_DE/canopentools_DE.rst
 
 ..
-   canopentools_EN/canopentools_EN.rst
    Appendix_EN/Appendix_EN.rst
 
    missing: javascript_EN/javascript_EN.rst

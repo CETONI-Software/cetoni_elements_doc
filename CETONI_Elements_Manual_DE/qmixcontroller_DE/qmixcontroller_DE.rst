@@ -692,7 +692,7 @@ Vorbereitung der Reglereinstellung in QmixElements
 
 Zunächst sollten sie sich den aktuellen Wert und die Stellgröße ihres
 Regelkanals im Plot des Data-Loggers anzeigen lassen. (siehe Kapitel
-:ref:`Prozessdaten-Protokollierung (DatenloggerPlugin)`)
+:ref:`CSV-Datenlogger`)
 Sie können sich auch den Sollwert anzeigen lassen :guinum:`❶` . Dies ist nicht
 unbedingt erforderlich, da sie ihn im Allgemeinen kennen, erleichtert
 aber die Orientierung im Plot. (siehe Abbildung unten)
