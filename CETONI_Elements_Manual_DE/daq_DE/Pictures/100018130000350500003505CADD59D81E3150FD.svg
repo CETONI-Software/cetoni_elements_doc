@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg6768"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="scale.svg">
+  <metadata
+     id="metadata6788">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>precision square icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6786" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6784"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.2432572"
+     inkscape:cx="218.76875"
+     inkscape:cy="231.31968"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6768">
+    <sodipodi:guide
+       position="371.60452,144.78098"
+       orientation="0,1"
+       id="guide7351"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-85.259912,384.47394"
+       orientation="1,0"
+       id="guide7411"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="186.6066,226.0192"
+       orientation="1,0"
+       id="guide7456"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="213.14978,188.21528"
+       orientation="0,1"
+       id="guide7458"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <title
+     id="title6770">precision square icon</title>
+  <desc
+     id="desc6772">precision square icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g833"
+     transform="translate(-10.134078,-8.0702676)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path1096"
+       d="M 373.2132,27.788045 28.956197,367.21902 163.28078,501.5436 504.32043,157.28659 Z"
+       style="fill:#ffc928;fill-opacity:1;fill-rule:evenodd;stroke:#ffc928;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path1146"
+       d="M 373.21289,27.787109 28.957031,367.21875 85.935547,424.19727 429.19922,83.087891 Z"
+       style="fill:#ffdf28;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path1065"
+       d="m 372.41992,11.441406 c -6.57906,0.159673 -9.82223,7.412526 -14.67642,10.839203 C 252.49589,125.65959 148.37988,230.19703 44.624531,335.07413 c -10.068553,10.69038 -21.117157,20.65709 -30.429219,31.96103 -2.266764,5.37102 1.594793,10.35654 5.532888,13.64752 43.138417,44.69359 86.88974,88.82786 131.66257,131.88916 3.58284,4.5339 11.00591,6.03474 14.90935,1.03011 75.98038,-73.73714 150.43219,-149.03508 225.32759,-223.86844 42.10205,-42.61893 84.9026,-84.57984 126.11448,-128.05773 2.70832,-5.05191 -0.48165,-10.61475 -4.57179,-13.79658 -42.87703,-44.61791 -86.6689,-88.380376 -131.35321,-131.188072 -2.72039,-2.521645 -5.32184,-5.595037 -9.39727,-5.249722 z m 58.62891,88.712894 c 19.13802,19.11263 38.27604,38.22526 57.41406,57.33789 C 378.3244,266.51981 268.4409,375.80021 158.52148,485.04883 120.33631,446.8577 82.150109,408.6676 43.962891,370.47852 c 6.935854,-6.38555 13.587019,-14.61681 20.935547,-19.79493 10.463872,9.46053 20.176805,19.70883 30.230468,29.59571 5.956214,-5.91226 11.910324,-11.82665 17.863284,-17.74219 -10.16497,-10.18464 -20.333718,-20.3655 -30.500002,-30.54883 6.884114,-6.88411 13.768229,-13.76823 20.652342,-20.65234 16.66086,16.64968 33.32176,33.29934 49.98047,49.95117 5.95622,-5.92364 11.91403,-11.83128 17.87109,-17.75391 -16.49949,-16.51092 -33.00105,-33.01978 -49.5,-49.53125 6.70937,-6.72683 13.4177,-13.4547 20.125,-20.18359 9.90868,9.23859 18.71961,19.98386 29.54297,28.10937 5.05145,-0.86882 8.10641,-6.62149 12.0215,-9.66056 7.45756,-4.46499 5.55889,-8.91749 -0.81455,-13.36204 -7.62643,-7.63879 -15.25362,-15.27682 -22.88078,-22.9149 6.88477,-6.88476 13.76954,-13.76953 20.6543,-20.65429 16.33293,16.32463 32.66828,32.64682 49.00195,48.9707 6.10417,-6.10417 12.20834,-12.20833 18.3125,-18.3125 -16.32242,-16.32927 -32.64264,-32.66074 -48.96289,-48.99219 7.0722,-6.64102 13.85141,-14.82699 21.35157,-20.34961 10.1579,9.12602 19.547,19.06148 29.2832,28.62696 5.95418,-5.91722 11.90594,-11.82245 17.85937,-17.74024 -9.83412,-9.8497 -19.66295,-19.70224 -29.49804,-29.55078 6.88411,-6.88411 13.76823,-13.76823 20.65234,-20.65234 16.49432,16.4855 32.99018,32.96945 49.48438,49.45508 5.31068,-5.60502 12.49899,-9.92318 16.46093,-16.64649 -1.15392,-4.88525 -6.76472,-7.93907 -9.7021,-11.96745 -12.44947,-12.90262 -25.25306,-25.45831 -37.89165,-38.17513 6.70937,-6.72683 13.4177,-13.4547 20.125,-20.18359 9.84475,9.82713 19.68615,19.65761 29.53125,29.48437 6.09866,-6.10186 12.19891,-12.20213 18.30078,-18.30078 -9.8276,-9.84362 -19.65437,-19.68807 -29.48242,-29.53125 6.89895,-6.880342 13.79739,-13.761203 20.69532,-20.642575 16.32209,16.330905 32.64258,32.663405 48.96484,48.994145 5.94271,-5.94271 11.88542,-11.88542 17.82812,-17.82813 -16.32242,-16.329273 -32.64264,-32.660745 -48.96289,-48.992187 6.71043,-6.730329 13.42137,-13.460146 20.13282,-20.189453 19.13997,19.113932 38.27994,38.227865 57.41992,57.3418 z"
+       style="fill:#546e7a;fill-opacity:1" />
+  </g>
+</svg>
