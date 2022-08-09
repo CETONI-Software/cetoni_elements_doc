@@ -140,7 +140,7 @@ kontinuierlichen Fluss starten oder einen bereits laufenden
 kontinuierlichen Fluss ändern. Damit diese Funktion ohne Fehler
 ausgeführt wird, müssen Sie entweder vorher einen kontinuierlichen Fluss
 für zwei Pumpen konfiguriert oder die Scriptfunktion :ref:`Continuous
-Flow <Funktion Kontinuierlicher Fluss – Continuous Flow>`
+Flow <funktion kontinuierlicher fluss – *continuous flow*>`
 ausgeführt haben.
 
 .. image:: ./Pictures/100002010000021900000072852784EDF6312364.png

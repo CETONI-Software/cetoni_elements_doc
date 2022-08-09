@@ -52,6 +52,7 @@ Navigation durch dieses Dokument unterstützen:
    qmixdevices_DE/qmixdevices_DE.rst
    scriptingsystem_part1_DE/scriptingsystem_part1_DE.rst
    scriptingsystem_part2_DE/scriptingsystem_part2_DE.rst
+   javascript_DE/javascript_DE.rst
    nemesys_DE/nemesys1_setup_DE.rst
    qmixio_DE/qmixio_DE.rst
    qmixcontroller_DE/qmixcontroller_DE.rst
@@ -74,5 +75,4 @@ Navigation durch dieses Dokument unterstützen:
 ..
    Appendix_EN/Appendix_EN.rst
 
-   missing: javascript_EN/javascript_EN.rst
-            database_DE/database_DE.rst
+   missing: database_DE/database_DE.rst

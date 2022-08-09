@@ -84,10 +84,10 @@ synonym verwendet.
 
 .. image:: Pictures/client_server.png
 
-   Jeder SiLA Server hat eine bestimmte Anzahl von Features implementiert. Die 
-   **SiLA-Features** sind eine Schlüsselkomponente des SiLA-2-Standards, da sie 
-   die Interaktion zwischen dem SiLA-Client und dem SiLA-Server definieren. Jedes 
-   einzelne Feature beschreibt einen bestimmten Aspekt des Gesamtverhaltens des Servers.
+Jeder SiLA Server hat eine bestimmte Anzahl von Features implementiert. Die 
+**SiLA-Features** sind eine Schlüsselkomponente des SiLA-2-Standards, da sie 
+die Interaktion zwischen dem SiLA-Client und dem SiLA-Server definieren. Jedes 
+einzelne Feature beschreibt einen bestimmten Aspekt des Gesamtverhaltens des Servers.
 
 Die Merkmale eines Geräts (d. h. eines SiLA-Servers) werden in einer XML-Datei 
 beschrieben, in der die Funktionalität beschrieben wird:
