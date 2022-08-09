@@ -72,6 +72,4 @@ Navigation durch dieses Dokument unterstützen:
    spectroscopy_DE/spectroscopy_DE.rst
    daq_DE/daq_DE.rst
    canopentools_DE/canopentools_DE.rst
-
-..
-   Appendix_EN/Appendix_EN.rst
+   Appendix_DE/Appendix_DE.rst

@@ -502,7 +502,7 @@ Die analogen Eingänge der Nemesys Module messen die Eingangsspannung von
 festlegen. Dadurch können Sie z.B. den Spannungswert von 0 – 5000 mV in
 einen Druckwert von 0 – 20 bar skalieren, wenn Sie einen Drucksensor
 angeschlossen haben. Details zur Konfiguration der Kanäle oder zur
-Skalierung finden Sie in der Dokumentation zum :ref:`Qmix I/O Plugin`.
+Skalierung finden Sie in der Dokumentation zum :ref:`I/O Plugin`.
 
 Im folgenden Beispiel verwenden wir einen Drucksensor mit diesem
 Messbereich: *0,5 V – 4,5 V* entspricht *0 – 20 bar*. Dieser Sensor ist
@@ -541,7 +541,7 @@ Drucksensors in bar angezeigt (siehe Abbildung unten).
 
    Eine ausführliche Beschreibung der I/O        
    Kanäle, deren Konfiguration und zur Skalierung finden   
-   Sie in der :ref:`Qmix I/O Plugin`-Dokumentation.    
+   Sie in der :ref:`I/O Plugin`-Dokumentation.    
 
 
 .. _externe_ventile:

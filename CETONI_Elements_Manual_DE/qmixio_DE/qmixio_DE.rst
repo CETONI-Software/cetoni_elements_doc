@@ -1,10 +1,10 @@
-Qmix I/O Plugin
+I/O Plugin
 ===============
 
 Einführung
 ----------
 
-Das Qmix I/O Plugin dient zur Einbindung der Qmix I/O Module in die
+Das I/O Plugin dient zur Einbindung der I/O Module in die
 QmixElements Software und zur Anzeige von I/O Kanälen anderer Geräte wie
 z.B. Nemaxys / rotAXYS Positioniersystem oder Nemesys Spritzenpumpen.
 
@@ -14,7 +14,7 @@ z.B. Nemaxys / rotAXYS Positioniersystem oder Nemesys Spritzenpumpen.
 Liste der I/O Kanäle 
 ---------------------
 
-Alle Qmix I/O Kanäle werden in der Liste der I/O Kanäle angezeigt. Die
+Alle I/O Kanäle werden in der Liste der I/O Kanäle angezeigt. Die
 unterschiedlichen I/O-Typen (Analog Eingang, Analog Ausgang, Digital
 Eingang und Digital Ausgang) können Sie an den unterschiedlichen
 Symbolen vor dem Kanalnamen unterscheiden (siehe Abbildung). Wenn Sie
@@ -464,7 +464,7 @@ I/O Script-Funktionen
 Einführung
 ~~~~~~~~~~
 
-Das Qmix I/O Plugin enthält Script-Funktionen zum Schalten der digitalen
+Das I/O Plugin enthält Script-Funktionen zum Schalten der digitalen
 Ausgänge und zum Setzten von Ausgangswerten der analogen Ausgänge.
 
 .. image:: Pictures/1000020100000123000000778D7426E56265EAC3.png

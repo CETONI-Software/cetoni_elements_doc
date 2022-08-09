@@ -1,4 +1,4 @@
-Qmix Ventil Plugin
+Ventil Plugin
 ==================
 
 Einführung
@@ -201,8 +201,8 @@ Ventil Script Funktionen
 
 .. image:: Pictures/10000201000000F70000003E8592638162A9459E.png
 
-Das Qmix Ventil-Plugin enthält eine Script Funktion für das Umschalten
-der Qmix Ventile aus einem Script heraus.
+Das Ventil-Plugin enthält eine Script Funktion für das Umschalten
+der Ventile aus einem Script heraus.
 
 Funktion Ventil umschalten - Switch Valve 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

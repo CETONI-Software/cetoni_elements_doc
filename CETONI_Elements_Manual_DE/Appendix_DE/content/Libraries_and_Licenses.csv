@@ -1,0 +1,44 @@
+Library,Link to License information,Link to Library
+Abseil,https://github.com/CETONI-Software/3rdparty-abseil-cpp/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-abseil-cpp
+Aqt StyleSheets,https://github.com/CETONI-Software/3rdparty-aqt-stylesheets/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-aqt-stylesheets
+Armadillo,https://opensource.org/licenses/Apache-2.0,http://arma.sourceforge.net/
+BLAS,http://www.netlib.org/blas/,http://www.netlib.org/blas/
+boost,https://www.boost.org/LICENSE_1_0.txt,https://www.boost.org/
+C++ Machine Objects,https://opensource.org/licenses/mit-license.php,http://ehiti.de/machine_objects
+cmu1394,http://www.gnu.org/licenses/lgpl.html,http://www.cs.cmu.edu/~iwan/1394/
+Coin 3D – Coin,https://github.com/CETONI-Software/3rdparty-coin3d/blob/master/COPYING,https://github.com/CETONI-Software/3rdparty-coin3d
+Coin 3D – SoQt,https://github.com/CETONI-Software/3rdparty-soqt/blob/master/COPYING,https://github.com/CETONI-Software/3rdparty-soqt
+Dr Mingw,https://github.com/CETONI-Software/3rdparty-drmingw/blob/master/LICENSE.txt,https://github.com/CETONI-Software/3rdparty-drmingw
+Embedded Widgets for Qt,https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets/blob/main/LICENSE.txt,https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets
+FCL -- The Flexible Collision Library,https://github.com/CETONI-Software/3rdparty-fcl/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-fcl
+gRPC,https://github.com/grpc/grpc/blob/master/LICENSE,https://github.com/grpc/grpc
+LAPACK,http://www.netlib.org/lapack/LICENSE.txt,http://www.netlib.org/lapack/
+libccd,https://github.com/CETONI-Software/3rdparty-libccd/blob/master/BSD-LICENSE,https://github.com/CETONI-Software/3rdparty-libccd
+libiconv,https://www.gnu.org/software/libiconv/,https://www.gnu.org/software/libiconv/
+libserialport,https://opensource.org/licenses/lgpl-3.0.html,https://sigrok.org/wiki/Libserialport
+libxml2,https://gitlab.gnome.org/GNOME/libxml2/-/blob/master/Copyright,https://gitlab.gnome.org/GNOME/libxml2
+libxslt,https://gitlab.gnome.org/GNOME/libxslt/-/blob/master/Copyright,https://gitlab.gnome.org/GNOME/libxslt
+log4cplus,https://opensource.org/licenses/BSD-2-Clause,https://github.com/log4cplus/log4cplus
+Nlopt,https://github.com/CETONI-Software/3rdparty-nlopt/blob/master/COPYING,https://github.com/CETONI-Software/3rdparty-nlopt
+ODE,https://bitbucket.org/odedevs/ode/src/master/LICENSE.TXT,https://bitbucket.org/odedevs/ode/src/master/
+OpenCV,https://opencv.org/license.html,https://opencv.org/
+protobuf,https://github.com/protocolbuffers/protobuf/blob/master/LICENSE,https://github.com/protocolbuffers/protobuf
+PythonQt,https://github.com/CETONI-Software/3rdparty-pythonqt/blob/master/README.md,https://github.com/CETONI-Software/3rdparty-pythonqt
+QDeferred,https://github.com/CETONI-Software/3rdparty-QDeferred/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-QDeferred
+Qt Advanced Docking System,https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System,https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System/blob/master/LICENSE
+Qt Advanced Stylesheets,https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets/blob/main/LICENSE,https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets
+Qt5,https://doc.qt.io/qt-5/lgpl.html,https://www.qt.io/
+QtZeroConf,https://github.com/CETONI-Software/3rdparty-QtZeroConf/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-QtZeroConf
+QuaZIP,https://github.com/stachenov/quazip/blob/master/COPYING,https://github.com/stachenov/quazip
+Qwt,https://qwt.sourceforge.io/qwtlicense.html,https://qwt.sourceforge.io/
+RE2,https://github.com/google/re2/blob/master/LICENSE,https://github.com/google/re2
+Robotics Library,https://github.com/CETONI-Software/3rdparty-roboticslibrary/blob/master/LICENSE.md,https://github.com/CETONI-Software/3rdparty-roboticslibrary
+sigslot,http://sigslot.sourceforge.net/,http://sigslot.sourceforge.net/
+sila_cpp,https://gitlab.com/SiLA2/sila_cpp/-/blob/master/LICENSE,https://gitlab.com/SiLA2/sila_cpp
+Solid,https://github.com/CETONI-Software/3rdparty-solid3/blob/master/LICENSE_QPL.txt,https://github.com/CETONI-Software/3rdparty-solid3
+SQLite,https://www.sqlite.org/copyright.html,https://www.sqlite.org/index.html
+TINY UTF8,https://github.com/DuffsDevice/tinyutf8/blob/master/LICENCE,https://github.com/DuffsDevice/tinyutf8
+Units,https://github.com/LLNL/units/blob/master/LICENSE,https://github.com/LLNL/units
+ur_rtde,https://gitlab.com/cetoni-3rdparty/ur_rtde/-/blob/master/LICENSE,https://gitlab.com/cetoni-3rdparty/ur_rtde
+zlib,https://www.zlib.net/zlib_license.html,https://zlib.net/
+µpb,https://github.com/protocolbuffers/upb/blob/master/LICENSE,https://github.com/protocolbuffers/upb

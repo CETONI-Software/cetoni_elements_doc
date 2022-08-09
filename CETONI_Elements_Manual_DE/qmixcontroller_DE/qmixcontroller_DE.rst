@@ -1,10 +1,10 @@
-Qmix Controller Plugin
+Controller Plugin
 ======================
 
 Einführung 
 -----------
 
-Das Qmix Controller Plugin dient zur Einbindung der Qmix Reglermodule in
+Das Controller Plugin dient zur Einbindung der Qmix Reglermodule in
 die QmixElements Software und zur Erzeugung benutzerdefinierter
 Regelkreise. Folgende Module werden unterstützt:
 
@@ -161,7 +161,7 @@ Skalierung zu öffnen, wählen Sie im
 
 Die Konfiguration der
 allgemeinen Kanaleinstellungen sowie die Kalibrierung der Reglerkanäle
-sind identisch mit der Konfiguration der :ref:`Qmix I/O Plugin`-Kanäle. 
+sind identisch mit der Konfiguration der :ref:`I/O Plugin`-Kanäle. 
 Lesen Sie für eine detaillierte Beschreibung der Konfiguration
 den Abschnitt :ref:`I/O Kanal Konfiguration`.
 
