@@ -393,7 +393,7 @@ Example 2 - Create SQLite Database Schema
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example shows, how to create the following database schema in 
-an SQLite database uns JavaScript code:
+an SQLite database using JavaScript code:
 
 .. image:: Pictures/create_schema_javascript.svg
    :width: 100%

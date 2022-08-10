@@ -263,7 +263,7 @@ Selecting the X-Axis Unit
 You can choose from various units for the x-axis:
 
 +---------------------+-----------------------------------------------+
-| Unit                | MEANING                                       |
+| Unit                | Meaning                                       |
 +=====================+===============================================+
 | Wavelengths [nm]    | Wavelength of x-axis in nanometers            |
 +---------------------+-----------------------------------------------+
