@@ -23,21 +23,21 @@ Damit die Waage optimal mit der Software arbeitet, stellen
 Sie am Geräte bitte die folgenden Parameter ein:
 
 Menü „GERAET“ / „RS232“
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktivieren Sie im Menü *GERAET / RS232* die rot markierten Werte:
 
 .. image:: Pictures/10000201000003E9000003139BC03875F46B9199.png
 
 Menü „GERAET“ / „USB“
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktivieren Sie im Menü *GERAET / USB* die rot markierten Werte:
 
 .. image:: Pictures/10000201000003E9000003139BC03875F46B9199.png
 
 Menü „DAT.AUSG“ / „KOMM.SBI“
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktivieren Sie im Menü *DAT.AUSG / KOMM.SBI* die rot markierten Werte:
 
@@ -87,3 +87,4 @@ dass der Wert 1 :guinum:`❷` in das Property :code:`Tare` :guinum:`❸` des Waa
 geschrieben wird (siehe Abbildung unten)
 
 .. image:: Pictures/100002010000030A0000016ABF280E02DB3E0E44.png
+    

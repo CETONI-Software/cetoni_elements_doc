@@ -673,7 +673,7 @@ Einführung
 
 Analysekanäle bieten Ihnen die Möglichkeit, Analysen der aufgenommenen
 Spektraldaten online durchzuführen und die Ergebnisse der Analysen über
-Analysekanäle in die QmixElements Skriptprogrammierung einzubinden.
+Analysekanäle in die CETONI Elements Skriptprogrammierung einzubinden.
 Damit steht Ihnen ein leistungsfähiges Werkzeug zur Verfügung um
 Spektraldaten online zu analysieren und dann auf Basis der
 Analyseergebnisse andere Geräte zu steuern oder bestimmte Ereignisse
@@ -681,7 +681,7 @@ auszulösen.
 
 Für jede Analyse wird ein „analoger“ Eingangskanal in der Liste der I/O
 Kanäle angelegt (siehe Abbildung unten). Diese Eingangskanäle können wie
-jeder andere analoge Kanal in das QmixElements Scriptsystem eingebunden
+jeder andere analoge Kanal in das CETONI Elements Scriptsystem eingebunden
 und ausgewertet werden.
 
 .. image:: Pictures/10000000000001F7000001142841551EFEB1EACB.png
@@ -850,7 +850,7 @@ Einführung
 ~~~~~~~~~~
 
 Das Analyze IQ Add-on ermöglicht die Einbindung der leistungsfähigen
-chemometrischen Analysefunktionen von Analyze IQ in die QmixElements
+chemometrischen Analysefunktionen von Analyze IQ in die CETONI Elements
 Software.
 
 In praktischen Anwendungen führt die Analyse von Stoffgemischen oder
@@ -886,7 +886,7 @@ Chemometrische Modelle werden komfortabel mit *Analyze IQ Lab* erstellt
 Die Modelle können dann auch von Nicht-Experten
 angewandt werden, um Daten schnell in Ergebnisse und Entscheidungen zu
 verwandeln. Über eine Schnittstelle zur *Analyze IQ RealTime Software*
-ist diese Analysefunktionalität in die QmixElements Software integriert
+ist diese Analysefunktionalität in die CETONI Elements Software integriert
 und kann über die
 :ref:`Analysekanäle <Echtzeitanalyse mit Hilfe von Analyse-Kanälen>`
 zur Echtzeit-Analyse von Stoffgemischen verwendet werden.
@@ -904,7 +904,7 @@ Analyze IQ Add-on. Um die Lizenzdatei zu importieren, wählen Sie in der
 Software den Menüpunkt :menuselection:`Edit --> Import Analyze IQ License`.
 
 Nach dem Import der Lizenzdaten, wird der Analyze IQ RealTime Server
-gestartet, und die QmixElements Software verbindet sich zu dem
+gestartet, und die CETONI Elements Software verbindet sich zu dem
 Analyseserver.
 
 .. image:: Pictures/100000000000025200000083F1434245C5549A11.png
@@ -913,7 +913,7 @@ Analyseserver.
 Spektraldaten für die Modellbildung erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die QmixElements Software kann Spektraldaten im aiq-Dateiformat
+Die CETONI Software kann Spektraldaten im aiq-Dateiformat
 speichern und damit die Modellbildung in der Analyze IQ Software
 erheblich vereinfachen. Für die Modellbildung von
 Klassifizierungsmodellen (Substanz vorhanden ja /nein) oder
@@ -967,7 +967,7 @@ Prozent (Quantifizierungsmodell) oder das Vorhandensein einer Substanz
 (Klassifizierungsmodell) als „Yes“ oder „No“ Auswahl einträgt (siehe
 Abbildung).
 
-Dieser aufwändige Prozess kann in QmixElements mit wenigen Mausklicks
+Dieser aufwändige Prozess kann in der Software mit wenigen Mausklicks
 erledigt werden. Wählen Sie zur Erstellung eines Datensatzes im
 Hauptmenü den Punkt :menuselection:`Edit --> Create Analyze IQ Dataset`.
 
@@ -1043,7 +1043,7 @@ Klicken Sie dafür in der
 Analyze IQ Software den Punkt :guilabel:`Import from Multiple Spectrum File`
 :guinum:`❶` an. Wählen Sie dann den Ordner, der die Spektren enthält :guinum:`❷` und
 wählen Sie die CSV Datei aus :guinum:`❸`, die Sie vorher als Datensatz mit der
-QmixElements Software erstellt haben. Klicken Sie dann auf :guilabel:`Next` :guinum:`❹`, um
+CETONI Software erstellt haben. Klicken Sie dann auf :guilabel:`Next` :guinum:`❹`, um
 alle Daten zu importieren.
 
 Nach dem Datenimport können Sie mit der Modellbildung starten, die
@@ -1054,7 +1054,7 @@ unten).
    :alt: Analyze IQ Erstellung eines Analysemodells aus importieren Spektren
 
 Am Ende der Modellbildung erhalten Sie ein fertiges
-Analysemodell (:file:`*.aiqm`), welches Sie dann wieder in die QmixElements
+Analysemodell (:file:`*.aiqm`), welches Sie dann wieder in der CETONI Elements
 Software für automatische Analysen verwenden können. Im folgenden
 Abschnitt erfahren Sie, wie das funktioniert.
 
@@ -1063,7 +1063,7 @@ Analysemodelle importieren
 
 Um chemometrische Analysen durchführen zu können, benötigen Sie fertige
 Analysemodelle. Diese Modelle (:file:`*.aiqm` Dateien) müssen Sie über die
-QmixElements Software importieren, um Sie dem *Analyze IQ RealTime
+CETONI Elements Software importieren, um Sie dem *Analyze IQ RealTime
 Server* hinzuzufügen. Wählen Sie für den Import den Menüpunkt 
 :menuselection:`Edit --> Import Analyze IQ Model`.
 

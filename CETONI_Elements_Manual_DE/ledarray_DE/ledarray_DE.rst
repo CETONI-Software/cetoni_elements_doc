@@ -79,8 +79,7 @@ LED.
 .. image:: Pictures/1000000000000106000000AE9333AD7C.png
    :alt: LED Kanal ein- / ausschalten
 
-Da alle LED-Kanäle in der
-QmixElements Software analoge Ausgangskanäle sind, können Sie die
+Da alle LED-Kanäle in der Software analoge Ausgangskanäle sind, können Sie die
 Helligkeit einzelner LED-Kanäle auch über das Fenster der :ref:`I/O-Kanäle<I/O Plugin>` 
 ändern (siehe Abbildung unten).
 
@@ -238,7 +237,7 @@ Helligkeit ändern Sie über das Eingabefeld :guinum:`❷` oder den Schieberegle
 Um einen Kanal ein-
 und auszuschalten, klicken Sie mit der linken Maustaste auf die LED :guinum:`❸`.
 
-Da alle LED-Kanäle in der QmixElements Software analoge Ausgangskanäle
+Da alle LED-Kanäle in der Software analoge Ausgangskanäle
 sind, können Sie die Helligkeit einzelner LED-Kanäle auch über das
 Fenster der :ref:`I/O-Kanäle<I/O Plugin>` ändern (siehe Abbildung unten).
 
@@ -488,7 +487,7 @@ Funktion Analogausgang setzen - *Set Analog Out*
    :align: left
 
 Alle LED
-Kanäle sind in der QmixElements Software normale analoge Ausgangskanäle.
+Kanäle sind in der Software normale analoge Ausgangskanäle.
 Sie können deshalb für das Einstellen der Helligkeit einzelner Kanäle
 die Funktion *Set Analog Out* aus der Kategorie :ref:`I/O Script-Funktionen`
 verwenden.

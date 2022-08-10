@@ -535,7 +535,7 @@ Script Funktionen
 .. image:: ./Pictures/10000201000000FB0000005C7BE945F338BAE398.png
    :alt: DAQ Script Funktionen
 
-Die Datenerfassung des DAQ Plugins kann über das QmixElements
+Die Datenerfassung des DAQ Plugins kann über das CETONI Elements
 Scriptsystem gestartet und gestoppt werden, um die Aufnahme von Daten zu
 automatisieren oder mit anderen Prozessen zu synchronisieren. Die
 entsprechenden Funktionen finden Sie in der :guilabel:`DAQ` Kategorie der

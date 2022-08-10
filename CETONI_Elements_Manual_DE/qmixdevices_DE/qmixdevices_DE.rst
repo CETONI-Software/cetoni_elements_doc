@@ -314,8 +314,8 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 
 #. Klicken Sie :guilabel:`Next`, um das QmixQ+ Modul zu konfigurieren.
 #. Setzen sie auf der folgenden Seite mit der linken Maustaste das
-   Häkchen neben *Import andactivate new device configuration into
-   QmixElements now*. Auf diese Weise aktiviert CETONI Elements die
+   Häkchen neben *Import and activate new device configuration into
+   CETONI Elements now*. Auf diese Weise aktiviert CETONI Elements die
    neue Gerätekonfiguration und startet nach dem Beenden des
    Konfigurationsassistenten neu.
 

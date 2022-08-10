@@ -278,7 +278,7 @@ Datensatzes berechnen.
 Script Funktionen
 -----------------
 
-Der CSV-Datenlogger kann über das QmixElements Scriptsystem gestartet
+Der CSV-Datenlogger kann über das Scriptsystem der Software gestartet
 und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
 mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
 finden Sie in der :guilabel:`Logging`-Kategorie der verfügbaren Scriptfunktionen.

@@ -5,8 +5,8 @@ Einführung
 ----------
 
 Das I/O Plugin dient zur Einbindung der I/O Module in die
-QmixElements Software und zur Anzeige von I/O Kanälen anderer Geräte wie
-z.B. Nemaxys / rotAXYS Positioniersystem oder Nemesys Spritzenpumpen.
+CETONI Elements Software und zur Anzeige von I/O Kanälen anderer Geräte wie
+z.B. Nemaxys / Rotaxys Positioniersystem oder Nemesys Spritzenpumpen.
 
 .. image:: Pictures/10000201000001F6000001EFFBB551A475EADF72.png
    :alt: Liste der I/O Kanäle
@@ -413,7 +413,7 @@ Die Software ermöglicht das Anlegen von virtuellen I/O Kanälen. Diese
 Kanäle sind keinem physischen I/O-Gerät zugeordnet, sondern eine Art
 Wertespeicher. Sie können die virtuellen Kanäle mit Werten beschreiben
 und diese Auslesen – genau wie bei einem Speicher. Mit Hilfe dieser
-Kanäle, können Sie z.B. berechnete Werte aus einem QmixElements Script
+Kanäle, können Sie z.B. berechnete Werte aus einem CETONI Elements Script
 im grafischen Logger anzeigen. Sie müssen nur den Kanal anlegen, im
 Logger den Kanal hinzufügen, und können dann Werte aus dem Script in den
 Kanal schreiben.

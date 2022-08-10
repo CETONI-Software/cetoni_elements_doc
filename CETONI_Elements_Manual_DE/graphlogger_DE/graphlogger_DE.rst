@@ -537,7 +537,7 @@ Script Funktionen
    :alt: Logger Script Funktionen
 
 
-Der grafische Logger kann über das QmixElements Scriptsystem gestartet
+Der grafische Logger kann über das Scriptsystem der Software gestartet
 und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
 mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
 finden Sie in der :guilabel:`Logging` Kategorie der verfügbaren Scriptfunktionen.

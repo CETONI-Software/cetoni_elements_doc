@@ -5,7 +5,7 @@ Einführung
 -----------
 
 Das Controller Plugin dient zur Einbindung der Qmix Reglermodule in
-die QmixElements Software und zur Erzeugung benutzerdefinierter
+die CETONI Elements Software und zur Erzeugung benutzerdefinierter
 Regelkreise. Folgende Module werden unterstützt:
 
 .. image:: Pictures/controller_devices.png
@@ -511,7 +511,7 @@ Mit der Nachstellzeit T\ :sub:`I` kann die Geschwindigkeit des I-Anteils
 verändert werden. Je kleiner T\ :sub:`I` desto schneller baut der
 Integrieranteil seine Stellgröße auf. Aus der Gleichung geht hervor,
 dass auch die Proportionalverstärkung K auf den I-Anteil wirkt. In
-QmixElements können sie den I-Anteil nur in Verbindung mit einem
+CETONI Elements können sie den I-Anteil nur in Verbindung mit einem
 Proportionalanteil konfigurieren (PI-Regler). Die Reglergleichung
 besteht somit immer aus der Summe von K- und I-Anteil.
 
@@ -687,8 +687,8 @@ Die Stellgröße enthält 3 Anteile.
 +----------+----------------------------------+
 
 
-Vorbereitung der Reglereinstellung in QmixElements 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Vorbereitung der Reglereinstellung in CETONI Elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zunächst sollten sie sich den aktuellen Wert und die Stellgröße ihres
 Regelkanals im Plot des Data-Loggers anzeigen lassen. (siehe Kapitel
@@ -736,7 +736,7 @@ Festlegen der Stellgrößengrenzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die minimale (U\ :sub:`min`) und maximale (U\ :sub:`max`) Stellgröße der
-QmixElements-Regler kann limitiert werden. Die Stellgrößen sollten über
+CETONI Elements-Regler kann limitiert werden. Die Stellgrößen sollten über
 einen ausreichenden Hub verfügen, sodass die angestrebten Sollwerte
 erreicht werden können. Gleichzeitig sollten sie darauf achten, dass
 ihre Regelstrecke nicht durch zu groß gewählte Grenzwerte beschädigt
