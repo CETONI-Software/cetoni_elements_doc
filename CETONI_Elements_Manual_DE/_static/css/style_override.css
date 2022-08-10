@@ -263,6 +263,8 @@ html[data-theme='dark'] .rst-content .kbd {
 .inlineimg img {
   display: inline;
   margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;  
 }
 
 .wy-nav-content {
