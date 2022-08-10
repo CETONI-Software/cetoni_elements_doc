@@ -7,16 +7,14 @@ Einführung
 .. image:: Pictures/1000000000000068000000579F580EDEB3E6712F.png
    :align: left
 
-Durch Drücken der Schaltfläche :guilabel:`Tubing Pump` in der
-Seitenleiste können Sie zum Arbeitsbereich (Workbench) des
-Schlauchpumpen Plugins wechseln.
+Drücken Sie die Schaltfläche :guilabel:`Tubing Pump` in der Seitenleiste, um 
+den Schlauchpumpe-View anzuzeigen. Der View zeigt die Bedienpanels für alle 
+Schlauchpumpen an.
 
 |
 
 .. image:: Pictures/10000000000002370000016FE8244C6EB3A2238E.png
    :alt: Tubing Pump Arbeitsbereich
-
-Der Arbeitsbereich enthält für jede einzelne Schlauchpumpe ein eigenes Bedienpanel.
 
 Schlauchpumpen Bedienpanel
 --------------------------
@@ -83,11 +81,11 @@ Um manuell zu Dosieren, gehen Sie wie folgt vor:
 
 .. rst-class:: guinums
 
-1. Geben Sie nun im Feld :guilabel:`Flow` die
+1. Geben Sie zuerst im Feld :guilabel:`Flow` die
    gewünschte Flussrate ein. Negative Flussraten bewirken eine Änderung
    der Drehrichtung des Pumpenkopfes. Sie können somit abgeben und
    aufsaugen.
-2. Geben Sie nun im Feld :guilabel:`Target Volume` das Volumen, welches Sie
+2. Geben Sie dann im Feld :guilabel:`Target Volume` das Volumen, welches Sie
    dosieren möchten. Wenn Sie für das Volumen den Wert 0 eingeben,
    dosiert die Pumpe im Flussmodus. D.h. Die Pumpe dosiert solange, bis
    die Dosierung wieder manuell gestoppt wird. Ein negatives Volumen

@@ -135,8 +135,8 @@ benachrichtigt zu werden.
    `Blogbeitrag <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
 
-Einführung
-----------
+SiLA UI Übersicht
+-----------------
 
 Durch Anklicken der Schaltfläche :guilabel:`SiLA 2` und anschließend *Server
 Overview* :guinum:`❶` in der Seitenleiste wechseln Sie zum *SiLA 2 Plugin*
@@ -321,15 +321,16 @@ Verfügung steht :guinum:`❸`.
 SiLA Commands UI
 ~~~~~~~~~~~~~~~~~~
 
-Wenn ein Befehl Parameter, Metadaten oder Rückgabewerte hat, wie der Befehl 
-:guilabel:`Set Fill Level` :guinum:`❶` in der folgenden Abbildung, kann er auch 
+Wenn ein SiLA Command über Parameter, Metadaten oder Rückgabewerte verfügt, 
+wie z.B. der Befehl 
+:guilabel:`Set Fill Level` :guinum:`❶` in der folgenden Abbildung, kann er
 erweitert werden, um die Parameter :guinum:`❷` oder Metadaten einzugeben und die 
 Rückgabewerte anzuzeigen. Das folgende Bild zeigt alle Befehle der Funktion 
 :guilabel:`Pump Fluid Dosing Service`:
 
 .. image:: Pictures/sila_commands.png
 
-Wenn ein Befehl keine oder nur einen Parameter hat, wie z.B. der Befehl 
+Wenn ein SiLA Command keine oder nur einen Parameter hat, wie z.B. der Befehl 
 :guilabel:`Generate Flow` in der oberen Abbildung, dann kann der Befehl nicht 
 erweitert werden und es wird höchstens ein Eingabefeld direkt neben dem 
 Befehlsnamen :guinum:`❸` angezeigt. 
@@ -339,7 +340,7 @@ Um den Befehl auszuführen, klicken Sie auf die Schaltfläche :guilabel:`Ausfüh
 SiLA Properties UI
 ~~~~~~~~~~~~~~~~~~~
 
-Properties lassen sich normalerweise auch nicht aufklappen. Die folgende Abbildung 
+Properties lassen sich normalerweise nicht aufklappen. Die folgende Abbildung 
 zeigt die SiLA-Eigenschaften der Funktion :guilabel:`Analog In Channel Provider`. 
 Hier wird nur ein Feld mit dem aktuellen Wert der Property angezeigt :guinum:`❶`. 
 Rechts daneben befindet sich die Schaltfläche zum erneuten Abfragen der
@@ -389,9 +390,8 @@ betroffenen Server schließen wollen, erscheint folgendes Dialogfenster:
 
 Mit einem Klick auf :guilabel:`Yes` wird die Oberfläche (*View*) für
 diesen Server geschlossen und neu erstellt, wenn der gleiche Server
-später wieder verbunden wird.
-
-Durch Klicken auf :guilabel:`No` bleibt der View erhalten und wird nur
+später wieder verbunden wird. Durch Klicken auf :guilabel:`No` bleibt der View
+erhalten und wird nur
 ausgeblendet. Dadurch können Sie den View später wieder öffnen, um
 beispielsweise bestimmte Parameter oder Command Responses zu sehen.
 Zusätzlich wird der View automatisch wiederverwendet, wenn die
@@ -405,7 +405,8 @@ Einführung
 ~~~~~~~~~~
 
 Das SiLA 2-Plugin enthält verschiedene Script-Funktionen zur
-scriptgesteuerten Ausführung von Commands und Abfrage von Properties.
+scriptgesteuerten Ausführung von SiLA Commands und zur Abfrage von 
+SiLA Properties.
 
 .. image:: Pictures/sila_script_functions.png
 
@@ -417,7 +418,7 @@ Command ausführen – *Execute SiLA Command*
    :height: 60
    :align: left
 
-Mit dieser Funktion können Sie einen Command ausführen und
+Mit dieser Funktion können Sie einen SiLA Command ausführen und
 das Ergebnis der Ausführung in eine Variable speichern.
 
 .. image:: Pictures/1000000100000345000001D7A7109FF96388C318.png
@@ -454,7 +455,7 @@ Property lesen – *Read SiLA Property*
    :height: 60
    :align: left
 
-Mit dieser Funktion können Sie eine Property abfragen und den
+Mit dieser Funktion können Sie eine SiLA Property abfragen und den
 Wert in eine Variable speichern.
 
 .. image:: Pictures/1000000100000345000001FD6EA9B6588936741F.png
@@ -476,15 +477,15 @@ Auf SiLA Property-Wert warten – *Wait For SiLA Property Value*
    :height: 60
    :align: left
 
-Mit dieser Funktion können Sie die Scriptausführung darauf
-warten lassen, dass eine bestimmte Property eine definierte Bedingung
-erfüllt. Die Funktion wird erst dann fortgesetzt, wenn die Bedingung
+Mit dieser Funktion können Sie die weitere Scriptausführung pausieren, bis 
+eine bestimmte Property eine definierte Bedingung erfüllt. 
+Die Funktion wird erst dann fortgesetzt, wenn die Bedingung
 erfüllt ist.
 
 .. image:: Pictures/100000010000034500000209E2A9E0C1D0F440CC.png
 
 Im Konfigurationsbereich wählen Sie zuerst, wie bei der
-Funktion `Read SiLA Property <property_lesen>`_ beschrieben, die Property 
+Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property 
 :guinum:`❶`, die Sie prüfen möchten, sowie die möglichen benötigten Metadaten aus.
 
 .. admonition:: Wichtig

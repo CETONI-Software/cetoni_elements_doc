@@ -30,12 +30,12 @@ angezeigt.
 Die unterschiedlichen Kanaltypen (Kühlmodul Q-, Heizmodul Q+ ...) können Sie
 an den unterschiedlichen Symbolen vor dem Kanalnamen unterscheiden
 (siehe Abbildung oben). Die Liste der Regelkanäle ist ein 
-:ref:`Werkzeugfenster<Views (Ansichten)>`, dass Sie durch Anklicken und Ziehen der Titelleiste
+:ref:`View <Views (Ansichten)>`, den Sie durch Anklicken und Ziehen der Titelleiste
 jederzeit an eine andere Position in der grafischen Oberfläche
 verschieben oder aus der Oberfläche als separates Fenster herauslösen
 können.
 
-Die Kanalliste zeigt ihnen alle verfügbaren Qmix-Regelkanäle in
+Die Kanalliste zeigt ihnen alle verfügbaren Regelkanäle in
 Tabellenform an. Folgende Spalten sind vorhanden:
 
 -  **Controller** - zeigt den Namen des Regelkanals und den Typ durch ein
@@ -361,7 +361,7 @@ Funktion Reglerparameter setzen - *Set Controller Param*
 
 Mit dieser Funktion können Sie einen neuen Sollwert an den
 Regelkanal übergeben oder den Regelkreis ein- und ausschalten. Klicken
-Sie zum Ein- / Ausschalten einfach auf die LED (:guilabel:`Control loop on / off`) 
+Sie zum Ein- / Ausschalten einfach auf die LED :guilabel:`Control loop on / off`
 im Konfigurationsbereich (Abbildung unten).
 
 |
@@ -556,45 +556,45 @@ Zusammenfassung
 Die folgende Tabelle fast die Wirkung der einzelnen Regelparameter
 zusammen.
 
-+----------------------+----------------------+----------------------+
-| PID-Parameter        | Ausregeln einer      | Anfahren des         |
-|                      | Störung der          | Sollwerts            |
-|                      | Regelstrecke         | (Führungsverhalten)  |
-|                      | (Störverhalten)      |                      |
-+======================+======================+======================+
-| K größer             | stärkere Reaktion    | schnelleres Anfahren |
-|                      | (schwächer gedämpft) |                      |
-+----------------------+----------------------+----------------------+
-| K kleiner            | schwächerer Reaktion | langsameres Anfahren |
-|                      | (stärker gedämpft)   |                      |
-+----------------------+----------------------+----------------------+
-| TI größer            | schwächere Reaktion, | langsameres Anfahren |
-|                      | im Allgemeinen zeigt | und Ausregeln der    |
-|                      | der I-Anteil nur     | bleibenden           |
-|                      | eine geringe         | Regelabweichung bei  |
-|                      | Reaktion, gerade auf | Verzugsstrecken      |
-|                      | kurzzeitige          |                      |
-|                      | Störungen            |                      |
-+----------------------+----------------------+----------------------+
-| TI kleiner           | stärkere Reaktion,   | schnelleres Anfahren |
-|                      | im Allgemeinen zeigt | und Ausregeln der    |
-|                      | der I-Anteil nur     | bleibenden           |
-|                      | eine geringe         | Regelabweichung bei  |
-|                      | Reaktion, gerade auf | Verzugsstrecken      |
-|                      | kurzzeitige          | (Überschwingen, wenn |
-|                      | Störungen            | T\ :sub:`I` zu       |
-|                      |                      | klein)               |
-+----------------------+----------------------+----------------------+
-| TD größer            | stärkere Reaktion    | langsameres Anfahren |
-|                      |                      | (stärkere Wirkung    |
-|                      |                      | gegen                |
-|                      |                      | Istwertänderung)     |
-+----------------------+----------------------+----------------------+
-| TD kleiner           | schwächere Reaktion  | schnelleres Anfahren |
-|                      |                      | (geringere Wirkung   |
-|                      |                      | gegen                |
-|                      |                      | Istwertänderung)     |
-+----------------------+----------------------+----------------------+
++---------------+----------------------+----------------------+
+| PID-Parameter | Ausregeln einer      | Anfahren des         |
+|               | Störung der          | Sollwerts            |
+|               | Regelstrecke         | (Führungsverhalten)  |
+|               | (Störverhalten)      |                      |
++===============+======================+======================+
+| K größer      | stärkere Reaktion    | schnelleres Anfahren |
+|               | (schwächer gedämpft) |                      |
++---------------+----------------------+----------------------+
+| K kleiner     | schwächerer Reaktion | langsameres Anfahren |
+|               | (stärker gedämpft)   |                      |
++---------------+----------------------+----------------------+
+| TI größer     | schwächere Reaktion, | langsameres Anfahren |
+|               | im Allgemeinen zeigt | und Ausregeln der    |
+|               | der I-Anteil nur     | bleibenden           |
+|               | eine geringe         | Regelabweichung bei  |
+|               | Reaktion, gerade auf | Verzugsstrecken      |
+|               | kurzzeitige          |                      |
+|               | Störungen            |                      |
++---------------+----------------------+----------------------+
+| TI kleiner    | stärkere Reaktion,   | schnelleres Anfahren |
+|               | im Allgemeinen zeigt | und Ausregeln der    |
+|               | der I-Anteil nur     | bleibenden           |
+|               | eine geringe         | Regelabweichung bei  |
+|               | Reaktion, gerade auf | Verzugsstrecken      |
+|               | kurzzeitige          | (Überschwingen, wenn |
+|               | Störungen            | T\ :sub:`I` zu       |
+|               |                      | klein)               |
++---------------+----------------------+----------------------+
+| TD größer     | stärkere Reaktion    | langsameres Anfahren |
+|               |                      | (stärkere Wirkung    |
+|               |                      | gegen                |
+|               |                      | Istwertänderung)     |
++---------------+----------------------+----------------------+
+| TD kleiner    | schwächere Reaktion  | schnelleres Anfahren |
+|               |                      | (geringere Wirkung   |
+|               |                      | gegen                |
+|               |                      | Istwertänderung)     |
++---------------+----------------------+----------------------+
 
 Programmierung des Regelkreises
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

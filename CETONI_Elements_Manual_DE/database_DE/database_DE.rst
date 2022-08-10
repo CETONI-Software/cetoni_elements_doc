@@ -2,20 +2,23 @@ Datenbank Add-on
 ===================
 
 Das Datenbank-Add-on bietet Unterstützung für SQL-Datenbanken. Es ermöglicht Ihnen, 
-Prozessdatenwerte über den SQL Data Logger in einer SQL-Datenbank zu protokollieren 
-und bietet Unterstützung für die Ausführung von SQL-Abfragen.
+Prozessdaten über den SQL Data Logger in einer SQL-Datenbank zu protokollieren 
+und unterstützt Sie bei der Erstellung und Ausführung von SQL-Abfragen.
 
 SQL-Datenbank-Logger
 --------------------------------
 
 Der SQL-Datenbanklogger ermöglicht die Protokollierung von Prozessdaten in einer 
 SQL-Datenbank. Der Logger ist nicht für die Aufzeichnung von Prozessdaten mit 
-sehr hohen Messraten gedacht, sondern für die Aufzeichnung wichtiger Prozessdaten 
+sehr hohen Abtastraten gedacht, sondern für die Aufzeichnung wichtiger Prozessdaten 
 über einen längeren Zeitraum zur Dokumentation von Experimenten oder 
 automatisierten Prozessen im Labor.
 
-Der SQL-Datenbanklogger unterstützt verschiedene Datenbanken wie SQLite, MySQL 
-oder PostgreSQL. Er wurde mit SQLite- und MySQL-Datenbanken getestet.
+.. admonition:: Important
+   :class: note
+
+   Der SQL-Datenbanklogger unterstützt verschiedene Datenbanken wie SQLite, MySQL 
+   oder PostgreSQL. Er wurde mit SQLite- und MySQL-Datenbanken getestet.
 
 
 Dialog zur Konfiguration des SQL-Loggers
@@ -23,9 +26,9 @@ Dialog zur Konfiguration des SQL-Loggers
 
 .. image:: Pictures/toolbar_sql_logger_buttons.png
    
-Wenn das Datenlogging-Plugin geladen wurde, zeigt die Symbolleiste zwei zusätzliche 
+Wenn das Datenbank Add-on geladen wurde, zeigt die Symbolleiste zwei zusätzliche 
 Schaltflächen für die Konfiguration des SQL-Datenbankloggers :guinum:`❶` und zum 
-Starten/Stoppen des Logging-Prozesses :guinum:`❷`.
+Starten/Stoppen der Datenaufzeichnung :guinum:`❷`.
 
 .. image:: Pictures/sql_log_config.svg
    :width: 60
@@ -40,11 +43,12 @@ Der Konfigurationsdialog enthält die folgenden Elemente:
 
 .. rst-class:: guinums
 
-#. **Geräteliste (Device List)** - zeigt alle Geräte oder Module an, die
-   aufzeichnungsfähige Daten geliefert haben. Die obige Filterauswahl dient 
-   zur Begrenzung der Liste auf bestimmte Gerätetypen, z. B. Ventile.
-#. **Logger-Kanäle** - listet alle Kanäle auf, die vom Logger aufgezeichnet 
-   werden können.
+#. **Geräteliste (Device List)** - die Geräteliste enthält alle Geräte von denen 
+   Prozessdaten aufgezeichnet werden können. Mit der Filterauswahl über der 
+   Geräteliste, können Sie diese nach einem bestimmten Gerätetyp (z.B. Ventile) 
+   filtern.
+#. **Logger-Kanäle** - hier sehen Sie in tabellarischer Form alle Kanäle die 
+   vom Logger aufgezeichnet werden.
 #. **Datenbankverbindung konfigurieren** - ermöglicht es dem Benutzer, 
    die Datenbankeinstellungen wie Datenbankserver und Port zu konfigurieren.
 
@@ -54,11 +58,12 @@ Die Tabelle :guilabel:`Logger Channels` zeigt die Konfiguration des Loggers.
 
 Die Tabelle enthält die folgenden Spalten:
 
-- **Device** - enthält den Gerätenamen, für den die Daten aufgezeichnet werden 
-  sollen, und sein Gerätesymbol.
-- **Property** - dies ist der Name der Geräteeigenschaft bzw. des Prozessdatenwerts, 
-  der aufgezeichnet werden soll. Sein Typ (numerisch oder boolesch) kann anhand 
-  des angezeigten Symbols identifiziert werden.
+-  **Device** – enthält den Gerätenamen des Gerätes, von dem ein
+   bestimmter Gerätewert aufgezeichnet werden soll und das Geräteicon
+-  **Property** – dies ist der Name der Geräteeigenschaft / des
+   Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
+   Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
+   dem Typ-Icon einfach erkennen.
 
    ============== ============================================
    |numeric_prop| Numerischer Wert
@@ -66,10 +71,11 @@ Die Tabelle enthält die folgenden Spalten:
    |text_prop|    Textwert
    ============== ============================================
 
-- **Intervall (s)** - das Messintervall in Sekunden. Die Mindestmesszeit 
+- **Intervall (s)** - das Messintervall in Sekunden. Das minimale Intervall
   beträgt 1 Sekunde.
-- **Label** - ermöglicht es Ihnen, eine benutzerdefinierte Beschreibung für den 
-  ausgewählten Kanal zu definieren.
+-  **Label** – hier können Sie eine eigene Bezeichnung des Kanals
+   festlegen.
+
 
 Datenbank-Einstellungen
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,8 +111,8 @@ sollten Sie das grüne Häkchen :guinum:`❷` sehen. Wenn Sie diese
 Standardeinstellungen wiederherstellen möchten, klicken Sie einfach auf die 
 Schaltfläche :guilabel:`Restore default settings` :guinum:`❸`.
 
-Wenn Sie den Datenbanktreiber **SQLite** verwenden, müssen Sie nur den Dateinamen 
-der Datenbank auswählen. Wenn Sie einen anderen Datenbanktreiber wählen, müssen 
+Wenn Sie mit einer **SQLite** Datenbank arbeiten, müssen Sie nur den Dateinamen 
+der Datenbank auswählen. Wenn Sie einen anderen Datenbanktreiber verwenden, müssen 
 Sie zusätzliche Datenbankeinstellungen vornehmen. Die folgende Abbildung zeigt 
 die Konfigurationseinstellungen für eine **MySQL**-Datenbank:
 
@@ -169,26 +175,27 @@ Geräteeigenschaft aus der sich öffnenden Liste aus (siehe Abbildung unten).
 
 .. _konfigurieren_des_probenintervalls:
 
-:step:`Schritt 3 - Konfigurieren des Probenintervalls`
+:step:`Schritt 3 - Konfigurieren des Aufzeichnungsintervalls`
 
-Sie können für jeden einzelnen Loggerkanal ein anderes Messintervall einstellen. 
-Die minimale Messzeit beträgt 1 Sekunde. Um das Log-Intervall zu konfigurieren, 
-doppelklicken Sie in das entsprechende Feld in der Spalte :guilabel:`Interval (s)` 
-und geben Sie die Intervallzeit ein.
+Sie können für jeden einzelnen Loggerkanal ein eignes Intervall zu Datenaufzeichnung 
+einstellen. 
+Das minimale Intervall beträgt 1 Sekunde. Um das Log-Intervall zu konfigurieren, 
+klicken Sie doppelt in das entsprechende Feld in der Spalte :guilabel:`Interval (s)` 
+und geben danach die Intervallzei (Sekunden) ein.
 
 .. image:: Pictures/log_interval_config.png
 
 .. admonition:: Wichtig
    :class: note
 
-   Wählen Sie ein Protokollintervall, das so groß wie möglich und so klein wie 
+   Wählen Sie ein Intervall, das so groß wie möglich und so klein wie 
    nötig ist, um die Menge der aufzuzeichnenden und in der Datenbank zu 
    speichernden Daten zu minimieren.  
 
 
 :step:`Schritt 4 - Kanalbezeichnung festlegen`
 
-In der Spalte :guilabel:`Label` können Sie die Beschreibung für jeden Kanal 
+In der Spalte :guilabel:`Label` können Sie die Bezeichnung für jeden Kanal 
 anpassen. Sie können diese Spalte verwenden, um zusätzliche Informationen, einen 
 aussagekräftigen Namen oder eine SI-Einheitenkennung hinzuzufügen.
 
@@ -210,7 +217,7 @@ Löschen von Kanälen
 ^^^^^^^^^^^^^^^^^^^^
 
 Markieren Sie die gewünschten Kanäle mit der Maus, um einen oder mehrere Kanäle 
-aus der Liste zu löschen, und verwenden Sie dann entweder die Taste :kbd:`Löschen` 
+aus der Liste zu löschen, und verwenden Sie dann entweder die Taste :kbd:`Entf` 
 oder den Eintrag :menuselection:`Delecte Selection` im Kontextmenü der rechten 
 Maustaste:
 
@@ -248,7 +255,7 @@ zeigt die eingegebenen Werte in der Tabelle *Logger Channels*:
 .. image:: Pictures/logger_channels_table_example.png
 
 Diese Konfiguration führt zu den folgenden Einträgen in der Tabelle 
-:code:`tbl_process_data` (Screenshot von MySQL Workbench):
+:code:`tbl_process_data` (Screenshot MySQL Workbench):
 
 .. image:: Pictures/mysql_tbl_process_data_example.png
 
@@ -295,7 +302,7 @@ Der Code erstellt das folgende Tabellenlayout:
 
 - **LogDatetime**: speichert das Datum und die Uhrzeit, zu der der Wert 
   protokolliert wurde
-- fk_tblProcessDataId**: ist ein Fremdschlüssel in der Tabelle 
+- **fk_tblProcessDataId**: ist ein Fremdschlüssel in der Tabelle 
   :code:`tbl_process_data` zur Identifizierung der protokollierten Prozessdaten
 - **Value**: der tatsächlich protokollierte Wert
 
@@ -326,8 +333,8 @@ Skriptfunktionen zu finden.
 
 .. image:: Pictures/sql_logger_script_functions.png
 
-SQL Logger starten
-~~~~~~~~~~~~~~~~~~~~
+SQL Logger starten - *Start SQL Logger*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/sql_log_start.svg
    :width: 60
@@ -338,8 +345,8 @@ Einstellungen und Kanälen zu starten.
 
 |
 
-SQL-Logger beenden
-~~~~~~~~~~~~~~~~~~~
+SQL-Logger beenden - *Stop SQL Logger*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/sql_log_stop.svg
    :width: 60
@@ -349,8 +356,8 @@ Diese Funktion beendet das Logging in die SQL-Datenbank.
 
 |
 
-SQL-Datenprotokollierung auslösen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SQL-Datenprotokollierung triggern - *Trigger SQL Data Logging*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/sql_log_trigger.svg
    :width: 60
@@ -367,7 +374,7 @@ Ereignis eintritt, dann können Sie diese Funktion verwenden.
 JavaScript-Datenbankzugriff
 --------------------------------
 
-Das Datenbank Add-on bietet einige Funktionen, um auf SQL-Datenbanken von 
+Das Datenbank Add-on bietet JavaScript Funktionen, um auf SQL-Datenbanken von 
 :ref:`JavaScript<Verwendung von JavaScript>` aus zuzugreifen. Wenn Sie den Befehl 
 :code:`help()` in der JavaScript-Konsole eingeben, sollten Sie die 
 Datenbankobjekte wie `QSqlDatabase`_ oder `QSqlQuery`_ sehen.
@@ -404,7 +411,7 @@ Beispiel 2 - SQLite-Datenbankschema erstellen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Das folgende Beispiel zeigt, wie man das folgende Datenbankschema in einer 
-SQLite-Datenbank uns JavaScript-Code erstellt:
+SQLite-Datenbank mit Hilfe von JavaScript-Code erstellt:
 
 .. image:: Pictures/create_schema_javascript.svg
    :width: 100%

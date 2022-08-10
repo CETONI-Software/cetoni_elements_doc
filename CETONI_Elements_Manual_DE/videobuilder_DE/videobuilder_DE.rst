@@ -42,9 +42,8 @@ Um einen Film zu erstellen, gehen Sie wie folgt vor:
    :align: left
 
 Klicken Sie zum Auswählen der Bilddateien auf die Schaltfläche
-:guilabel:`Select Image Folder` in der Werkzeugleiste.
-
-In dem Dialog der nun angezeigt wird (siehe Abbildung unten) können Sie
+:guilabel:`Select Image Folder` in der Werkzeugleiste. In dem Dialog der nun 
+angezeigt wird (siehe Abbildung unten) können Sie
 dann zu dem Ordner mit den Bilddateien navigieren :guinum:`❶` und dann diesen
 Ordner durch Drücken der Schaltfläche :guilabel:`Choose` :guinum:`❷` wählen.
 

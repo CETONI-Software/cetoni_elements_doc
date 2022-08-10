@@ -238,7 +238,7 @@ zusätzlich positiv auf deren Qualität aus.
 
 .. image:: Pictures/1000000000000155000000858ACEEBB181F0436F.png
 
-*Scans To Average*
+Scans To Average
 ^^^^^^^^^^^^^^^^^^^^
 
 Dies ist eine zeitliche Mittelwertbildung. Es wird die eingestellte
@@ -247,7 +247,7 @@ der Mittelwert aus allen Aufnahmen gebildet. Das verbessert das
 Signal-Rausch-Verhältnis (mit steigender Zahl steigt auch das SNR aber
 auch die Aufnahmedauer)
 
-*Filter Width*
+Filter Width
 ^^^^^^^^^^^^^^^
 
 Dies ist eine räumliche Mittelwertbildung bei der das Spektrum visuell
@@ -260,7 +260,7 @@ der Wert für *Filter Width*, wächst der SNR → das Spektrum wird
 zunehmend glatter. Ein zu hoher Wert für *Filter Width* führt zur
 Reduzierung der spektralen Auflösung
 
-*Nonlinearity Correction*
+Nonlinearity Correction
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Diese Funktion korrigiert die zwischen Photonenstrom und Ausgangssignals
@@ -275,7 +275,7 @@ Sie können für die x-Achse verschiedene Einheiten wählen:
 
 +---------------------+-----------------------------------------------+
 | Einheit             | Bedeutung                                     |
-+---------------------+-----------------------------------------------+
++=====================+===============================================+
 | Wavelengths [nm]    | Wellenlänge der x-Achse in der Einheit        |
 |                     | Nanometer                                     |
 +---------------------+-----------------------------------------------+

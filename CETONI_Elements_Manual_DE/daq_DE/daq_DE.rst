@@ -241,7 +241,7 @@ Kanäle löschen
 
 Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
 mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
-:kbd:`Entfernen`-Taste drücken oder mit der rechten Maustaste das Kontextmenü
+:kbd:`Entf`-Taste drücken oder mit der rechten Maustaste das Kontextmenü
 aufrufen und den Menüpunkt :menuselection:`Delete Selection` auswählen.
 
 |image56| |image57|
@@ -541,8 +541,8 @@ automatisieren oder mit anderen Prozessen zu synchronisieren. Die
 entsprechenden Funktionen finden Sie in der :guilabel:`DAQ` Kategorie der
 verfügbaren Scriptfunktionen.
 
-Start Plot Logger
-~~~~~~~~~~~~~~~~~~
+Start Data Acquisition
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ./Pictures/10002C2B000034EB000034EB03167AF23B475C0B.svg
    :width: 60
@@ -554,8 +554,8 @@ Diagramms wird dabei nicht gelöscht.
 
 |
 
-Stop Plot Logger
-~~~~~~~~~~~~~~~~~
+Stop Data Acquisition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ./Pictures/10002BC8000034EB000034EB9AA7EDFD557960B7.svg
    :width: 60

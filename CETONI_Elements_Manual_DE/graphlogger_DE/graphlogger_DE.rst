@@ -200,19 +200,6 @@ geben Sie dann die neue Bezeichnung ein.
    Kanalbezeichnung erst nach der Auswahl der              
    Geräteeigenschaft festlegen.   
 
-Kanäle löschen
-~~~~~~~~~~~~~~
-
-Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
-mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
-:kbd:`Delete`-Taste drücken oder mit der rechten Maustaste das Kontextmenü
-aufrufen und den Menüpunkt :menuselection:`Delete Selection` auswählen.
-
-|image58| |image59|
-
-Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
-Kontextmenü den Punkt :menuselection:`Clear Logger` auswählen.
-
 :step:`Schritt 4 – Aufzeichnungsintervall festlegen`
 
 .. image:: Pictures/100000000000016D00000079FAA9B0F9A29F6352.png
@@ -233,6 +220,19 @@ einer Auflösung von 0,1 Sekunden festlegen.
 
 Die Konfiguration wird beim Beenden der Anwendung gespeichert und beim
 erneuten Start wieder geladen.
+
+Kanäle löschen
+~~~~~~~~~~~~~~
+
+Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
+mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
+:kbd:`Delete`-Taste drücken oder mit der rechten Maustaste das Kontextmenü
+aufrufen und den Menüpunkt :menuselection:`Delete Selection` auswählen.
+
+|image58| |image59|
+
+Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
+Kontextmenü den Punkt :menuselection:`Clear Logger` auswählen.
 
 
 Datenaufzeichnung starten / stoppen
@@ -522,13 +522,18 @@ Plodaten laden
 
 Durch Klicken der Schaltfläche :guilabel:`Load Plot Data` können
 Plotdaten, die vorher mit :guilabel:`Save Plot Data` gespeichert wurden wieder in
-den Plot geladen werden. Es werden nur die Kurven geladen, die in der
-aktuellen Konfiguration des Loggers vorhanden sind. D.h. wenn Sie Daten
-aufzeichnen, diese mittels *Save Plot Data* speichern und später
-wieder Laden, sollte die Loggerkonfiguration beim Speichern und Laden
-identisch sein. Wenn Sie zwischen Speichern und Laden die
-Logger-Konfiguration ändern, z.B. Kanäle entfernen, werden ggf. nicht
-alle Kurven geladen.
+den Plot geladen werden.
+
+.. admonition:: Important
+   :class: note
+
+   Es werden nur die Kurven geladen, die in der
+   aktuellen Konfiguration des Loggers vorhanden sind. D.h. wenn Sie Daten
+   aufzeichnen, diese mittels *Save Plot Data* speichern und später
+   wieder Laden, sollte die **Loggerkonfiguration beim Speichern und Laden
+   identisch** sein. Wenn Sie zwischen Speichern und Laden die
+   Logger-Konfiguration ändern, z.B. Kanäle entfernen, werden ggf. nicht
+   alle Kurven geladen.
 
 Script Funktionen
 -----------------

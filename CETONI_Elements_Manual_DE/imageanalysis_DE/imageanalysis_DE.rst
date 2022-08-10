@@ -176,41 +176,41 @@ navigieren. Gehen Sie dafür wie folgt vor:
    .. image:: Pictures/10000000000002BB000003B0D14AEFFC.png
       :width: 100
 
-Navigation mit dem Space Navigator
+Navigation mit der SpaceMouse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn das *Space Navigator* Plugin geladen wurde, können Sie auch
-alternativ mit dem Space Navigator in der Abbildung navigieren.
+Wenn das *SpaceNavigator* Plugin geladen wurde, können Sie auch
+alternativ mit der SpaceMouse in der Abbildung navigieren.
 
 .. image:: Pictures/10000000000001BC000001A5A8497856.png
 
-Der `Space Navigator <https://3dconnexion.com/us/product/spacemouse-compact/>`_ 
+Die `SpaceMouse <https://3dconnexion.com/us/product/spacemouse-compact/>`_ 
 ist ein intuitives Eingabegerät welches
 Ihnen die Navigation innerhalb des Bildbetrachters in X- und Y-Richtung
 gleichzeitig ermöglicht.
-Um den Space Navigator zu nutzen, schließen ihn an einen freien USB
+Um die SpaceMouse zu nutzen, schließen Sie diese an einen freien USB
 Anschluss an Ihren PC an. Aktuelle Treiber finden Sie auf unserer Internetseite:
 
 https://cetoni.de/software-downloads/
 
 oder auf dem Datenträger (CD oder USB-Stick), den Sie beim Kauf der Software 
 erhalten haben. Installieren Sie den Treiber, um die SpaceMouse zu verwenden.
-Positionieren Sie den Space Navigator so, dass das Verbindungskabel von
+Positionieren Sie diese so, dass das Verbindungskabel von
 Ihnen weg zeigt und der 3D Connexion Schriftzug von Ihnen aus lesbar
 ist.
 
 .. image:: Pictures/1000000000000500000002D03030564E.png
-   :alt: Aufstellung Space Navigator
+   :alt: Aufstellung SpaceMouse
 
 Um die digitale Vergrößerung
 des aktuellen Bildes zu ändern, drücken Sie das Steuerelement des
 Navigators nach unten oder ziehen Sie es nach oben (Abbildung unten).
 
 ..  image:: Pictures/1000000000000117000001F4986AD712.png
-   :alt: Digitale Vergrößerung mit dem Space Navigator ändern
+   :alt: Digitale Vergrößerung mit der SpaceMouse ändern
 
 Um den im Bildbetrachtungsfeld angezeigten Bildausschnitt anzupassen, drehen Sie 
-den Navigationsknopf des Space Navigators in die gewünschte Richtung.
+den Navigationsknopf der SpaceMouse in die gewünschte Richtung.
 
 
 .. image:: Pictures/10000000000002240000017430F55526.png

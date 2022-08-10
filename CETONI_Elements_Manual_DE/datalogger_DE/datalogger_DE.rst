@@ -75,11 +75,11 @@ Folgende Spalten sind vorhanden:
    Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
    dem Typ-Icon einfach erkennen.
 
-======== ================
-|image5| Numerischer Wert
-|image6| Boolescher Wert
-|image7| Text
-======== ================
+   ======== ================
+   |image5| Numerischer Wert
+   |image6| Boolescher Wert
+   |image7| Text
+   ======== ================
 
 -  **Label** – hier können Sie eine eigene Bezeichnung des Kanals
    festlegen. Diese Bezeichnung erscheint dann in der CSV-Datei in der

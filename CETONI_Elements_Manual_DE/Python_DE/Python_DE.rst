@@ -852,7 +852,7 @@ er im Script zur Verfügung steht und ausgewertet werden kann.
    return
 
 
-API-Verweis
+API-Referenz
 ------------
 
 ScriptEnv

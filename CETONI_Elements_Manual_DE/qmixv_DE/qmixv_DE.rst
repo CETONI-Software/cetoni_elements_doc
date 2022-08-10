@@ -251,11 +251,11 @@ unterstützt werden:
    :header-rows: 0
 
    * - |image-vici-10pos11port|
-     - 10-Stellungs-Selektionsventil (SD) (z.B. `Niedrigdruck <https://www.vici.com/vval/sd.php>`_, `Hochdruck <https://www.vici.com/vval/sduw.php>`_)
+     - 10-Positionen-Selektionsventil (SD) (z.B. `Niedrigdruck <https://www.vici.com/vval/sd.php>`_, `Hochdruck <https://www.vici.com/vval/sduw.php>`_)
    * - |image-vici-6pos7port|
-     - 6-Stellungs-Selektionsventil (SD) (z.B. `Niedrigdruck <https://www.vici.com/vval/sd.php>`_, `Hochdruck <https://www.vici.com/vval/sduw.php>`_)
+     - 6-Positionen-Selektionsventil (SD) (z.B. `Niedrigdruck <https://www.vici.com/vval/sd.php>`_, `Hochdruck <https://www.vici.com/vval/sduw.php>`_)
    * - |image-vici-2pos6port|
-     - 6 Injektionsventil (z.B. `GC Einspritzdüsen <https://www.vici.com/vval/vval_gc.php>`_, `HPLC-Einspritzdüsen <https://www.vici.com/vval/vval_hplc.php>`_)
+     - 6-Port Injektionsventil (z.B. `GC Einspritzdüsen <https://www.vici.com/vval/vval_gc.php>`_, `HPLC-Einspritzdüsen <https://www.vici.com/vval/vval_hplc.php>`_)
 
 
 .. |image-vici-10pos11port| image:: Pictures/10Pos11Port_PositionIcon0.svg

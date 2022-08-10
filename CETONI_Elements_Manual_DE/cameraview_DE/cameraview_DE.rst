@@ -12,10 +12,11 @@ Windows DirectShow Kameras.
 .. image:: Pictures/10000000000003AF00000279E3F4A83D.png
    :alt: Kamera Livebild und Bildbetrachter
 
-Die Abbildung oben
-zeigt eine typische Arbeitsumgebung bestehend aus dem :ref:`View <Views (Ansichten)>` 
-in einem Werkzeugfenster :guinum:`❶` und dem :ref:`Bildbetrachter / Bildanalyse Plugin` 
-:guinum:`❷` im zentralen Arbeitsbereich der Anwendung zur Anzeige aufgenommener Bilder.
+Für jedes Kameragerät bietet die Software eine separate :ref:`Live-Ansicht <Views (Ansichten)>` 
+:guinum:`❶`, die  das aktuelle Live-Kamerabild zeigt. Der 
+:ref:`Bildbetrachter / Bildanalyse View <Bildbetrachter / Bildanalyse Plugin>` 
+:guinum:`❷` zeigt die von den  Kamerageräten erfassten Bilder zur Analyse oder 
+Speicherung in Dateien.
 
 
 Kamera-Livebild

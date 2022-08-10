@@ -16,7 +16,7 @@ JavaScript-Unterstützung in CETONI-Elementen
    die für Ihre spezifische Anwendung nicht geeignet oder ungünstig sind, entstehen.
 
 Die CETONI Elements Software verfügt über eine integrierte JavaScript-Engine. 
-Diese Engine bietet eine Oberfläche für die Auswertung von JavaScript-Code. Sie 
+Diese Engine bietet eine Umgebung für die Ausführung von JavaScript-Code. Sie 
 ermöglicht die Ausführung von JavaScript-Code in CETONI Elements-Skripten über 
 eine entsprechende Skriptfunktion und bietet eine einfache Möglichkeit, die 
 Skriptsprache JavaScript in Ihre CETONI Elements-Skripte einzubinden.
@@ -39,8 +39,8 @@ Sie können die JavaScript-Konsole über das Hauptmenü aufrufen
 .. image:: Pictures/javascript_console.png
 
 In der JavaScript-Konsole können Sie Befehle ausprobieren, den Zugriff auf Objekte 
-testen und Probleme beheben. Wenn Funktionsaufrufe in der Konsole funktionieren, 
-können Sie sie in Ihrem Skript verwenden.
+testen und Fehler debuggen. Wenn Funktionsaufrufe in der Konsole funktionieren, 
+können Sie diese in Ihrem Skript verwenden.
 
 Das Kontextmenü der JavaScript-Konsole enthält die üblichen Befehle zur Textbearbeitung:
 
@@ -50,7 +50,7 @@ Sie haben drei Möglichkeiten, den Inhalt der JavaScript-Konsole zu löschen:
 
 - wählen Sie :menuselection:`Clear` :guinum:`❶` im Kontextmenü
 - klicken Sie auf das Mülleimer-Symbol :guinum:`❷` in der Titelleiste
-- in der Konsole den Befehl :code:`clear()` eingeben
+- geben Sie in der Konsole den Befehl :code:`clear()` ein
 
 .. admonition:: Achtung
    :class: caution
@@ -91,7 +91,7 @@ Objekte:
 .. image:: Pictures/js_console_help_no_param.png
 
 Wenn Sie das globale Objekt über :code:`help(this)` übergeben, dann erhalten Sie 
-eine Liste aller :ref:`Standardmäßig eingebaute Objekte` im 
+eine Liste aller :ref:`Standardmäßig vorhandene Objekte` im 
 globalen Bereich:
 
 .. image:: Pictures/js_console_help_built_in.png
@@ -335,7 +335,7 @@ Wenn Sie komplexe Logik oder Zustandsautomaten in JavaScript implementieren woll
 sollten Sie die gleichzeitige Ausführung in einem Worker-Thread in Betracht ziehen. 
 Um die gleichzeitige Ausführung zu aktivieren, können Sie den Kippschalter 
 :guilabel:`Current Execution` einschalten. Lesen Sie mehr über diese Funktion im 
-Abschnitt `Gleichzeitige Ausführung`_.
+Abschnitt `Nebenläufige Ausführung`_.
 
 .. image:: Pictures/concurrent_execution.png
 
@@ -396,13 +396,12 @@ zu finden und zu beheben.
    Schaltfläche :guilabel:`Terminate Script` beenden, bevor Sie den 
    JavaScript-Quellcode bearbeiten können. 
 
-Fehlersuche in JavaScript-Code
+JavaScript-Code debuggen
 -------------------------------
 
-Wenn Sie eine Skriptfunktion mit JavaScript entwickeln, gibt es viele Möglichkeiten, 
-mögliche Probleme zu beheben, auf die Sie stoßen könnten. In den folgenden 
-Abschnitten wird beschrieben, wie Sie die JavaScript-Konsolen-API verwenden können, 
-um Ihren JavaScript-Code zu debuggen.
+Wenn Sie eine Skriptfunktion mit JavaScript entwickeln, gibt es verschiedene Möglichkeiten, 
+Fehler zu suchen und zu debuggen. In den folgenden Abschnitten wird beschrieben, 
+wie Sie die JavaScript-Konsolen-API verwenden können, um Ihren JavaScript-Code zu debuggen.
 
 =========== =========================
 Funktion    Beschreibung
@@ -446,7 +445,7 @@ Assert      :code:`console.assert` testet, ob ein Ausdruck wahr ist. Ist dies
 
 Timer       :code:`console.time` und :code:`console.timeEnd` protokollieren die 
             Zeit (in Millisekunden), die zwischen den Aufrufen vergangen ist. 
-            Beide nehmen ein String-Argument, das die Messung identifiziert.
+            Beide benötigen ein String-Argument, das die Messung identifiziert.
 
             Zum Beispiel:
 
@@ -483,7 +482,7 @@ Exception   :code:`console.exception` gibt eine Fehlermeldung zusammen mit dem
             aufgerufen wird.
 =========== =========================
 
-Standardmäßig eingebaute Objekte
+Standardmäßig vorhandene Objekte
 --------------------------------
 
 Die JavaScript-Engine verfügt über eine Reihe von Standardobjekten, die in den 
@@ -496,9 +495,8 @@ dem globalen Objekt wie folgt aufrufen: :code:`help(this)`.
 
 Wenn Sie die Eigenschaften und Funktionen eines bestimmten eingebauten Objekts, 
 wie z.B. :code:`Math`, sehen möchten, müssen Sie nur die Funktion help aufrufen 
-und dieses Objekt übergeben: :code:`help(Math)`.
-
-Eine detaillierte Liste der eingebauten Objekte, die von der integrierten 
+und dieses Objekt übergeben: :code:`help(Math)`. Eine detaillierte Liste der 
+eingebauten Objekte, die von der integrierten 
 JavaScript-Engine unterstützt werden, finden Sie in der Qt-Dokumentation:
 
 https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
@@ -509,7 +507,7 @@ JavaScript-Referenzdokumentation:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 
-Gleichzeitige Ausführung
+Nebenläufige Ausführung
 --------------------------
 
 Normalerweise wird der JavaScript-Code im Haupt-Thread der Benutzeroberfläche 
@@ -517,12 +515,12 @@ ausgeführt. Wenn Sie lang laufenden JavaScript-Code mit blockierenden
 Funktionsaufrufen oder längeren Verzögerungen implementieren möchten, sollten Sie 
 die gleichzeitige Ausführung in einem eigenen Worker-Thread in Betracht ziehen, 
 um eine Blockierung des Haupt-UI-Threads zu vermeiden. Um die gleichzeitige 
-Ausführung zu aktivieren, können Sie den Kippschalter einschalten 
-:guilabel:`Concurrent Execution`.
+Ausführung zu aktivieren, können Sie die Option 
+:guilabel:`Concurrent Execution` aktivieren.
 
 .. image:: Pictures/concurrent_execution.png
 
-Wenn der JavaScript-Code gleichzeitig ausgeführt wird, ist es möglich, die 
+Wenn der JavaScript-Code nebenläufig ausgeführt wird, ist es möglich, die 
 JavaScript-Skriptfunktion zu unterbrechen, wenn die Skriptausführung angehalten 
 wird. Der Nachteil der gleichzeitigen Ausführung ist, dass es nicht sicher ist, 
 auf Methoden und Eigenschaften von UI-Objekten zuzugreifen, die Sie über 
@@ -532,7 +530,8 @@ auf Methoden und Eigenschaften von UI-Objekten zuzugreifen, die Sie über
    :class: caution
 
    Es ist nicht sicher, Eigenschaften und Methoden von UI-Anwendungsobjekten zu 
-   verwenden, wenn der JavaScript-Code gleichzeitig ausgeführt wird. In diesem 
+   verwenden, wenn der JavaScript-Code nebenläufig außerhalb des Haupt-UI-Threads 
+   ausgeführt wird. In diesem 
    Fall kann der Zugriff auf UI-Objekte die Anwendung zum Absturz bringen.
 
 Um Methoden des UI-Objekts aufzurufen, müssen Sie die Funktion 
@@ -688,7 +687,7 @@ Dieses Beispiel zeigt, wie man eine länger laufende Aufgabe ausführt und die
 Skriptfunktion beendet, wenn die Aufgabe beendet ist.
 
 
-API-Verweis
+API-Referenz
 ------------
 
 ScriptEnv

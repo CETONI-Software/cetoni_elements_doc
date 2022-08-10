@@ -6,18 +6,18 @@ Einführung
 
 Diese Plugins unterstützen die Steuerung und Visualisierung verschiedener 
 CETONI-Positionierungssysteme wie Rotaxys- und Nemaxys-Geräte. Für jedes Gerät 
-wird ein :ref:`View <Views (Ansichten)>` erstellt, das alle UI-Elemente zur manuellen 
+wird ein :ref:`View <Views (Ansichten)>` erstellt, der alle UI-Elemente zur manuellen 
 Steuerung eines einzelnen Geräts bereitstellt (siehe Abbildung unten).
 
 .. image:: Pictures/10000201000003DC00000264E20C70B3.png
    :alt: Arbeitsbereich für Positioniersysteme
 
-Sie können eine Ansicht für ein bestimmtes Gerät über den Hauptmenüpunkt 
+Sie können eine Ansicht (View) für ein bestimmtes Gerät über den Hauptmenüpunkt 
 :menuselection:`Window --> Show View --> Rotaxys` oder 
 :menuselection:`Window --> Show View --> Nemaxys` oder über die entsprechenden 
 Schaltflächen in der Anwendung :ref:`Sidebar (Seitenleiste)<Seitenleiste>`  anzeigen.
 
-Eine solche Ansicht besteht hauptsächlich aus den folgenden Komponenten:
+Eine solcher View besteht hauptsächlich aus den folgenden Komponenten:
 
 .. rst-class:: guinums
 
@@ -94,8 +94,8 @@ Werkzeugleiste
 Steuerkreuz
 -----------
 
-Rotaxys
-~~~~~~~
+Rotaxys Steuerkreuz
+~~~~~~~~~~~~~~~~~~~~~
 
 Mit dem 6-Wege-Steuerkreuz können Sie alle Achsen des Rotaxys Positioniersystems 
 manuell positionieren.
@@ -114,8 +114,8 @@ manuell positionieren.
 | |image52|               | Hubachse nach oben oder unten bewegen              |
 +-------------------------+----------------------------------------------------+
 
-Nemaxys
-~~~~~~~
+Nemaxys Steuerkreuz
+~~~~~~~~~~~~~~~~~~~~~
 
 Mit dem 6-Wege-Steuerkreuz können Sie alle Achsen des Nemaxys Positioniersystems 
 manuell positionieren.
@@ -141,11 +141,11 @@ Steuerkreuz.
 Die folgen Tasten können verwendet werden:
 
 +---------------------+--------------------------------------------+
-| |image62|           | Shift key                                  |
+| |image62|           | **Shift key**                              |
 |                     |                                            |
 |                     | Increases the velocity by a fixed factor   |
 +---------------------+--------------------------------------------+
-| |image63|           | Control key                                |
+| |image63|           | **Control key**                            |
 |                     |                                            |
 |                     | Decreases the velocity be a fixed factor   |
 |                     | for precise, fine positioning              |
@@ -164,11 +164,18 @@ Die folgen Tasten können verwendet werden:
 Positionierkarte
 ----------------
 
-Einführung
-~~~~~~~~~~
+Einführung zur Positionierkarte
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Positionierungskarte ist eine Gesamtansicht der XY-Ebene Ihres Achsensystems.
 Sie zeigt den Verfahrbereich und die Arbeitsplatzkonfiguration Ihres Geräts.
+
+.. image:: Pictures/positioning_map.png
+
+Mit der Positionierkarte können Sie Ihr Achsensystem in der XY-Ebene 
+positionieren, indem Sie Punkte auf der Positionierkarte anklicken. 
+Die Vergrößerung der Karte kann über das Kontextmenü in festen 
+Schritten verändert oder mit dem Mausrad stufenlos eingestellt werden.
 
 ========= ==============================================
 |image67| Vergrößerungsfaktor erhöhen (hineinzoomen)
@@ -533,32 +540,32 @@ In dem Dialog der Ihnen nun angezeigt wird (siehe Abbildung oben),
 können Sie den Nullwinkel im Bereich von 0 – 360° frei einstellen.
 
 
-Positionierung mit dem Space Navigator
+Positionierung mit dem SpaceMouse
 --------------------------------------
 
 .. image:: Pictures/10000000000001BC000001A5A8497856.png
 
-Der `Space Navigator <https://3dconnexion.com/us/product/spacemouse-compact/>`_ 
+Die `SpaceMouse <https://3dconnexion.com/us/product/spacemouse-compact/>`_ 
 ist ein intuitives Eingabegerät, welches Ihnen die
 Steuerung von allen Achsen (Rotationsachse, Radius-Achse und Hubachse)
 gleichzeitig ermöglicht.
-Um den Space Navigator zu nutzen, schließen Sie ihn an einen freien
+Um die SpaceMouse zu nutzen, schließen Sie diese an einen freien
 USB-Anschluss an Ihrem PC an. Aktuelle Treiber finden Sie auf unserer
 Internetseite:
 
 https://cetoni.de/software-downloads/
 
 oder auf dem Datenträger (CD oder USB-Stick) den Sie beim Kauf der
-Software erhalten haben. Installieren Sie den Treiber, um den Space
-Navigator nutzen zu können.
+Software erhalten haben. Installieren Sie den Treiber, um die SpaceMouse 
+nutzen zu können.
 
 .. image:: Pictures/1000000000000500000002D03030564E.png
 
-Positionieren Sie den Space Navigator so, dass das Verbindungskabel von
+Positionieren Sie die SpaceMouse so, dass das Verbindungskabel von
 Ihnen weg zeigt und der **3D Connexion**-Schriftzug von Ihnen aus lesbar
 ist.
 
-Rotaxys mit Space Navigator positionieren
+Rotaxys mit SpaceMouse positionieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Übersicht
@@ -577,7 +584,7 @@ Rotaxys mit Space Navigator positionieren
 .. admonition:: Wichtig
    :class: note
 
-   Benutzen Sie den Space Navigator nicht,    
+   Benutzen Sie die SpaceMouse nicht,    
    wenn die Software das System verfährt (z.B. bei aktiver 
    Scriptausführung), um die Verfahrbewegungen nicht zu    
    unterbrechen.    
@@ -589,7 +596,7 @@ Um die Rotationsachse zu positionieren, drehen Sie das Steuerelement im
 Uhrzeigersinn oder entgegen dem Uhrzeigersinn.
 
 .. image:: Pictures/100000000000023C00000157E76FE648.png
-   :alt: Positionierung Rotationsachse mit Space Navigator
+   :alt: Positionierung Rotationsachse mit SpaceMouse
 
 Die Geschwindigkeit, mit der die Achsen verfahren werden, kontrollieren Sie
 durch die Stärke der Auslenkung des Bedienteils. D.h. je stärker Sie das
@@ -613,20 +620,20 @@ Radius-Achse zum Zentrum der Rotationsachse zu verfahren, ziehen Sie das
 Bedienelement zu sich heran.
 
 .. image:: Pictures/10000000000001BA0000016A872C4EFA.png
-   :alt: Positionierung Radius-Achse mit Space Navigator
+   :alt: Positionierung Radius-Achse mit SpaceMouse
 
 Hubachse positionieren
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Um die Z-Achse zu positionieren, drücken Sie das Bedienelement nach
 unten oder ziehen Sie das Bedienelement nach oben. Die Z-Achse wird in
-die Richtung bewegt, in die Sie das Bedienelement des Space Navigators
+die Richtung bewegt, in die Sie das Bedienelement der SpaceMouse
 bewegen.
 
 .. image:: Pictures/1000000000000153000002091D224344.png
 
 
-Nemaxys mit Space Navigator positionieren
+Nemaxys mit SpaceMouse positionieren
 --------------------------------------------
 
 Übersicht
@@ -641,7 +648,7 @@ Nemaxys mit Space Navigator positionieren
 .. admonition:: Wichtig
    :class: note
 
-   Benutzen Sie den Space Navigator nicht,    
+   Benutzen Sie die SpaceMouse nicht,    
    wenn die Software das System verfährt (z.B. bei aktiver 
    Scriptausführung), um die Verfahrbewegungen nicht zu    
    unterbrechen.   
@@ -654,7 +661,7 @@ Navigators in die gewünschte Richtung. Schieben Sie den Regler nach links, um
 die X-Achse nach links zu bewegen, und nach rechts, um die Achse nach rechts zu bewegen.
 
 .. image:: Pictures/100000000000021E0000012A75C2B620.png
-   :alt: Positionierung X-Achse mit Space Navigator
+   :alt: Positionierung X-Achse mit SpaceMouse
 
 Die Geschwindigkeit, mit der die Achsen verfahren werden, kontrollieren Sie
 durch die Stärke der Auslenkung des Bedienteils. D.h. je stärker Sie das
@@ -672,7 +679,7 @@ Y-Achse positionieren
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000000000001BA0000016A872C4EFA.png
-   :alt: Positionierung Y-Achse mit Space Navigator
+   :alt: Positionierung Y-Achse mit SpaceMouse
 
 Um die Y-Achse zu verfahren, ziehen Sie das Bedienelement zu sich heran
 oder schieben Sie das von sich weg. Entsprechend der Auslenkung des
@@ -689,11 +696,11 @@ Hubachse positionieren
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000000000000153000002091D224344.png
-   :alt: Positionierung Hubachse mit Space Navigator
+   :alt: Positionierung Hubachse mit SpaceMouse
 
 Um die Z-Achse zu positionieren, drücken Sie das Bedienelement nach
 unten oder ziehen Sie das Bedienelement nach oben. Die Z-Achse wird in
-die Richtung bewegt, in die Sie das Bedienelement des Space Navigators
+die Richtung bewegt, in die Sie das Bedienelement der SpaceMouse
 bewegen.
 
 

@@ -47,7 +47,8 @@ Aktivieren Sie im Menü *DAT.AUSG / KOMM.SBI* die rot markierten Werte:
 Hinzufügen der Waage zu einer CETONI Elements Gerätekonfiguration
 -----------------------------------------------------------------
 
-Fügen Sie im *Gerätekonfigurator* einfach eine Waage mittels Drag & Drop
+Fügen Sie im :ref:`Gerätekonfigurator<Erstellen von Gerätekonfigurationen>` 
+einfach eine Waage mittels Drag & Drop
 oder Doppelklick der aktuellen Gerätekonfiguration hinzu :guinum:`❶`. Speichern
 Sie dann die Gerätekonfiguration :guinum:`❷` und aktivieren Sie diese durch
 anklicken der Schaltfläche :guilabel:`Activate Configuration` :guinum:`❸`.
