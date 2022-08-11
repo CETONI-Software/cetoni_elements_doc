@@ -212,7 +212,7 @@ können Sie auf diese Objekte zugreifen. Das :ref:`ScriptEnv`-Objekt ist das zen
 Objekt für den Zugriff auf verfügbare Geräte und Anwendungsobjekte.
 
 .. note:: 
-   Siehe :ref:`Python-API<API-Verweis>` für eine detaillierte Beschreibung des ScriptEnv-Objekts.
+   Siehe :ref:`Python-API<API-Referenz>` für eine detaillierte Beschreibung des ScriptEnv-Objekts.
 
 Das folgende Bild zeigt, wie man das Modul :code:`cetoni_elements` importiert und 
 dann die Funktion :code:`help()` des Objekts `ScriptEnv`_ aufruft:
