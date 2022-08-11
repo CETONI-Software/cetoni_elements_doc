@@ -154,8 +154,8 @@ html_static_path = ['_static']
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/style_override.css',
-    'css/color_roles.css',
+    'cetoni_style_override_css/style_override.css',
+    'cetoni_style_override_css/color_roles.css',
 ]
 
 html_favicon = '_static/favicon.png'

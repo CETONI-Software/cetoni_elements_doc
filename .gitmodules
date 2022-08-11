@@ -1,0 +1,6 @@
+[submodule "CETONI_Elements_Manual_DE/_static/cetoni_style_override_css"]
+	path = CETONI_Elements_Manual_DE/_static/cetoni_style_override_css
+	url = https://github.com/CETONI-Software/cetoni_style_override_css.git
+[submodule "CETONI_Elements_Manual_EN/_static/cetoni_style_override_css"]
+	path = CETONI_Elements_Manual_EN/_static/cetoni_style_override_css
+	url = https://github.com/CETONI-Software/cetoni_style_override_css.git
