@@ -38,9 +38,9 @@ jobs:
         name: Prepare Deployment
         run: |
           mkdir -p _deploy/manual_de
-          cp -R _build/manual_de/html/*  _deploy/manual_de
+          cp -R CETONI_Elements_Manual_DE/_build/html/*  _deploy/manual_de
           mkdir -p _deploy/manual_en
-          cp -R _build/manual_en/html/*  _deploy/manual_en
+          cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en
       -
         name: Nojekyll
         run: touch _deploy/.nojekyll
