@@ -22,17 +22,24 @@ jobs:
         name: Install
         run: pip install -r requirements.txt
       -
-        name: Build
+        name: Build DE
         run: |
           cd CETONI_Elements_Manual_DE
           make html
           cd ..
-          mkdir _deploy/manual_de
-          cp -R _build/manual_de/html/*  _deploy/manual_de
+
+      -
+        name: Build EN
+        run: |
           cd CETONI_Elements_Manual_EN
           make html
           cd ..
-          mkdir _deploy/manual_en
+      - 
+        name: Prepare Deployment
+        run: |
+          mkdir -p _deploy/manual_de
+          cp -R _build/manual_de/html/*  _deploy/manual_de
+          mkdir -p _deploy/manual_en
           cp -R _build/manual_en/html/*  _deploy/manual_en
       -
         name: Nojekyll
