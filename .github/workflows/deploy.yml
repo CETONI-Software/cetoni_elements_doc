@@ -1,0 +1,48 @@
+name: deploy
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      -
+        name: Install
+        run: pip install -r requirements.txt
+      -
+        name: Build
+        run: |
+          cd CETONI_Elements_Manual_DE
+          make html
+          cd ..
+          mkdir _deploy/manual_de
+          cp -R _build/manual_de/html/*  _deploy/manual_de
+          cd CETONI_Elements_Manual_EN
+          make html
+          cd ..
+          mkdir _deploy/manual_en
+          cp -R _build/manual_en/html/*  _deploy/manual_en
+      -
+        name: Nojekyll
+        run: touch _deploy/.nojekyll
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: _deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
