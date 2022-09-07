@@ -61,7 +61,7 @@ default_dark_mode = False
 
 # Breathe Configuration
 breathe_projects = { 
-    "python": "./_build/doxygen/xml"
+    "python": "../doxygen/xml"
 }
 breathe_default_project = "python"
 breathe_domain_by_extension = {"h": "cpp"}
