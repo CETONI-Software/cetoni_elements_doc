@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classPython_1_1CScriptEnvAccess" kind="class" prot="public">
+    <compoundname>Python::CScriptEnvAccess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes local="no">ScriptEnvAccess.h</includes>
+      <sectiondef kind="user-defined">
+      <header>scripting</header>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList Python::CScriptEnvAccess::getDeviceNames</definition>
+        <argsstring>() const </argsstring>
+        <name>getDeviceNames</name>
+        <briefdescription>
+<para>Returns a tuple with all device names that can be accessed from Python. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use the device name when calling the <computeroutput><ref refid="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a" kindref="member">getDevice()</ref></computeroutput> function to get the corresponding device object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QtLabb::Core::CDevice *</type>
+        <definition>QtLabb::Core::CDevice* Python::CScriptEnvAccess::getDevice</definition>
+        <argsstring>(const QString &amp;Name) const </argsstring>
+        <name>getDevice</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the device object for the given device name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</para><para><bold>Example:</bold> <programlisting><codeline lineno="1"><highlight class="normal">pump<sp/>=<sp/>ScriptEnv.getDevice(</highlight><highlight class="stringliteral">&quot;Nemesys_S_1&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList Python::CScriptEnvAccess::getObjectNames</definition>
+        <argsstring>() const </argsstring>
+        <name>getObjectNames</name>
+        <briefdescription>
+<para>Returns a list of all registered application objects that are not devices and that can be accessed from Python, such as the graphical logger. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QObject *</type>
+        <definition>QObject* Python::CScriptEnvAccess::getObject</definition>
+        <argsstring>(const QString &amp;Name) const </argsstring>
+        <name>getObject</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the object with the given object name <computeroutput>Name</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline lineno="1"><highlight class="normal">plot<sp/>=<sp/>ScriptEnv.getObject(</highlight><highlight class="stringliteral">&quot;ProcessDataGraph&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariant</type>
+        <definition>QVariant Python::CScriptEnvAccess::getVar</definition>
+        <argsstring>(const QString &amp;VarName) const </argsstring>
+        <name>getVar</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>VarName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of a certain script variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The variable name needs to start with a dollar sign.</para><para><bold>Example:</bold> <programlisting><codeline lineno="1"><highlight class="normal">flow<sp/>=<sp/>ScriptEnv.getVar(</highlight><highlight class="stringliteral">&quot;$FlowRate&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Python::CScriptEnvAccess::setVar</definition>
+        <argsstring>(const QString &amp;Name, const QVariant &amp;Value)</argsstring>
+        <name>setVar</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const QVariant &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the script variable to the given value. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline lineno="1"><highlight class="normal">ScriptEnv.setVar(</highlight><highlight class="stringliteral">&quot;$TargetPos&quot;</highlight><highlight class="normal">,<sp/>25)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1a94259e9a9d31737b8940a7c7d9dd4b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Python::CScriptEnvAccess::setVars</definition>
+        <argsstring>(const QVariantMap Values)</argsstring>
+        <name>setVars</name>
+        <param>
+          <type>const QVariantMap</type>
+          <declname>Values</declname>
+        </param>
+        <briefdescription>
+<para>Sets multiple script variables using a Python dictionary. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline lineno="1"><highlight class="normal">ScriptEnv.setVars({</highlight><highlight class="stringliteral">&quot;$Value1&quot;</highlight><highlight class="normal"><sp/>:<sp/>0.5,<sp/></highlight><highlight class="stringliteral">&quot;$Value2&quot;</highlight><highlight class="normal"><sp/>:<sp/>1.5})</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="171" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classPython_1_1CScriptEnvAccess_1a6e4cc0a5cb2a44a6c51932e2e819916d" prot="public" static="no">
+        <type>QObject</type>
+        <definition>using Python::CScriptEnvAccess::Super =  QObject</definition>
+        <argsstring></argsstring>
+        <name>Super</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="76" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPython_1_1CScriptEnvAccess_1a5747b0e4d96378ee3c27e191fcb9d203" prot="private" static="no" mutable="no">
+        <type>PythonQtObjectPtr</type>
+        <definition>PythonQtObjectPtr Python::CScriptEnvAccess::m_PythonModule</definition>
+        <argsstring></argsstring>
+        <name>m_PythonModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="67" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPython_1_1CScriptEnvAccess_1ab3545801a4d99dcd2e79073d68c9bb0c" prot="private" static="no" mutable="no">
+        <type>QtLabb::Script::IScriptFunction *</type>
+        <definition>QtLabb::Script::IScriptFunction* Python::CScriptEnvAccess::m_ScriptFunction</definition>
+        <argsstring></argsstring>
+        <name>m_ScriptFunction</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="65" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPython_1_1CScriptEnvAccess_1a6a7669e20dad18932d38ed40d0599029" prot="private" static="no" mutable="no">
+        <type>QPointer&lt; QObject &gt;</type>
+        <definition>QPointer&lt;QObject&gt; Python::CScriptEnvAccess::m_ScriptFunctionObject</definition>
+        <argsstring></argsstring>
+        <name>m_ScriptFunctionObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="66" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPython_1_1CScriptEnvAccess_1aa30111ec12f24e1d8d79a4c659ec2f12" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Python::CScriptEnvAccess::m_TestProperty</definition>
+        <argsstring></argsstring>
+        <name>m_TestProperty</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="68" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPython_1_1CScriptEnvAccess_1a9e075ddf73b0c4bf0bd760607668af17" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Python::CScriptEnvAccess::isScriptFunctionNull</definition>
+        <argsstring>() const </argsstring>
+        <name>isScriptFunctionNull</name>
+        <briefdescription>
+<para>Returns true if script function is null. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPython_1_1CScriptEnvAccess_1a1a2b49ea188f3e4629bae6be86e6aec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Python::CScriptEnvAccess::addToModule</definition>
+        <argsstring>(PythonQtObjectPtr Module)</argsstring>
+        <name>addToModule</name>
+        <param>
+          <type>PythonQtObjectPtr</type>
+          <declname>Module</declname>
+        </param>
+        <briefdescription>
+<para>Adds itself to the given module and registers other objects like DeviceManager or ObjectManager. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPython_1_1CScriptEnvAccess_1a0e4d1683fa00f561771b622ed17d9155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Python::CScriptEnvAccess::CScriptEnvAccess</definition>
+        <argsstring>(QtLabb::Script::IScriptFunction *ScriptFunction=nullptr)</argsstring>
+        <name>CScriptEnvAccess</name>
+        <param>
+          <type>QtLabb::Script::IScriptFunction *</type>
+          <declname>ScriptFunction</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Default Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPython_1_1CScriptEnvAccess_1aa2bde8782e47787d04e1bdd8ed44ddcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Python::CScriptEnvAccess::setScriptFunction</definition>
+        <argsstring>(QtLabb::Script::IScriptFunction *ScriptFunction)</argsstring>
+        <name>setScriptFunction</name>
+        <param>
+          <type>QtLabb::Script::IScriptFunction *</type>
+          <declname>ScriptFunction</declname>
+        </param>
+        <briefdescription>
+<para>Sets the script function to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPython_1_1CScriptEnvAccess_1a2caf0472551832596edde32ac806e553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Python::CScriptEnvAccess::~CScriptEnvAccess</definition>
+        <argsstring>()</argsstring>
+        <name>~CScriptEnvAccess</name>
+        <briefdescription>
+<para>Removes itself from the given Python module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="85" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="classPython_1_1CScriptEnvAccess_1a53750b080b69f5a214c70de6cdf2e661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Python::CScriptEnvAccess::sleep</definition>
+        <argsstring>(float Seconds)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>float</type>
+          <declname>Seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="174" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class for access of the scripting environment from a Python script An instance of <ref refid="classPython_1_1CScriptEnvAccess" kindref="compound">CScriptEnvAccess</ref> is registered to a Python module with the name &quot;ScriptEnv&quot;. </para>    </briefdescription>
+    <detaileddescription>
+<para>It allows setting and reading variables and registers some global object like device manager or object manager to allow access from python to application objects and device objects </para>    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="55" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" bodystart="54" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classPython_1_1CScriptEnvAccess_1a1a2b49ea188f3e4629bae6be86e6aec3" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>addToModule</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a0e4d1683fa00f561771b622ed17d9155" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>CScriptEnvAccess</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>getDevice</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>getDeviceNames</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>getObject</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>getObjectNames</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>getVar</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a9e075ddf73b0c4bf0bd760607668af17" prot="private" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>isScriptFunctionNull</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a5747b0e4d96378ee3c27e191fcb9d203" prot="private" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>m_PythonModule</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1ab3545801a4d99dcd2e79073d68c9bb0c" prot="private" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>m_ScriptFunction</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a6a7669e20dad18932d38ed40d0599029" prot="private" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>m_ScriptFunctionObject</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1aa30111ec12f24e1d8d79a4c659ec2f12" prot="private" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>m_TestProperty</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1aa2bde8782e47787d04e1bdd8ed44ddcd" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>setScriptFunction</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>setVar</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a94259e9a9d31737b8940a7c7d9dd4b87" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>setVars</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a53750b080b69f5a214c70de6cdf2e661" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>sleep</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a6e4cc0a5cb2a44a6c51932e2e819916d" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>Super</name></member>
+      <member refid="classPython_1_1CScriptEnvAccess_1a2caf0472551832596edde32ac806e553" prot="public" virt="non-virtual"><scope>Python::CScriptEnvAccess</scope><name>~CScriptEnvAccess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

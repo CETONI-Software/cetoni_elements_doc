@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classDbPlugin_1_1CScriptQSqlQuery" kind="class" prot="public">
+    <compoundname>DbPlugin::CScriptQSqlQuery</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes local="no">ScriptQSqlDatabase.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDbPlugin_1_1CScriptQSqlQuery_1ade5510f1a59609974966ff4a49ff7bb0" prot="private" static="no" mutable="no">
+        <type>QSqlQuery</type>
+        <definition>QSqlQuery DbPlugin::CScriptQSqlQuery::m_Query</definition>
+        <argsstring></argsstring>
+        <name>m_Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="65" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a7b8f13d10c2a4fd8e4acda2155bfa9fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlQuery::bindValues</definition>
+        <argsstring>(const QVariantList &amp;Values)</argsstring>
+        <name>bindValues</name>
+        <param>
+          <type>const QVariantList &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1aff1c1c2d483136321a4ce8aabe972eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery</definition>
+        <argsstring>(const QSqlQuery &amp;Query)</argsstring>
+        <name>CScriptQSqlQuery</name>
+        <param>
+          <type>const QSqlQuery &amp;</type>
+          <declname>Query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1aa10938b4fe0171b21d0c5d9f7212f881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery</definition>
+        <argsstring>()</argsstring>
+        <name>CScriptQSqlQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a53a348680bcf9a3b62c455d073745db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlQuery::exec</definition>
+        <argsstring>(const QString &amp;query=QString())</argsstring>
+        <name>exec</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>query</declname>
+          <defval>QString()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a29ae276e28ec52a6ad3027f870e9b8d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlQuery::lastError</definition>
+        <argsstring>() const </argsstring>
+        <name>lastError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a09f69f37121b8958ce34481705b12e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlQuery::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a2dfd70e8856eff140fc5a0710dd71990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlQuery::prepare</definition>
+        <argsstring>(const QString &amp;query)</argsstring>
+        <name>prepare</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a723ca57ad17006b122b52314dc11cff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariantMap</type>
+        <definition>QVariantMap DbPlugin::CScriptQSqlQuery::record</definition>
+        <argsstring>() const </argsstring>
+        <name>record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1a65d45bf5cab220d5e9ba1c5af81caf71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariantList</type>
+        <definition>QVariantList DbPlugin::CScriptQSqlQuery::recordValues</definition>
+        <argsstring>() const </argsstring>
+        <name>recordValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlQuery_1ad4a3bc9bf4db021ee964950801d9ebda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual DbPlugin::CScriptQSqlQuery::~CScriptQSqlQuery</definition>
+        <argsstring>()</argsstring>
+        <name>~CScriptQSqlQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper for QSqlQuery to use it in JavaScript. </para>    </briefdescription>
+    <detaileddescription>
+<para>There are several options how to execute a query. The first option is, to call the executeQuery() function of the database object:</para><para><programlisting><codeline><highlight class="normal">q<sp/>=<sp/>db.executeQuery(&quot;SELECT<sp/>*<sp/>FROM<sp/>tbl_process_data&quot;);</highlight></codeline>
+</programlisting></para><para>The second option is, to create the query via the database object and to execute it later:</para><para><programlisting><codeline><highlight class="normal">q<sp/>=<sp/>db.createQuery(&quot;SELECT<sp/>*<sp/>FROM<sp/>tbl_process_data&quot;);</highlight></codeline>
+<codeline><highlight class="normal">q.exec();</highlight></codeline>
+</programlisting></para><para>or you create the query object and the pass the actual query to the executeQuery() function</para><para><programlisting><codeline><highlight class="normal">q<sp/>=<sp/>db.createQuery();</highlight></codeline>
+<codeline><highlight class="normal">q.exec(&quot;SELECT<sp/>*<sp/>FROM<sp/>tbl_process_data&quot;);</highlight></codeline>
+</programlisting></para><para>If you want to insert data into the database, then you can build the complete query string with JavaScript or you can use the bindValues() function with placeholders like in the code below:</para><para><programlisting><codeline><highlight class="normal">q<sp/>=<sp/>db.createQuery(&quot;INSERT<sp/>INTO<sp/>person<sp/>(id,<sp/>forename,<sp/>surename)<sp/>VALUES<sp/>(?,<sp/>?,<sp/>?)&quot;);</highlight></codeline>
+<codeline><highlight class="normal">q.bindValues([1001,<sp/>&quot;Bart&quot;,<sp/>&quot;Simpson&quot;]);</highlight></codeline>
+<codeline><highlight class="normal">q.exec();</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="62" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" bodystart="61" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a7b8f13d10c2a4fd8e4acda2155bfa9fe" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>bindValues</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1aff1c1c2d483136321a4ce8aabe972eae" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>CScriptQSqlQuery</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1aa10938b4fe0171b21d0c5d9f7212f881" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>CScriptQSqlQuery</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a53a348680bcf9a3b62c455d073745db0" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>exec</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a29ae276e28ec52a6ad3027f870e9b8d5" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>lastError</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1ade5510f1a59609974966ff4a49ff7bb0" prot="private" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>m_Query</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a09f69f37121b8958ce34481705b12e2d" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>next</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a2dfd70e8856eff140fc5a0710dd71990" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>prepare</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a723ca57ad17006b122b52314dc11cff7" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>record</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1a65d45bf5cab220d5e9ba1c5af81caf71" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>recordValues</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlQuery_1ad4a3bc9bf4db021ee964950801d9ebda" prot="public" virt="virtual"><scope>DbPlugin::CScriptQSqlQuery</scope><name>~CScriptQSqlQuery</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

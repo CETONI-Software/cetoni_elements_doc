@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="namespaceQtLabb_1_1Script" kind="namespace">
+    <compoundname>QtLabb::Script</compoundname>
+    <innerclass refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" prot="public">QtLabb::Script::CScriptEnvAccess</innerclass>
+    <innerclass refid="classQtLabb_1_1Script_1_1CScriptQFile" prot="public">QtLabb::Script::CScriptQFile</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h" line="38" column="1"/>
+  </compounddef>
+</doxygen>

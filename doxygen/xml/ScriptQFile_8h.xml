@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="ScriptQFile_8h" kind="file">
+    <compoundname>ScriptQFile.h</compoundname>
+    <includes local="no">QObject</includes>
+    <includes local="no">QFile</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>QObject</label>
+      </node>
+      <node id="18">
+        <label>ScriptQFile.h</label>
+        <link refid="ScriptQFile.h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QFile</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classQtLabb_1_1Script_1_1CScriptQFile" prot="public">QtLabb::Script::CScriptQFile</innerclass>
+    <innernamespace refid="namespaceQtLabb">QtLabb</innernamespace>
+    <innernamespace refid="namespaceQtLabb_1_1Script">QtLabb::Script</innernamespace>
+    <briefdescription>
+<para>Declaration of CScriptQFile. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Uwe Kindler </para></simplesect>
+<simplesect kind="date"><para>13.06.2022 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ScriptQFileH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ScriptQFileH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">///<sp/>\file<sp/><sp/><sp/>ScriptQFile.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">///<sp/>\author<sp/>Uwe<sp/>Kindler</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">///<sp/>\date<sp/><sp/><sp/>13.06.2022</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">///<sp/>\brief<sp/><sp/>Declaration<sp/>of<sp/>CScriptQFile</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INCLUDES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceQtLabb" kindref="compound">QtLabb</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Script</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>Wrapper<sp/>for<sp/>QFile<sp/>object.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>The<sp/>QFile<sp/>class<sp/>provides<sp/>an<sp/>interface<sp/>for<sp/>reading<sp/>from<sp/>and<sp/>writing<sp/>to<sp/>files.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>The<sp/>file<sp/>name<sp/>is<sp/>usually<sp/>passed<sp/>in<sp/>the<sp/>constructor,<sp/>but<sp/>it<sp/>can<sp/>be<sp/>set<sp/>at<sp/>any</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>time<sp/>using<sp/>setFileName().<sp/>QFile<sp/>expects<sp/>the<sp/>file<sp/>separator<sp/>to<sp/>be<sp/>&apos;/&apos;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>regardless<sp/>of<sp/>operating<sp/>system.<sp/>The<sp/>use<sp/>of<sp/>other<sp/>separators<sp/>(e.g.,<sp/>&apos;\\&apos;)</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>is<sp/>not<sp/>supported.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classQtLabb_1_1Script_1_1CScriptQFile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQtLabb_1_1Script_1_1CScriptQFile" kindref="compound">CScriptQFile</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QFile<sp/>m_File;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>enum<sp/>is<sp/>used<sp/>with<sp/>open()<sp/>to<sp/>describe<sp/>the<sp/>mode<sp/>in<sp/>which<sp/>a<sp/>device<sp/>is<sp/>opened.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10" kindref="member">OpenModeFlag</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeNotOpen<sp/>=<sp/>QFile::NotOpen,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeReadOnly<sp/>=<sp/>QFile::ReadOnly,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeWriteOnly<sp/>=<sp/>QFile::WriteOnly,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeReadWrite<sp/>=<sp/>QFile::ReadWrite,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeAppend<sp/>=<sp/>QFile::Append,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeTruncate<sp/>=<sp/>QFile::Truncate,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeText<sp/>=<sp/>QFile::Text,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeUnbuffered<sp/>=<sp/>QFile::Unbuffered,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeNewOnly<sp/>=<sp/>QFile::NewOnly,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ModeExistingOnly<sp/>=<sp/>QFile::ExistingOnly</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10" kindref="member">OpenModeFlag</ref>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Constructs<sp/>a<sp/>new<sp/>file<sp/>object<sp/>to<sp/>represent<sp/>the<sp/>file<sp/>with<sp/>the<sp/>specified<sp/>name.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f<sp/>=<sp/>new<sp/>QFile(&quot;C:/temp/test1.txt&quot;);</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.open(QFile.ModeReadWrite);</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile" kindref="compound">CScriptQFile</ref>(const<sp/>QString&amp;<sp/>name<sp/>=<sp/>QString());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>~<ref refid="classQtLabb_1_1Script_1_1CScriptQFile" kindref="compound">CScriptQFile</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Opens<sp/>the<sp/>file<sp/>with<sp/>the<sp/>given<sp/>open<sp/>mode.<sp/>Returns<sp/>true<sp/>if<sp/>successful;</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f<sp/>=<sp/>new<sp/>QFile(&quot;C:/temp/test1.txt&quot;);</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.open(QFile.ModeReadWrite);</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304" kindref="member">open</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>file<sp/>specified<sp/>by<sp/>fileName()<sp/>exists;<sp/>otherwise</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a519e60d707b7082cafb94568e3d88bbd" kindref="member">exists</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>device<sp/>is<sp/>open;<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>A<sp/>file<sp/>is<sp/>open<sp/>if<sp/>it<sp/>can<sp/>be<sp/>read<sp/>from<sp/>and/or<sp/>written<sp/>to.</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ab47c1c4a8fd39a8cec1882d2832486a5" kindref="member">isOpen</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Closes<sp/>the<sp/>file.</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Calls<sp/>flush()<sp/>and<sp/>closes<sp/>the<sp/>file.<sp/>Errors<sp/>from<sp/>flush<sp/>are<sp/>ignored.</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a175862fb83360515c0f454840aa3177d" kindref="member">close</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>name<sp/>of<sp/>the<sp/>file.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>name<sp/>of<sp/>the<sp/>file.<sp/>The<sp/>name<sp/>can<sp/>have<sp/>no<sp/>path,<sp/>a<sp/>relative<sp/>path,</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>or<sp/>an<sp/>absolute<sp/>path.</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Do<sp/>not<sp/>call<sp/>this<sp/>function<sp/>if<sp/>the<sp/>file<sp/>has<sp/>already<sp/>been<sp/>opened.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>file<sp/>name<sp/>has<sp/>no<sp/>path<sp/>or<sp/>a<sp/>relative<sp/>path,<sp/>the<sp/>path<sp/>used<sp/>will<sp/>be</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>application&apos;s<sp/>current<sp/>directory<sp/>path<sp/>at<sp/>the<sp/>time<sp/>of<sp/>the<sp/>open()<sp/>call.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d" kindref="member">setFileName</ref>(const<sp/>QString&amp;<sp/>FileName);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Reads<sp/>at<sp/>most<sp/>maxSize<sp/>bytes<sp/>from<sp/>the<sp/>device,<sp/>and<sp/>returns<sp/>the<sp/>data<sp/>read<sp/>as</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>a<sp/>QByteArray.</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>function<sp/>has<sp/>no<sp/>way<sp/>of<sp/>reporting<sp/>errors;<sp/>returning<sp/>an<sp/>empty</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>QByteArray<sp/>can<sp/>mean<sp/>either<sp/>that<sp/>no<sp/>data<sp/>was<sp/>currently<sp/>available<sp/>for</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>reading,<sp/>or<sp/>that<sp/>an<sp/>error<sp/>occurred.</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QByteArray<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a56502f9f52a2c26e8e6b1dd64585feeb" kindref="member">read</ref>(qint64<sp/>maxSize);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Reads<sp/>a<sp/>line<sp/>from<sp/>the<sp/>device,<sp/>but<sp/>no<sp/>more<sp/>than<sp/>maxSize<sp/>characters,<sp/>and</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>returns<sp/>the<sp/>result<sp/>as<sp/>a<sp/>byte<sp/>array.</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>function<sp/>has<sp/>no<sp/>way<sp/>of<sp/>reporting<sp/>errors;<sp/>returning<sp/>an<sp/>empty</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>QByteArray<sp/>can<sp/>mean<sp/>either<sp/>that<sp/>no<sp/>data<sp/>was<sp/>currently<sp/>available</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>for<sp/>reading,<sp/>or<sp/>that<sp/>an<sp/>error<sp/>occurred.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QByteArray<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a0c7ff50e5b241dab8e6c0fec86761130" kindref="member">readLine</ref>(qint64<sp/>maxSize<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Reads<sp/>all<sp/>remaining<sp/>data<sp/>from<sp/>the<sp/>device,<sp/>and<sp/>returns<sp/>it<sp/>as<sp/>a<sp/>byte<sp/>array.</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>function<sp/>has<sp/>no<sp/>way<sp/>of<sp/>reporting<sp/>errors;<sp/>returning<sp/>an<sp/>empty</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>QByteArray<sp/>can<sp/>mean<sp/>either<sp/>that<sp/>no<sp/>data<sp/>was<sp/>currently<sp/>available<sp/>for</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>reading,<sp/>or<sp/>that<sp/>an<sp/>error<sp/>occurred.</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QByteArray<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a14797a28271e3fc2f5c1a108347973f9" kindref="member">readAll</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>For<sp/>random-access<sp/>devices,<sp/>this<sp/>function<sp/>sets<sp/>the<sp/>current<sp/>position<sp/>to<sp/>pos,</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>returning<sp/>true<sp/>on<sp/>success,<sp/>or<sp/>false<sp/>if<sp/>an<sp/>error<sp/>occurred.<sp/>For<sp/>sequential</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>devices,<sp/>the<sp/>default<sp/>behavior<sp/>is<sp/>to<sp/>do<sp/>nothing<sp/>and<sp/>return<sp/>false.</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Seeking<sp/>beyond<sp/>the<sp/>end<sp/>of<sp/>a<sp/>file:<sp/>If<sp/>the<sp/>position<sp/>is<sp/>beyond<sp/>the<sp/>end<sp/>of</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>a<sp/>file,<sp/>then<sp/>seek()<sp/>will<sp/>not<sp/>immediately<sp/>extend<sp/>the<sp/>file.<sp/>If<sp/>a<sp/>write<sp/>is</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>performed<sp/>at<sp/>this<sp/>position,<sp/>then<sp/>the<sp/>file<sp/>will<sp/>be<sp/>extended.<sp/>The<sp/>content</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>of<sp/>the<sp/>file<sp/>between<sp/>the<sp/>previous<sp/>end<sp/>of<sp/>file<sp/>and<sp/>the<sp/>newly<sp/>written<sp/>data</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>UNDEFINED<sp/>and<sp/>varies<sp/>between<sp/>platforms<sp/>and<sp/>file<sp/>systems.</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a" kindref="member">seek</ref>(qint64<sp/>pos);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Writes<sp/>the<sp/>content<sp/>of<sp/>byteArray<sp/>to<sp/>the<sp/>device.<sp/>Returns<sp/>the<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>bytes<sp/>that<sp/>were<sp/>actually<sp/>written,<sp/>or<sp/>-1<sp/>if<sp/>an<sp/>error<sp/>occurred.</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>qint64<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a86be775c6f69ff4bca53fd0494a1f1d6" kindref="member">write</ref>(const<sp/>QByteArray<sp/>&amp;data);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Copies<sp/>the<sp/>file<sp/>named<sp/>fileName()<sp/>to<sp/>newName.</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>file<sp/>is<sp/>closed<sp/>before<sp/>it<sp/>is<sp/>copied.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>copied<sp/>file<sp/>is<sp/>a<sp/>symbolic<sp/>link<sp/>(symlink),<sp/>the<sp/>file<sp/>it<sp/>refers<sp/>to</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>copied,<sp/>not<sp/>the<sp/>link<sp/>itself.<sp/>With<sp/>the<sp/>exception<sp/>of<sp/>permissions,</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>which<sp/>are<sp/>copied,<sp/>no<sp/>other<sp/>file<sp/>metadata<sp/>is<sp/>copied.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>successful;<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Note<sp/>that<sp/>if<sp/>a<sp/>file<sp/>with<sp/>the<sp/>name<sp/>newName<sp/>already<sp/>exists,<sp/>copy()<sp/>returns</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>false.<sp/>This<sp/>means<sp/>QFile<sp/>will<sp/>not<sp/>overwrite<sp/>it.</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4" kindref="member">copy</ref>(const<sp/>QString&amp;<sp/>newName);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Moves<sp/>the<sp/>file<sp/>specified<sp/>by<sp/>fileName()<sp/>to<sp/>the<sp/>trash.</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>successful,<sp/>and<sp/>sets<sp/>the<sp/>fileName()<sp/>to<sp/>the<sp/>path<sp/>at</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>which<sp/>the<sp/>file<sp/>can<sp/>be<sp/>found<sp/>within<sp/>the<sp/>trash;<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ab25ea89875c88b5e803678a9e2a5ec3a" kindref="member">moveToTrash</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Removes<sp/>the<sp/>file<sp/>specified<sp/>by<sp/>the<sp/>fileName<sp/>given.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>successful;<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a82a346b6fa25d04e613c3d058b0b719d" kindref="member">remove</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Renames<sp/>the<sp/>file<sp/>currently<sp/>specified<sp/>by<sp/>fileName()<sp/>to<sp/>newName.</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>successful;<sp/>otherwise<sp/>returns<sp/>false.</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>a<sp/>file<sp/>with<sp/>the<sp/>name<sp/>newName<sp/>already<sp/>exists,<sp/>rename()<sp/>returns<sp/>false</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>(i.e.,<sp/>QFile<sp/>will<sp/>not<sp/>overwrite<sp/>it).</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>file<sp/>is<sp/>closed<sp/>before<sp/>it<sp/>is<sp/>renamed.</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>rename<sp/>operation<sp/>fails,<sp/>Qt<sp/>will<sp/>attempt<sp/>to<sp/>copy<sp/>this<sp/>file&apos;s</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>contents<sp/>to<sp/>newName,<sp/>and<sp/>then<sp/>remove<sp/>this<sp/>file,<sp/>keeping<sp/>only<sp/>newName.</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>that<sp/>copy<sp/>operation<sp/>fails<sp/>or<sp/>this<sp/>file<sp/>can&apos;t<sp/>be<sp/>removed,<sp/>the</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>destination<sp/>file<sp/>newName<sp/>is<sp/>removed<sp/>to<sp/>restore<sp/>the<sp/>old<sp/>state.</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216" kindref="member">rename</ref>(const<sp/>QString<sp/>&amp;newName);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>a<sp/>human-readable<sp/>description<sp/>of<sp/>the<sp/>last<sp/>device<sp/>error<sp/>that<sp/>occurred.</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ad4d1284536fa8ad66c535f78452b401f" kindref="member">errorString</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>QtLabb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//---------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ScriptQFileH</highlight></codeline>
+    </programlisting>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="shared__plugins_2python_2ScriptEnvAccess_8h" kind="file">
+    <compoundname>shared_plugins/python/ScriptEnvAccess.h</compoundname>
+    <includes local="no">QObject</includes>
+    <includes local="no">QVariantMap</includes>
+    <includes local="no">PythonQtObjectPtr.h</includes>
+    <includes local="no">PythonQt.h</includes>
+    <includes local="no">QEvent</includes>
+    <includes local="no">QPointer</includes>
+    <includes local="yes">Decorators.h</includes>
+    <includes local="no">QSharedPointer</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>QObject</label>
+      </node>
+      <node id="2">
+        <label>QVariantMap</label>
+      </node>
+      <node id="5">
+        <label>QEvent</label>
+      </node>
+      <node id="8">
+        <label>QSharedPointer</label>
+      </node>
+      <node id="3">
+        <label>PythonQtObjectPtr.h</label>
+      </node>
+      <node id="4">
+        <label>PythonQt.h</label>
+      </node>
+      <node id="6">
+        <label>QPointer</label>
+      </node>
+      <node id="0">
+        <label>ScriptEnvAccess.h</label>
+        <link refid="shared_plugins/python/ScriptEnvAccess.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Decorators.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classPython_1_1CScriptEnvAccess" prot="public">Python::CScriptEnvAccess</innerclass>
+    <innernamespace refid="namespacePython">Python</innernamespace>
+    <innernamespace refid="namespaceQtLabb">QtLabb</innernamespace>
+    <innernamespace refid="namespaceQtLabb_1_1Core">QtLabb::Core</innernamespace>
+    <innernamespace refid="namespaceQtLabb_1_1Script">QtLabb::Script</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ScriptEnvAccessH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ScriptEnvAccessH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">///<sp/>\file<sp/><sp/><sp/>ScriptEnvAccess.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">///<sp/>\author<sp/>Uwe<sp/>Kindler</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">///<sp/>\date<sp/><sp/><sp/>25.10.2021</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">///<sp/>\brief<sp/><sp/>Declaration<sp/>of<sp/>CScriptEnvAccess<sp/>class</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INCLUDES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVariantMap&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;PythonQtObjectPtr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;PythonQt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QEvent&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPointer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Decorators.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QSemaphore;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>QT_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceQtLabb" kindref="compound">QtLabb</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CStateEx;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Core</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CDevice;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Script</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IScriptFunction;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacePython" kindref="compound">Python</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>Helper<sp/>class<sp/>for<sp/>access<sp/>of<sp/>the<sp/>scripting<sp/>environment<sp/>from<sp/>a<sp/>Python<sp/>script</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>An<sp/>instance<sp/>of<sp/>CScriptEnvAccess<sp/>is<sp/>registered<sp/>to<sp/>a<sp/>Python<sp/>module<sp/>with</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>the<sp/>name<sp/>&quot;ScriptEnv&quot;.<sp/>It<sp/>allows<sp/>setting<sp/>and<sp/>reading<sp/>variables<sp/>and<sp/>registers</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>some<sp/>global<sp/>object<sp/>like<sp/>device<sp/>manager<sp/>or<sp/>object<sp/>manager<sp/>to<sp/>allow<sp/>access</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>from<sp/>python<sp/>to<sp/>application<sp/>objects<sp/>and<sp/>device<sp/>objects</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classPython_1_1CScriptEnvAccess" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPython_1_1CScriptEnvAccess" kindref="compound">CScriptEnvAccess</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testProperty<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testProperty.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testProperty2<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testProperty2.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testProperty()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>QtLabb::Script::IScriptFunction*<sp/>m_ScriptFunction<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointer&lt;QObject&gt;<sp/>m_ScriptFunctionObject;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>PythonQtObjectPtr<sp/>m_PythonModule;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_TestProperty<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>script<sp/>function<sp/>is<sp/>null</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptFunctionNull()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Super<sp/>=<sp/>QObject;</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Default<sp/>Constructor</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPython_1_1CScriptEnvAccess_1a0e4d1683fa00f561771b622ed17d9155" kindref="member">CScriptEnvAccess</ref>(QtLabb::Script::IScriptFunction*<sp/>ScriptFunction<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Removes<sp/>itself<sp/>from<sp/>the<sp/>given<sp/>Python<sp/>module</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPython_1_1CScriptEnvAccess_1a2caf0472551832596edde32ac806e553" kindref="member">~CScriptEnvAccess</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Adds<sp/>itself<sp/>to<sp/>the<sp/>given<sp/>module<sp/>and<sp/>registers<sp/>other<sp/>objects<sp/>like</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>DeviceManager<sp/>or<sp/>ObjectManager</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPython_1_1CScriptEnvAccess_1a1a2b49ea188f3e4629bae6be86e6aec3" kindref="member">addToModule</ref>(PythonQtObjectPtr<sp/>Module);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>script<sp/>function<sp/>to<sp/>use</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPython_1_1CScriptEnvAccess_1aa2bde8782e47787d04e1bdd8ed44ddcd" kindref="member">setScriptFunction</ref>(QtLabb::Script::IScriptFunction*<sp/>ScriptFunction);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@name<sp/>scripting</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/>///@{</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>a<sp/>tuple<sp/>with<sp/>all<sp/>device<sp/>names<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>Python.</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>the<sp/>device<sp/>name<sp/>when<sp/>calling<sp/>the<sp/>`getDevice()`<sp/>function<sp/>to<sp/>get</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>corresponding<sp/>device<sp/>object.</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe" kindref="member">getDeviceNames</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>device<sp/>object<sp/>for<sp/>the<sp/>given<sp/>device<sp/>name.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>device<sp/>object<sp/>provides<sp/>access<sp/>to<sp/>device-specific<sp/>functions<sp/>and</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties<sp/>of<sp/>this<sp/>device.<sp/>The<sp/>device<sp/>names<sp/>are<sp/>the<sp/>names<sp/>that<sp/>are<sp/>also</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>used<sp/>in<sp/>the<sp/>CETONI<sp/>Elements<sp/>script<sp/>system<sp/>to<sp/>access<sp/>devices<sp/>or<sp/>device</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties.</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.py}</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pump<sp/>=<sp/>ScriptEnv.getDevice(&quot;Nemesys_S_1&quot;)</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QtLabb::Core::CDevice*<sp/><ref refid="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a" kindref="member">getDevice</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>Name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>a<sp/>list<sp/>of<sp/>all<sp/>registered<sp/>application<sp/>objects<sp/>that<sp/>are<sp/>not<sp/>devices</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>Python,<sp/>such<sp/>as<sp/>the<sp/>graphical<sp/>logger.</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859" kindref="member">getObjectNames</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>object<sp/>with<sp/>the<sp/>given<sp/>object<sp/>name<sp/>`Name`.</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.py}</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>plot<sp/>=<sp/>ScriptEnv.getObject(&quot;ProcessDataGraph&quot;)</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QObject*<sp/><ref refid="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb" kindref="member">getObject</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>Name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>value<sp/>of<sp/>a<sp/>certain<sp/>script<sp/>variable.</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>variable<sp/>name<sp/>needs<sp/>to<sp/>start<sp/>with<sp/>a<sp/>dollar<sp/>sign.</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.py}</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>flow<sp/>=<sp/>ScriptEnv.getVar(&quot;$FlowRate&quot;)</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariant<sp/><ref refid="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9" kindref="member">getVar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>VarName)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>script<sp/>variable<sp/>to<sp/>the<sp/>given<sp/>value.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.py}</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVar(&quot;$TargetPos&quot;,<sp/>25)</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49" kindref="member">setVar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>Name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVariant&amp;<sp/>Value);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>multiple<sp/>script<sp/>variables<sp/>using<sp/>a<sp/>Python<sp/>dictionary.</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.py}</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVars({&quot;$Value1&quot;<sp/>:<sp/>0.5,<sp/>&quot;$Value2&quot;<sp/>:<sp/>1.5})</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPython_1_1CScriptEnvAccess_1a94259e9a9d31737b8940a7c7d9dd4b87" kindref="member">setVars</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVariantMap<sp/>Values);</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/>///@}</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sleep(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Seconds);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>-----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>slots<sp/>and<sp/>functions<sp/>are<sp/>only<sp/>here<sp/>for<sp/>testing<sp/>and<sp/>debugging</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testSlot(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fValue,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>TextValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVariant&amp;<sp/>vValue);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__setTestProperty(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>QWidget*<sp/>__createCppOwnedWidget();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>PythonQtPassOwnershipToPython&lt;QWidget*&gt;<sp/>__createPythonOwnedWidget();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__emitTestSignal();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><sp/>QSharedPointer&lt;QObject&gt;<sp/>getSharedObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__testSignal();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>QT_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>ScriptEnvAccess</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ScriptEnvAccessH</highlight></codeline>
+    </programlisting>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/ScriptEnvAccess.h"/>
+  </compounddef>
+</doxygen>

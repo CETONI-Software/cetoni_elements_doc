@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_f1902236610d070bfa226bb21d65d30c" kind="dir">
+    <compoundname>qtlabb</compoundname>
+    <innerdir refid="dir_d382caafb9bbd45a2df64178dbb3c3ab">script</innerdir>
+    <innerdir refid="dir_d18305c712e07b96fb7eb00c875a452d">shared_plugins</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_7be434e640d04055736e62653588aac6" kind="dir">
+    <compoundname>python</compoundname>
+    <innerfile refid="shared__plugins_2python_2ScriptEnvAccess_8h">shared_plugins/python/ScriptEnvAccess.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/python/"/>
+  </compounddef>
+</doxygen>

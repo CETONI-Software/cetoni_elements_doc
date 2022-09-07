@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_d18305c712e07b96fb7eb00c875a452d" kind="dir">
+    <compoundname>shared_plugins</compoundname>
+    <innerdir refid="dir_e205b80fee97a11d7a50ccf8690b5cbf">database</innerdir>
+    <innerdir refid="dir_7be434e640d04055736e62653588aac6">python</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/"/>
+  </compounddef>
+</doxygen>

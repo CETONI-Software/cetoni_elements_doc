@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_e205b80fee97a11d7a50ccf8690b5cbf" kind="dir">
+    <compoundname>database</compoundname>
+    <innerfile refid="ScriptQSqlDatabase_8h">ScriptQSqlDatabase.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/"/>
+  </compounddef>
+</doxygen>

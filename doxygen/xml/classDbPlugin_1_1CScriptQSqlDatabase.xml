@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classDbPlugin_1_1CScriptQSqlDatabase" kind="class" prot="public">
+    <compoundname>DbPlugin::CScriptQSqlDatabase</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes local="no">ScriptQSqlDatabase.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDbPlugin_1_1CScriptQSqlDatabase_1a3c62645b10e5e22b20cf2641129ec863" prot="private" static="no" mutable="no">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase DbPlugin::CScriptQSqlDatabase::m_Db</definition>
+        <argsstring></argsstring>
+        <name>m_Db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="103" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab2ed4aff5792df123ab21e9d64504154" prot="private" static="no" mutable="no">
+        <type>QtLabb::Database::QDatabaseDescriptor</type>
+        <definition>QtLabb::Database::QDatabaseDescriptor DbPlugin::CScriptQSqlDatabase::m_DbDescriptor</definition>
+        <argsstring></argsstring>
+        <name>m_DbDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="104" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae002d08b936088700317dbac8f9584c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlDatabase::createConnection</definition>
+        <argsstring>(const QString &amp;type, const QString &amp;connectionName)</argsstring>
+        <name>createConnection</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>connectionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a3ca41f48e74e85d5dc5caa3c919a2d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QObject *</type>
+        <definition>QObject* DbPlugin::CScriptQSqlDatabase::createQuery</definition>
+        <argsstring>(const QString &amp;query=QString())</argsstring>
+        <name>createQuery</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>query</declname>
+          <defval>QString()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7211479a3c959719d70f723a33f80c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DbPlugin::CScriptQSqlDatabase::CScriptQSqlDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>CScriptQSqlDatabase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a104ae2b4bdcd6d1403f80f2366e176e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::databaseName</definition>
+        <argsstring>() const </argsstring>
+        <name>databaseName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac644814a14c86c690afd13a55171dd72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList DbPlugin::CScriptQSqlDatabase::drivers</definition>
+        <argsstring>() const </argsstring>
+        <name>drivers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac50a8e80b1abb79c9c38875c04c2bb0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QObject *</type>
+        <definition>QObject* DbPlugin::CScriptQSqlDatabase::executeQuery</definition>
+        <argsstring>(const QString &amp;query)</argsstring>
+        <name>executeQuery</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a4cd4e88488b0cbd3a36b39898ec60184" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList DbPlugin::CScriptQSqlDatabase::fields</definition>
+        <argsstring>(const QString &amp;tablename) const </argsstring>
+        <name>fields</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>tablename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a65d603b2c0d3cf43056d9790fff70652" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::hostName</definition>
+        <argsstring>() const </argsstring>
+        <name>hostName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a0a6c6f6c77c76768afd59886da60781b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlDatabase::isOpen</definition>
+        <argsstring>() const </argsstring>
+        <name>isOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a726b40660f13d495d23536a9c4316311" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlDatabase::isValid</definition>
+        <argsstring>() const </argsstring>
+        <name>isValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab68935edaa8c64474347d8d95dc52ca6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::lastError</definition>
+        <argsstring>() const </argsstring>
+        <name>lastError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae7b722e955fb081ce3406bf78388405b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlDatabase::open</definition>
+        <argsstring>()</argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a492bcbae6e344a78a04a139ba18ecb43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::password</definition>
+        <argsstring>() const </argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1aa31876577c32a607414120013a808bd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DbPlugin::CScriptQSqlDatabase::port</definition>
+        <argsstring>() const </argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7ffd47db405d965e485450d09eab184a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase DbPlugin::CScriptQSqlDatabase::qSqlDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>qSqlDatabase</name>
+        <briefdescription>
+<para>Returns the internal database object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ad81e5047f6fd5e7cb2041a445c5e6cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlDatabase::setDatabaseName</definition>
+        <argsstring>(const QString &amp;name)</argsstring>
+        <name>setDatabaseName</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1aae8537672db9ab3281bd2b5650b5a2b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlDatabase::setHostName</definition>
+        <argsstring>(const QString &amp;host)</argsstring>
+        <name>setHostName</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a8149e2219173eccc90ddc40a5a41e941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlDatabase::setPassword</definition>
+        <argsstring>(const QString &amp;password)</argsstring>
+        <name>setPassword</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1af37db571469bc9c7fc6fdc1c939710cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlDatabase::setPort</definition>
+        <argsstring>(int port)</argsstring>
+        <name>setPort</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1aff0854ac30eb045e1a7d8a8bfe691c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbPlugin::CScriptQSqlDatabase::setUrl</definition>
+        <argsstring>(const QString &amp;Url)</argsstring>
+        <name>setUrl</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac72acd07faca3dedfe0803dfe9891c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbPlugin::CScriptQSqlDatabase::setUserName</definition>
+        <argsstring>(const QString &amp;name)</argsstring>
+        <name>setUserName</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1aedfbb90ce1cce419937c7a0666d6863e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList DbPlugin::CScriptQSqlDatabase::tables</definition>
+        <argsstring>() const </argsstring>
+        <name>tables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7db1458d62b1d8e430b55cbdcf44d42c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::url</definition>
+        <argsstring>() const </argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1a08e1bed7f6198c8d5b8878d27446d132" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbPlugin::CScriptQSqlDatabase::userName</definition>
+        <argsstring>() const </argsstring>
+        <name>userName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab557d305c983758444e658a8ed3e98f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual DbPlugin::CScriptQSqlDatabase::~CScriptQSqlDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>~CScriptQSqlDatabase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="108" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper for QSQLDatabase object to use it in JavaScript. </para>    </briefdescription>
+    <detaileddescription>
+<para>The following code shows, how to open a database connection in JavaScript and how to execute a simple query</para><para><programlisting><codeline><highlight class="normal">db<sp/>=<sp/>new<sp/>QSqlDatabase();</highlight></codeline>
+<codeline><highlight class="normal">db.createConnection(&quot;QSQLITE&quot;,<sp/>&quot;JsScript&quot;);</highlight></codeline>
+<codeline><highlight class="normal">db.setDatabaseName(&quot;C:/Users/Public/Documents/QmixElements/Projects/Entwicklung/Log/ProcessDataDbLog.sqlite&quot;);</highlight></codeline>
+<codeline><highlight class="normal">db.open();</highlight></codeline>
+<codeline><highlight class="normal">q<sp/>=<sp/>db.executeQuery(&quot;SELECT<sp/>*<sp/>FROM<sp/>tbl_process_data&quot;);</highlight></codeline>
+<codeline><highlight class="normal">while<sp/>(q.next())<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>print(q.recordValues());</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" line="99" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/shared_plugins/database/ScriptQSqlDatabase.h" bodystart="98" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ae002d08b936088700317dbac8f9584c1" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>createConnection</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a3ca41f48e74e85d5dc5caa3c919a2d03" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>createQuery</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a7211479a3c959719d70f723a33f80c52" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>CScriptQSqlDatabase</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a104ae2b4bdcd6d1403f80f2366e176e1" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>databaseName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ac644814a14c86c690afd13a55171dd72" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>drivers</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ac50a8e80b1abb79c9c38875c04c2bb0e" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>executeQuery</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a4cd4e88488b0cbd3a36b39898ec60184" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>fields</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a65d603b2c0d3cf43056d9790fff70652" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>hostName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a0a6c6f6c77c76768afd59886da60781b" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>isOpen</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a726b40660f13d495d23536a9c4316311" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>isValid</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ab68935edaa8c64474347d8d95dc52ca6" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>lastError</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a3c62645b10e5e22b20cf2641129ec863" prot="private" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>m_Db</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ab2ed4aff5792df123ab21e9d64504154" prot="private" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>m_DbDescriptor</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ae7b722e955fb081ce3406bf78388405b" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>open</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a492bcbae6e344a78a04a139ba18ecb43" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>password</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1aa31876577c32a607414120013a808bd2" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>port</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a7ffd47db405d965e485450d09eab184a" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>qSqlDatabase</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ad81e5047f6fd5e7cb2041a445c5e6cf2" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setDatabaseName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1aae8537672db9ab3281bd2b5650b5a2b0" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setHostName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a8149e2219173eccc90ddc40a5a41e941" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setPassword</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1af37db571469bc9c7fc6fdc1c939710cb" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setPort</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1aff0854ac30eb045e1a7d8a8bfe691c44" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setUrl</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ac72acd07faca3dedfe0803dfe9891c5f" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>setUserName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1aedfbb90ce1cce419937c7a0666d6863e" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>tables</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a7db1458d62b1d8e430b55cbdcf44d42c" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>url</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1a08e1bed7f6198c8d5b8878d27446d132" prot="public" virt="non-virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>userName</name></member>
+      <member refid="classDbPlugin_1_1CScriptQSqlDatabase_1ab557d305c983758444e658a8ed3e98f6" prot="public" virt="virtual"><scope>DbPlugin::CScriptQSqlDatabase</scope><name>~CScriptQSqlDatabase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

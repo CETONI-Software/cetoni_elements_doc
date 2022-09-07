@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classQtLabb_1_1Script_1_1CScriptEnvAccess" kind="class" prot="public">
+    <compoundname>QtLabb::Script::CScriptEnvAccess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes local="no">ScriptEnvAccess.h</includes>
+      <sectiondef kind="user-defined">
+      <header>scripting</header>
+      <memberdef kind="enum" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" prot="public" static="no">
+        <name>eMainFunctionReturnCode</name>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" prot="public">
+          <name>ScriptFinish</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>finish current script function </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" prot="public">
+          <name>ScriptKeepRunning</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>keep the JavaScript engine running and stay in current script </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The main function return code. </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally the script execution finishes, if the JavaScript main() function is left. To indicate, that script execution should not finish, i.e. if you would like to wait for a certain event or signal, then your main function can return KEEP_RUNNING, to indicate, that you would like to stay in the current script function.</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="keyword">function</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ScriptEnv.ScriptFinish;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="125" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="enum" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" prot="public" static="no">
+        <name>eProjectLocation</name>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" prot="public">
+          <name>LocationProject</name>
+          <initializer>= Core::ICore::ProjectLocation</initializer>
+          <briefdescription>
+<para>location of the current project directory </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" prot="public">
+          <name>LocationConfigurations</name>
+          <initializer>= Core::ICore::ConfigurationsLocation</initializer>
+          <briefdescription>
+<para>ConfigurationsLocation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" prot="public">
+          <name>LocationLog</name>
+          <initializer>= Core::ICore::LogLocation</initializer>
+          <briefdescription>
+<para>LogLocation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" prot="public">
+          <name>LocationScripts</name>
+          <initializer>= Core::ICore::ScriptsLocation</initializer>
+          <briefdescription>
+<para>ScriptsLocation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" prot="public">
+          <name>LocationPictures</name>
+          <initializer>= Core::ICore::PicturesLocation</initializer>
+          <briefdescription>
+<para>PicturesLocation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" prot="public">
+          <name>LocationVideos</name>
+          <initializer>= Core::ICore::VideosLocation</initializer>
+          <briefdescription>
+<para>VideosLocations. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" prot="public">
+          <name>LocationData</name>
+          <initializer>= Core::ICore::DataLocation</initializer>
+          <briefdescription>
+<para>DataLocation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" prot="public">
+          <name>LocationSettings</name>
+          <initializer>= Core::ICore::SettingsLocation</initializer>
+          <briefdescription>
+<para>location where application can store settings and configuration files </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enum describes the different locations that can be queried using <ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" kindref="member">projectPath()</ref> function. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following example shows, how to get the data path of the current project:</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="143" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="142" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList QtLabb::Script::CScriptEnvAccess::getDeviceNames</definition>
+        <argsstring>() const </argsstring>
+        <name>getDeviceNames</name>
+        <briefdescription>
+<para>Returns an array with all device names that can be accessed from JavaScript. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use the device name when calling the <computeroutput><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" kindref="member">getDevice()</ref></computeroutput> function to get the corresponding device object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QtLabb::Core::CDevice *</type>
+        <definition>QtLabb::Core::CDevice* QtLabb::Script::CScriptEnvAccess::getDevice</definition>
+        <argsstring>(const QString &amp;Name) const </argsstring>
+        <name>getDevice</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the device object for the given device name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">pump<sp/>=<sp/>ScriptEnv.getDevice(</highlight><highlight class="stringliteral">&quot;Nemesys_S_1&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>QStringList QtLabb::Script::CScriptEnvAccess::getObjectNames</definition>
+        <argsstring>() const </argsstring>
+        <name>getObjectNames</name>
+        <briefdescription>
+<para>Returns an array of all registered application objects that are not devices and that can be accessed from JavaScript, such as the graphical logger. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QObject *</type>
+        <definition>QObject* QtLabb::Script::CScriptEnvAccess::getObject</definition>
+        <argsstring>(const QString &amp;Name) const </argsstring>
+        <name>getObject</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the object with the given object name <computeroutput>Name</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">plot<sp/>=<sp/>ScriptEnv.getObject(</highlight><highlight class="stringliteral">&quot;ProcessDataGraph&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariant</type>
+        <definition>QVariant QtLabb::Script::CScriptEnvAccess::getVar</definition>
+        <argsstring>(const QString &amp;VarName) const </argsstring>
+        <name>getVar</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>VarName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of a certain script variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The variable name needs to start with a dollar sign.</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">flow<sp/>=<sp/>ScriptEnv.getVar(</highlight><highlight class="stringliteral">&quot;$FlowRate&quot;</highlight><highlight class="normal">)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="201" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptEnvAccess::setVar</definition>
+        <argsstring>(const QString &amp;Name, const QVariant &amp;Value)</argsstring>
+        <name>setVar</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const QVariant &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the script variable to the given value. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">ScriptEnv.setVar(</highlight><highlight class="stringliteral">&quot;$TargetPos&quot;</highlight><highlight class="normal">,<sp/>25)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptEnvAccess::setVars</definition>
+        <argsstring>(const QVariantList Values)</argsstring>
+        <name>setVars</name>
+        <param>
+          <type>const QVariantList</type>
+          <declname>Values</declname>
+        </param>
+        <briefdescription>
+<para>Sets multiple script variables using a JavaScript array. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">ScriptEnv.setVars([</highlight><highlight class="stringliteral">&quot;$Value1&quot;</highlight><highlight class="normal">,<sp/>0.5,<sp/></highlight><highlight class="stringliteral">&quot;$Value2&quot;</highlight><highlight class="normal">,<sp/>1.5])</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptEnvAccess::sleep</definition>
+        <argsstring>(float Seconds)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>float</type>
+          <declname>Seconds</declname>
+        </param>
+        <briefdescription>
+<para>Sleep for the given number of seconds without blocking the application main event loop. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use this function for small delays only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptEnvAccess::leave</definition>
+        <argsstring>()</argsstring>
+        <name>leave</name>
+        <briefdescription>
+<para>Leave the current script function. </para>        </briefdescription>
+        <detaileddescription>
+<para>If your JavaScript main() function returned ScriptEnv.KEEP_RUNNING then you can use this function if you finished your JavaScript logic to signal the scripting system that the script system should leave the current script function and process the next one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="237" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QJSValue</type>
+        <definition>QJSValue QtLabb::Script::CScriptEnvAccess::invoke</definition>
+        <argsstring>(const QJSValue &amp;fun, const QJSValue &amp;args)</argsstring>
+        <name>invoke</name>
+        <param>
+          <type>const QJSValue &amp;</type>
+          <declname>fun</declname>
+        </param>
+        <param>
+          <type>const QJSValue &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Invoke the given function with the given parameters in the main UI thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This allows calling of UI objects methods from a JavaScript function running concurrently in its own thread. The first parameter fun is the function that should get invoked (like pump.generateFlow) and the second parameter args is an JavaScript array with the function arguments (like [-0.01]).</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">pump<sp/>=<sp/>ScriptEnv.getDevice(</highlight><highlight class="stringliteral">&quot;Nemesys_S_1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">ScriptEnv.invoke(pump.generateFlow,<sp/>[-0.01]);</highlight></codeline>
+<codeline><highlight class="normal">graph<sp/>=<sp/>ScriptEnv.getObject(</highlight><highlight class="stringliteral">&quot;ProcessDataGraph&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">ScriptEnv.invoke(graph.startLogging,<sp/>[]);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="254" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptEnvAccess::projectPath</definition>
+        <argsstring>(int Location) const </argsstring>
+        <name>projectPath</name>
+        <param>
+          <type>int</type>
+          <declname>Location</declname>
+        </param>
+        <briefdescription>
+<para>Returns the absolute path of a certain data location in the current project. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location identifier (see eProjectLocation enum)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The following example shows, how to get the data path of the current project:</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">path<sp/>=<sp/>ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
+<codeline><highlight class="normal">path<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;/TestFile1.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">f<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QFile(path);</highlight></codeline>
+<codeline><highlight class="normal">f.open(QFile.ModeReadWrite);</highlight></codeline>
+<codeline><highlight class="normal">f.write(</highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>just<sp/>a<sp/>test<sp/>test&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">f.close();</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" kindref="member">eProjectLocation</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="276" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a90eefa39b58b8bc1532e3149e2358862" prot="public" static="no">
+        <type>QObject</type>
+        <definition>using QtLabb::Script::CScriptEnvAccess::Super =  QObject</definition>
+        <argsstring></argsstring>
+        <name>Super</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="81" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8982d226a1069eeb17dbbb76beea4cea" prot="private" static="no" mutable="no">
+        <type>ScriptEnvAccessPrivate *</type>
+        <definition>ScriptEnvAccessPrivate* QtLabb::Script::CScriptEnvAccess::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="61" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a77fdf982d81046ceb5e625496c0a671f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ScriptEnvAccessPrivate</definition>
+        <argsstring></argsstring>
+        <name>ScriptEnvAccessPrivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="62" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aef5dd0a55e28cff7dae4852095c236e0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptEnvAccess::helpForObject</definition>
+        <argsstring>(const QJSValue &amp;v) const </argsstring>
+        <name>helpForObject</name>
+        <param>
+          <type>const QJSValue &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>This help function will get called if user requests help for a certain object such as help(ScriptEnv). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a1827bb419b3b9354d2f66442e3a7f30a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptEnvAccess::helpGlobal</definition>
+        <argsstring>(const QJSValue &amp;v) const </argsstring>
+        <name>helpGlobal</name>
+        <param>
+          <type>const QJSValue &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>This help function is called if user enters <ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" kindref="member">help()</ref> without parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a57b26389566c2e7fe39ca783306043ae" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptEnvAccess::isScriptFunctionNull</definition>
+        <argsstring>() const </argsstring>
+        <name>isScriptFunctionNull</name>
+        <briefdescription>
+<para>Returns true if script function is null. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9525895a4dbe97814ec9cd17dcc36773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QtLabb::Script::CScriptEnvAccess::CScriptEnvAccess</definition>
+        <argsstring>(CExecJavaScriptFunction *ScriptFunction=nullptr)</argsstring>
+        <name>CScriptEnvAccess</name>
+        <param>
+          <type>CExecJavaScriptFunction *</type>
+          <declname>ScriptFunction</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Default Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptEnvAccess::help</definition>
+        <argsstring>(const QJSValue &amp;v) const </argsstring>
+        <name>help</name>
+        <param>
+          <type>const QJSValue &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Returns the help string for the given object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a283a16c9a19036e7802abf4085b33d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptEnvAccess::setScriptFunction</definition>
+        <argsstring>(CExecJavaScriptFunction *ScriptFunction)</argsstring>
+        <name>setScriptFunction</name>
+        <param>
+          <type>CExecJavaScriptFunction *</type>
+          <declname>ScriptFunction</declname>
+        </param>
+        <briefdescription>
+<para>Sets the script function to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1acd505c3c8e56880905b52a8f9d8605cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QtLabb::Script::CScriptEnvAccess::~CScriptEnvAccess</definition>
+        <argsstring>()</argsstring>
+        <name>~CScriptEnvAccess</name>
+        <briefdescription>
+<para>Removes itself from the given Python module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="91" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class for access of the scripting environment from a JavaScript script An instance of <ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" kindref="compound">CScriptEnvAccess</ref> is registered to the JavaScript engine with the name &quot;ScriptEnv&quot;. </para>    </briefdescription>
+    <detaileddescription>
+<para>It allows setting and reading variables and registers some global object like device manager or object manager to allow access from JavaScript to application objects and device objects </para>    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" line="51" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h" bodystart="50" bodyend="314"/>
+    <listofallmembers>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9525895a4dbe97814ec9cd17dcc36773" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>CScriptEnvAccess</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8982d226a1069eeb17dbbb76beea4cea" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>d</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>eMainFunctionReturnCode</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>eProjectLocation</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>getDevice</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>getDeviceNames</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>getObject</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>getObjectNames</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>getVar</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>help</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aef5dd0a55e28cff7dae4852095c236e0" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>helpForObject</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a1827bb419b3b9354d2f66442e3a7f30a" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>helpGlobal</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>invoke</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a57b26389566c2e7fe39ca783306043ae" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>isScriptFunctionNull</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>leave</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationConfigurations</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationData</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationLog</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationPictures</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationProject</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationScripts</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationSettings</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>LocationVideos</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>projectPath</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a77fdf982d81046ceb5e625496c0a671f" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>ScriptEnvAccessPrivate</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>ScriptFinish</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>ScriptKeepRunning</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a283a16c9a19036e7802abf4085b33d3f" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>setScriptFunction</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>setVar</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>setVars</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>sleep</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a90eefa39b58b8bc1532e3149e2358862" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>Super</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1acd505c3c8e56880905b52a8f9d8605cd" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptEnvAccess</scope><name>~CScriptEnvAccess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

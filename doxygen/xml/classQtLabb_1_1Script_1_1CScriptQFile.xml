@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classQtLabb_1_1Script_1_1CScriptQFile" kind="class" prot="public">
+    <compoundname>QtLabb::Script::CScriptQFile</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes local="no">ScriptQFile.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10" prot="public" static="no">
+        <name>OpenModeFlag</name>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a93933c7b8ce9ab9c12411338d1f80d1a" prot="public">
+          <name>ModeNotOpen</name>
+          <initializer>= QFile::NotOpen</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3897825a0a50455b527ec544efb07627" prot="public">
+          <name>ModeReadOnly</name>
+          <initializer>= QFile::ReadOnly</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a232357858b02da2b9323d27cbe8a21bb" prot="public">
+          <name>ModeWriteOnly</name>
+          <initializer>= QFile::WriteOnly</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10aa4f49d99bf48a4843254c8eec533454f" prot="public">
+          <name>ModeReadWrite</name>
+          <initializer>= QFile::ReadWrite</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10ae84b6af3903f26830faa6879300d1afa" prot="public">
+          <name>ModeAppend</name>
+          <initializer>= QFile::Append</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a89ebc69f866cc4041ce89fad1fb1c040" prot="public">
+          <name>ModeTruncate</name>
+          <initializer>= QFile::Truncate</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a83210927f28b8ae24881d1ce4f606dc3" prot="public">
+          <name>ModeText</name>
+          <initializer>= QFile::Text</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3bf499aed113a4a71bdd66cee40c971b" prot="public">
+          <name>ModeUnbuffered</name>
+          <initializer>= QFile::Unbuffered</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a47420c9282a5893edbe84d517b632fac" prot="public">
+          <name>ModeNewOnly</name>
+          <initializer>= QFile::NewOnly</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a924e83f029974c98e2e190481a5e242a" prot="public">
+          <name>ModeExistingOnly</name>
+          <initializer>= QFile::ExistingOnly</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enum is used with <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304" kindref="member">open()</ref> to describe the mode in which a device is opened. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="39" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" bodystart="39" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQtLabb_1_1Script_1_1CScriptQFile_1a9043272ed3a42d7b65d06ed81d14f648" prot="private" static="no" mutable="no">
+        <type>QFile</type>
+        <definition>QFile QtLabb::Script::CScriptQFile::m_File</definition>
+        <argsstring></argsstring>
+        <name>m_File</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="33" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a175862fb83360515c0f454840aa3177d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptQFile::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Closes the file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls flush() and closes the file. Errors from flush are ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::copy</definition>
+        <argsstring>(const QString &amp;newName)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>newName</declname>
+        </param>
+        <briefdescription>
+<para>Copies the file named <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName()</ref> to newName. </para>        </briefdescription>
+        <detaileddescription>
+<para>This file is closed before it is copied. If the copied file is a symbolic link (symlink), the file it refers to is copied, not the link itself. With the exception of permissions, which are copied, no other file metadata is copied. Returns true if successful; otherwise returns false. Note that if a file with the name newName already exists, <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4" kindref="member">copy()</ref> returns false. This means QFile will not overwrite it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a9e419758b80f4b7df949e3b8b0645c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QtLabb::Script::CScriptQFile::CScriptQFile</definition>
+        <argsstring>(const QString &amp;name=QString())</argsstring>
+        <name>CScriptQFile</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+          <defval>QString()</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a new file object to represent the file with the specified name. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">f<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QFile(</highlight><highlight class="stringliteral">&quot;C:/temp/test1.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">f.open(QFile.ModeReadWrite);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1ad4d1284536fa8ad66c535f78452b401f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptQFile::errorString</definition>
+        <argsstring>() const </argsstring>
+        <name>errorString</name>
+        <briefdescription>
+<para>Returns a human-readable description of the last device error that occurred. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="200" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a519e60d707b7082cafb94568e3d88bbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::exists</definition>
+        <argsstring>() const </argsstring>
+        <name>exists</name>
+        <briefdescription>
+<para>Returns true if the file specified by <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName()</ref> exists; otherwise returns false. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QtLabb::Script::CScriptQFile::fileName</definition>
+        <argsstring>() const </argsstring>
+        <name>fileName</name>
+        <briefdescription>
+<para>Returns the name of the file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab47c1c4a8fd39a8cec1882d2832486a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::isOpen</definition>
+        <argsstring>() const </argsstring>
+        <name>isOpen</name>
+        <briefdescription>
+<para>Returns true if the device is open; otherwise returns false. </para>        </briefdescription>
+        <detaileddescription>
+<para>A file is open if it can be read from and/or written to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab25ea89875c88b5e803678a9e2a5ec3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::moveToTrash</definition>
+        <argsstring>()</argsstring>
+        <name>moveToTrash</name>
+        <briefdescription>
+<para>Moves the file specified by <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName()</ref> to the trash. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful, and sets the <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName()</ref> to the path at which the file can be found within the trash; otherwise returns false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::open</definition>
+        <argsstring>(int mode)</argsstring>
+        <name>open</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Opens the file with the given open mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful; otherwise returns false.</para><para><bold>Example:</bold> <programlisting><codeline><highlight class="normal">f<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QFile(</highlight><highlight class="stringliteral">&quot;C:/temp/test1.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">f.open(QFile.ModeReadWrite);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a56502f9f52a2c26e8e6b1dd64585feeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QByteArray</type>
+        <definition>QByteArray QtLabb::Script::CScriptQFile::read</definition>
+        <argsstring>(qint64 maxSize)</argsstring>
+        <name>read</name>
+        <param>
+          <type>qint64</type>
+          <declname>maxSize</declname>
+        </param>
+        <briefdescription>
+<para>Reads at most maxSize bytes from the device, and returns the data read as a QByteArray. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a14797a28271e3fc2f5c1a108347973f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QByteArray</type>
+        <definition>QByteArray QtLabb::Script::CScriptQFile::readAll</definition>
+        <argsstring>()</argsstring>
+        <name>readAll</name>
+        <briefdescription>
+<para>Reads all remaining data from the device, and returns it as a byte array. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a0c7ff50e5b241dab8e6c0fec86761130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QByteArray</type>
+        <definition>QByteArray QtLabb::Script::CScriptQFile::readLine</definition>
+        <argsstring>(qint64 maxSize=0)</argsstring>
+        <name>readLine</name>
+        <param>
+          <type>qint64</type>
+          <declname>maxSize</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Reads a line from the device, but no more than maxSize characters, and returns the result as a byte array. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a82a346b6fa25d04e613c3d058b0b719d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+<para>Removes the file specified by the fileName given. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful; otherwise returns false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::rename</definition>
+        <argsstring>(const QString &amp;newName)</argsstring>
+        <name>rename</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>newName</declname>
+        </param>
+        <briefdescription>
+<para>Renames the file currently specified by <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" kindref="member">fileName()</ref> to newName. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful; otherwise returns false.</para><para>If a file with the name newName already exists, <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216" kindref="member">rename()</ref> returns false (i.e., QFile will not overwrite it).</para><para>The file is closed before it is renamed.</para><para>If the rename operation fails, Qt will attempt to copy this file&apos;s contents to newName, and then remove this file, keeping only newName. If that copy operation fails or this file can&apos;t be removed, the destination file newName is removed to restore the old state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QtLabb::Script::CScriptQFile::seek</definition>
+        <argsstring>(qint64 pos)</argsstring>
+        <name>seek</name>
+        <param>
+          <type>qint64</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>For random-access devices, this function sets the current position to pos, returning true on success, or false if an error occurred. </para>        </briefdescription>
+        <detaileddescription>
+<para>For sequential devices, the default behavior is to do nothing and return false.</para><para>Seeking beyond the end of a file: If the position is beyond the end of a file, then <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a" kindref="member">seek()</ref> will not immediately extend the file. If a write is performed at this position, then the file will be extended. The content of the file between the previous end of file and the newly written data is UNDEFINED and varies between platforms and file systems. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QtLabb::Script::CScriptQFile::setFileName</definition>
+        <argsstring>(const QString &amp;FileName)</argsstring>
+        <name>setFileName</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+<para>Sets the name of the file. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name can have no path, a relative path, or an absolute path. Do not call this function if the file has already been opened. If the file name has no path or a relative path, the path used will be the application&apos;s current directory path at the time of the <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304" kindref="member">open()</ref> call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a86be775c6f69ff4bca53fd0494a1f1d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>qint64</type>
+        <definition>qint64 QtLabb::Script::CScriptQFile::write</definition>
+        <argsstring>(const QByteArray &amp;data)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const QByteArray &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Writes the content of byteArray to the device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of bytes that were actually written, or -1 if an error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classQtLabb_1_1Script_1_1CScriptQFile_1a10ef74b5ab60bbd983160734c0782391" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual QtLabb::Script::CScriptQFile::~CScriptQFile</definition>
+        <argsstring>()</argsstring>
+        <name>~CScriptQFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper for QFile object. </para>    </briefdescription>
+    <detaileddescription>
+<para>The QFile class provides an interface for reading from and writing to files. The file name is usually passed in the constructor, but it can be set at any time using <ref refid="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d" kindref="member">setFileName()</ref>. QFile expects the file separator to be &apos;/&apos; regardless of operating system. The use of other separators (e.g., &apos;\&apos;) is not supported. </para>    </detaileddescription>
+    <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" line="30" column="1" bodyfile="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptQFile.h" bodystart="29" bodyend="201"/>
+    <listofallmembers>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a175862fb83360515c0f454840aa3177d" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>close</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>copy</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a9e419758b80f4b7df949e3b8b0645c35" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>CScriptQFile</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1ad4d1284536fa8ad66c535f78452b401f" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>errorString</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a519e60d707b7082cafb94568e3d88bbd" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>exists</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>fileName</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1ab47c1c4a8fd39a8cec1882d2832486a5" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>isOpen</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a9043272ed3a42d7b65d06ed81d14f648" prot="private" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>m_File</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10ae84b6af3903f26830faa6879300d1afa" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeAppend</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a924e83f029974c98e2e190481a5e242a" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeExistingOnly</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a47420c9282a5893edbe84d517b632fac" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeNewOnly</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a93933c7b8ce9ab9c12411338d1f80d1a" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeNotOpen</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3897825a0a50455b527ec544efb07627" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeReadOnly</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10aa4f49d99bf48a4843254c8eec533454f" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeReadWrite</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a83210927f28b8ae24881d1ce4f606dc3" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeText</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a89ebc69f866cc4041ce89fad1fb1c040" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeTruncate</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3bf499aed113a4a71bdd66cee40c971b" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeUnbuffered</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a232357858b02da2b9323d27cbe8a21bb" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>ModeWriteOnly</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1ab25ea89875c88b5e803678a9e2a5ec3a" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>moveToTrash</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>open</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>OpenModeFlag</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a56502f9f52a2c26e8e6b1dd64585feeb" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>read</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a14797a28271e3fc2f5c1a108347973f9" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>readAll</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a0c7ff50e5b241dab8e6c0fec86761130" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>readLine</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a82a346b6fa25d04e613c3d058b0b719d" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>remove</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>rename</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>seek</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>setFileName</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a86be775c6f69ff4bca53fd0494a1f1d6" prot="public" virt="non-virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>write</name></member>
+      <member refid="classQtLabb_1_1Script_1_1CScriptQFile_1a10ef74b5ab60bbd983160734c0782391" prot="public" virt="virtual"><scope>QtLabb::Script::CScriptQFile</scope><name>~CScriptQFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
