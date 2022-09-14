@@ -85,11 +85,12 @@ following items are numbered in the figure below:
 
 .. rst-class:: guinums
 
-1. *Toolbar* – is for loading, saving, and controlling the sequence of
-   scripts.
-2. *Function tree* – shows a tree like program structure.
-3. The currently executed function is highlighted in green.
-4. When you select a function by clicking, it is highlighted blue.
+1. *Toolbar* – is for loading, saving, and running scripts.
+2. The header shows the script filename.
+3. *Function tree* – shows a tree like program structure.
+4. The currently executed function is highlighted in blue.
+5. When you select a function by clicking, it is highlighted in the selected
+   theme accent color (here orange)
 
 |Figure 4: Script editor panel|
 
@@ -165,6 +166,13 @@ Toolbar
 +-----------+---------------------------------------------------------+
 | |image24| | Starts the execution of a script or resumes a script    |
 |           | after an interruption.                                  |
++-----------+---------------------------------------------------------+
+| |stepping|| Activates single step operation for debugging scripts.  |
+|           | When single step operation is active, the script stops  |
+|           | after the execution of each command.                    |
++-----------+---------------------------------------------------------+
+| |execstep|| Click this button to trigger execution of next script   |
+|           | function in single step operation mode.                 |
 +-----------+---------------------------------------------------------+
 
 .. tip::
@@ -1131,4 +1139,9 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |folder| image:: Pictures/folder.svg
    :width: 40
 
+.. |stepping| image:: Pictures/step.svg
+   :width: 40
+
+.. |execstep| image:: Pictures/single_step2.svg
+   :width: 40
 
