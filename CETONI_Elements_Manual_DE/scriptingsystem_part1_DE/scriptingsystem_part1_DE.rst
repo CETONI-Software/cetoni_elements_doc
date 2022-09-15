@@ -89,11 +89,12 @@ folgende Elemente des Arbeitsfensters nummeriert:
 
 1. *Werkzeugleiste* - zum Laden, Speichern und zur Ablaufsteuerung von
    Scripten.
-2. *Funktionsbaum* - baumartige Struktur mit allen Scriptfunktionen
-3. Wenn Sie eine Funktion durch Anklicken auswählen, wird diese
-   farblich markiert (hier orange)
+2. Die Kopfzeile enthält den Dateinamen des aktuell geöffneten Scriptprogramms.
+3. *Funktionsbaum* - baumartige Struktur mit allen Scriptfunktionen
 4. Die aktuell ausgeführte Funktion wird farblich hervorgehoben (hier
    blau)
+5. Wenn Sie eine Funktion durch Anklicken auswählen, wird diese
+   mit der Akzentfarbe das aktuellen Themes farblich markiert (hier orange).
 
 .. image:: Pictures/100002010000025A00000168CC93E6B2FBB4D916.png
    :alt: Script Editor
@@ -180,6 +181,15 @@ Werkzeugleiste
 +-----------+---------------------------------------------------------+
 | |image24| | Startet die Programmausführung oder setzt ein Programm  |
 |           | nach einer Unterbrechung fort.                          |
++-----------+---------------------------------------------------------+
+| |stepping|| Aktiviert den Einzelschrittbetrieb zum Testen und       |
+|           | Debuggen von Scriptprogrammen. Ist diese Funktion aktiv |
+|           | wird die Scriptausführung nach der Ausführung jeder     |
+|           | Scriptfunktion unterbrochen.                            |
++-----------+---------------------------------------------------------+
+| |execstep|| Durch Klicken dieser Schaltfläche kann der nächste      |
+|           | Schritt, d.h. die nächste Funktion im                   |
+|           | Einzelschrittbetrieb ausgeführt.                        |
 +-----------+---------------------------------------------------------+
 
 
@@ -1181,3 +1191,9 @@ Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`�
 
 .. |folder| image:: Pictures/folder.svg
    :width: 40   
+
+.. |stepping| image:: Pictures/step.svg
+   :width: 40
+
+.. |execstep| image:: Pictures/single_step2.svg
+   :width: 40
