@@ -22,10 +22,12 @@ zur Programmablaufsteuerung und zur Verwendung von Variablen.
    :alt: Übersicht Kern Funktionen (Core Functions)
 
 
+.. _script_unterbrechen:
+
 Script unterbrechen – *Interrupt Script*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100003260000350500003505F1A465AE7BF98CC3.svg
+.. image:: Pictures/interrupt_script.svg
    :width: 60
    :align: left
 

@@ -179,7 +179,7 @@ Werkzeugleiste
 |           | Anklicken der Start-Schaltfläche wird die Ausführung an |
 |           | der aktuellen Position fortgesetzt .                    |
 +-----------+---------------------------------------------------------+
-| |image24| | Startet die Programmausführung oder setzt ein Programm  |
+||runscript|| Startet die Programmausführung oder setzt ein Programm  |
 |           | nach einer Unterbrechung fort.                          |
 +-----------+---------------------------------------------------------+
 | |stepping|| Aktiviert den Einzelschrittbetrieb zum Testen und       |
@@ -244,6 +244,14 @@ Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 |           | ein. Damit können Sie schnell Funktionen gruppieren und |
 |           | so ihr Script strukturieren und übersichtlicher         |
 |           | gestalten.                                              |
++-----------+---------------------------------------------------------+
+| |disable| | Aktiviert / Deaktiviert die ausgewählten Funktionen.    |
+|           | Damit können Sie bestimmt Funktionen temporär           |  
+|           | deaktivieren und später wieder aktivieren. Deaktivierte |
+|           | Funktionen werden bei der Programmausführung            |
+|           | übersprungen. Dies entspricht der Funktionalität des    |
+|           | Auskommentierens von Quelltext in textbasierten         |
+|           | Programmiersprachen.                                    |
 +-----------+---------------------------------------------------------+
 | |expand|  | Klappt alle Funktionen im Script auf                    |
 +-----------+---------------------------------------------------------+
@@ -457,7 +465,7 @@ Für das Löschen von Funktionen gibt es zwei Möglichkeiten:
 1. Wählen Sie die zu löschenden Funktionen aus und klicken Sie dann im
    Kontextmenü auf den Menüpunkt *Delete*.
 2. Wählen Sie die zu löschenden Funktionen aus und drücken Sie dann die
-   *Entfernen*\ Taste.
+   *Entfernen* Taste.
 
 Funktionen kopieren
 ~~~~~~~~~~~~~~~~~~~
@@ -489,6 +497,13 @@ Den Einfügevorgang *Paste* können Sie beliebig oft wiederholen, um
 mehrere Kopien der vorher mit *Copy* kopierten Funktionen aus der
 Zwischenablage einzufügen.
 
+.. admonition:: Tipp
+   :class: tip
+
+   Zum schnellen Duplizieren von Funktionen können Sie auch den Menüpunkt
+   :menuselection:`Duplicate` oder die Tastenkombination :kbd:`Strg` + :kbd:`D`
+   verwenden.
+
 Funktionen gruppieren
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -505,6 +520,33 @@ Die ausgewählten Funktionen werden nun durch eine Funktionssequenz ersetzt,
 welche die ausgewählten Funktionen enthält.
 
 .. image:: Pictures/10000201000002AD000000B45887FBE2E338C1B1.png
+
+.. _funktionen-deaktivieren:
+
+Funktionen deaktivieren / aktivieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In klassischen textbasierten Programmiersprachen gibt es die Möglichkeit, 
+Quelltext durch Auskommentieren temporär zu deaktivieren. Das Script-System
+bietet eine vergleichbare Funktionalität. Um Funktionen zu deaktivieren, 
+markieren Sie die Funktionen im Script-Editor und wählen dann aus dem Kontextmenü 
+den Eintrag
+:menuselection:`Enable / Disable Selected Functions`. Alternativ können Sie auch
+die Tastenkombination :kbd:`Strg` + :kbd:`/` verwenden.
+
+.. image:: Pictures/context_menu_disable_functions.png
+
+Wenn Sie Funktionen
+deaktivieren, werden diese in eine :guilabel:`Disabled Functions` Sequenz
+eingefügt. Bei der Skriptausführung, wird der Inhalt der Sequenz einfach
+übersprungen.
+
+.. image:: Pictures/disabled_functions.png
+
+Um deaktivierte Funktionen wieder zu aktivieren, wählen Sie eine einzelne
+:guilabel:`Disabled Functions` Sequenz aus, und verwenden dann den 
+gleichen Menüpunkt / Tastenkombination wie beim Deaktivieren.
+
 
 Funktionsparameter editieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -647,7 +689,7 @@ Variable lesend oder schreibend zugegriffen werden.
 
    Variablen haben erst einen gültigen Wert,   
    wenn die Zuweisungsfunktion (z.B. Create Variable)      
-   durchlaufen wurde. Wenn Sie die Aktion Run From Here    
+   durchlaufen wurde. Wenn Sie die Aktion *Run From Here*    
    verwenden, kann es deshalb vorkommen, dass Variablen    
    keine gültigen Werte enthalten, da Sie die              
    Zuweisungsfunktion übersprungen haben.  
@@ -1127,6 +1169,105 @@ konfigurieren. Folgende Möglichkeiten können Sie auswählen:
 
 Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`❸`.
 
+Scripte Debuggen
+-----------------------
+
+Wenn Sie ein Scriptprogramm entwickeln, gibt es verschiedene Möglichkeiten, 
+Fehler zu suchen und zu debuggen. In den folgenden Abschnitten stellen wir
+einige Features vor, die Ihnen beim Debuggen von Scripten helfen.
+
+Einzelschrittbetrieb
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mit dem Einzelschrittbetrieb haben Sie mehr Kontrolle über die einzelnen 
+Aktionen ihres Scripts. Ist der Einzelschrittbetrieb aktiv wird die 
+Scriptausführung nach der Ausführung jeder Scriptfunktion unterbrochen. 
+Um den Einzelschrittbetrieb zu verwenden, gehen Sie wie folgt for:
+
+.. rst-class:: steps
+.. rst-class:: inlineimg
+
+#. |stepping| Aktivieren Sie den Einzelschrittbetrieb durch Drücken der 
+   *Enable / Disable Single Stepping* Schaltfläche
+#. |execstep| Verwenden Sie die *Execute Single Step* Schaltfläche um die Ausführung 
+   des nächsten Schrittes zu triggern. Drücken Sie dieses Schaltfläche so oft
+   Sie weitere Einzelschritte ausführen wollen.
+#. |stepping| Deaktivieren Sie den Einzelschrittbetrieb durch erneutes Drücken 
+   der *Enable / Disable Single Stepping* Schaltfläche
+#. |runscript| Setzen Sie die normale Scriptausführung durch Drücken der
+   *Run Script* Schaltfläche fort.
+
+.. rst-class:: inlineimg
+
+So können Sie Schritt für Schritt durch Ihre Programm gehen und den Ablauf in
+Ruhe beobachten. Sie können den Einzelschrittbetrieb jederzeit aktivieren oder
+deaktivieren - auch während ihr Programm bereits läuft.
+
+Haltepunkte einfügen
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../scriptingsystem_part2_DE/Pictures/interrupt_script.svg
+   :width: 60
+   :align: left
+
+Sie können Ihr Script an bestimmten Stellen unterbrechen, indem Sie eine
+:ref:`Interrupt Script <script_unterbrechen>` Funktion einfügen. So können Sie 
+gezielt an bestimmten Punkten den Programmablauf unterbrechen, um den Zustand 
+von Variablen zu untersuchen. Wenn sie die Haltefunktion in eine 
+:ref:`Conditional Sequenz <bedingte_sequenz>` einfügen, können Sie das Programm 
+unterbrechen, wenn bestimmte Ereignisse eintreten oder Variablen bestimmte 
+Werte haben.
+
+Im folgenden Beispiel wird der Programmablauf unterbrochen, wenn der Wert der
+Variable :code:`EmployeeName` den Wert :code:`John` hat.
+
+.. image:: Pictures/conditional_interrupt.png
+
+
+Debugnachrichten ausgeben
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Durch den Einzelschrittbetrieb oder das Einfügen von Haltepunkten wird das
+Laufzeitverhalten des Programms verändert. D.h. der Ablauf wird verlangsamt oder
+unterbrochen. Das Ausgeben von Debugnachrichten ist eine Möglichkeit, den
+Programmablauf, den Wert von Variablen oder den Wert von Geräteeigenschaften
+durch die Ausgabe von Nachrichten im Event-Log zu visualisieren, ohne das
+Laufzeitverhalten stark zu verändern.
+
+Um eine Debugnachricht auszugeben, müssen Sie lediglich eine 
+:ref:`Show Message <nachricht_anzeigen>`
+Funktion an der Stelle im Programm einfügen, an der Sie eine Nachricht
+in das Event-Log schreiben möchten. Dafür sollte in der Show Message Funktion
+die Anzeige der Message Box und die Unterbrechung des Programms deaktiviert
+sein.
+
+In der folgenden Abbildung wird z.B. der Wert der Variablen :code:`$Flow` in jedem
+Schleifendurchlauf im Event-Log ausgegeben:
+
+.. image:: Pictures/debug_show_message.png
+
+Im Event-Log wird dann jede aufgezeichnete Nachricht mit einem Zeitstempel
+angezeigt. Dadurch können Sie die ausgegebenen Werte im zeitlichen Kontext
+analysieren:
+
+.. image:: Pictures/debug_event_log.png
+
+Funktionen deaktivieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/enable_disable_functions2.svg
+   :width: 60
+   :align: left
+
+Um bestimmte Programmabschnitte isoliert zu testen, um die Ausführung von
+Funktionen während des Debuggings zu blockieren oder um alternative 
+Implementierungen zu testen, kann es erforderlich sein, Funktionen zeitweise
+zu deaktivieren. Deaktivierte Funktionen werden bei der Programmausführung 
+übersprungen. Dies entspricht der Funktionalität des Auskommentierens von 
+Quelltext in textbasierten Programmiersprachen.
+
+Details zum Deaktivieren von Funktionen finden Sie im Abschnitt 
+:ref:`Funktionen aktivieren / deaktivieren <funktionen-deaktivieren>`.
 
 
 .. |image17| image:: ./Pictures/100018A30000387200003872627AA1597179191F.svg
@@ -1143,7 +1284,7 @@ Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`�
    :width: 40
 .. |image23| image:: ./Pictures/10000E11000034EB000034EB5683B6AF8D85CDA6.svg
    :width: 40
-.. |image24| image:: ./Pictures/10000C80000038720000387227CC20DA34BFD4F5.svg
+.. |runscript| image:: ./Pictures/10000C80000038720000387227CC20DA34BFD4F5.svg
    :width: 40
 
 
@@ -1196,4 +1337,7 @@ Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`�
    :width: 40
 
 .. |execstep| image:: Pictures/single_step2.svg
+   :width: 40
+
+.. |disable| image:: Pictures/enable_disable_functions2.svg
    :width: 40
