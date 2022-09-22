@@ -1,0 +1,10 @@
+<svg x="0" y="0" width="512" height="512" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <title>media pause icon</title>
+    <desc>media pause icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+    <g>
+        <path d="M96,32l96,0c8.8,0 16,7.2 16,16l0,416c0,8.8 -7.2,16 -16,16l-96,0c-8.8,0 -16,-7.2 -16,-16l0,-416c0,-8.8 7.2,-16 16,-16z M320,32l96,0c8.8,0 16,7.2 16,16l0,416c0,8.8 -7.2,16 -16,16l-96,0c-8.8,0 -16,-7.2 -16,-16l0,-416c0,-8.8 7.2,-16 16,-16z" fill="#4ec1f5"/>
+        <path d="M208,256l0,208c0,8.8 -7.2,16 -16,16l-96,0c-8.8,0 -16,-7.2 -16,-16l0,-208z M304,256l128,0l0,208c0,8.8 -7.2,16 -16,16l-96,0c-8.8,0 -16,-7.2 -16,-16z" fill="#0299e3"/>
+    </g>
+</svg>

@@ -4,11 +4,18 @@
     "esbonio.server.enabled": true,
     "cSpell.words": [
         "CETONI",
+        "guilabel",
         "guinum",
+        "inlineimg",
         "menuselection",
         "Nemesys",
         "Qmix"
     ],
     "cSpell.enabled": true,
-    "cSpell.language": "en"
+    "cSpell.language": "en",
+    "cSpell.ignoreWords": [
+        "duplica",
+        "editfun",
+        "guinums"
+    ]
 }

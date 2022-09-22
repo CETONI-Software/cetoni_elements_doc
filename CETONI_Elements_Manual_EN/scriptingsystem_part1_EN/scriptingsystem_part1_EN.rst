@@ -164,12 +164,12 @@ Toolbar
 |           | the start button, the execution will resume from its    |
 |           | current position.                                       |
 +-----------+---------------------------------------------------------+
-| |image24| | Starts the execution of a script or resumes a script    |
+||runscript|| Starts the execution of a script or resumes a script    |
 |           | after an interruption.                                  |
 +-----------+---------------------------------------------------------+
 | |stepping|| Activates single step operation for debugging scripts.  |
 |           | When single step operation is active, the script stops  |
-|           | after the execution of each command.                    |
+|           | after the execution of each single script function.     |
 +-----------+---------------------------------------------------------+
 | |execstep|| Click this button to trigger execution of next script   |
 |           | function in single step operation mode.                 |
@@ -220,6 +220,13 @@ available from the context menu:
 |           | readibilty.                                             |
 +-----------+---------------------------------------------------------+
 | |expand|  | Expands all functions in the script                     |
++-----------+---------------------------------------------------------+
+| |disable| | Disables / enables the selected functions.              |
+|           | This allows you to temporarily disable certain functions|
+|           | and enable them again later. Disabled functions are     |
+|           | skipped during program execution. This corresponds to   |
+|           | the functionality of commenting out source code in      |
+|           | text-based programming languages.                       |
 +-----------+---------------------------------------------------------+
 | |collapse|| Collapses all functions in the script so that only the  |
 |           | topmost function level is visible                       |
@@ -327,7 +334,7 @@ Functions are activated via drag & drop from the *Script Pool* to the
 1. In the Script Pool, left-click on the function that you want to
    insert :guinum:`❶` and hold down the mouse button.
 2. Move the pointer to the desired position within the *Script
-   Editor* swindow.
+   Editor* window.
 3. As soon as you release the mouse button :guinum:`❷`, the selected function
    will be inserted into the Script Editor.
 
@@ -428,6 +435,10 @@ This is how you copy a function to a new position:
 To insert the same functions at multiple points of the function tree
 simply repeat steps 3 and 4 (above).
 
+.. tip::
+   To quickly duplicate functions, you can also use the :menuselection:`Duplicate` 
+   menu item or the :kbd:`Ctrl` + :kbd:`D` shortcut. 
+
 Grouping Functions
 ~~~~~~~~~~~~~~~~~~
 
@@ -442,6 +453,26 @@ The selected functions are now replaced
 by a function sequence containing the selected functions.
 
 |image76|
+
+Disable / Enable Functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In classical text-based programming languages there is the feature to 
+temporarily disable source code by commenting it out. The Script system offers 
+a comparable functionality. To disable functions, select the functions in the 
+script editor and then choose :menuselection:`Enable / Disable Selected Functions` 
+from the  context menu. Alternatively, you can also use the shortcut 
+:kbd:`Ctrl` + :kbd:`/`.
+
+.. image:: Pictures/context_menu_disable_functions.png
+
+When you disable functions, they are inserted into a :guilabel:`Disabled Functions` 
+sequence. During script execution, the content of this sequence is simply skipped.
+
+.. image:: Pictures/disabled_functions.png
+
+To re-enable disabled functions, select a single :guilabel:`Disabled Functions`
+sequence, then use the same menu item / keyboard shortcut as for disabling.   
 
 Editing Function Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -499,7 +530,7 @@ Naming Variables
 
 There are some important requirements to keep in mind when naming
 variables: Every variable is called within a program script via an
-essentially freely definable name. This name serves to uniqly
+essentially freely definable name. This name serves to uniquely
 identify that variable; different names signify different variables. The
 :code:`$`-prefix clearly identifies a name and its use as a variable. The
 scripting system is case sensitive: :code:`$Var` is different variable than
@@ -1006,6 +1037,99 @@ You can select the following options:
 
 Complete the configuration by clicking on OK :guinum:`❸`
 
+Debugging Scripts
+-----------------------
+
+When you develop a script program, there are several ways, 
+to find and debug errors. In the following sections we present
+some features that help you debug scripts.
+
+Single Step Operation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+single-stepping allows you to have more control of viewing individual actions of 
+the program. With single-stepping, you can execute a single function at a time, 
+causing the program to pause after the function completes. To use the single 
+step mode, proceed as follows:
+
+.. rst-class:: steps
+.. rst-class:: inlineimg
+
+#. |stepping| Activate the single stepping mode by pressing the 
+   *Enable / Disable Single Stepping* button.
+#. |execstep| Use the *Execute Single Step* button to trigger the execution of 
+   the next step. Press this button as often as you want to execute further 
+   single steps.
+#. |stepping| Deactivate the single stepping mode by pressing again the 
+   *Enable / Disable Single Stepping* button.
+#. |runscript| Continue normal script execution by pressing the
+   *Run Script* button.
+
+.. rst-class:: inlineimg
+
+This allows you to go through your program step by step and observe the process 
+at your leisure. You can activate or deactivate the single-step mode at any 
+time - even while your program is already running.
+
+Insert Breakpoints
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../scriptingsystem_part2_EN/Pictures/interrupt_script.svg
+   :width: 60
+   :align: left
+
+You can interrupt your script at certain points by inserting an 
+:ref:`Interrupt Script` function. This allows you to interrupt the program 
+flow at specific points to examine the state of variables. If you insert the 
+interrupt function in a :ref:`Conditional Sequence`, you can interrupt the 
+program conditionally when certain events occur or variables have certain values.
+
+In the following example, the program flow is interrupted when the value of the
+variable :code:`EmployeeName` has the value :code:`John`.
+
+.. image:: Pictures/conditional_interrupt.png
+
+
+Printing Debug Messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The runtime behavior of the program is changed by single-step operation or the 
+insertion of breakpoints. I.e. the sequence is slowed down or interrupted. If 
+you use debug messages to display the program flow, the value of variables or 
+the value of device properties, the runtime behavior is hardly affected.
+
+To output a debug message, you just need to insert a :ref:`Show Message` 
+function at  the point in the program where you want to write a message to the 
+event log.  In the configuration area of the Show Message function the display 
+of the message box and the interruption of the program should be deactivated.
+
+In the following picture, for example, the value of the :code:`$Flow` variable is 
+output to the event log in each loop cycle:
+
+.. image:: Pictures/debug_show_message.png
+
+The event log then displays each recorded message with a timestamp. This allows 
+you to analyze the output values in a temporal context:
+
+.. image:: Pictures/debug_event_log.png
+
+
+Disable Functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/enable_disable_functions2.svg
+   :width: 60
+   :align: left
+
+To test certain program sections in isolation, to block the execution of 
+functions during debugging, or to test alternative implementations, it may be 
+necessary to temporarily disable functions. Disabled functions are skipped 
+during program execution. This corresponds to the functionality of commenting 
+out source code in text-based programming languages.
+
+For details on how to disable functions, refer to the section
+:ref:`Disable / Enable Functions`.
+
 .. |Figure 1: Script system overview| image:: Pictures/10000201000003C9000001AAB18C614061F55B68.png
 
 .. |Figure 2: Show Script Pool| image:: Pictures/10000201000001BC00000116F459D83094022ABD.png
@@ -1039,7 +1163,7 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |image23| image:: Pictures/10000E11000034EB000034EB5683B6AF8D85CDA6.svg
    :width: 40
 
-.. |image24| image:: Pictures/10000C80000038720000387227CC20DA34BFD4F5.svg
+.. |runscript| image:: Pictures/10000C80000038720000387227CC20DA34BFD4F5.svg
    :width: 40
 
 .. |Figure 8: Script Editor context menu| image:: Pictures/100002010000014400000150DF1BE1DD8FC0A460.png
@@ -1145,3 +1269,5 @@ Complete the configuration by clicking on OK :guinum:`❸`
 .. |execstep| image:: Pictures/single_step2.svg
    :width: 40
 
+.. |disable| image:: Pictures/enable_disable_functions2.svg
+   :width: 40
