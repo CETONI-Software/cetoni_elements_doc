@@ -85,6 +85,16 @@ beschreibt die spezifische Gerätefunktionalität.
 Übersicht CANopen Tools Workbench
 ---------------------------------
 
+Um den CANopen Tools Workbench zu öffnen, laden Sie das CETONI Elements Projekt
+:file:`canopentools`. Klicken Sie dafür im Hauptmenü der Anwendung auf den
+Menüpunkt :menuselection:`File --> Open Project`. Im Projektdialog wählen
+Sie dann das Projekt :file:`canopentools`. 
+
+.. image:: Pictures/open_canopentools_project.png
+
+Die Anwendung startet dann neu und
+sie sollten danach den CANopen Tools Workbench sehen:
+
 .. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
    :alt: CANopen Tools Workbench
 

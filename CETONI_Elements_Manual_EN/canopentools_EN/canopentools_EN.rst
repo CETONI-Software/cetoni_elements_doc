@@ -74,8 +74,18 @@ contains information regarding the device, such as device
 identification, manufacturer, etc. as well as communication parameters.
 The second section describes the specific device functionality.
 
-Overview of CANopen Tools View
------------------------------------
+Overview of CANopen Tools Workbench
+------------------------------------
+
+To open the CANopen Tools Workbench, load the CETONI Elements project 
+:file:`canopentools`. To do this, click on the menu item 
+:menuselection:`File --> Open Project` in the 
+main menu of the application. Then select the project :file:`canopentools` in the 
+project dialog.
+
+.. image:: Pictures/open_canopentools_project.png
+
+The application will restart and you should see the CANopen Tools Workbench:
 
 .. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
 
