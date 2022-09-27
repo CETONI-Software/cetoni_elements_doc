@@ -1057,6 +1057,9 @@ step mode, proceed as follows:
 
 #. |stepping| Activate the single stepping mode by pressing the 
    *Enable / Disable Single Stepping* button.
+
+   .. image:: Pictures/single_stepping_buttons.png   
+
 #. |execstep| Use the *Execute Single Step* button to trigger the execution of 
    the next step. Press this button as often as you want to execute further 
    single steps.

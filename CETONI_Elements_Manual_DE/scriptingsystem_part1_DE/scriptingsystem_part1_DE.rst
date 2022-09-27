@@ -1182,13 +1182,16 @@ Einzelschrittbetrieb
 Mit dem Einzelschrittbetrieb haben Sie mehr Kontrolle über die einzelnen 
 Aktionen ihres Scripts. Ist der Einzelschrittbetrieb aktiv wird die 
 Scriptausführung nach der Ausführung jeder Scriptfunktion unterbrochen. 
-Um den Einzelschrittbetrieb zu verwenden, gehen Sie wie folgt for:
+Um den Einzelschrittbetrieb zu verwenden, gehen Sie wie folgt vor:
 
 .. rst-class:: steps
 .. rst-class:: inlineimg
 
 #. |stepping| Aktivieren Sie den Einzelschrittbetrieb durch Drücken der 
    *Enable / Disable Single Stepping* Schaltfläche
+
+   .. image:: Pictures/single_stepping_buttons.png
+
 #. |execstep| Verwenden Sie die *Execute Single Step* Schaltfläche um die Ausführung 
    des nächsten Schrittes zu triggern. Drücken Sie dieses Schaltfläche so oft
    Sie weitere Einzelschritte ausführen wollen.
