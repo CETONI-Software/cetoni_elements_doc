@@ -6,11 +6,11 @@ SiLA2 Add-on
 Einführung in das SiLA2 Add-on
 ---------------------------------
 
-Mit Hilfe des SiLA-Add-ons können Sie jedes SiLA-Gerät in die CETONI Elements-Software 
-integrieren. Eine generische, dynamisch generierte Schnittstelle ermöglicht Ihnen 
-den manuellen Zugriff auf alle SiLA-Funktionen, -Befehle und -Eigenschaften eines 
-beliebigen SiLA-Geräts. 
-Mit Hilfe verschiedener Skriptfunktionen können Sie Ihre SiLA-Geräte automatisieren 
+Mit Hilfe des SiLA-Add-ons können Sie jedes SiLA-Gerät in die CETONI Elements-Software
+integrieren. Eine generische, dynamisch generierte Schnittstelle ermöglicht Ihnen
+den manuellen Zugriff auf alle SiLA-Funktionen, -Befehle und -Eigenschaften eines
+beliebigen SiLA-Geräts.
+Mit Hilfe verschiedener Skriptfunktionen können Sie Ihre SiLA-Geräte automatisieren
 und in CETONI Elements-Skripte integrieren.
 
 
@@ -28,13 +28,13 @@ sein.
 .. admonition:: Wichtig
    :class: note
 
-   Die Versionsnummer der CETONI Elements      
-   Software und des SiLA 2 Add-ons sollten übereinstimmen.  
-   Die Version des SiLA 2 Add-ons darf nie größer sein, als 
-   die Version der CETONI Elements Software. Je größer die  
-   Differenz zwischen der Versionsnummern ist, umso größer  
-   ist die Wahrscheinlichkeit dass Probleme oder Fehler     
-   auftreten. 
+   Die Versionsnummer der CETONI Elements
+   Software und des SiLA 2 Add-ons sollten übereinstimmen.
+   Die Version des SiLA 2 Add-ons darf nie größer sein, als
+   die Version der CETONI Elements Software. Je größer die
+   Differenz zwischen der Versionsnummern ist, umso größer
+   ist die Wahrscheinlichkeit dass Probleme oder Fehler
+   auftreten.
 
 Bitte schließen Sie vor der Installation alle anderen Programme.
 
@@ -57,9 +57,9 @@ Abbildung unten).
 .. admonition:: Wichtig
    :class: note
 
-   Unter Windows müssen Sie mit                
-   Administratorrechten angemeldet sein, um die             
-   Installation der Hardware-Treiber durchführen zu können. 
+   Unter Windows müssen Sie mit
+   Administratorrechten angemeldet sein, um die
+   Installation der Hardware-Treiber durchführen zu können.
 
 
 Grundlagen von SiLA 2
@@ -84,19 +84,19 @@ synonym verwendet.
 
 .. image:: Pictures/client_server.png
 
-Jeder SiLA Server hat eine bestimmte Anzahl von Features implementiert. Die 
-**SiLA-Features** sind eine Schlüsselkomponente des SiLA-2-Standards, da sie 
-die Interaktion zwischen dem SiLA-Client und dem SiLA-Server definieren. Jedes 
+Jeder SiLA Server hat eine bestimmte Anzahl von Features implementiert. Die
+**SiLA-Features** sind eine Schlüsselkomponente des SiLA-2-Standards, da sie
+die Interaktion zwischen dem SiLA-Client und dem SiLA-Server definieren. Jedes
 einzelne Feature beschreibt einen bestimmten Aspekt des Gesamtverhaltens des Servers.
 
-Die Merkmale eines Geräts (d. h. eines SiLA-Servers) werden in einer XML-Datei 
+Die Merkmale eines Geräts (d. h. eines SiLA-Servers) werden in einer XML-Datei
 beschrieben, in der die Funktionalität beschrieben wird:
 
-- **Properties (Eigenschaften)**: Datenwerte, die statisch (z. B. Seriennummer) 
+- **Properties (Eigenschaften)**: Datenwerte, die statisch (z. B. Seriennummer)
   oder dynamisch (z. B. aktuelle Temperatur) sein können
-- **Commands (Befehle)**: eine Interaktion zur Steuerung oder Übermittlung von 
+- **Commands (Befehle)**: eine Interaktion zur Steuerung oder Übermittlung von
   Informationen an/von SiLA, eine Aktion, die von einem SiLA-Server ausgeführt werden kann
-- **Parameters (Parameter)**: erwartete Informationen, die zur Ausführung des 
+- **Parameters (Parameter)**: erwartete Informationen, die zur Ausführung des
   Befehls erforderlich sind
 - **Return values (Rückgabewerte)**: erwartete Ausgabe des Befehls
 - **Errors (Fehler)**: erwartete Fehler, die während des Vorgangs auftreten können
@@ -129,9 +129,9 @@ Fluid-Dosierung). Hierbei kann ein Client die sogenannte *Execution
 Info* abonnieren, um über den Fortschritt der Command-Ausführung
 benachrichtigt zu werden.
 
-.. tip:: 
-   Eine umfassende Einführung in den SiLA-Standard finden Sie auf der SiLA-Homepage: 
-   https://sila-standard.com/standards/ oder in diesem 
+.. tip::
+   Eine umfassende Einführung in den SiLA-Standard finden Sie auf der SiLA-Homepage:
+   https://sila-standard.com/standards/ oder in diesem
    `Blogbeitrag <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
 
@@ -186,44 +186,44 @@ können Sie die Verbindung zu diesem Gerät wieder trennen.
 
 .. image:: Pictures/1000000100000433000000D8B27B749FA02DEB20.png
 
-.. tip:: 
+.. tip::
    .. image:: Pictures/link_multi.svg
       :width: 40
       :align: left
-   
-   Über die Schaltfläche *Connect-To-All* :guinum:`❸`       
-   können Sie sich gleichzeitig mit allen Geräten verbinden 
-   und müssen sich nicht zu jedem Gerät einzeln verbinden.  
+
+   Über die Schaltfläche *Connect-To-All* :guinum:`❸`
+   können Sie sich gleichzeitig mit allen Geräten verbinden
+   und müssen sich nicht zu jedem Gerät einzeln verbinden.
 
 .. tip::
    .. image:: Pictures/wifi.svg
       :width: 40
       :align: left
 
-   Sollte die Software eines oder mehrere Ihrer  
-   SiLA-Geräte nicht gefunden haben, kann es helfen, die   
-   Server neu zu starten und einen erneuten Netzwerk-Scan  
-   :guinum:`❹` durchzuführen.    
+   Sollte die Software eines oder mehrere Ihrer
+   SiLA-Geräte nicht gefunden haben, kann es helfen, die
+   Server neu zu starten und einen erneuten Netzwerk-Scan
+   :guinum:`❹` durchzuführen.
 
 .. tip::
-   Wenn Sie die Software schließen, während Sie  
-   noch zu einem oder mehreren SiLA-Servern verbunden      
-   sind, wird versucht, diese Verbindungen beim nächsten   
-   Start der Software wiederherzustellen.    
+   Wenn Sie die Software schließen, während Sie
+   noch zu einem oder mehreren SiLA-Servern verbunden
+   sind, wird versucht, diese Verbindungen beim nächsten
+   Start der Software wiederherzustellen.
 
 .. admonition:: Wichtig
    :class: note
 
-   Wenn Sie einen Server mit einer aktiven    
-   Verbindung zur Software aus der *Server Overview* Liste 
-   löschen, dann wird die Verbindung automatisch getrennt. 
+   Wenn Sie einen Server mit einer aktiven
+   Verbindung zur Software aus der *Server Overview* Liste
+   löschen, dann wird die Verbindung automatisch getrennt.
 
 
 Normalerweise ist die Kommunikation zwischen SiLA-Server und -Client
 verschlüsselt. Sollte eines Ihrer Geräte jedoch keine Verschlüsselung
 bereitstellen, schlägt der Verbindungsversuch mit einer Fehlermeldung im
 Event Log fehl. Für lokale Tests können Sie trotzdem eine Verbindung mit
-diesem Gerät herstellen, wenn Sie den Haken bei 
+diesem Gerät herstellen, wenn Sie den Haken bei
 :guilabel:`Allow insecure (unencrypted) connection` setzen (Abbildung unten).
 
 .. image:: Pictures/allow_unsecure.png
@@ -231,11 +231,11 @@ diesem Gerät herstellen, wenn Sie den Haken bei
 .. admonition:: Achtung
    :class: caution
 
-   Sie sollten niemals eine unverschlüsselte  
-   Verbindung zu einem Gerät herstellen, dass sich         
-   außerhalb Ihres lokalen Netzwerks befindet, da sonst    
-   die gesamte Kommunikation zwischen dem Gerät und der    
-   Software von Dritten mitgelesen werden kann.   
+   Sie sollten niemals eine unverschlüsselte
+   Verbindung zu einem Gerät herstellen, dass sich
+   außerhalb Ihres lokalen Netzwerks befindet, da sonst
+   die gesamte Kommunikation zwischen dem Gerät und der
+   Software von Dritten mitgelesen werden kann.
 
 Manuelles Hinzufügen und Verbinden zu einem Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -290,20 +290,20 @@ Steuerung eines SiLA 2 Servers
 Nachdem Sie sich erfolgreich mit einem SiLA Server verbunden haben,
 können Sie diesen über eine generische Oberfläche steuern. Diese
 Oberfläche sieht für jede Art von SiLA Server, also für jedes Gerät
-unabhängig vom Typ oder Hersteller des Geräts, gleich aus. 
+unabhängig vom Typ oder Hersteller des Geräts, gleich aus.
 
 .. tip::
-   Mit dieser Schnittstelle können Sie zwar alle Aspekte eines SiLA-Servers steuern, 
-   sie eignet sich jedoch nicht für die Erstellung komplexer Arbeitsabläufe. 
-   Für diesen Zweck sind die vom Plugin bereitgestellten Skriptfunktionen, die 
+   Mit dieser Schnittstelle können Sie zwar alle Aspekte eines SiLA-Servers steuern,
+   sie eignet sich jedoch nicht für die Erstellung komplexer Arbeitsabläufe.
+   Für diesen Zweck sind die vom Plugin bereitgestellten Skriptfunktionen, die
    im Abschnitt `SiLA 2 Script-Funktionen`_ vorgestellt werden, besser geeignet.
 
 Öffnen Sie die generische Oberfläche indem Sie mit der Sidebar
-Schaltfläche :guilabel:`SiLA 2` den gewünschten Server auswählen (siehe Abschnitt 
+Schaltfläche :guilabel:`SiLA 2` den gewünschten Server auswählen (siehe Abschnitt
 `Grundlagen von SiLA 2`_. Sie sehen nun
 alle SiLA 2 Features, die von dem Server bereitgestellt werden :guinum:`❶`. Wenn
 Sie den Mauszeiger auf eines der :guilabel:`i` Symbole bewegen, erscheint ein
-Tooltip mit der Beschreibung des Features :guinum:`❷`. 
+Tooltip mit der Beschreibung des Features :guinum:`❷`.
 
 .. image:: Pictures/feature_overview.png
 
@@ -321,30 +321,30 @@ Verfügung steht :guinum:`❸`.
 SiLA Commands UI
 ~~~~~~~~~~~~~~~~~~
 
-Wenn ein SiLA Command über Parameter, Metadaten oder Rückgabewerte verfügt, 
-wie z.B. der Befehl 
+Wenn ein SiLA Command über Parameter, Metadaten oder Rückgabewerte verfügt,
+wie z.B. der Befehl
 :guilabel:`Set Fill Level` :guinum:`❶` in der folgenden Abbildung, kann er
-erweitert werden, um die Parameter :guinum:`❷` oder Metadaten einzugeben und die 
-Rückgabewerte anzuzeigen. Das folgende Bild zeigt alle Befehle der Funktion 
+erweitert werden, um die Parameter :guinum:`❷` oder Metadaten einzugeben und die
+Rückgabewerte anzuzeigen. Das folgende Bild zeigt alle Befehle der Funktion
 :guilabel:`Pump Fluid Dosing Service`:
 
 .. image:: Pictures/sila_commands.png
 
-Wenn ein SiLA Command keine oder nur einen Parameter hat, wie z.B. der Befehl 
-:guilabel:`Generate Flow` in der oberen Abbildung, dann kann der Befehl nicht 
-erweitert werden und es wird höchstens ein Eingabefeld direkt neben dem 
-Befehlsnamen :guinum:`❸` angezeigt. 
-Um den Befehl auszuführen, klicken Sie auf die Schaltfläche :guilabel:`Ausführen` 
+Wenn ein SiLA Command keine oder nur einen Parameter hat, wie z.B. der Befehl
+:guilabel:`Generate Flow` in der oberen Abbildung, dann kann der Befehl nicht
+erweitert werden und es wird höchstens ein Eingabefeld direkt neben dem
+Befehlsnamen :guinum:`❸` angezeigt.
+Um den Befehl auszuführen, klicken Sie auf die Schaltfläche :guilabel:`Ausführen`
 :guinum:`❹`.
 
 SiLA Properties UI
 ~~~~~~~~~~~~~~~~~~~
 
-Properties lassen sich normalerweise nicht aufklappen. Die folgende Abbildung 
-zeigt die SiLA-Eigenschaften der Funktion :guilabel:`Analog In Channel Provider`. 
-Hier wird nur ein Feld mit dem aktuellen Wert der Property angezeigt :guinum:`❶`. 
+Properties lassen sich normalerweise nicht aufklappen. Die folgende Abbildung
+zeigt die SiLA-Eigenschaften der Funktion :guilabel:`Analog In Channel Provider`.
+Hier wird nur ein Feld mit dem aktuellen Wert der Property angezeigt :guinum:`❶`.
 Rechts daneben befindet sich die Schaltfläche zum erneuten Abfragen der
-Property :guinum:`❷`. 
+Property :guinum:`❷`.
 
 .. image:: Pictures/sila_properties.png
 
@@ -368,14 +368,14 @@ werden.
 .. admonition:: Wichtig
    :class: note
 
-   Beim erstmaligen Öffnen der generischen    
-   Oberfläche werden alle Unobservable Properties einmal   
-   abgefragt und für Observable Properties werden          
-   automatisch im Hintergrund Subscriptions gestartet.     
-   Dies geht allerdings nur, wenn die Property keine       
-   Metadaten benötigt. In diesem Fall müssen Sie die       
-   Metadaten zuerst eingeben und dann den Wert selbst      
-   abfragen bzw. selbst eine Subscription starten.  
+   Beim erstmaligen Öffnen der generischen
+   Oberfläche werden alle Unobservable Properties einmal
+   abgefragt und für Observable Properties werden
+   automatisch im Hintergrund Subscriptions gestartet.
+   Dies geht allerdings nur, wenn die Property keine
+   Metadaten benötigt. In diesem Fall müssen Sie die
+   Metadaten zuerst eingeben und dann den Wert selbst
+   abfragen bzw. selbst eine Subscription starten.
 
 Die Verbindung zu einem Server beenden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -405,7 +405,7 @@ Einführung
 ~~~~~~~~~~
 
 Das SiLA 2-Plugin enthält verschiedene Script-Funktionen zur
-scriptgesteuerten Ausführung von SiLA Commands und zur Abfrage von 
+scriptgesteuerten Ausführung von SiLA Commands und zur Abfrage von
 SiLA Properties.
 
 .. image:: Pictures/sila_script_functions.png
@@ -429,7 +429,7 @@ Den auszuführenden Command :guinum:`❶`, sowie die benötigten
 Parameter und Metadaten :guinum:`❷` können Sie im Konfigurationsbereich
 einstellen.
 
-Zusätzlich können Sie für *Observable Commands* die Option :guilabel:`Run to completion` 
+Zusätzlich können Sie für *Observable Commands* die Option :guilabel:`Run to completion`
 :guinum:`❸` ein- oder ausschalten. Wenn :guilabel:`Run to completion` aktiviert
 ist, wird die Scriptausführung erst fortgesetzt, wenn der Command
 vollständig ausgeführt wurde. Ist diese Option nicht aktiv, wird der
@@ -440,10 +440,10 @@ Besitzt der Command Rückgabewerte, dann können Sie außerdem Variablen
 angeben :guinum:`❹`, in denen diese Werte gespeichert werden sollen.
 
 .. tip::
-   Alle SiLA Script-Funktionen unterstützen die  
-   Verwendung von Variablen. D.h. in allen Eingabefeldern  
-   die im Konfigurationsbereich mit einem gelben V         
-   gekennzeichnet sind können Sie Variablen eintragen. 
+   Alle SiLA Script-Funktionen unterstützen die
+   Verwendung von Variablen. D.h. in allen Eingabefeldern
+   die im Konfigurationsbereich mit einem gelben V
+   gekennzeichnet sind können Sie Variablen eintragen.
 
 .. _property_lesen:
 
@@ -477,36 +477,36 @@ Auf SiLA Property-Wert warten – *Wait For SiLA Property Value*
    :height: 60
    :align: left
 
-Mit dieser Funktion können Sie die weitere Scriptausführung pausieren, bis 
-eine bestimmte Property eine definierte Bedingung erfüllt. 
+Mit dieser Funktion können Sie die weitere Scriptausführung pausieren, bis
+eine bestimmte Property eine definierte Bedingung erfüllt.
 Die Funktion wird erst dann fortgesetzt, wenn die Bedingung
 erfüllt ist.
 
 .. image:: Pictures/100000010000034500000209E2A9E0C1D0F440CC.png
 
 Im Konfigurationsbereich wählen Sie zuerst, wie bei der
-Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property 
+Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property
 :guinum:`❶`, die Sie prüfen möchten, sowie die möglichen benötigten Metadaten aus.
 
 .. admonition:: Wichtig
    :class: note
 
-   Die SiLA Property muss *Observable* sein,    
-   damit sie in dieser Script-Funktion verwendet werden    
-   kann. 
+   Die SiLA Property muss *Observable* sein,
+   damit sie in dieser Script-Funktion verwendet werden
+   kann.
 
 Im Bereich *Condition* konfigurieren Sie die Prüfbedingung. Dafür wählen
 Sie als erstes einen Vergleichsoperator :guinum:`❷` aus und geben dann den Wert
 ein :guinum:`❸`, mit dem verglichen werden soll. Im Wertfeld :guinum:`❸` können Sie auch
 Variablen verwenden, um die Prüfbedingung zu setzen.
 
-.. tip:: 
-   Um ein bestimmtes Feature oder einen Command  
-   bzw. eine Property schnell zu finden können Sie im      
-   Filter Eingabefeld den Namen oder einen Teil des Namens 
-   eingeben. Die Auswahlboxen für das Feature bzw. den     
-   Command oder die Property enthalten dann nur noch       
-   Einträge, die dem eingegebenen Filter entsprechen. 
+.. tip::
+   Um ein bestimmtes Feature oder einen Command
+   bzw. eine Property schnell zu finden können Sie im
+   Filter Eingabefeld den Namen oder einen Teil des Namens
+   eingeben. Die Auswahlboxen für das Feature bzw. den
+   Command oder die Property enthalten dann nur noch
+   Einträge, die dem eingegebenen Filter entsprechen.
 
 SiLA-Server austauschen
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -543,12 +543,12 @@ soll.
 .. admonition:: Wichtig
    :class: note
 
-   Der neue Server muss exakt die gleichen    
-   Features bereitstellen, wie der bisherige Server. Der   
-   Auswahldialog weist Sie darauf hin, falls dies nicht    
+   Der neue Server muss exakt die gleichen
+   Features bereitstellen, wie der bisherige Server. Der
+   Auswahldialog weist Sie darauf hin, falls dies nicht
    der Fall sein sollte.
 
-Haben Sie einen passenden Server ausgewählt, klicken Sie auf :guilabel:`Assign selected Server`. 
+Haben Sie einen passenden Server ausgewählt, klicken Sie auf :guilabel:`Assign selected Server`.
 Nun wird in **jeder** Script-Funktion (nicht nur in der
 aktuellen) der bisherige durch den gerade ausgewählten Server ersetzt.
 Nun ist der Konfigurationsbereich auch nicht mehr ausgegraut und Sie

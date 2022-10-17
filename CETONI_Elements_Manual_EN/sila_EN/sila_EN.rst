@@ -7,11 +7,11 @@ SiLA2 Add-on
 Introduction to SiLA2 Add-on
 --------------------------------
 
-The SiLA Add-on allows you to integrate any SiLA device into the CETONI 
-Elements software. A generic, dynamically generated interface allows you to 
-manually access all SiLA features, commands and properties of any SiLA device. 
-With the help of several script functions you can automate your SiLA devices 
-and integrate them into CETONI Elements scripts. 
+The SiLA Add-on allows you to integrate any SiLA device into the CETONI
+Elements software. A generic, dynamically generated interface allows you to
+manually access all SiLA features, commands and properties of any SiLA device.
+With the help of several script functions you can automate your SiLA devices
+and integrate them into CETONI Elements scripts.
 
 Installation of SiLA2 Add-on
 --------------------------------
@@ -26,12 +26,12 @@ with version number **20210707**.
 .. admonition:: Important
    :class: note
 
-   The version number of the CETONI Elements 
-   software and the SiLA add-on should match. The version 
-   number of the SiLA add-on must never be greater than   
-   that of the CETONI Elements software. The greater the    
-   difference between the version numbers, the greater the  
-   risk of problems and errors. 
+   The version number of the CETONI Elements
+   software and the SiLA add-on should match. The version
+   number of the SiLA add-on must never be greater than
+   that of the CETONI Elements software. The greater the
+   difference between the version numbers, the greater the
+   risk of problems and errors.
 
 Please close all other programs before installation.
 
@@ -52,24 +52,24 @@ please deactivate the corresponding component (figure below).
 .. admonition:: Important
    :class: note
 
-   On Windows, you must be logged in with    
-   administrator privileges to install the hardware         
-   drivers.   
+   On Windows, you must be logged in with
+   administrator privileges to install the hardware
+   drivers.
 
 SiLA 2 Basics
 -------------
 
-SiLA 2 is a communication standard for laboratory instruments, such as readers, 
+SiLA 2 is a communication standard for laboratory instruments, such as readers,
 liquid handling robots and chromatography and other analytical equipment.
-The primary goal of SiLA is to create an international, open connectivity 
-standard in laboratory automation that allows devices from different 
+The primary goal of SiLA is to create an international, open connectivity
+standard in laboratory automation that allows devices from different
 manufacturers to communicate with each other in one application.
 
 Client-Server concept
 ~~~~~~~~~~~~~~~~~~~~~
 
 Communication is client-server based and uses established network
-standards. A **SiLA server** is usually provided by a **device** while a 
+standards. A **SiLA server** is usually provided by a **device** while a
 **SiLA client** is usually a control software (e.g. a LIMS or CETONI Elements).
 Since a SiLA server represents a device in most cases, the terms SiLA
 server (or just server) and device are used synonymously in this
@@ -78,15 +78,15 @@ document.
 .. image:: Pictures/client_server.png
 
 Each SiLA Server has a certain number of Features implemented. **SiLA Features**
-are a key component of the SiLA 2 Standard as they define the 
-interaction between the SiLA Client and the SiLA Server. Every single Feature 
+are a key component of the SiLA 2 Standard as they define the
+interaction between the SiLA Client and the SiLA Server. Every single Feature
 describes a certain aspect of the overall behavior of the Server.
 
-The features of a device (that is, a SiLA server) are described using an XML 
+The features of a device (that is, a SiLA server) are described using an XML
 file where the functionality is described using:
 
 - **Properties**: data values that can be static (e.g. serial number) or dynamic (e.g. current temperature)
-- **Commands**: an interaction to control or pass information to/from the SiLA , 
+- **Commands**: an interaction to control or pass information to/from the SiLA ,
   an action that can be executed by a SiLA server
 - **Parameters**: expected information required to execute the command
 - **Return values**: expected output of the command
@@ -119,9 +119,9 @@ Properties and commands can be both **unobservable** and **observable**.
   progress of the command execution.
 
 .. tip::
-   A comprehensive introduction to the SiLA        
-   standard is available on the SiLA homepage:              
-   https://sila-standard.com/standards/ or in this 
+   A comprehensive introduction to the SiLA
+   standard is available on the SiLA homepage:
+   https://sila-standard.com/standards/ or in this
    `blog post <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
 SiLA UI Overview
@@ -133,7 +133,7 @@ sidebar, you switch to the SiLA 2 add-on (see figure below).
 .. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
 
 .. rst-class:: guinums
- 
+
 1. :guilabel:`SiLA 2` button for display of *Server Overview* and connected SiLA 2
    servers.
 2. Button to perform a network scan to find available SiLA 2 servers
@@ -160,7 +160,7 @@ Connecting to automatically detected servers
 
 To connect to a SiLA 2 server that was found in the local network via
 SiLA Server Discovery, simply click on the *Connect* icon :guinum:`❶` in the
-corresponding row in the *Server Overview*. 
+corresponding row in the *Server Overview*.
 
 .. image:: Pictures/broken_link.svg
    :width: 40
@@ -178,8 +178,8 @@ this device again.
       :width: 40
       :align: left
 
-   The *Connect-To-All* :guinum:`❸` button allows you to    
-   connect to all devices at once, rather than having to   
+   The *Connect-To-All* :guinum:`❸` button allows you to
+   connect to all devices at once, rather than having to
    connect to each device individually.
 
 .. tip::
@@ -187,28 +187,28 @@ this device again.
       :width: 40
       :align: left
 
-   If the software did not find one or more of    
-   your SiLA devices, it may help to restart the servers   
-   and run a new network scan :guinum:`❹`. 
+   If the software did not find one or more of
+   your SiLA devices, it may help to restart the servers
+   and run a new network scan :guinum:`❹`.
 
 .. tip::
-   If you close the software while still          
-   connected to one or more SiLA servers, it will attempt  
-   to restore those connections the next time you start    
-   the software. 
+   If you close the software while still
+   connected to one or more SiLA servers, it will attempt
+   to restore those connections the next time you start
+   the software.
 
 .. admonition:: Important
    :class: note
 
-   If you delete a server with an active    
-   connection to the software from the *Server Overview*   
-   list, then the connection is automatically              
+   If you delete a server with an active
+   connection to the software from the *Server Overview*
+   list, then the connection is automatically
    disconnected.
 
 Normally, communication between SiLA server and client is encrypted.
 However, if one of your devices does not provide encryption, the
 connection attempt will fail with an error message in the event log. For
-local testing, you can still connect to this device if you check 
+local testing, you can still connect to this device if you check
 :guilabel:`Allow insecure (unencrypted) connection` (see figure below).
 
 .. image:: Pictures/allow_unsecure.png
@@ -216,10 +216,10 @@ local testing, you can still connect to this device if you check
 .. admonition:: Attention
    :class: caution
 
-   You should never establish an            
-   unencrypted connection to a device that is outside your 
-   local network, otherwise all communication between the  
-   device and the software can be read by third parties. 
+   You should never establish an
+   unencrypted connection to a device that is outside your
+   local network, otherwise all communication between the
+   device and the software can be read by third parties.
 
 Manually add and connect to a server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -272,7 +272,7 @@ Overview of generic UI
 After you have successfully connected to a SiLA server, you can control
 it via a generic interface. This interface looks the same for any type
 of SiLA server, that is, for any device regardless of the type or
-manufacturer of the device. 
+manufacturer of the device.
 
 .. tip::
    While this interface allows you to control
@@ -281,12 +281,12 @@ manufacturer of the device.
    plugin, which are presented in Section `SiLA 2 Script Functions`_, are more
    suitable.
 
-Open the generic interface by selecting the desired server with the 
-:guilabel:`SiLA 2` button in the sidebar 
-(see section `SiLA 2 Basics`_). 
+Open the generic interface by selecting the desired server with the
+:guilabel:`SiLA 2` button in the sidebar
+(see section `SiLA 2 Basics`_).
 You will first see all SiLA 2 features provided by the server :guinum:`❶`. If you move the
 mouse pointer over one of the :guilabel:`i` icons, a tooltip with the
-description of the feature :guinum:`❷` will appear. 
+description of the feature :guinum:`❷` will appear.
 
 .. image:: Pictures/feature_overview.png
 
@@ -312,7 +312,7 @@ feature:
 
 If a command has no parameters or only one, such as the :guilabel:`Generate Flow`
 command in the figure above, then the command  cannot be expanded and at most one
-input field is displayed directly next to the command name :guinum:`❸`. 
+input field is displayed directly next to the command name :guinum:`❸`.
 To execute the command, click the :guilabel:`Execute` button :guinum:`❹`.
 
 SiLA Properties UI
@@ -321,7 +321,7 @@ SiLA Properties UI
 Normally, properties cannot be expanded. The picture below shows the SiLA properties
 of the :guilabel:`Analog In Channel Provider` feature. Here, only a field with the
 current value of the property is displayed :guinum:`❶`. To the right is a button for
-re-polling the property :guinum:`❷`. 
+re-polling the property :guinum:`❷`.
 
 .. image:: Pictures/sila_properties.png
 
@@ -343,14 +343,14 @@ to the server.
 .. admonition:: Important
    :class: note
 
-   When the generic interface is opened for 
-   the first time, all unobservable properties are queried 
-   once and subscriptions are automatically started in the 
-   background for observable properties. However, this     
-   only works if the property does not require metadata.   
-   In this case you have to enter the metadata first and   
-   then query the value yourself or start a subscription   
-   yourself. 
+   When the generic interface is opened for
+   the first time, all unobservable properties are queried
+   once and subscriptions are automatically started in the
+   background for observable properties. However, this
+   only works if the property does not require metadata.
+   In this case you have to enter the metadata first and
+   then query the value yourself or start a subscription
+   yourself.
 
 Terminating a connection to a server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -410,9 +410,9 @@ If the command has return values, you can also specify variables :guinum:`❹` i
 which these values are to be stored.
 
 .. tip::
-   All SiLA script functions support the use of   
-   variables. This means that you can enter variables in   
-   all input fields marked with a colored **V** in the         
+   All SiLA script functions support the use of
+   variables. This means that you can enter variables in
+   all input fields marked with a colored **V** in the
    configuration area.
 
 Read SiLA Property
@@ -426,7 +426,7 @@ Read SiLA Property
 With this function you can query a property and store the
 value into a variable.
 
-|image39| 
+|image39|
 
 You can set the property :guinum:`❶` to be queried and the possible
 required metadata :guinum:`❷` in the configuration area.
@@ -458,8 +458,8 @@ want to check and the optionally required metadata, as described for the
 .. admonition:: Important
    :class: note
 
-   The SiLA property must be Observable to  
-   be used in this script function.   
+   The SiLA property must be Observable to
+   be used in this script function.
 
 In the *Condition* area, you configure the check condition. To do this,
 first select a comparison operator :guinum:`❷` and then enter the value :guinum:`❸` to be
@@ -467,11 +467,11 @@ compared with. In the value field :guinum:`❸` you can also use variables to se
 the check condition.
 
 .. tip::
-   To quickly find a specific feature, command or 
-   property, you can enter the name or part of the name in 
-   the filter input field. The selection boxes for the     
-   feature, command or property will then only contain     
-   entries that match the filter entered. 
+   To quickly find a specific feature, command or
+   property, you can enter the name or part of the name in
+   the filter input field. The selection boxes for the
+   feature, command or property will then only contain
+   entries that match the filter entered.
 
 
 Replace SiLA server
@@ -506,14 +506,14 @@ instead of the configured server.
 .. admonition:: Important
    :class: note
 
-   The new server must provide exactly the  
-   same features as the previous server. The selection     
+   The new server must provide exactly the
+   same features as the previous server. The selection
    dialog will inform you if this is not the case.
 
-If you have selected a compatible server, click on 
-:guilabel:`Assign selected Server`. Now the previous server will be replaced 
-by the selected server in **all** script functions. Afterwards, the 
-configuration areais no longer grayed out and you can edit the function again. 
+If you have selected a compatible server, click on
+:guilabel:`Assign selected Server`. Now the previous server will be replaced
+by the selected server in **all** script functions. Afterwards, the
+configuration areais no longer grayed out and you can edit the function again.
 When you save the script, the server you just selected will be saved and used the
 next time you load the script.
 
