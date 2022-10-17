@@ -1,9 +1,9 @@
-SiLA2 Add-on
-============
+SiLA 2 Add-on
+=============
 
 .. image:: Pictures/sila_header.svg
 
-Einführung in das SiLA2 Add-on
+Einführung in das SiLA 2 Add-on
 ---------------------------------
 
 Mit Hilfe des SiLA-Add-ons können Sie jedes SiLA-Gerät in die CETONI Elements-Software
@@ -135,6 +135,52 @@ benachrichtigt zu werden.
    `Blogbeitrag <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
 
+Aktivieren des SiLA 2 Plugins
+-----------------------------
+
+Das SiLA 2 Plugin wird nicht automatisch geladen, nachdem das AddOn installiert wurde.
+Um das Plugin zu aktivieren, müssen Sie Ihre Gerätekonfiguration ändern oder eine neue erstellen.
+
+In der Geräteliste des Gerätekonfigurators gibt es zwei neue Geräte, die mit dem SiLA-Plugin verfügbar sind:
+Der "Generic SiLA Client" und das "SiLA Device".
+
+.. image:: Pictures/device_configurator_devices.png
+
+"Generic SiLA Client"
+~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/generic_sila_client.svg
+   :width: 80
+   :align: left
+
+Dieses "Gerät" aktiviert die Unterstützung für die generische SiLA Client UI
+(siehe Abschnitt `Überblick über die generische Oberfläche`_) und ist daher nur einmal in einer Gerätekonfiguration erlaubt.
+
+|
+
+"SiLA Device"
+~~~~~~~~~~~~~
+
+.. image:: Pictures/sila_server.svg
+   :width: 80
+   :align: left
+
+Mit diesem Gerät können Sie eine beliebige Anzahl von SiLA 2 Servern statisch konfigurieren, die immer in Ihrer Gerätekonfiguration vorhanden sein sollten.
+Ziehen Sie einfach die gewünschte Anzahl von SiLA Devices aus der Geräteliste in den Konfigurationsbereich und konfigurieren Sie die Verbindung zu den Servern.
+
+.. image:: Pictures/configure_sila_device.png
+
+Um das Gerät zu konfigurieren, geben Sie die IP-Adresse oder den Hostnamen des SiLA-Servers und den Port ein, auf dem der Server läuft.
+Bei Bedarf können Sie auch eine unsichere (unverschlüsselte) Kommunikation zum Server erzwingen.
+Klicken Sie dann auf die Schaltfläche :guilabel:`Check Connection`.
+Wenn die Verbindung zum Server hergestellt werden konnte, sehen Sie ein grünes Häkchen.
+
+.. admonition:: Achtung
+   :class: caution
+
+   Unverschlüsselte Kommunikation sollte nur zu Testzwecken verwendet werden, aber nicht in einer Produktionsumgebung!
+
+
 SiLA UI Übersicht
 -----------------
 
@@ -142,7 +188,7 @@ Durch Anklicken der Schaltfläche :guilabel:`SiLA 2` und anschließend *Server
 Overview* :guinum:`❶` in der Seitenleiste wechseln Sie zum *SiLA 2 Plugin*
 (siehe Abbildung unten).
 
-.. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
+.. image:: Pictures/server_overview.png
 
 .. rst-class:: guinums
 
@@ -152,8 +198,8 @@ Overview* :guinum:`❶` in der Seitenleiste wechseln Sie zum *SiLA 2 Plugin*
    SiLA 2 Server zu finden
 #. Schaltfläche zum Herstellen einer Verbindung zu allen Servern in der Liste
 #. Anzeige aller im Netzwerk gefundenen oder manuell hinzugefügten SiLA 2 Server
-#. Auswahlbox zum Zulassen von unverschlüsselten Verbindungen
 #. Schaltfläche zum manuellen Hinzufügen eines SiLA 2 Servers
+#. Anzeige, ob die Verbindung zum SiLA 2 Server verschlüsselt oder unverschlüsselt ist
 #. Schaltfläche zum Herstellen oder Auflösen einer Verbindung zu einem SiLA 2 Server
 #. Schaltfläche zum Löschen des Servers aus der Liste
 
@@ -167,6 +213,8 @@ Verbinden zu einem SiLA 2 Server
 
 Verbinden zu automatisch gefundenen Servern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _server_overview:
 
 .. image:: Pictures/link.svg
    :width: 40
@@ -219,12 +267,9 @@ können Sie die Verbindung zu diesem Gerät wieder trennen.
    löschen, dann wird die Verbindung automatisch getrennt.
 
 
-Normalerweise ist die Kommunikation zwischen SiLA-Server und -Client
-verschlüsselt. Sollte eines Ihrer Geräte jedoch keine Verschlüsselung
-bereitstellen, schlägt der Verbindungsversuch mit einer Fehlermeldung im
-Event Log fehl. Für lokale Tests können Sie trotzdem eine Verbindung mit
-diesem Gerät herstellen, wenn Sie den Haken bei
-:guilabel:`Allow insecure (unencrypted) connection` setzen (Abbildung unten).
+Normalerweise ist die Kommunikation zwischen SiLA-Server und -Client verschlüsselt.
+Wenn Sie versuchen, eine Verbindung zu einem Server herzustellen, der keine Verschlüsselung anbietet, erscheint ein Dialog, der Sie warnt, dass eine unsichere Verbindung zum Server hergestellt wird.
+Wenn Sie sicher sind, dass Sie eine Verbindung zum Server herstellen wollen, wählen Sie :guilabel:`Yes`, um die Verbindung zum Server ohne Verschlüsselung herzustellen.
 
 .. image:: Pictures/allow_unsecure.png
 
@@ -248,11 +293,12 @@ Netzwerks verbinden, müssen Sie diesen Server manuell hinzufügen.
 Klicken Sie dafür auf die Schaltfläche :guilabel:`Add server` :guinum:`❻` (siehe Abbildung
 oben). Es erscheint das folgende Dialogfenster.
 
-.. image:: Pictures/100000000000016F0000009E1716FA5C8D3B4E18.png
+.. image:: Pictures/add_server_dialog.png
 
 Geben Sie hier entweder den Hostnamen oder die IP-Adresse
-Ihres Geräts sowie den Port ein, auf dem der SiLA Server läuft. Klicken
-Sie anschließend auf :guilabel:`OK`.
+Ihres Geräts sowie den Port ein, auf dem der SiLA Server läuft.
+Außerdem haben Sie die Möglichkeit, eine unverschlüsselte Kommunikation mit dem Server zu erzwingen.
+Klicken Sie dann auf :guilabel:`Connect`.
 
 Die Software wird nun versuchen, sich zu diesem Server zu verbinden. Ist
 dies erfolgreich erscheint der Server in der *Server Overview* Liste.
@@ -277,6 +323,10 @@ Wenn Sie dem Zertifikat vertrauen, klicken Sie im Dialogfenster auf
 :guilabel:`Yes`, um die Verbindung fortzusetzen, andernfalls auf :guilabel:`No`. In diesem
 Fall wird die Verbindung abgebrochen.
 
+Standardmäßig merkt sich die Software Ihre Entscheidung nur so lange, bis Sie die Software schließen.
+Wenn Sie möchten, dass die Software Ihre Entscheidung speichert, können Sie den Haken bei :guilabel:`Always trust this certificate` setzen.
+Wenn Sie das nächste Mal eine Verbindung zu diesem Server herstellen, werden Sie nicht erneut aufgefordert, das Zertifikat zu akzeptieren.
+
 Durch klicken auf :guilabel:`View Certificate` erhalten Sie weitere
 Informationen über das Zertifikat. Dort sehen Sie vor allem, welche
 Institution das Zertifikat erstellt und signiert hat.
@@ -286,6 +336,9 @@ Institution das Zertifikat erstellt und signiert hat.
 
 Steuerung eines SiLA 2 Servers
 ------------------------------
+
+Überblick über die generische Oberfläche
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nachdem Sie sich erfolgreich mit einem SiLA Server verbunden haben,
 können Sie diesen über eine generische Oberfläche steuern. Diese
@@ -396,6 +449,28 @@ ausgeblendet. Dadurch können Sie den View später wieder öffnen, um
 beispielsweise bestimmte Parameter oder Command Responses zu sehen.
 Zusätzlich wird der View automatisch wiederverwendet, wenn die
 Verbindung zum Server wiederhergestellt ist.
+
+
+Automatische Wiederherstellung der Verbindung
+---------------------------------------------
+
+Wenn Sie öfter mit SiLA-Geräten arbeiten, die über den :ref:`Server Overview<server_overview>` mit dem entsprechenden Server verbunden wurden, können Sie aktivieren, dass die Server, die bei der letzten Verwendung der Software verbunden waren, beim nächsten Start der Software automatisch wieder verbunden werden.
+
+Öffnen Sie dafür die Einstellungen über :menuselection:`Edit --> Settings...` im Menü.
+
+.. image:: Pictures/open_settings.png
+
+Im Einstellungsfenster wählen Sie :guilabel:`SiLA 2`.
+Um die automatische Wiederverbindung mit zuvor verbundenen Servern zu aktivieren, setzen Sie das erste Häkchen.
+
+.. image:: Pictures/sila_settings.png
+
+In diesem Fenster können Sie auch aktivieren, dass die Software versucht, automatisch eine neue Verbindung zu einem Server herzustellen, der aus dem Netzwerk verschwunden ist (z. B. aufgrund eines vorübergehenden Netzwerkproblems).
+Um diese Funktion zu aktivieren, setzen Sie das zweite Häkchen.
+Wenn die Verbindung zu einem Server unterbrochen wird, überwacht die Software das Netzwerk und versucht, die Verbindung zum Server wieder herzustellen, sobald der Server wieder verfügbar ist.
+Es kann außerdem festgelegt werden, wie oft die Software versuchen soll, eine Verbindung herzustellen.
+
+Wenn Sie diese Funktionen nicht aktivieren, müssen Sie in diesen Fällen die Verbindung zum Server manuell wiederherstellen.
 
 
 SiLA 2 Script-Funktionen
@@ -578,7 +653,7 @@ Verwendung in anderen Script-Funktionen
 
 Auf SiLA Prozessdaten kann in gewohnter Weise zugegriffen werden:
 
-.. image:: Pictures/10000001000003E000000237BE142D3DDB84E94C.png
+.. image:: Pictures/insert_device_property.png
 
 In das Eingabefeld wird nun der ausgewählte Prozessdatenbezeichner
 eingetragen. Diese haben angelehnt an den üblichen

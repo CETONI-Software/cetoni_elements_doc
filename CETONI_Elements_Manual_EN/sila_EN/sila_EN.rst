@@ -1,10 +1,10 @@
-SiLA2 Add-on
-============
+SiLA 2 Add-on
+=============
 
 
 .. image:: Pictures/sila_header.svg
 
-Introduction to SiLA2 Add-on
+Introduction to SiLA 2 Add-on
 --------------------------------
 
 The SiLA Add-on allows you to integrate any SiLA device into the CETONI
@@ -13,7 +13,7 @@ manually access all SiLA features, commands and properties of any SiLA device.
 With the help of several script functions you can automate your SiLA devices
 and integrate them into CETONI Elements scripts.
 
-Installation of SiLA2 Add-on
+Installation of SiLA 2 Add-on
 --------------------------------
 
 The SiLA 2 add-on is not included in the standard CETONI Elements
@@ -124,25 +124,70 @@ Properties and commands can be both **unobservable** and **observable**.
    https://sila-standard.com/standards/ or in this
    `blog post <https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152>`_.
 
+Enabling the SiLA 2 Plugin
+--------------------------
+
+The SiLA 2 Plugin will not be automatically loaded after you have installed the AddOn.
+To enable the plugin you need to change your device configuration or create a new one.
+
+In the device configurator's device list there are two new devices available with the SiLA Plugin:
+A "Generic SiLA Client" and a "SiLA Device".
+
+.. image:: Pictures/device_configurator_devices.png
+
+"Generic SiLA Client"
+~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/generic_sila_client.svg
+   :width: 80
+   :align: left
+
+This "device" enables the support for the generic SiLA Client UI
+(see section `Overview of generic UI`_) and is thus only allowed once in a device configuration.
+
+|
+
+"SiLA Device"
+~~~~~~~~~~~~~
+
+.. image:: Pictures/sila_server.svg
+   :width: 80
+   :align: left
+
+Using this device you can statically configure any number of SiLA 2 Servers that should always be present in your device configuration.
+Simply drag and drop the number of desired SiLA Devices from the devices list into the configuration area and configure the connection to the Servers.
+
+.. image:: Pictures/configure_sila_device.png
+
+To configure the device enter the SiLA Server's IP address or hostname and the port on which the Server is running.
+I necessary you can also force the use of insecure (i.e. unencrypted) communication to the Server.
+Then hit the :guilabel:`Check Connection` button.
+If the connection to the Server could be established you'll see the green check mark.
+
+.. admonition:: Attention
+   :class: caution
+
+   Unencrypted communication should only be used for testing purposes but not in a production environment!
+
 SiLA UI Overview
 ----------------
 
 By clicking the :guilabel:`SiLA 2` button and selecting *Server Overview* :guinum:`❶` in the
 sidebar, you switch to the SiLA 2 add-on (see figure below).
 
-.. image:: Pictures/100000010000049200000191916BBBF1204CA308.png
+.. image:: Pictures/server_overview.png
 
 .. rst-class:: guinums
 
-1. :guilabel:`SiLA 2` button for display of *Server Overview* and connected SiLA 2
+#. :guilabel:`SiLA 2` button for display of *Server Overview* and connected SiLA 2
    servers.
-2. Button to perform a network scan to find available SiLA 2 servers
-3. Button to connect to all servers in the list
-4. Display of all SiLA 2 servers found in the network or added manually
-5. Selection box for allowing unencrypted connections.
-6. Button for adding a SiLA 2 server manually
-7. Button to connect or disconnect from a SiLA 2 server
-8. Button to delete the server from the list
+#. Button to perform a network scan to find available SiLA 2 servers
+#. Button to connect to all servers in the list
+#. Display of all SiLA 2 servers found in the network or added manually
+#. Button for adding a SiLA 2 server manually
+#. Indicator displaying whether the connection to th SiLA 2 server is secure or insecure
+#. Button to connect or disconnect from a SiLA 2 server
+#. Button to delete the server from the list
 
 You can use the sidebar button :guinum:`❶` or the view tabs to switch between the
 currently connected SiLA 2 servers and the *Server Overview*. A tab is
@@ -153,6 +198,8 @@ Connecting to a SiLA 2 server
 
 Connecting to automatically detected servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _server_overview:
 
 .. image:: Pictures/link.svg
    :width: 40
@@ -206,10 +253,8 @@ this device again.
    disconnected.
 
 Normally, communication between SiLA server and client is encrypted.
-However, if one of your devices does not provide encryption, the
-connection attempt will fail with an error message in the event log. For
-local testing, you can still connect to this device if you check
-:guilabel:`Allow insecure (unencrypted) connection` (see figure below).
+If you try to connect to a server that does not provide encryption a dialog will warn you about the insecure connection that will be established to the server.
+If you are sure that you want to connect to the server then selecting :guilabel:`Yes` will connect to the server without encryption.
 
 .. image:: Pictures/allow_unsecure.png
 
@@ -231,10 +276,12 @@ want to connect to a server outside your local network, you must add
 this server manually. To do this, click the :guilabel:`Add server` :guinum:`❻` button (see
 figure above). The following dialog box appears.
 
-|image25|
+.. image:: Pictures/add_server_dialog.png
 
 Enter either the host name or the IP address of your device
-and the port on which the SiLA server is running. Then click :guilabel:`OK`.
+and the port on which the SiLA server is running.
+Additionally, you have the option to force using an unencrypted communication to the Server.
+Then click :guilabel:`Connect`.
 
 The software will now try to connect to this server. If this is
 successful, the server will appear in the *Server Overview* list. If the
@@ -255,6 +302,10 @@ self-signed certificate, the following dialog box appears:
 If you trust the certificate, click :guilabel:`Yes` in the dialog box to continue
 the connection, otherwise click :guilabel:`No`. In this case, the connection will
 be aborted.
+
+By default the software will only remember your choice until you close the software.
+If you want the software to save your choice you can check the :guilabel:`Always trust this certificate` box.
+The next time you connect to this server you won't be asked again to accept the certificate.
 
 By clicking :guilabel:`View Certificate` you get more
 information about the certificate. There you can see, most importantly,
@@ -370,6 +421,26 @@ allows you to reopen the view later, for example to see certain
 parameters or command responses. Furthermore, this view is automatically
 reused when the connection to the server is re-established.
 
+Automatic reconnect
+-------------------
+
+If you're repeatedly working with SiLA devices that were connected to the corresponding server via the :ref:`Server Overview<server_overview>` you can enable that the servers that were connected the last time you used the software are automatically reconnected at the next start of the software.
+
+To do this select :menuselection:`Edit --> Settings...` from the top menu.
+
+.. image:: Pictures/open_settings.png
+
+In the settings window select :guilabel:`SiLA 2`.
+To enable the automatic reconnect to previously connected servers check the first box.
+
+.. image:: Pictures/sila_settings.png
+
+In this windows you can also enable that the software tries to automatically reconnect to a server that disappeared from the network (e.g. due to a temporary network issue).
+To enable this feature check the second box.
+If the connection to a server is lost the software monitors the network and tries to reconnect to the server once it thinks that the server is available again.
+How many times the software will try to connect can also be specified.
+
+If you don't enable these features then you have to manually reconnect to the server in these cases.
 
 SiLA 2 Script Functions
 -----------------------
@@ -539,7 +610,7 @@ Use in other script functions
 SiLA process data can be accessed in exactly the same way as other
 process data from other devices:
 
-|image52|
+.. image:: Pictures/insert_device_property.png
 
 The selected process data identifier is now entered in the
 input field. These also have a specific form based on the usual process
@@ -568,8 +639,6 @@ drop the desired SiLA device into the list of plot curves :guinum:`❷`. Then
 double-click on the device property cell to select the SiLA property to
 be recorded :guinum:`❸`.
 
-.. |image25| image:: Pictures/100000000000016F0000009E1716FA5C8D3B4E18.png
-
 .. |image26| image:: Pictures/1000000100000389000001CB2D6FE681615C5C1E.png
 
 .. |image30| image:: Pictures/1000000100000214000000B01BBEEFCD43CEAC03.png
@@ -585,8 +654,6 @@ be recorded :guinum:`❸`.
 .. |image41| image:: Pictures/100000010000034500000209E2A9E0C1D0F440CC.png
 
 .. |image48| image:: Pictures/10000001000003B5000001C901728FB6CD47BE5B.png
-
-.. |image52| image:: Pictures/10000001000003E000000237BE142D3DDB84E94C.png
 
 .. |image53| image:: Pictures/1000000100000550000002C759AE7BAD95D9239D.png
 
