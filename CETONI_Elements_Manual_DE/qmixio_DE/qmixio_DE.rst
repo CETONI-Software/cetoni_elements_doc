@@ -710,6 +710,8 @@ Die folgenden speziellen Terminals werden vom I/O-Plugin unterstützt:
      - Beschreibung
    * - `KL1501 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl1xxx-digital-input/kl1501.html>`_
      - 1-Kanal-Digitaleingang, Zähler, 24 V DC, 100 kHz
+   * - `KL3356 <https://www.beckhoff.com/de-de/produkte/i-o/busklemmen/kl3xxx-analog-eingang/kl3356.html>`_
+     - 1-Kanal-Analog-Eingang, Messbrücke, Vollbrücke, 16 Bit
 
 
 .. |image1| image:: Pictures/analog_in.svg

@@ -660,6 +660,8 @@ The following special terminals are supported by the I/O plugin:
      - Description
    * - `KL1501 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl1xxx-digital-input/kl1501.html>`_
      - 1-channel digital input, counter, 24 V DC, 100 kHz
+   * - `KL3356 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl3xxx-analog-input/kl3356.html>`_
+     - 1-channel analog input, measuring bridge, full bridge, 16 bit
 
 .. |image1| image:: Pictures/analog_in.svg
    :width: 40
