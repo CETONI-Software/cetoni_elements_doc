@@ -41,6 +41,10 @@ jobs:
           cp -R CETONI_Elements_Manual_DE/_build/html/*  _deploy/manual_de
           mkdir -p _deploy/manual_en
           cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en
+          mkdir -p _deploy/manual_de_private
+          cp -R CETONI_Elements_Manual_DE/_build/html/*  _deploy/manual_de_private
+          mkdir -p _deploy/manual_en_private
+          cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en_private
       -
         name: Nojekyll
         run: touch _deploy/.nojekyll
