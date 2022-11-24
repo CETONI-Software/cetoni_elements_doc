@@ -663,6 +663,286 @@ The following special terminals are supported by the I/O plugin:
    * - `KL3356 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl3xxx-analog-input/kl3356.html>`_
      - 1-channel analog input, measuring bridge, full bridge, 16 bit
 
+Configuration of Beckhoff Terminals
+------------------------------------------
+
+Introduction to the Terminal Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The I/O terminals from Beckhoff can be parameterized and configured via their
+terminal registers. The individual terminals are configured, parameterized and
+tested by CETONI before delivery. However, it may be necessary to adjust the
+terminal configuration subsequently - e.g. to select a different sensor type,
+to change the scaling or to activate / deactivate automatic calibration.
+
+To configure the terminals, you can use the :guilabel:`Beckhoff Devices` view. 
+You can display the view via the main menu with the menu item
+:menuselection:`Window --> Show View --> Beckhoff Devices`.
+
+Configuration Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The configuration interface allows you to access the parameters of individual
+terminals. If you have several QmixIO-B or Beckhoff modules, first select the
+device containing the terminal to be configured in the :guilabel:`Device` :guinum:`❶`
+selection box.
+
+.. image:: Pictures/beckhoff_terminal_config.png
+
+Now you can select the terminal that you want to parameterize in the 
+:guilabel:`Terminal` :guinum:`❸` selection box. The order of the terminals in the
+selection box corresponds to the order of the terminals on the device from left
+to right starting with the bus coupler.
+
+In the :guilabel:`Register` section :guinum:`❹`, select the terminal channel 
+:guilabel:`Table / Channel` and the terminal :guilabel:`Register`. For multi-channel
+terminals, e.g. 4-channel analog input terminals, you can configure each channel
+separately. If an XML description file is stored for the selected terminal, you
+can also select the register via a selection field with the register names :guinum:`❺`. 
+If no XML description file is available, you must find the register number from
+the Beckhoff PDF documentation.
+
+Via the two buttons :guilabel:`Read` :guinum:`❻` and :guilabel:`Write`
+:guinum:`❼` you can now read and write data from the selected register. 
+Information on the meaning of the data can be found in the PDF documentation
+from Beckhoff.
+
+.. admonition:: Attention
+   :class: caution
+
+   Changing parameters can lead to the terminal no longer functioning as tested 
+   and configured by CETONI. Before changing a parameter, you should note the
+   current value in order to be able to restore it later.
+
+Most terminals have a **Feature Register** per channel for setting certain
+configuration parameters. This register is usually register **R32**. If an XML
+description file is stored for the selected terminal, you will see a graphical
+interface in the :guilabel:`Feature Register` area :guinum:`❽` for accessing
+the individual parameters of the register. If no XML description file is 
+available, you must select the register by its number in the :guilabel:`Register`
+area :guinum:`❹` and then read or write the complete value. Details about the
+feature register are available in the Beckhoff PDF documentation.
+
+Create an XML Terminal Description
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If an XML description file has not yet been provided for a particular terminal,
+you can use the PDF documentation for a terminal to create an XML file yourself
+and add it to the software using the :guilabel:`Add Terminal XML` button:
+
+.. image:: Pictures/beckhoff_add_terminal_xml.png
+
+An XML terminal description can contain multiple terminals. The following file
+shows the terminal description for the terminals that are already stored in the
+software. You can use this as a template for creating your own XML terminal
+description file:
+
+.. code-block:: xml
+   
+   <?xml version="1.0" encoding="utf-8"?>
+   <Terminals>
+      <K1501 Descr="Up- or Down-Counter Terminal, 24 VDC, 100 kHz">
+         <Registers FeatureReg="32">
+            <R8 Name="Terminal type"/>
+            <R9 Name="Software version number"/>
+            <R32 Name="Feature register">
+               <Bit8 Descr="Counter mode" Bits="3" Type="List">
+                  <Item0 Bin="001">32-bit up/down counter</Item0>
+                  <Item1 Bin="010">2 * 16-bit up counter</Item1>
+                  <Item2 Bin="100">32-bit gated counter, Gate input low: Counter is locked</Item2>
+                  <Item3 Bin="101">32-bit gated counter, Gate input high: Counter is locked</Item3>
+               </Bit8>
+               <Bit11 Descr="Down counter"/>
+            </R32>
+         </Registers>
+      </K1501>
+      <K3152 Descr="Analog Input, 4..20mA, 16 bit, differential, high precision" FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Disable watchdog timer"/>
+               <Bit3 Descr="Signed amount representation"/>
+               <Bit4 Descr="Siemens outout format"/>
+               <Bit5 Descr="Disable calibration"/>
+               <Bit6 Descr="Disable differential measurement"/>
+               <Bit7 Descr="Stabilization of calibration active"/>
+               <Bit8 Descr="Measuring range limitation active"/>
+               <Bit9 Descr="Limit value 1 active"/>
+               <Bit10 Descr="Limit value 2 active"/>
+               <Bit11 Descr="Disable channel"/>
+            </R32>
+            <R33 Name="User Offset"/>
+            <R34 Name="User Gain"/>
+            <R35 Name="Limit value 1"/>
+            <R36 Name="Limit value 2"/>
+            <R37 Name="Filter constants"/>
+            <R40 Name="Calibration interval"/>
+            <R44 Name="Interval for forced calibration"/>
+            <R47 Name="Number of stable measured values"/>
+            <R48 Name="Tolerance for measured value stability"/>
+         </Registers>
+      </K3152>
+      <K3162 Descr="Analog Input, 0..10V, 16 bit, differential," FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Disable watchdog timer"/>
+               <Bit3 Descr="Signed amount representation"/>
+               <Bit4 Descr="Siemens outout format"/>
+               <Bit5 Descr="Disable calibration"/>
+               <Bit6 Descr="Disable differential measurement"/>
+               <Bit7 Descr="Stabilization of calibration active"/>
+               <Bit8 Descr="Measuring range limitation active"/>
+               <Bit9 Descr="Limit value 1 active"/>
+               <Bit10 Descr="Limit value 2 active"/>
+               <Bit11 Descr="Disable channel"/>
+            </R32>
+            <R33 Name="User Offset"/>
+            <R34 Name="User Gain"/>
+            <R35 Name="Limit value 1"/>
+            <R36 Name="Limit value 2"/>
+            <R37 Name="Filter constants"/>
+            <R40 Name="Calibration interval"/>
+            <R44 Name="Interval for forced calibration"/>
+            <R47 Name="Number of stable measured values"/>
+            <R48 Name="Tolerance for measured value stability"/>
+         </Registers>
+      </K3162>
+      <K3312 Descr="Analog Input, temperature, thermocouple 16 bit" FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R0 Name="Raw ADC value"/>
+            <R6 Name="Diagnostic register"/>
+            <R17 Name="HW compensation: Offset"/>
+            <R18 Name="HW compensation: Gain"/>
+            <R19 Name="Manuf. Scaling: Offset"/>
+            <R20 Name="Manuf. Scaling: Gain"/>
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Watchdog timer active"/>
+               <Bit5 Descr="Activate filter constant R37"/>
+               <Bit6 Descr="Deactivate measuring current for open-circuit recognition"/>
+               <Bit8 Descr="Reference temperature switched off"/>
+               <Bit8 Descr="Sensor Type" Bits="4" Type="List">
+                  <Item0 Bin="0000">Type: L (-25°C to 900°C)</Item0>
+                  <Item0 Bin="0001">Type: K (-100°C to 1370°C</Item0>
+                  <Item0 Bin="0010">Type: J (-100°C to 1200°C)</Item0>
+                  <Item0 Bin="0011">Type: E (-100°C to 1000°C)</Item0>
+                  <Item0 Bin="0100">Type: T (-100°C to 400°C)</Item0>
+                  <Item0 Bin="0101">Type: N (-100°C to 1300°C)</Item0>
+                  <Item0 Bin="0110">Type: U (-25°C to 600°C)</Item0>
+                  <Item0 Bin="0111">Type: B (600 °C to 1800 °C)</Item0>
+                  <Item0 Bin="1000">Type: R (0 °C to 1700 °C)</Item0>
+                  <Item0 Bin="1001">Type: S (0 °C to 1700 °C)</Item0>
+                  <Item0 Bin="1101">1 µV 1.6µV (Range +-30 mV)</Item0>
+                  <Item0 Bin="1110">2 µV 3.2µV (Range +-30 mV)</Item0>
+                  <Item0 Bin="1111">4 µV 6.4µV (Range +-30 mV)</Item0>
+               </Bit8>
+            </R32>
+            <R33 Name="User Scaling Offset"/>
+            <R34 Name="User Scaling Gain"/>
+            <R37 Name="Filter constant"/>
+         </Registers>		
+      </K3312>
+      <K3314 Descr="Analog Input, temperature, thermocouple 16 bit" FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R0 Name="Raw ADC value"/>
+            <R6 Name="Diagnostic register"/>
+            <R17 Name="HW compensation: Offset"/>
+            <R18 Name="HW compensation: Gain"/>
+            <R19 Name="Manuf. Scaling: Offset"/>
+            <R20 Name="Manuf. Scaling: Gain"/>
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Watchdog timer active"/>
+               <Bit5 Descr="Activate filter constant R37"/>
+               <Bit6 Descr="Deactivate measuring current for open-circuit recognition"/>
+               <Bit8 Descr="Reference temperature switched off"/>
+               <Bit8 Descr="Sensor Type" Bits="4" Type="List">
+                  <Item0 Bin="0000">Type: L (-25°C to 900°C)</Item0>
+                  <Item0 Bin="0001">Type: K (-100°C to 1370°C</Item0>
+                  <Item0 Bin="0010">Type: J (-100°C to 1200°C)</Item0>
+                  <Item0 Bin="0011">Type: E (-100°C to 1000°C)</Item0>
+                  <Item0 Bin="0100">Type: T (-100°C to 400°C)</Item0>
+                  <Item0 Bin="0101">Type: N (-100°C to 1300°C)</Item0>
+                  <Item0 Bin="0110">Type: U (-25°C to 600°C)</Item0>
+                  <Item0 Bin="0111">Type: B (600 °C to 1800 °C)</Item0>
+                  <Item0 Bin="1000">Type: R (0 °C to 1700 °C)</Item0>
+                  <Item0 Bin="1001">Type: S (0 °C to 1700 °C)</Item0>
+                  <Item0 Bin="1101">1 µV 1.6µV (Range +-30 mV)</Item0>
+                  <Item0 Bin="1110">2 µV 3.2µV (Range +-30 mV)</Item0>
+                  <Item0 Bin="1111">4 µV 6.4µV (Range +-30 mV)</Item0>
+               </Bit8>
+            </R32>
+            <R33 Name="User Scaling Offset"/>
+            <R34 Name="User Scaling Gain"/>
+            <R37 Name="Filter constant"/>
+         </Registers>		
+      </K3314>
+      <K3356 Descr="Analog Input, measuring bridge, full bridge, 16 bit" FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Disable watchdog timer"/>
+               <Bit4 Descr="Disable cyclic calibrartion of A/D converter"/>
+               <Bit5 Descr="Disable cyclic testing"/>
+               <Bit6 Descr="Disable cyclic reference measurement"/>
+               <Bit7 Descr="Symmetrical measurement active"/>
+               <Bit8 Descr="Scale factor is active"/>
+               <Bit9 Descr="Calibration stabilization active"/>
+               <Bit10 Descr="User calibration is active if bit 32.0 is set."/>
+               <Bit11 Descr="Unit of R36" Bits="1" Type="List">
+                  <Item0 Bin="0">1 mV/V</Item0>
+                  <Item1 Bin="1">0,01 mV/V</Item1>
+               </Bit11>
+               <Bit12 Descr="After calibration / measurement of ref. voltage output value" Bits="1" Type="List">
+                  <Item0 Bin="0">immediately</Item0>
+                  <Item1 Bin="1">if weight value has become stable</Item1>
+               </Bit12>
+            </R32>
+            <R33 Name="User Scaling Offset"/>
+            <R34 Name="User Scaling Gain"/>
+            <R35 Name="nominal weight of the load cell"/>
+            <R36 Name="nominal parameter of the load cell"/>
+            <R37 Name="Filter constant of the A/D converter, and configuration bits for the filter">
+               <Bit0 Descr="Fast"/>
+               <Bit1 Descr="SkipFIR"/>
+            </R37>
+            <R38 Name="Scaling Factor"/>
+            <R39 Name="Measuring interval for reference signal"/>
+            <R40 Name="Calibration interval"/>
+            <R41 Name="Test interval"/>
+            <R42 Name="nominal test value"/>
+            <R43 Name="test tolerance"/>
+            <R44 Name="Forced calibration interval"/>
+            <R45 Name="threshold for reference voltage test"/>
+            <R46 Name="threshold for correction factor"/>
+         </Registers>
+      </K3356>
+      <K4004 Descr="Analog Output, 0..10V," FeatureReg="32">
+         <Registers FeatureReg="32">
+            <R5 Name="Raw DAC value"/>
+            <R9 Name="Software version number"/>
+            <R32 Name="Feature register">
+               <Bit0 Descr="User scaling active"/>
+               <Bit1 Descr="Manufacturer scaling active"/>
+               <Bit2 Descr="Watchdog timer active"/>
+               <Bit3 Descr="Sign / amount representation"/>
+               <Bit5 Descr="Calculation of absolute value"/>
+               <Bit8 Descr="User switch-on value"/>
+            </R32>
+            <R33 Name="User scaling: Offset"/>
+            <R34 Name="User scaling: Gain"/>
+            <R35 Name="User switch-on value"/>
+         </Registers>
+      </K4004>
+   </Terminals>
+
+
 .. |image1| image:: Pictures/analog_in.svg
    :width: 40
 

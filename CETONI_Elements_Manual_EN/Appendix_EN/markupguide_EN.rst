@@ -76,4 +76,9 @@ GUI Elements Numbering
 For inline text numbering, you can use the following markup. This is the
 first element :guinum:`❶`, followd by the second element :guinum:`❷`, then
 comes the third :guinum:`❸` and fourth elment :guinum:`❹` and the last element
-is the :guinum:`❺`.
+is the :guinum:`❺`. Here are some more numbers: 
+
+- :guinum:`❻`
+- :guinum:`❼`
+- :guinum:`❽`
+- :guinum:`❿`
