@@ -663,7 +663,7 @@ The following special terminals are supported by the I/O plugin:
    * - `KL3356 <https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl3xxx-analog-input/kl3356.html>`_
      - 1-channel analog input, measuring bridge, full bridge, 16 bit
 
-Configuration of Beckhoff Terminals
+Configuring Beckhoff terminals
 ------------------------------------------
 
 Introduction to the Terminal Configuration

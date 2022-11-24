@@ -714,7 +714,7 @@ Die folgenden speziellen Klemmen werden vom I/O-Plugin unterstützt:
      - 1-Kanal-Analog-Eingang, Messbrücke, Vollbrücke, 16 Bit
 
 
-Konfiguration von Beckhoff Klemmen
+Beckhoff Klemmen konfigurieren
 ------------------------------------------
 
 Einführung in die Klemmenkonfiguration
