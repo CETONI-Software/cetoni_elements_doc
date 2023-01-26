@@ -31,9 +31,39 @@ Script unterbrechen - *Interrupt Script*
    :align: left
 
 Mit dieser Funktion können Sie die Skriptausführung
-unterbrechen. Der Anwender kann das Script dann später jederzeit fortsetzen.
+unterbrechen. Die Funktion hat die gleiche Wirkung wie das Drücken der Interrupt
+Schaltfläche in der Toolbar. Der Anwender kann das Script durch Drücken der
+Continue Schaltfäche in der Toolbar fortsetzen.
 
-|
+.. admonition:: Wichtig
+   :class: note
+
+   Wird die Scriptausführung unterbrochen, werden alle parallel laufenden
+   Sequenzen unterbrochen und es ist kein Kommunikation mit dem Script möglich. 
+
+
+Funktionssequenz unterbrechen - *Interrupt Sequence*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/interrupt_sequence3.svg
+   :width: 60
+   :align: left
+
+Mit dieser Funktion können Sie die Ausführung der Funktionssequenz unterbrechen,
+in der die Funktion enthalten ist. Werden mehrere Sequenzen mit Hilfe der 
+:ref:`Parallelen Sequenz<parallele_sequenz>` parallel ausgeführt, dann wird nur
+die Sequenz unterbrochen, in der die Funktion enthalten ist. 
+
+Wird Interrupt Sequence Funktion ausgeführt, erhalten Sie im :ref:`Event Log<Ereignisprotokoll>`
+der Anwendung eine Information, das die Sequenz unterbrochen wurde:
+
+.. image:: Pictures/interrupt_sequence_message.png
+
+Sie können dann doppelt auf den Log-Eintrag klicken, um sich die Funktion und
+das Bedienpanel anzeigen zur lassen. Danach können Sie die Ausführung mit Mausklick
+auf :guilabel:`Continue` im Bedienpanel der *Interrupt Sequence* Funktion fortzusetzen.
+
+.. image:: Pictures/interrupt_sequence_continue.png
 
 .. _nachricht_anzeigen:
 
