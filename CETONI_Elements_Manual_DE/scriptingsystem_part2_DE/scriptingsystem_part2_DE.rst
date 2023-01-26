@@ -7,9 +7,8 @@ finden Sie in den Kategorien :guilabel:`Core Functions` , :guilabel:`Function Se
 und :guilabel:`Time Functions`.
 
 .. image:: Pictures/100002010000016C000002591AF7FEE5FA0D46F1.png
-   :alt: Script Grundfunktionen
 
-Kernfunktionen – *Core Functions*
+Kernfunktionen - *Core Functions*
 ----------------------------------
 
 Übersicht Kernfunktionen
@@ -24,7 +23,7 @@ zur Programmablaufsteuerung und zur Verwendung von Variablen.
 
 .. _script_unterbrechen:
 
-Script unterbrechen – *Interrupt Script*
+Script unterbrechen - *Interrupt Script*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/interrupt_script.svg
@@ -38,7 +37,7 @@ unterbrechen. Der Anwender kann das Script dann später jederzeit fortsetzen.
 
 .. _nachricht_anzeigen:
 
-Nachricht anzeigen – *Show Message*
+Nachricht anzeigen - *Show Message*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000490000034EB000034EB215655F378C8DAF2.svg
@@ -519,68 +518,8 @@ entspricht der Funktion :ref:`Variable erzeugen <variable_erzeugen>`.
 
 .. _eigenschaftsvariable_erzeugen:
 
-Eigenschaftsvariable erzeugen – *Create Property Variable*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/10001162000038720000387269894D0D5041B1EE.svg
-   :width: 60
-   :align: left
-
-Mit dieser Funktion erzeugen Sie eine spezielle Variable, die
-mit einer bestimmten Eigenschaft eines Gerätes verbunden wird. Über
-diese Variable haben Sie im Script direkten Zugriff auf die verbundene
-Geräteeigenschaft und können diese ohne zusätzliche Funktionsaufrufe
-auslesen.
-
-Wenn Sie z.B. einen analogen Eingangswert einlesen möchten und mit
-normalen Variablen arbeiten, müssen Sie zuerst eine Variable mit der
-Funktion :ref:`Variable erzeugen <variable_erzeugen>` erzeugen und dann mit der 
-Funktion :ref:`Prozessdaten lesen <prozessdaten_lesen>` den
-analogen Eingangswert in die Variable einlesen. Erst danach können Sie
-die Variable für weitere Berechnungen und Prüfungen verwenden. Wann
-immer Sie einen neuen analogen Eingangswert benötigen, müssen Sie die
-Funktion :ref:`Prozessdaten lesen <prozessdaten_lesen>` erneut aufrufen.
-
-.. image:: Pictures/10000201000001F7000001347DCF10AF4AE123D0.png
-   :alt: Konfiguration Eigenschaftsvariable anlegen
-
-Mit Eigenschaftsvariablen wird dieser Zugriff auf Geräteeigenschaften
-(z.B. Eingangswert eines analogen Einganges) erheblich vereinfacht. Wenn
-Sie die Variable anlegen, verbinden Sie im Konfigurationsdialog
-dauerhaft eine Geräteeigenschaft mit der Variable. Wann immer Sie nun in
-Scriptfunktionen auf den Wert dieser Variable lesend zugreifen, wird
-automatisch der aktuelle Wert der verbundenen Geräteeigenschaft
-ausgelesen.
-
-Den Namen der Variable geben Sie im Feld :guilabel:`Variable` :guinum:`❶` ein (Abbildung
-oben). Über die Auswahlbox :guilabel:`Device` :guinum:`❸` wählen Sie das Gerät aus, von
-welchem Sie die Prozessdaten lesen möchten. In der Auswahlliste werden
-alle Geräte der aktuellen Konfiguration angezeigt. Um die Suche nach
-einem Gerät zu vereinfachen, können Sie die Geräteliste filtern. Wählen
-Sie dafür im Auswahlfeld :guilabel:`Filter` :guinum:`❷` einfach den Gerätetyp aus, nach
-dem Sie filtern möchten.
-
-Wenn Sie
-das Gerät gewählt haben, können Sie dann im Auswahlfeld :guilabel:`Property` :guinum:`❹` die
-Geräteeigenschaft (den Prozessdateneintrag) wählen, den Sie auslesen
-möchten.
-
-D.h., zusammenfassend lässt sich diese Funktion wie folgt beschreiben:
-
-.. centered:: 
-   "Verbinde die Geräteeigenschaft :guinum:`❹` des Gerätes :guinum:`❸` mit der Variablen
-   :guinum:`❶` und gebe den Wert der Geräteeigenschaft zurück, wenn ein Lesezugriff
-   auf die Variable erfolgt."
-
-.. admonition:: Wichtig
-   :class: note
-
-   Eigenschaftsvariablen können nicht zum     
-   Speichern von Werten bei Berechnungen verwendet werden. 
-   Verwenden Sie dafür normale Variablen.   
-
-
-Variablendeklarationen gruppieren – *Variable Declaration Sequence*
+Variablendeklarationen gruppieren - *Variable Declaration Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100015BD00003872000038722A0A6332DCBD75A0.svg
@@ -606,7 +545,7 @@ Mit der Sequenz
 können Sie auch Variablen die logisch zusammengehören gruppieren und es
 so für den Anwender einfacher machen, bestimmte Variablen zu finden.
 
-Benutzereingabe – *User Input*
+Benutzereingabe - *User Input*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10001DE9000038720000387289754B44B2610975.svg
@@ -623,15 +562,15 @@ Parameter konfigurieren:
 
 .. rst-class:: guinums
 
-1. **Label Text** – Hier geben Sie einen Text an, der dem Anwender bei der 
+1. **Label Text** - Hier geben Sie einen Text an, der dem Anwender bei der 
    Ausführung der Funktion über dem Eingabefeld als Beschriftung und erklärender 
    Text angezeigt wird.
-2. **Variable** – In diesem Feld legen Sie die Variable fest, die den vom
+2. **Variable** - In diesem Feld legen Sie die Variable fest, die den vom
    Anwender eingegebenen Wert speichern soll.
-3. **Type** – Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
+3. **Type** - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
    nach gewähltem Wert, akzeptiert der Eingabedialog nur bestimmte
    Werte.
-4. **Test Input Dialog** – Durch Anklicken dieser Schaltfläche können Sie
+4. **Test Input Dialog** - Durch Anklicken dieser Schaltfläche können Sie
    den Eingabedialog testweise anzeigen, um zu prüfen, wie der Anwender
    den Eingabedialog später bei der Ausführung des Scriptes sehen wird
    (siehe Abbildung unten).
@@ -640,7 +579,7 @@ Parameter konfigurieren:
 
 .. _script_function_call:
 
-Eigene Scriptfunktion – *Script Function Call*
+Eigene Scriptfunktion - *Script Function Call*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002495000034EB000034EB5801BA1011E76C10.svg
@@ -683,7 +622,7 @@ Scriptfunktionen die sich in dieser Sequenz befinden ausgeführt werden.
 
 .. _zählschleife:
 
-Zählschleife – *Counting Loop*
+Zählschleife - *Counting Loop*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100013490000388C0000388C4A5D96BDCF59F705.svg
@@ -742,7 +681,7 @@ Durchlauf beendet.
 
 .. _bedingte_schleife:
 
-Bedingte Schleife – *Conditional Loop*
+Bedingte Schleife - *Conditional Loop*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Einführung
@@ -767,7 +706,7 @@ In Textform lässt sich die Funktionsauführung wie folgt beschreiben:
 Es gibt zwei Möglichkeiten, die Parameter für die Schleifenprüfung festzulegen: den einfachen Modus 
 und den JavaScript-Ausdruck.   
 
-Konfiguration – einfacher Modus
+Konfiguration - einfacher Modus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Im Konfigurationsbereich können Sie im einfachen Modus die
@@ -1160,15 +1099,8 @@ Programmabläufen in Ihrem Script messen und ausgeben.
 
 .. _gerätefunktionen:
 
-Gerätefunktionen – *Device Functions*
+Gerätefunktionen - *Device Functions*
 -------------------------------------
-
-
-Einführung
-~~~~~~~~~~
-
-.. image:: Pictures/10000201000001020000006F96BE123CCB58B612.png
-   :alt: Gerätegrundfunktionen
 
 Im Script-System sind bereits eine Reihe von generischen
 Script-Funktionen zum Zugriff auf Geräte (Gerätedaten,
@@ -1176,9 +1108,15 @@ Geräteeigenschaften = *Device Properties*) enthalten. Diese Funktionen
 sind unabhängig von den vorhandenen Plugins immer verfügbar. Sie finden
 diese Funktionen in der Kategorie *Device Functions*.
 
+Einführung
+~~~~~~~~~~
+
+.. image:: Pictures/device_functions_category.png
+  
+
 .. _prozessdaten_lesen:
 
-Prozessdaten lesen – *Read Device Property*
+Prozessdaten lesen - *Read Device Property*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002597000034EB000034EB8C1E4F7964CA4032.svg
@@ -1225,8 +1163,8 @@ beschreiben:
    Einblenden einer Liste bereits erstellter Variablen.  
 
 
-Prozessdaten schreiben– *Write Device Property*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prozessdaten schreiben - *Write Device Property*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100024C0000034EB000034EBCD08BD4563B1D7D1.svg
    :width: 60
@@ -1250,7 +1188,7 @@ angezeigt, die beschreibbar sind.
 Der Wert im Eingabefeld :guinum:`❶` wird dann zur Laufzeit in die gewählte
 Geräteeigenschaft geschrieben.
 
-Auf Prozessdaten warten – *Wait For Device Property*
+Auf Prozessdaten warten - *Wait For Device Property*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002565000034EB000034EB5C19DADB200F9112.svg
@@ -1262,8 +1200,7 @@ warten lassen, dass eine bestimmte Geräteeigenschaft oder ein bestimmter
 Prozessdateneintrag eine definierte Bedingung erfüllt. Die Funktion wird
 erst dann fortgesetzt, wenn diese Bedingung erfüllt ist.
 
-.. image:: Pictures/10000201000001DE0000013FEB6E6B812107306F.png
-   :alt: Scriptkonfiguration Wait for Device Property
+.. image:: Pictures/wait_for_device_property_function.png
 
 Im Konfigurationsbereich (Abbildung oben) wählen Sie als erstes im Bereich
 *Device Data* :guinum:`❶`, wie bei der Funktion :ref:`Prozessdaten lesen <prozessdaten_lesen>` 
@@ -1271,9 +1208,16 @@ beschrieben, das Gerät und dessen
 Geräteeigenschaft aus, die Sie prüfen möchten.
 
 Im Bereich *Condition* konfigurieren Sie die Prüfbedingung. Dafür wählen
-Sie als erstes einen *Vergleichsoperator* :guinum:`❷` aus und geben dann den Wert
+Sie als erstes einen Vergleichsoperator :guinum:`❷` aus und geben dann den Wert
 ein :guinum:`❸`, mit dem verglichen werden soll. Im Wertefeld :guinum:`❸` können Sie
-auch Variablen verwenden, um die Prüfbedingung zu setzen.
+auch Variablen (z.B. :code:`$FlowRate`) oder Geräteeigenschaften (Device Properties - 
+z.B. :code:`Nemesys_M_1.ActualFlow`) verwenden, um die Prüfbedingung zu setzen.
+
+Um zu verhindern, dass die Funktion die weitere Ausführung zu lange blockiert,
+können Sie im Feld :guilabel:`Timeout (ms)` ein Zeitlimit festlegen. Ist das
+Zeitlimit abgelaufen und die Prüfbedingung noch nicht wahr, erzeugt die Funktion
+einen :code:`ERR_TIMEOUT` Fehler. Um den Timeout zu deaktivieren, setzen Sie
+den Wert einfach auf 0.
 
 Verkürzt lässt sich die Funktion wie folgt beschreiben:
 
@@ -1284,7 +1228,72 @@ Verkürzt lässt sich die Funktion wie folgt beschreiben:
 .. admonition:: Tipp
    :class: tip
 
-   Vergleichsbedingung können Variablen verwendet werden.  
+   Als Vergleichsbedingung können Variablen verwendet werden.  
+
+.. admonition:: Tipp
+   :class: tip
+
+   Ein Timeout Wert von 0 deaktiviert das Zeitlimit.  
+
+Eigenschaftsvariable erzeugen - *Create Property Variable*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/10001162000038720000387269894D0D5041B1EE.svg
+   :width: 60
+   :align: left
+
+Mit dieser Funktion erzeugen Sie eine spezielle Variable, die
+mit einer bestimmten Eigenschaft eines Gerätes verbunden wird. Über
+diese Variable haben Sie im Script direkten Zugriff auf die verbundene
+Geräteeigenschaft und können diese ohne zusätzliche Funktionsaufrufe
+auslesen.
+
+Wenn Sie z.B. einen analogen Eingangswert einlesen möchten und mit
+normalen Variablen arbeiten, müssen Sie zuerst eine Variable mit der
+Funktion :ref:`Variable erzeugen <variable_erzeugen>` erzeugen und dann mit der 
+Funktion :ref:`Prozessdaten lesen <prozessdaten_lesen>` den
+analogen Eingangswert in die Variable einlesen. Erst danach können Sie
+die Variable für weitere Berechnungen und Prüfungen verwenden. Wann
+immer Sie einen neuen analogen Eingangswert benötigen, müssen Sie die
+Funktion :ref:`Prozessdaten lesen <prozessdaten_lesen>` erneut aufrufen.
+
+.. image:: Pictures/10000201000001F7000001347DCF10AF4AE123D0.png
+   :alt: Konfiguration Eigenschaftsvariable anlegen
+
+Mit Eigenschaftsvariablen wird dieser Zugriff auf Geräteeigenschaften
+(z.B. Eingangswert eines analogen Einganges) erheblich vereinfacht. Wenn
+Sie die Variable anlegen, verbinden Sie im Konfigurationsdialog
+dauerhaft eine Geräteeigenschaft mit der Variable. Wann immer Sie nun in
+Scriptfunktionen auf den Wert dieser Variable lesend zugreifen, wird
+automatisch der aktuelle Wert der verbundenen Geräteeigenschaft
+ausgelesen.
+
+Den Namen der Variable geben Sie im Feld :guilabel:`Variable` :guinum:`❶` ein (Abbildung
+oben). Über die Auswahlbox :guilabel:`Device` :guinum:`❸` wählen Sie das Gerät aus, von
+welchem Sie die Prozessdaten lesen möchten. In der Auswahlliste werden
+alle Geräte der aktuellen Konfiguration angezeigt. Um die Suche nach
+einem Gerät zu vereinfachen, können Sie die Geräteliste filtern. Wählen
+Sie dafür im Auswahlfeld :guilabel:`Filter` :guinum:`❷` einfach den Gerätetyp aus, nach
+dem Sie filtern möchten.
+
+Wenn Sie
+das Gerät gewählt haben, können Sie dann im Auswahlfeld :guilabel:`Property` :guinum:`❹` die
+Geräteeigenschaft (den Prozessdateneintrag) wählen, den Sie auslesen
+möchten.
+
+D.h., zusammenfassend lässt sich diese Funktion wie folgt beschreiben:
+
+.. centered:: 
+   "Verbinde die Geräteeigenschaft :guinum:`❹` des Gerätes :guinum:`❸` mit der Variablen
+   :guinum:`❶` und gebe den Wert der Geräteeigenschaft zurück, wenn ein Lesezugriff
+   auf die Variable erfolgt."
+
+.. admonition:: Wichtig
+   :class: note
+
+   Eigenschaftsvariablen können nicht zum     
+   Speichern von Werten bei Berechnungen verwendet werden. 
+   Verwenden Sie dafür normale Variablen. 
 
 
 Funktionen zum Logging
