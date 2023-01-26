@@ -1,3 +1,11 @@
+.. include:: include/colors.rst
+
+.. role:: yellow-marker
+.. role:: green-marker
+.. role:: blue-marker
+.. role:: pink-marker
+.. role:: red-marker
+
 Einführung CETONI Elements Software
 ===================================
 
@@ -10,7 +18,6 @@ gerätespezifischen Plugins. Dies erkennen Sie daran, dass Ihnen von der
 Software der Startbildschirm angezeigt wird (Abbildung unten).
 
 .. image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
-   :alt: Erster Start – Startbildschirm
 
 Um mit der Software
 ihre Geräte ansteuern zu können, müssen Sie eine Gerätekonfiguration
@@ -101,7 +108,6 @@ oder Gerät bilden. Im Startbildschirm sehen Sie alle Möglichkeiten,
 eine entsprechende Gerätekonfiguration zu laden:
 
 .. image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
-   :alt: Erster Start – Startbildschirm
 
 Gerätekonfiguration erstellen  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -623,21 +629,101 @@ zeigen dafür ein Menü an (siehe Abbildung unten).
 Ereignisprotokoll
 -----------------
 
-Im Ereignisprotokoll werden wichtige Ereignisse angezeigt. Dazu gehören
-Hinweise, Warnmeldungen und Fehlermeldungen. Der View mit dem
+Übersicht zum Ereignisprotokoll
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Im Ereignisprotokoll :guilabel:`Event Log` werden wichtige Ereignisse angezeigt. 
+Dazu gehören Hinweise, Warnmeldungen und Fehlermeldungen. Der View mit dem
 Ereignisprotokoll wird automatisch eingeblendet, wenn ein Ereignis in
 das Protokoll geschrieben wird.
 
-.. image:: Pictures/100002010000026700000079181DA868FE965CCF.png
-   :alt: Ereignisprotokoll
+.. image:: Pictures/eventlog.png
 
-.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+Möchten Sie das Ereignisprotokoll manuell einblenden, wählen Sie im
+Hauptmenü der Anwendung den Punkt :menuselection:`Window --> Show View --> Event Log`.
+
+.. image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
+
+Das Ereignisprotokoll listet
+die einzelnen Ereignisse in zeitlicher Abfolge auf. Das neueste Ereignis
+ist dabei immer das Ereignis, welches als letztes Element am Ende des 
+Protokolls eingefügt wurde. Dies wir auch an den Zeitstempeln in
+der ersten Spalte deutlich.
+
+.. image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
+
+Beim Verbinden zur Gerätehardware, kann es vorkommen, dass im
+Ereignisprotokoll Gerätefehler empfangen und angezeigt werden (siehe
+oben). Diese Fehler können Sie ignorieren und löschen, wenn im
+Ereignisprotokoll eine aktuellere Nachricht von der gleichen
+Ereignisquelle (vom gleichen Gerät) vorhanden ist, in der die
+Fehlerfreiheit des Gerätes gemeldet wird.
+
+In dem Beispiel (Abbildung oben) melden alle 3 Achsen der Rotaxys
+Probenhandlers einen Fehler (:guinum:`❶`). Die aktuellsten letzten drei 
+Meldungen (:guinum:`❷`) zeigen aber, das kein Fehler mehr vorhanden ist und 
+das Gerät fehlerfrei arbeitet.
+
+Ereigniskategorien
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Im Event-Log werden die unterschiedlichen Ereigniskategorien farblich und durch
+entsprechende Icons gekennzeichnet.
+
+
+.. rst-class:: inlineimg
+
+- |log_info| :blue-marker:`blau - Information` 
+      Allgemeine Informationen, Statusmeldungen
+      oder unkritische Meldungen von Scriptfunktionen mit informativem Character.
+      Diese Ereignisse geben z.B. an, dass ein bestimmter Vorgang erfolgreich 
+      abgeschlossen wurde oder dass ein bestimmter Zustand erreicht wurde. 
+- |log_warn| :yellow-marker:`gelb - Warnung`
+      Diese Ereignisse geben an, dass 
+      ein bestimmtes Ereignis eingetreten ist, das möglicherweise Auswirkungen auf 
+      das System oder die Anwendung hat. Sie weisen auf ein mögliches Problem hin, 
+      aber die Anwendung / das Script können weiterhin funktionieren.
+- |log_err| :red-marker:`rot - Fehler`
+      Diese Ereignisse geben an, dass 
+      Fehler aufgetreten sind, die dazu führen können, dass das Script,
+      die Anwendung oder bestimmte Geräte nicht mehr korrekt funktionieren.
+- |log_user| :green-marker:`grün - Anwenderinteraktion`
+      Diese Ereignisse informieren den Anwender darüber, dass Nutzerinteraktionen, 
+      wie z.B. das Drücken eine Taste oder die Bestätigung einer Meldung, 
+      erforderlich sind.
+
+
+Funktionen des Ereignisprotokolls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In der Kopfzeile :guinum:`❶` des Event Log oder im Kontextmenü :guinum:`❷` stehen
+Ihnen verschiedene Funktionen zur Verfügung:
+
+.. image:: Pictures/eventlog_contextmenu.png
+
+.. image:: Pictures/funnel.svg
    :width: 60
    :align: left
 
-Sie können das
-Ereignisprotokoll durch drücken der Schaltfläche :guilabel:`Clear Event Log` in
-der rechten oberen Bildschirmecke (siehe Abbildung) löschen.
+Mit der :guilabel:`Filter` Funktion können Sie das Ereignisprotokoll nach
+einer bestimmten Ereigniskategorie filtern. Dadurch wird es leichter, bei vielen
+Einträgen im Protokoll den Überblick zu behalten oder bestimmte Ereignisse zu finden.
+
+.. image:: Pictures/eventlog_filter.png
+
+|
+
+.. image:: Pictures/scroll_lock.svg
+   :width: 60
+   :align: left
+
+Wenn neue Ereignisse in das Protokoll geschrieben werden, wird automatisch zum
+letzten eingefügten Element gescrollt, so dass immer das aktuellste Element
+sichtbar ist. Soll das Ereignisprotokoll nach einem bestimmten Eintrag durchsucht
+werden, oder wenn Sie die zeitliche Abfolge von Ereignissen analysieren möchten,
+kann dieses automatische Scrolling unerwünscht sein. Aktivieren Sie in diesem
+Fall die Schaltfläche :guilabel:`Scroll Lock` um das automatische Scrolling
+zu deaktivieren.
 
 |
 
@@ -652,30 +738,32 @@ können Sie in einem beliebigen Texteditor öffnen.
 
 .. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
 
-Möchten Sie das Ereignisprotokoll manuell einblenden, wählen Sie im
-Hauptmenü der Anwendung den Punkt :menuselection:`Window --> Show View --> Event Log`.
+.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+   :width: 60
+   :align: left
 
-.. image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
-   :alt: Event Log View einblenden
+Sie können das
+Ereignisprotokoll durch drücken der Schaltfläche :guilabel:`Clear Event Log` in
+der rechten oberen Bildschirmecke (siehe Abbildung) löschen.
 
-Das Ereignisprotokoll listet
-die einzelnen Ereignisse in zeitlicher Abfolge auf. Das neueste Ereignis
-steht dabei immer an erster Stelle. Dies wir auch an den Zeitstempeln in
-der ersten Spalte deutlich.
+|
 
-.. image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
+.. image:: Pictures/goto_script_function2.svg
+   :width: 60
+   :align: left
 
-Beim Verbinden zur Gerätehardware, kann es vorkommen, dass im
-Ereignisprotokoll Gerätefehler empfangen und angezeigt werden (siehe
-oben). Diese Fehler können Sie ignorieren und löschen, wenn im
-Ereignisprotokoll eine aktuellere Nachricht von der gleichen
-Ereignisquelle (vom gleichen Gerät) vorhanden ist, in der die
-Fehlerfreiheit des Gerätes gemeldet wird (Beispiel in Abbildung unten).
+Wenn Sie mit der rechten Maustaste auf einen Log-Eintrag klicken, der von einer
+Script-Funktion verursacht wurde, dann sehen Sie im Kontextmenü zusätzlich den
+Menüeintragen :menuselection:`Go to Script Function`. Wenn Sie diesen Menüpunkt
+auswählen, wird Ihnen im :ref:`Script Editor<Script Editor>` die Funktion angezeigt
+und hervorgehoben, die das Log-Event verursacht hat. Ein Doppelklick mit der
+Maus auf den entsprechenden Log-Eintrag führt zum selben Ergebnis.
 
-In dem Beispiel (Abbildung oben) melden alle 3 Achsen der rotAXYS
-Probenhandlers einen Fehler (:guinum:`❶`). Die aktuellsten obersten drei Meldungen (:guinum:`❷`)
-zeigen aber, das kein Fehler mehr vorhanden ist und das Gerät fehlerfrei
-arbeitet.
+.. admonition:: Tipp
+   :class: tip
+
+   Durch einen Doppelklick auf einen Log-Eintrag wird Ihnen im :ref:`Script Editor<Script Editor>`
+   die Funktion angezeigt, die den Log-Eintrag verursacht hat.
 
 Statuszeile
 -----------
@@ -1062,3 +1150,15 @@ Die Oberfläche
 wird sofort nach der Auswahl entsprechend der Konfiguration angepasst.
 Wenn Sie den geschützten Modus wieder verlassen möchten, rufen Sie den
 Auswahldialog erneut auf und wählen dann die Standardkonfiguration aus.
+
+.. |log_info| image:: Pictures/information.svg
+   :width: 40
+
+.. |log_warn| image:: Pictures/warning.svg
+   :width: 40
+
+.. |log_err| image:: Pictures/error.svg
+   :width: 40
+
+.. |log_user| image:: Pictures/question.svg
+   :width: 40
