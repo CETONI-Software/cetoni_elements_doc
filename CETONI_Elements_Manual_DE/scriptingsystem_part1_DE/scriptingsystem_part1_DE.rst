@@ -1141,35 +1141,41 @@ dann gehen Sie wie folgt vor:
 Script Fehlerbehandlung
 -----------------------
 
-Während der Ausführung einzelner Scriptfunktionen können Fehler
-auftreten, z.B. wenn Parameter außerhalb des Wertebereichs liegen oder
-wenn es bei der Kommunikation mit Geräten zu Fehlern kommt. Wie das
-Script-System auf einen solchen Fehler reagieren soll, können Sie in den
-Einstellungen konfigurieren (Menüpunkt :menuselection:`Edit → Settings` im Hauptmenü
-der Anwendung ).
+Ganz gleich, wie gut wir programmieren, manchmal sind unsere Skripte fehlerhaft.
+Sie können durch unsere Fehler, eine unerwartete Benutzereingabe, wenn Parameter 
+außerhalb des Wertebereichs liegen, durch Fehler bei der Kommunikation mit Geräten
+oder aus tausend anderen Gründen auftreten.
 
-.. image:: Pictures/1000020100000212000001260ED49998B5EBA7FD.png
+Tritt im Script ein Fehler auf, sieht die Standard-Reaktion wie folgt aus. 
 
-Im Settings-Dialog der Anwendung können Sie nun das Fehlerverhalten konfigurieren. Wählen Sie
-dafür zuerst die Settings Kategorie *Scripting* :guinum:`❶` aus. Nun können Sie
-rechts im Bereich :guilabel:`Script Error Reaction` :guinum:`❷` die Reaktion im Fehlerfall
-konfigurieren. Folgende Möglichkeiten können Sie auswählen:
+- die Scriptausführung wird unterbrochen :guinum:`❶` 
+- das Script stoppt an der Funktion, die den Fehler verursacht hat :guinum:`❷`
+- im *Event Log* wird eine Fehlermeldung ausgegeben und die Warnung, dass die
+  Scriptausführung unterbrochen wurde :guinum:`❸`
+- da das Script unterbrochen ist, werden auch parallele Sequenzen nicht weiter ausgeführt
+- das Script lässt sich nur noch durch Anklicken der Start-Schaltfläche fortführen :guinum:`❹`
 
--  **Interrupt Script (default)**– Das ist die Fehlerreaktion die
-   standardmäßig aktiv ist. Tritt im Script ein Fehler auf, stoppt das
-   Script an der Funktion, die den Fehler verursacht hat und im *Event
-   Log* wird eine Fehlermeldung ausgegeben. Das Script lässt sich dann
-   nur noch durch Anklicken der Start-Schaltfläche fortführen. Dies kann
-   bei der automatischen Steuerung über die I/Os einer SPS nicht
-   erwünscht sein. Für diesen Fall wählen Sie die folgende Art der
-   Fehlerbehandlung.
--  **Set $ScriptError Variable** – Wenn ein Fehler auftritt, wird die
-   globale Scriptvariable :code:`$ScriptError` auf *true* gesetzt und die
-   Scriptausführung wird fortgesetzt. In diesem Fall müssen Sie sich im
-   Script um die Fehlerbehandlung kümmern, indem Sie nach einem
-   Funktionsaufruf den Status dieser Fehlervariable prüfen.
+.. image:: Pictures/default_error_handling.png
 
-Schließen Sie die Konfiguration durch Klicken auf :guilabel:`OK` ab :guinum:`❸`.
+Dies Art der Fehlerbehandlung kann z.B. bei der automatischen Steuerung über die I/Os
+einer SPS oder auch aus den Anforderungen eines Prozesses heraus nicht erwünscht
+sein - z.B. wenn parallele Sequenzen weiterlaufen sollen, eine SPS die
+Möglichkeit haben soll auf Fehler zu reagieren oder Fehler zurückzusetzen oder
+wenn ein manuelles Eingreifen durch den Anwender nicht möglich ist.
+
+.. image:: Pictures/try_except.svg
+   :width: 60
+   :align: left
+
+Dafür gibt es die :ref:`Try...Catch<try_catch>` Funktion, mit der wir Fehler 
+"abfangen" können, so dass das Skript, statt zu stoppen, etwas Sinnvolleres tun
+kann wie z.B. den Fehler zu behandeln. Wird ein Fehler in einem
+:ref:`Try...Catch<try_catch>` Block gefangen, so ist nur die Funktionssequenz betroffen, 
+in der der Fehler aufgetreten ist - das Script läuft weiter und parallele Sequenzen 
+werden weiterhin ausgeführt.
+
+Alle Details zur Fehlerbehandlung mittels Try...Catch finden Sie in der
+:ref:`Dokumentation zum Try...Catch<try_catch>` Block.
 
 Scripte Debuggen
 -----------------------
@@ -1211,7 +1217,7 @@ deaktivieren - auch während ihr Programm bereits läuft.
 Haltepunkte einfügen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ../scriptingsystem_part2_DE/Pictures/interrupt_script.svg
+.. image:: Pictures/interrupt_script.svg
    :width: 60
    :align: left
 

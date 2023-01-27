@@ -996,6 +996,8 @@ Fehlerbehandlung - *Error Handling*
 Die Kategorie *Error Handling* enthält Funktionen, die Sie zur Fehlerbehandlung
 in Scripten verwenden können.
 
+.. _try_catch:
+
 Try...Catch Block
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1027,9 +1029,18 @@ Es funktioniert folgendermaßen:
 #. Zuerst wird der Code im **Try** Block ausgeführt
 #. Wenn keine Fehler aufgetreten sind, wird der **Catch** block ignoriert. Die Ausführung
    erreicht das Ende des **Try** Blocks und wird fortgesetzt mit der nächsten Funktion
-   nach dem **Try...Catch** block, wobei Catch übersprungen wird.
+   nach dem **Try...Catch** Block, wobei Catch übersprungen wird.
 #. Tritt eine Fehler auf, wir die Ausführung des **Try** Blocks sofort unterbrochen
    und zur Ausführung des **Catch** Blocks gesprungen.
+
+.. image:: Pictures/try_catch_flow.png
+   :width: 500
+
+.. admonition:: Wichtig
+   :class: note
+
+   Das heißt, ein Fehler im **Try** Block unterbricht nicht das Script, parallele
+   Sequenzen laufen weiter und wir haben die Chance den Fehler zu behandeln.
 
 Wird der **Catch** Block ausgeführt, dann stehen in diesem Block die zwei
 Scriptvariablen :code:`$ErrorMessage` und  :code:`$ErrorId` zur Verfügung.
@@ -1111,9 +1122,26 @@ Im Event Log der Anwendung sieht der Anwender dann die Folgende Fehlerausgabe:
 Fehler auslösen - *Throw Error*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/try_except.svg
+.. image:: Pictures/throw_error.svg
    :width: 60
    :align: left
+
+Die *Throw Error* Funktion ermöglicht das Auslösen eines Fehlers, welcher die
+Scriptausführung unterbricht oder in einem :ref:`Try...Catch<try_catch>` 
+Block gefangen werden kann. Wenn Sie in Ihrem Script Fehler erkennen, oder
+aus einem Catch Block heraus einen eigenen Fehler erzeugen möchten, dann
+können Sie diese Funktion verwenden.
+
+Im Konfigurationsbereich der Funktion können Sie die Fehlermeldung :guinum:`❶` 
+und die Fehler ID :guinum:`❷` festlegen:
+
+.. image:: Pictures/throw_error_config.png
+
+.. admonition:: Tipp
+   :class: tip
+
+   Im :guilabel:`Error Message` Feld können Sie Script-Variablen und Device
+   Properties verwenden (siehe Abbildung oben).
 
 
 Zeitfunktionen - *Time Functions*
