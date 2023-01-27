@@ -66,6 +66,7 @@ auf :guilabel:`Continue` im Bedienpanel der *Interrupt Sequence* Funktion fortzu
 .. image:: Pictures/interrupt_sequence_continue.png
 
 .. _nachricht_anzeigen:
+.. _show_message_function:
 
 Nachricht anzeigen - *Show Message*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -624,8 +625,8 @@ externer Scripte aufrufen.
 
 .. image:: Pictures/10000201000001E1000001A9C4192918D20FBB5B.png
 
-Externe Scriptfunktionen können über 0 – 10 Eingabe Parameter (Input
-Parameters) :guinum:`❶` verfügen und über 0 – 10 Rückgabewerte (Return Values)
+Externe Scriptfunktionen können über 0 - 10 Eingabe Parameter (Input
+Parameters) :guinum:`❶` verfügen und über 0 - 10 Rückgabewerte (Return Values)
 :guinum:`❷`. Damit können Sie Werte an das Script übergeben (z.B. numerische
 Werte oder Variablen) und Rückgabewerte des Scriptes lesen und in
 Scriptvariablen speichern. Unter :guilabel:`Script File` :guinum:`❸` wird Ihnen der Pfad
@@ -635,14 +636,13 @@ Im Abschnitt :ref:`Eigene Scriptfunktionen programmieren`
 finden Sie eine ausführliche Anleitung zur Erstellung eigener
 Scriptfunktionen.
 
-Funktionssequenzen – *Function Sequences*
+Funktionssequenzen - *Function Sequences*
 -----------------------------------------
 
 Übersicht Funktionssequenzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000020100000100000000C3B3C3827EFC5DBC99.png
-   :alt: Übersicht Funktionssequenzen (Function Sequences)
 
 Die Funktionskategorie FunctionSequences enthält
 verschiedene Arten von Funktionssequenzen. Funktionssequenzen sind
@@ -810,12 +810,12 @@ einbinden. Auch JavaScript Funktionen, wie hier z.B.
    in eine Schleife einfügen. Ansonsten kann die  
    Ausführung zu einer 100% Auslastung des Prozessors und  
    damit zur Blockierung der grafischen Oberfläche führen. 
-   Eine kleine Verzögerungszeit von 10ms – 100ms sind      
+   Eine kleine Verzögerungszeit von 10ms - 100ms sind      
    bereits ausreichend.  
 
 .. _funktionssequenz:
 
-Funktionssequenz – *Function Sequence*
+Funktionssequenz - *Function Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000944000038720000387225245FA0499799FC.svg
@@ -896,6 +896,7 @@ Funktionssequenz ersetzt, welche die ausgewählten Funktionen enthält.*
 .. image:: Pictures/10000201000002AD000000B49490E03AE7CD8CE6.png
 
 .. _bedingte_sequenz:
+.. _conditional_sequence:
 
 Bedingte Sequenz – *Conditional Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -920,7 +921,7 @@ der :ref:`bedingten Schleife<bedingte_schleife>`.
 
 .. _parallele_sequenz:
 
-Parallele Ausführung – *Parallel Sequence*
+Parallele Ausführung - *Parallel Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000F0500003872000038726C61F7339CE41618.svg
@@ -984,6 +985,137 @@ Funktionssequenz :guinum:`❶` abbrechen.
 
 .. image:: Pictures/1000020100000175000000A03698480BFF00A770.png
 
+
+.. _error_handling_functions:
+
+Fehlerbehandlung - *Error Handling*
+--------------------------------------------------
+
+.. image:: Pictures/error_handling_category.png
+
+Die Kategorie *Error Handling* enthält Funktionen, die Sie zur Fehlerbehandlung
+in Scripten verwenden können.
+
+Try...Catch Block
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/try_except.svg
+   :width: 60
+   :align: left
+
+Der *Try...Catch* Block dient dazu, Fehler, die bei der Scriptausführung auftreten
+aufzufangen und zu behandeln. Dies ermöglicht eine ähnliche Fehlerbehandlung
+wie z.B. in `JavaScript <https://www.w3schools.com/js/js_errors.asp>`_ oder 
+`Python <https://www.w3schools.com/python/python_try_except.asp>`_. 
+
+|
+
+Der Try...Catch block besteht aus den folgenden zwei Codeblöcken:
+
+.. rst-class:: inlineimg
+
+- |try_block| Try
+    Mit der Try-Anweisung definieren Sie einen Codebock, der während seiner 
+    Ausführung auf Fehler getestet wird. Hier implementieren Sie Ihre normale
+    Funktionslogik wie in jeder anderen Funktionssequenz.
+- |catch_block| Catch
+    Im Catch Block definieren Sie einen Codeblock, der nur dann ausgeführt wird
+    wenn im Try-Block ein Fehler auftritt.
+
+Es funktioniert folgendermaßen:
+
+#. Zuerst wird der Code im **Try** Block ausgeführt
+#. Wenn keine Fehler aufgetreten sind, wird der **Catch** block ignoriert. Die Ausführung
+   erreicht das Ende des **Try** Blocks und wird fortgesetzt mit der nächsten Funktion
+   nach dem **Try...Catch** block, wobei Catch übersprungen wird.
+#. Tritt eine Fehler auf, wir die Ausführung des **Try** Blocks sofort unterbrochen
+   und zur Ausführung des **Catch** Blocks gesprungen.
+
+Wird der **Catch** Block ausgeführt, dann stehen in diesem Block die zwei
+Scriptvariablen :code:`$ErrorMessage` und  :code:`$ErrorId` zur Verfügung.
+Die :code:`$ErrorMessage` Variable enthält die Fehlermeldung, die von der
+Scriptfunktion generiert wurde, die den Fehler verursacht hat. Die
+optionale :code:`$ErrorId` Variable kann eine eindeutige Error Id
+(z.B. :code:`ERR_TIMEOUT`) enthalten, der im Catch Block dazu verwendet werden
+kann, unterschiedliche Fehler unterschiedliche zu behandeln.
+
+Im Konfigurationsbereich des Try...Catch Blocks können Sie die Einstellung
+:guilabel:`Print Error Message To Event Log` aktivieren (default) oder
+deaktivieren.
+
+.. image:: Pictures/try_catch_print_error.png
+
+Is die Option deaktiviert, wird die Fehlermeldung nicht automatisch im Event-Log
+ausgegeben. D.h., wenn Sie den Fehler im Catch Block behandeln und nicht möchten,
+dass die Anwender Ihres Scripts einen Fehler sehen, können Sie die Fehlerausgabe
+hier deaktivieren. Sie können dann im Catch Block den Fehler weiterhin mit
+einer :ref:`Show Message<show_message_function>` Funktion oder einer
+:ref:`Log Message<log_message_function>` Funktion und den Zugriff auf
+die :code:`$ErrorMessage` ausgeben oder eine eigene Fehlermeldung erzeugen.
+Standardmäßig ist die Fehlerausgabe aktiviert und es wird eine Warnmeldung im
+Event-Log generiert.
+
+Das folgende Script zeigt ein Beispiel für eine Fehlerbehandlung:
+
+.. image:: Pictures/try_catch_example.png
+
+Im **Try** Block ist eine :ref:`Wait For Device Property<wait_for_device_property_func>`
+Funktion enthalten :guinum:`❶`. Für diese Funktion wurde im Konfigurationsbereich der Funktion
+ein Timeout festgelegt. Das bewirkt, dass die Funktion im Fall eines Timeout einen
+Fehler mit der Fehler ID :code:`ERR_TIMEOUT` auslöst.
+
+Dieser Fehler bewirkt, dass der **Try** Block sofort abgebrochen und der **Catch** Block
+ausgeführt wird. Im **Catch** Block befindet sich eine
+:ref:`Conditional Sequence<conditional_sequence>` :guinum:`❷`. In der Prüfbedingung
+der Funktion wird getestet, ob es sich um einen :code:`ERR_TIMEOUT` Fehler handelt.
+Dazu wird der folgende JavaScript Code verwendet:
+
+.. code-block:: javascript
+
+   ErrorIdString = $ErrorId; ErrorIdString.indexOf("ERR_TIMEOUT") == 0;
+
+Der Inhalt der :code:`$ErrorId` wird in dem String-Objekt :code:`ErrorIdString`
+gespeichert. Danach kann mit der String-Funktion :code:`indexOf` getestet werden,
+ob die Error Id mit :code:`"ERR_TIMEOUT"` beginnt. Man könnte in diesem Fall
+auch mit dem istgleich-Operator testen. Die Prüfung auf den Anfang des Strings
+ermöglicht aber auch die Erkennung einer Gruppe von Fehlern. Würde es z.B.
+die Fehlercodes :code:`ERR_PUMP_DOSING` und :code:`ERR_PUMP_ENABLE` geben,
+dann würde der Test
+
+.. code-block:: javascript
+
+   ErrorIdString = $ErrorId; ErrorIdString.indexOf("ERR_PUMP") == 0;
+
+beide Fehler erkennen und somit alle Pumpenfehler. 
+
+Wird der Timeout Fehler
+erkannt, wird dann im nächsten Schritt :guinum:`❸` zur Behandlung des Fehlers
+eine eigene Fehlermeldung mit der :ref:`Log Message<log_message_function>` ausgegeben.
+
+.. image:: Pictures/try_catch_example_message.png
+
+Im Event Log der Anwendung sieht der Anwender dann die Folgende Fehlerausgabe:
+
+.. image:: Pictures/try_catch_example_log.png
+
+.. admonition:: Tipp
+   :class: tip
+
+   Wenn Sie im Event Log doppelt auf einen Log-Eintrag klicken, wird im 
+   :ref:`Script Editor` die Funktion geöffnet und farblich hervorgehoben, die den
+   Log-Eintrag verursacht hat. So können Sie im Fehlerfall schnell zu der
+   Funktion springen, die einen Fehler ausgelöst hat. Alternativ können
+   Sie auch den Menüpunkt :menuselection:`Got to Script Function` im
+   Kontextmenü des Event-Log verwenden (rechte Maustaste).
+
+Fehler auslösen - *Throw Error*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/try_except.svg
+   :width: 60
+   :align: left
+
+
 Zeitfunktionen - *Time Functions*
 ---------------------------------
 
@@ -991,7 +1123,6 @@ Zeitfunktionen - *Time Functions*
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000020100000145000000ACCA98E3B49CC6CFEB.png
-   :alt: Übersicht Zeitfunktionen (Time Functions)
 
 Diese
 Funktionskategorie enthält Funktionen, um den Programmablauf
@@ -1113,7 +1244,7 @@ Timerfunktionen in einer :ref:`parallelen Sequenz<parallele_sequenz>` verwenden.
 
 .. _timerwert_lesen:
 
-Timerwert lesen – *Read Timer*
+Timerwert lesen - *Read Timer*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000B8100003505000035056090D1DE9D69C3F8.svg
@@ -1123,7 +1254,7 @@ Timerwert lesen – *Read Timer*
 Mit dieser Funktion können Sie den aktuellen
 Millisekundenwert eines bestimmten Timers auslesen und in einer
 Variablen speichern. Diesen Variablenwert können Sie dann z.B. mit der
-:ref:`Nachricht anzeigen<nachricht_anzeigen>`
+:ref:`Show Message<nachricht_anzeigen>`
 -Funktion anzeigen lassen. Damit können Sie z.B. die Zeiten von
 Programmabläufen in Ihrem Script messen und ausgeben.
 
@@ -1217,6 +1348,8 @@ angezeigt, die beschreibbar sind.
 
 Der Wert im Eingabefeld :guinum:`❶` wird dann zur Laufzeit in die gewählte
 Geräteeigenschaft geschrieben.
+
+.. _wait_for_device_property_func:
 
 Auf Prozessdaten warten - *Wait For Device Property*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1336,6 +1469,8 @@ Die Kategorie Logging enthält Scriptfunktionen zur Steuerung diverser
 Log-Funktionen und zum Zugriff auf den Event-Log.
 
 .. image:: Pictures/logging_category.png
+
+.. _log_message_function:
 
 Nachricht in Event Log einfügen - *Log Message*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1523,4 +1658,8 @@ Mit den angegebenen Parametern wird das Spritzenvolumen in Zeile 3 der Einstellu
 .. |image33| image:: Pictures/10000B740000350500003505221106A05ED7DC85.svg
    :width: 40
 .. |image34| image:: Pictures/javascript_logo.svg
+   :width: 40
+.. |try_block| image:: Pictures/try_block.svg
+   :width: 40
+.. |catch_block| image:: Pictures/except_block2.svg
    :width: 40
