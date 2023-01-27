@@ -492,7 +492,9 @@ glance: function name :guinum:`❶`, user comment or function description :guinu
 function parameters :guinum:`❸`.
 
 .. figure:: Pictures/1000020100000204000000DEDBCF89E6569C55A7.png
-   :alt: Figure : Showing script function tooltip
+
+
+.. _script_variables:
 
 Variables
 ---------

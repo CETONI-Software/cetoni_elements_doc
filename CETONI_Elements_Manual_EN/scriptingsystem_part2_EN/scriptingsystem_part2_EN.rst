@@ -209,22 +209,23 @@ Create Variable
 With *Create Variable* you can define a new variable and
 assign a name, a type hint, and a value to that variable (see figure below):
 
-|Figure 1.1.7: Configuration of a variable|
+.. image:: Pictures/create_variable_function.png
 
 .. rst-class:: guinums
 
-1. **Name** – set a unique
+#. **Name** – set a unique
    name for your variable. For details concerning the naming of
    variables, please refer to section :ref:`naming-variables`.
-2. **Type** – choose the kind of variable you want to set.
-3. **Value** – give the variable a value or, if the variable is of the
+#. **Type Hint** – choose the kind of variable you want to set.
+#. **Value** – give the variable a value or, if the variable is of the
    type *JavaScript Expression*, enter the JavaScript code to calculate
    the variable.
 
 .. tip::
    To prevent an incorrect variable name, the    
    :guilabel:`Name` field accepts only names that start with a     
-   $ symbol.      
+   :code:`$` symbol.      
+
 
 Types of Variables
 ^^^^^^^^^^^^^^^^^^^^
@@ -1239,7 +1240,39 @@ Logging
 The Logging category contains script functions for controlling various
 log functions and accessing the event log.
 
-|image108|
+.. image:: Pictures/logging_category.png
+
+
+Log Message
+~~~~~~~~~~~~~~~
+
+.. image:: Pictures/log_message2.svg
+   :width: 60
+   :align: left
+
+With this function you can output a message in the :ref:`Event Log<event_log>` 
+of the application. 
+Enter the message text in the :guilabel:`Message` field. You can use 
+:ref:`Device Properties<device-property-identifiers>` and
+:ref:`Script Variables <script_variables>` in the text. These serve as 
+placeholders and are replaced by the content of the variables or the process
+data of a device at runtime of the script.
+
+As soon as you enter a dollar sign :code:`$` in the text, a list of available
+variables is displayed from which you can select a variable.
+
+.. image:: Pictures/log_message_text_input.png
+
+In the figure above, the script variable :code:`$TargetVolume` and the device 
+property :code:`$$Nemesys_S_1.DosedVolume` have been inserted. When executed,
+the message is output in the event log of the application:
+
+.. image:: Pictures/log_message_output.png
+
+.. tip::
+   Device properties can be conveniently inserted via the context menu of the 
+   :guilabel:`Message` field (right-click with the mouse).
+
 
 Clear Event Log
 ~~~~~~~~~~~~~~~~~
@@ -1397,7 +1430,6 @@ file:
 
 .. |Figure 1.1.6: Using variables in Show Message function| image:: Pictures/10000201000001DB000000D68C630A99C4BAD6D1.png
 
-.. |Figure 1.1.7: Configuration of a variable| image:: Pictures/10000201000001F70000012A4F7D758AE083075A.png
 
 .. |image31| image:: Pictures/1000034B000035050000350585C9BEED447C4FB8.svg
    :width: 40
@@ -1446,8 +1478,6 @@ file:
 .. |Figure : Reading device property set-up panel| image:: Pictures/10000201000001DE000001244F9C5E31F069E4F2.png
 
 .. |Figure : Scriptconfiguration Write Device Property| image:: Pictures/10000201000001DE00000122138AE1DCD5FBF187.png
-
-.. |image108| image:: Pictures/10000201000000F7000000576ADB75F680C601FE.png
 
 .. |image111| image:: Pictures/10000201000001CE00000085ECEBD0BB80415B83.png
 
