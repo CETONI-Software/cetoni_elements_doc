@@ -208,6 +208,12 @@ Supported VICI Valves
 
 The Valve Plugin supports VICI valves that use a universal actuator with a USB or RS-232 interface.
 
+.. tip::
+   If you are using a valve with the RS-232 interface you might experience problems with the communication if you connect the valve directly to a physical RS-232 port on your PC.
+
+   Use a USB-to-serial adapter instead to connect the valve via USB to you PC!
+
+
 .. image:: Pictures/Vici_Valve.jpg
 
 The following list shows all types of VICI valves that are supported by the software:
