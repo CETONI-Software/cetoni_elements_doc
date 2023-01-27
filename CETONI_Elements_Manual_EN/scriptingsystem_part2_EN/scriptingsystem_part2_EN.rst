@@ -27,10 +27,40 @@ Interrupt Script
    :width: 60
    :align: left
 
-This function allows you to pause script execution. The user
-may then continue the script at a later time.
+With this function you can interrupt the script execution. The function has the
+same effect as pressing the :guilabel:`Interrupt` button in the toolbar. The user can
+continue the script by pressing the :guilabel:`Run` button in the toolbar.
 
-|
+.. admonition:: Important
+   :class: note
+
+   If script execution is interrupted, all sequences running in parallel are
+   interrupted and no communication with the script is possible.
+
+
+Interrupt Sequence
+~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/interrupt_sequence3.svg
+   :width: 60
+   :align: left
+
+With this function you can interrupt the execution of the function sequence in 
+which the function is contained. If several sequences are executed in parallel 
+using the :ref:`Parallelen Sequence<parallel_sequence>`, only the sequence containing the 
+function is interrupted.
+
+If the interrupt sequence function is executed, you will receive information in
+the :ref:`Event Log <event_log>` of the application that the sequence was interrupted:
+
+.. image:: Pictures/interrupt_sequence_message.png
+
+You can double-click on the log entry to display the function and its
+operating panel in the Script Editor. You can then continue the execution by clicking on 
+:guilabel:`Continue` in the control panel of the *Interrupt Sequence* function.
+
+.. image:: Pictures/interrupt_sequence_continue.png
+
 
 .. _show-message:
 
@@ -850,6 +880,9 @@ can be described as follows:
 
 The configuration of the conditional sequence is identical to the configuration 
 of the `Conditional Loop`_.
+
+
+.. _parallel_sequence:
 
 Parallel Sequence
 ~~~~~~~~~~~~~~~~~

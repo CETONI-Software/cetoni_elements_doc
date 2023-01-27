@@ -548,6 +548,9 @@ displayed and display a menu for selecting the view (see figure below).
    you will see a menu for showing and hiding the          
    toolbars.  
 
+
+.. _event_log:
+
 Event Log
 ---------
 
