@@ -1,3 +1,11 @@
+.. include:: ../include/colors.rst
+
+.. role:: yellow-marker
+.. role:: green-marker
+.. role:: blue-marker
+.. role:: pink-marker
+.. role:: red-marker
+
 CETONI Elements - An Overview
 =============================
 
@@ -543,31 +551,11 @@ displayed and display a menu for selecting the view (see figure below).
 Event Log
 ---------
 
-Important events are displayed in the event log. This includes notes,
+Important events are displayed in the :guilabel:`Event Log`. This includes notes,
 warnings and error messages. The view with the event log is
 automatically displayed when an event is written to the log.
 
-|Figure : Event Log View|
-
-.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
-   :width: 60
-   :align: left
-
-You can clear the event log by
-pressing the :guilabel:`Clear Event Log` button in the upper right corner of the
-screen (see figure).
-
-|
-
-.. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
-   :width: 60
-   :align: left
-
-By clicking the :guilabel:`Export To File` button, you can export the
-contents of the event log to a text file. After you have assigned a file
-name, the file is saved and you can open it in any text editor.
-
-.. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
+.. image:: Pictures/eventlog.png
 
 If you want to display the event log view manually, select 
 :menuselection:`Window --> Show View --> Event Log`` from the main menu of the 
@@ -579,19 +567,108 @@ The event log lists the individual
 events in chronological order. The latest event is always in the first
 row. This can be seen from the time stamps in the first column.
 
-|image29|
+.. image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
 
 When connecting to the device hardware, it may happen that
 device errors are received and displayed in the event log. You can
 ignore and delete these errors if the event log contains a more recent
 message from the same event source (the same device) in which the
-error-free state of the device is reported (example in the figure
-below).
+error-free state of the device is reported.
 
 In this example (see figure above), all 3 axes of the rotAXYS sample
 handler report an error :guinum:`❶`. However, the most recent top three messages :guinum:`❷`
 show, that there is no more error and that the device works without
 errors. So you can safely ignore the previous error event.
+
+Event Categories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the event log, the different event categories are marked by colour and
+corresponding icons.
+
+
+.. rst-class:: inlineimg
+
+- |log_info| :blue-marker:`blue - Information` 
+      General information, status messages or non-critical messages from script
+      functions with an informative character. These events indicate, for example,
+      that a certain operation has been successfully completed or that a certain
+      state has been reached. 
+- |log_warn| :yellow-marker:`yellow - Warning`
+      Warning events indicate that a specific event has occurred that may have
+      an impact on the system or application. They indicate a possible problem,
+      but the application / script may continue to function.
+- |log_err| :red-marker:`red - Error`
+      These events indicate that errors have occurred that may cause the script, 
+      the application or certain devices to no longer function correctly.
+- |log_user| :green-marker:`green - User Interaction`
+      These events inform the user that user interactions, such as pressing a
+      button or confirming a message, are required.
+
+
+Event Log Actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Various actions are available in the Event Log header :guinum:`❶` or via the 
+context menu :guinum:`❷`:
+
+.. image:: Pictures/eventlog_contextmenu.png
+
+.. image:: Pictures/funnel.svg
+   :width: 60
+   :align: left
+
+With the :guilabel:`Filter` action, you can filter the event log according to a 
+certain event category. This makes it easier to keep track of many entries in
+the log or to find specific events.
+
+.. image:: Pictures/eventlog_filter.png
+
+.. image:: Pictures/scroll_lock.svg
+   :width: 60
+   :align: left
+
+When new events are written to the log, the system automatically scrolls to the
+last element inserted so that the most recent element is always visible. If the
+event log is to be searched for a specific entry or if you want to analyze the
+chronological sequence of events, this automatic scrolling may be undesirable.
+In this case, check the :guilabel:`Scroll Lock` button to deactivate automatic 
+scrolling.
+
+.. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
+   :width: 60
+   :align: left
+
+By clicking the :guilabel:`Export To File` button, you can export the
+contents of the event log to a text file. After you have assigned a file
+name, the file is saved and you can open it in any text editor.
+
+.. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
+
+|
+
+.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+   :width: 60
+   :align: left
+
+You can clear the event log by pressing the :guilabel:`Clear Event Log` button.
+
+|
+
+.. image:: Pictures/goto_script_function2.svg
+   :width: 60
+   :align: left
+
+If you right-click on a log entry that was caused by a script function, you 
+will additionally see the menu item :menuselection:`Go to Script Function` in the context menu. 
+If you select this menu item, the function that caused the log event is 
+displayed and highlighted in the :ref:`Script Editor<Script Editor>`. A double click with the 
+mouse on the corresponding log entry gives the same result.
+
+.. tip::
+   Double-click on a log entry to display the function in the :ref:`Script Editor<Script Editor>`
+   that caused the log entry.
+
 
 Status Bar
 ----------
@@ -1004,11 +1081,7 @@ then select the default configuration.
 
 .. |Figure : Deleting Perspectives| image:: Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
 
-.. |Figure : Event Log View| image:: Pictures/100002010000026700000079181DA868FE965CCF.png
-
 .. |Figure : Showing Event Log View| image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
-
-.. |image29| image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
 
 .. |Figure 1.34: Browse project folder| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
 
@@ -1046,4 +1119,14 @@ then select the default configuration.
 
 .. |Figure 1.49: Switching UI Access Mode| image:: Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
 
+.. |log_info| image:: Pictures/information.svg
+   :width: 40
 
+.. |log_warn| image:: Pictures/warning.svg
+   :width: 40
+
+.. |log_err| image:: Pictures/error.svg
+   :width: 40
+
+.. |log_user| image:: Pictures/question.svg
+   :width: 40
