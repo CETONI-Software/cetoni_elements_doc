@@ -50,8 +50,3 @@ pip freeze > requirements.txt
 
 ## Open Documentation Issues
 
-- added Try /Catch script function for improved error handling
-- added Throw Error function to raise errors
-- added support for jumping to a script function in script editor by clicking on a log message in the event log
-- Log Message Function
-- inline JavaScript

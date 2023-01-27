@@ -356,7 +356,6 @@ anderen Anwendern ermöglicht, Ihr Script besser zu verstehen und dem
 Programmablauf leichter zu folgen.
 
 .. image:: Pictures/1000020100000204000000DEFE8A94073FF71C98.png
-   :alt: Script Funktion Kommentare
 
 Wenn Sie im *Script Editor*
 den Mauspfeil über eine Funktion bewegen, wird Ihnen der entsprechende
@@ -364,6 +363,110 @@ Kommentar dieser Funktion in einem Hinweisfenster (*Tooltip*)
 eingeblendet (siehe Abbildung oben). So können Sie, ohne dass Sie den
 Konfigurationsbereich einer Funktion öffnen müssen, den Kommentar zu
 dieser Funktion lesen.
+
+Script Eingabefelder
+~~~~~~~~~~~~~~~~~~~~~~
+
+In vielen Scriptfunktionen sehen Sie im Konfigurationsbereich spezielle 
+Eingabefelder, die mit einem farbigen **V** gekennzeichnet sind:
+
+.. image:: Pictures/script_input_fields.png
+
+Diese speziellen Eingabefelder ermöglichen Ihnen:
+
+- die Eingabe von Werten (z.B. 0.23 oder -24)
+- die Verwendung von :ref:`Script Variablen <scriptvariablen>` (z.B. :code:`$TargetFlow` oder :code:`$Voltage`)
+- die Verwendung von :ref:`Device Properties <device-property-identifiers>` (z.B. :code:`$$Nemesys_M_1.ActualFlow`)
+- die Nutzung von Inline-JavaScript (z.B. :code:`${ $$Nemesys_M_1.ActualFlow * 2 }`)
+
+
+Script Variablen einfügen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Um Script-Variablen zu verwenden, müssen Sie im Eingabefeld lediglich ein
+Dollar-Zeichen :code:`$` eingeben. Dann wird Ihnen sofort eine Auswahlliste
+von Variablen angezeigt, die an der aktuellen Position im Script verfügbar
+sind. Sie können einfach eine Variable aus der Liste wählen oder den Namen
+weiter von Hand eintippen:
+
+.. image:: Pictures/enter_script_variables.png
+
+Der Wert der Variable wird dann zur Laufzeit für den entsprechenden Parameter
+verwendet. In dem Beispiel oben, wird zur Laufzeit der Wert der Variablen
+:code:`$TargetVolume` für den Script Parameter Volume verwendet.
+
+
+Device Properties einfügen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Um :ref:`Device Properties <device-property-identifiers>` einzufügen, klicken
+Sie einfach mit der rechten Maustaste in das Eingabefeld und wählen dann den 
+Menüpunkt :menuselection:`Insert device property...`:
+
+.. image:: Pictures/enter_device_properties.png
+
+Wählen Sie dann die Geräteeigenschaft in dem angezeigten Dialog aus. Der Bezeichner
+für die Geräteeingenschaft wird dann in das Eingabefeld eingefügt.
+
+.. image:: Pictures/device_property_example.png
+
+Zur Laufzeit wird dann der Wert der Geräteeigenschaft gelesen und and das
+Script übergeben. Im Beispiel oben, wird die aktuelle Flussrate der Pumpe
+*Cedosys 2* verwendet (:code:`$$Cedosys_2.ActualFlow`) um die Flussrate der
+Pumpe *Cedosys 1* zu setzen.
+
+
+Inline-JavaScript verwenden
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sie können in den speziellen Eingabefeldern sogar Inline-JavaScript verwenden.
+D.h. für kurze, einzeilige Berechnungen, kann JavaScript Code direkt in das
+Eingabefeld geschrieben werden. Inline JavaScript Code beginnen Sie immer mit
+einem Dollarzeichen gefolgt von einer öffnenden, geschweiften Klammer.
+Abgeschlossen wird der Code durch eine schließende, geschweifte Klamme:
+
+.. code-block:: javascript
+
+   ${ /* inline code */ }
+
+Im folgenden Beispiel soll die Flussrate für die Pumpe *Nemesys S 1* auf Basis
+des analogen Eingangssignals des Kanals :code:`$$Nemesys_S_1_AnIN` berechnet
+werden. Dafür soll das analoge Eingangssignal um den Faktor :code:`0.1`
+skaliert werden:
+
+.. image:: Pictures/inline_javascript_example.png
+
+.. admonition:: Wichtig
+   :class: note
+
+   Verwenden Sie Inline-JavaScript nur für sehr einfache Berechnungen, wie z.B.
+   Skalierungen. Für komplexere Berechnungen oder logische Vergleiche 
+   sollten Sie die entsprechende :ref:`JavaScript <javascript_script_function>`
+   Funktion oder die :ref:`Set Variable <set_variable>` Funktion verwenden.
+
+Variablen mit Geräte Handles einfügen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Geräte Handles sind Geräte Bezeichner, die mit zwei Dollarzeichen beginnen und 
+ein Gerät eindeutig identifizieren. Ein Geräte Handle ist z.B. :code:`$$Nemesys_M_1`.
+:ref:`Device Properties <device-property-identifiers>` bestehen immer aus
+einem Geräte Handle und einem Bezeichner für die entsprechende Eigenschaft
+(Property) des Gerätes. So besteht z.B. das Device Property :code:`$$Nemesys_S_1_AnIN1.ActualValue`
+aus dem Geräte Handle :code:`$$Nemesys_S_1_AnIN1` und der Eigenschaft
+:code:`ActualValue`. D.h., wenn Sie ein Device Property kennen, dann kennen
+Sie auch das entsprechende Geräte Handle.
+
+In normalen Eingabefeldern werden Geräte Handles gewöhnlich nicht verwendet. 
+Allerdings haben viele gerätespezifischen Scriptfunktionen ein Auswahlfeld
+zur Auswahl des Gerätes, für das ein Befehl ausgeführt werden soll.
+Ist dieses Auswahlfeld mit einem farbigen **V** gekennzeichnet, dann können
+Sie dort auch Variablen übergeben, die ein Geräte Handle enthalten.
+
+.. image:: Pictures/enter_device_handle_variable.png
+
+Im Beispiel oben wird an das Auswahlfeld zur Auswahl der Pumpe die Variable
+:code:`$PumpDevice` übergeben, welche das Geräte Handle für die Pumpe enthält,
+für die ein Dosiervorgang gestartet werden soll.
 
 Programmierung
 --------------
@@ -1221,6 +1324,7 @@ Haltepunkte einfügen
    :width: 60
    :align: left
 
+
 Sie können Ihr Script an bestimmten Stellen unterbrechen, indem Sie eine
 :ref:`Interrupt Script <script_unterbrechen>` Funktion einfügen. So können Sie 
 gezielt an bestimmten Punkten den Programmablauf unterbrechen, um den Zustand 
@@ -1233,6 +1337,16 @@ Im folgenden Beispiel wird der Programmablauf unterbrochen, wenn der Wert der
 Variable :code:`EmployeeName` den Wert :code:`John` hat.
 
 .. image:: Pictures/conditional_interrupt.png
+
+.. image:: Pictures/interrupt_sequence3.svg
+   :width: 60
+   :align: left
+
+Wenn Sie den nicht das komplette Script unterbrechen möchten, z.B. weil parallele
+Sequenzen weiterlaufen sollen, dann können Sie alternativ die
+:ref:`Interrupt Sequence <interrupt_sequence>` Funktion verwenden.
+Diese unterbricht lediglich die Funktionssequenz, in der sie enthalten
+ist, so dass parallele Sequenzen weiterlaufen können.
 
 
 Debugnachrichten ausgeben
@@ -1262,6 +1376,20 @@ angezeigt. Dadurch können Sie die ausgegebenen Werte im zeitlichen Kontext
 analysieren:
 
 .. image:: Pictures/debug_event_log.png
+
+.. admonition:: Tipp
+   :class: tip
+
+   .. image:: Pictures/goto_script_function2.svg
+      :width: 60
+      :align: left
+
+   Wenn Sie im :ref:`Event-Log <ereignisprotokoll>` doppelt auf einen Log-Eintrag klicken, wird im 
+   :ref:`Script Editor` die Funktion geöffnet und farblich hervorgehoben, die den
+   Log-Eintrag verursacht hat. So können Sie im Fehlerfall schnell zu der
+   Funktion springen, die einen Fehler ausgelöst hat. Alternativ können
+   Sie auch den Menüpunkt :menuselection:`Got to Script Function` im
+   Kontextmenü des :ref:`Event-Log <ereignisprotokoll>` verwenden (rechte Maustaste).
 
 Funktionen deaktivieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

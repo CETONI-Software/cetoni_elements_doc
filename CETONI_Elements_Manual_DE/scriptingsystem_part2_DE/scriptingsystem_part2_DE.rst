@@ -42,6 +42,8 @@ Continue Schaltfäche in der Toolbar fortsetzen.
    Sequenzen unterbrochen und es ist kein Kommunikation mit dem Script möglich. 
 
 
+.. _interrupt_sequence:
+
 Funktionssequenz unterbrechen - *Interrupt Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -525,8 +527,9 @@ JavaScript: :code:`$$Nemesys_M_1`
 =========== ===============
 
 .. _wert_variable_setzen:
+.. _set_variable:
 
-Wert einer Variable setzen – *Set Variable*
+Wert einer Variable setzen - *Set Variable*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000132400003872000038722A8DDCED1A890F1C.svg
