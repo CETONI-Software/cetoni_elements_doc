@@ -18,12 +18,12 @@ Core Functions Overview
 The category Core Functions contains functions that control program flow
 and the use of variables.
 
-|Figure 1.1.2: List of core functions|
+.. image:: Pictures/core_functions.png
 
 Interrupt Script
 ~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100003260000350500003505F1A465AE7BF98CC3.svg
+.. image:: Pictures/interrupt_script.svg
    :width: 60
    :align: left
 
@@ -497,60 +497,6 @@ the function `Create Variable`_.
    variable has to be defined beforehand, e.g., by using   
    the function `Create Variable`_.
 
-
-Create Property Variable
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/10001162000038720000387269894D0D5041B1EE.svg
-   :width: 60
-   :align: left
-
-Use this function to create a special variable that is
-associated with a certain property of a certain device. Via this
-variable you can directly access the assigned device property from
-within a script, without any additional function calls.
-
-If you e.g. want to read an analog input value using normal variables,
-you first need to create a variable via `Create Variable`_ function and then use
-the `Read Device Property`_  function to store the analog
-input value into this variable. Only then you can use this variable for
-further calculations and tests in script functions. Whenever you need a
-new analog input value, you must call the `Read Device Property`_ function again.
-
-|Figure : Create Property Variable configuration panel|
-
-With property
-variables that access to device properties (e.g. analog input value) is
-considerably simplified. If you create a property variable, you use the
-configuration panel to connect a device property permanently with a
-variable. Whenever you read the value of this variable from within a
-script function, automatically the current value of the connected device
-property is read.
-
-You can set the name of the variable in the input box :guilabel:`Variable` :guinum:`❶`
-(figure above). Select the device you want to access from the drop-down
-list :guilabel:`Device` :guinum:`❸`, which lists all devices that are part of the current
-configuration. To simplify the search for a device, you can filter the
-device list by selecting an appropriate filter (device type) from the
-:guilabel:`Filter` drop-down field :guinum:`❷`.
-
-After the device has been selected, use the last drop-down list
-:guilabel:`Property` :guinum:`❹` to select the device property, the process data value that
-you want to access.
-
-In summary, this function can be described as follows:
-
-.. centered:: 
-   "Assign the device property :guinum:`❹` of the device :guinum:`❸` to the variable :guinum:`❶` and
-   return the device property value if a read access on the variable takes
-   place."
-
-.. admonition:: Important
-   :class: note
-
-   Property variables can not be used to   
-   store values during calculations— use normal variables  
-   for calculations and value storage. 
 
 Variable Declaration Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1087,12 +1033,12 @@ example.
 Device Functions
 ------------------
 
-.. _device-fucntions-introduction:
+.. _device-functions-introduction:
 
 Introduction to Device Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|Figure : Generic device functions|
+.. image:: Pictures/device_functions_category.png
 
 The script system comes with a
 number of generic script functions for accessing devices (device process
@@ -1169,27 +1115,90 @@ Wait For Device Property
 
 This function allows a script to wait for a specific device
 property to reach a predefined condition. Once this condition is
-fulfilled, the script will resume.
-
-In the configuration panel (figure below), select the device and the
+fulfilled, the script will resume. In the configuration panel (figure below), select the device and the
 appropriate device property that you want to monitor :guinum:`❶` as described for
 function `Read Device Property`_.
 
-.. figure:: Pictures/10000201000001DE0000013FEB6E6B812107306F.png
+.. image:: Pictures/wait_for_device_property_function.png
 
 In the  *Condition* section you can configure the condition that is to
 be checked against. First define an *operator* :guinum:`❷` and then the *target
 value* :guinum:`❸` the device parameter is to be compared with. In the value
-field :guinum:`❸`, you can also use variables to set a test condition.
+field :guinum:`❸`, you can also use Script Variables (e.g. :code:`$FlowRate`) or
+Device Properties (e.G. :code:`Nemesys_M_1.ActualFlow`) to set a test condition.
 
-In short, the above set-up procedure reads as follows:
+To prevent the function from blocking further execution for too long, you can
+set a time limit in the :guilabel:`Timeout (ms)` field. If the time limit has expired and
+the test condition is not yet true, the function generates an :code:`ERR_TIMEOUT` error.
+To deactivate the timeout, simply set the value to 0.
+
+In short, the function can be described as follows:
 
 .. centered::
    Continue script execution, if the selected property of the
    device :guinum:`❶` meets the condition :guinum:`❷` :guinum:`❸`.
 
 .. tip::
-   Script Variables (such as :code:`$Value` can be used as test / comparison condition.
+   Script Variables (such as :code:`$Value`) can be used as test / comparison condition.
+
+.. tip::
+   A timeout value of 0 deactivates the time limit.
+
+
+Create Property Variable
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/10001162000038720000387269894D0D5041B1EE.svg
+   :width: 60
+   :align: left
+
+Use this function to create a special variable that is
+associated with a certain property of a certain device. Via this
+variable you can directly access the assigned device property from
+within a script, without any additional function calls.
+
+If you e.g. want to read an analog input value using normal variables,
+you first need to create a variable via `Create Variable`_ function and then use
+the `Read Device Property`_  function to store the analog
+input value into this variable. Only then you can use this variable for
+further calculations and tests in script functions. Whenever you need a
+new analog input value, you must call the `Read Device Property`_ function again.
+
+|Figure : Create Property Variable configuration panel|
+
+With property
+variables that access to device properties (e.g. analog input value) is
+considerably simplified. If you create a property variable, you use the
+configuration panel to connect a device property permanently with a
+variable. Whenever you read the value of this variable from within a
+script function, automatically the current value of the connected device
+property is read.
+
+You can set the name of the variable in the input box :guilabel:`Variable` :guinum:`❶`
+(figure above). Select the device you want to access from the drop-down
+list :guilabel:`Device` :guinum:`❸`, which lists all devices that are part of the current
+configuration. To simplify the search for a device, you can filter the
+device list by selecting an appropriate filter (device type) from the
+:guilabel:`Filter` drop-down field :guinum:`❷`.
+
+After the device has been selected, use the last drop-down list
+:guilabel:`Property` :guinum:`❹` to select the device property, the process data value that
+you want to access.
+
+In summary, this function can be described as follows:
+
+.. centered:: 
+   "Assign the device property :guinum:`❹` of the device :guinum:`❸` to the variable :guinum:`❶` and
+   return the device property value if a read access on the variable takes
+   place."
+
+.. admonition:: Important
+   :class: note
+
+   Property variables can not be used to   
+   store values during calculations— use normal variables  
+   for calculations and value storage. 
+
 
 Logging
 ---------
@@ -1400,8 +1409,6 @@ file:
 .. |Figure : List of timing functions| image:: Pictures/1000020100000145000000ACCA98E3B49CC6CFEB.png
 
 .. |Figure : Configuration of Delay function| image:: Pictures/100000000000021E00000077C7524A66137294EE.png
-
-.. |Figure : Generic device functions| image:: Pictures/10000201000001020000006F96BE123CCB58B612.png
 
 .. |Figure : Reading device property set-up panel| image:: Pictures/10000201000001DE000001244F9C5E31F069E4F2.png
 
