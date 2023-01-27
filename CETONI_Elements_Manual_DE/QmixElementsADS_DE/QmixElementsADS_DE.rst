@@ -1,4 +1,4 @@
-.. include:: include/colors.rst
+.. include:: ../include/colors.rst
 
 .. role:: yellow-marker
 .. role:: green-marker

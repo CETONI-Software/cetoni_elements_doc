@@ -17,7 +17,7 @@ Kernfunktionen - *Core Functions*
 Die Funktionskategorie *Core Functions* enthält grundlegende Funktionen
 zur Programmablaufsteuerung und zur Verwendung von Variablen.
 
-.. image:: Pictures/100002010000016C000000F4AB94CEE86128C9B1.png
+.. image:: Pictures/core_functions.png
    :alt: Übersicht Kern Funktionen (Core Functions)
 
 
@@ -219,15 +219,15 @@ Mit dieser Funktion können Sie eine neue Variable erzeugen und
 ihr einen Wert zuweisen. Im Konfigurationsbereich dieser Funktion
 (Abbildung unten) können Sie folgende Parameter eingeben:
 
-.. image:: Pictures/10000201000001F70000012A4F7D758AE083075A.png
+.. image:: Pictures/create_variable_function.png
 
 .. rst-class:: guinums
 
-1. **Name** – geben Sie hier den eindeutigen Variablennamen ein. Details zur
+1. **Name** - geben Sie hier den eindeutigen Variablennamen ein. Details zur
    Benennung von Variablen finden Sie im Abschnitt :ref:`naming-variables`.
-2. **Type** – wählen Sie hier den Typ aus, den Sie in der
+2. **Type Hint** - wählen Sie hier den Typ aus, den Sie in der
    Variable speichern wollen.
-3. **Value** – geben Sie hier den Wert ein oder, wenn die Variable vom
+3. **Value** - geben Sie hier den Wert ein oder, wenn die Variable vom
    Typ *JavascriptExpression* ist, den Ausdruck zur Berechnung der
    Variable.
 
@@ -956,7 +956,7 @@ gewartet werden soll.
    Fehlern in parallelen Sequenzen kann unter Umständen    
    schwierig sein.    
 
-Funktionssequenz abbrechen – *Break*
+Funktionssequenz abbrechen - *Break*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000CF40000387200003872240B44CEBEA58C98.svg
@@ -984,7 +984,7 @@ Funktionssequenz :guinum:`❶` abbrechen.
 
 .. image:: Pictures/1000020100000175000000A03698480BFF00A770.png
 
-Zeitfunktionen – *Time Functions*
+Zeitfunktionen - *Time Functions*
 ---------------------------------
 
 Übersicht Zeitfunktionen
@@ -1000,7 +1000,7 @@ zu unterbrechen oder um auf bestimmte Zeitereignisse zu warten.
 
 .. _verzögerungsfunktion:
 
-Verzögerungsfunktion – *Delay*
+Verzögerungsfunktion - *Delay*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100007700000350500003505BC110D46A028D1D8.svg
@@ -1038,7 +1038,7 @@ Stunden Minuten Sekunden Millisekunden
 
 
 
-Wartefunktion – *Wait until*
+Wartefunktion - *Wait until*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000087800003505000035058C9536180430C275.svg
@@ -1063,7 +1063,7 @@ fortgesetzt.
 
 .. _timer_starten:
 
-Timer starten – *Start Timer*
+Timer starten - *Start Timer*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000095E0000350500003505163F47DDE33790B9.svg
@@ -1091,7 +1091,7 @@ konfigurierten Zeitspanne.
 
 .. _auf_timer_warten:
 
-Auf Timer warten – *Wait for Timer*
+Auf Timer warten - *Wait for Timer*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000D500000350500003505855C71628C55D85A.svg
@@ -1335,9 +1335,41 @@ Funktionen zum Logging
 Die Kategorie Logging enthält Scriptfunktionen zur Steuerung diverser
 Log-Funktionen und zum Zugriff auf den Event-Log.
 
-.. image:: Pictures/10000201000000F7000000576ADB75F680C601FE.png
+.. image:: Pictures/logging_category.png
 
-Ereignisprotokoll löschen – *Clear Event Log*
+Nachricht in Event Log einfügen - *Log Message*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/log_message2.svg
+   :width: 60
+   :align: left
+
+Mit dieser Funktion können Sie eine Nachricht im :ref:`Event Log<ereignisprotokoll>`
+der Anwendung ausgeben. Im Feld :guilabel:`Message` geben Sie den Nachrichtentext ein.
+Im Text können Sie :ref:`Device Properties<device-property-identifiers>` 
+und :ref:`Scriptvariablen<scriptvariablen>` verwenden. Diese dienen als 
+Platzhalter und werden zur Laufzeit des Scriptes durch den Inhalt der Variablen
+oder die Prozessdaten eines Gerätes ersetzt. 
+
+Sobald Sie im Text ein 
+Dollarzeichen :code:`$` eingeben, wird Ihnen eine Liste der verfügbaren Variablen 
+eingeblendet, aus der Sie eine Variable auswählen können.
+
+.. image:: Pictures/log_message_text_input.png
+
+In der Abbildung oben wurde die Scriptvariable :code:`$TargetVolume` und die
+Device Property :code:`$$Nemesys_S_1.DosedVolume` eingefügt. Beim Ausführen
+wird die Nachricht im Event-Log der Anwendung ausgegeben:
+
+.. image:: Pictures/log_message_output.png
+
+.. admonition:: Tipp
+   :class: tip
+
+   Device Properties können Sie bequem über das Kontextmenü des Message-Feldes
+   einfügen (Rechtsklick mit Maus).    
+
+Ereignisprotokoll löschen - *Clear Event Log*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/clear_event_log.svg
