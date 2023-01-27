@@ -241,6 +241,12 @@ Unterstützte VICI-Ventile
 
 Das Valve Plugin unterstützt VICI-Ventile mit USB- oder RS-232-Schnittstelle.
 
+.. tip::
+   Bei der Verwendung eines Ventils mit RS-232-Schnittstelle kann es zu Problemen bei der Kommunikation kommen, wenn Sie das Ventil über eine physische RS-232-Schnittstelle an Ihrem PC anschließen.
+
+   Verwenden Sie stattdessen einen USB-zu-Seriell-Adapter und schließen Sie das Ventil darüber per USB an Ihren PC an!
+
+
 .. image:: Pictures/Vici_Valve.jpg
 
 Die folgende Liste zeigt alle Typen von VICI-Ventilen, die von der Software 
