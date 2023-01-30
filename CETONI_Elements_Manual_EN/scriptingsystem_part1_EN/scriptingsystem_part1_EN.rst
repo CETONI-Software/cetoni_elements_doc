@@ -1010,34 +1010,40 @@ after your computer has booted, then proceed as follows:
 Script Error Handling
 ---------------------
 
-Errors may occur during the execution of individual script functions,
-e.g. if parameters are outside the value range or if errors occur during
-communication with devices. You can configure how the script system
-should react to such errors in the global settings dialog 
-(select :menuselection:`Edit → Settings` in the main menu of the application ).
+No matter how great we are at programming, sometimes our scripts have errors. 
+They may occur due to our mistakes, unexpected user input, when parameters are
+out of range, errors in communication with devices or a thousand other reasons.
 
-|Figure 25: Error Handling Settings|
- 
-First select the *Settings* category Scripting :guinum:`❶`. In the  
-:guilabel:`Script Error Reaction` section :guinum:`❷` you can now configure the 
-reaction in case of an error. 
+If an error occurs in the script, the standard reaction is as follows:
 
-You can select the following options:
+- the script execution is interrupted :guinum:`❶` 
+- the script stops at the function that caused the error :guinum:`❷`
+- an error message is displayed in the *Event Log* and the warning that the
+  script execution was interrupted :guinum:`❸`
+- since the script is interrupted, parallel sequences are also not executed any longer
+- the script can only be continued by clicking the :guilabel:`Start` button :guinum:`❹`
 
--  **Interrupt Script (default)**– This is the error reaction that is
-   active by default. If an error occurs in the script, the script stops
-   at the function that caused the error and an error message is
-   displayed in the event log. The script can then only be continued by
-   clicking the start button. This may not be desirable for automatic
-   control via the I/Os of a PLC. In this case select the following type
-   of error handling.
--  **Set $ScriptError Variable** – If an error occurs, the global script
-   variable :code:`$ScriptError` is set to true and script execution
-   continues. In this case, you must deal with the error handling in the
-   script by checking the status of this error variable after a function
-   call.
+.. image:: Pictures/default_error_handling.png
 
-Complete the configuration by clicking on OK :guinum:`❸`
+This type of error handling may be unacceptable, for example, in the case of
+automatic control via the I/Os of a PLC or also due to the requirements of a
+certain user application process - e.g. if parallel sequences should continue
+to run, a PLC should be able to react to errors or reset errors or if manual
+intervention by the user is not possible.
+
+.. image:: Pictures/try_except.svg
+   :width: 60
+   :align: left
+
+But there's a :ref:`Try...Catch<try_catch>` function that allows us to "catch" 
+errors so the script can, instead of interrupting, do something more reasonable
+such as handling the error or bringing devices into a safe state.
+If an error is caught in a :ref:`Try...Catch<try_catch>` block, only the function
+sequence in which the error occurred is affected - the script continues to run
+and parallel sequences are still executed.
+
+All details on error handling using Try...Catch can be found in the
+:ref:`documentation for the Try...Catch<try_catch>` block.
 
 Debugging Scripts
 -----------------------
