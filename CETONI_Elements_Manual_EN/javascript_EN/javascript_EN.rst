@@ -226,6 +226,8 @@ logger via the :code:`ScriptEnv` object and then start logging:
    software. 
 
 
+.. _javascript_script_function:
+
 JavaScript Script Function
 ---------------------------
 

@@ -322,6 +322,110 @@ be shown in a message box (see figure above). So you can read the
 comment of a function without having to open the configuration area of
 that function.
 
+Script Input Fields
+~~~~~~~~~~~~~~~~~~~~~~
+
+In many script functions, you will see special input fields in the configuration
+area, which are marked with a coloured **V**:
+
+.. image:: Pictures/script_input_fields.png
+
+These special input fields allow you to:
+
+- the input of values (e.g. 0.23 or -24)
+- the use of :ref:`Script Variables <script_variables>` (e.g. :code:`$TargetFlow` or :code:`$Voltage`)
+- the use of :ref:`Device Properties<device-property-identifiers>` (e.g. :code:`$$Nemesys_M_1.ActualFlow`)
+- the use of inline JavaScript (e.g. :code:`${ $$Nemesys_M_1.ActualFlow * 2 }`)
+
+
+Insert Script Variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To use script variables, you only have to enter a dollar sign :code:`$` in the input
+field. Then you are immediately shown a selection list of variables that are
+available at the current position in the script. You can simply select a
+variable from the list or continue typing the name manually:
+
+.. image:: Pictures/enter_script_variables.png
+
+The value of the variable is then used at runtime for the corresponding 
+parameter. In the example above, the value of the variable :code:`$TargetVolume` is 
+used for the script parameter **Volume** at runtime.
+
+
+Insert Device Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To insert :ref:`Device Properties <device-property-identifiers>`, simply right-click
+in the input field and then select the menu item
+:menuselection:`Insert device property...`:
+
+.. image:: Pictures/enter_device_properties.png
+
+Then select the device property in the dialogue that appears. The identifier 
+for the device property is then inserted into the input field.
+
+.. image:: Pictures/device_property_example.png
+
+At runtime, the value of the device property is read and 
+passed to the script. In the example above, the current
+flow rate of pump *Cedosys 2* is used (:code:`$$Cedosys_2.ActualFlow`)
+to set the flow rate of pump *Cedosys 1*.
+
+
+Use inline JavaScript
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Inline JavaScript can be used in special input fields, allowing for short
+calculations to be written directly within the field, beginning with
+:code:`${` and ending with :code:`}`.
+
+.. code-block:: javascript
+
+   ${ /* inline code */ }
+
+In the following example, the flow rate for the *Nemesys S 1* pump is
+to be calculated based on the analogue input signal of channel
+:code:`$$Nemesys_S_1_AnIN`. For this purpose, the analogue input signal
+is to be scaled by a factor of :code:`0.1`:
+
+.. image:: Pictures/inline_javascript_example.png
+
+.. admonition:: Important
+   :class: note
+
+   Use Inline JavaScript only for very simple calculations,
+   such as scaling. For more complex calculations or logical
+   comparisons, you should use the corresponding :ref:`JavaScript <javascript_script_function>`
+   function or the :ref:`Set Variable <set_variable>` function.
+
+
+Insert Device Handle Variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Device handles are device identifiers that begin with two
+dollar signs :code:`$$` and uniquely identify a device. A device
+handle is e.g. :code:`$$Nemesys_M_1`. :ref:`Device Properties <device-property-identifiers>` always
+consist of a device handle and an identifier for the
+corresponding property of the device. For example,
+the device property  :code:`$$Nemesys_S_1_AnIN1.ActualValue`
+consists of the device handle :code:`$$Nemesys_S_1_AnIN1` and
+the property :code:`ActualValue`. This means that if you know a
+device property, then you also know the corresponding device handle.
+
+Device handles are not usually used in normal input fields.
+However, many device-specific script functions have a selection
+field for selecting the device for which a command is to be executed.
+If this selection field is marked with a coloured **V**, then you can
+also pass variables there that contain a device handle.
+
+.. image:: Pictures/enter_device_handle_variable.png
+
+In the example above, the variable :code:`$PumpDevice`, which contains the
+device handle for the pump for which a dosing process is to be started,
+is passed to the :guilabel:`Dosing Module` selection control.
+
+
 Programming
 -----------
 

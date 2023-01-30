@@ -38,6 +38,8 @@ continue the script by pressing the :guilabel:`Run` button in the toolbar.
    interrupted and no communication with the script is possible.
 
 
+.. _interrupt_sequence:
+
 Interrupt Sequence
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -499,6 +501,9 @@ variable *$Process Pump* to be able to pass it to a function later.
 Name:       *$ProcessPump*
 JavaScript: :code:`$$Nemesys_M_1`
 =========== ===============
+
+
+.. _set_variable:
 
 Set Variable
 ~~~~~~~~~~~~~~
