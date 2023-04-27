@@ -63,8 +63,7 @@ your navigation through this document:
    videobuilder_EN/videobuilder_EN.rst
    datalogger_EN/datalogger_EN.rst
    graphlogger_EN/graphlogger_EN.rst
-   database_EN/database_EN.rst
-   Python_EN/Python_EN.rst
+   database_EN/database_EN.rst  
    sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
    daq_EN/daq_EN.rst

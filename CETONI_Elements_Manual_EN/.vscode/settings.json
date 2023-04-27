@@ -17,5 +17,14 @@
         "duplica",
         "editfun",
         "guinums"
+    ],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "restructuredtext"
     ]
 }
