@@ -43,6 +43,15 @@ jobs:
           cd CETONI_Elements_Manual_EN
           make html
           cd ..
+      -
+        name: Build EN private
+        run: |
+          cd CETONI_Elements_Manual_EN
+          export PRIVATE_DOC=1
+          export PRIVATE_BUILD_DIR=_build_private
+          make html
+          mv _build_private/html/index_private.html _build_private/html/index.html
+          cd ..
       - 
         name: Prepare Deployment
         run: |
@@ -53,7 +62,7 @@ jobs:
           mkdir -p _deploy/manual_de_private
           cp -R CETONI_Elements_Manual_DE/_build_private/html/*  _deploy/manual_de_private
           mkdir -p _deploy/manual_en_private
-          cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en_private
+          cp -R CETONI_Elements_Manual_EN/_build_private/html/*  _deploy/manual_en_private
       -
         name: Nojekyll
         run: touch _deploy/.nojekyll
