@@ -6,7 +6,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = _build
+BUILDDIR      := $(or $(PRIVATE_BUILD_DIR), _build)
 
 # Put it first so that "make" without argument is like "make help".
 help:
