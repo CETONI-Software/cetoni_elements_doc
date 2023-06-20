@@ -16,6 +16,8 @@
 import sphinx_rtd_theme
 import sphinx_fontawesome
 from sphinx.roles import MenuSelection
+import sys
+import os
 
 
 # -- Project information -----------------------------------------------------
@@ -81,6 +83,19 @@ exclude_patterns = [
     'ReadTheDocs.md',
     'Appendix_EN/content/*'
 ]
+
+# get environment variables (set as part of make .bat files)
+env_private = os.getenv("PRIVATE_DOC", "0")
+
+if env_private == "1":
+    print("private build")
+    root_doc = 'index_private'
+    exclude_patterns.append('index.rst')
+else:
+    print("public build")
+    root_doc = 'index'
+    exclude_patterns.append('index_private.rst')
+    
 
 # Set a bullet character for :menuselection: role
 # easier to identify in non latin languages, e.g. japanese
