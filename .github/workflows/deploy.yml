@@ -27,6 +27,13 @@ jobs:
           cd CETONI_Elements_Manual_DE
           make html
           cd ..
+      -
+        name: Build DE private
+        run: |
+            cd CETONI_Elements_Manual_DE
+            export PRIVATE_DOC=1
+            make html
+            cd ..
 
       -
         name: Build EN
@@ -42,7 +49,7 @@ jobs:
           mkdir -p _deploy/manual_en
           cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en
           mkdir -p _deploy/manual_de_private
-          cp -R CETONI_Elements_Manual_DE/_build/html/*  _deploy/manual_de_private
+          cp -R CETONI_Elements_Manual_DE/_build_private/html/*  _deploy/manual_de_private
           mkdir -p _deploy/manual_en_private
           cp -R CETONI_Elements_Manual_EN/_build/html/*  _deploy/manual_en_private
       -

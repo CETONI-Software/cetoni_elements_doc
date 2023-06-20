@@ -15,17 +15,21 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 import sphinx_fontawesome
+import sys
+import os
 from sphinx.roles import MenuSelection
 
 
 # -- Project information -----------------------------------------------------
-
 project = 'CETONI Elements Manual'
 copyright = '2022, CETONI GmbH'
 author = 'CETONI GmbH'
 html_show_copyright = True
 html_show_sphinx = True
 html_show_sourcelink = False
+
+# The master toctree document.
+# master_doc = 'index_private'
 
 # The full version, including alpha/beta/rc tags
 release = '20220504'
@@ -82,6 +86,19 @@ exclude_patterns = [
     'Appendix_EN/content/*',
     '*/*.inc.rst'
 ]
+
+# get environment variables (set as part of make .bat files)
+env_private = os.getenv("PRIVATE_DOC", "0")
+
+if env_private == "1":
+    print("private build")
+    root_doc = 'index_private'
+    exclude_patterns.append('index.rst')
+else:
+    print("public build")
+    root_doc = 'index'
+    exclude_patterns.append('index_private.rst')
+
 
 # Set a bullet character for :menuselection: role
 # easier to identify in non latin languages, e.g. japanese
@@ -166,6 +183,7 @@ html_favicon = '_static/favicon.png'
 html_logo = '_static/logo_cetoni_elements4.svg'
 html_title = 'CETONI Elements Manual'
 html_last_updated_fmt = '%b %d, %Y %H:%M'
+html_show_sphinx = False
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'monokai'
