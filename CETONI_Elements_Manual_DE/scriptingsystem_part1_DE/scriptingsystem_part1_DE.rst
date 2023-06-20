@@ -191,6 +191,15 @@ Werkzeugleiste
 |           | Schritt, d.h. die nächste Funktion im                   |
 |           | Einzelschrittbetrieb ausgeführt.                        |
 +-----------+---------------------------------------------------------+
+| |scroll|  | Scroll Lock - verhindert, das der Script Editor bei der |
+|           | Ausführung einer Funktion automatisch zu dieser         |
+|           | Funktion scrollt                                        |
++-----------+---------------------------------------------------------+
+| |expand|  | Klappt alle Funktionen im Script auf                    |
++-----------+---------------------------------------------------------+
+| |collapse|| Klappt alle Funktionen im Script ein so dass nur noch   |
+|           | die oberste Funktionsebene zu sehen ist                 |
++-----------+---------------------------------------------------------+
 
 
 .. admonition:: Tipp
@@ -1479,4 +1488,10 @@ Details zum Deaktivieren von Funktionen finden Sie im Abschnitt
    :width: 40
 
 .. |disable| image:: Pictures/enable_disable_functions2.svg
+   :width: 40
+
+.. |scroll| image:: Pictures/scroll_lock.svg
+   :width: 40
+
+.. |debug| image:: Pictures/debug.svg
    :width: 40
