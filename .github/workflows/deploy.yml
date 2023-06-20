@@ -34,7 +34,7 @@ jobs:
             export PRIVATE_DOC=1
             export PRIVATE_BUILD_DIR=_build_private
             make html
-            mv _build_private/index_private.html _build_private/index.html
+            mv _build_private/html/index_private.html _build_private/html/index.html
             cd ..
 
       -
