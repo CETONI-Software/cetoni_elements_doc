@@ -40,12 +40,12 @@ The configuration dialog contains the following elements:
 
 .. rst-class:: guinums
 
-#. **Device List** – displays all devices or modules that provided
+#. **Device List** - displays all devices or modules that provided
    recordable data. The filter selector above is to limit the list to
    specific device types, e.g. valves.
-#. **Logger Channels** – lists all channels that may be recorded by the
+#. **Logger Channels** - lists all channels that may be recorded by the
    logger.
-#. **Configure Database Connection** – allows the user to configure the database
+#. **Configure Database Connection** - allows the user to configure the database
    settings such as database server and port.
 
 The table :guilabel:`Logger Channels` shows the configuration of the logger. 
@@ -54,9 +54,9 @@ The table :guilabel:`Logger Channels` shows the configuration of the logger.
 
 The table contains the following columns:
 
--  **Device** – contains the device name for which the data will be
+-  **Device** - contains the device name for which the data will be
    recorded and its device icon.
--  **Property** – this is the name of the device property/process data
+-  **Property** - this is the name of the device property/process data
    value that will be recorded. Its type (numeric or boolean) can be
    identified by the displayed icon.
 
@@ -64,11 +64,13 @@ The table contains the following columns:
    |numeric_prop| Numeric value
    |boolean_prop| Boolean value
    |text_prop|    Text value
+   |array_prop|   Data array
+   |struct_prop|  Data structure
    ============== ============================================
 
 -  **Interval (s)** - the sampling interval in seconds. The minimum sample time
    is 1 seconds.
--  **Label** – allows you to define a customized description for the
+-  **Label** - allows you to define a customized description for the
    selected channel.
 
 Database Settings
@@ -179,7 +181,7 @@ the interval time.
    and stored into the database.   
 
 
-Step 4 – Set Channel Label
+Step 4 - Set Channel Label
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the column :guilabel:`Label` you can customize the description for each
@@ -223,33 +225,33 @@ The SQL logger uses the following database schema to store its data:
    :width: 600px
 
 The schema consists of two tables. The first table is
-the :code:`tbl_process_data` for storage of process data information. The
+the :code:`process_data` for storage of process data information. The
 following code is used to create this table:
 
 .. code-block:: sql
 
-   CREATE TABLE IF NOT EXISTS `tbl_process_data` (
+   CREATE TABLE IF NOT EXISTS `process_data` (
       `id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-      `Name` varchar(64) NOT NULL,
-      `Label` varchar(64)
+      `name` varchar(64) NOT NULL,
+      `label` varchar(64)
    );
 
-The :code:`Name` column stores the process data identifiers that are build from the
-device name and the selected property. The :code:`Label` column stores the value
+The :code:`name` column stores the process data identifiers that are build from the
+device name and the selected property. The :code:`label` column stores the value
 entered in the Label column of the :guilabel:`Logger Channels` table. The
 following picture shows the entered values in the *Logger Channels* table:
 
 .. image:: Pictures/logger_channels_table_example.png
 
-This configuration results in the following entries in the :code:`tbl_process_data`
+This configuration results in the following entries in the :code:`process_data`
 table (screenshot from MySQL workbench):
 
 .. image:: Pictures/mysql_tbl_process_data_example.png
 
-Entries will never get removed from the :code:`tbl_process_data` table. If an
+Entries will never get removed from the :code:`process_data` table. If an
 entry is missing, it will get added. Changing the label of a channel in the
 :guilabel:`Logger Channels` table, may result in a new entry in the 
-:code:`tbl_process_data`. The following example picture shows this:
+:code:`process_data`. The following example picture shows this:
 
 .. image:: Pictures/mysql_tbl_process_data_labels.png
 
@@ -264,32 +266,36 @@ was used to log different physical quantities in various experiments:
 This shows, that a change of the :code:`Label` value results in different
 database entries.
 
-The second table is the :code:`tbl_data_log` which is used to store the actual
+The second table is the :code:`data_log` which is used to store the actual
 values read from the device properties. This table is created with the 
 following SQL code:
 
 .. code-block:: sql
 
-   CREATE TABLE `tbl_data_log` (
+   CREATE TABLE `data_log` (
       `id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-      `LogDatetime` DATETIME NOT NULL,
-      `fk_tblProcessData_id` int NOT NULL,
-      `Value` double NULL,
-      FOREIGN KEY (fk_tblProcessData_id) REFERENCES `tbl_process_data` (`id`)
+      `log_datetime` DATETIME NOT NULL,
+      `process_data_id` int NOT NULL,
+      `value` double NULL,
+      `value_str` TEXT
+      FOREIGN KEY (process_data_id) REFERENCES `process_data` (`id`)
    );
 
-   CREATE INDEX `ix_tbl_data_log_fk_tblProcessData_id` ON `tbl_data_log` (`fk_tblProcessData_id` ASC);
+   CREATE INDEX `idx_data_log_process_data_id` ON `data_log` (`process_data_id` ASC);
 
-   CREATE INDEX `ix_tbl_data_log_LogDatetime` ON `tbl_data_log` (`LogDatetime` ASC);
+   CREATE INDEX `idx_data_log_log_datetime` ON `data_log` (`log_datetime` ASC);
 
 The code creates the following table layout:
 
 .. image:: Pictures/mysql_tbl_data_log.png
 
-- **LogDatetime**: stores the date and time when the value was logged
-- **fk_tblProcessDataId**: is a foreign key into the :code:`tbl_process_data`
+- **log_datetime**: stores the date and time when the value was logged
+- **process_data_id**: is a foreign key into the :code:`process_data`
   table to identify the process data that has been logged
-- **Value**: the actual logged value
+- **value**: the actual logged value if it is a numeric or boolean value
+- **value_str**: a string of the logged value - this can be used to record 
+  non-numeric values such as text, data arrays, data structures or any other 
+  data types.
 
 You can use SQL query language to get the logged data that you need. The 
 following example SQL statement shows, how to get all logged values from the process
@@ -297,10 +303,10 @@ data labeled with **Flowmeter (ml/s)**:
 
 .. code-block:: sql
 
-   SELECT b.LogDatetime, a.Name, a.Label, b.Value 
-   FROM tbl_data_log AS b 
-   INNER JOIN tbl_process_data as a ON (b.fk_tblProcessData_id=a.id)  
-   WHERE a.Label LIKE '%Flow%'
+   SELECT b.log_datetime, a.name, a.label, b.value 
+   FROM data_log AS b 
+   INNER JOIN process_data as a ON (b.process_data_id=a.id)  
+   WHERE a.label LIKE '%Flowmeter%'
 
 This is the resulting table from the given SQL statement:
 
@@ -487,6 +493,12 @@ QSqlQuery
    :width: 40
 
 .. |boolean_prop| image:: Pictures/boolean_property.svg
+   :width: 40
+
+.. |array_prop| image:: Pictures/array_property.svg
+   :width: 40
+
+.. |struct_prop| image:: Pictures/structure_property.svg
    :width: 40
 
 .. |delete_key| image:: Pictures/delete_channel_key.png

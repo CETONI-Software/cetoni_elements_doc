@@ -237,7 +237,7 @@ Der SQL-Logger verwendet zum Speichern seiner Daten das folgende Datenbankschema
    :width: 600px
 
 Das Schema besteht aus zwei Tabellen. Die erste Tabelle ist die 
-:code:`tbl_process_data` für die Speicherung von Prozessdateninformationen. 
+:code:`process_data` für die Speicherung von Prozessdateninformationen. 
 Der folgende Code wird zur Erstellung dieser Tabelle verwendet:
 
 .. code-block:: sql
@@ -248,9 +248,9 @@ Der folgende Code wird zur Erstellung dieser Tabelle verwendet:
       `label` varchar(64)
    );
 
-In der Spalte :code:`Name` werden die Prozessdatenbezeichner gespeichert, die 
+In der Spalte :code:`name` werden die Prozessdatenbezeichner gespeichert, die 
 aus dem Gerätenamen und der ausgewählten Eigenschaft gebildet werden. In der 
-Spalte :code:`Label` wird der Wert gespeichert, der in der Spalte Label der 
+Spalte :code:`label` wird der Wert gespeichert, der in der Spalte Label der 
 Tabelle :guilabel:`Logger Channels` eingegeben wurde. Die folgende Abbildung 
 zeigt die eingegebenen Werte in der Tabelle *Logger Channels*:
 
