@@ -58,9 +58,9 @@ Die Tabelle :guilabel:`Logger Channels` zeigt die Konfiguration des Loggers.
 
 Die Tabelle enthält die folgenden Spalten:
 
--  **Device** – enthält den Gerätenamen des Gerätes, von dem ein
+-  **Device** - enthält den Gerätenamen des Gerätes, von dem ein
    bestimmter Gerätewert aufgezeichnet werden soll und das Geräteicon
--  **Property** – dies ist der Name der Geräteeigenschaft / des
+-  **Property** - dies ist der Name der Geräteeigenschaft / des
    Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
    Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
    dem Typ-Icon einfach erkennen.
@@ -69,11 +69,13 @@ Die Tabelle enthält die folgenden Spalten:
    |numeric_prop| Numerischer Wert
    |boolean_prop| Boolescher Wert
    |text_prop|    Textwert
+   |array_prop|   Datenarray
+   |struct_prop|  Datenstruktur
    ============== ============================================
 
 - **Intervall (s)** - das Messintervall in Sekunden. Das minimale Intervall
   beträgt 1 Sekunde.
--  **Label** – hier können Sie eine eigene Bezeichnung des Kanals
+-  **Label** - hier können Sie eine eigene Bezeichnung des Kanals
    festlegen.
 
 
@@ -240,10 +242,10 @@ Der folgende Code wird zur Erstellung dieser Tabelle verwendet:
 
 .. code-block:: sql
 
-   CREATE TABLE IF NOT EXISTS `tbl_process_data` (
+   CREATE TABLE IF NOT EXISTS `process_data` (
       `id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-      `Name` varchar(64) NOT NULL,
-      `Label` varchar(64)
+      `name` varchar(64) NOT NULL,
+      `label` varchar(64)
    );
 
 In der Spalte :code:`Name` werden die Prozessdatenbezeichner gespeichert, die 
@@ -255,19 +257,19 @@ zeigt die eingegebenen Werte in der Tabelle *Logger Channels*:
 .. image:: Pictures/logger_channels_table_example.png
 
 Diese Konfiguration führt zu den folgenden Einträgen in der Tabelle 
-:code:`tbl_process_data` (Screenshot MySQL Workbench):
+:code:`process_data` (Screenshot VS-Code SQLTools):
 
 .. image:: Pictures/mysql_tbl_process_data_example.png
 
-Einträge werden niemals aus der Tabelle :code:`tbl_process_data` entfernt. Wenn 
+Einträge werden niemals aus der Tabelle :code:`process_data` entfernt. Wenn 
 ein Eintrag fehlt, wird er hinzugefügt. Wird die Bezeichnung eines Kanals in der 
 Tabelle :guilabel:`Logger Channels` geändert, kann dies zu einem neuen Eintrag 
-in der Tabelle :code:`tbl_process_data` führen. Das folgende Beispielbild zeigt 
+in der Tabelle :code:`process_data` führen. Das folgende Beispielbild zeigt 
 dies:
 
 .. image:: Pictures/mysql_tbl_process_data_labels.png
 
-Der Analogeingang **Nemesys_S_1_AnIN1** Property **ActualValue** 
+Der analoge Eingang **Nemesys_S_1_AnIN1** Property **ActualValue** 
 (Prozessdatenbezeichner :code:`Nemesys_S_1_AnIN1.ActualValue`) wurde verwendet, 
 um verschiedene physikalische Größen in verschiedenen Experimenten zu erfassen: 
 
@@ -278,33 +280,38 @@ um verschiedene physikalische Größen in verschiedenen Experimenten zu erfassen
 Dies zeigt, dass eine Änderung des Wertes :code:`Label` zu unterschiedlichen 
 Datenbankeinträgen führt.
 
-Die zweite Tabelle ist die :code:`tbl_data_log`, in der die aktuellen Werte aus 
+Die zweite Tabelle ist die :code:`data_log`, in der die aktuellen Werte aus 
 den Geräteeigenschaften gespeichert werden. Diese Tabelle wird mit dem folgenden 
 SQL-Code erstellt:
 
 .. code-block:: sql
 
-   CREATE TABLE `tbl_data_log` (
+   CREATE TABLE `data_log` (
       `id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-      `LogDatetime` DATETIME NOT NULL,
-      `fk_tblProcessData_id` int NOT NULL,
-      `Value` double NULL,
-      FOREIGN KEY (fk_tblProcessData_id) REFERENCES `tbl_process_data` (`id`)
+      `log_datetime` DATETIME NOT NULL,
+      `process_data_id` int NOT NULL,
+      `value` double NULL,
+      `value_str` TEXT
+      FOREIGN KEY (process_data_id) REFERENCES `process_data` (`id`)
    );
 
-   CREATE INDEX `ix_tbl_data_log_fk_tblProcessData_id` ON `tbl_data_log` (`fk_tblProcessData_id` ASC);
+   CREATE INDEX `idx_data_log_process_data_id` ON `data_log` (`process_data_id` ASC);
 
-   CREATE INDEX `ix_tbl_data_log_LogDatetime` ON `tbl_data_log` (`LogDatetime` ASC);
+   CREATE INDEX `idx_data_log_log_datetime` ON `data_log` (`log_datetime` ASC);
 
 Der Code erstellt das folgende Tabellenlayout:
 
 .. image:: Pictures/mysql_tbl_data_log.png
 
-- **LogDatetime**: speichert das Datum und die Uhrzeit, zu der der Wert 
+- **log_datetime**: speichert das Datum und die Uhrzeit, zu der der Wert 
   protokolliert wurde
-- **fk_tblProcessDataId**: ist ein Fremdschlüssel in der Tabelle 
-  :code:`tbl_process_data` zur Identifizierung der protokollierten Prozessdaten
-- **Value**: der tatsächlich protokollierte Wert
+- **process_data_id**: ist ein Fremdschlüssel in der Tabelle 
+  :code:`process_data` zur Identifizierung der protokollierten Prozessdaten
+- **value**: der tatsächlich protokollierte Wert, wenn es sich um einen numerischen
+  oder boolschen Wert handelt
+- **value_str**: ein String des protokollierten Wertes - damit können auch
+  nicht-numerische Werte wie z.B. Text, Datenarrays, Datenstrukturen oder
+  beliebige andere Datentypen aufgezeichnet werden.
 
 Sie können die SQL-Abfragesprache verwenden, um die protokollierten Daten zu 
 erhalten, die Sie benötigen. Die folgende Beispiel-SQL-Anweisung zeigt, wie alle 
@@ -313,10 +320,10 @@ Prozessdaten abgerufen werden können:
 
 .. code-block:: sql
 
-   SELECT b.LogDatetime, a.Name, a.Label, b.Value 
-   FROM tbl_data_log AS b 
-   INNER JOIN tbl_process_data as a ON (b.fk_tblProcessData_id=a.id)  
-   WHERE a.Label LIKE '%Flow%'
+   SELECT b.log_datetime, a.name, a.label, b.value 
+   FROM data_log AS b 
+   INNER JOIN process_data as a ON (b.process_data_id=a.id)  
+   WHERE a.label LIKE '%Flowmeter%'
 
 Dies ist die Tabelle, die sich aus der angegebenen SQL-Anweisung ergibt:
 
@@ -505,6 +512,12 @@ QSqlQuery
    :width: 40
 
 .. |boolean_prop| image:: Pictures/boolean_property.svg
+   :width: 40
+
+.. |array_prop| image:: Pictures/array_property.svg
+   :width: 40
+
+.. |struct_prop| image:: Pictures/structure_property.svg
    :width: 40
 
 .. |delete_key| image:: Pictures/delete_channel_key.png

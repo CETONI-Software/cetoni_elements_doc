@@ -10,5 +10,19 @@
         "Qmix"
     ],
     "cSpell.enabled": true,
-    "cSpell.language": "de"
+    "cSpell.language": "de",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "C:\\Users\\Public\\Documents\\QmixElements\\Projects\\WAA\\Log\\ProcessDataDbLog.sqlite",
+            "name": "WAA_ProcessDataDbl"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Robotics_ProcessDataTbl",
+            "database": "C:\\Users\\Public\\Documents\\QmixElements\\Projects\\robotics\\Log\\ProcessDataDbLog.sqlite"
+        }
+    ]
 }
