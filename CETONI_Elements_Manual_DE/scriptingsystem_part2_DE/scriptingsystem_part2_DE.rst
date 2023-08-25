@@ -592,25 +592,49 @@ Eingabewertes (Zahl oder Text) in eine bestehende Variable. Im
 Konfigurationsbereich (siehe Abbildung unten) können Sie folgende
 Parameter konfigurieren:
 
-.. image:: Pictures/10000201000001B5000001065756B50B196B91FF.png
-   :alt: Konfiguration User Input Funktion
+
+.. image:: Pictures/user_input_function_config.png
 
 .. rst-class:: guinums
 
-1. **Label Text** - Hier geben Sie einen Text an, der dem Anwender bei der 
+#. **Label Text** - Hier geben Sie einen Text an, der dem Anwender bei der 
    Ausführung der Funktion über dem Eingabefeld als Beschriftung und erklärender 
    Text angezeigt wird.
-2. **Variable** - In diesem Feld legen Sie die Variable fest, die den vom
+#. **Variable** - In diesem Feld legen Sie die Variable fest, die den vom
    Anwender eingegebenen Wert speichern soll.
-3. **Type** - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
+#. **Type Hint** - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
    nach gewähltem Wert, akzeptiert der Eingabedialog nur bestimmte
    Werte.
-4. **Test Input Dialog** - Durch Anklicken dieser Schaltfläche können Sie
+#. **Enable Cancellation** - Ist dieses Auswahlfeld aktiv, dann enhält der 
+   angezeigte Dialog eine :guilabel:`Cancel` Schaltfläche, die den Abbruch der
+   Eingabe ermöglicht.
+#. **Test Input Dialog** - Durch Anklicken dieser Schaltfläche können Sie
    den Eingabedialog testweise anzeigen, um zu prüfen, wie der Anwender
-   den Eingabedialog später bei der Ausführung des Scriptes sehen wird
+   den Eingabedialog später bei der Ausführun des Scriptes sehen wird
    (siehe Abbildung unten).
 
-.. image:: Pictures/10000201000000E80000009E6FFCCC92FBEB562A.png
+   ==================================== ====================================
+   Input Dialog                         Input Dialog mit Cancel Schaltfläche    
+   ------------------------------------ ------------------------------------
+   |input_dialog|                       |input_dialog_cancel|
+   ==================================== ====================================
+
+Wird während der Scriptausführung die Eingabe mit :guilabel:`OK` bestätigt,
+dann enthält die Variable den Wert, der vom Anwender eingegeben wurde.
+Wir der Dialog mit :guilabel:`Cancel` abgebrochen, dann enthält die 
+Variable einen undefinierten Wert. In JavaScript, z.B. in einer
+:ref:`Conditional Sequence <conditional_sequence>`, können Sie dann wie folgt 
+testen, ob der Wert undefiniert ist:
+
+.. code-block:: javascript
+
+   $InputVariable === undefined
+
+Im folgenden Beispielscript wird getestet, ob der Anwender den Eingabedialog
+abgebrochen hat. In diesem Fall wird eine entsprechende Meldung in den
+Event-Log geschrieben:
+
+.. image:: Pictures/input_dialog_canceled.png
 
 .. _script_function_call:
 
@@ -1695,3 +1719,6 @@ Mit den angegebenen Parametern wird das Spritzenvolumen in Zeile 3 der Einstellu
    :width: 40
 .. |catch_block| image:: Pictures/except_block2.svg
    :width: 40
+
+.. |input_dialog| image:: Pictures/input_dialog.png 
+.. |input_dialog_cancel| image:: Pictures/input_dialog_cancel.png 
