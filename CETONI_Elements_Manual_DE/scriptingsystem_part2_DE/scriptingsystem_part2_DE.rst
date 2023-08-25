@@ -211,7 +211,7 @@ Funktion folgende Nachricht ausgeben:
 
 .. _variable_erzeugen:
 
-Variable erzeugen – *Create Variable*
+Variable erzeugen - *Create Variable*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000119100003872000038728AF29595FE1DD321.svg
@@ -549,9 +549,9 @@ entspricht der Funktion :ref:`Variable erzeugen <variable_erzeugen>`.
    Bei der Eingabe des Namens unterstützt Sie    
    die Autovervollständigung mit einer Auswahl von         
    Variablen die bereits erstellt wurden. 
+   
 
 .. _eigenschaftsvariable_erzeugen:
-
 
 Variablendeklarationen gruppieren - *Variable Declaration Sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

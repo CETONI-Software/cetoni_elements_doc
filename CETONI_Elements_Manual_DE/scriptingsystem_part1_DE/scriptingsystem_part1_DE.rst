@@ -208,7 +208,9 @@ Werkzeugleiste
    Sie können Scripte auch einfach per Drag &    
    Drop (Ziehen und Ablegen) laden. Ziehen Sie dafür       
    einfach eine Script-Datei aus Ihrem Dateisystem auf den 
-   Script-Editor.        
+   Script-Editor. 
+
+.. _scripteditor-kontextmenu:       
 
 Kontextmenü
 ~~~~~~~~~~~
@@ -281,6 +283,13 @@ Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:
 |           | abgeschaltet oder gestoppt und gehen nicht in einen     |
 |           | sicheren Zustand über.                                  |
 +-----------+---------------------------------------------------------+
+| |debug|   | Aktiviert / deaktiviert den Debug Modus.                |
+|           | Setzt den Wert der globalen Script Variable             |
+|           | :code:`$DebugMode`. Diese Variable kann dann im Script  |
+|           | verwendet werden um Code auszuführen oder zusätliche    |
+|           | Debug-Ausgaben zu loggen.                               |
++-----------+---------------------------------------------------------+
+
 
 .. admonition:: Tipp
    :class: tip
@@ -1326,6 +1335,24 @@ So können Sie Schritt für Schritt durch Ihre Programm gehen und den Ablauf in
 Ruhe beobachten. Sie können den Einzelschrittbetrieb jederzeit aktivieren oder
 deaktivieren - auch während ihr Programm bereits läuft.
 
+.. _debug-mode:
+
+Debug Modus aktivieren / deaktivieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/debug.svg
+   :width: 60
+   :align: left
+
+Über das :ref:`Kontextmenu des Script-Editors <scripteditor-kontextmenu>`
+können den Debug-Modus aktivieren und deaktivieren. Das setzt den Wert der
+globalen Script-Variable :code:`$DebugMode` auf :code:`true` oder :code:`false`.
+D.h. Sie können dann abhängig von dieser Variable im Script Code ausführen
+oder zusätzliche Debug-Nachrichten ausgeben. So können Sie z.B. mit der
+:ref:`Log Message <log_message_function>` Funktion Nachrichten loggen,
+die nur ausgegeben werden, wenn der Debug-Modus aktiv ist.
+
+
 Haltepunkte einfügen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1369,14 +1396,14 @@ durch die Ausgabe von Nachrichten im Event-Log zu visualisieren, ohne das
 Laufzeitverhalten stark zu verändern.
 
 Um eine Debugnachricht auszugeben, müssen Sie lediglich eine 
-:ref:`Show Message <nachricht_anzeigen>`
+:ref:`Log Message <log_message_function>`
 Funktion an der Stelle im Programm einfügen, an der Sie eine Nachricht
-in das Event-Log schreiben möchten. Dafür sollte in der Show Message Funktion
-die Anzeige der Message Box und die Unterbrechung des Programms deaktiviert
-sein.
+in das Event-Log schreiben möchten.
 
-In der folgenden Abbildung wird z.B. der Wert der Variablen :code:`$Flow` in jedem
-Schleifendurchlauf im Event-Log ausgegeben:
+In der folgenden Abbildung wird z.B. der Wert der Variablen :code:`$Flow1` in jedem
+Schleifendurchlauf im Event-Log ausgegeben :guinum:`❶`. Da der :guilabel:`Message Type`
+hier auf :guilabel:`Debug / Trace` :guinum:`❷` eingestellt wurde, werden die Nachrichten
+nur ausgegeben, wenn der :ref:`Debug Modus <debug-mode>` aktiv ist.
 
 .. image:: Pictures/debug_show_message.png
 

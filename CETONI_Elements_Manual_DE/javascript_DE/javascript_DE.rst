@@ -483,6 +483,34 @@ Exception   :code:`console.exception` gibt eine Fehlermeldung zusammen mit dem
             aufgerufen wird.
 =========== =========================
 
+Zusätzlich haben Sie in der Software die Möglichkeit die :code:`ScriptEnv.log()`
+Funtion zur Ausgabe von Nachrichten im Event-Log zu verwenden. Der Vorteil
+dieser Funktion ist, dass Sie als Parameter zusätzlich einen Log-Level und eine
+Quelle :code:`Source` angeben können, die dann im Event-Log ausgegebn wird.
+
+Im folgenden Beispiel, werden in der JavaScript Funktion vier Log-Nachrichten
+mit unterschiedlichem Level ausgegeben:
+
+.. code-block:: javascript
+
+   function main() {
+      ScriptEnv.log(ScriptEnv.LogInfo, "Test Info Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogWarning, "Test Warning Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogError, "Test Error Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogDebug, "Test Debug Message", "JavaScript Function");
+      return ScriptEnv.ScriptFinish;
+   }
+
+Dieser Code führt im Event-Log zu folgenden Log-Ausgaben:
+
+.. image:: Pictures/js_scriptenv_log_eventlog.png
+
+.. admonition:: Wichtig
+   :class: note
+
+   Nachrichten mit dem Log-Level :code:`ScriptEnv.LogDebug` werden nur ausgegeben,
+   wenn der :ref:`Debug-Modus <debug-mode>` aktiv ist. 
+
 Standardmäßig vorhandene Objekte
 --------------------------------
 
