@@ -210,6 +210,7 @@ Funktion folgende Nachricht ausgeben:
    auszugeben.    
 
 .. _variable_erzeugen:
+.. _create_variable:
 
 Variable erzeugen - *Create Variable*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1445,6 +1445,26 @@ Details zum Deaktivieren von Funktionen finden Sie im Abschnitt
 :ref:`Funktionen aktivieren / deaktivieren <funktionen-deaktivieren>`.
 
 
+Variablenwerte anzeigen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Um den aktuellen Wert einer Script-Variable anzuzeigen, bewegen Sie den
+den Mauszeiger einfach über eine :ref:`Create Variable <create_variable>`
+oder :ref:`Set Variable <set_variable>` Funktion, in der auf diese Variable
+zugegriffen wird. Ihnen wird dann bei :guilabel:`Current Value` der aktuelle
+Wert der Variable angezeigt.
+
+.. image:: Pictures/debug_variable_value.png
+
+Im Beispiel oben sehen Sie ein Script, in dem von drei verschiedenen Funktionen
+der Wert der Variable :code:`$Test` geändert wird. Nach der
+Ausführung des Scriptes wird der Mauszeiger hier über die `Create Variable`
+Funktion bewegt. Obwohl in der Funktion der Wert 0 zugewiesen wird, sehen Sie 
+im Hinweisfenster den aktuellen Wert 2, da bereits die beiden 
+folgenden `Set Variable` Funktionen ausgeführt wurden.
+
+
+
 .. |image17| image:: ./Pictures/100018A30000387200003872627AA1597179191F.svg
    :width: 40
 .. |image18| image:: ./Pictures/10000F850000350500003505755524BB44FF2E56.svg
@@ -1522,3 +1542,4 @@ Details zum Deaktivieren von Funktionen finden Sie im Abschnitt
 
 .. |debug| image:: Pictures/debug.svg
    :width: 40
+
