@@ -1217,8 +1217,8 @@ The debug mode can be activated and deactivated via the
 the value of the global script variable :code:`$DebugMode` to :code:`true` or 
 :code:`false`. I.e. you can then execute code or output additional debug
 messages depending on this variable in the script. For example, you can use
-the :ref:`Log Message <log_message_function>` function to log messages that 
-are only output when debug mode is active.
+the :ref:`Log Message` function to log messages that are only output when debug
+mode is active.
 
 Insert Breakpoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1275,6 +1275,23 @@ out source code in text-based programming languages.
 
 For details on how to disable functions, refer to the section
 :ref:`Disable / Enable Functions`.
+
+Display variable values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To display the current value of a script variable, simply move the mouse pointer 
+over a :ref:`Create Variable` or :ref:`Set Variable` function in which this
+variable is accessed. The current value of the variable is then displayed
+at :guilabel:`Current Value`.
+
+.. image:: Pictures/debug_variable_value.png
+
+In the example above you can see a script in which the value of the variable
+:code:`$Test` is changed by three different functions. After the execution of
+the script, the mouse pointer is moved over the `Create Variable` function. 
+Although the value 0 is assigned in this function, you see the current value 2
+in the message window, because the two following `Set Variable` functions have
+already been executed.
 
 .. |Figure 1: Script system overview| image:: Pictures/10000201000003C9000001AAB18C614061F55B68.png
 
