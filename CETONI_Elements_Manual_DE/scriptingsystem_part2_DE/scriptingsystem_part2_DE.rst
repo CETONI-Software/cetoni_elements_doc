@@ -1536,13 +1536,23 @@ Nachricht in Event Log einfügen - *Log Message*
    :align: left
 
 Mit dieser Funktion können Sie eine Nachricht im :ref:`Event Log<ereignisprotokoll>`
-der Anwendung ausgeben. Im Feld :guilabel:`Message` geben Sie den Nachrichtentext ein.
-Im Text können Sie :ref:`Device Properties<device-property-identifiers>` 
+der Anwendung ausgeben. Im Konfigurationsbereich der Funktion können Sie
+folgendes konfigurieren:
+
+.. image:: Pictures/log_message_config.png
+
+.. rst-class:: guinums
+
+1. Im Feld :guilabel:`Message` geben Sie den Nachrichtentext ein.
+2. Im Bereich :guilabel:`Message Type` können Sie Art der Nachricht auswählen.
+   Je nach Typ, wird im Nachrichtenfenster und in der Ereignisanzeige
+   ein entsprechendes Symbol eingeblendet und in der Ereignisanzeige die
+   Nachricht farblich hervorgehoben.
+
+Im Message-Text können Sie :ref:`Device Properties<device-property-identifiers>` 
 und :ref:`Scriptvariablen<scriptvariablen>` verwenden. Diese dienen als 
 Platzhalter und werden zur Laufzeit des Scriptes durch den Inhalt der Variablen
-oder die Prozessdaten eines Gerätes ersetzt. 
-
-Sobald Sie im Text ein 
+oder die Prozessdaten eines Gerätes ersetzt.  Sobald Sie im Text ein 
 Dollarzeichen :code:`$` eingeben, wird Ihnen eine Liste der verfügbaren Variablen 
 eingeblendet, aus der Sie eine Variable auswählen können.
 
@@ -1559,6 +1569,11 @@ wird die Nachricht im Event-Log der Anwendung ausgegeben:
 
    Device Properties können Sie bequem über das Kontextmenü des Message-Feldes
    einfügen (Rechtsklick mit Maus).    
+
+Wenn Sie den Message-Type :guilabel:`Debug / Trace` auswählen, wird die
+Nachricht nur ausgegeben, wenn der :ref:`Debug-Modus <debug-mode>` aktiv ist.
+So können Sie für das Debugging Ihrer Scripte zusätzliche Log-Ausgaben
+aktivieren, die bei normaler Ausführung des Scripts nicht erscheinen.
 
 Ereignisprotokoll löschen - *Clear Event Log*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

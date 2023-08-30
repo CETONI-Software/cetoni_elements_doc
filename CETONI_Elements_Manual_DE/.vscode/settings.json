@@ -24,5 +24,14 @@
             "name": "Robotics_ProcessDataTbl",
             "database": "C:\\Users\\Public\\Documents\\QmixElements\\Projects\\robotics\\Log\\ProcessDataDbLog.sqlite"
         }
+    ],
+    "spellright.language": [
+        "de"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "restructuredtext"
     ]
 }
