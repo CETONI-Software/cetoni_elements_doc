@@ -480,6 +480,34 @@ Exception   :code:`console.exception` prints an error message together with the 
             trace of JavaScript execution at the point where it is called.
 =========== =========================
 
+In addition, you have the option of using the :code:`ScriptEnv.log()` function 
+in the software to output messages in the event log. The advantage of this
+function is that you can additionally specify a log level and a :code:`Source` as
+parameters, which is then output in the event log.
+
+In the following example, four log messages with different levels are output 
+in the JavaScript function:
+
+.. code-block:: javascript
+
+   function main() {
+      ScriptEnv.log(ScriptEnv.LogInfo, "Test Info Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogWarning, "Test Warning Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogError, "Test Error Message", "JavaScript Function");
+      ScriptEnv.log(ScriptEnv.LogDebug, "Test Debug Message", "JavaScript Function");
+      return ScriptEnv.ScriptFinish;
+   }
+
+This code leads to the following log outputs in the event log:
+
+.. image:: Pictures/js_scriptenv_log_eventlog.png
+
+.. admonition:: Important
+   :class: note
+
+   Messages with the log level :code:`ScriptEnv.LogDebug` are only output when 
+   :ref:`debug mode <debug-mode>` is active.
+
 Standard built-in objects
 ---------------------------
 

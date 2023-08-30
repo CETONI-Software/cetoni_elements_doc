@@ -174,11 +174,22 @@ Toolbar
 | |execstep|| Click this button to trigger execution of next script   |
 |           | function in single step operation mode.                 |
 +-----------+---------------------------------------------------------+
+| |scroll|  | Scroll Lock - prevents the Script Editor from           |
+|           | automatically scrolling to a function when the function | 
+|           | is executed.                                            |
++-----------+---------------------------------------------------------+
+| |expand|  | Expands all functions in the script                     |
++-----------+---------------------------------------------------------+
+| |collapse|| Collapses all functions in the script so that only the  |
+|           | topmost function level is visible                       |
++-----------+---------------------------------------------------------+
 
 .. tip::
    You can also load script files easily via     
    drag & drop. Simply drag a script file from your file   
    system over the script editor and drop it there.
+
+.. _scripteditor-contextmenu:
 
 Context Menu of Script Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -219,14 +230,14 @@ available from the context menu:
 |           | structure your script, make it clearer and improve      |
 |           | readibilty.                                             |
 +-----------+---------------------------------------------------------+
-| |expand|  | Expands all functions in the script                     |
-+-----------+---------------------------------------------------------+
 | |disable| | Disables / enables the selected functions.              |
 |           | This allows you to temporarily disable certain functions|
 |           | and enable them again later. Disabled functions are     |
 |           | skipped during program execution. This corresponds to   |
 |           | the functionality of commenting out source code in      |
 |           | text-based programming languages.                       |
++-----------+---------------------------------------------------------+
+| |expand|  | Expands all functions in the script                     |
 +-----------+---------------------------------------------------------+
 | |collapse|| Collapses all functions in the script so that only the  |
 |           | topmost function level is visible                       |
@@ -243,6 +254,12 @@ available from the context menu:
 | |image63| | Terminates script execution immediately. All devices    |
 |           | remain in their current state, are not shut down or     |
 |           | stopped, and do not transition to a safe state.         |
++-----------+---------------------------------------------------------+
+| |debug|   | Enables / disables the debug mode.                      |
+|           | Sets the value of the global script variable            |
+|           | :code:`$DebugMode`. This variable can then be used in   |
+|           | the script to execute code or log additional debug      |
+|           | output.                                                 |
 +-----------+---------------------------------------------------------+
 
 .. tip::
@@ -1186,6 +1203,23 @@ This allows you to go through your program step by step and observe the process
 at your leisure. You can activate or deactivate the single-step mode at any 
 time - even while your program is already running.
 
+.. _debug-mode:
+
+Activate / deactivate debug mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Pictures/debug.svg
+   :width: 60
+   :align: left
+
+The debug mode can be activated and deactivated via the 
+:ref:`context menu of the script editor <scripteditor-contextmenu>`. This sets 
+the value of the global script variable :code:`$DebugMode` to :code:`true` or 
+:code:`false`. I.e. you can then execute code or output additional debug
+messages depending on this variable in the script. For example, you can use
+the :ref:`Log Message <log_message_function>` function to log messages that 
+are only output when debug mode is active.
+
 Insert Breakpoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1213,13 +1247,10 @@ insertion of breakpoints. I.e. the sequence is slowed down or interrupted. If
 you use debug messages to display the program flow, the value of variables or 
 the value of device properties, the runtime behavior is hardly affected.
 
-To output a debug message, you just need to insert a :ref:`Show Message` 
+To output a debug message, you just need to insert a :ref:`Log Message` 
 function at  the point in the program where you want to write a message to the 
-event log.  In the configuration area of the Show Message function the display 
-of the message box and the interruption of the program should be deactivated.
-
-In the following picture, for example, the value of the :code:`$Flow` variable is 
-output to the event log in each loop cycle:
+event log. In the following picture, for example, the value of the :code:`$Flow`
+variable is output to the event log in each loop cycle:
 
 .. image:: Pictures/debug_show_message.png
 
@@ -1385,4 +1416,10 @@ For details on how to disable functions, refer to the section
    :width: 40
 
 .. |disable| image:: Pictures/enable_disable_functions2.svg
+   :width: 40
+
+.. |scroll| image:: Pictures/scroll_lock.svg
+   :width: 40
+
+.. |debug| image:: Pictures/debug.svg
    :width: 40
