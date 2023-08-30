@@ -570,24 +570,46 @@ This function allows the reading of a single input value
 the *User Input* function (see figure below), you can configure the
 following parameters:
 
-|Figure : Configuration User Input function|
+.. image:: Pictures/user_input_function_config.png
 
 .. rst-class:: guinums
 
-1. **Label Text** – Here you
+#. **Label Text** - Here you
    specify a text that will be displayed to the user during the
    execution of the function above the input field as a label and
    explanatory text.
-2. **Variable**– In this field you specify the variable to store the
+#. **Variable** - In this field you specify the variable to store the
    value entered by the user.
-3. **Type** – You can specify the input type, number or text, here.
+#. **Type Hint** - You can specify the input type, number or text, here.
    Depending on the selected input type the user input dialog accepts
    only certain values.
-4. **Test Input Dialog** – Clicking this button allows you to test the
+#. **Enable Cancellation** - If this checkbox is active, the displayed 
+   dialogue contains a :guilabel:`Cancel` button that allows you to cancel the
+   input dialog.
+#. **Test Input Dialog** - Clicking this button allows you to test the
    input dialog to check how the user will see the input dialog later
    during execution of the script function (see figure below).
 
-.. image:: Pictures/10000201000000E80000009E6FFCCC92FBEB562A.png
+   ==================================== ====================================
+   Input Dialog                         Input Dialog with Cancel Button    
+   ------------------------------------ ------------------------------------
+   |input_dialog|                       |input_dialog_cancel|
+   ==================================== ====================================
+
+If the input is confirmed with :guilabel:`OK` during script execution, the
+variable contains the value entered by the user. If the dialogue is cancelled
+with :guilabel:`Cancel`, the variable contains an undefined value.
+In JavaScript, e.g. in a :ref:`Conditional Sequence`, you can then test whether
+the value is undefined as follows:
+
+.. code-block:: javascript
+
+   $InputVariable === undefined
+
+The following example script tests whether the user has cancelled the input
+dialogue. In this case, a corresponding message is written in the event log:
+
+.. image:: Pictures/input_dialog_canceled.png
 
 Script Function Call
 ~~~~~~~~~~~~~~~~~~~~
@@ -1648,5 +1670,9 @@ file:
 
 .. |try_block| image:: Pictures/try_block.svg
    :width: 40
+
 .. |catch_block| image:: Pictures/except_block2.svg
    :width: 40
+
+.. |input_dialog| image:: Pictures/input_dialog.png 
+.. |input_dialog_cancel| image:: Pictures/input_dialog_cancel.png 
