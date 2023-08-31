@@ -561,7 +561,8 @@ erfüllt ist.
 
 Im Konfigurationsbereich wählen Sie zuerst, wie bei der
 Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property
-:guinum:`❶`, die Sie prüfen möchten, sowie die möglichen benötigten Metadaten aus.
+:guinum:`❶`, die Sie prüfen möchten, sowie die möglichen benötigten Metadaten
+:guinum:`❷` aus.
 
 .. admonition:: Wichtig
    :class: note
@@ -593,8 +594,8 @@ Verkürzt lässt sich die Funktion wie folgt beschreiben:
 
 .. centered::
    "Setzte die Programmausführung fort, wenn die die gewählte Eigenschaft
-   des SiLA Gerätes :guinum:`❶` die Bedingung :guinum:`❸` erfüllt oder wenn
-   die Timeout-Zeit abgelaufen ist."
+   des SiLA Gerätes :guinum:`❶` die Bedingung :guinum:`❸` erfüllt oder erzeugt
+   einen Fehler, wenn die Timeout-Zeit abgelaufen ist."
 
 .. admonition:: Tipp
    :class: tip

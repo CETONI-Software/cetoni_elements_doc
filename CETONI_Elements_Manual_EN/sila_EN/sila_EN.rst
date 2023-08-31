@@ -520,10 +520,10 @@ This function allows you to make the script execution wait
 for a specific property to meet a defined condition. The function will
 not continue until the condition is met.
 
-|image41|
+.. image:: Pictures/sila_wait_for_property_function.png
 
 In the configuration area, first select the property :guinum:`❶` you
-want to check and the optionally required metadata, as described for the
+want to check and the optionally required metadata :guinum:`❷`, as described for the
 `Read SiLA Property`_ function.
 
 .. admonition:: Important
@@ -532,9 +532,9 @@ want to check and the optionally required metadata, as described for the
    The SiLA property must be Observable to
    be used in this script function.
 
-In the *Condition* area, you configure the check condition. To do this,
-first select a comparison operator :guinum:`❷` and then enter the value :guinum:`❸` to be
-compared with. In the value field :guinum:`❸` you can also use variables to set
+In the *Condition* area :guinum:`❸`, you configure the check condition. To do this,
+first select a comparison operator and then the value to be
+compared with. In the value fields you can also use variables to set
 the check condition.
 
 .. tip::
@@ -543,6 +543,24 @@ the check condition.
    the filter input field. The selection boxes for the
    feature, command or property will then only contain
    entries that match the filter entered.
+
+To prevent the function from blocking further execution for too long, you can
+set a time limit in the :guilabel:`Timeout (ms)` field. If the time limit has expired and
+the test condition is not yet true, the function generates an :code:`ERR_TIMEOUT` error.
+To deactivate the timeout, simply set the value to 0.
+
+In short, the function can be described as follows:
+
+.. centered::
+   Continue script execution, if the selected property of the
+   device :guinum:`❶` meets the condition :guinum:`❸` or throw an error in case
+   of a timeout.
+
+.. tip::
+   Script Variables (such as :code:`$Value`) can be used as test / comparison condition.
+
+.. tip::
+   A timeout value of 0 deactivates the time limit.
 
 
 Replace SiLA server
@@ -650,8 +668,6 @@ be recorded :guinum:`❸`.
 .. |image34| image:: Pictures/100000010000032D000000CB19F74944FFDAB71C.png
 
 .. |image39| image:: Pictures/1000000100000345000001FD6EA9B6588936741F.png
-
-.. |image41| image:: Pictures/100000010000034500000209E2A9E0C1D0F440CC.png
 
 .. |image48| image:: Pictures/10000001000003B5000001C901728FB6CD47BE5B.png
 
