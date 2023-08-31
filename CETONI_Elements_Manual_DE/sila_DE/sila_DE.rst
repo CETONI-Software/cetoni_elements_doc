@@ -557,7 +557,7 @@ eine bestimmte Property eine definierte Bedingung erfüllt.
 Die Funktion wird erst dann fortgesetzt, wenn die Bedingung
 erfüllt ist.
 
-.. image:: Pictures/100000010000034500000209E2A9E0C1D0F440CC.png
+.. image:: Pictures/sila_wait_for_property_function.png
 
 Im Konfigurationsbereich wählen Sie zuerst, wie bei der
 Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property
@@ -570,9 +570,9 @@ Funktion :ref:`Read SiLA Property <property_lesen>` beschrieben, die Property
    damit sie in dieser Script-Funktion verwendet werden
    kann.
 
-Im Bereich *Condition* konfigurieren Sie die Prüfbedingung. Dafür wählen
-Sie als erstes einen Vergleichsoperator :guinum:`❷` aus und geben dann den Wert
-ein :guinum:`❸`, mit dem verglichen werden soll. Im Wertfeld :guinum:`❸` können Sie auch
+Im Bereich *Condition* :guinum:`❸` konfigurieren Sie die Prüfbedingung. Dafür wählen
+Sie als erstes einen Vergleichsoperator aus und dann den Wert, 
+mit dem verglichen werden soll. In den Wertfeldern können Sie auch
 Variablen verwenden, um die Prüfbedingung zu setzen.
 
 .. tip::
@@ -582,6 +582,29 @@ Variablen verwenden, um die Prüfbedingung zu setzen.
    eingeben. Die Auswahlboxen für das Feature bzw. den
    Command oder die Property enthalten dann nur noch
    Einträge, die dem eingegebenen Filter entsprechen.
+
+Um zu verhindern, dass die Funktion die weitere Ausführung zu lange blockiert,
+können Sie im Feld :guilabel:`Timeout (ms)` ein Zeitlimit festlegen. Ist das
+Zeitlimit abgelaufen und die Prüfbedingung noch nicht wahr, erzeugt die Funktion
+einen :code:`ERR_TIMEOUT` Fehler. Um den Timeout zu deaktivieren, setzen Sie
+den Wert einfach auf 0.
+
+Verkürzt lässt sich die Funktion wie folgt beschreiben:
+
+.. centered::
+   "Setzte die Programmausführung fort, wenn die die gewählte Eigenschaft
+   des SiLA Gerätes :guinum:`❶` die Bedingung :guinum:`❸` erfüllt oder wenn
+   die Timeout-Zeit abgelaufen ist."
+
+.. admonition:: Tipp
+   :class: tip
+
+   Als Vergleichsbedingung können Variablen verwendet werden.  
+
+.. admonition:: Tipp
+   :class: tip
+
+   Ein Timeout Wert von 0 deaktiviert das Zeitlimit.
 
 SiLA-Server austauschen
 ~~~~~~~~~~~~~~~~~~~~~~~
