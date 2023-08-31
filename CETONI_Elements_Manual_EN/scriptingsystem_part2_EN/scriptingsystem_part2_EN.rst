@@ -1438,15 +1438,24 @@ Log Message
    :align: left
 
 With this function you can output a message in the :ref:`Event Log<event_log>` 
-of the application. 
-Enter the message text in the :guilabel:`Message` field. You can use 
-:ref:`Device Properties<device-property-identifiers>` and
+of the application. In the configuration area of the function you can configure 
+the following:
+
+.. image:: Pictures/log_message_config.png
+
+.. rst-class:: guinums
+
+1. Enter your message text in the :guilabel:`Message` field.
+2. Select the type of message you want to display in the :guilabel:`Message Type` 
+   group. Depending on the message type, the relevant icon appears in the 
+   event log and the message is highlighted with a type-specific color.
+
+You can use :ref:`Device Properties<device-property-identifiers>` and
 :ref:`Script Variables <script_variables>` in the text. These serve as 
 placeholders and are replaced by the content of the variables or the process
-data of a device at runtime of the script.
-
-As soon as you enter a dollar sign :code:`$` in the text, a list of available
-variables is displayed from which you can select a variable.
+data of a device at runtime of the script. As soon as you enter a dollar sign 
+:code:`$` in the text, a list of available variables is displayed from which you 
+can select a variable.
 
 .. image:: Pictures/log_message_text_input.png
 
@@ -1460,6 +1469,10 @@ the message is output in the event log of the application:
    Device properties can be conveniently inserted via the context menu of the 
    :guilabel:`Message` field (right-click with the mouse).
 
+If you select the message type :guilabel:`Debug / Trace`, the message is only
+output when the debug mode is active. This way you can activate additional 
+log output for debugging your scripts that do not appear when the script is 
+executed normally.
 
 Clear Event Log
 ~~~~~~~~~~~~~~~~~

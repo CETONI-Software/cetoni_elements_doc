@@ -1545,9 +1545,8 @@ folgendes konfigurieren:
 
 1. Im Feld :guilabel:`Message` geben Sie den Nachrichtentext ein.
 2. Im Bereich :guilabel:`Message Type` können Sie Art der Nachricht auswählen.
-   Je nach Typ, wird im Nachrichtenfenster und in der Ereignisanzeige
-   ein entsprechendes Symbol eingeblendet und in der Ereignisanzeige die
-   Nachricht farblich hervorgehoben.
+   Je nach Typ, wird in der Ereignisanzeige ein entsprechendes Symbol
+   eingeblendet und die Nachricht farblich hervorgehoben.
 
 Im Message-Text können Sie :ref:`Device Properties<device-property-identifiers>` 
 und :ref:`Scriptvariablen<scriptvariablen>` verwenden. Diese dienen als 
