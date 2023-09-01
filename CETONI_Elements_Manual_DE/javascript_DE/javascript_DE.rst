@@ -227,6 +227,30 @@ das :code:`ScriptEnv`-Objekt abruft und dann die Protokollierung startet:
 
 .. _javascript_script_function:
 
+Standardmäßig vorhandene Objekte
+--------------------------------
+
+Die JavaScript-Engine verfügt über eine Reihe von Standardobjekten, die in den 
+globalen Bereich integriert sind. Eines dieser Objekte ist das **global object**, 
+auf das mit dem Operator :code:`this` zugegriffen werden kann. Um alle eingebauten 
+Objekte aufzulisten, müssen Sie nur die Funktion :ref:`help<Hilfe bekommen - getting help>` mit 
+dem globalen Objekt wie folgt aufrufen: :code:`help(this)`.
+
+.. image:: Pictures/js_console_help_built_in.png
+
+Wenn Sie die Eigenschaften und Funktionen eines bestimmten eingebauten Objekts, 
+wie z.B. :code:`Math`, sehen möchten, müssen Sie nur die Funktion help aufrufen 
+und dieses Objekt übergeben: :code:`help(Math)`. Eine detaillierte Liste der 
+eingebauten Objekte, die von der integrierten 
+JavaScript-Engine unterstützt werden, finden Sie in der Qt-Dokumentation:
+
+https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
+
+Eine ausführliche Dokumentation der eingebauten Objekte finden Sie in der 
+JavaScript-Referenzdokumentation:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+
 JavaScript-Skript-Funktion
 ---------------------------
 
@@ -375,6 +399,74 @@ zu implementieren, ist dieser:
    Geräteeigenschaften wie :code:`$$Nemesys_S_1.ActualFlow` direkt im 
    JavaScript-Quellcode zu verwenden.
 
+JavaScript Module importieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die JavaScript Engine erlaubt den Import eigener JavaScript Module aus dem
+aktuellen Projektverzeichnis. Wenn Sie eigene Module verwenden, die Sie zusammen mit Ihrem 
+Projekt weitergeben oder ausliefern wollen, dann können Sie diese in den 
+Unterordner :file:`Scripts/JavaScript` ihres aktuellen Projekts speichern. 
+Wenn Sie z.B. im Projekt :code:`JavaScript_Tutorial` arbeiten, dann wäre der absolute
+Pfad zu diesem Verzeichnis:
+
+.. centered::
+   :file:`C:/Users/Public/Documents/QmixElements/Projects/JavaScript_Tutorial/Scripts/JavaScript`
+
+Module, die in diesem Ordner enthalten sind, können Sie dann über die :code:`import`
+Funktion des `ScriptEnv` Objektes importieren. Im folgenden Beispiel wird
+im :file:`Scripts/JavaScript` Ordner dein JavaScript Modul in der Datei 
+:code:`test.js` mit folgendem Inhalt erstellt:
+
+.. code-block:: javascript
+
+   // module "test.js"
+
+   function cube(x) {
+      return x * x * x;
+   }
+   
+   const foo = Math.PI + Math.SQRT2;
+
+   const graph = {
+   options: {
+      color: "white",
+      thickness: "2px",
+   },
+   draw() {
+      console.log("From graph draw function");
+   },
+   };
+
+   export { cube, foo, graph };
+
+In der JavaScript Script-Funktion, wird das Modul nun als :code:`MyModule`
+importiert und verwendet:
+
+.. code-block:: javascript
+
+   function main() {
+      ScriptEnv.import("test.js", "MyModule");
+
+      print(MyModule.foo);
+      print(MyModule.cube(3));
+      print(MyModule.graph.options.color);
+      const person1 = new MyModule.Person("John", "Doe");
+      console.log("Person: ", person1.getFullName());
+
+      return ScriptEnv.ScriptFinish;
+   }
+  
+Die JavaScript Konsole sollte danach folgende Ausgaben enthalten:
+
+.. code-block:: text
+
+   js> 
+   4.555806215962888
+   27
+   white
+   Person:  John Doe
+
+
 Fehler bei der Skriptausführung
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -510,31 +602,6 @@ Dieser Code führt im Event-Log zu folgenden Log-Ausgaben:
 
    Nachrichten mit dem Log-Level :code:`ScriptEnv.LogDebug` werden nur ausgegeben,
    wenn der :ref:`Debug-Modus <debug-mode>` aktiv ist. 
-
-Standardmäßig vorhandene Objekte
---------------------------------
-
-Die JavaScript-Engine verfügt über eine Reihe von Standardobjekten, die in den 
-globalen Bereich integriert sind. Eines dieser Objekte ist das **global object**, 
-auf das mit dem Operator :code:`this` zugegriffen werden kann. Um alle eingebauten 
-Objekte aufzulisten, müssen Sie nur die Funktion :ref:`help<Hilfe bekommen - getting help>` mit 
-dem globalen Objekt wie folgt aufrufen: :code:`help(this)`.
-
-.. image:: Pictures/js_console_help_built_in.png
-
-Wenn Sie die Eigenschaften und Funktionen eines bestimmten eingebauten Objekts, 
-wie z.B. :code:`Math`, sehen möchten, müssen Sie nur die Funktion help aufrufen 
-und dieses Objekt übergeben: :code:`help(Math)`. Eine detaillierte Liste der 
-eingebauten Objekte, die von der integrierten 
-JavaScript-Engine unterstützt werden, finden Sie in der Qt-Dokumentation:
-
-https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
-
-Eine ausführliche Dokumentation der eingebauten Objekte finden Sie in der 
-JavaScript-Referenzdokumentation:
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-
 
 Nebenläufige Ausführung
 --------------------------
