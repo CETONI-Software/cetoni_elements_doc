@@ -24,6 +24,7 @@ Skriptsprache JavaScript in Ihre CETONI Elements-Skripte einzubinden.
 Dies gibt Ihnen eine zusätzliche Möglichkeit, Logik im :ref:`Script-System` zu 
 implementieren und kann die Implementierung komplexer Berechnungen vereinfachen.
 
+.. _javascript-console:
 
 JavaScript-Konsole
 ------------------
@@ -414,8 +415,8 @@ Pfad zu diesem Verzeichnis:
 
 Module, die in diesem Ordner enthalten sind, können Sie dann über die :code:`import`
 Funktion des `ScriptEnv` Objektes importieren. Im folgenden Beispiel wird
-im :file:`Scripts/JavaScript` Ordner dein JavaScript Modul in der Datei 
-:code:`test.js` mit folgendem Inhalt erstellt:
+im :file:`Scripts/JavaScript` Ordner ein JavaScript Modul in der Datei 
+:file:`test.js` mit folgendem Inhalt erstellt:
 
 .. code-block:: javascript
 
@@ -424,20 +425,31 @@ im :file:`Scripts/JavaScript` Ordner dein JavaScript Modul in der Datei
    function cube(x) {
       return x * x * x;
    }
-   
+
    const foo = Math.PI + Math.SQRT2;
 
    const graph = {
-   options: {
-      color: "white",
-      thickness: "2px",
-   },
-   draw() {
-      console.log("From graph draw function");
-   },
+      options: {
+         color: "white",
+         thickness: "2px",
+      },
+      draw() {
+         console.log("From graph draw function");
+      },
    };
 
-   export { cube, foo, graph };
+   class Person {
+      constructor(firstName, lastName) {
+         this.firstName = firstName;
+         this.lastName = lastName;
+      }
+
+      getFullName() {
+         return `${this.firstName} ${this.lastName}`;
+      }
+   }
+
+   export { cube, foo, graph, Person };
 
 In der JavaScript Script-Funktion, wird das Modul nun als :code:`MyModule`
 importiert und verwendet:
@@ -456,7 +468,8 @@ importiert und verwendet:
       return ScriptEnv.ScriptFinish;
    }
   
-Die JavaScript Konsole sollte danach folgende Ausgaben enthalten:
+Die :ref:`JavaScript-Konsole <javascript-console>` sollte nach der Ausführung der Scriptfunktion die 
+folgenden Ausgaben enthalten:
 
 .. code-block:: text
 

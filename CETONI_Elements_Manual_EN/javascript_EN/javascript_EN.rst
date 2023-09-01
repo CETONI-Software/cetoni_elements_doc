@@ -25,6 +25,8 @@ scripts.
 This gives you an additional way to implement logic in the :ref:`Script System` and
 may simplify the implementation of complex calculations.
 
+.. _javascript-console:
+
 JavaScript Console
 ------------------
 
@@ -226,6 +228,31 @@ logger via the :code:`ScriptEnv` object and then start logging:
    software. 
 
 
+Standard built-in objects
+---------------------------
+
+The JavaScript engine has a number of standard buil-in objects in the global
+scope. One of these objects is the **global object** that can be accessed using the
+:code:`this` operator. To list all built-in objects, you just need to call the
+:ref:`help function<Getting Help>` with the global object like this: :code:`help(this)`.
+
+.. image:: Pictures/js_console_help_built_in.png
+
+If you would like to see the properties and functions of a specific built-in
+object, such as :code:`Math`, you just need to call help passing this object:
+:code:`help(Math)`.
+
+For a detailed list of built-in objects supported by the embedded JavaScript engine,
+please refer to the Qt documentation:
+
+https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
+
+For a detailed documentation of the build-in objects, please refer to the JavaScript
+reference documentation:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+
+
 .. _javascript_script_function:
 
 JavaScript Script Function
@@ -374,6 +401,84 @@ The right way, to implement the function above, is this one:
    device properties such as :code:`$$Nemesys_S_1.ActualFlow` directly in the
    JavaScript source code.
 
+Importing JavaScript modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The JavaScript Engine allows you to import your own JavaScript modules from the 
+current project directory. If you use your own modules that you want to share 
+or deliver with your project, you can save them in the :file:`Scripts/JavaScript`
+subfolder of your current project. For example, if you are working in the 
+:code:`JavaScript_Tutorial` project, the absolute path to this directory would be:
+
+.. centered::
+   :file:`C:/Users/Public/Documents/QmixElements/Projects/JavaScript_Tutorial/Scripts/JavaScript`
+
+You can then import modules contained in this folder using the :code:`import` function
+of the `ScriptEnv` object. In the following example, a JavaScript module is
+created in the :file:`Scripts/JavaScript` folder in the file :file:`test.js` 
+with the following content:
+
+.. code-block:: javascript
+
+   // module "test.js"
+
+   function cube(x) {
+      return x * x * x;
+   }
+
+   const foo = Math.PI + Math.SQRT2;
+
+   const graph = {
+      options: {
+         color: "white",
+         thickness: "2px",
+      },
+      draw() {
+         console.log("From graph draw function");
+      },
+   };
+
+   class Person {
+      constructor(firstName, lastName) {
+         this.firstName = firstName;
+         this.lastName = lastName;
+      }
+
+      getFullName() {
+         return `${this.firstName} ${this.lastName}`;
+      }
+   }
+
+   export { cube, foo, graph, Person };
+
+In the JavaScript script function, the module is now imported and used as 
+:code:`MyModule`:
+
+.. code-block:: javascript
+
+   function main() {
+      ScriptEnv.import("test.js", "MyModule");
+
+      print(MyModule.foo);
+      print(MyModule.cube(3));
+      print(MyModule.graph.options.color);
+      const person1 = new MyModule.Person("John", "Doe");
+      console.log("Person: ", person1.getFullName());
+
+      return ScriptEnv.ScriptFinish;
+   }
+  
+The :ref:`JavaScript console <javascript-console>` should contain the following
+output after execution of the script function:
+
+.. code-block:: text
+
+   js> 
+   4.555806215962888
+   27
+   white
+   Person:  John Doe
+
 Script execution errors
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -507,31 +612,6 @@ This code leads to the following log outputs in the event log:
 
    Messages with the log level :code:`ScriptEnv.LogDebug` are only output when 
    :ref:`debug mode <debug-mode>` is active.
-
-Standard built-in objects
----------------------------
-
-The JavaScript engine has a number of standard buil-in objects in the global
-scope. One of these objects is the **global object** that can be accessed using the
-:code:`this` operator. To list all built-in objects, you just need to call the
-:ref:`help function<Getting Help>` with the global object like this: :code:`help(this)`.
-
-.. image:: Pictures/js_console_help_built_in.png
-
-If you would like to see the properties and functions of a specific built-in
-object, such as :code:`Math`, you just need to call help passing this object:
-:code:`help(Math)`.
-
-For a detailed list of built-in objects supported by the embedded JavaScript engine,
-please refer to the Qt documentation:
-
-https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html
-
-For a detailed documentation of the build-in objects, please refer to the JavaScript
-reference documentation:
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-
 
 Concurrent Execution
 ---------------------------
