@@ -94,284 +94,380 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IScriptFunction;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CExecJavaScriptFunction;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ScriptEnvAccessPrivate;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="43"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>Helper<sp/>class<sp/>for<sp/>access<sp/>of<sp/>the<sp/>scripting<sp/>environment<sp/>from<sp/>a<sp/>JavaScript<sp/>script</highlight></codeline>
-<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>An<sp/>instance<sp/>of<sp/>CScriptEnvAccess<sp/>is<sp/>registered<sp/>to<sp/>the<sp/>JavaScript<sp/>engine<sp/>with</highlight></codeline>
-<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>the<sp/>name<sp/>&quot;ScriptEnv&quot;.<sp/>It<sp/>allows<sp/>setting<sp/>and<sp/>reading<sp/>variables<sp/>and<sp/>registers</highlight></codeline>
-<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>some<sp/>global<sp/>object<sp/>like<sp/>device<sp/>manager<sp/>or<sp/>object<sp/>manager<sp/>to<sp/>allow<sp/>access</highlight></codeline>
-<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>from<sp/>JavaScript<sp/>to<sp/>application<sp/>objects<sp/>and<sp/>device<sp/>objects</highlight></codeline>
-<codeline lineno="49"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" kindref="compound">CScriptEnvAccess</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testPropertyB<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testPropertyB.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testPropertyA<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testPropertyA.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testProperty()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>ScriptEnvAccessPrivate*<sp/>d;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ScriptEnvAccessPrivate;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>script<sp/>function<sp/>is<sp/>null</highlight></codeline>
-<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptFunctionNull()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>help<sp/>function<sp/>is<sp/>called<sp/>if<sp/>user<sp/>enters<sp/>help()<sp/>without<sp/>parameters</highlight></codeline>
-<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>helpGlobal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>help<sp/>function<sp/>will<sp/>get<sp/>called<sp/>if<sp/>user<sp/>requests<sp/>help<sp/>for<sp/>a<sp/>certain</highlight></codeline>
-<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>object<sp/>such<sp/>as<sp/>help(ScriptEnv).</highlight></codeline>
-<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>helpForObject(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Super<sp/>=<sp/>QObject;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Default<sp/>Constructor</highlight></codeline>
-<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9525895a4dbe97814ec9cd17dcc36773" kindref="member">CScriptEnvAccess</ref>(CExecJavaScriptFunction*<sp/>ScriptFunction<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Removes<sp/>itself<sp/>from<sp/>the<sp/>given<sp/>Python<sp/>module</highlight></codeline>
-<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1acd505c3c8e56880905b52a8f9d8605cd" kindref="member">~CScriptEnvAccess</ref>();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>script<sp/>function<sp/>to<sp/>use</highlight></codeline>
-<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a283a16c9a19036e7802abf4085b33d3f" kindref="member">setScriptFunction</ref>(CExecJavaScriptFunction*<sp/>ScriptFunction);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>help<sp/>string<sp/>for<sp/>the<sp/>given<sp/>object</highlight></codeline>
-<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" kindref="member">help</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CDerived;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>Helper<sp/>class<sp/>for<sp/>access<sp/>of<sp/>the<sp/>scripting<sp/>environment<sp/>from<sp/>a<sp/>JavaScript<sp/>script</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>An<sp/>instance<sp/>of<sp/>CScriptEnvAccess<sp/>is<sp/>registered<sp/>to<sp/>the<sp/>JavaScript<sp/>engine<sp/>with</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>the<sp/>name<sp/>&quot;ScriptEnv&quot;.<sp/>It<sp/>allows<sp/>setting<sp/>and<sp/>reading<sp/>variables<sp/>and<sp/>registers</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>some<sp/>global<sp/>object<sp/>like<sp/>device<sp/>manager<sp/>or<sp/>object<sp/>manager<sp/>to<sp/>allow<sp/>access</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>from<sp/>JavaScript<sp/>to<sp/>application<sp/>objects<sp/>and<sp/>device<sp/>objects</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess" kindref="compound">CScriptEnvAccess</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testPropertyB<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testPropertyB.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testPropertyA<sp/>READ<sp/>testProperty<sp/>WRITE<sp/>__setTestProperty)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_CLASSINFO(</highlight><highlight class="stringliteral">&quot;testPropertyA.scriptable&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testProperty()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ScriptEnvAccessPrivate*<sp/>d;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ScriptEnvAccessPrivate;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>script<sp/>function<sp/>is<sp/>null</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptFunctionNull()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>help<sp/>function<sp/>is<sp/>called<sp/>if<sp/>user<sp/>enters<sp/>help()<sp/>without<sp/>parameters</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>helpGlobal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>help<sp/>function<sp/>will<sp/>get<sp/>called<sp/>if<sp/>user<sp/>requests<sp/>help<sp/>for<sp/>a<sp/>certain</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>object<sp/>such<sp/>as<sp/>help(ScriptEnv).</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>helpForObject(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Super<sp/>=<sp/>QObject;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Default<sp/>Constructor</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9525895a4dbe97814ec9cd17dcc36773" kindref="member">CScriptEnvAccess</ref>(CExecJavaScriptFunction*<sp/>ScriptFunction<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Removes<sp/>itself<sp/>from<sp/>the<sp/>given<sp/>Python<sp/>module</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1acd505c3c8e56880905b52a8f9d8605cd" kindref="member">~CScriptEnvAccess</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>script<sp/>function<sp/>to<sp/>use</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a283a16c9a19036e7802abf4085b33d3f" kindref="member">setScriptFunction</ref>(CExecJavaScriptFunction*<sp/>ScriptFunction);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>help<sp/>string<sp/>for<sp/>the<sp/>given<sp/>object</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" kindref="member">help</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/></highlight></codeline>
-<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@name<sp/>scripting</highlight></codeline>
-<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>///@{</highlight></codeline>
-<codeline lineno="108"><highlight class="comment"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>main<sp/>function<sp/>return<sp/>code.</highlight></codeline>
-<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Normally<sp/>the<sp/>script<sp/>execution<sp/>finishes,<sp/>if<sp/>the<sp/>JavaScript<sp/>main()<sp/>function<sp/>is</highlight></codeline>
-<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>left.<sp/>To<sp/>indicate,<sp/>that<sp/>script<sp/>execution<sp/>should<sp/>not<sp/>finish,<sp/>i.e.<sp/>if<sp/>you</highlight></codeline>
-<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>would<sp/>like<sp/>to<sp/>wait<sp/>for<sp/>a<sp/>certain<sp/>event<sp/>or<sp/>signal,<sp/>then<sp/>your<sp/>main<sp/>function</highlight></codeline>
-<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>can<sp/>return<sp/>KEEP_RUNNING,<sp/>to<sp/>indicate,<sp/>that<sp/>you<sp/>would<sp/>like<sp/>to<sp/>stay<sp/>in<sp/>the</highlight></codeline>
-<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>current<sp/>script<sp/>function.</highlight></codeline>
-<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>function<sp/>main()<sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>return<sp/>ScriptEnv.ScriptFinish;</highlight></codeline>
-<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" kindref="member">eMainFunctionReturnCode</ref></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="126" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" kindref="member">ScriptFinish</ref><sp/>=<sp/>0,</highlight><highlight class="comment">///&lt;<sp/>finish<sp/>current<sp/>script<sp/>function</highlight></codeline>
-<codeline lineno="127" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" kindref="member">ScriptKeepRunning</ref><sp/>=<sp/>1</highlight><highlight class="comment">///&lt;<sp/>keep<sp/>the<sp/>JavaScript<sp/>engine<sp/>running<sp/>and<sp/>stay<sp/>in<sp/>current<sp/>script</highlight></codeline>
-<codeline lineno="128"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" kindref="member">eMainFunctionReturnCode</ref>)</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>enum<sp/>describes<sp/>the<sp/>different<sp/>locations<sp/>that<sp/>can<sp/>be<sp/>queried<sp/>using</highlight></codeline>
-<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>projectPath()<sp/>function.</highlight></codeline>
-<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>example<sp/>shows,<sp/>how<sp/>to<sp/>get<sp/>the<sp/>data<sp/>path<sp/>of<sp/>the<sp/>current</highlight></codeline>
-<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project:</highlight></codeline>
-<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
-<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" kindref="member">eProjectLocation</ref></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="144" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" kindref="member">LocationProject</ref><sp/>=<sp/>Core::ICore::ProjectLocation,</highlight><highlight class="comment">///&lt;<sp/>location<sp/>of<sp/>the<sp/>current<sp/>project<sp/>directory</highlight></codeline>
-<codeline lineno="145" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" kindref="member">LocationConfigurations</ref><sp/>=<sp/>Core::ICore::ConfigurationsLocation,</highlight><highlight class="comment">//!&lt;<sp/>ConfigurationsLocation</highlight></codeline>
-<codeline lineno="146" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" kindref="member">LocationLog</ref><sp/>=<sp/>Core::ICore::LogLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>LogLocation</highlight></codeline>
-<codeline lineno="147" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" kindref="member">LocationScripts</ref><sp/>=<sp/>Core::ICore::ScriptsLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>ScriptsLocation</highlight></codeline>
-<codeline lineno="148" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" kindref="member">LocationPictures</ref><sp/>=<sp/>Core::ICore::PicturesLocation,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>PicturesLocation</highlight></codeline>
-<codeline lineno="149" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" kindref="member">LocationVideos</ref><sp/>=<sp/>Core::ICore::VideosLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>VideosLocations</highlight></codeline>
-<codeline lineno="150" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" kindref="member">LocationData</ref><sp/>=<sp/>Core::ICore::DataLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>DataLocation</highlight></codeline>
-<codeline lineno="151" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" kindref="member">LocationSettings</ref><sp/>=<sp/>Core::ICore::SettingsLocation,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">///&lt;<sp/>location<sp/>where<sp/>application<sp/>can<sp/>store<sp/>settings<sp/>and<sp/>configuration<sp/>files</highlight></codeline>
-<codeline lineno="152"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" kindref="member">eProjectLocation</ref>)</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>with<sp/>all<sp/>device<sp/>names<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript.</highlight></codeline>
-<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>the<sp/>device<sp/>name<sp/>when<sp/>calling<sp/>the<sp/>`getDevice()`<sp/>function<sp/>to<sp/>get</highlight></codeline>
-<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>corresponding<sp/>device<sp/>object.</highlight></codeline>
-<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" kindref="member">getDeviceNames</ref>()<sp/>const;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>device<sp/>object<sp/>for<sp/>the<sp/>given<sp/>device<sp/>name.</highlight></codeline>
-<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>device<sp/>object<sp/>provides<sp/>access<sp/>to<sp/>device-specific<sp/>functions<sp/>and</highlight></codeline>
-<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties<sp/>of<sp/>this<sp/>device.<sp/>The<sp/>device<sp/>names<sp/>are<sp/>the<sp/>names<sp/>that<sp/>are<sp/>also</highlight></codeline>
-<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>used<sp/>in<sp/>the<sp/>CETONI<sp/>Elements<sp/>script<sp/>system<sp/>to<sp/>access<sp/>devices<sp/>or<sp/>device</highlight></codeline>
-<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties.</highlight></codeline>
-<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pump<sp/>=<sp/>ScriptEnv.getDevice(&quot;Nemesys_S_1&quot;)</highlight></codeline>
-<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><ref refid="namespaceQtLabb" kindref="compound">QtLabb</ref>::Core::CDevice*<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" kindref="member">getDevice</ref>(const<sp/>QString&amp;<sp/>Name)<sp/>const;</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="176"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="177"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>of<sp/>all<sp/>registered<sp/>application<sp/>objects<sp/>that<sp/>are<sp/>not<sp/>devices</highlight></codeline>
-<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript,<sp/>such<sp/>as<sp/>the<sp/>graphical<sp/>logger.</highlight></codeline>
-<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" kindref="member">getObjectNames</ref>()<sp/>const;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>object<sp/>with<sp/>the<sp/>given<sp/>object<sp/>name<sp/>`Name`.</highlight></codeline>
-<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>plot<sp/>=<sp/>ScriptEnv.getObject(&quot;ProcessDataGraph&quot;)</highlight></codeline>
-<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="189"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QObject*<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5" kindref="member">getObject</ref>(const<sp/>QString&amp;<sp/>Name)<sp/>const;</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>value<sp/>of<sp/>a<sp/>certain<sp/>script<sp/>variable.</highlight></codeline>
-<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>variable<sp/>name<sp/>needs<sp/>to<sp/>start<sp/>with<sp/>a<sp/>dollar<sp/>sign.</highlight></codeline>
-<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>flow<sp/>=<sp/>ScriptEnv.getVar(&quot;$FlowRate&quot;)</highlight></codeline>
-<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariant<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518" kindref="member">getVar</ref>(const<sp/>QString&amp;<sp/>VarName)<sp/>const;</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>script<sp/>variable<sp/>to<sp/>the<sp/>given<sp/>value.</highlight></codeline>
-<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVar(&quot;$TargetPos&quot;,<sp/>25)</highlight></codeline>
-<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc" kindref="member">setVar</ref>(const<sp/>QString&amp;<sp/>Name,<sp/>const<sp/>QVariant&amp;<sp/>Value);</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>multiple<sp/>script<sp/>variables<sp/>using<sp/>a<sp/>JavaScript<sp/>array.</highlight></codeline>
-<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVars([&quot;$Value1&quot;,<sp/>0.5,<sp/>&quot;$Value2&quot;,<sp/>1.5])</highlight></codeline>
-<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9" kindref="member">setVars</ref>(const<sp/>QVariantList<sp/>Values);</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sleep<sp/>for<sp/>the<sp/>given<sp/>number<sp/>of<sp/>seconds<sp/>without<sp/>blocking<sp/>the<sp/>application</highlight></codeline>
-<codeline lineno="225"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>main<sp/>event<sp/>loop.</highlight></codeline>
-<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>this<sp/>function<sp/>for<sp/>small<sp/>delays<sp/>only.</highlight></codeline>
-<codeline lineno="227"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779" kindref="member">sleep</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Seconds);</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="230"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Leave<sp/>the<sp/>current<sp/>script<sp/>function.</highlight></codeline>
-<codeline lineno="232"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>your<sp/>JavaScript<sp/>main()<sp/>function<sp/>returned<sp/>ScriptEnv.KEEP_RUNNING<sp/>then</highlight></codeline>
-<codeline lineno="233"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>you<sp/>can<sp/>use<sp/>this<sp/>function<sp/>if<sp/>you<sp/>finished<sp/>your<sp/>JavaScript<sp/>logic<sp/>to</highlight></codeline>
-<codeline lineno="234"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>signal<sp/>the<sp/>scripting<sp/>system<sp/>that<sp/>the<sp/>script<sp/>system<sp/>should<sp/>leave<sp/>the</highlight></codeline>
-<codeline lineno="235"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>current<sp/>script<sp/>function<sp/>and<sp/>process<sp/>the<sp/>next<sp/>one.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>of<sp/>all<sp/>registered<sp/>application<sp/>objects<sp/>that<sp/>are<sp/>not<sp/>devices</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript,<sp/>such<sp/>as<sp/>the<sp/>graphical<sp/>logger.</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" kindref="member">getObjectNames</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>with<sp/>all<sp/>device<sp/>names<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript.</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>the<sp/>device<sp/>name<sp/>when<sp/>calling<sp/>the<sp/>`getDevice()`<sp/>function<sp/>to<sp/>get</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>corresponding<sp/>device<sp/>object.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" kindref="member">getDeviceNames</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@name<sp/>scripting</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/>///@{</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>main<sp/>function<sp/>return<sp/>code.</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Normally<sp/>the<sp/>script<sp/>execution<sp/>finishes,<sp/>if<sp/>the<sp/>JavaScript<sp/>main()<sp/>function<sp/>is</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>left.<sp/>To<sp/>indicate,<sp/>that<sp/>script<sp/>execution<sp/>should<sp/>not<sp/>finish,<sp/>i.e.<sp/>if<sp/>you</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>would<sp/>like<sp/>to<sp/>wait<sp/>for<sp/>a<sp/>certain<sp/>event<sp/>or<sp/>signal,<sp/>then<sp/>your<sp/>main<sp/>function</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>can<sp/>return<sp/>KEEP_RUNNING,<sp/>to<sp/>indicate,<sp/>that<sp/>you<sp/>would<sp/>like<sp/>to<sp/>stay<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>current<sp/>script<sp/>function.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>function<sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>return<sp/>ScriptEnv.ScriptFinish;</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" kindref="member">eMainFunctionReturnCode</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645" kindref="member">ScriptFinish</ref><sp/>=<sp/>0,</highlight><highlight class="comment">///&lt;<sp/>finish<sp/>current<sp/>script<sp/>function</highlight></codeline>
+<codeline lineno="141" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577" kindref="member">ScriptKeepRunning</ref><sp/>=<sp/>1</highlight><highlight class="comment">///&lt;<sp/>keep<sp/>the<sp/>JavaScript<sp/>engine<sp/>running<sp/>and<sp/>stay<sp/>in<sp/>current<sp/>script</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce" kindref="member">eMainFunctionReturnCode</ref>)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>enum<sp/>describes<sp/>the<sp/>different<sp/>locations<sp/>that<sp/>can<sp/>be<sp/>queried<sp/>using</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>projectPath()<sp/>function.</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>example<sp/>shows,<sp/>how<sp/>to<sp/>get<sp/>the<sp/>data<sp/>path<sp/>of<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project:</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" kindref="member">eProjectLocation</ref></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6" kindref="member">LocationProject</ref><sp/>=<sp/>Core::ICore::ProjectLocation,</highlight><highlight class="comment">///&lt;<sp/>location<sp/>of<sp/>the<sp/>current<sp/>project<sp/>directory</highlight></codeline>
+<codeline lineno="159" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830" kindref="member">LocationConfigurations</ref><sp/>=<sp/>Core::ICore::ConfigurationsLocation,</highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>the<sp/>device<sp/>configurations<sp/>in<sp/>the<sp/>current<sp/>project</highlight></codeline>
+<codeline lineno="160" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132" kindref="member">LocationLog</ref><sp/>=<sp/>Core::ICore::LogLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>the<sp/>log<sp/>files</highlight></codeline>
+<codeline lineno="161" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f" kindref="member">LocationScripts</ref><sp/>=<sp/>Core::ICore::ScriptsLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>the<sp/>current<sp/>project<sp/>script<sp/>files</highlight></codeline>
+<codeline lineno="162" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2" kindref="member">LocationPictures</ref><sp/>=<sp/>Core::ICore::PicturesLocation,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>the<sp/>current<sp/>project<sp/>image<sp/>files</highlight></codeline>
+<codeline lineno="163" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" kindref="member">LocationVideos</ref><sp/>=<sp/>Core::ICore::VideosLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>the<sp/>current<sp/>project<sp/>video<sp/>files</highlight></codeline>
+<codeline lineno="164" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" kindref="member">LocationData</ref><sp/>=<sp/>Core::ICore::DataLocation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//!&lt;<sp/>location<sp/>of<sp/>data<sp/>in<sp/>the<sp/>current<sp/>project</highlight></codeline>
+<codeline lineno="165" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" kindref="member">LocationSettings</ref><sp/>=<sp/>Core::ICore::SettingsLocation,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">///&lt;<sp/>location<sp/>where<sp/>application<sp/>can<sp/>store<sp/>settings<sp/>and<sp/>configuration<sp/>files</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9" kindref="member">eProjectLocation</ref>)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Log<sp/>levels<sp/>-<sp/>keep<sp/>this<sp/>in<sp/>sync<sp/>with<sp/>Core::CLogEvent::eType</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012" kindref="member">eLogLevel</ref></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012afd4a66f95165420f5a0d1059a47e72be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012afd4a66f95165420f5a0d1059a47e72be" kindref="member">LogInfo</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**&lt;<sp/>LogInfo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a18d693b5ba32b6910a9d0298f4492d10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a18d693b5ba32b6910a9d0298f4492d10" kindref="member">LogWarning</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**&lt;<sp/>LogWarning<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012ae0bb14efee4d649277882ed678e0c75e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012ae0bb14efee4d649277882ed678e0c75e" kindref="member">LogError</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**&lt;<sp/>LogError<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a101f5e6b7a5efbb02d261fe7600220f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a101f5e6b7a5efbb02d261fe7600220f4" kindref="member">LogDebug</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**&lt;<sp/>LogDebug<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_ENUM(<ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012" kindref="member">eLogLevel</ref>)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>with<sp/>all<sp/>device<sp/>names<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript.</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>the<sp/>device<sp/>name<sp/>when<sp/>calling<sp/>the<sp/>`getDevice()`<sp/>function<sp/>to<sp/>get</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>corresponding<sp/>device<sp/>object.</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a591f85f840f014041a19572e67fd3af0" kindref="member">listDevices</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>device<sp/>object<sp/>for<sp/>the<sp/>given<sp/>device<sp/>name.</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>device<sp/>object<sp/>provides<sp/>access<sp/>to<sp/>device-specific<sp/>functions<sp/>and</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties<sp/>of<sp/>this<sp/>device.<sp/>The<sp/>device<sp/>names<sp/>are<sp/>the<sp/>names<sp/>that<sp/>are<sp/>also</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>used<sp/>in<sp/>the<sp/>CETONI<sp/>Elements<sp/>script<sp/>system<sp/>to<sp/>access<sp/>devices<sp/>or<sp/>device</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>properties.</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pump<sp/>=<sp/>ScriptEnv.getDevice(&quot;Nemesys_S_1&quot;)</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><ref refid="namespaceQtLabb" kindref="compound">QtLabb</ref>::Core::CDevice*<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" kindref="member">getDevice</ref>(const<sp/>QString&amp;<sp/>Name)<sp/>const;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>array<sp/>of<sp/>all<sp/>registered<sp/>application<sp/>objects<sp/>that<sp/>are<sp/>not<sp/>devices</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>that<sp/>can<sp/>be<sp/>accessed<sp/>from<sp/>JavaScript,<sp/>such<sp/>as<sp/>the<sp/>graphical<sp/>logger.</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QStringList<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3f5fae5e0814d8311b704349f04a95d5" kindref="member">listObjects</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>object<sp/>with<sp/>the<sp/>given<sp/>object<sp/>name<sp/>`Name`.</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>plot<sp/>=<sp/>ScriptEnv.getObject(&quot;ProcessDataGraph&quot;)</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QObject*<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5" kindref="member">getObject</ref>(const<sp/>QString&amp;<sp/>Name)<sp/>const;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>value<sp/>of<sp/>a<sp/>certain<sp/>script<sp/>variable.</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>variable<sp/>name<sp/>needs<sp/>to<sp/>start<sp/>with<sp/>a<sp/>dollar<sp/>sign.</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>flow<sp/>=<sp/>ScriptEnv.getVar(&quot;$FlowRate&quot;)</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariant<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518" kindref="member">getVar</ref>(const<sp/>QString&amp;<sp/>VarName)<sp/>const;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>script<sp/>variable<sp/>to<sp/>the<sp/>given<sp/>value.</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="233"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="234"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVar(&quot;$TargetPos&quot;,<sp/>25)</highlight></codeline>
+<codeline lineno="235"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
 <codeline lineno="236"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24" kindref="member">leave</ref>();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc" kindref="member">setVar</ref>(const<sp/>QString&amp;<sp/>Name,<sp/>const<sp/>QVariant&amp;<sp/>Value);</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="239"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="240"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Invoke<sp/>the<sp/>given<sp/>function<sp/>with<sp/>the<sp/>given<sp/>parameters<sp/>in<sp/>the<sp/>main<sp/>UI<sp/>thread.</highlight></codeline>
-<codeline lineno="241"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>allows<sp/>calling<sp/>of<sp/>UI<sp/>objects<sp/>methods<sp/>from<sp/>a<sp/>JavaScript<sp/>function<sp/>running</highlight></codeline>
-<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>concurrently<sp/>in<sp/>its<sp/>own<sp/>thread.<sp/>The<sp/>first<sp/>parameter<sp/>fun<sp/>is<sp/>the<sp/>function</highlight></codeline>
-<codeline lineno="243"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>that<sp/>should<sp/>get<sp/>invoked<sp/>(like<sp/>pump.generateFlow)<sp/>and<sp/>the<sp/>second<sp/>parameter</highlight></codeline>
-<codeline lineno="244"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>args<sp/>is<sp/>an<sp/>JavaScript<sp/>array<sp/>with<sp/>the<sp/>function<sp/>arguments<sp/>(like<sp/>[-0.01]).</highlight></codeline>
-<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="248"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pump<sp/>=<sp/>ScriptEnv.getDevice(&quot;Nemesys_S_1&quot;);</highlight></codeline>
-<codeline lineno="249"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.invoke(pump.generateFlow,<sp/>[-0.01]);</highlight></codeline>
-<codeline lineno="250"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>graph<sp/>=<sp/>ScriptEnv.getObject(&quot;ProcessDataGraph&quot;);</highlight></codeline>
-<codeline lineno="251"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.invoke(graph.startLogging,<sp/>[]);</highlight></codeline>
-<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QJSValue<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d" kindref="member">invoke</ref>(const<sp/>QJSValue&amp;<sp/>fun,<sp/>const<sp/>QJSValue&amp;<sp/>args);</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>absolute<sp/>path<sp/>of<sp/>a<sp/>certain<sp/>data<sp/>location<sp/>in<sp/>the<sp/>current</highlight></codeline>
-<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project.</highlight></codeline>
-<codeline lineno="259"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>Location<sp/>Location<sp/>identifier<sp/>(see<sp/>eProjectLocation<sp/>enum)</highlight></codeline>
-<codeline lineno="260"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>example<sp/>shows,<sp/>how<sp/>to<sp/>get<sp/>the<sp/>data<sp/>path<sp/>of<sp/>the<sp/>current</highlight></codeline>
-<codeline lineno="262"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project:</highlight></codeline>
-<codeline lineno="263"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="264"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
-<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
-<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>path<sp/>=<sp/>ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
-<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>path<sp/>+=<sp/>&quot;/TestFile1.txt&quot;;</highlight></codeline>
-<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f<sp/>=<sp/>new<sp/>QFile(path);</highlight></codeline>
-<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.open(QFile.ModeReadWrite);</highlight></codeline>
-<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.write(&quot;This<sp/>is<sp/>just<sp/>a<sp/>test<sp/>test&quot;);</highlight></codeline>
-<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.close();</highlight></codeline>
-<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
-<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>eProjectLocation</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sets<sp/>multiple<sp/>script<sp/>variables<sp/>using<sp/>a<sp/>JavaScript<sp/>array.</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="243"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.setVars([&quot;$Value1&quot;,<sp/>0.5,<sp/>&quot;$Value2&quot;,<sp/>1.5])</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9" kindref="member">setVars</ref>(const<sp/>QVariantList<sp/>Values);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="250"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Registers<sp/>a<sp/>named<sp/>value.</highlight></codeline>
+<codeline lineno="251"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>You<sp/>can<sp/>use<sp/>this<sp/>function<sp/>to<sp/>register<sp/>a<sp/>certain<sp/>value<sp/>with<sp/>a<sp/>given<sp/>name</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>globally<sp/>to<sp/>the<sp/>current<sp/>script<sp/>engine<sp/>instance.<sp/>You<sp/>can<sp/>then<sp/>use<sp/>the</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>namedValue()<sp/>function<sp/>later,<sp/>to<sp/>easily<sp/>access<sp/>the<sp/>registered<sp/>named</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>value.</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>value<sp/>is<sp/>already<sp/>registered,<sp/>it<sp/>is<sp/>overwritten<sp/>with<sp/>the<sp/>new</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>value<sp/>given<sp/>in<sp/>Value</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>value<sp/>already<sp/>exists<sp/>and<sp/>`ReplaceIfExists`<sp/>is<sp/>`false`,<sp/>then</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>value<sp/>is<sp/>not<sp/>replaced</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\see<sp/>namedValue()</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a4565a7d3c98cffa48bf2ca7234464d02" kindref="member">setNamedValue</ref>(const<sp/>QString&amp;<sp/>Name,<sp/>const<sp/>QVariant&amp;<sp/>Value,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ReplaceIfExists<sp/>=<sp/>true);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>a<sp/>named<sp/>value<sp/>or<sp/>an<sp/>invalid<sp/>variant,<sp/>if<sp/>no<sp/>value<sp/>with<sp/>the<sp/>given<sp/>name</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>registered.</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\see<sp/>setNamedValue()</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariant<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a52eec06a6ddc8dde3a4b4c8d21a18ee2" kindref="member">namedValue</ref>(const<sp/>QString&amp;<sp/>Name);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Sleep<sp/>for<sp/>the<sp/>given<sp/>number<sp/>of<sp/>seconds<sp/>without<sp/>blocking<sp/>the<sp/>application</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>main<sp/>event<sp/>loop.</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Use<sp/>this<sp/>function<sp/>for<sp/>small<sp/>delays<sp/>only.</highlight></codeline>
 <codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" kindref="member">projectPath</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Location)<sp/>const;</highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="277"><highlight class="comment"><sp/><sp/><sp/><sp/>///@}</highlight></codeline>
-<codeline lineno="278"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="279"><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal">public<sp/>slots:</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>-----------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>slots<sp/>and<sp/>functions<sp/>are<sp/>only<sp/>here<sp/>for<sp/>testing<sp/>and<sp/>debugging</highlight></codeline>
-<codeline lineno="285"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testSlot(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fValue,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>TextValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVariant&amp;<sp/>vValue);</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__setTestProperty(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value);</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>QWidget*<sp/>__createCppOwnedWidget();</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"></highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__emitTestSignal();</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"></highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><sp/>QSharedPointer&lt;QObject&gt;<sp/>createSharedObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"></highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><sp/>QObject*<sp/>createObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="296"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="297"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Invoke<sp/>the<sp/>function<sp/>of<sp/>the<sp/>given<sp/>object<sp/>with<sp/>the<sp/>given<sp/>parameters</highlight></codeline>
-<codeline lineno="298"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>invoke_experimental(QObject<sp/>*obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>Function,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v);</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="301"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="302"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>example<sp/>variant<sp/>map</highlight></codeline>
-<codeline lineno="303"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariantMap<sp/>variantMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="306"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
-<codeline lineno="307"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>example<sp/>variant<sp/>list</highlight></codeline>
-<codeline lineno="308"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariantList<sp/>variantList()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="310"><highlight class="normal"></highlight></codeline>
-<codeline lineno="311"><highlight class="normal">signals:</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__testSignal();</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>QT_DEBUG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="314"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>ScriptEnvAccess</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="315"><highlight class="normal"></highlight></codeline>
-<codeline lineno="316"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>Script</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="317"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>QtLabb</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="318"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ScriptEnvAccessH</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779" kindref="member">sleep</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Seconds);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Leave<sp/>the<sp/>current<sp/>script<sp/>function.</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>your<sp/>JavaScript<sp/>main()<sp/>function<sp/>returned<sp/>ScriptEnv.KEEP_RUNNING<sp/>then</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>you<sp/>can<sp/>use<sp/>this<sp/>function<sp/>if<sp/>you<sp/>finished<sp/>your<sp/>JavaScript<sp/>logic<sp/>to</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>signal<sp/>the<sp/>scripting<sp/>system<sp/>that<sp/>the<sp/>script<sp/>system<sp/>should<sp/>leave<sp/>the</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>current<sp/>script<sp/>function<sp/>and<sp/>process<sp/>the<sp/>next<sp/>one.</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24" kindref="member">leave</ref>();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="287"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Invoke<sp/>the<sp/>given<sp/>function<sp/>with<sp/>the<sp/>given<sp/>parameters<sp/>in<sp/>the<sp/>main<sp/>UI<sp/>thread.</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>allows<sp/>calling<sp/>of<sp/>UI<sp/>objects<sp/>methods<sp/>from<sp/>a<sp/>JavaScript<sp/>function<sp/>running</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>concurrently<sp/>in<sp/>its<sp/>own<sp/>thread.<sp/>The<sp/>first<sp/>parameter<sp/>`fun`<sp/>is<sp/>the<sp/>function</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>that<sp/>should<sp/>get<sp/>invoked<sp/>(like<sp/>`pump.generateFlow`)<sp/>and<sp/>the<sp/>second<sp/>parameter</highlight></codeline>
+<codeline lineno="292"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>`args`<sp/>is<sp/>an<sp/>JavaScript<sp/>array<sp/>with<sp/>the<sp/>function<sp/>arguments<sp/>(like<sp/>`[-0.01,<sp/>25]`).</highlight></codeline>
+<codeline lineno="293"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="295"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="296"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pump<sp/>=<sp/>ScriptEnv.getDevice(&quot;Nemesys_S_1&quot;);</highlight></codeline>
+<codeline lineno="297"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.invoke(pump.generateFlow,<sp/>[-0.01]);</highlight></codeline>
+<codeline lineno="298"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>graph<sp/>=<sp/>ScriptEnv.getObject(&quot;ProcessDataGraph&quot;);</highlight></codeline>
+<codeline lineno="299"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.invoke(graph.startLogging,<sp/>[]);</highlight></codeline>
+<codeline lineno="300"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="301"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QJSValue<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d" kindref="member">invoke</ref>(const<sp/>QJSValue&amp;<sp/>fun,<sp/>const<sp/>QJSValue&amp;<sp/>args);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="304"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="305"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>the<sp/>absolute<sp/>path<sp/>of<sp/>a<sp/>certain<sp/>data<sp/>location<sp/>in<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="306"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project.</highlight></codeline>
+<codeline lineno="307"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>Location<sp/>Location<sp/>identifier<sp/>(see<sp/>eProjectLocation<sp/>enum)</highlight></codeline>
+<codeline lineno="308"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="309"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>example<sp/>shows,<sp/>how<sp/>to<sp/>get<sp/>the<sp/>data<sp/>path<sp/>of<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="310"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>project:</highlight></codeline>
+<codeline lineno="311"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="312"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>**Example:**</highlight></codeline>
+<codeline lineno="313"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="314"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>path<sp/>=<sp/>ScriptEnv.projectPath(ScriptEnv.LocationData);</highlight></codeline>
+<codeline lineno="315"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>path<sp/>+=<sp/>&quot;/TestFile1.txt&quot;;</highlight></codeline>
+<codeline lineno="316"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f<sp/>=<sp/>new<sp/>QFile(path);</highlight></codeline>
+<codeline lineno="317"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.open(QFile.ModeReadWrite);</highlight></codeline>
+<codeline lineno="318"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.write(&quot;This<sp/>is<sp/>just<sp/>a<sp/>test<sp/>test&quot;);</highlight></codeline>
+<codeline lineno="319"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>f.close();</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>eProjectLocation</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QString<sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" kindref="member">projectPath</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Location)<sp/>const;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Import<sp/>a<sp/>JavaScript<sp/>module<sp/>from<sp/>the<sp/>`Scripts/JavaScript`<sp/>subfolder<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="328"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>current<sp/>project.</highlight></codeline>
+<codeline lineno="329"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="330"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>example<sp/>shows,<sp/>how<sp/>to<sp/>register<sp/>and<sp/>use<sp/>the<sp/>JavaScript<sp/>module</highlight></codeline>
+<codeline lineno="331"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>`Scripts/JavaScript/TestModules/test.js`</highlight></codeline>
+<codeline lineno="332"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="333"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.import(&quot;TestModules/test.js&quot;,<sp/>&quot;MyModule&quot;);</highlight></codeline>
+<codeline lineno="334"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>MyModule.add(1,<sp/>2);</highlight></codeline>
+<codeline lineno="335"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="336"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="337"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>RelativeFilePath<sp/>The<sp/>module<sp/>file<sp/>path<sp/>relative<sp/>to<sp/>`Scripts/JavaScript`</highlight></codeline>
+<codeline lineno="338"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>JsModuleIdentifier<sp/>The<sp/>name<sp/>of<sp/>the<sp/>module<sp/>in<sp/>JavaScript</highlight></codeline>
+<codeline lineno="339"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a071e653b4c456f9043a354b392a082bb" kindref="member">import</ref>(const<sp/>QString&amp;<sp/>RelativeFilePath,<sp/>const<sp/>QString&amp;<sp/>JsModuleIdentifier);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="342"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="343"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Log<sp/>a<sp/>message<sp/>to<sp/>the<sp/>application<sp/>event<sp/>log.</highlight></codeline>
+<codeline lineno="344"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>function<sp/>is<sp/>similar<sp/>to<sp/>the<sp/>console.log,<sp/>console.warn<sp/>or<sp/>console.error</highlight></codeline>
+<codeline lineno="345"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>functions.<sp/>But<sp/>this<sp/>function<sp/>allows<sp/>to<sp/>provide<sp/>an<sp/>additional<sp/>source</highlight></codeline>
+<codeline lineno="346"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>parameter.<sp/>If<sp/>you<sp/>use<sp/>the<sp/>console.log<sp/>functions,<sp/>then<sp/>the<sp/>event<sp/>source<sp/>in</highlight></codeline>
+<codeline lineno="347"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>event<sp/>log<sp/>is<sp/>always<sp/>the<sp/>JavaScript<sp/>script<sp/>function<sp/>that<sp/>contains<sp/>the</highlight></codeline>
+<codeline lineno="348"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>log<sp/>statement.<sp/>If<sp/>you<sp/>would<sp/>like<sp/>to<sp/>evaluate<sp/>and<sp/>print<sp/>errors<sp/>for<sp/>a</highlight></codeline>
+<codeline lineno="349"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>certain<sp/>object<sp/>or<sp/>device,<sp/>then<sp/>it<sp/>is<sp/>better<sp/>for<sp/>the<sp/>user<sp/>if<sp/>the<sp/>source</highlight></codeline>
+<codeline lineno="350"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>if<sp/>the<sp/>name<sp/>of<sp/>the<sp/><sp/>device<sp/>or<sp/>object<sp/>that<sp/>caused<sp/>the<sp/>error.</highlight></codeline>
+<codeline lineno="351"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>For<sp/>example,<sp/>if<sp/>you<sp/>have<sp/>a<sp/>device<sp/>&quot;Pure<sp/>Water<sp/>Station&quot;<sp/>that<sp/>signals<sp/>the</highlight></codeline>
+<codeline lineno="352"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>warning<sp/>&quot;Filter<sp/>Cleaning<sp/>Required&quot;<sp/>then<sp/>you<sp/>can<sp/>use<sp/>this<sp/>function<sp/>to</highlight></codeline>
+<codeline lineno="353"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>signal<sp/>the<sp/>warning:</highlight></codeline>
+<codeline lineno="354"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\code<sp/>{.js}</highlight></codeline>
+<codeline lineno="355"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>ScriptEnv.log(ScriptEnv.LogWarning,<sp/>&quot;Filter<sp/>Cleaning<sp/>Required&quot;,<sp/>&quot;Pure<sp/>Water<sp/>Station&quot;);</highlight></codeline>
+<codeline lineno="356"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>\endcode</highlight></codeline>
+<codeline lineno="357"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="358"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>Level<sp/>The<sp/>log<sp/>level<sp/>(ScriptEnv.LogInfo,<sp/>ScriptEnv.LogWarning,<sp/>ScriptEnv.LogError)</highlight></codeline>
+<codeline lineno="359"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>Message<sp/>The<sp/>log<sp/>message<sp/>printed<sp/>in<sp/>the<sp/>Event<sp/>column</highlight></codeline>
+<codeline lineno="360"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>Source<sp/>The<sp/>name<sp/>of<sp/>the<sp/>error<sp/>source<sp/>printed<sp/>in<sp/>the<sp/>Event<sp/>source<sp/>column</highlight></codeline>
+<codeline lineno="361"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ac83af5b77b23679f3c000b9c1d83ca45" kindref="member">log</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Level,<sp/>const<sp/>QString&amp;<sp/>Message,<sp/>const<sp/>QString&amp;<sp/>Source);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="364"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="365"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>true,<sp/>if<sp/>the<sp/>debug<sp/>mode<sp/>of<sp/>the<sp/>script<sp/>engine<sp/>is<sp/>on</highlight></codeline>
+<codeline lineno="366"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a037e7a8a6427e25834567a40366be762" kindref="member">isDebugModeOn</ref>()<sp/>const;</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="368"><highlight class="comment"><sp/><sp/><sp/><sp/>///@}</highlight></codeline>
+<codeline lineno="369"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal">public<sp/>slots:</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SCRIPTENV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="374"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>-----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="375"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>slots<sp/>and<sp/>functions<sp/>are<sp/>only<sp/>here<sp/>for<sp/>testing<sp/>and<sp/>debugging</highlight></codeline>
+<codeline lineno="376"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__testSlot(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fValue,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>TextValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVariant&amp;<sp/>vValue);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__setTestProperty(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Value);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>QWidget*<sp/>__createCppOwnedWidget();</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__emitTestSignal();</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><sp/>QSharedPointer&lt;QObject&gt;<sp/>createSharedObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/><sp/>QObject*<sp/>createObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="387"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="388"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Invoke<sp/>the<sp/>function<sp/>of<sp/>the<sp/>given<sp/>object<sp/>with<sp/>the<sp/>given<sp/>parameters</highlight></codeline>
+<codeline lineno="389"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>invoke_experimental(QObject<sp/>*obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>Function,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QJSValue&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="392"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="393"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>example<sp/>variant<sp/>map</highlight></codeline>
+<codeline lineno="394"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariantMap<sp/>variantMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="397"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="398"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Returns<sp/>an<sp/>example<sp/>variant<sp/>list</highlight></codeline>
+<codeline lineno="399"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QVariantList<sp/>variantList()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="402"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="403"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Create<sp/>derived<sp/>type</highlight></codeline>
+<codeline lineno="404"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_SCRIPTABLE<sp/>QtLabb::Script::CDerived*<sp/>createDerived()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__testSignal();</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>QT_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>ScriptEnvAccess</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>Script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>QtLabb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ScriptEnvAccessH</highlight></codeline>
     </programlisting>
     <location file="C:/CodingXP/cetoni_repository/src/qtlabb/script/func_core/ScriptEnvAccess.h"/>
   </compounddef>

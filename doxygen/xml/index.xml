@@ -75,17 +75,27 @@
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425" kind="enumvalue"><name>LocationVideos</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86" kind="enumvalue"><name>LocationData</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9" kind="enumvalue"><name>LocationSettings</name></member>
-    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" kind="function"><name>getDeviceNames</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012" kind="enum"><name>eLogLevel</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012afd4a66f95165420f5a0d1059a47e72be" kind="enumvalue"><name>LogInfo</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a18d693b5ba32b6910a9d0298f4492d10" kind="enumvalue"><name>LogWarning</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012ae0bb14efee4d649277882ed678e0c75e" kind="enumvalue"><name>LogError</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a101f5e6b7a5efbb02d261fe7600220f4" kind="enumvalue"><name>LogDebug</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a591f85f840f014041a19572e67fd3af0" kind="function"><name>listDevices</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe" kind="function"><name>getDevice</name></member>
-    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" kind="function"><name>getObjectNames</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3f5fae5e0814d8311b704349f04a95d5" kind="function"><name>listObjects</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5" kind="function"><name>getObject</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518" kind="function"><name>getVar</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc" kind="function"><name>setVar</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9" kind="function"><name>setVars</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a4565a7d3c98cffa48bf2ca7234464d02" kind="function"><name>setNamedValue</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a52eec06a6ddc8dde3a4b4c8d21a18ee2" kind="function"><name>namedValue</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779" kind="function"><name>sleep</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24" kind="function"><name>leave</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d" kind="function"><name>invoke</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37" kind="function"><name>projectPath</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a071e653b4c456f9043a354b392a082bb" kind="function"><name>import</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ac83af5b77b23679f3c000b9c1d83ca45" kind="function"><name>log</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a037e7a8a6427e25834567a40366be762" kind="function"><name>isDebugModeOn</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a90eefa39b58b8bc1532e3149e2358862" kind="typedef"><name>Super</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8982d226a1069eeb17dbbb76beea4cea" kind="variable"><name>d</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a77fdf982d81046ceb5e625496c0a671f" kind="friend"><name>ScriptEnvAccessPrivate</name></member>
@@ -93,6 +103,8 @@
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a1827bb419b3b9354d2f66442e3a7f30a" kind="function"><name>helpGlobal</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a57b26389566c2e7fe39ca783306043ae" kind="function"><name>isScriptFunctionNull</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9525895a4dbe97814ec9cd17dcc36773" kind="function"><name>CScriptEnvAccess</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a039df9cc040ea14d4ea9025518d5be4a" kind="function"><name>getDeviceNames</name></member>
+    <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92101dacee867760c8990ad99ce1db7d" kind="function"><name>getObjectNames</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1aae24fc00165dff06125e655055ae28ea" kind="function"><name>help</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a283a16c9a19036e7802abf4085b33d3f" kind="function"><name>setScriptFunction</name></member>
     <member refid="classQtLabb_1_1Script_1_1CScriptEnvAccess_1acd505c3c8e56880905b52a8f9d8605cd" kind="function"><name>~CScriptEnvAccess</name></member>
