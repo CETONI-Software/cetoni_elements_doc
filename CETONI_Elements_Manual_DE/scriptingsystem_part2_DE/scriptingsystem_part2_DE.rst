@@ -104,8 +104,7 @@ Show Message Konfiguration
 Bei der Konfiguration der Nachrichtenfunktion, können Sie folgende
 Punkte konfigurieren:
 
-.. image:: Pictures/100002010000020D0000012597ED6FC376B353A6.png
-   :alt: Show Message Konfiguration
+.. image:: ../../pictures/scriptingsystem_part2/show_message_config.png
 
 .. rst-class:: guinums
 
@@ -125,6 +124,8 @@ Punkte konfigurieren:
    Option nicht auswählen und stattdessen auf Option :guinum:`❺` zurückgreifen.
 5. Hier können Sie auswählen, ob die Skriptausführung nach dem
    Anklicken von :guilabel:`OK` im Meldungsfenster fortgesetzt wird.
+6. Rich-Text - Aktivieren Sie diese Option, um Ihren Text mit 
+   Fettdruck, Kursivschrift, Farben und mehr zu formatieren. 
 
 Je nach ausgewählten Optionen verhält sich diese Funktion wie folgt:
 
@@ -208,6 +209,26 @@ Funktion folgende Nachricht ausgeben:
    wählen Sie dann aus dem Kontextmenü den Punkt Insert     
    device property um direkt die Prozessdaten von Geräten   
    auszugeben.    
+
+.. _show_message_rich_text:
+
+Rich Text Unterstützung
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Wenn Sie die :guilabel:`Enable rich text` Option aktivieren, erhalten Sie
+umfassende Möglichkeiten Ihren Nachrichtentext zu formatieren, Listen
+zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
+wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
+eingeblendet:
+
+.. image:: ../../pictures/scriptingsystem_part2/show_message_rich_text.png
+
+.. admonition:: Wichtig
+   :class: note
+
+   Rich Text benötigt wesentlich mehr Speicherplatz als normaler Text und kann 
+   die Ladezeiten von Skriptdateien verlängern. Schalten Sie diese Option daher
+   nur dann ein, wenn Sie sie wirklich benötigen!
 
 .. _variable_erzeugen:
 .. _create_variable:
@@ -593,7 +614,7 @@ Konfigurationsbereich (siehe Abbildung unten) können Sie folgende
 Parameter konfigurieren:
 
 
-.. image:: Pictures/user_input_function_config.png
+.. image:: ../../pictures/scriptingsystem_part2/user_input_config.png
 
 .. rst-class:: guinums
 
@@ -605,9 +626,11 @@ Parameter konfigurieren:
 #. **Type Hint** - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
    nach gewähltem Wert, akzeptiert der Eingabedialog nur bestimmte
    Werte.
-#. **Enable Cancellation** - Ist dieses Auswahlfeld aktiv, dann enhält der 
+#. **Allow Cancel** - Ist dieses Auswahlfeld aktiv, dann enhält der 
    angezeigte Dialog eine :guilabel:`Cancel` Schaltfläche, die den Abbruch der
    Eingabe ermöglicht.
+#. **Rich Text** - Aktivieren Sie diese Option, um Ihren Text mit Fettdruck,
+   Kursivschrift, Farben und mehr zu formatieren.
 #. **Test Input Dialog** - Durch Anklicken dieser Schaltfläche können Sie
    den Eingabedialog testweise anzeigen, um zu prüfen, wie der Anwender
    den Eingabedialog später bei der Ausführun des Scriptes sehen wird
@@ -635,6 +658,24 @@ abgebrochen hat. In diesem Fall wird eine entsprechende Meldung in den
 Event-Log geschrieben:
 
 .. image:: Pictures/input_dialog_canceled.png
+
+Rich Text Unterstützung
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Wenn Sie die :guilabel:`Rich Text` Option aktivieren, erhalten Sie
+umfassende Möglichkeiten Ihren Label-Text zu formatieren, Listen
+zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
+wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
+eingeblendet:
+
+.. image:: ../../pictures/scriptingsystem_part2/user_input_rich_text.png
+
+.. admonition:: Wichtig
+   :class: note
+
+   Rich Text benötigt wesentlich mehr Speicherplatz als normaler Text und kann 
+   die Ladezeiten von Skriptdateien verlängern. Schalten Sie diese Option daher
+   nur dann ein, wenn Sie sie wirklich benötigen!
 
 .. _script_function_call:
 
