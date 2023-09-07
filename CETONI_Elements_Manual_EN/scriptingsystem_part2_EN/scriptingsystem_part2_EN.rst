@@ -97,7 +97,7 @@ Show Message Function Configuration
 When configuring the message function, you can configure the following
 options:
 
-|Figure 1.1.5: Message configuration panel|
+.. image:: ../../pictures/scriptingsystem_part2/show_message_config.png
 
 .. rst-class:: guinums
 
@@ -117,6 +117,8 @@ options:
    select this option and use option :guinum:`❺` instead.
 5. Here you can select whether the script execution will be continued
    after clicking :guilabel:`OK` in the message box window.
+6. Rich-Text - Turn on this option to format your text with bold, italics, colors, 
+   and more. 
 
 Depending on the options selected, this function works like this:
 
@@ -198,6 +200,21 @@ function will display the following message:
    device process data you would like to print out, when    
    Show Message function is executed.  
 
+Rich Text Support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you activate the :guilabel:`Enable rich text` option, you get extensive 
+possibilities to format your message text, to design lists or to insert
+pictures and hyperlinks. If the option is activated, a toolbar similar to that
+in a word processing application will be displayed:
+
+.. image:: ../../pictures/scriptingsystem_part2/show_message_rich_text.png
+
+.. admonition:: Important
+   :class: note
+
+   Rich text needs more file space when script files are saved and may increase
+   load times of script files so switch it on only in case you really need it.
 
 .. _create-variable:
 
@@ -570,7 +587,7 @@ This function allows the reading of a single input value
 the *User Input* function (see figure below), you can configure the
 following parameters:
 
-.. image:: Pictures/user_input_function_config.png
+.. image:: ../../pictures/scriptingsystem_part2/user_input_config.png
 
 .. rst-class:: guinums
 
@@ -586,6 +603,8 @@ following parameters:
 #. **Enable Cancellation** - If this checkbox is active, the displayed 
    dialogue contains a :guilabel:`Cancel` button that allows you to cancel the
    input dialog.
+#. **Rich Text** - Turn on this option to format your text with bold, italics, 
+   colors, and more. 
 #. **Test Input Dialog** - Clicking this button allows you to test the
    input dialog to check how the user will see the input dialog later
    during execution of the script function (see figure below).
@@ -610,6 +629,23 @@ The following example script tests whether the user has cancelled the input
 dialogue. In this case, a corresponding message is written in the event log:
 
 .. image:: Pictures/input_dialog_canceled.png
+
+
+Rich Text Support for Label Text
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you activate the :guilabel:`Rich Text` option, you get extensive 
+possibilities to format your label text, to design lists or to insert
+pictures and hyperlinks. If the option is activated, a toolbar similar to that
+in a word processing application will be displayed:
+
+.. image:: ../../pictures/scriptingsystem_part2/user_input_rich_text.png
+
+.. admonition:: Important
+   :class: note
+
+   Rich text needs more file space when script files are saved and may increase
+   load times of script files so switch it on only in case you really need it.
 
 Script Function Call
 ~~~~~~~~~~~~~~~~~~~~
@@ -1625,8 +1661,6 @@ file:
 .. |Figure 1.1.3: Message window| image:: Pictures/100002010000013E000000AF6775389C8CA3B9A1.png
 
 .. |Figure 1.1.4: Event log| image:: Pictures/10000201000002B30000009CE9126D1E71812C4B.png
-
-.. |Figure 1.1.5: Message configuration panel| image:: Pictures/100002010000020D0000012597ED6FC376B353A6.png
 
 .. |Figure 1.1.6: Using variables in Show Message function| image:: Pictures/10000201000001DB000000D68C630A99C4BAD6D1.png
 
