@@ -40,7 +40,7 @@ Right after the initial installation of the software, you have an active
 demo license. To view your installed licenses, select 
 :menuselection:`Help --> Show License Information` from the main menu.
 
-.. image:: Pictures/1000020100000174000000D78571510911B97AEE.png
+.. image:: ../../img/qmixelements/1000020100000174000000D78571510911B97AEE.png
 
 The demo license allows you to create device configurations with
 simulated devices and to test all functions of the software.
@@ -70,7 +70,7 @@ Overview of Activated Licenses
 Using the menu item :menuselection:`Help --> Show License Information` in the main menu
 of the application, you can display an overview of the current licenses:
 
-.. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
+.. image:: ../../img/qmixelements/10000201000001D800000133EEE683E0C6194C68.png
 
 Remove Licenses
 ~~~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ configuration:
 Create Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100002010000009600000096EA64110C769BEAC3.png
+.. image:: ../../img/qmixelements/100002010000009600000096EA64110C769BEAC3.png
    :width: 2cm
    :height: 2cm
    :align: left
@@ -119,7 +119,7 @@ configuration that was previously installed on your system.
 Import Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/10000201000000960000009603BB5C04B1480424.png
+.. image:: ../../img/qmixelements/10000201000000960000009603BB5C04B1480424.png
    :width: 2cm
    :height: 2cm
    :align: left
@@ -148,7 +148,7 @@ Perform the following steps to import an existing device configuration:
 #. Select the :menuselection:`Device --> Import Configuration` menu item from the main
    menu.
 
-   .. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
+   .. image:: ../../img/qmixelements/10000000000001310000010F1E67A086173830FE.png
 
 #. Now select whether you
    want to import a folder with a device configuration (:guilabel:`Import Folder`) 
@@ -157,7 +157,7 @@ Perform the following steps to import an existing device configuration:
    device configurations are stored in folders. Therefore, select the
    item :guilabel:`Import Folder`.
 
-   .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
+   .. image:: ../../img/qmixelements/1000000000000214000000A60483FD84C031337D.png
 
 #. In the dialog that now opens, select the :file:`DeviceConfiguration`
    directory on the installation CD or browse to another directory
@@ -220,7 +220,7 @@ Show User Manual
 The software PDF manual can be accessed via the application's help menu
 (:menuselection:`Help --> Show PDF Manual`).
 
-.. image:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
+.. image:: ../../img/qmixelements/10000000000000DC000000A56971ED828CA56C1E.png
 
 .. admonition:: Important
    :class: note
@@ -246,7 +246,7 @@ The Main Application Window
 The application window of the software consists of the following
 central components:
 
-.. figure:: Pictures/100002010000040500000272304B3AA146FD9FA5.png
+.. figure:: ../../img/qmixelements/100002010000040500000272304B3AA146FD9FA5.png
 
 .. rst-class:: guinums
 
@@ -449,7 +449,7 @@ application, you can use the context menu of a view group to close all
 other groups. To do this, select :guilabel:`Close Other Areas` from the context
 menu of the view group.
 
-.. image:: Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
+.. image:: ../../img/qmixelements/1000020100000224000000A46CB57E1DDB2A63DE.png
 
 Perspectives
 ------------
@@ -487,7 +487,7 @@ way as when the perspective was created. Alternatively, you can access
 the perspectives from the main menu. To do this, select the menu item
 :menuselection:`Window --> Perspective`.
 
-.. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
+.. image:: ../../img/qmixelements/1000020100000225000000F171D95022C6176EB6.png
 
 .. tip::
    If you have lost the overview when arranging  
@@ -499,7 +499,7 @@ the perspectives from the main menu. To do this, select the menu item
 Creating Perspectives
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
+.. image:: ../../img/qmixelements/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
    :width: 60
    :align: left
 
@@ -539,7 +539,7 @@ The sidebar allows you to quickly display different views. Some buttons
 show a specific view directly. Other buttons allow several views to be
 displayed and display a menu for selecting the view (see figure below).
 
-.. image:: Pictures/10000201000000E10000005F05B9041439F8E1EF.png
+.. image:: ../../img/qmixelements/10000201000000E10000005F05B9041439F8E1EF.png
 
 .. tip::
    The sidebar, and also all toolbars, can be    
@@ -558,7 +558,7 @@ Important events are displayed in the :guilabel:`Event Log`. This includes notes
 warnings and error messages. The view with the event log is
 automatically displayed when an event is written to the log.
 
-.. image:: Pictures/eventlog.png
+.. image:: ../../img/qmixelements/eventlog.png
 
 If you want to display the event log view manually, select 
 :menuselection:`Window --> Show View --> Event Log`` from the main menu of the 
@@ -570,7 +570,7 @@ The event log lists the individual
 events in chronological order. The latest event is always in the first
 row. This can be seen from the time stamps in the first column.
 
-.. image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
+.. image:: ../../img/qmixelements/100002010000037A000001264850BAB4BC8CFF1A.png
 
 When connecting to the device hardware, it may happen that
 device errors are received and displayed in the event log. You can
@@ -615,9 +615,9 @@ Event Log Actions
 Various actions are available in the Event Log header :guinum:`❶` or via the 
 context menu :guinum:`❷`:
 
-.. image:: Pictures/eventlog_contextmenu.png
+.. image:: ../../img/qmixelements/eventlog_contextmenu.png
 
-.. image:: Pictures/funnel.svg
+.. image:: ../../img/qmixelements/funnel.svg
    :width: 60
    :align: left
 
@@ -625,9 +625,9 @@ With the :guilabel:`Filter` action, you can filter the event log according to a
 certain event category. This makes it easier to keep track of many entries in
 the log or to find specific events.
 
-.. image:: Pictures/eventlog_filter.png
+.. image:: ../../img/qmixelements/eventlog_filter.png
 
-.. image:: Pictures/scroll_lock.svg
+.. image:: ../../img/qmixelements/scroll_lock.svg
    :width: 60
    :align: left
 
@@ -638,7 +638,7 @@ chronological sequence of events, this automatic scrolling may be undesirable.
 In this case, check the :guilabel:`Scroll Lock` button to deactivate automatic 
 scrolling.
 
-.. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
+.. image:: ../../img/qmixelements/10000F570000350500003505D59CCCB32AAEA5EE.svg
    :width: 60
    :align: left
 
@@ -646,11 +646,11 @@ By clicking the :guilabel:`Export To File` button, you can export the
 contents of the event log to a text file. After you have assigned a file
 name, the file is saved and you can open it in any text editor.
 
-.. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
+.. image:: ../../img/qmixelements/1000020100000258000000551980D8BBF41A9394.png
 
 |
 
-.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+.. image:: ../../img/qmixelements/100004F9000034EB000034EB95984B664DF6577B.svg
    :width: 60
    :align: left
 
@@ -658,7 +658,7 @@ You can clear the event log by pressing the :guilabel:`Clear Event Log` button.
 
 |
 
-.. image:: Pictures/goto_script_function2.svg
+.. image:: ../../img/qmixelements/goto_script_function2.svg
    :width: 60
    :align: left
 
@@ -686,7 +686,7 @@ In the toolbar, you see the :guilabel:`Connect to device` button signified by th
 plug icon (see figure below). Press this button to connect CETONI
 Elements with your device(s).
 
-.. image:: Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
+.. image:: ../../img/qmixelements/100000000000013B000000B23CF02D461CC3D4A3.png
 
 .. admonition:: Important
    :class: note
@@ -938,11 +938,11 @@ following two screenshots show examples of a customized interface:
 
 Example 1: Dark design with alternative accent color
 
-.. image:: Pictures/1000020100000430000002BBC33448126A09A2D3.png
+.. image:: ../../img/qmixelements/1000020100000430000002BBC33448126A09A2D3.png
 
 Example 2: Light design with blue accent color
 
-.. image:: Pictures/1000020100000430000002BCC96C31CF5E61404D.png
+.. image:: ../../img/qmixelements/1000020100000430000002BCC96C31CF5E61404D.png
 
 Restricting Access to the User Interface (UI)
 ---------------------------------------------
@@ -1023,113 +1023,113 @@ is immediately adapted according to the selected configuration. If you
 want to leave the protected mode, open the selection dialog again and
 then select the default configuration.
 
-.. |Figure 1.1: First start of CETONI Elements – Startup Screen| image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
+.. |Figure 1.1: First start of CETONI Elements – Startup Screen| image:: ../../img/qmixelements/1000020100000422000002BE2B654AE685AA4D8E.png
 
 
-.. |image4| image:: Pictures/10000201000001D6000000AE5ED5B8BD0CA17D65.png
+.. |image4| image:: ../../img/qmixelements/10000201000001D6000000AE5ED5B8BD0CA17D65.png
 
-.. |image5| image:: Pictures/10000201000001ED00000145C29F8E208FCC285C.png
+.. |image5| image:: ../../img/qmixelements/10000201000001ED00000145C29F8E208FCC285C.png
 
-.. |image6| image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png
+.. |image6| image:: ../../img/qmixelements/10000201000001ED0000015700FCDFDE9D20030C.png
 
-.. |Figure 1.3: Assign a configuration name| image:: Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
+.. |Figure 1.3: Assign a configuration name| image:: ../../img/qmixelements/10000000000001B00000009EB2ADDF0AD16AE80B.png
 
-.. |image12| image:: Pictures/10000201000002810000018F6EE2B3E17DBB7FD1.png
+.. |image12| image:: ../../img/qmixelements/10000201000002810000018F6EE2B3E17DBB7FD1.png
 
-.. |Figure 1.4: Restart application| image:: Pictures/100000000000020900000097955C208F8F030D3B.png
+.. |Figure 1.4: Restart application| image:: ../../img/qmixelements/100000000000020900000097955C208F8F030D3B.png
 
-.. |Figure 1.5: Export device configuration| image:: Pictures/1000000000000176000000AAFAC8C916053B5D6A.png
+.. |Figure 1.5: Export device configuration| image:: ../../img/qmixelements/1000000000000176000000AAFAC8C916053B5D6A.png
 
-.. |Figure 1.7: Displaying the installed software version| image:: Pictures/100000000000023E0000011C5BF7D6D89E212C48.png
+.. |Figure 1.7: Displaying the installed software version| image:: ../../img/qmixelements/100000000000023E0000011C5BF7D6D89E212C48.png
 
-.. |Figure 1.9: Displaying Views via the Menu| image:: Pictures/10000201000001BF000000EB5BF27DBB42FBAF06.png
+.. |Figure 1.9: Displaying Views via the Menu| image:: ../../img/qmixelements/10000201000001BF000000EB5BF27DBB42FBAF06.png
 
-.. |Figure 1.10: Displaying Views for Devices| image:: Pictures/1000020100000221000000ABD10E7731B686C5B3.png
+.. |Figure 1.10: Displaying Views for Devices| image:: ../../img/qmixelements/1000020100000221000000ABD10E7731B686C5B3.png
 
-.. |Figure 1.11: Move View via Drag & Drop| image:: Pictures/100002010000036A000001C8BBF4BBC66184FB09.png
+.. |Figure 1.11: Move View via Drag & Drop| image:: ../../img/qmixelements/100002010000036A000001C8BBF4BBC66184FB09.png
 
-.. |Figure 1.12: Detach view from its position via context menu| image:: Pictures/10000201000001310000009DE8129AEE37B00CF4.png
+.. |Figure 1.12: Detach view from its position via context menu| image:: ../../img/qmixelements/10000201000001310000009DE8129AEE37B00CF4.png
 
-.. |Figure 1.13: Drop target markers| image:: Pictures/10000201000002890000014BCF8FC8087ECC35C5.png
+.. |Figure 1.13: Drop target markers| image:: ../../img/qmixelements/10000201000002890000014BCF8FC8087ECC35C5.png
 
-.. |Figure 1.14: Drop Preview Display| image:: Pictures/10000201000002890000014B5699FFD5D09BAADF.png
+.. |Figure 1.14: Drop Preview Display| image:: ../../img/qmixelements/10000201000002890000014B5699FFD5D09BAADF.png
 
-.. |Figure 1.15: View inserted on the left side| image:: Pictures/10000201000002890000014BC4687441A2A645E3.png
+.. |Figure 1.15: View inserted on the left side| image:: ../../img/qmixelements/10000201000002890000014BC4687441A2A645E3.png
 
-.. |Figure 1.16: View Group| image:: Pictures/1000020100000252000000C9F4392403DF96FF6D.png
+.. |Figure 1.16: View Group| image:: ../../img/qmixelements/1000020100000252000000C9F4392403DF96FF6D.png
 
-.. |Figure 1.17: Drop target markers| image:: Pictures/1000020100000289000000F51BAC327624A0EC0B.png
+.. |Figure 1.17: Drop target markers| image:: ../../img/qmixelements/1000020100000289000000F51BAC327624A0EC0B.png
 
-.. |Figure 1.18: Insert View as Additional Tab| image:: Pictures/1000020100000289000000F59743DC452A74F108.png
+.. |Figure 1.18: Insert View as Additional Tab| image:: ../../img/qmixelements/1000020100000289000000F59743DC452A74F108.png
 
-.. |Figure 1.19: Moving View Groups| image:: Pictures/10000201000002E4000001531CF5648A1020DCB4.png
+.. |Figure 1.19: Moving View Groups| image:: ../../img/qmixelements/10000201000002E4000001531CF5648A1020DCB4.png
 
-.. |Figure 1.20: Undock View Group| image:: Pictures/1000020100000264000000FC1AB96C910DA572FD.png
+.. |Figure 1.20: Undock View Group| image:: ../../img/qmixelements/1000020100000264000000FC1AB96C910DA572FD.png
 
-.. |Figure 1.21: Closing View| image:: Pictures/1000020100000264000000BF3127F5F8B75874DD.png
+.. |Figure 1.21: Closing View| image:: ../../img/qmixelements/1000020100000264000000BF3127F5F8B75874DD.png
 
-.. |Figure 1.22: Closing View Group| image:: Pictures/1000020100000264000000BF9FA7CB8EE15E4D72.png
+.. |Figure 1.22: Closing View Group| image:: ../../img/qmixelements/1000020100000264000000BF9FA7CB8EE15E4D72.png
 
-.. |Figure 1.23: Opening the View Menu of a View Group| image:: Pictures/100002010000026D000000D2FF18CEC652F6FACF.png
+.. |Figure 1.23: Opening the View Menu of a View Group| image:: ../../img/qmixelements/100002010000026D000000D2FF18CEC652F6FACF.png
 
-.. |Figure 1.24: Close all inactive views of a group| image:: Pictures/10000201000002000000006B0A134CD1AC8B3316.png
+.. |Figure 1.24: Close all inactive views of a group| image:: ../../img/qmixelements/10000201000002000000006B0A134CD1AC8B3316.png
 
-.. |image19| image:: Pictures/100002010000021A0000002B78422E539BC46AD1.png
+.. |image19| image:: ../../img/qmixelements/100002010000021A0000002B78422E539BC46AD1.png
 
-.. |Figure 1.26: Opening existing perspective| image:: Pictures/1000020100000220000000E4C70099429E65895A.png
+.. |Figure 1.26: Opening existing perspective| image:: ../../img/qmixelements/1000020100000220000000E4C70099429E65895A.png
 
-.. |Figure : Create Perspective| image:: Pictures/10000201000000CA00000080463140FE0D508006.png
+.. |Figure : Create Perspective| image:: ../../img/qmixelements/10000201000000CA00000080463140FE0D508006.png
 
-.. |Figure : Manage Perspectives| image:: Pictures/10000201000001A9000000C56CAD6237DD6652DC.png
+.. |Figure : Manage Perspectives| image:: ../../img/qmixelements/10000201000001A9000000C56CAD6237DD6652DC.png
 
-.. |Figure : Deleting Perspectives| image:: Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
+.. |Figure : Deleting Perspectives| image:: ../../img/qmixelements/10000201000001E4000000EAEAB5054A1B53326F.png
 
-.. |Figure : Showing Event Log View| image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
+.. |Figure : Showing Event Log View| image:: ../../img/qmixelements/10000201000001BC000000A1C8DF9C7A6A7811D1.png
 
-.. |Figure 1.34: Browse project folder| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
+.. |Figure 1.34: Browse project folder| image:: ../../img/qmixelements/1000000000000189000000B4EABB56CB8A567B96.png
 
-.. |Figure 1.35: Creating new project| image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
+.. |Figure 1.35: Creating new project| image:: ../../img/qmixelements/1000000000000189000000B4EABB56CB8A567B96.png
 
-.. |Figure 1.36: Configuration dialog for creation of a new project| image:: Pictures/100000000000025000000166DB408F1FB7BB2D47.png
+.. |Figure 1.36: Configuration dialog for creation of a new project| image:: ../../img/qmixelements/100000000000025000000166DB408F1FB7BB2D47.png
 
-.. |Figure 1.37: Open an existing project| image:: Pictures/1000000000000170000000A7C5E2BBA82D900D3D.png
+.. |Figure 1.37: Open an existing project| image:: ../../img/qmixelements/1000000000000170000000A7C5E2BBA82D900D3D.png
 
-.. |Figure 1.38: Dialog for opening an existing project| image:: Pictures/100000000000020B00000124D393F3498C85002B.png
+.. |Figure 1.38: Dialog for opening an existing project| image:: ../../img/qmixelements/100000000000020B00000124D393F3498C85002B.png
 
-.. |Figure 1.39: Open the project export window| image:: Pictures/10000201000001A8000000BB1B03350B9BEA1D79.png
+.. |Figure 1.39: Open the project export window| image:: ../../img/qmixelements/10000201000001A8000000BB1B03350B9BEA1D79.png
 
-.. |Figure 1.40: Selection of project directories for export| image:: Pictures/1000020100000298000001FB7D3433258DF59F1D.png
+.. |Figure 1.40: Selection of project directories for export| image:: ../../img/qmixelements/1000020100000298000001FB7D3433258DF59F1D.png
 
-.. |Figure 1.41: Status display project export| image:: Pictures/10000201000002E90000011C77337172831B2410.png
+.. |Figure 1.41: Status display project export| image:: ../../img/qmixelements/10000201000002E90000011C77337172831B2410.png
 
-.. |Figure 1.42: Selecting project import| image:: Pictures/10000201000001AA000000C9957BE44F06738675.png
+.. |Figure 1.42: Selecting project import| image:: ../../img/qmixelements/10000201000001AA000000C9957BE44F06738675.png
 
-.. |Figure 1.43: Enter project name| image:: Pictures/10000201000001B00000009E14CEAFCC900E13F3.png
+.. |Figure 1.43: Enter project name| image:: ../../img/qmixelements/10000201000001B00000009E14CEAFCC900E13F3.png
 
-.. |Figure 1.44: Status display project import| image:: Pictures/10000201000002E90000011C77337172831B2410.png
+.. |Figure 1.44: Status display project import| image:: ../../img/qmixelements/10000201000002E90000011C77337172831B2410.png
 
-.. |image42| image:: Pictures/10000201000001730000009795A0B0ECA50C9747.png
+.. |image42| image:: ../../img/qmixelements/10000201000001730000009795A0B0ECA50C9747.png
 
-.. |Figure 1.45: Settings dialog| image:: Pictures/100002010000021200000126AC99A172AA6E85CC.png
+.. |Figure 1.45: Settings dialog| image:: ../../img/qmixelements/100002010000021200000126AC99A172AA6E85CC.png
 
-.. |image43| image:: Pictures/10000201000002890000017285BB5129C447B7B6.png
+.. |image43| image:: ../../img/qmixelements/10000201000002890000017285BB5129C447B7B6.png
 
-.. |Figure 1.46: Open UI Access Configuration| image:: Pictures/1000020100000161000000ADAFFCD2193104E170.png
+.. |Figure 1.46: Open UI Access Configuration| image:: ../../img/qmixelements/1000020100000161000000ADAFFCD2193104E170.png
 
-.. |Figure 1.47: Configuration dialog for UI access configuration| image:: Pictures/100002010000023700000105D086995A6867BEE3.png
+.. |Figure 1.47: Configuration dialog for UI access configuration| image:: ../../img/qmixelements/100002010000023700000105D086995A6867BEE3.png
 
-.. |Figure 1.48: Enter password for UI access mode selection| image:: Pictures/1000020100000283000000ABD9FB0393AF480FE9.png
+.. |Figure 1.48: Enter password for UI access mode selection| image:: ../../img/qmixelements/1000020100000283000000ABD9FB0393AF480FE9.png
 
-.. |Figure 1.49: Switching UI Access Mode| image:: Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
+.. |Figure 1.49: Switching UI Access Mode| image:: ../../img/qmixelements/1000020100000156000000A7DF47A4FDADBD88ED.png
 
-.. |log_info| image:: Pictures/information.svg
+.. |log_info| image:: ../../img/qmixelements/information.svg
    :width: 40
 
-.. |log_warn| image:: Pictures/warning.svg
+.. |log_warn| image:: ../../img/qmixelements/warning.svg
    :width: 40
 
-.. |log_err| image:: Pictures/error.svg
+.. |log_err| image:: ../../img/qmixelements/error.svg
    :width: 40
 
-.. |log_user| image:: Pictures/question.svg
+.. |log_user| image:: ../../img/qmixelements/question.svg
    :width: 40

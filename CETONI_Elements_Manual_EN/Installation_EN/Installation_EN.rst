@@ -51,7 +51,7 @@ of the CETONI Elements software and the hardware drivers.
 The Installation Wizard now leads you through the installation of the
 software.
 
-.. image:: Pictures/10000201000001F300000184336086C413DC9C5A.png
+.. image:: ../../img/installation/10000201000001F300000184336086C413DC9C5A.png
 
 The hardware device drivers are
 installed during the installation. This step is only required if the
@@ -59,7 +59,7 @@ drivers are not already installed on your computer. If the hardware
 drivers are already installed, please deactivate the driver components
 (Figure below).
 
-.. image:: Pictures/10000201000001F300000184538F02512CCA7AB6.png
+.. image:: ../../img/installation/10000201000001F300000184538F02512CCA7AB6.png
 
 System Requirements
 ----------------------------
@@ -93,7 +93,7 @@ lead to malfunctions of the hardware device driver.
 To avoid disconnections from the device, please disable selective power
 saving for USB ports in the power options:
 
-.. image:: Pictures/10000201000001B4000001D8B5FAC825645DA2C5.png
+.. image:: ../../img/installation/10000201000001B4000001D8B5FAC825645DA2C5.png
 
 Installing USB Device Drivers
 -----------------------------

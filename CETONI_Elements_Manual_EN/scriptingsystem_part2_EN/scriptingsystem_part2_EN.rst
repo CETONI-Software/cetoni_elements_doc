@@ -97,7 +97,7 @@ Show Message Function Configuration
 When configuring the message function, you can configure the following
 options:
 
-.. image:: ../../pictures/scriptingsystem_part2/show_message_config.png
+.. image:: ../../img/scriptingsystem_part2/show_message_config.png
 
 .. rst-class:: guinums
 
@@ -208,7 +208,7 @@ possibilities to format your message text, to design lists or to insert
 pictures and hyperlinks. If the option is activated, a toolbar similar to that
 in a word processing application will be displayed:
 
-.. image:: ../../pictures/scriptingsystem_part2/show_message_rich_text.png
+.. image:: ../../img/scriptingsystem_part2/show_message_rich_text.png
 
 .. admonition:: Important
    :class: note
@@ -587,7 +587,7 @@ This function allows the reading of a single input value
 the *User Input* function (see figure below), you can configure the
 following parameters:
 
-.. image:: ../../pictures/scriptingsystem_part2/user_input_config.png
+.. image:: ../../img/scriptingsystem_part2/user_input_config.png
 
 .. rst-class:: guinums
 
@@ -639,7 +639,7 @@ possibilities to format your label text, to design lists or to insert
 pictures and hyperlinks. If the option is activated, a toolbar similar to that
 in a word processing application will be displayed:
 
-.. image:: ../../pictures/scriptingsystem_part2/user_input_rich_text.png
+.. image:: ../../img/scriptingsystem_part2/user_input_rich_text.png
 
 .. admonition:: Important
    :class: note

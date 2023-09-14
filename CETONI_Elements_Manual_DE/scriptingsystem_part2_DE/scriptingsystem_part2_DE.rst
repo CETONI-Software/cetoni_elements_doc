@@ -104,7 +104,7 @@ Show Message Konfiguration
 Bei der Konfiguration der Nachrichtenfunktion, können Sie folgende
 Punkte konfigurieren:
 
-.. image:: ../../pictures/scriptingsystem_part2/show_message_config.png
+.. image:: ../../img/scriptingsystem_part2/show_message_config.png
 
 .. rst-class:: guinums
 
@@ -221,7 +221,7 @@ zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
 wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
 eingeblendet:
 
-.. image:: ../../pictures/scriptingsystem_part2/show_message_rich_text.png
+.. image:: ../../img/scriptingsystem_part2/show_message_rich_text.png
 
 .. admonition:: Wichtig
    :class: note
@@ -614,7 +614,7 @@ Konfigurationsbereich (siehe Abbildung unten) können Sie folgende
 Parameter konfigurieren:
 
 
-.. image:: ../../pictures/scriptingsystem_part2/user_input_config.png
+.. image:: ../../img/scriptingsystem_part2/user_input_config.png
 
 .. rst-class:: guinums
 
@@ -668,7 +668,7 @@ zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
 wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
 eingeblendet:
 
-.. image:: ../../pictures/scriptingsystem_part2/user_input_rich_text.png
+.. image:: ../../img/scriptingsystem_part2/user_input_rich_text.png
 
 .. admonition:: Wichtig
    :class: note

@@ -56,7 +56,7 @@ Software und der Hardware Treiber.
 Der Installationsassistent wird Sie nun durch die Installation der
 Software führen.
 
-.. image:: Pictures/10000201000001F300000184336086C413DC9C5A.png
+.. image:: ../../img/installation/10000201000001F300000184336086C413DC9C5A.png
 
 Während der
 Installation werden die Hardware Gerätetreiber installiert. Dieser
@@ -64,7 +64,7 @@ Schritt ist nur notwendig, wenn die Treiber auf Ihrem Rechner noch nicht
 installiert wurden. Sind die Hardwaretreiber bereits installiert,
 deaktivieren Sie bitte die Treiber Komponenten (siehe Abbildung unten).
 
-.. image:: Pictures/10000201000001F300000184538F02512CCA7AB6.png
+.. image:: ../../img/installation/10000201000001F300000184538F02512CCA7AB6.png
 
 Minimale Systemanforderungen
 -------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ Fehlfunktionen des Hardware-Gerätetreibers führen kann.
 Deaktivieren Sie bitte in den Energioptionen das selektive Energiesparen
 für USB-Anschlüsse, um Verbindungsabbrüche zum Gerät zu vermeiden:
 
-.. image:: Pictures/10000201000001B4000001D8B5FAC825645DA2C5.png
+.. image:: ../../img/installation/10000201000001B4000001D8B5FAC825645DA2C5.png
 
 .. admonition:: Achtung
    :class: caution

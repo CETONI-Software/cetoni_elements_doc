@@ -17,7 +17,7 @@ Plugins geladen. D.h. die Software lädt nur ihr Kern-System aber keine
 gerätespezifischen Plugins. Dies erkennen Sie daran, dass Ihnen von der
 Software der Startbildschirm angezeigt wird (Abbildung unten).
 
-.. image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
+.. image:: ../../img/qmixelements/1000020100000422000002BE2B654AE685AA4D8E.png
 
 Um mit der Software
 ihre Geräte ansteuern zu können, müssen Sie eine Gerätekonfiguration
@@ -52,19 +52,19 @@ aktive Demo-Lizenz. Um sich Ihre installierten Lizenzen anzeigen zu
 lassen, wählen Sie im Hauptmenü den Punkt
 :menuselection:`Help --> Show License Information`.
 
-.. image:: Pictures/1000020100000174000000D78571510911B97AEE.png
+.. image:: ../../img/qmixelements/1000020100000174000000D78571510911B97AEE.png
 
 Mit der Demo-Lizenz können Sie Gerätekonfigurationen mit simulierten
 Geräten erstellen und alle Funktionen der Software testen.
 
-.. image:: Pictures/10000201000001D6000000AE5ED5B8BD0CA17D65.png
+.. image:: ../../img/qmixelements/10000201000001D6000000AE5ED5B8BD0CA17D65.png
 
 Um die Software zur Steuerung Ihrer Geräte verwenden zu
 können, müssen Sie den Lizenzcode den Sie erhalten haben in der Software
 registrieren. Wählen Sie dafür im Hauptmenü den Punkt 
 :menuselection:`Help --> Activate License`.
 
-.. image:: Pictures/10000201000001ED00000145C29F8E208FCC285C.png
+.. image:: ../../img/qmixelements/10000201000001ED00000145C29F8E208FCC285C.png
 
 Geben Sie in dem Dialog Ihren Lizenzcode ein und klicken Sie
 anschließend auf die Schaltfläche Activate. Wenn Sie den Lizenzschlüssel
@@ -72,7 +72,7 @@ korrekt eingegeben haben, wird Ihnen die Aktivierung der Lizenz
 bestätigt und nach dem Neustart der Software können Sie mit der
 aktivierten Lizenz arbeiten:
 
-.. image:: Pictures/10000201000001ED0000015700FCDFDE9D20030C.png 
+.. image:: ../../img/qmixelements/10000201000001ED0000015700FCDFDE9D20030C.png 
 
 Wenn Sie Ihre Lizenz upgraden oder zusätzliche Lizenzen für
 weitere Add-ons aktivieren möchten, können Sie genau wie oben
@@ -86,7 +86,7 @@ Information im Hauptmenü der
 Anwendung, können Sie sich eine Übersicht der aktuellen Lizenzen
 anzeigen lassen:
 
-.. image:: Pictures/10000201000001D800000133EEE683E0C6194C68.png
+.. image:: ../../img/qmixelements/10000201000001D800000133EEE683E0C6194C68.png
 
 
 Lizenzen entfernen
@@ -107,12 +107,12 @@ aller Geräte und Module beschreiben, die zusammen ein komplexes System
 oder Gerät bilden. Im Startbildschirm sehen Sie alle Möglichkeiten, 
 eine entsprechende Gerätekonfiguration zu laden:
 
-.. image:: Pictures/1000020100000422000002BE2B654AE685AA4D8E.png
+.. image:: ../../img/qmixelements/1000020100000422000002BE2B654AE685AA4D8E.png
 
 Gerätekonfiguration erstellen  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100002010000009600000096EA64110C769BEAC3.png
+.. image:: ../../img/qmixelements/100002010000009600000096EA64110C769BEAC3.png
    :width: 2cm
    :height: 2cm
    :align: left
@@ -135,7 +135,7 @@ Mit dieser Schaltfläche können Sie eine vorhandene Gerätekonfiguration laden,
 Gerätekonfiguration importieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/10000201000000960000009603BB5C04B1480424.png
+.. image:: ../../img/qmixelements/10000201000000960000009603BB5C04B1480424.png
    :width: 2cm
    :height: 2cm
    :align: left
@@ -163,7 +163,7 @@ folgenden Schritte durch:
 
 #. Wählen Sie im Hauptmenü den Menüpunkt :menuselection:`Device --> Import Configuration`.
 
-    .. image:: Pictures/10000000000001310000010F1E67A086173830FE.png
+    .. image:: ../../img/qmixelements/10000000000001310000010F1E67A086173830FE.png
 
 #. Wählen Sie nun, ob
    Sie einen Ordner mit einer Gerätekonfiguration importieren möchten
@@ -172,24 +172,24 @@ folgenden Schritte durch:
    Gerät erhalten haben, sind die Gerätekonfigurationen in Ordnern
    abgelegt. Wählen Sie deshalb den Punkt :guilabel:`Import Folder`.
 
-    .. image:: Pictures/1000000000000214000000A60483FD84C031337D.png
+    .. image:: ../../img/qmixelements/1000000000000214000000A60483FD84C031337D.png
 
 #. In dem Verzeichnisdialog, der nun angezeigt wird, wählen Sie das
    Verzeichnis :file:`DeviceConfiguration` auf der Installations-CD oder ein
    anderes Verzeichnis, dass eine gültige Gerätekonfiguration enthält.
 
-     .. image:: Pictures/10000201000002810000018F6EE2B3E17DBB7FD1.png
+     .. image:: ../../img/qmixelements/10000201000002810000018F6EE2B3E17DBB7FD1.png
     
 #. Geben Sie nun noch einen kurzen eindeutigen Namen für die
    Konfiguration ein, unter dem diese auf ihrem Rechner gespeichert
    werden soll.
 
-     .. image:: Pictures/10000000000001B00000009EB2ADDF0AD16AE80B.png
+     .. image:: ../../img/qmixelements/10000000000001B00000009EB2ADDF0AD16AE80B.png
       :alt: Konfigurationsnamen vergeben
 
 #. Bestätigen Sie den Neustart der Anwendung.
 
-     .. image:: Pictures/100000000000020900000097955C208F8F030D3B.png
+     .. image:: ../../img/qmixelements/100000000000020900000097955C208F8F030D3B.png
       :alt: Anwendung neu starten
 
 Nach diesen Schritten sollte die Software nun mit der gewählten Konfiguration 
@@ -210,7 +210,7 @@ wenn Sie eine Gerätekonfiguration an CETONI senden möchten. Um eine
 Gerätekonfiguration zu exportieren, wählen Sie im Hauptmenü den
 Punkt :menuselection:`Device --> Export Configuration`.
 
-.. image:: Pictures/1000000000000176000000AAFAC8C916053B5D6A.png
+.. image:: ../../img/qmixelements/1000000000000176000000AAFAC8C916053B5D6A.png
    :alt: Gerätekonfiguration exportieren
 
 Gerätekonfigurationen werden als komprimierte :file:`*.qcf` Dateien exportiert.
@@ -239,7 +239,7 @@ Die Bedienungsanleitung der Software können Sie sich über den
 Menüpunkt :menuselection:`Help --> Show PDF Manual` im Hauptmenü der 
 Anwendung anzeigen lassen.
 
-.. image:: Pictures/10000000000000DC000000A56971ED828CA56C1E.png
+.. image:: ../../img/qmixelements/10000000000000DC000000A56971ED828CA56C1E.png
 
 .. admonition:: Wichtig
    :class: note
@@ -257,7 +257,7 @@ Hauptmenü den Punkt :menuselection:`Help --> About CETONI Elements`. Es wird nu
 ein Fenster eingeblendet (siehe Abbildung unten), in dem die
 Versionsnummer der Software angezeigt wird.
 
-.. image:: Pictures/100000000000023E0000011C5BF7D6D89E212C48.png
+.. image:: ../../img/qmixelements/100000000000023E0000011C5BF7D6D89E212C48.png
 
 
 Übersicht CETONI Elements Hauptfenster
@@ -266,7 +266,7 @@ Versionsnummer der Software angezeigt wird.
 Das Anwendungsfenster der CETONI Elements Software besteht im
 Wesentlichen aus den folgenden Komponenten:
 
-.. image:: Pictures/100002010000040500000272304B3AA146FD9FA5.png
+.. image:: ../../img/qmixelements/100002010000040500000272304B3AA146FD9FA5.png
 
 .. rst-class:: guinums
 
@@ -325,7 +325,7 @@ die in der Anwendung zur Verfügung stehen. Klicken Sie einfach den
 entsprechenden Menüpunkt an, um den View einzublenden (siehe Abbildung
 unten).
 
-.. image:: Pictures/10000201000001BF000000EB5BF27DBB42FBAF06.png
+.. image:: ../../img/qmixelements/10000201000001BF000000EB5BF27DBB42FBAF06.png
    :alt: Views über das Menü einblenden
 
 
@@ -334,7 +334,7 @@ Geräten kann es sein, dass für jedes Gerät ein eigener View existiert
 (z.B. für Kameras). In diesem Fall sind die Views im View-Menü in einer
 Gruppe zusammengefasst und können einzeln eingeblendet werden.
 
-.. image:: Pictures/1000020100000221000000ABD10E7731B686C5B3.png
+.. image:: ../../img/qmixelements/1000020100000221000000ABD10E7731B686C5B3.png
    :alt: Views für Geräte einblenden
 
 
@@ -353,7 +353,7 @@ mit gedrückter Maustaste aus seiner Position heraus :guinum:`❷`. Solange Sie
 die Maustaste nicht loslassen, können Sie den View frei verschieben
 (siehe Abbildung unten).
 
-.. image:: Pictures/100002010000036A000001C8BBF4BBC66184FB09.png
+.. image:: ../../img/qmixelements/100002010000036A000001C8BBF4BBC66184FB09.png
    :alt: View via Drag & Drop verschieben
 
 Alternativ können Sie
@@ -362,7 +362,7 @@ herauslösen. Die dritte Möglichkeit ist das Kontextmenü des Views.
 Klicken Sie dafür mit der rechten Maustaste in den Karteireiter und
 wählen Sie aus dem Kontextmenü den Punkt :guilabel:`Detach`.
 
-.. image:: Pictures/10000201000001310000009DE8129AEE37B00CF4.png
+.. image:: ../../img/qmixelements/10000201000001310000009DE8129AEE37B00CF4.png
    :alt: View via Kontextmenü aus seiner Position lösen
 
 Wenn
@@ -383,7 +383,7 @@ soll. In dem Zielfenster werden Ihnen dann Symbole angezeigt – die
 das Fenster eingefügt werden kann. Wenn Ihr Zielfenster nur einen View
 enthält, sehen Sie nur 5 Drop-Targets.
 
-.. image:: Pictures/10000201000002890000014BCF8FC8087ECC35C5.png
+.. image:: ../../img/qmixelements/10000201000002890000014BCF8FC8087ECC35C5.png
    :alt: Drop-Target Markierungen
 
 Wenn Sie den Mauszeiger über
@@ -391,13 +391,13 @@ ein *Drop-Target* bewegen, während Sie ein Fenster verschieben, dann wird
 Ihnen über einen farbigen Rahmen (*Drop Preview*) angezeigt, an welche
 Position (*Dock Area*) der View eingefügt werden würde.
 
-.. image:: Pictures/10000201000002890000014B5699FFD5D09BAADF.png
+.. image:: ../../img/qmixelements/10000201000002890000014B5699FFD5D09BAADF.png
 
 Wenn Sie nun die Maustaste über der Zielmarkierung loslassen, wird das
 das Fenster an der durch das Drop-Preview gekennzeichneten Position
 eingefügt.
 
-.. image:: Pictures/10000201000002890000014BC4687441A2A645E3.png
+.. image:: ../../img/qmixelements/10000201000002890000014BC4687441A2A645E3.png
    :alt: View auf der linken Seite eingefügt
 
 Wenn Sie als
@@ -405,7 +405,7 @@ Drop-Target das Symbol in der Mitte des Fensters wählen, dann wird der
 neue View als ein zusätzlicher Karteireiter auf der Position des dort
 vorhandenen Views eingefügt.
 
-.. image:: Pictures/1000020100000252000000C9F4392403DF96FF6D.png
+.. image:: ../../img/qmixelements/1000020100000252000000C9F4392403DF96FF6D.png
    :alt: View Gruppe
 
 Wenn Sie das Ihr View über ein Fenster
@@ -417,7 +417,7 @@ Abbildung unten können Sie dies sehen. Es gibt die äußeren Drop-Targets
 es noch fünf weitere Drop-Targets, die in Form eines Kreuzes angezeigt
 werden :guinum:`❷`.
 
-.. image:: Pictures/1000020100000289000000F51BAC327624A0EC0B.png
+.. image:: ../../img/qmixelements/1000020100000289000000F51BAC327624A0EC0B.png
    :alt: Drop-Target Markierungen
 
 Bewegen Sie das Fenster bei
@@ -430,7 +430,7 @@ Sie den Mauspfeil entweder über das mittlere Drop-Target Symbol
 :guinum:`❶` bewegen (siehe Abbildung unten) oder über die Titelleiste eines
 bereits angedockten Views :guinum:`❷`.
 
-.. image:: Pictures/1000020100000289000000F59743DC452A74F108.png
+.. image:: ../../img/qmixelements/1000020100000289000000F59743DC452A74F108.png
    :alt: View als zusätzlichen Karteireiter einfügen
 
 
@@ -444,7 +444,7 @@ den Karteireiter des Views sondern in die Titelleiste der Gruppe (siehe
 Abbildung unten). Sie können nun die komplette Gruppe via Drag & Drop
 aus der aktuellen Position herauslösen und verschieben.
 
-.. image:: Pictures/10000201000002E4000001531CF5648A1020DCB4.png
+.. image:: ../../img/qmixelements/10000201000002E4000001531CF5648A1020DCB4.png
    :alt: View-Gruppen verschieben
 
 Alternativ können Sie eine
@@ -453,7 +453,7 @@ View-Gruppe auch herauslösen durch einen Doppelklick in die Titelleiste
 Kontextmenü oder durch Anklicken der :guilabel:`Detach` Schaltfläche in der
 Titelleiste :guinum:`❸`.
 
-.. image:: Pictures/1000020100000264000000FC1AB96C910DA572FD.png
+.. image:: ../../img/qmixelements/1000020100000264000000FC1AB96C910DA572FD.png
    :alt: View-Gruppe abdocken
 
 Eine View-Gruppe oder ein Fester
@@ -467,7 +467,7 @@ Einen einzelnen View können Sie entweder über die Schließen-Schaltfläche
 :guinum:`❶` im aktiven Karteireiter schließen oder über den Menüpunkt
 :guilabel:`Close` :guinum:`❷` im Kontextmenü eines Karteireiters.
 
-.. image:: Pictures/1000020100000264000000BF3127F5F8B75874DD.png
+.. image:: ../../img/qmixelements/1000020100000264000000BF3127F5F8B75874DD.png
    :alt: View schließen
 
 Eine View-Gruppe kann mit der
@@ -475,7 +475,7 @@ Schließen-Schaltfläche :guinum:`❶` in der Titelleiste der Gruppe oder mit de
 Menüpunkt :guilabel:`Close Area` :guinum:`❷` im Kontextmenü der View-Gruppe geschlossen
 werden.
 
-.. image:: Pictures/1000020100000264000000BF9FA7CB8EE15E4D72.png
+.. image:: ../../img/qmixelements/1000020100000264000000BF9FA7CB8EE15E4D72.png
    :alt: View-Gruppen schließen
 
 
@@ -490,7 +490,7 @@ entsprechende Schaltfläche in der Titelleiste der View-Gruppe ein Menü
 mit allen Views der Gruppe aufrufen und darüber den entsprechenden View
 wählen.
 
-.. image:: Pictures/100002010000026D000000D2FF18CEC652F6FACF.png
+.. image:: ../../img/qmixelements/100002010000026D000000D2FF18CEC652F6FACF.png
    :alt: View-Menü einer View-Gruppe aufrufen
 
 
@@ -499,7 +499,7 @@ View-Gruppe schnell „aufräumen“ möchten, können Sie über das Kontextmen�
 alle Views außer den gerade aktiven View schließen. Wählen Sie dafür im
 Kontextmenü des aktiven Karteireiters den Punkt :guilabel:`Close Others`.
 
-.. image:: Pictures/10000201000002000000006B0A134CD1AC8B3316.png
+.. image:: ../../img/qmixelements/10000201000002000000006B0A134CD1AC8B3316.png
    :alt: Alle inaktiven Views einer Gruppe schließen
 
 Wenn Sie
@@ -508,7 +508,7 @@ in einem Fenster, z.B. im Hauptfenster der Anwendung, schnell
 alle anderen Gruppen schließen. Wählen Sie dafür aus dem Kontextmenü der
 View-Gruppe den Menüpunkt :guilabel:`Close Other Areas`.
 
-.. image:: Pictures/1000020100000224000000A46CB57E1DDB2A63DE.png
+.. image:: ../../img/qmixelements/1000020100000224000000A46CB57E1DDB2A63DE.png
    :alt: Alle anderen View-Gruppen schließen
 
 
@@ -535,14 +535,14 @@ Anforderung anpassen.
 Sie können eine Perspektive über die entsprechende Schaltfläche in der
 Werkzeugleiste aktivieren.
 
-.. image:: Pictures/100002010000021A0000002B78422E539BC46AD1.png
+.. image:: ../../img/qmixelements/100002010000021A0000002B78422E539BC46AD1.png
 
 Wenn Sie auf die Schaltfläche klicken, wird die Standard
 Perspektive (Default) geladen. Wenn Sie auf den Pfeil neben der
 Schaltfläche klicken :guinum:`❶` (siehe Abbildung unten), öffnen Sie das Menü
 zur Auswahl einer vorher angelegten Perspektive :guinum:`❷`.
 
-.. image:: Pictures/1000020100000220000000E4C70099429E65895A.png
+.. image:: ../../img/qmixelements/1000020100000220000000E4C70099429E65895A.png
    :alt: Vorhandene Perspektive öffnen
 
 Wenn Sie eine
@@ -551,7 +551,7 @@ wie zum Zeitpunkt der Erstellung dieser Perspektive. Alternativ können
 Sie auf die Perspektiven auf über das Hauptmenü zugreifen. Wählen Sie
 dafür den Menüpunkt :menuselection:`Window --> Perspective`.
 
-.. image:: Pictures/1000020100000225000000F171D95022C6176EB6.png
+.. image:: ../../img/qmixelements/1000020100000225000000F171D95022C6176EB6.png
    :alt: Arbeiten mit Perspektiven über das Hauptmenü
 
 .. admonition:: Tipp
@@ -567,7 +567,7 @@ dafür den Menüpunkt :menuselection:`Window --> Perspective`.
 Perspektiven anlegen
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
+.. image:: ../../img/qmixelements/10002D67000034EB000034EBF8FD72807B3DC1BA.svg
    :width: 60
    :align: left
 
@@ -577,7 +577,7 @@ Werkzeugleiste auf die Schaltfläche :guilabel:`Create Perspective`. Geben Sie d
 in dem Eingabedialog einen eindeutigen Namen für diese Perspektive ein
 und klicken Sie :guilabel:`OK`.
 
-.. image:: Pictures/10000201000000CA00000080463140FE0D508006.png
+.. image:: ../../img/qmixelements/10000201000000CA00000080463140FE0D508006.png
    :alt: Perspektive anlegen
 
 Die neue Perspektive ist nun im Perspektiv-Menü verfügbar.
@@ -588,7 +588,7 @@ Perspektiven löschen
 Um Perspektiven zu löschen, wählen Sie im Perspektivemenü den Menüpunkt
 :guilabel:`Manage Perspectives`.
 
-.. image:: Pictures/10000201000001A9000000C56CAD6237DD6652DC.png
+.. image:: ../../img/qmixelements/10000201000001A9000000C56CAD6237DD6652DC.png
    :alt: Perspektiven verwalten
  
 Es wird nun ein Dialog mit
@@ -598,7 +598,7 @@ auswählen. Mit Hilf der :kbd:`Shift`-Taste können Sie mehrere
 zusammenhängende Einträge auswählen. Mit Hilfe der :kbd:`Ctrl`-Taste können
 Sie mehrere Einträge hintereinander anklicken und damit auswählen.
 
-.. image:: Pictures/10000201000001E4000000EAEAB5054A1B53326F.png
+.. image:: ../../img/qmixelements/10000201000001E4000000EAEAB5054A1B53326F.png
    :alt: Perspektiven löschen
 
 Wenn Sie dann die Schaltfläche
@@ -613,7 +613,7 @@ Views. Einige Schaltflächen blenden einen bestimmten View direkt ein.
 Andere Schaltflächen ermöglichen das Einblenden mehrerer Views und
 zeigen dafür ein Menü an (siehe Abbildung unten).
 
-.. image:: Pictures/10000201000000E10000005F05B9041439F8E1EF.png
+.. image:: ../../img/qmixelements/10000201000000E10000005F05B9041439F8E1EF.png
 
 .. admonition:: Tipp
    :class: tip
@@ -637,12 +637,12 @@ Dazu gehören Hinweise, Warnmeldungen und Fehlermeldungen. Der View mit dem
 Ereignisprotokoll wird automatisch eingeblendet, wenn ein Ereignis in
 das Protokoll geschrieben wird.
 
-.. image:: Pictures/eventlog.png
+.. image:: ../../img/qmixelements/eventlog.png
 
 Möchten Sie das Ereignisprotokoll manuell einblenden, wählen Sie im
 Hauptmenü der Anwendung den Punkt :menuselection:`Window --> Show View --> Event Log`.
 
-.. image:: Pictures/10000201000001BC000000A1C8DF9C7A6A7811D1.png
+.. image:: ../../img/qmixelements/10000201000001BC000000A1C8DF9C7A6A7811D1.png
 
 Das Ereignisprotokoll listet
 die einzelnen Ereignisse in zeitlicher Abfolge auf. Das neueste Ereignis
@@ -650,7 +650,7 @@ ist dabei immer das Ereignis, welches als letztes Element am Ende des
 Protokolls eingefügt wurde. Dies wir auch an den Zeitstempeln in
 der ersten Spalte deutlich.
 
-.. image:: Pictures/100002010000037A000001264850BAB4BC8CFF1A.png
+.. image:: ../../img/qmixelements/100002010000037A000001264850BAB4BC8CFF1A.png
 
 Beim Verbinden zur Gerätehardware, kann es vorkommen, dass im
 Ereignisprotokoll Gerätefehler empfangen und angezeigt werden (siehe
@@ -699,9 +699,9 @@ Funktionen des Ereignisprotokolls
 In der Kopfzeile :guinum:`❶` des Event Log oder im Kontextmenü :guinum:`❷` stehen
 Ihnen verschiedene Funktionen zur Verfügung:
 
-.. image:: Pictures/eventlog_contextmenu.png
+.. image:: ../../img/qmixelements/eventlog_contextmenu.png
 
-.. image:: Pictures/funnel.svg
+.. image:: ../../img/qmixelements/funnel.svg
    :width: 60
    :align: left
 
@@ -709,11 +709,11 @@ Mit der :guilabel:`Filter` Funktion können Sie das Ereignisprotokoll nach
 einer bestimmten Ereigniskategorie filtern. Dadurch wird es leichter, bei vielen
 Einträgen im Protokoll den Überblick zu behalten oder bestimmte Ereignisse zu finden.
 
-.. image:: Pictures/eventlog_filter.png
+.. image:: ../../img/qmixelements/eventlog_filter.png
 
 |
 
-.. image:: Pictures/scroll_lock.svg
+.. image:: ../../img/qmixelements/scroll_lock.svg
    :width: 60
    :align: left
 
@@ -727,7 +727,7 @@ zu deaktivieren.
 
 |
 
-.. image:: Pictures/10000F570000350500003505D59CCCB32AAEA5EE.svg
+.. image:: ../../img/qmixelements/10000F570000350500003505D59CCCB32AAEA5EE.svg
    :width: 60
    :align: left
 
@@ -736,9 +736,9 @@ den Inhalt des Ereignisprotokolls in eine Textdatei exportieren. Nachdem
 Sie einen Dateinamen vergeben haben, wird die Datei gespeichert und Sie
 können Sie in einem beliebigen Texteditor öffnen.
 
-.. image:: Pictures/1000020100000258000000551980D8BBF41A9394.png
+.. image:: ../../img/qmixelements/1000020100000258000000551980D8BBF41A9394.png
 
-.. image:: Pictures/100004F9000034EB000034EB95984B664DF6577B.svg
+.. image:: ../../img/qmixelements/100004F9000034EB000034EB95984B664DF6577B.svg
    :width: 60
    :align: left
 
@@ -748,7 +748,7 @@ der rechten oberen Bildschirmecke (siehe Abbildung) löschen.
 
 |
 
-.. image:: Pictures/goto_script_function2.svg
+.. image:: ../../img/qmixelements/goto_script_function2.svg
    :width: 60
    :align: left
 
@@ -778,7 +778,7 @@ In der Werkzeugleiste finden Sie die Schaltfläche :guilabel:`Connect to device`
 mit einem Steckersymbol (siehe Abbildung unten). Drücken Sie
 diese Schaltfläche, um eine Verbindung zum Gerät herzustellen.
 
-.. figure:: Pictures/100000000000013B000000B23CF02D461CC3D4A3.png
+.. figure:: ../../img/qmixelements/100000000000013B000000B23CF02D461CC3D4A3.png
    :alt: Verbindung zum Gerät herstellen
 
 .. admonition:: Wichtig
@@ -810,7 +810,7 @@ der `Titelleiste`_ angezeigt. Wenn Sie
 im Hauptmenü den Menüpunkt :menuselection:`File --> Browse Project Folder` wählen, wird
 das aktuelle Projekt im Dateiexplorer geöffnet.
 
-.. image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
+.. image:: ../../img/qmixelements/1000000000000189000000B4EABB56CB8A567B96.png
    :alt: Projektverzeichnis im Dateiexplorer öffnen
 
 Im Dateiexplorer sehen Sie alle projektspezifischen Daten des Projektes.
@@ -840,7 +840,7 @@ Ein neues Projekt erstellen
 Wählen Sie im Hauptmenü den Punkt :menuselection:`File --> New Project` um ein neues
 Projekt zu erstellen.
 
-.. image:: Pictures/1000000000000189000000B4EABB56CB8A567B96.png
+.. image:: ../../img/qmixelements/1000000000000189000000B4EABB56CB8A567B96.png
    :alt: Neues Projekt erstellen
 
 In dem Dialog, der Ihnen
@@ -861,7 +861,7 @@ der :guilabel:`Browse`-Schaltfläche :guinum:`❹` einen Speicherort aus.
 Schließen Sie die Erstellung des neuen Projektes durch
 Anklicken von :guilabel:`OK` :guinum:`❺` ab.
 
-.. image:: Pictures/100000000000025000000166DB408F1FB7BB2D47.png
+.. image:: ../../img/qmixelements/100000000000025000000166DB408F1FB7BB2D47.png
    :alt: Konfigurationsdialog für Erstellung eines neuen Projektes
 
 .. admonition:: Wichtig
@@ -880,7 +880,7 @@ Ein vorhandenes Projekt öffnen
 Wählen Sie zum Öffnen eines vorhandenen Projektes im Hauptmenü den
 Menüpunkt :menuselection:`File --> Open Project` .
 
-.. image:: Pictures/1000000000000170000000A7C5E2BBA82D900D3D.png
+.. image:: ../../img/qmixelements/1000000000000170000000A7C5E2BBA82D900D3D.png
    :alt: Vorhandenes Projekt öffnen
 
 In dem Dialog der Ihnen
@@ -893,7 +893,7 @@ die Browse-Schaltfläche :guinum:`❷`. Sie können dann mit einem
 Verzeichnisauswahldialog das gewünschte Projektverzeichnis (z.B. auf
 einem externen Datenträger) auswählen.
 
-.. image:: Pictures/100000000000020B00000124D393F3498C85002B.png
+.. image:: ../../img/qmixelements/100000000000020B00000124D393F3498C85002B.png
    :alt: Dialog zum Öffnen eines vorhandenen Projektes
 
 Öffnen
@@ -909,7 +909,7 @@ Projektes, die sich im Projektverzeichnis befinden und die Sie zum
 Export auswählen, in eine komprimierte Projektdatei (:file:`.qpr`)
 gespeichert.
 
-.. image:: Pictures/10000201000001A8000000BB1B03350B9BEA1D79.png
+.. image:: ../../img/qmixelements/10000201000001A8000000BB1B03350B9BEA1D79.png
    :alt: Projektexport aufrufen
 
 
@@ -921,7 +921,7 @@ In dem Export Dialog der Ihnen angezeigt wird, können Sie nun
 auswählen, welche Verzeichnisse des Projekts exportiert werden
 sollen :guinum:`❶`.
 
-.. image:: Pictures/1000020100000298000001FB7D3433258DF59F1D.png
+.. image:: ../../img/qmixelements/1000020100000298000001FB7D3433258DF59F1D.png
    :alt: Auswahl der Projektverzeichnisse für den Export
 
 Klicken Sie die Schaltflächen :guilabel:`Select All` :guinum:`❷` oder
@@ -941,7 +941,7 @@ Während des Exports erhalten Sie durch das Ereignis-Protokoll
 (*Event-Log*) :guinum:`❶`, das *Progress-Fenster* :guinum:`❷` und in der Statuszeile
 :guinum:`❸` Informationen zum aktuellen Stand des Exports.
 
-.. image:: Pictures/10000201000002E90000011C77337172831B2410.png
+.. image:: ../../img/qmixelements/10000201000002E90000011C77337172831B2410.png
    :alt: Statusanzeige Projektexport
 
 Sie können den Export
@@ -954,7 +954,7 @@ Mit der Importfunktion können Sie Projektdateien (:file:`*.qpr`) in die
 Software importieren. Wählen Sie dafür im Hauptmenü den Menüpunkt 
 :menuselection:`File --> Import Project`.
 
-.. image:: Pictures/10000201000001AA000000C9957BE44F06738675.png
+.. image:: ../../img/qmixelements/10000201000001AA000000C9957BE44F06738675.png
    :alt: Projektimport aufrufen
 
 In dem Dateiauswahldialog,
@@ -963,7 +963,7 @@ die Sie importieren möchten. Danach wird Ihnen ein Dialog angezeigt, in
 dem Sie den Namen eingeben, unter dem das importierte Projekt im
 Projektverzeichnis gespeichert werden soll.
 
-.. image:: Pictures/10000201000001B00000009E14CEAFCC900E13F3.png
+.. image:: ../../img/qmixelements/10000201000001B00000009E14CEAFCC900E13F3.png
    :alt: Projektnamen eingeben
 
 .. admonition:: Wichtig
@@ -978,7 +978,7 @@ Wie beim Export so erhalten Sie auch beim Projektimport durch das
 Ereignis-Protokoll (*Event-Log*) :guinum:`❶`, das *Progress-Fenster* :guinum:`❷` und in
 der Statuszeile :guinum:`❸` Informationen zum aktuellen Stand des Imports.
 
-.. image:: Pictures/10000201000002E90000011C77337172831B2410.png
+.. image:: ../../img/qmixelements/10000201000002E90000011C77337172831B2410.png
    :alt: Statusanzeige Projektexport
 
 Sie können den Import
@@ -986,7 +986,7 @@ jederzeit durch Anklicken der :guilabel:`Cancel`-Schaltfläche :guinum:`❹` abb
 dem erfolgreichen Import des Projektes, bietet Ihnen die Software an,
 das importierte Projekt zu laden.
 
-.. image:: Pictures/10000201000001730000009795A0B0ECA50C9747.png
+.. image:: ../../img/qmixelements/10000201000001730000009795A0B0ECA50C9747.png
 
 Klicken Sie auf :guilabel:`Yes` um die Software mit dem importierten
 Projekt neu zu starten.
@@ -1001,7 +1001,7 @@ Einstellungsdialog öffnen
 Sie den Konfigurationsdialog für die globalen Applikationseinstellungen
 aufrufen.
 
-.. image:: Pictures/100002010000021200000126AC99A172AA6E85CC.png
+.. image:: ../../img/qmixelements/100002010000021200000126AC99A172AA6E85CC.png
    :alt: Settings Dialog
 
 Hier finden Sie auf der linken Seite
@@ -1034,7 +1034,7 @@ Sie den Konfigurationsdialog der Anwendung. Dort finden Sie im Bereich
 *Color & Style* :guinum:`❶` die Einstellungen zur Anpassung des Designs der
 grafischen Oberfläche.
 
-.. image:: Pictures/10000201000002890000017285BB5129C447B7B6.png
+.. image:: ../../img/qmixelements/10000201000002890000017285BB5129C447B7B6.png
 
 Sie können Sie Akzentfarbe anpassen, indem Sie aus der
 Palette von vordefinierten Farben :guinum:`❷` eine Farbe auswählen oder indem
@@ -1059,11 +1059,11 @@ angepassten Oberfläche:
 
 Beispiel 1: Dunkles Design mit alternativer Akzentfarbe
 
-.. image:: Pictures/1000020100000430000002BBC33448126A09A2D3.png
+.. image:: ../../img/qmixelements/1000020100000430000002BBC33448126A09A2D3.png
 
 Beispiel 2: Helles Design mit blauer Akzentfarbe
 
-.. image:: Pictures/1000020100000430000002BCC96C31CF5E61404D.png
+.. image:: ../../img/qmixelements/1000020100000430000002BCC96C31CF5E61404D.png
 
 Zugriff auf die Bedienoberfläche einschränken
 ---------------------------------------------
@@ -1086,7 +1086,7 @@ Zugriff auf die Oberfläche konfigurieren
 Um den Zugriff auf die Softwareoberfläche zu konfigurieren, wählen Sie
 im Hauptmenü den Punkt :menuselection:`Edit --> Configure UI Access`.
 
-.. image:: Pictures/1000020100000161000000ADAFFCD2193104E170.png
+.. image:: ../../img/qmixelements/1000020100000161000000ADAFFCD2193104E170.png
    :alt: UI Acces Konfiguration aufrufen
 
 Der Konfigurationsdialog für den UI Zugriff wird Ihnen angezeigt. In der
@@ -1101,7 +1101,7 @@ Berechtigungen sieht. Für jedes Element können Sie hier auswählen, ob es
 in der Oberfläche sichtbar oder ausgeblendet ist. So können Sie einfach
 Bedienelemente vor normalen Anwendern verbergen.
 
-.. image:: Pictures/100002010000023700000105D086995A6867BEE3.png
+.. image:: ../../img/qmixelements/100002010000023700000105D086995A6867BEE3.png
    :alt: Konfigurationsdialog für den UI Zugriff
 
 Die dritte Spalte :guinum:`❸` enthält die Konfiguration der Oberfläche für
@@ -1120,7 +1120,7 @@ Das Passwort für den geschützten Bereich können Sie festlegen, indem Sie
 in die entsprechende Zelle der dritten Spalte doppelt klicken und das
 Passwort eingeben.
 
-.. image:: Pictures/1000020100000283000000ABD9FB0393AF480FE9.png
+.. image:: ../../img/qmixelements/1000020100000283000000ABD9FB0393AF480FE9.png
    :alt: Passwort für UI Zugriff eingeben
 
 Wenn Sie die
@@ -1143,7 +1143,7 @@ wird die Oberfläche mit der Konfiguration angezeigt, die Sie für den
 Standard Modus konfiguriert haben. Um den geschützten Modus aufzurufen,
 wählen Sie im Hauptmenü den Punkt :menuselection:`Edit --> Select UI Access Mode`.
 
-.. image:: Pictures/1000020100000156000000A7DF47A4FDADBD88ED.png
+.. image:: ../../img/qmixelements/1000020100000156000000A7DF47A4FDADBD88ED.png
    :alt: Modus für den UI Zugriff auswählen
 
 Die Oberfläche
@@ -1151,14 +1151,14 @@ wird sofort nach der Auswahl entsprechend der Konfiguration angepasst.
 Wenn Sie den geschützten Modus wieder verlassen möchten, rufen Sie den
 Auswahldialog erneut auf und wählen dann die Standardkonfiguration aus.
 
-.. |log_info| image:: Pictures/information.svg
+.. |log_info| image:: ../../img/qmixelements/information.svg
    :width: 40
 
-.. |log_warn| image:: Pictures/warning.svg
+.. |log_warn| image:: ../../img/qmixelements/warning.svg
    :width: 40
 
-.. |log_err| image:: Pictures/error.svg
+.. |log_err| image:: ../../img/qmixelements/error.svg
    :width: 40
 
-.. |log_user| image:: Pictures/question.svg
+.. |log_user| image:: ../../img/qmixelements/question.svg
    :width: 40
