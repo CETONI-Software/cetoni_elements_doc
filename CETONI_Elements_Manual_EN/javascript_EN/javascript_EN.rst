@@ -120,7 +120,7 @@ Using device objects
 
 You can access device objects using the :code:`ScriptEnv.getDevice()`
 function. To get an overview of available device names you can call the
-:code:`ScriptEnv.getDeviceNames()` function.
+:code:`ScriptEnv.listDevices()` function.
 
 .. image:: Pictures/js_console_device_names.png
 
@@ -198,7 +198,7 @@ Using application objects
 
 Similar to device objects, you can also access application objects that
 are no devices. Use the two functions :code:`ScriptEnv.getObject()` and
-:code:`ScriptEnv.getObjectNames()` for this
+:code:`ScriptEnv.listObjects()` for this
 
 The following code shows how to get the application object of the graphical
 logger via the :code:`ScriptEnv` object and then start logging:
