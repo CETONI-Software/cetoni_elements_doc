@@ -212,7 +212,7 @@ Funktion folgende Nachricht ausgeben:
 
 .. _show_message_rich_text:
 
-Rich Text Unterstützung
+Rich-Text Unterstützung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Wenn Sie die :guilabel:`Enable rich text` Option aktivieren, erhalten Sie

@@ -121,7 +121,7 @@ Verwendung von Geräteobjekten
 
 Sie können auf Geräteobjekte mit der Funktion :code:`ScriptEnv.getDevice()` zugreifen. 
 Um eine Übersicht der verfügbaren Gerätenamen zu erhalten, können Sie die Funktion 
-:code:`ScriptEnv.getDeviceNames()` aufrufen.
+:code:`ScriptEnv.listDevices()` aufrufen.
 
 .. image:: Pictures/js_console_device_names.png
 
@@ -198,7 +198,7 @@ Verwendung von Anwendungsobjekten
 
 Ähnlich wie bei Geräteobjekten können Sie auch auf Anwendungsobjekte zugreifen, 
 die keine Geräte sind. Verwenden Sie dazu die beiden Funktionen 
-:code:`ScriptEnv.getObject()` und :code:`ScriptEnv.getObjectNames()`
+:code:`ScriptEnv.getObject()` und :code:`ScriptEnv.listObjects()`
 
 Der folgende Code zeigt, wie man das Anwendungsobjekt des grafischen Loggers über 
 das :code:`ScriptEnv`-Objekt abruft und dann die Protokollierung startet:
@@ -365,8 +365,8 @@ Abschnitt `Nebenläufige Ausführung`_.
 
 .. image:: Pictures/concurrent_execution.png
 
-Anders als bei den Funktionen :ref:`Variablen anlegen` oder 
-:ref:`Variable erzeugen<variable erzeugen – *create variable*>` ist 
+Anders als bei den Scriptfunktionen :ref:`Set Variable<set_variable>` oder 
+:ref:`Create Variable<create_variable>` ist 
 es hier nicht erlaubt, Variablenbezeichner (wie :code:`$Flow`) oder Geräteeigenschaften 
 (wie :code:`$$Nemesys_S_1.ActualFlow`) direkt im JavaScript-Quellcode zu verwenden. 
 Das heißt, der folgende Code ist **falsch** und **ungültig**:
