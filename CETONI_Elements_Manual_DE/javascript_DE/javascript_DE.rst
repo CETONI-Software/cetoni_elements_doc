@@ -400,6 +400,26 @@ zu implementieren, ist dieser:
    Geräteeigenschaften wie :code:`$$Nemesys_S_1.ActualFlow` direkt im 
    JavaScript-Quellcode zu verwenden.
 
+
+Globale Werte mit Namen registrieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Das :code:`ScriptEnv` Objekt hat die Funktion :code:`setNamedValue()`
+Sie können diese Funktion verwenden, um einen bestimmten Wert mit einem
+definierten Namen global für die aktuelle Skript-Engine-Instanz zu registrieren.
+Sie können dann später die Funktion :code:`namedValue()` verwenden, um einfach auf den 
+registrierten benannten Wert zuzugreifen. Dies ist z.B. dann praktisch,
+wenn Sie auf bestimmte Objekte, wie z.B. Settings Dateien oder globale Einstellungen,
+aus unterschiedlichen JavaScript Funktionen heraus zugreifen möchten.
+So können Sie dann in einer JavaScript Funktion den Wert registrieren und dann
+später aus anderen JavaScript Funktionen darauf zugreifen.
+
+.. tip::
+   Weitere Details finden Sie in der API Dokumentation der beiden Funktionen
+   `ScriptEnv.setNamedValue()<QtLabb::Script::CScriptEnvAccess::setNamedValue>`
+   und `ScriptEnv.namedValue()<QtLabb::Script::CScriptEnvAccess::namedValue>`
+
+
 JavaScript Module importieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

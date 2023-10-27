@@ -401,6 +401,25 @@ The right way, to implement the function above, is this one:
    device properties such as :code:`$$Nemesys_S_1.ActualFlow` directly in the
    JavaScript source code.
 
+
+Global named values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The :code:`ScriptEnv` object has the :code:`setNamedValue()`. function You can use this
+function to register a specific value with a defined name globally
+for the current script engine instance. You can then later use the
+:code:`namedValue()` function to simply access the registered named value. 
+This is handy, for example, if you want to access certain objects,
+such as settings files or global settings, from different JavaScript
+functions. You can register the value in a JavaScript function and
+then access it later from other JavaScript functions.
+
+.. tip::
+   For more details, see the API documentation of the two functions
+   `ScriptEnv.setNamedValue()<QtLabb::Script::CScriptEnvAccess::setNamedValue>`
+   and `ScriptEnv.namedValue()<QtLabb::Script::CScriptEnvAccess::namedValue>`.
+
+
 Importing JavaScript modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
