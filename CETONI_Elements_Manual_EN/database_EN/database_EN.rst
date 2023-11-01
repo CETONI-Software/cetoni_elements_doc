@@ -34,38 +34,103 @@ process :guinum:`❷`.
 Click the :guilabel:`Configure SQL Logger` button to open the configuration dialog.
 The following configuration dialog will be displayed:
 
-.. image:: Pictures/sql_logger_config_dialog.png
+.. image:: ../../img/database/sql_logger_config_dialog.png
 
 The configuration dialog contains the following elements:
 
 .. rst-class:: guinums
 
-#. **Device List** - displays all devices or modules that provided
-   recordable data. The filter selector above is to limit the list to
-   specific device types, e.g. valves.
+#. **Object Tree** - The Object Tree contains a tree of all objects and their
+   properties that are present in the application. You can use various filters
+   to filter the object tree for specific objects. By default, only devices and
+   device properties are displayed.
 #. **Logger Channels** - lists all channels that may be recorded by the
    logger.
 #. **Configure Database Connection** - allows the user to configure the database
    settings such as database server and port.
 
+Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):
+
+.. image:: ../../img/datalogger/object_tree.png
+
+.. rst-class:: guinums
+
+1. **Object** - An object can be, for example, a device (here **Nemesys_M_1**) or 
+   another application object. You will find the two elements **Children** and 
+   **Properties** in each object after expanding it in the next level.
+
+2. **Children** - The Children element groups all child objects of the parent
+   object. In our example, these are all objects or devices that are
+   subordinate to the device **Nemesys_M_1** or belong to this device.
+
+3. **Properties** - The Properties element groups all properties of the parent
+   object. In our example, these are all the properties of the **Nemesys_M_1**
+   device that can be recorded in the logger.
+
+4. **Child Object** - All child objects can be found in the **Children** group. 
+   In the example **Nemesys_M_1**, these are, for example, the digital and
+   analogue inputs and outputs of the device, such as **Nemesys_M_1_DigOUT1**. 
+   These objects can in turn be expanded to display their child objects and
+   properties.
+
+5. **Property** - In the **Properties** group you will find all properties of
+   the parent object. In the example of **Nemesys_M_1**, these are, for example, 
+   the properties **SyringeFillLevel** or **ActualFlow**. You can simply
+   drag and drop these properties into the channel list to record their values.
+
+
+Filtering the Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Above the object tree you will find various filters with which you can filter 
+the object tree according to certain criteria. The :guilabel:`Devices Only` :guinum:`❶`
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (:guilabel:`Core.DeviceManager`) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.
+
+If the :guilabel:`Devices Only`:guinum:`❶` checkbox is activated, a selection 
+box :guinum:`❷` is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was 
+filtered for syringe pumps:
+
+.. image:: ../../img/datalogger/object_tree_filter.png
+
+In addition, you will find an input field :guinum:`❸` directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a 
+device name or a device property. In the image below, for example, a filter has
+been set for the device property **ActualFlow**. This means that only objects
+or devices with this property are displayed in the object tree:
+
+.. image:: ../../img/datalogger/object_tree_filter_text.png
+
+
+List of Logger Channels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The table :guilabel:`Logger Channels` shows the configuration of the logger. 
 
-.. image:: Pictures/logger_channels_table.png
+.. image:: ../../img/database/sql_logger_channels_view.png
 
 The table contains the following columns:
 
--  **Device** - contains the device name for which the data will be
-   recorded and its device icon.
--  **Property** - this is the name of the device property/process data
+-  **Object** - contains the name of the object from which the value of a
+   certain property is to be recorded and the icon of the object.
+-  **Property** - this is the name of the object property/process data
    value that will be recorded. Its type (numeric or boolean) can be
    identified by the displayed icon.
 
    ============== ============================================
-   |numeric_prop| Numeric value
-   |boolean_prop| Boolean value
-   |text_prop|    Text value
-   |array_prop|   Data array
-   |struct_prop|  Data structure
+   |icon-num|     Numeric value
+   |icon-bool|    Boolean value
+   |icon-text|    Text value
+   |icon-array|   Data Array
+   |icon-struct|  Data Structure
+   |icon-obj|     Object
    ============== ============================================
 
 -  **Interval (s)** - the sampling interval in seconds. The minimum sample time
@@ -137,32 +202,21 @@ settings.
 SQL Logger Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Step 1- Add Channels
+Step 1 - Add Channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Drag-and-Drop the device for which you want to log the data from the
-:guilabel:`Device List` :guinum:`❶` into the :guilabel:`Logger Channels` :guinum:`❷`
-list. The new channel will be inserted into the list at the desired 
-position (see figure below).
+Drag-and-Drop the object property you want to record from the
+:guilabel:`Object Tree` into the :guilabel:`Logger Channels` list. 
+The new channel is inserted in the line where you release the mouse button 
+(see figure below).
 
-.. image:: Pictures/sql_logger_drag_drop.png
+.. image:: ../../img/datalogger/csv_logger_drag_and_drop.png
 
 .. tip::
-   To simplify the device selection, the device   
-   list can be filtered according to device type. 
+   To simplify the selection of an object property, you can filter the object
+   tree according to various criteria.
 
-Step 2- Select Device Property
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In the :guilabel:`Logger Channels` list you now need to select the 
-Property of the device that you want to record. For this, 
-double-click into the respective field within the column :guilabel:`Property` 
-and select the device property from the opening list (see figure below).
-
-.. image:: Pictures/property_selection.png
-
-
-Step 3 – Configure Sample Interval
+Step 2 - Configure Sample Interval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can set a different sample interval for each individual logger channel.
@@ -181,7 +235,7 @@ the interval time.
    and stored into the database.   
 
 
-Step 4 - Set Channel Label
+Step 3 - Set Channel Label
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the column :guilabel:`Label` you can customize the description for each
@@ -202,7 +256,7 @@ the label text.
    That is, you should change the channel label only once  
    the correct device property has been selected. 
 
-The device property and the label are separate columns in the SQL table
+The object property and the label are separate columns in the SQL table
 
 Deleting Channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -293,9 +347,22 @@ The code creates the following table layout:
 - **process_data_id**: is a foreign key into the :code:`process_data`
   table to identify the process data that has been logged
 - **value**: the actual logged value if it is a numeric or boolean value
+  
+   ============== ============================================
+   |icon-num|     Numeric value
+   |icon-bool|    Boolean value
+   ============== ============================================
+
 - **value_str**: a string of the logged value - this can be used to record 
   non-numeric values such as text, data arrays, data structures or any other 
   data types.
+
+   ============== ============================================
+   |icon-text|    Text value
+   |icon-array|   Data Array
+   |icon-struct|  Data Structure
+   |icon-obj|     Object
+   ============== ============================================
 
 You can use SQL query language to get the logged data that you need. The 
 following example SQL statement shows, how to get all logged values from the process
@@ -486,19 +553,17 @@ QSqlQuery
     :undoc-members:
 
 
-.. |numeric_prop| image:: Pictures/numeric_property.svg
+.. |icon-num| image:: ../../img/datalogger/property_number.svg
    :width: 40
-
-.. |text_prop| image:: Pictures/text_property.svg
+.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
    :width: 40
-
-.. |boolean_prop| image:: Pictures/boolean_property.svg
+.. |icon-text| image:: ../../img/datalogger/property_text.svg
    :width: 40
-
-.. |array_prop| image:: Pictures/array_property.svg
+.. |icon-array| image:: ../../img/datalogger/property_array.svg
    :width: 40
-
-.. |struct_prop| image:: Pictures/structure_property.svg
+.. |icon-struct| image:: ../../img/datalogger/property_structure.svg
+   :width: 40
+.. |icon-obj| image:: ../../img/datalogger/property_object.svg
    :width: 40
 
 .. |delete_key| image:: Pictures/delete_channel_key.png

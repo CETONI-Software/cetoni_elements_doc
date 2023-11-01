@@ -37,44 +37,115 @@ Starten/Stoppen der Datenaufzeichnung :guinum:`❷`.
 Klicken Sie auf die Schaltfläche :guilabel:`Configure SQL Logger`, um den 
 Konfigurationsdialog zu öffnen. Der folgende Konfigurationsdialog wird angezeigt:
 
-.. image:: Pictures/sql_logger_config_dialog.png
+.. image:: ../../img/database/sql_logger_config_dialog.png
 
 Der Konfigurationsdialog enthält die folgenden Elemente:
 
 .. rst-class:: guinums
 
-#. **Geräteliste (Device List)** - die Geräteliste enthält alle Geräte von denen 
-   Prozessdaten aufgezeichnet werden können. Mit der Filterauswahl über der 
-   Geräteliste, können Sie diese nach einem bestimmten Gerätetyp (z.B. Ventile) 
-   filtern.
+#. **Objektbaum (Object Tree)** - Der Objektbaum enthält einen Baum aller
+   Objekte und deren Eigenschaften, die in der Applikation vorhanden sind.
+   Mit verschiedenen Filtern können Sie den Objektbaum nach bestimmten Objekten
+   filtern. Standardmäßig werden nur Geräte und Geräteeigenschaften angezeigt.
+
 #. **Logger-Kanäle** - hier sehen Sie in tabellarischer Form alle Kanäle die 
    vom Logger aufgezeichnet werden.
+
 #. **Datenbankverbindung konfigurieren** - ermöglicht es dem Benutzer, 
    die Datenbankeinstellungen wie Datenbankserver und Port zu konfigurieren.
 
-Die Tabelle :guilabel:`Logger Channels` zeigt die Konfiguration des Loggers.
+Der Objektbaum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/logger_channels_table.png
+Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte) 
+und deren Kindobjekte (wie z.B. untergeordnete Geräte):
+
+.. image:: ../../img/datalogger/object_tree.png
+
+.. rst-class:: guinums
+
+1. **Objekt** - Ein Objekt kann z.B. ein Gerät (hier **Nemesys_M_1**) oder
+   ein anderes Anwendungsobjekt sein. In jedem Objekt finden Sie nach dem
+   Aufklappen in der nächsten Ebene die beiden Elemente **Children** und
+   **Properties**.
+
+2. **Children** - Das Children Element gruppiert alle Kindobjekte des 
+   übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
+   bzw. Geräte, die dem Gerät **Nemesys_M_1** untergeordnet sind bzw. zu
+   diesem Gerät gehören.
+
+3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des 
+   übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
+   des Gerätes **Nemesys_M_1**, welche im Logger aufgezeichnet werden können.
+
+4. **Untergeordnetes Objekt** - In der **Children** Gruppe sind alle untergeordneten
+   Objekte zu finden. Beim Beispiel **Nemesys_M_1** sind dies z.B. die
+   digitalen und analogen Ein- und Ausgänge des Gerätes, wie z.B.
+   **Nemesys_M_1_DigOUT1**. Diese Objekte können wiederum aufgeklappt werden,
+   um deren Kindobjekte und Eigenschaften anzuzeigen.
+
+5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften 
+   des übergeordneten Objektes. Beim Beispiel **Nemesys_M_1** sind dies z.B.
+   die Eigenschaften **SyringeFillLevel** oder **ActualFlow**. Diese
+   Eigenschaften können Sie einfach per Drag & Drop in die Kanalliste ziehen,
+   um deren Werte aufzuzeichnen.
+
+
+Objektbaum filtern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox 
+:guilabel:`Devices Only` :guinum:`❶` aktiviert. D.h. im Objektbaum werden nur
+Geräte, die vom internen Gerätemanager (:guilabel:`Core.DeviceManager`) verwaltet
+werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
+Objektbaum weitere Anwendungsobjekte angezeigt.
+
+Ist die Checkbox :guilabel:`Devices Only`:guinum:`❶` aktiviert, wird Ihnen
+eine Auswahlbox :guinum:`❷` angezeigt, mit der Sie den Gerätebaum nach einem
+bestimmten Gerätetyp filtern können. In der Abbildung unten wurde z.B. nach
+Spritzenpumpen gefiltert:
+
+.. image:: ../../img/datalogger/object_tree_filter.png
+
+Zusätzlich finden Sie direkt über dem Objektbaum ein Eingabefeld :guinum:`❸`,
+mit dem Sie den Objektbaum nach einem bestimmten Begriff, z.B. einem
+Gerätenamen oder eine Geräteeigenschaft, filtern können. In der Abbildung unten
+wurde z.B. nach der Geräteeigenschaft **ActualFlow** gefiltert. D.h.,
+es werden nur Objekte oder Geräte mit dieser Eigenschaft im Objektbaum
+angezeigt:
+
+.. image:: ../../img/datalogger/object_tree_filter_text.png
+
+Liste der Logger-Kanäle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die Kanalliste :guilabel:`Logger Channels` zeigt in tabellarischer Form die
+Konfiguration des Loggers.
+
+.. image:: ../../img/database/sql_logger_channels_view.png
 
 Die Tabelle enthält die folgenden Spalten:
 
--  **Device** - enthält den Gerätenamen des Gerätes, von dem ein
-   bestimmter Gerätewert aufgezeichnet werden soll und das Geräteicon
--  **Property** - dies ist der Name der Geräteeigenschaft / des
+-  **Object** - enthält den Namen des Objektes, von dem der Wert einer
+   bestimmten Eigenschaft (Property) aufgezeichnet werden soll und das Icon des
+   Objekts.
+-  **Property** - dies ist der Name der Objekteigenschaft / des
    Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
-   Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
+   Eigenschaft (numerischer oder boolescher Wert) können Sie an
    dem Typ-Icon einfach erkennen.
 
    ============== ============================================
-   |numeric_prop| Numerischer Wert
-   |boolean_prop| Boolescher Wert
-   |text_prop|    Textwert
-   |array_prop|   Datenarray
-   |struct_prop|  Datenstruktur
+   |icon-num|     Numerischer Wert
+   |icon-bool|    Boolescher Wert
+   |icon-text|    Textwert
+   |icon-array|   Datenarray
+   |icon-struct|  Datenstruktur
+   |icon-obj|     Object
    ============== ============================================
 
-- **Intervall (s)** - das Messintervall in Sekunden. Das minimale Intervall
-  beträgt 1 Sekunde.
+- **Intervall (s)** - das Messintervall in Sekunden für einen Kanal. 
+  Das minimale Intervall beträgt 1 Sekunde.
 -  **Label** - hier können Sie eine eigene Bezeichnung des Kanals
    festlegen.
 
@@ -151,33 +222,25 @@ können Sie auf :guilabel:`OK` klicken, um die Einstellungen zu übernehmen.
 SQL Logger Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:step:`Schritt 1- Kanäle hinzufügen`
+Schritt 1 - Kanäle hinzufügen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ziehen Sie das Gerät, für das Sie die Daten protokollieren möchten, per 
-Drag-and-Drop aus der :guilabel:`Device List` :guinum:`❶` in die 
-:guilabel:`Logger Channels` :guinum:`❷` Liste. Der neue Kanal wird an der 
-gewünschten Position in die Liste eingefügt (siehe Abbildung unten).
+Ziehen Sie aus dem Objektbaum :guilabel:`Object Tree` die Objekteigenschaft,
+welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste 
+:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an 
+der sie die Maustaste loslassen (siehe Abbildung unten).
 
-.. image:: Pictures/sql_logger_drag_drop.png
+.. image:: ../../img/database/sql_logger_drag_and_drop.png
 
 .. tip::
-   Um die Geräteauswahl zu vereinfachen, kann die Geräteliste nach dem Gerätetyp 
-   gefiltert werden.
-
-
-:step:`Schritt 2 - Geräteeigenschaft auswählen`
-
-In der Liste :guilabel:`Logger Channels` müssen Sie nun die Eigenschaft des 
-Gerätes auswählen, das Sie aufzeichnen möchten. Doppelklicken Sie dazu in das 
-entsprechende Feld in der Spalte :guilabel:`Property` und wählen Sie die 
-Geräteeigenschaft aus der sich öffnenden Liste aus (siehe Abbildung unten).
-
-.. image:: Pictures/property_selection.png
+   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den 
+   Objektbaum nach verschiedenen Kriterien filtern.
 
 
 .. _konfigurieren_des_probenintervalls:
 
-:step:`Schritt 3 - Konfigurieren des Aufzeichnungsintervalls`
+Schritt 2 - Konfigurieren des Aufzeichnungsintervalls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sie können für jeden einzelnen Loggerkanal ein eignes Intervall zu Datenaufzeichnung 
 einstellen. 
@@ -194,8 +257,8 @@ und geben danach die Intervallzei (Sekunden) ein.
    nötig ist, um die Menge der aufzuzeichnenden und in der Datenbank zu 
    speichernden Daten zu minimieren.  
 
-
-:step:`Schritt 4 - Kanalbezeichnung festlegen`
+Schritt 3 - Kanalbezeichnung festlegen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In der Spalte :guilabel:`Label` können Sie die Bezeichnung für jeden Kanal 
 anpassen. Sie können diese Spalte verwenden, um zusätzliche Informationen, einen 
@@ -213,7 +276,7 @@ Dazu doppelklicken Sie in die entsprechende Tabellenzelle innerhalb der Spalte
    Kanalbezeichnung zugewiesen. Das heißt, Sie sollten die Kanalbezeichnung erst 
    dann ändern, wenn Sie die richtige Geräteeigenschaft ausgewählt haben.
 
-Die Geräteeigenschaft und die Bezeichnung sind separate Spalten in der SQL-Tabelle.
+Die Objekteigenschaft und die Bezeichnung sind separate Spalten in der SQL-Tabelle.
 
 Löschen von Kanälen
 ^^^^^^^^^^^^^^^^^^^^
@@ -309,9 +372,21 @@ Der Code erstellt das folgende Tabellenlayout:
   :code:`process_data` zur Identifizierung der protokollierten Prozessdaten
 - **value**: der tatsächlich protokollierte Wert, wenn es sich um einen numerischen
   oder boolschen Wert handelt
+
+   ============== ============================================
+   |icon-num|     Numerischer Wert
+   |icon-bool|    Boolescher Wert
+   ============== ============================================
+
 - **value_str**: ein String des protokollierten Wertes - damit können auch
   nicht-numerische Werte wie z.B. Text, Datenarrays, Datenstrukturen oder
   beliebige andere Datentypen aufgezeichnet werden.
+
+   ============== ============================================
+   |icon-array|   Datenarray
+   |icon-struct|  Datenstruktur
+   |icon-obj|     Object
+   ============== ============================================
 
 Sie können die SQL-Abfragesprache verwenden, um die protokollierten Daten zu 
 erhalten, die Sie benötigen. Die folgende Beispiel-SQL-Anweisung zeigt, wie alle 
@@ -505,13 +580,17 @@ QSqlQuery
     :undoc-members:
 
 
-.. |numeric_prop| image:: Pictures/numeric_property.svg
+.. |icon-num| image:: ../../img/datalogger/property_number.svg
    :width: 40
-
-.. |text_prop| image:: Pictures/text_property.svg
+.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
    :width: 40
-
-.. |boolean_prop| image:: Pictures/boolean_property.svg
+.. |icon-text| image:: ../../img/datalogger/property_text.svg
+   :width: 40
+.. |icon-array| image:: ../../img/datalogger/property_array.svg
+   :width: 40
+.. |icon-struct| image:: ../../img/datalogger/property_structure.svg
+   :width: 40
+.. |icon-obj| image:: ../../img/datalogger/property_object.svg
    :width: 40
 
 .. |array_prop| image:: Pictures/array_property.svg

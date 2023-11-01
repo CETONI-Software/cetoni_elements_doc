@@ -112,7 +112,7 @@ or devices with this property are displayed in the object tree:
 .. image:: ../../img/datalogger/object_tree_filter_text.png
 
 
-Overview Table Logger-Channels
+List of Logger Channels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../../img/datalogger/logger_channels_view.png
