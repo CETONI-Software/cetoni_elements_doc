@@ -21,58 +21,121 @@ Configuration Dialogue
 Open the Configuration Dialogue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|Figure 1: Toolbar for data logging.|
+.. image:: Pictures/10000201000001B600000043E638CC3BBADD620A.png
 
 When the data logging plug-in has
 been loaded, the toolbar will display two additional buttons for the
 configuration of the logging of data :guinum:`❶` and to start/stop the logging
 process :guinum:`❷`.
 
-Overview Data Logger Plug-in
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Overview CSV-Logger Configuration Dialogue
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the data logging configuration has been activated, the following
 configuration dialogue will be displayed:
 
-|image4|
+.. image:: ../../img/datalogger/configuration_dialog_overview.png
 
 The configuration dialogue contains the following elements:
 
 .. rst-class:: guinums
 
-1. **Device List** – displays all devices or modules that provided
-   recordable data. The filter selector above is to limit the list to
-   specific device types, e.g. valves.
-2. **Logger Channels** – lists all channels that may be recorded by the
+1. **Object Tree** - The Object Tree contains a tree of all objects and their
+   properties that are present in the application. You can use various filters
+   to filter the object tree for specific objects. By default, only devices and
+   device properties are displayed.
+   
+2. **Logger Channels** - lists all channels that may be recorded by the
    logger.
-3. **CSV File Configuration** – allows the user to set various settings
+   
+3. **CSV File Configuration** - allows the user to set various settings
    for the data logging file.
+
+
+Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):
+
+.. image:: ../../img/datalogger/object_tree.png
+
+.. rst-class:: guinums
+
+1. **Object** - An object can be, for example, a device (here **Nemesys_M_1**) or 
+   another application object. You will find the two elements **Children** and 
+   **Properties** in each object after expanding it in the next level.
+
+2. **Children** - The Children element groups all child objects of the parent
+   object. In our example, these are all objects or devices that are
+   subordinate to the device **Nemesys_M_1** or belong to this device.
+
+3. **Properties** - The Properties element groups all properties of the parent
+   object. In our example, these are all the properties of the **Nemesys_M_1**
+   device that can be recorded in the logger.
+
+4. **Child Object** - All child objects can be found in the **Children** group. 
+   In the example **Nemesys_M_1**, these are, for example, the digital and
+   analogue inputs and outputs of the device, such as **Nemesys_M_1_DigOUT1**. 
+   These objects can in turn be expanded to display their child objects and
+   properties.
+
+5. **Property** - In the **Properties** group you will find all properties of
+   the parent object. In the example of **Nemesys_M_1**, these are, for example, 
+   the properties **SyringeFillLevel** or **ActualFlow**. You can simply
+   drag and drop these properties into the channel list to record their values.
+
+
+Filtering the Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Above the object tree you will find various filters with which you can filter 
+the object tree according to certain criteria. The :guilabel:`Devices Only` :guinum:`❶`
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (:guilabel:`Core.DeviceManager`) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.
+
+If the :guilabel:`Devices Only`:guinum:`❶` checkbox is activated, a selection 
+box :guinum:`❷` is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was 
+filtered for syringe pumps:
+
+.. image:: ../../img/datalogger/object_tree_filter.png
+
+In addition, you will find an input field :guinum:`❸` directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a 
+device name or a device property. In the image below, for example, a filter has
+been set for the device property **ActualFlow**. This means that only objects
+or devices with this property are displayed in the object tree:
+
+.. image:: ../../img/datalogger/object_tree_filter_text.png
+
 
 Overview Table Logger-Channels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100002010000028A00000098C8649B9656E2A140.png
+.. image:: ../../img/datalogger/logger_channels_view.png
 
-The table :guilabel:`Logger Channels` shows the configuration of the process data
-logger. Each row in that table corresponds to one column in the recorded
-csv file. The following columns may be recorded:
+The table :guilabel:`Logger Channels` shows the configuration of the logger. 
+Each row in that table corresponds to one column in the recorded
+CSV file. The following columns may be recorded:
 
--  **Channel** – shows the channel number of the corresponding channel.
--  **Device** – contains the device name for which the data will be
-   recorded and its device icon.
--  **Property** – this is the name of the device property/process data
+-  **Object** - contains the name of the object from which the value of a
+   certain property is to be recorded and the icon of the object.
+-  **Property** - this is the name of the object property/process data
    value that will be recorded. Its type (numeric or boolean) can be
    identified by the displayed icon.
 
-   ======== =============
-   |image5| Numeric value
-   |image6| Boolean value
-   |image7| Text value
-   ======== =============
+   ============ =================
+   |icon-num|   Numeric value
+   |icon-bool|  Boolean value
+   |icon-text|  Text value
+   ============ =================
 
--  **Label** – allows you to define a customized description for the
+-  **Label** - allows you to define a customized description for the
    selected channel. This description will be used as the column header
-   in the csv file.
+   in the CSV file.
 
 In order to add a channel to the data logging process, simply follow the
 steps below.
@@ -80,39 +143,29 @@ steps below.
 Logger Configuration
 ------------------------------------
 
-Step 1- Adding of Channels
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Drag-and-Drop the device for which you want to log the data from the
-:guilabel:`Device List` into the :guilabel:`Logger Channels` list. 
-The new channel will be inserted into the list at the desired 
-position (see figure below).
-
-.. image:: Pictures/1000020100000361000001BF5E60484B572C01AB.png
-
-.. tip::
-   To simplify the device selection, the device   
-   list can be filtered according to device type. 
-
-Step 2- Select Device Property
+Add Logger Channels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Logger Channels` list you now need to select the 
-Property of the device that you want to record. For this, 
-double-click into the respective filed within the column :guilabel:`Property` 
-and select the device property from the opening list (see figure below).
+:step:`Step 1- Adding of Channels`
 
-|Figure 4: Selecting the device property that is to be recorded.|
+Drag-and-Drop the object property you want to record from the
+:guilabel:`Device List`Object Tree` into the :guilabel:`Logger Channels` list. 
+The new channel is inserted in the line where you release the mouse button 
+(see figure below).
 
+.. image:: ../../img/datalogger/csv_logger_drag_and_drop.png
 
-Step 3 – Channel Description
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. tip::
+   To simplify the selection of an object property, you can filter the object
+   tree according to various criteria.
+
+:step:`Step 2 - Setting the Channel Label`
 
 In the column :guilabel:`Label` you can customize the description for each
 channel. This label will be used as the column header of the csv file
 for the selected channel.
 
-|Figure 5: Customizing the channel label.|
+.. image:: Pictures/10000201000002670000009030B373AFA6AF1077.png
 
 To do this, double-click
 into the respective table cell that is to be changed and insert the new
@@ -140,14 +193,14 @@ channels from the list, and then use either the :kbd:`Delete` key or the
 To delete the entire channel list, use the context menu item 
 :menuselection:`Clear Logger`.
 
-Step 4 – Configuration of CSV Properties
+Configuration of CSV Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the :guilabel:`CSV File Configuration` section you can set the global
 properties of the CSV logger as well as the format of the recorded data
 (see figure below).
 
-|Figure 6: Configuration of global csv properties|
+.. image:: Pictures/10000201000002740000005D7814BAB01380FB40.png
 
 Select File Name and Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -156,7 +209,7 @@ Set the file name and location of the log file via :guilabel:`Log Filename`
 :guinum:`❶`. For this, click on the folder symbol on the right, select the target
 folder and give a file name.
 
-|Figure 7: Setting file name and folder for the log file.|
+.. image:: Pictures/100000000000028F000001D742CE00F60CA536D2.png
 
 Setting the Recording Interval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -225,7 +278,7 @@ The recorded CSV files have the following structure:
    of the corresponding data set.
 -  The first row shows the channel labels as configured by the user.
 
-|Figure 8: CSV log file opened in Microsoft Excel.|
+.. image:: Pictures/10000000000002EF000000E6889ECE76397F99EB.png
 
 To obtain the
 absolute time stamp for a data set, you may simply add an extra column
@@ -245,7 +298,7 @@ script functions. The corresponding functions can be found
 in the :guilabel:`Logging` category in the list of the available script
 functions.
 
-|Figure 9: Logger script functions|
+.. image:: Pictures/10000201000001060000008EE8252D88C2E8FBC7.png
 
 Start CSV Logger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -272,32 +325,13 @@ Stop CSV Logger
 This function stops the current logging and closes the open
 log file.
 
-.. |Figure 1: Toolbar for data logging.| image:: Pictures/10000201000001B600000043E638CC3BBADD620A.png
-
-.. |image4| image:: Pictures/100002010000038700000200BEF606624A304EEC.png
-
-.. |image5| image:: Pictures/100004EA000035050000350581CFD983D12D425F.svg
-   :width: 40
-
-.. |image6| image:: Pictures/1000034B000035050000350585C9BEED447C4FB8.svg
-   :width: 40
-
-.. |image7| image:: Pictures/10000B740000350500003505221106A05ED7DC85.svg
-   :width: 40
-
-.. |Figure 4: Selecting the device property that is to be recorded.| image:: Pictures/1000020100000361000001A38444A253627EAD70.png
-
-.. |Figure 5: Customizing the channel label.| image:: Pictures/10000201000002670000009030B373AFA6AF1077.png
-
 .. |image14| image:: Pictures/100000000000012100000091D7BFE42C03BA6ECE.png
 
 .. |image15| image:: Pictures/10000000000001220000008F424E5926A933056B.png
 
-.. |Figure 6: Configuration of global csv properties| image:: Pictures/10000201000002740000005D7814BAB01380FB40.png
-
-.. |Figure 7: Setting file name and folder for the log file.| image:: Pictures/100000000000028F000001D742CE00F60CA536D2.png
-
-.. |Figure 8: CSV log file opened in Microsoft Excel.| image:: Pictures/10000000000002EF000000E6889ECE76397F99EB.png
-
-.. |Figure 9: Logger script functions| image:: Pictures/10000201000001060000008EE8252D88C2E8FBC7.png
-
+.. |icon-num| image:: ../../img/datalogger/property_number.svg
+   :width: 40
+.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
+   :width: 40
+.. |icon-text| image:: ../../img/datalogger/property_text.svg
+   :width: 40
