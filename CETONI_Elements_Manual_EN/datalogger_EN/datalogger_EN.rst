@@ -1,5 +1,5 @@
-CSV Data Logger Plugin
-======================
+CSV Data Logger
+=================
 
 Introduction
 ------------
@@ -119,7 +119,7 @@ Overview Table Logger-Channels
 
 The table :guilabel:`Logger Channels` shows the configuration of the logger. 
 Each row in that table corresponds to one column in the recorded
-CSV file. The following columns may be recorded:
+CSV file. The following columns are available:
 
 -  **Object** - contains the name of the object from which the value of a
    certain property is to be recorded and the icon of the object.
@@ -149,7 +149,7 @@ Add Logger Channels
 :step:`Step 1- Adding of Channels`
 
 Drag-and-Drop the object property you want to record from the
-:guilabel:`Device List`Object Tree` into the :guilabel:`Logger Channels` list. 
+:guilabel:`Object Tree` into the :guilabel:`Logger Channels` list. 
 The new channel is inserted in the line where you release the mouse button 
 (see figure below).
 
@@ -161,11 +161,11 @@ The new channel is inserted in the line where you release the mouse button
 
 :step:`Step 2 - Setting the Channel Label`
 
-In the column :guilabel:`Label` you can customize the description for each
-channel. This label will be used as the column header of the csv file
+In the column :guilabel:`Label` you can customize the label for each
+channel. This label will be used as the column header of the CSV file
 for the selected channel.
 
-.. image:: Pictures/10000201000002670000009030B373AFA6AF1077.png
+.. image:: ../../img/datalogger/log_channel_label.png
 
 To do this, double-click
 into the respective table cell that is to be changed and insert the new
@@ -185,7 +185,6 @@ Deleting Channels
 Highlight the desired channels using the mouse to delete one or more
 channels from the list, and then use either the :kbd:`Delete` key or the
 :menuselection:`Delecte Selection` item of the right-click context menu:
-
 
 |image14| |image15|
 

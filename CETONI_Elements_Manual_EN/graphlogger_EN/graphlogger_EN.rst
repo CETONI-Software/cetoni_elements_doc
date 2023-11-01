@@ -1,15 +1,19 @@
-Process Data Graph
-==================
+Graphical Data Logger
+=======================
 
 Introduction
 ------------
 
-In addition to the ability to record data in CSV files, the data logger
-plug-in allows you to visualize process data. This allows for real-time
-visualization of, e.g., process data changes. Use the push button
+In addition to recording data in CSV files, you can use the Datalogger plug-in
+to record process data in diagrams and thus graphically visualise the changes
+in these process data over time in real time. Use the push button
 :guilabel:`Logging` :guinum:`❶` (see figure below) in the sidebar to display 
 the process data graphs or show the logging view via the main menu 
 ::menuselection:`Window --> ShowView --> Logging` :guinum:`❷`.
+
+To display the process data diagrams, click on the :guilabel:`Logging` button
+:guinum:`❶` in the sidebar (see figure below) or show the Logging View via the
+main menu ::menuselection:`Window --> ShowView --> Logging` :guinum:`❷`.
 
 |image1|
 
@@ -18,15 +22,15 @@ follows:
 
 .. rst-class:: guinums
 
-1. **Logging button** – Click this to show the process data graphs.
+1. **Logging button** - Click this to show the process data graphs.
 2. **View Menu**- this can also be used to show and hide the process data
    graph
-3. **Graph canvas** – This displays the curves of all process data sets
+3. **Graph canvas** - This displays the curves of all process data sets
    that are being recorded.
-4. **Legend** – The legend lists all data sets that are displayed with
+4. **Legend** - The legend lists all data sets that are displayed with
    their respective colors. Here you can toggle between whether or not a
    curve is being displayed.
-5. **Toolbar** – Here you find buttons to configure the data logging, to
+5. **Toolbar** - Here you find buttons to configure the data logging, to
    start and stop the recording and to navigate the display.
 
 Toolbar
@@ -95,116 +99,156 @@ toolbar to open the configuration dialog. This opens
 the *Plot Logger Configuration* dialog that contains the following main
 sections:
 
-|Figure 1: Configuration dialog of the graphic data logger|
+.. image:: ../../img/datalogger/graph_logger_configuration_dialog.png
 
 .. rst-class:: guinums
 
-1. **Device List** – shows all devices that return data that may be
-   logged. The filter selection box allows to pre-select a specific
-   device type (e.g., valves).
-2. **Plot Curves**– lists all data series or curves that are being
-   recorded and displayed in the diagram.
-3. **Logger Configuration** – in this section you find various settings
+1. **Object Tree** - The Object Tree contains a tree of all objects and their
+   properties that are present in the application. You can use various filters
+   to filter the object tree for specific objects. By default, only devices and
+   device properties are displayed.
+   
+2. **Logger Channels** - lists all channels that may be recorded by the
+   logger.
+   
+3. **Logger Configuration** - in this section you find various settings
    to configure the data recording.
 
-Plot Curves Table
-~~~~~~~~~~~~~~~~~~~~
 
-|image48|
+Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Plot Curves* tabulates the selected configuration of the
-graphic data logger. Each row represents exactly one curve in the
-diagram. The following columns are shown:
+In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):
 
--  **Channel** – returns the channel number.
--  **Device** – lists the device name for each respective channel
-   including its icon.
--  **Property** – shows the property of the respective device that is to
-   be recorded. The data type is identified via a data-type specific
-   icon.
+.. image:: ../../img/datalogger/object_tree.png
 
-   ========= ===============
-   |image49| Numerical value
-   |image50| Boolean value
-   |image51| Text value
-   ========= ===============
+.. rst-class:: guinums
 
--  **Label** – allows you to define a user-specific name for each channel.
-   This label will also be used in the legend of the plotted graph.
+1. **Object** - An object can be, for example, a device (here **Nemesys_M_1**) or 
+   another application object. You will find the two elements **Children** and 
+   **Properties** in each object after expanding it in the next level.
 
-To add and configure process data channels to the display logger, please
-proceed as detailed in the following sections.
+2. **Children** - The Children element groups all child objects of the parent
+   object. In our example, these are all objects or devices that are
+   subordinate to the device **Nemesys_M_1** or belong to this device.
 
-Configure data logging
+3. **Properties** - The Properties element groups all properties of the parent
+   object. In our example, these are all the properties of the **Nemesys_M_1**
+   device that can be recorded in the logger.
+
+4. **Child Object** - All child objects can be found in the **Children** group. 
+   In the example **Nemesys_M_1**, these are, for example, the digital and
+   analogue inputs and outputs of the device, such as **Nemesys_M_1_DigOUT1**. 
+   These objects can in turn be expanded to display their child objects and
+   properties.
+
+5. **Property** - In the **Properties** group you will find all properties of
+   the parent object. In the example of **Nemesys_M_1**, these are, for example, 
+   the properties **SyringeFillLevel** or **ActualFlow**. You can simply
+   drag and drop these properties into the channel list to record their values.
+
+
+Filtering the Object Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Above the object tree you will find various filters with which you can filter 
+the object tree according to certain criteria. The :guilabel:`Devices Only` :guinum:`❶`
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (:guilabel:`Core.DeviceManager`) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.
+
+If the :guilabel:`Devices Only`:guinum:`❶` checkbox is activated, a selection 
+box :guinum:`❷` is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was 
+filtered for syringe pumps:
+
+.. image:: ../../img/datalogger/object_tree_filter.png
+
+In addition, you will find an input field :guinum:`❸` directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a 
+device name or a device property. In the image below, for example, a filter has
+been set for the device property **ActualFlow**. This means that only objects
+or devices with this property are displayed in the object tree:
+
+.. image:: ../../img/datalogger/object_tree_filter_text.png
+
+
+List of Logger Channels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/datalogger/logger_channels_view.png
+
+The channel :guilabel:`Logger Channels` list shows the configuration of the 
+graphical logger in tabular form. Each line in the table corresponds to exactly
+one curve in the diagram, i.e. one logger channel. The following columns are available:
+
+-  **Object** - contains the name of the object from which the value of a
+   certain property is to be recorded and the icon of the object.
+-  **Property** - this is the name of the object property/process data
+   value that will be recorded. Its type (numeric or boolean) can be
+   identified by the displayed icon.
+
+   ============ =================
+   |icon-num|   Numeric value
+   |icon-bool|  Boolean value
+   |icon-text|  Text value
+   ============ =================
+
+-  **Label** - allows you to define a customized label for the
+   selected channel. This label will also be used in the legend of the plotted
+   graph.
+
+In order to add a channel to the data logging process, simply follow the
+steps below:
+
+Logger Configuration
 ----------------------
 
-Step 1 – Adding Channels
-~~~~~~~~~~~~~~~~~~~~~~~~
+Add Logger Channels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|Figure 2: Adding a channel to the channel list|
+:step:`Step 1- Adding of Channels`
 
-To add a channel you first have to add the relevant device to the *Device List*\ of the *Plot
-Logger Configuration.* To do this, move the relevant item from the
-device list to the :guilabel:`Plot Curves` table using Drag-&-Drop. The new
-channel will be added at the position where you release the mouse button
+.. image:: ../../img/datalogger/graph_logger_drag_and_drop.png
+
+Drag-and-Drop the object property you want to record from the
+:guilabel:`Object Tree` into the :guilabel:`Logger Channels` list. 
+The new channel is inserted in the line where you release the mouse button 
 (see figure below).
 
 .. tip::
-   To simplify the device selection process, the 
-   device list may be filtered for a relevant device type. 
+   To simplify the selection of an object property, you can filter the object
+   tree according to various criteria.
 
-Step 2 – Selecting the Device Property
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:step:`Step 2 - Setting the Channel Label`
 
-Select the device property that you want to record by double clicking
-into the :guilabel:`Property` field of the respective channel from
-:guilabel:`Plot Curves` table. This will display a drop-down list with all available
-device properties from which you may select the desired item (see figure
-below).
+In the column :guilabel:`Label` you can customize the label for each
+channel. This label will later be displayed in the legend of the graph as the
+label of the curve.
 
-|Figure 3: Selecting the device property to be recorded|
+.. image:: ../../img/datalogger/log_channel_label.png
 
-Step 3 – Changing the Channel Label
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You may give a recorded property a customized name by changing the
-description in the column :guilabel:`Label`. This label will also be used to
-identify the respective curve in the diagram. To do this, double click
-into the respective field (see figure below) and type the new
-description.
-
-.. image:: Pictures/1000020100000267000000901D707E009D7DE34A.png
+To do this, double-click
+into the respective table cell that is to be changed and insert the new
+label text (see figure above).
 
 .. admonition:: Important
    :class: note
 
-   When a different device property is      
-   being selected, a new channel label will be assigned    
-   automatically. Therefore, the channel label should be   
-   changed after the device property has been selected.   
+   Upon choosing a new device property, a   
+   new channel description will be assigned automatically. 
+   That is, you should change the channel label only once  
+   the correct device property has been selected. 
 
-Deleting Channels
-~~~~~~~~~~~~~~~~~
+:step:`Step 3 - Defining the Recording Interval`
 
-In order to delete one or multiple channels from the :guilabel:`Plot Curves`
-list, first you have to mark the respective channels using the
-computer mouse. Now you may use either the keyboard's :kbd:`Delete` key or
-select the relevant item :menuselection:`Delete Selection` from the right-click
-context menu.
+.. image:: ../../img/datalogger/graph_logger_interval.png
 
-|image58| |image59|
-
-You may also delete the entire list in a single step by using the
-:menuselection:`Clear Logger` item of the context menu.
-
-Step 4 – Defining the Recording Interval
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-|Figure 5: Configuration of the data logger interval|
-
-The :guilabel:`Log Interval` input box in the :guilabel:`Logger Configuration` 
-section is to define the time interval at which data points for all channels are 
-to be recorded. The minimum resolution is 0.1 seconds.
+In the :guilabel:`Log Interval` field in the :guilabel:`Logger Configuration`
+area, you can define the interval at which new measured values are to be recorded. 
+You can set the interval with a resolution of 0.1 seconds.
 
 .. admonition:: Important
    :class: note
@@ -214,8 +258,17 @@ to be recorded. The minimum resolution is 0.1 seconds.
    minimize the amount of data that needs to be recorded   
    and transmitted by the system.        
 
-The configuration will be saved and reloaded automatically upon exiting
-the *Plot Logger Configuration* dialog.
+Deleting Channels
+~~~~~~~~~~~~~~~~~
+
+Highlight the desired channels using the mouse to delete one or more
+channels from the list, and then use either the :kbd:`Delete` key or the
+:menuselection:`Delecte Selection` item of the right-click context menu:
+
+|image58| |image59|
+
+To delete the entire channel list, use the context menu item 
+:menuselection:`Clear Logger`.
 
 Start/Stop Data Logging
 -----------------------
@@ -240,7 +293,7 @@ The processdata graphing plug-in offers a number of possibilities to
 customize the way data are displayed. This includes resizing parts of a
 curve and showing or hiding individual curves.
 
-|Figure 6: The process-data diagram section|
+.. image:: Pictures/1000020100000304000001DECD37A2D16344540B.png
 
 The diagram consists of a
 plot area :guinum:`❶` plus both an X-axis (time) :guinum:`❸` and a Y-axis
@@ -278,7 +331,7 @@ Display Curve Values
 When the *Pan Tool* is active, you can move the mouse pointer over a
 curve to display the value at that specific position.
 
-|Figure : Display Curve Values|
+.. image:: Pictures/100002010000024C000000D8EF633321C7CB7321.png
 
 Zooming via the Mouse Wheel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -360,7 +413,7 @@ select the desired function to either hide the corresponding curve only
 :menuselection:`Hide Curve` or all other but the corresponding curve
 :menuselection:`Show only this curve` as indicated in the figure below.
 
-|Figure 9: Context menu legend item|
+.. image:: Pictures/10000000000001A40000005CD26CCB4A8D0DF1F9.png
 
 To revert to displaying all
 curves, activate the context menu from within the plot area and select
@@ -375,7 +428,7 @@ To choose a different curve color, right click an item in the plot
 legend. From the context menu select the menu item :menuselection:`Select Color`
 (see figure below).
 
-|Figure 10: Context menu legend item – Color Selection|
+.. image:: Pictures/10000000000002100000007CF77B5C49CD7E0D88.png
 
 In the color
 selection dialog which is now shown (figure below), you can choose any
@@ -396,7 +449,7 @@ right-click context menu and selecting :menuselection:`Export plot image`.
 
 |
 
-|Figure 12: Diagram image export|
+.. image:: Pictures/100002010000010C000000E1260A96B6F1A86108.png
 
 This will open a dialog box (see figure below) to define the location (folder)
 where the image is to be saved:
@@ -497,7 +550,7 @@ curves may be loaded.
 Script Functions
 ----------------
 
-|Figure 13: Logger script functions|
+.. image:: Pictures/10000201000001330000006F1CA99CCDC5308AD8.png
 
 To automate the capture of data or
 to synchronize data capture with other processes, the graphical plot
@@ -609,33 +662,8 @@ in figure below):
    
 .. |image46| image:: Pictures/1000044C000035050000350571A7475A9B633EF8.svg
    :width: 40
-   
-.. |Figure 1: Configuration dialog of the graphic data logger| image:: Pictures/10000201000002CE00000188B83774EAD7E16B4A.png
-
-.. |image48| image:: Pictures/100002010000028A000000981427A41273C77599.png
-
-.. |image49| image:: Pictures/100004EA000035050000350581CFD983D12D425F.svg
-   :width: 40
-   
-.. |image50| image:: Pictures/1000034B000035050000350585C9BEED447C4FB8.svg
-   :width: 40
-   
-.. |image51| image:: Pictures/10000B740000350500003505221106A05ED7DC85.svg
-   :width: 40
-   
-.. |Figure 2: Adding a channel to the channel list| image:: Pictures/1000020100000361000001BF969DF3B35F4C3EBA.png
-
-.. |Figure 3: Selecting the device property to be recorded| image:: Pictures/1000020100000361000001A36B73334ECCAE6878.png
 
 .. |image58| image:: Pictures/100000000000012100000091DA9FF37806721579.png
-
-.. |image59| image:: Pictures/10000000000001220000008F22C1F8D0316FE153.png
-
-.. |Figure 5: Configuration of the data logger interval| image:: Pictures/100000000000016D00000079FAA9B0F9A29F6352.png
-
-.. |Figure 6: The process-data diagram section| image:: Pictures/1000020100000304000001DECD37A2D16344540B.png
-
-.. |Figure : Display Curve Values| image:: Pictures/100002010000024C000000D8EF633321C7CB7321.png
 
 .. |image68| image:: Pictures/Mouse_Wheel_up.png
    :width: 80
@@ -655,11 +683,9 @@ in figure below):
 .. |image82| image:: Pictures/10001744000034EB000034EBD90F77816321BB6E.svg
    :width: 40
 
-.. |Figure 9: Context menu legend item| image:: Pictures/10000000000001A40000005CD26CCB4A8D0DF1F9.png
-
-.. |Figure 10: Context menu legend item – Color Selection| image:: Pictures/10000000000002100000007CF77B5C49CD7E0D88.png
-
-.. |Figure 12: Diagram image export| image:: Pictures/100002010000010C000000E1260A96B6F1A86108.png
-
-.. |Figure 13: Logger script functions| image:: Pictures/10000201000001330000006F1CA99CCDC5308AD8.png
-
+.. |icon-num| image:: ../../img/datalogger/property_number.svg
+   :width: 40
+.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
+   :width: 40
+.. |icon-text| image:: ../../img/datalogger/property_text.svg
+   :width: 40

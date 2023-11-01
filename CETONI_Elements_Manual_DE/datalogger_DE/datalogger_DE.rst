@@ -183,7 +183,7 @@ Beschriftung vergeben. Diese Beschriftung wird später dann in der
 CSV-Datei in der Kopfzeile in der Spalte des entsprechenden Kanals
 erscheinen.
 
-.. image:: Pictures/10000201000002670000009030B373AFA6AF1077.png
+.. image:: ../../img/datalogger/log_channel_label.png
    :alt: Kanalbeschriftung ändern
 
 Klicken Sie zum Ändern der

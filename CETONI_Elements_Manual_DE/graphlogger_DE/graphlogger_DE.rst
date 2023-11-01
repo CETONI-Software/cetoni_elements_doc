@@ -240,7 +240,7 @@ In der Spalte :guilabel:`Label` können Sie für jeden Kanal eine eigene
 Beschriftung vergeben. Diese Beschriftung wird später dann in der
 Legende des Graphen als Beschriftung der Kurve angezeigt.
 
-.. image:: Pictures/1000020100000267000000901D707E009D7DE34A.png
+.. image:: ../../img/datalogger/log_channel_label.png
    :alt: Kanalbeschriftung ändern
 
 Klicken Sie zum Ändern der
@@ -681,15 +681,6 @@ Exportformats (siehe Beispiel in Abbildung unten):
    :width: 40
 .. |image46| image:: Pictures/1000044C000035050000350571A7475A9B633EF8.svg
    :width: 40
-
-
-.. |image49| image:: Pictures/100004EA000035050000350581CFD983D12D425F.svg
-   :width: 40
-.. |image50| image:: Pictures/1000034B000035050000350585C9BEED447C4FB8.svg
-   :width: 40
-.. |image51| image:: Pictures/10000B740000350500003505221106A05ED7DC85.svg
-   :width: 40
-
 
 .. |image58| image:: Pictures/100000000000012100000091DA9FF37806721579.png
 .. |image59| image:: Pictures/10000000000001220000008F22C1F8D0316FE153.png
