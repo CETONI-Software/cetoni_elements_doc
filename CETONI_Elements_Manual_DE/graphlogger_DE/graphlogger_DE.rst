@@ -1,5 +1,5 @@
-Prozessdaten-Diagramm
-=====================
+Grafischer Datenlogger
+=======================
 
 Einführung
 ----------
@@ -19,16 +19,16 @@ Bedienelemente:
 
 .. rst-class:: guinums
 
-1. **Logging-Schaltfläche** – Hiermit blenden Sie das
+1. **Logging-Schaltfläche** - Hiermit blenden Sie das
    Prozessdaten-Diagramm ein.
 2. **View Menü** - damit kann das Prozessdaten Diagramm ebenfalls ein-
    und ausgeblendet werden
-3. **Zeichenfläche** – Hier sehen Sie die Kurven aller Prozessdaten die
+3. **Zeichenfläche** - Hier sehen Sie die Kurven aller Prozessdaten die
    von dem Diagramm aufgezeichnet werden.
-4. **Legende** – Die Legende enthält die Bezeichnung aller Kurven die im
+4. **Legende** - Die Legende enthält die Bezeichnung aller Kurven die im
    Diagramm aufgezeichnet werden mit der entsprechenden Farbe. Über die
    Legende können Kurven selektiv ein- / und ausgeblendet werden.
-5. **Werkzeugleiste** – Hier finden Sie Schaltflächen zur Konfiguration
+5. **Werkzeugleiste** - Hier finden Sie Schaltflächen zur Konfiguration
    der Datenaufzeichnung, zum Starten und Stoppen der Aufzeichnung und
    zur Navigation innerhalb der Darstellung.
 
@@ -99,114 +99,161 @@ Klicken Sie in der Werkzeugleiste auf die Schaltfläche
 öffnen. Der Konfigurationsdialog besteht im Wesentlichen aus den folgenden
 Bereichen:
 
-.. image:: Pictures/10000201000002CE00000188B83774EAD7E16B4A.png
+.. image:: ../../img/datalogger/graph_logger_configuration_dialog.png
    :alt: Konfigurationsdialog grafischer Datenlogger
 
 .. rst-class:: guinums
 
-1. **Geräteliste (Device List)** – die Geräteliste enthält alle Geräte
-   von denen Prozessdaten aufgezeichnet werden können. Mit der
-   Filterauswahl über der Geräteliste, können Sie diese nach einem
-   bestimmten Gerätetyp (z.B. Ventile) filtern.
-2. **Plot Curves** – hier sehen Sie in tabellarischer Form alle Kurven
-   die vom Diagramm aufgezeichnet werden.
-3. **Logger Configuration** – in diesem Bereich können Sie verschiedene
+1. **Objektbaum (Object Tree)** - Der Objektbaum enthält einen Baum aller
+   Objekte und deren Eigenschaften, die in der Applikation vorhanden sind.
+   Mit verschiedenen Filtern können Sie den Objektbaum nach bestimmten Objekten
+   filtern. Standardmäßig werden nur Geräte und Geräteeigenschaften angezeigt.
+
+2. **Logger Channels** - hier sehen Sie in tabellarischer Form alle
+   Kanäle die vom Logger aufgezeichnet werden.
+
+3. **Logger Configuration** - in diesem Bereich können Sie verschiedene
    Einstellungen zur Aufzeichnung der Daten konfigurieren.
 
-Übersicht Tabelle Diagrammkurven
+
+Der Objektbaum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte) 
+und deren Kindobjekte (wie z.B. untergeordnete Geräte):
+
+.. image:: ../../img/datalogger/object_tree.png
+
+.. rst-class:: guinums
+
+1. **Objekt** - Ein Objekt kann z.B. ein Gerät (hier **Nemesys_M_1**) oder
+   ein anderes Anwendungsobjekt sein. In jedem Objekt finden Sie nach dem
+   Aufklappen in der nächsten Ebene die beiden Elemente **Children** und
+   **Properties**.
+
+2. **Children** - Das Children Element gruppiert alle Kindobjekte des 
+   übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
+   bzw. Geräte, die dem Gerät **Nemesys_M_1** untergeordnet sind bzw. zu
+   diesem Gerät gehören.
+
+3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des 
+   übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
+   des Gerätes **Nemesys_M_1**, welche im Logger aufgezeichnet werden können.
+
+4. **Untergeordnetes Objekt** - In der **Children** Gruppe sind alle untergeordneten
+   Objekte zu finden. Beim Beispiel **Nemesys_M_1** sind dies z.B. die
+   digitalen und analogen Ein- und Ausgänge des Gerätes, wie z.B.
+   **Nemesys_M_1_DigOUT1**. Diese Objekte können wiederum aufgeklappt werden,
+   um deren Kindobjekte und Eigenschaften anzuzeigen.
+
+5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften 
+   des übergeordneten Objektes. Beim Beispiel **Nemesys_M_1** sind dies z.B.
+   die Eigenschaften **SyringeFillLevel** oder **ActualFlow**. Diese
+   Eigenschaften können Sie einfach per Drag & Drop in die Kanalliste ziehen,
+   um deren Werte aufzuzeichnen.
+
+
+Objektbaum filtern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox 
+:guilabel:`Devices Only` :guinum:`❶` aktiviert. D.h. im Objektbaum werden nur
+Geräte, die vom internen Gerätemanager (:guilabel:`Core.DeviceManager`) verwaltet
+werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
+Objektbaum weitere Anwendungsobjekte angezeigt.
+
+Ist die Checkbox :guilabel:`Devices Only`:guinum:`❶` aktiviert, wird Ihnen
+eine Auswahlbox :guinum:`❷` angezeigt, mit der Sie den Gerätebaum nach einem
+bestimmten Gerätetyp filtern können. In der Abbildung unten wurde z.B. nach
+Spritzenpumpen gefiltert:
+
+.. image:: ../../img/datalogger/object_tree_filter.png
+
+Zusätzlich finden Sie direkt über dem Objektbaum ein Eingabefeld :guinum:`❸`,
+mit dem Sie den Objektbaum nach einem bestimmten Begriff, z.B. einem
+Gerätenamen oder eine Geräteeigenschaft, filtern können. In der Abbildung unten
+wurde z.B. nach der Geräteeigenschaft **ActualFlow** gefiltert. D.h.,
+es werden nur Objekte oder Geräte mit dieser Eigenschaft im Objektbaum
+angezeigt:
+
+.. image:: ../../img/datalogger/object_tree_filter_text.png
+
+
+Liste der Logger-Kanäle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: Pictures/100002010000028A000000981427A41273C77599.png
+.. image:: ../../img/datalogger/logger_channels_view.png
 
-Die Tabelle *Plot Curves* zeigt in tabellarischer Form die
+Die Kanalliste :guilabel:`Logger Channels` zeigt in tabellarischer Form die
 Konfiguration des grafischen Loggers. Jede Zeile in der Tabelle
-entspricht genau einer Kurve in der grafischen Darstellung. Folgende
-Spalten sind vorhanden:
+entspricht genau einer Kurve in der grafischen Darstellung, d.h. einem
+Logger-Kanal. Folgende Spalten sind vorhanden:
 
--  **Channel** – zeigt die Kanalnummer des entsprechenden Kanals
--  **Device** – enthält den Gerätenamen des Gerätes, von dem ein
-   bestimmter Gerätewert aufgezeichnet werden soll und das Geräteicon
--  **Property** – dies ist der Name der Geräteeigenschaft / des
+-  **Object** - enthält den Namen des Objektes, von dem der Wert einer
+   bestimmten Eigenschaft (Property) aufgezeichnet werden soll und das Icon des
+   Objekts.
+-  **Property** - dies ist der Name der Objekteigenschaft / des
    Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
-   Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
+   Eigenschaft (numerischer oder boolescher Wert) können Sie an
    dem Typ-Icon einfach erkennen.
 
-   ========= ================
-   |image49| Numerischer Wert
-   |image50| Boolescher Wert
-   |image51| Text
-   ========= ================
+   ============ =================
+   |icon-num|   Numerischer Wert
+   |icon-bool|  Boolescher Wert
+   |icon-text|  Text
+   ============ =================
 
--  **Label** – hier können Sie eine eigene Bezeichnung des Kanals
+-  **Label** - hier können Sie eine eigene Bezeichnung des Kanals
    festlegen. Diese Bezeichnung erscheint dann in der Legende des
    Graphen.
 
-Zum Hinzufügen eines Prozessdatenkanals zum Logger, führen Sie einfach
-folgende Schritte durch.
+Zum Hinzufügen eines Kanals zum Logger, führen Sie einfach
+folgende Schritte durch:
 
 
 Datenaufzeichnung konfigurieren
 --------------------------------
 
+Kanäle hinzufügen
+~~~~~~~~~~~~~~~~~~~~
+
 :step:`Schritt 1 - Kanäle hinzufügen`
 
-.. image:: Pictures/1000020100000361000001BF969DF3B35F4C3EBA.png
+.. image:: ../../img/datalogger/graph_logger_drag_and_drop.png
    :alt: Diagrammkurven via Drag & Drop hinzufügen
 
-Um einen Kanal hinzuzufügen, müssen Sie zunächst das entsprechende Gerät in die 
-*Geräteliste* der *Plot Logger Konfiguration* aufnehmen. 
-Verschieben Sie dazu das entsprechende Element aus der Geräteliste per Drag-&-Drop 
-(Ziehen und Ablegen) in die Tabelle :guilabel:`Plot Curves`. 
-Der neue Kanal wird an der Stelle hinzugefügt, an der Sie die Maustaste loslassen 
-(siehe Abbildung unten).
+Ziehen Sie aus dem Objektbaum :guilabel:`Object Tree` die Objekteigenschaft,
+welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste 
+:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an 
+der sie die Maustaste loslassen (siehe Abbildung unten).
 
 .. admonition:: Tipp
    :class: tip
 
-   Um die Geräteauswahl zu erleichtern, können   
-   Sie die Geräteliste nach Gerätetyp filtern. 
+   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den 
+   Objektbaum nach verschiedenen Kriterien filtern. 
    
-
-:step:`Schritt 2 - Geräteeigenschaft auswählen`
-
-Wählen Sie nun im Bereich der Diagrammkurven :guilabel:`Plot Curves` die
-Geräteeigenschaft :guilabel:`Property` aus, die Sie aufzeichnen möchten. Klicken
-Sie dafür doppelt in die :guilabel:`Property`-Spalte des Gerätes, welches Sie
-konfigurieren möchten. Nach dem Doppelklick wird Ihnen ein Auswahlfeld
-angezeigt, aus dem Sie die Geräteeigenschaft auswählen können (siehe
-Abbildung unten).
-
-.. image:: Pictures/1000020100000361000001A36B73334ECCAE6878.png
-   :alt: Geräteeigenschaft zum Aufzeichnen auswählen
-
-
-:step:`Schritt 3 – Kanalbeschriftung festlegen`
+:step:`Schritt 2 - Kanalbeschriftung festlegen`
 
 In der Spalte :guilabel:`Label` können Sie für jeden Kanal eine eigene
 Beschriftung vergeben. Diese Beschriftung wird später dann in der
-Legende des Graphen als Beschriftung der Kurve angezeigt. Klicken Sie zum Ändern der
-Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
-geben Sie dann die neue Bezeichnung ein.
+Legende des Graphen als Beschriftung der Kurve angezeigt.
 
 .. image:: Pictures/1000020100000267000000901D707E009D7DE34A.png
    :alt: Kanalbeschriftung ändern
 
-.. admonition:: Wichtig
-   :class: note
+Klicken Sie zum Ändern der
+Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
+geben Sie dann die neue Bezeichnung ein. 
 
-   Bei der Auswahl einer anderen              
-   Geräteeigenschaft wird automatisch eine neue            
-   Kanalbezeichnung vergeben. D.h. Sie sollten die         
-   Kanalbezeichnung erst nach der Auswahl der              
-   Geräteeigenschaft festlegen.   
+:step:`Schritt 3 - Aufzeichnungsintervall festlegen`
 
-:step:`Schritt 4 – Aufzeichnungsintervall festlegen`
-
-.. image:: Pictures/100000000000016D00000079FAA9B0F9A29F6352.png
-   :alt: Logger konfigurieren
+.. image:: ../../img/datalogger/graph_logger_interval.png
+   :alt: Log-Intervall konfigurieren
 
 
-Im Feld :guilabel:`Log Interval` können Sie im Abschnitt :guilabel:`Logger Configuration` 
+Im Feld :guilabel:`Log Interval` können Sie im Bereich :guilabel:`Logger Configuration` 
 das Intervall festlegen, in dem neue
 Messwerte aufgezeichnet werden sollen. Sie können das Intervall mit
 einer Auflösung von 0,1 Sekunden festlegen.
@@ -663,4 +710,9 @@ Exportformats (siehe Beispiel in Abbildung unten):
 .. |image82| image:: Pictures/10001744000034EB000034EBD90F77816321BB6E.svg
    :width: 40
 
-
+.. |icon-num| image:: ../../img/datalogger/property_number.svg
+   :width: 40
+.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
+   :width: 40
+.. |icon-text| image:: ../../img/datalogger/property_text.svg
+   :width: 40

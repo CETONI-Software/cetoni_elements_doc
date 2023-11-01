@@ -123,12 +123,12 @@ angezeigt:
 .. image:: ../../img/datalogger/object_tree_filter_text.png
 
 
-Übersicht Tabelle Logger-Channels
+Liste der Logger-Kanäle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../../img/datalogger/logger_channels_view.png
 
-Die Tabelle :guilabel:`Logger Channels` zeigt in tabellarischer Form die
+Die Kanalliste :guilabel:`Logger Channels` zeigt in tabellarischer Form die
 Konfiguration des Loggers. Jede Zeile in der Tabelle
 entspricht genau einer Spalte in der CSV-Dateien die aufgezeichnet wird.
 Folgende Spalten sind vorhanden:
@@ -155,7 +155,7 @@ Zum Hinzufügen eines Kanals zum Logger, führen Sie einfach
 folgende Schritte durch:
 
 
-Datenprotokollierung konfigurieren
+Datenaufzeichnung konfigurieren
 -----------------------------------
 
 Kanäle hinzufügen
@@ -176,7 +176,7 @@ der sie die Maustaste loslassen (siehe Abbildung unten).
    Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den 
    Objektbaum nach verschiedenen Kriterien filtern.
 
-:step:`Schritt 2 - Kanalbeschreibung`
+:step:`Schritt 2 - Kanalbeschriftung festlegen`
 
 In der Spalte :guilabel:`Label` können Sie für jeden Kanal eine eigene
 Beschriftung vergeben. Diese Beschriftung wird später dann in der
