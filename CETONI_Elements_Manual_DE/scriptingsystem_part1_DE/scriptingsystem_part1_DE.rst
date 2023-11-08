@@ -1362,10 +1362,10 @@ Haltepunkte einfügen
 
 
 Sie können Ihr Script an bestimmten Stellen unterbrechen, indem Sie eine
-:ref:`Interrupt Script <script_unterbrechen>` Funktion einfügen. So können Sie 
+`Interrupt Script` Funktion einfügen. So können Sie 
 gezielt an bestimmten Punkten den Programmablauf unterbrechen, um den Zustand 
 von Variablen zu untersuchen. Wenn sie die Haltefunktion in eine 
-:ref:`Conditional Sequenz <bedingte_sequenz>` einfügen, können Sie das Programm 
+`Conditional Sequence` einfügen, können Sie das Programm 
 unterbrechen, wenn bestimmte Ereignisse eintreten oder Variablen bestimmte 
 Werte haben.
 

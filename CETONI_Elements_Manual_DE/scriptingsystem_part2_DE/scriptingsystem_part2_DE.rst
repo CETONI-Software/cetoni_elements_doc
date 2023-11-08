@@ -23,7 +23,7 @@ zur Programmablaufsteuerung und zur Verwendung von Variablen.
 
 .. _script_unterbrechen:
 
-Script unterbrechen - *Interrupt Script*
+Interrupt Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/interrupt_script.svg
@@ -44,7 +44,7 @@ Continue Schaltfäche in der Toolbar fortsetzen.
 
 .. _interrupt_sequence:
 
-Funktionssequenz unterbrechen - *Interrupt Sequence*
+Interrupt Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/interrupt_sequence3.svg
@@ -70,7 +70,7 @@ auf :guilabel:`Continue` im Bedienpanel der *Interrupt Sequence* Funktion fortzu
 .. _nachricht_anzeigen:
 .. _show_message_function:
 
-Nachricht anzeigen - *Show Message*
+Show Message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000490000034EB000034EB215655F378C8DAF2.svg
@@ -233,7 +233,7 @@ eingeblendet:
 .. _variable_erzeugen:
 .. _create_variable:
 
-Variable erzeugen - *Create Variable*
+Create Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000119100003872000038728AF29595FE1DD321.svg
@@ -551,7 +551,7 @@ JavaScript: :code:`$$Nemesys_M_1`
 .. _wert_variable_setzen:
 .. _set_variable:
 
-Wert einer Variable setzen - *Set Variable*
+Set Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000132400003872000038722A8DDCED1A890F1C.svg
@@ -575,7 +575,7 @@ entspricht der Funktion :ref:`Variable erzeugen <variable_erzeugen>`.
 
 .. _eigenschaftsvariable_erzeugen:
 
-Variablendeklarationen gruppieren - *Variable Declaration Sequence*
+Variable Declaration Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100015BD00003872000038722A0A6332DCBD75A0.svg
@@ -601,7 +601,7 @@ Mit der Sequenz
 können Sie auch Variablen die logisch zusammengehören gruppieren und es
 so für den Anwender einfacher machen, bestimmte Variablen zu finden.
 
-Benutzereingabe - *User Input*
+User Input
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10001DE9000038720000387289754B44B2610975.svg
@@ -646,7 +646,7 @@ Wird während der Scriptausführung die Eingabe mit :guilabel:`OK` bestätigt,
 dann enthält die Variable den Wert, der vom Anwender eingegeben wurde.
 Wir der Dialog mit :guilabel:`Cancel` abgebrochen, dann enthält die 
 Variable einen undefinierten Wert. In JavaScript, z.B. in einer
-:ref:`Conditional Sequence <conditional_sequence>`, können Sie dann wie folgt 
+`Conditional Sequence`, können Sie dann wie folgt 
 testen, ob der Wert undefiniert ist:
 
 .. code-block:: javascript
@@ -679,7 +679,7 @@ eingeblendet:
 
 .. _script_function_call:
 
-Eigene Scriptfunktion - *Script Function Call*
+Script Function Call
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002495000034EB000034EB5801BA1011E76C10.svg
@@ -721,7 +721,7 @@ Scriptfunktionen die sich in dieser Sequenz befinden ausgeführt werden.
 
 .. _zählschleife:
 
-Zählschleife - *Counting Loop*
+Counting Loop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100013490000388C0000388C4A5D96BDCF59F705.svg
@@ -778,9 +778,8 @@ Durchlauf beendet.
 
    Sie können die Zählschleife vorzeitig durch das Ändern der Zählvariable beenden. 
 
-.. _bedingte_schleife:
 
-Bedingte Schleife - *Conditional Loop*
+Conditional Loop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Einführung
@@ -854,7 +853,7 @@ dass die Schleife solange ausgeführt wird, wie der Wert der Variablen
 
 .. _erweiterter_eingabemodus:
 
-Konfiguration – erweiterter Modus
+Konfiguration - erweiterter Modus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Während der einfache Modus dem Benutzer eine grafische Benutzeroberfläche bietet,
@@ -884,7 +883,7 @@ einbinden. Auch JavaScript Funktionen, wie hier z.B.
 
 .. _funktionssequenz:
 
-Funktionssequenz - *Function Sequence*
+Function Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000944000038720000387225245FA0499799FC.svg
@@ -964,10 +963,8 @@ Funktionssequenz ersetzt, welche die ausgewählten Funktionen enthält.*
 
 .. image:: Pictures/10000201000002AD000000B49490E03AE7CD8CE6.png
 
-.. _bedingte_sequenz:
-.. _conditional_sequence:
 
-Bedingte Sequenz – *Conditional Sequence*
+Conditional Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100010E0000038720000387245E0E2D44AF732BF.svg
@@ -986,11 +983,11 @@ beschreiben:
    der Sequenz aus."
 
 Die Konfiguration der bedingten Sequenz ist identisch zur Konfiguration
-der :ref:`bedingten Schleife<bedingte_schleife>`.
+des `Conditional Loop`_.
 
 .. _parallele_sequenz:
 
-Parallele Ausführung - *Parallel Sequence*
+Parallel Sequence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000F0500003872000038726C61F7339CE41618.svg
@@ -1026,7 +1023,7 @@ gewartet werden soll.
    Fehlern in parallelen Sequenzen kann unter Umständen    
    schwierig sein.    
 
-Funktionssequenz abbrechen - *Break*
+Break
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000CF40000387200003872240B44CEBEA58C98.svg
@@ -1045,17 +1042,36 @@ Standartwert 0 wird lediglich die Sequenz abgebrochen, welche die
 Sequenz, die eine weitere Ebene darüber liegt abgebrochen usw.
 
 Möchten Sie z.B. eine Funktionssequenz :guinum:`❶` bei einer bestimmten Bedingung
-abbrechen, dann fügen Sie in die Funktionssequenz eine :ref:`bedingte Sequenz<bedingte_sequenz>` :guinum:`❷`
+abbrechen, dann fügen Sie in die Funktionssequenz eine `Conditional Sequence` :guinum:`❷`
 zum Prüfen der Abbruchbedingung ein und in diese
-:ref:`bedingte Sequenz<bedingte_sequenz>` eine *Break* Funktion :guinum:`❸` mit der *Termination
+`Conditional Sequence` eine *Break* Funktion :guinum:`❸` mit der *Termination
 Depth* :guinum:`❷`. Die Break Funktion :guinum:`❸` wird dann im Fall dass die Bedingung war
 ist die *Conditional Sequence* :guinum:`❷` und die darüber liegende
 Funktionssequenz :guinum:`❶` abbrechen.
 
 .. image:: Pictures/1000020100000175000000A03698480BFF00A770.png
 
+.. admonition:: Wichtig
+   :class: note
+
+   Wenn Sie die *Break* Funktion verschieben oder kopieren, z.B. eine Ebene nach
+   oben oder in ein tiefere Ebene, sollten Sie immer überprüfen, ob die 
+   :guilabel:`Termination Depth` angepasst werden muss.
 
 .. _error_handling_functions:
+
+
+Return
+~~~~~~~~
+
+.. image:: ../../img/scriptingsystem_part2/return.svg
+   :width: 60
+   :align: left 
+
+Mit der Return Funktion können Sie sofort aus einem Script bzw. aus
+einem `Script Function Call` zum Aufrufer zurückkehren. Diese Funktion entspricht
+dem **return** Statement in Sprachen wie JavaScript oder C++.
+
 
 Fehlerbehandlung - *Error Handling*
 --------------------------------------------------
@@ -1146,7 +1162,7 @@ Fehler mit der Fehler ID :code:`ERR_TIMEOUT` auslöst.
 
 Dieser Fehler bewirkt, dass der **Try** Block sofort abgebrochen und der **Catch** Block
 ausgeführt wird. Im **Catch** Block befindet sich eine
-:ref:`Conditional Sequence<conditional_sequence>` :guinum:`❷`. In der Prüfbedingung
+`Conditional Sequence` :guinum:`❷`. In der Prüfbedingung
 der Funktion wird getestet, ob es sich um einen :code:`ERR_TIMEOUT` Fehler handelt.
 Dazu wird der folgende JavaScript Code verwendet:
 
@@ -1188,7 +1204,7 @@ Im Event Log der Anwendung sieht der Anwender dann die Folgende Fehlerausgabe:
    Sie auch den Menüpunkt :menuselection:`Got to Script Function` im
    Kontextmenü des Event-Log verwenden (rechte Maustaste).
 
-Fehler auslösen - *Throw Error*
+Throw Error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/throw_error.svg
@@ -1228,7 +1244,7 @@ zu unterbrechen oder um auf bestimmte Zeitereignisse zu warten.
 
 .. _verzögerungsfunktion:
 
-Verzögerungsfunktion - *Delay*
+Delay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100007700000350500003505BC110D46A028D1D8.svg
@@ -1266,7 +1282,7 @@ Stunden Minuten Sekunden Millisekunden
 
 
 
-Wartefunktion - *Wait until*
+Wait until
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000087800003505000035058C9536180430C275.svg
@@ -1291,7 +1307,7 @@ fortgesetzt.
 
 .. _timer_starten:
 
-Timer starten - *Start Timer*
+Start Timer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/1000095E0000350500003505163F47DDE33790B9.svg
@@ -1319,7 +1335,7 @@ konfigurierten Zeitspanne.
 
 .. _auf_timer_warten:
 
-Auf Timer warten - *Wait for Timer*
+Wait for Timer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000D500000350500003505855C71628C55D85A.svg
@@ -1341,7 +1357,7 @@ Timerfunktionen in einer :ref:`parallelen Sequenz<parallele_sequenz>` verwenden.
 
 .. _timerwert_lesen:
 
-Timerwert lesen - *Read Timer*
+Read Timer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10000B8100003505000035056090D1DE9D69C3F8.svg
@@ -1374,7 +1390,7 @@ Einführung
 
 .. _prozessdaten_lesen:
 
-Prozessdaten lesen - *Read Device Property*
+Read Device Property
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002597000034EB000034EB8C1E4F7964CA4032.svg
@@ -1421,7 +1437,7 @@ beschreiben:
    Einblenden einer Liste bereits erstellter Variablen.  
 
 
-Prozessdaten schreiben - *Write Device Property*
+Write Device Property
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/100024C0000034EB000034EBCD08BD4563B1D7D1.svg
@@ -1448,7 +1464,7 @@ Geräteeigenschaft geschrieben.
 
 .. _wait_for_device_property_func:
 
-Auf Prozessdaten warten - *Wait For Device Property*
+Wait For Device Property
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10002565000034EB000034EB5C19DADB200F9112.svg
@@ -1495,7 +1511,7 @@ Verkürzt lässt sich die Funktion wie folgt beschreiben:
 
    Ein Timeout Wert von 0 deaktiviert das Zeitlimit.  
 
-Eigenschaftsvariable erzeugen - *Create Property Variable*
+Create Property Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10001162000038720000387269894D0D5041B1EE.svg
@@ -1569,7 +1585,7 @@ Log-Funktionen und zum Zugriff auf den Event-Log.
 
 .. _log_message_function:
 
-Nachricht in Event Log einfügen - *Log Message*
+Log Message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/log_message2.svg
@@ -1615,7 +1631,7 @@ Nachricht nur ausgegeben, wenn der :ref:`Debug-Modus <debug-mode>` aktiv ist.
 So können Sie für das Debugging Ihrer Scripte zusätzliche Log-Ausgaben
 aktivieren, die bei normaler Ausführung des Scripts nicht erscheinen.
 
-Ereignisprotokoll löschen - *Clear Event Log*
+Clear Event Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/clear_event_log.svg
@@ -1627,7 +1643,7 @@ Fenster der Anwendung.
 
 |
 
-Ereignisprotokoll exportieren– *Export Event Log*
+Export Event Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/export_event_log.svg
@@ -1654,7 +1670,7 @@ dauerhaften Speichern von Daten.
 
 .. image:: Pictures/data_storage_category.png
 
-Einstellungsdatei öffnen
+Open Settings File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/open_settings_file.svg
@@ -1692,7 +1708,7 @@ Funktionen verwenden, um ein gültiges und korrekt initialisiertes Einstellungso
 
 .. _werte_lesen:
 
-Werte lesen - *Read Setting*
+Read Setting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/settings_read.svg
@@ -1719,14 +1735,14 @@ Wenn Sie die Spritzenlänge aus der folgenden Einstellungsdatei lesen möchten�
 .. image:: Pictures/read_setting_config.png
 
 In das Feld :guilabel:`Settings Object Variable` :guinum:`❶` geben Sie eine Variable mit einem gültigen
-Einstellungsobjekt an, das mit der Funktion `Einstellungsdatei öffnen` erstellt wurde. Dann
+Einstellungsobjekt an, das mit der Funktion `Open Settings File`_ erstellt wurde. Dann
 müssen Sie in das optionale Feld :guilabel:`Settings Group` *SyingeConfig* :guinum:`❷` und den 
 :guilabel:`Schlüssel` *Length* (Länge) :guinum:`❸` angeben. Die Funktion liest nun den Wert :code:`60` aus
 der Datei und speichert ihn in der angegebenen Skriptvariablen :code:`$SyringeLength`.
 
 .. _werte_schreiben:
 
-Werte schreiben - *Write Setting*
+Write Setting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/settings_write.svg
@@ -1736,7 +1752,7 @@ Werte schreiben - *Write Setting*
 Diese Funktion schreibt einen einzelnen Wert in eine Einstellungsdatei. Wenn der im Feld 
 :guilabel:`Key` angegebene Schlüssel bereits existiert, wird der vorherige Wert überschrieben. Um
 diese Funktion zu verwenden, müssen Sie eine Einstellungsdatei öffnen oder erstellen, bevor Sie die 
-Funktion `Einstellungsdatei öffnen`_ verwenden.
+Funktion `Open Settings File`_ verwenden.
 
 Im folgenden Beispiel soll das Spritzenvolumen 1000 in der 
 Einstellungsdatei gespeichert werden:
@@ -1744,7 +1760,7 @@ Einstellungsdatei gespeichert werden:
 .. image:: Pictures/write_setting_config.png
 
 Im :guilabel:`Settings Object Variable` :guinum:`❶` geben Sie eine Variable mit einem gültigen
-Einstellungsobjekt an, das mit der Funktion `Einstellungsdatei öffnen` erstellt wurde. Dann müssen Sie
+Einstellungsobjekt an, das mit der Funktion `Open Settings File`_ erstellt wurde. Dann müssen Sie
 ein optionales :guilabel:`Settings Group` und den :guilabel:`Key` :guinum:`❷` angeben.
 Im Feld :guilabel:`Value` :guinum:`❸` geben Sie den Wert oder eine Skriptvariable
 die den Wert enthält.

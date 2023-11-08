@@ -1008,6 +1008,23 @@ and the function sequence :guinum:`❶` above it if the condition is true.
 
 .. image:: Pictures/1000020100000175000000A03698480BFF00A770.png
 
+.. admonition:: Important
+   :class: note
+
+   If you move or copy the break function, e.g. one level up or to a
+   lower level, you should always check whether the :guilabel:`Termination Depth`
+   needs to be adjusted.
+
+Return
+~~~~~~~~
+
+.. image:: ../../img/scriptingsystem_part2/return.svg
+   :width: 60
+   :align: left 
+
+You can use the return function to return immediately from a script or
+a `Script Function Call` to the caller. This function has a similar functionality
+as the **return** statement in languages such as JavaScript or C++.
 
 .. _error_handling_functions:
 

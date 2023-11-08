@@ -611,8 +611,8 @@ Um einen Regelkreis zu realisieren, gehen Sie wie folgt vor:
 
 1. Der Regler muss zyklisch in einem festen Zeitintervall aufgerufen
    werden. Dafür verwenden Sie eine Schleife. In diesem Fall verwenden
-   Sie eine :ref:`bedingte Schleife<bedingte_schleife>` mit
-   der Schleifenbedingung 1 – also eine Schleife die endlos läuft und
+   Sie eine `Conditional Loop` mit
+   der Schleifenbedingung 1 - also eine Schleife die endlos läuft und
    nie abbricht, außer der Anwender stoppt das Scriptprogramm.
 2. Nun erzeugen Sie eine :ref:`PID Regler Funktion<pid_reglerfunktion>` innerhalb der
    Schleife und konfigurieren alle Parameter.
