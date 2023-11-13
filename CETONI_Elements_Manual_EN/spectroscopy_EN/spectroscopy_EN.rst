@@ -733,14 +733,34 @@ section :guinum:`❶`.
 
 |
 
-.. image:: Pictures/100000000000022E000001345C6C067BCF3E1B4B.png
+.. image:: ../../img/spectroscopy/write_spectrum_file_config.png
 
 Then select
 the file name and file type (:file:`*.txt` or :file:`*.aiq`) to save the files under.
-Click on the file folder icon :guinum:`❷` and select the target directory as
-well as the file name and file type.
+You have several options for this:
 
-When you start the function the current time stamp will be added to the
+ Selection via file dialog:
+   Click on the file folder icon :guinum:`❷` and select the target directory as
+   well as the file name and file type.
+
+ Enter an absolute file path:
+   Enter an absolute file path, e.g. :code:`C:\temp\MySpectrum.aiq`, 
+   using the keyboard.
+
+ Entering a relative file path
+    Enter a relative file path, e.g. :code:`.\Data\MySpectrum.aiq` 
+    using the keyboard. In this case, the :code:`MySpectrum.aiq` file is saved
+    in the current project directory in the Data subfolder. If the current
+    project for example folder is 
+    :code:`C:/Users/Public/Documents/QmixElements/Projects/QmixLambda`, 
+    then the following file would be created: 
+    :code:`C:/Users/Public/Documents/QmixElements/Projects/QmixLambda/Data/MySpectrum.aiq`
+
+ Using a script variable
+    You can save an absolute or relative file path in a script variable and
+    then use this variable in the input field.
+
+When you run the function the current time stamp will be added to the
 file name. In this way a file with a new and unique file name is created
 every time the function in launched. For example, a file called
 :file:`Spectrum.aiq` will be saved under the following file name:

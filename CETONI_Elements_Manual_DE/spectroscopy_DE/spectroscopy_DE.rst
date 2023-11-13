@@ -806,16 +806,16 @@ Wählen Sie dann den Dateinamen und den Dateityp (:file:`*.txt` oder :file:`*.ai
 mit dem die Dateien gespeichert werden sollen. Dafür haben Sie verschiedene
 Möglichkeiten:
 
-Auswahl über Dateidialog:
+ Auswahl über Dateidialog:
    Klicken Sie dafür auf die
    Schaltfläche mit dem Ordnersymbol , und wählen Sie dann das
    Zielverzeichnis, den Dateinamen und den Typ aus im angezeigten Dateidialog aus.
 
-Eingabe eines absoluten Dateipfades:
+ Eingabe eines absoluten Dateipfades:
    Geben Sie einen absoluten Dateipfad, wie z.B. :code:`C:\temp\MySpectrum.aiq`,
    über die Tastatur ein.
    
-Eingabe eines relativen Dateipfades   
+ Eingabe eines relativen Dateipfades   
    Geben Sie einen relativen Dateipfad, wie z.B. :code:`.\Data\MySpectrum.aiq`
    über die Tastatur ein.
    In diesem Fall wird die Datei :code:`MySpectrum.aiq` im aktuellen Projektverzeichnis 
@@ -824,7 +824,7 @@ Eingabe eines relativen Dateipfades
    würde folgende Datei erzeugt werden: 
    :code:`C:/Users/Public/Documents/QmixElements/Projects/QmixLambda/Data/MySpectrum.aiq`
    
-Verwendung einer Scriptvariable   
+ Verwendung einer Scriptvariable   
    Sie können einen absoluten oder relativen
    Dateipfad in einer Scriptvariablen speichern, und dann diese Variable in
    dem Eingabefeld verwenden.

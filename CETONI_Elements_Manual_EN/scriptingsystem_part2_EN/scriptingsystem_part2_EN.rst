@@ -1594,9 +1594,33 @@ The file has two sections (:code:`SyringeConfig` and :code:`Variables`) and each
 section contains a number of key-value pairs.
 
 To open a settings file or to create a new one, you need to provide a filename :guinum:`❶`
-and a script variable :guinum:`❷`` to store the created settings file object. 
+and a script variable :guinum:`❷` to store the created settings file object. 
 
-.. image:: Pictures/open_settings_file.png
+.. image:: ../../img/scriptingsystem_part2/open_settings_config.png
+
+In the input field for the file name :guinum:`❶`, you have various options for entering a 
+file name:
+
+ Selection via file dialog:
+   Click on the file folder icon :guinum:`❶` and select the target directory as
+   well as the file name and file type.
+
+ Enter an absolute file path:
+   Enter an absolute file path, e.g. :code:`C:\temp\MySettings.ini`, 
+   using the keyboard.
+
+ Entering a relative file path
+    Enter a relative file path, e.g. :code:`.\Data\MySettings.ini` 
+    using the keyboard. In this case, the :code:`MySettings.ini` file is saved
+    in the current project directory in the Data subfolder. If the current
+    project for example folder is 
+    :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys`, 
+    then the following file would be created: 
+    :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys/Data/MySettings.ini`
+
+ Using a script variable
+    You can save an absolute or relative file path in a script variable and
+    then use this variable in the input field.  
 
 If the file exists, it will be opened. If it does not exist yet, it will be 
 created. You can now use the variable in the `Read Setting`_ and `Write Setting`_

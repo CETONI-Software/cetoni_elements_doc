@@ -1705,23 +1705,23 @@ und eine Skriptvariable :guinum:`❷` angeben, um das erstellte Objekt der Einst
 Im Eingabefeld für den Dateinamen :guinum:`❶`, haben Sie verschiedene Möglichkeiten,
 einen Dateinamen einzugeben:
 
-Auswahl über Dateidialog:
+ Auswahl über Dateidialog:
    Klicken Sie dafür auf die
    Schaltfläche mit dem Ordnersymbol , und wählen Sie dann das
    Zielverzeichnis, den Dateinamen und den Typ aus im angezeigten Dateidialog aus.
 
-Eingabe eines absoluten Dateipfades:
+ Eingabe eines absoluten Dateipfades:
    Geben Sie einen absoluten Dateipfad, wie z.B. :code:`C:\temp\MySettings.ini`,
    über die Tastatur ein.
    
-Eingabe eines relativen Dateipfades   
+ Eingabe eines relativen Dateipfades   
    Eingabe eines relativen Pfades per Tastatur - z.B. :code:`.\Data\MySettings.ini`.
    In diesem Fall wird die Datei :code:`MySettings.ini` im aktuellen Projektverzeichnis 
    im Unterordner :code:`Data` gespeichert. Wenn der aktuelle Projektordner
    z.B. :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys` ist, dann
    würde folgende Datei erzeugt werden: :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys/Data/MySettings.ini`
    
-Verwendung einer Scriptvariable   
+ Verwendung einer Scriptvariable   
    Sie können einen absoluten oder relativen
    Dateipfad in einer Scriptvariablen speichern, und dann diese Variable in
    dem Feld verwenden.
