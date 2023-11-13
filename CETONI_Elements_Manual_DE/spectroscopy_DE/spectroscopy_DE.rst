@@ -785,7 +785,7 @@ scriptgesteuerten Aufnahme von Spektren.
 .. image:: Pictures/10000000000001030000006529CA263118B37D56.png
    :alt: Spektroskopie-Scriptfunktionen
 
-Spektraldaten speichern – *Write Spectrum File*
+Write Spectrum File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Pictures/10001C570000350500003505E6F32F564847474D.svg
@@ -799,13 +799,35 @@ welchem Sie ein Spektrum aufzeichnen möchten :guinum:`❶`.
 
 |
 
-.. image:: Pictures/100000000000022E000001345C6C067BCF3E1B4B.png
+.. image:: ../../img/spectroscopy/write_spectrum_file_config.png
    :alt: Konfiguration Write Spectrum File Funktion
 
 Wählen Sie dann den Dateinamen und den Dateityp (:file:`*.txt` oder :file:`*.aiq`) aus,
-mit dem die Dateien gespeichert werden sollen. Klicken Sie dafür auf die
-Schaltfläche mit dem Ordnersymbol :guinum:`❷`, und wählen Sie das
-Zielverzeichnis, den Dateinamen und den Typ aus.
+mit dem die Dateien gespeichert werden sollen. Dafür haben Sie verschiedene
+Möglichkeiten:
+
+Auswahl über Dateidialog:
+   Klicken Sie dafür auf die
+   Schaltfläche mit dem Ordnersymbol , und wählen Sie dann das
+   Zielverzeichnis, den Dateinamen und den Typ aus im angezeigten Dateidialog aus.
+
+Eingabe eines absoluten Dateipfades:
+   Geben Sie einen absoluten Dateipfad, wie z.B. :code:`C:\temp\MySpectrum.aiq`,
+   über die Tastatur ein.
+   
+Eingabe eines relativen Dateipfades   
+   Geben Sie einen relativen Dateipfad, wie z.B. :code:`.\Data\MySpectrum.aiq`
+   über die Tastatur ein.
+   In diesem Fall wird die Datei :code:`MySpectrum.aiq` im aktuellen Projektverzeichnis 
+   im Unterordner :code:`Data` gespeichert. Wenn der aktuelle Projektordner
+   z.B. :code:`C:/Users/Public/Documents/QmixElements/Projects/QmixLambda` ist, dann
+   würde folgende Datei erzeugt werden: 
+   :code:`C:/Users/Public/Documents/QmixElements/Projects/QmixLambda/Data/MySpectrum.aiq`
+   
+Verwendung einer Scriptvariable   
+   Sie können einen absoluten oder relativen
+   Dateipfad in einer Scriptvariablen speichern, und dann diese Variable in
+   dem Eingabefeld verwenden.
 
 Bei Aufruf der Funktion wird in den Dateinamen noch der aktuelle
 Zeitstempel eingefügt. Dadurch wird bei jedem Aufruf der Funktion eine

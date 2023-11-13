@@ -1700,11 +1700,37 @@ Abschnitt enthält eine Reihe von Schlüssel-Werte-Paaren.
 Um eine Einstellungsdatei zu öffnen oder eine neue Datei zu erstellen, müssen Sie einen Dateinamen :guinum:`❶`
 und eine Skriptvariable :guinum:`❷` angeben, um das erstellte Objekt der Einstellungsdatei zu speichern.
 
-.. image:: Pictures/open_settings_file.png
+.. image:: ../../img/scriptingsystem_part2/open_settings_config.png
+
+Im Eingabefeld für den Dateinamen :guinum:`❶`, haben Sie verschiedene Möglichkeiten,
+einen Dateinamen einzugeben:
+
+Auswahl über Dateidialog:
+   Klicken Sie dafür auf die
+   Schaltfläche mit dem Ordnersymbol , und wählen Sie dann das
+   Zielverzeichnis, den Dateinamen und den Typ aus im angezeigten Dateidialog aus.
+
+Eingabe eines absoluten Dateipfades:
+   Geben Sie einen absoluten Dateipfad, wie z.B. :code:`C:\temp\MySettings.ini`,
+   über die Tastatur ein.
+   
+Eingabe eines relativen Dateipfades   
+   Eingabe eines relativen Pfades per Tastatur - z.B. :code:`.\Data\MySettings.ini`.
+   In diesem Fall wird die Datei :code:`MySettings.ini` im aktuellen Projektverzeichnis 
+   im Unterordner :code:`Data` gespeichert. Wenn der aktuelle Projektordner
+   z.B. :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys` ist, dann
+   würde folgende Datei erzeugt werden: :code:`C:/Users/Public/Documents/QmixElements/Projects/Nemesys/Data/MySettings.ini`
+   
+Verwendung einer Scriptvariable   
+   Sie können einen absoluten oder relativen
+   Dateipfad in einer Scriptvariablen speichern, und dann diese Variable in
+   dem Feld verwenden.
 
 Wenn die Datei existiert, wird sie geöffnet. Wenn sie noch nicht existiert, wird sie 
-erstellt. Sie können die Variable nun in den Funktionen :ref:`Werte lesen<werte_lesen>` und :ref:`Werte schreiben<werte_schreiben>` verwenden
-Funktionen verwenden, um ein gültiges und korrekt initialisiertes Einstellungsobjekt bereitzustellen.
+erstellt. Sie können die Variable mit dem Settings Objekt nun in den Funktionen
+:ref:`Werte lesen<werte_lesen>` und :ref:`Werte schreiben<werte_schreiben>` verwenden
+Funktionen verwenden, um ein gültiges und korrekt initialisiertes
+Einstellungsobjekt bereitzustellen.
 
 .. _werte_lesen:
 
