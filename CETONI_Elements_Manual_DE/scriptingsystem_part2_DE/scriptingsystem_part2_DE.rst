@@ -622,18 +622,21 @@ Parameter konfigurieren:
    Ausführung der Funktion über dem Eingabefeld als Beschriftung und erklärender 
    Text angezeigt wird.
 #. **Variable** - In diesem Feld legen Sie die Variable fest, die den vom
-   Anwender eingegebenen Wert speichern soll.
+   Anwender eingegebenen Wert speichern soll. Gleichzeitig wird Wert der Variable
+   auch als Ausgangswert bei der Anzeige des Eingabedialogs verwendet. D.h.,
+   wenn Sie die Variable z.B. vorher mit dem Wert 5 initialisieren, wird
+   bei der Anzeige des Eingabedialogs der Wert 5 als Standardwert angezeigt.
 #. **Type Hint** - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
    nach gewähltem Wert, akzeptiert der Eingabedialog nur bestimmte
    Werte.
-#. **Allow Cancel** - Ist dieses Auswahlfeld aktiv, dann enhält der 
+#. **Allow Cancel** - Ist dieses Auswahlfeld aktiv, dann enthält der 
    angezeigte Dialog eine :guilabel:`Cancel` Schaltfläche, die den Abbruch der
    Eingabe ermöglicht.
 #. **Rich Text** - Aktivieren Sie diese Option, um Ihren Text mit Fettdruck,
    Kursivschrift, Farben und mehr zu formatieren.
 #. **Test Input Dialog** - Durch Anklicken dieser Schaltfläche können Sie
    den Eingabedialog testweise anzeigen, um zu prüfen, wie der Anwender
-   den Eingabedialog später bei der Ausführun des Scriptes sehen wird
+   den Eingabedialog später bei der Ausführung des Scriptes sehen wird
    (siehe Abbildung unten).
 
    ==================================== ====================================
@@ -713,7 +716,7 @@ Funktionssequenzen - *Function Sequences*
 
 .. image:: Pictures/1000020100000100000000C3B3C3827EFC5DBC99.png
 
-Die Funktionskategorie FunctionSequences enthält
+Die Funktionskategorie *Function Sequences* enthält
 verschiedene Arten von Funktionssequenzen. Funktionssequenzen sind
 Scriptfunktionen, die eine Reihe (Sequenz) von Funktionen aufnehmen
 können. Wird eine Funktionssequenz ausgeführt, bedeutet das, dass alle

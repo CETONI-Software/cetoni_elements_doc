@@ -596,7 +596,11 @@ following parameters:
    execution of the function above the input field as a label and
    explanatory text.
 #. **Variable** - In this field you specify the variable to store the
-   value entered by the user.
+   value entered by the user. In addition, the value of the variable is also 
+   used as the initial value when the input dialogue is displayed. This means 
+   if you initialise the variable with the value 5 beforehand, for example, 
+   the value 5 is displayed as the default value when the input dialogue is 
+   shown.
 #. **Type Hint** - You can specify the input type, number or text, here.
    Depending on the selected input type the user input dialog accepts
    only certain values.
