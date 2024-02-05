@@ -23,8 +23,81 @@ types. Such standardized profiles form the basis for uniform access to
 CANopen devices using the `CAN bus <https://en.wikipedia.org/wiki/CAN_bus>`_. 
 This makes it possible to be largely independent from particular manufacturers.
 
-Object Dictionary
------------------
+Opening CANopen Tools Project
+------------------------------------
+
+To open the CANopen Tools Workbench, load the CETONI Elements project 
+:file:`canopentools`. To do this, click on the menu item 
+:menuselection:`File --> Open Project` in the 
+main menu of the application. Then select the project :file:`canopentools` in the 
+project dialog.
+
+.. image:: Pictures/open_canopentools_project.png
+
+The application will restart and you should see the CANopen Tools Workbench:
+
+.. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
+
+The :ref:`View <views>` of the *CANopen Tools* plugin can be displayed by 
+pressing the :guilabel:`CANopen Tools` :guinum:`❶` button in the sidebar. 
+The toolbar :guinum:`❷` contains important functions for accessing devices on 
+the network.
+
+The main part of the CANopen Tools Workbench is the `Object Dictionary
+Editor`_ :guinum:`❸` for reading or
+writing individual entries to or from the device object dictionary.
+
+In addition, you can monitor the messages on the CAN bus in real time
+with the `CAN Bus Trace Window`_ :guinum:`❹`.
+
+
+Toolbar
+-------
+
++-----------+---------------------------------------------------------+
+| |image33| | Network scan – searches for connected devices           |
++-----------+---------------------------------------------------------+
+| |image34| | Resets all devices                                      |
++-----------+---------------------------------------------------------+
+| |image35| | Resets communication parameters of all devices          |
++-----------+---------------------------------------------------------+
+| |image36| | Starts process data communication on all devices        |
++-----------+---------------------------------------------------------+
+| |image37| | Sets all devices to pre-operational status              |
++-----------+---------------------------------------------------------+
+| |image38| | Stops communication of all devices                      |
++-----------+---------------------------------------------------------+
+| |image39| | Saves parameters of selected devices (nodes) to         |
+|           | non-volatile device memory                              |
++-----------+---------------------------------------------------------+
+| |image40| | Resets all parameters of selected device to factory     |
+|           | values                                                  |
++-----------+---------------------------------------------------------+
+| |image41| | Assigns EDS file (*Electronic Data Sheet*) to the       |
+|           | selected device                                         |
++-----------+---------------------------------------------------------+
+| |image42| | Export parameters of the selected CANopen node to a DCF |
+|           | file                                                    |
++-----------+---------------------------------------------------------+
+| |image43| | Import DCF file into the selected CANopen node          |
++-----------+---------------------------------------------------------+
+| |image44| | Resets the selected device                              |
++-----------+---------------------------------------------------------+
+| |image45| | Resets communication parameters on the selected device  |
++-----------+---------------------------------------------------------+
+| |image46| | Starts process data communication on the selected       |
+|           | device                                                  |
++-----------+---------------------------------------------------------+
+| |image47| | Resets selected devices to pre-operational status       |
++-----------+---------------------------------------------------------+
+| |image48| | Stops communication of the selected device              |
++-----------+---------------------------------------------------------+
+
+Object Dictionary Editor
+------------------------
+
+What is a CANopen Object Dictionary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `object dictionary <https://www.can-cia.org/can-knowledge/canopen/device-architecture/>`_ 
 forms the central element of the CANopen standard.
@@ -74,80 +147,8 @@ contains information regarding the device, such as device
 identification, manufacturer, etc. as well as communication parameters.
 The second section describes the specific device functionality.
 
-Overview of CANopen Tools Workbench
-------------------------------------
-
-To open the CANopen Tools Workbench, load the CETONI Elements project 
-:file:`canopentools`. To do this, click on the menu item 
-:menuselection:`File --> Open Project` in the 
-main menu of the application. Then select the project :file:`canopentools` in the 
-project dialog.
-
-.. image:: Pictures/open_canopentools_project.png
-
-The application will restart and you should see the CANopen Tools Workbench:
-
-.. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
-
-The :ref:`View <views>` of the *CANopen Tools* plugin can be displayed by 
-pressing the :guilabel:`CANopen Tools` :guinum:`❶` button in the sidebar. 
-The toolbar :guinum:`❷` contains important functions for accessing devices on 
-the network.
-
-The main part of the CANopen Tools Workbench is the `Object Dictionary
-Editor`_ :guinum:`❸` for reading or
-writing individual entries to or from the device object dictionary.
-
-In addition, you can monitor the messages on the CAN bus in real time
-with the `CAN Bus Trace Window`_ :guinum:`❹`.
-
-Toolbar
--------
-
-+-----------+---------------------------------------------------------+
-| |image33| | Network scan – searches for connected devices           |
-+-----------+---------------------------------------------------------+
-| |image34| | Resets all devices                                      |
-+-----------+---------------------------------------------------------+
-| |image35| | Resets communication parameters of all devices          |
-+-----------+---------------------------------------------------------+
-| |image36| | Starts process data communication on all devices        |
-+-----------+---------------------------------------------------------+
-| |image37| | Sets all devices to pre-operational status              |
-+-----------+---------------------------------------------------------+
-| |image38| | Stops communication of all devices                      |
-+-----------+---------------------------------------------------------+
-| |image39| | Saves parameters of selected devices (nodes) to         |
-|           | non-volatile device memory                              |
-+-----------+---------------------------------------------------------+
-| |image40| | Resets all parameters of selected device to factory     |
-|           | values                                                  |
-+-----------+---------------------------------------------------------+
-| |image41| | Assigns EDS file (*Electronic Data Sheet*) to the       |
-|           | selected device                                         |
-+-----------+---------------------------------------------------------+
-| |image42| | Export parameters of the selected CANopen node to a DCF |
-|           | file                                                    |
-+-----------+---------------------------------------------------------+
-| |image43| | Import DCF file into the selected CANopen node          |
-+-----------+---------------------------------------------------------+
-| |image44| | Resets the selected device                              |
-+-----------+---------------------------------------------------------+
-| |image45| | Resets communication parameters on the selected device  |
-+-----------+---------------------------------------------------------+
-| |image46| | Starts process data communication on the selected       |
-|           | device                                                  |
-+-----------+---------------------------------------------------------+
-| |image47| | Resets selected devices to pre-operational status       |
-+-----------+---------------------------------------------------------+
-| |image48| | Stops communication of the selected device              |
-+-----------+---------------------------------------------------------+
-
-Object Dictionary Editor
-------------------------
-
-Overview
-~~~~~~~~
+Overview of Object Dictionary Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The object dictionary editor gives you access to the object dictionaries
 of all connected nodes.

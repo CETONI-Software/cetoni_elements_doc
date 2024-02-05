@@ -28,9 +28,87 @@ Zugriff auf die CANopen-Geräte über den `CAN-Bus <https://en.wikipedia.org/wik
 Dies ermöglicht eine
 weitgehende Unabhängigkeit von einem bestimmten Hersteller.
 
+CANopen Tools Projekt öffnen
+---------------------------------
 
-Objektverzeichnis
------------------
+Um den CANopen Tools Workbench zu öffnen, laden Sie das CETONI Elements Projekt
+:file:`canopentools`. Klicken Sie dafür im Hauptmenü der Anwendung auf den
+Menüpunkt :menuselection:`File --> Open Project`. Im Projektdialog wählen
+Sie dann das Projekt :file:`canopentools`. 
+
+.. image:: Pictures/open_canopentools_project.png
+
+Die Anwendung startet dann neu und
+sie sollten danach den CANopen Tools Workbench sehen:
+
+.. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
+   :alt: CANopen Tools Workbench
+
+Den :ref:`View <Views (Ansichten)>` des *CANopen
+Tools* Plugin können Sie durch Drücken der Schaltfläche :guilabel:`CANopen Tools` 
+:guinum:`❶` in der Seitenleiste einblenden. In der Werkzeugleiste :guinum:`❷` finden Sie
+wichtige Funktionen zum Zugriff auf Geräte im Netzwerk.
+
+Den Hauptbereich des CANopen Tools Workbench bilden der `Objektverzeichnis-Editor`_
+(Object Dictionary Editor) :guinum:`❸` zum Lesen und Schreiben einzelner Einträge
+im Objektverzeichnis.
+
+Zusätzlich können Sie die Nachrichten auf dem CAN-Bus in Echtzeit mit
+dem `CAN Bus Trace Fenster`_ :guinum:`❹`.
+überwachen.
+
+
+Werkzeugleiste
+--------------
+
++-----------+---------------------------------------------------------+
+| |image33| | Netzwerkscan - sucht nach allen angeschlossenen Geräten |
++-----------+---------------------------------------------------------+
+| |image34| | Reset aller Geräte durchführen                          |
++-----------+---------------------------------------------------------+
+| |image35| | Reset der Kommunikationsparameter aller Geräte          |
++-----------+---------------------------------------------------------+
+| |image36| | Prozessdatenkommunikation aller Geräte starten          |
++-----------+---------------------------------------------------------+
+| |image37| | Alle Geräte in den Zustand Pre-operational versetzen.   |
++-----------+---------------------------------------------------------+
+| |image38| | Kommunikation aller Geräte stoppen                      |
++-----------+---------------------------------------------------------+
+| |image39| | Parameter des ausgewählten Gerätes (Knotens) in         |
+|           | nichtflüchtigen Gerätespeicher sichern                  |
++-----------+---------------------------------------------------------+
+| |image40| | Alle Parameter des ausgewählten Gerätes auf             |
+|           | Standard-Werte zurücksetzen                             |
++-----------+---------------------------------------------------------+
+| |image41| | EDS Datei (*Electronical Data Sheet*) dem ausgewählten  |
+|           | Gerät zuweisen                                          |
++-----------+---------------------------------------------------------+
+| |image42| | Parameter des ausgewählten CANopen Knotens in eine      |
+|           | DCF-Datei exportieren                                   |
++-----------+---------------------------------------------------------+
+| |image43| | DCF-Datei in den ausgewählten CANopen Knoten            |
+|           | importieren                                             |
++-----------+---------------------------------------------------------+
+| |image44| | Reset des ausgewählten Gerätes                          |
++-----------+---------------------------------------------------------+
+| |image45| | Reset der Kommunikationsparameter des ausgewählten      |
+|           | Gerätes                                                 |
++-----------+---------------------------------------------------------+
+| |image46| | Prozessdatenkommunikation des ausgewählten Gerätes      |
+|           | starten                                                 |
++-----------+---------------------------------------------------------+
+| |image47| | Ausgewähltes Geräte in den Zustand Pre-operational      |
+|           | versetzen.                                              |
++-----------+---------------------------------------------------------+
+| |image48| | Kommunikation des ausgewählten Gerätes stoppen          |
++-----------+---------------------------------------------------------+
+
+
+Objektverzeichnis-Editor
+------------------------
+
+Was ist ein CANopen Objektverzeichnis?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Das `Objektverzeichnis <https://www.can-cia.org/can-knowledge/canopen/device-architecture/>`_ 
 ist das zentrale Element des CANopen-Standards.
@@ -82,86 +160,8 @@ enthält Angaben über das Gerät, wie Geräteidentifikation,
 Herstellername, etc. sowie Kommunikationsparameter. Der zweite Teil
 beschreibt die spezifische Gerätefunktionalität.
 
-Übersicht CANopen Tools Workbench
----------------------------------
-
-Um den CANopen Tools Workbench zu öffnen, laden Sie das CETONI Elements Projekt
-:file:`canopentools`. Klicken Sie dafür im Hauptmenü der Anwendung auf den
-Menüpunkt :menuselection:`File --> Open Project`. Im Projektdialog wählen
-Sie dann das Projekt :file:`canopentools`. 
-
-.. image:: Pictures/open_canopentools_project.png
-
-Die Anwendung startet dann neu und
-sie sollten danach den CANopen Tools Workbench sehen:
-
-.. image:: Pictures/10000201000003F10000027E5D603ADD6876B968.png
-   :alt: CANopen Tools Workbench
-
-Den :ref:`View <Views (Ansichten)>` des *CANopen
-Tools* Plugin können Sie durch Drücken der Schaltfläche :guilabel:`CANopen Tools` 
-:guinum:`❶` in der Seitenleiste einblenden. In der Werkzeugleiste :guinum:`❷` finden Sie
-wichtige Funktionen zum Zugriff auf Geräte im Netzwerk.
-
-Den Hauptbereich des CANopen Tools Workbench bilden der `Objektverzeichnis-Editor`_
-(Object Dictionary Editor) :guinum:`❸` zum Lesen und Schreiben einzelner Einträge
-im Objektverzeichnis.
-
-Zusätzlich können Sie die Nachrichten auf dem CAN-Bus in Echtzeit mit
-dem `CAN Bus Trace Fenster`_ :guinum:`❹`.
-überwachen.
-
-Werkzeugleiste
---------------
-
-+-----------+---------------------------------------------------------+
-| |image33| | Netzwerkscan - sucht nach allen angeschlossenen Geräten |
-+-----------+---------------------------------------------------------+
-| |image34| | Reset aller Geräte durchführen                          |
-+-----------+---------------------------------------------------------+
-| |image35| | Reset der Kommunikationsparameter aller Geräte          |
-+-----------+---------------------------------------------------------+
-| |image36| | Prozessdatenkommunikation aller Geräte starten          |
-+-----------+---------------------------------------------------------+
-| |image37| | Alle Geräte in den Zustand Pre-operational versetzen.   |
-+-----------+---------------------------------------------------------+
-| |image38| | Kommunikation aller Geräte stoppen                      |
-+-----------+---------------------------------------------------------+
-| |image39| | Parameter des ausgewählten Gerätes (Knotens) in         |
-|           | nichtflüchtigen Gerätespeicher sichern                  |
-+-----------+---------------------------------------------------------+
-| |image40| | Alle Parameter des ausgewählten Gerätes auf             |
-|           | Standard-Werte zurücksetzen                             |
-+-----------+---------------------------------------------------------+
-| |image41| | EDS Datei (*Electronical Data Sheet*) dem ausgewählten  |
-|           | Gerät zuweisen                                          |
-+-----------+---------------------------------------------------------+
-| |image42| | Parameter des ausgewählten CANopen Knotens in eine      |
-|           | DCF-Datei exportieren                                   |
-+-----------+---------------------------------------------------------+
-| |image43| | DCF-Datei in den ausgewählten CANopen Knoten            |
-|           | importieren                                             |
-+-----------+---------------------------------------------------------+
-| |image44| | Reset des ausgewählten Gerätes                          |
-+-----------+---------------------------------------------------------+
-| |image45| | Reset der Kommunikationsparameter des ausgewählten      |
-|           | Gerätes                                                 |
-+-----------+---------------------------------------------------------+
-| |image46| | Prozessdatenkommunikation des ausgewählten Gerätes      |
-|           | starten                                                 |
-+-----------+---------------------------------------------------------+
-| |image47| | Ausgewähltes Geräte in den Zustand Pre-operational      |
-|           | versetzen.                                              |
-+-----------+---------------------------------------------------------+
-| |image48| | Kommunikation des ausgewählten Gerätes stoppen          |
-+-----------+---------------------------------------------------------+
-
-
-Objektverzeichnis-Editor
-------------------------
-
-Übersicht
-~~~~~~~~~
+Übersicht über der Objektverzeichnis-Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Im Objektverzeichnis-Editor haben Sie Zugriff auf die
 Objektverzeichnisse aller angeschlossener Knoten.
