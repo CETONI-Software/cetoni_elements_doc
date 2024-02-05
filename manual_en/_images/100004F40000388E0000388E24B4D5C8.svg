@@ -1,0 +1,18 @@
+<svg x="0" y="0" width="512" height="512" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <title>home icon</title>
+    <desc>home icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+    <g>
+        <polygon points="64,264.9 256,80 448,264.9 448,496 64,496" fill="#ebedef"/>
+        <polygon points="448,288 448,496 256,496 256,128 64,320 64,274.75 257.3,81.45" fill="#cdd7db"/>
+        <path d="M9.4,297.35l240.95,-240.95c3.1,-3.1 8.2,-3.1 11.3,0l241,240.95l-22.65,22.65l-224,-224l-224,224z" fill="#546e7a"/>
+        <path d="M256,54.05c2.05,0 4.1,0.8 5.65,2.35l241,240.95l-22.65,22.65l-224,-224z" fill="#445a64"/>
+        <polygon points="32,480 480,480 480,512 32,512" fill="#8fa3ad"/>
+        <polygon points="256,480 480,480 480,512 256,512" fill="#788f9b"/>
+        <polygon points="288,288 400,288 400,480 288,480" fill="#965716"/>
+        <polygon points="304,304 384,304 384,480 304,480" fill="#a8631b"/>
+        <path d="M112,304l48,0l0,48l-48,0z M160,368l0,48l-48,0l0,-48z M176,304l48,0l0,48l-48,0z M224,368l0,48l-48,0l0,-48z" fill="#0287cf"/>
+        <polygon points="272,464 416,464 416,480 272,480" fill="#546e7a"/>
+    </g>
+</svg>

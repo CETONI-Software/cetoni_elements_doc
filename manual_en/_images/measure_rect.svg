@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg6768"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="measure_rect.svg">
+  <metadata
+     id="metadata6788">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>precision square icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6786" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6784"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.2432572"
+     inkscape:cx="218.76875"
+     inkscape:cy="220.78073"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6768">
+    <sodipodi:guide
+       position="371.60452,144.78098"
+       orientation="0,1"
+       id="guide7351" />
+    <sodipodi:guide
+       position="-85.259912,384.47394"
+       orientation="1,0"
+       id="guide7411" />
+    <sodipodi:guide
+       position="186.6066,226.0192"
+       orientation="1,0"
+       id="guide7456" />
+    <sodipodi:guide
+       position="213.14978,188.21528"
+       orientation="0,1"
+       id="guide7458" />
+  </sodipodi:namedview>
+  <title
+     id="title6770">precision square icon</title>
+  <desc
+     id="desc6772">precision square icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect7413"
+     width="336.43387"
+     height="335.49973"
+     x="159.56613"
+     y="16" />
+  <g
+     id="g4234">
+    <g
+       transform="scale(0.76300732,1.1341432)"
+       id="g4188">
+      <g
+         id="g4184">
+        <path
+           id="path6776"
+           d="m 0,0 0,323.78515 112,0 L 112,0 0,0 Z"
+           style="fill:#fbd734;fill-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="polygon6778"
+           d="m 0,0 0,323.78515 32,0 L 32,0 0,0 Z"
+           style="fill:#fce26c;fill-opacity:1"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9bf2c;fill-opacity:1"
+         d="m 80,0 0,323.79032 32,0 L 112,0 80,0 Z"
+         id="path6780" />
+    </g>
+    <g
+       transform="translate(-2.1116e-4,6.2402193)"
+       id="g4230">
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 37.457031,26.994211 0,33.418732 48,0 0,-33.418732 -48,0 z m 0,133.669789 0,33.41615 48,0 0,-33.41615 -48,0 z m 0,133.66978 0,33.41616 48,0 0,-33.41616 -48,0 z"
+         id="path6782"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 57.566406,94.708984 0,33.416016 27.890625,0 0,-33.416016 -27.890625,0 z m 0,133.669926 0,33.41601 27.890625,0 0,-33.41601 -27.890625,0 z"
+         id="path4225"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <g
+     id="g4244"
+     transform="matrix(0,-1,1,0,144.77541,512)">
+    <g
+       id="g4246"
+       transform="scale(0.76300732,1.1341432)">
+      <g
+         id="g4248">
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:#fbd734;fill-opacity:1"
+           d="m 0,0 0,323.78515 112,0 L 112,0 0,0 Z"
+           id="path4250" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:#fce26c;fill-opacity:1"
+           d="m 0,0 0,323.78515 32,0 L 32,0 0,0 Z"
+           id="path4252" />
+      </g>
+      <path
+         id="path4254"
+         d="m 80,0 0,323.79032 32,0 L 112,0 80,0 Z"
+         style="fill:#f9bf2c;fill-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4256"
+       transform="translate(-2.1116e-4,6.2402193)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4258"
+         d="m 37.457031,26.994211 0,33.418732 48,0 0,-33.418732 -48,0 z m 0,133.669789 0,33.41615 48,0 0,-33.41615 -48,0 z m 0,133.66978 0,33.41616 48,0 0,-33.41616 -48,0 z"
+         style="fill:#000000;fill-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4260"
+         d="m 57.566406,94.708984 0,33.416016 27.890625,0 0,-33.416016 -27.890625,0 z m 0,133.669926 0,33.41601 27.890625,0 0,-33.41601 -27.890625,0 z"
+         style="fill:#000000;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

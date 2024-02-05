@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg5622"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="disk_blue.svg">
+  <metadata
+     id="metadata5650">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>floppy disk icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5648" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5646"
+     showgrid="false"
+     inkscape:zoom="0.39"
+     inkscape:cx="-176.08388"
+     inkscape:cy="191.06115"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5622" />
+  <title
+     id="title5624">floppy disk icon</title>
+  <desc
+     id="desc5626">floppy disk icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <path
+     style="fill:#0299e3;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path5630"
+     d="m 480,48 0,416 c 0,8.8 -7.2,16 -16,16 L 64,480 32,448 32,48 c 0,-8.8 7.2,-16 16,-16 l 416,0 c 8.8,0 16,7.2 16,16 z" />
+  <path
+     style="fill:#016ea3;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path5632"
+     d="m 480,48 0,416 c 0,8.8 -7.2,16 -16,16 l -208,0 0,-448 208,0 c 8.8,0 16,7.2 16,16 z" />
+  <path
+     style="fill:#dff3fd"
+     inkscape:connector-curvature="0"
+     id="path5634"
+     d="m 96,32 320,0 0,224 c 0,8.8 -7.2,16 -16,16 l -288,0 c -8.8,0 -16,-7.2 -16,-16 z" />
+  <path
+     style="fill:#b1e3fb"
+     inkscape:connector-curvature="0"
+     id="path5636"
+     d="m 256,32 160,0 0,224 c 0,8.8 -7.2,16 -16,16 l -144,0 z" />
+  <path
+     style="fill:#f98b00"
+     inkscape:connector-curvature="0"
+     id="path5638"
+     d="m 416,208 0,48 c 0,8.8 -7.2,16 -16,16 l -288,0 c -8.8,0 -16,-7.2 -16,-16 l 0,-48 z" />
+  <path
+     style="fill:#f37c00"
+     inkscape:connector-curvature="0"
+     id="path5640"
+     d="m 416,208 0,48 c 0,8.8 -7.2,16 -16,16 l -144,0 0,-64 z" />
+  <path
+     style="fill:#ebedef"
+     inkscape:connector-curvature="0"
+     id="path5642"
+     d="m 384,336 0,144 -256,0 0,-144 c 0,-8.8 7.2,-16 16,-16 l 224,0 c 8.8,0 16,7.2 16,16 z m -224,0 0,112 64,0 0,-112 z" />
+  <path
+     style="fill:#cdd7db"
+     inkscape:connector-curvature="0"
+     id="path5644"
+     d="m 384,336 0,144 -128,0 0,-160 112,0 c 8.8,0 16,7.2 16,16 z" />
+</svg>
