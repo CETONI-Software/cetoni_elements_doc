@@ -1,3 +1,4 @@
+Library,Link to License information,Link to Library
 Abseil,https://github.com/CETONI-Software/3rdparty-abseil-cpp/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-abseil-cpp
 Aqt StyleSheets,https://github.com/CETONI-Software/3rdparty-aqt-stylesheets/blob/master/LICENSE,https://github.com/CETONI-Software/3rdparty-aqt-stylesheets
 Armadillo,https://opensource.org/licenses/Apache-2.0,http://arma.sourceforge.net/
@@ -17,7 +18,6 @@ KDBindings,https://github.com/CETONI-Software/3rdparty-KDBindings/blob/1.0/LICEN
 LAPACK,http://www.netlib.org/lapack/LICENSE.txt,http://www.netlib.org/lapack/
 libccd,https://github.com/CETONI-Software/3rdparty-libccd/blob/master/BSD-LICENSE,https://github.com/CETONI-Software/3rdparty-libccd
 libiconv,https://www.gnu.org/software/libiconv/,https://www.gnu.org/software/libiconv/
-Library,Link to License information,Link to Library
 libserialport,https://opensource.org/licenses/lgpl-3.0.html,https://sigrok.org/wiki/Libserialport
 libxml2,https://gitlab.gnome.org/GNOME/libxml2/-/blob/master/Copyright,https://gitlab.gnome.org/GNOME/libxml2
 libxslt,https://gitlab.gnome.org/GNOME/libxslt/-/blob/master/Copyright,https://gitlab.gnome.org/GNOME/libxslt
