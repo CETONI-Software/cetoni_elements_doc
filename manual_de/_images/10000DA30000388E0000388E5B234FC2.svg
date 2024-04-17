@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="splitpoint.svg">
+  <metadata
+     id="metadata4152">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>arrow circle icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4150" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4148"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.6601563"
+     inkscape:cx="408.37035"
+     inkscape:cy="256"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4136">
+    <sodipodi:guide
+       position="245.75999,255.99999"
+       orientation="0,1"
+       id="guide4167" />
+    <sodipodi:guide
+       position="214.43764,281.90117"
+       orientation="1,0"
+       id="guide4169" />
+    <sodipodi:guide
+       position="428.87528,237.9294"
+       orientation="1,0"
+       id="guide4156" />
+  </sodipodi:namedview>
+  <title
+     id="title4138">arrow circle icon</title>
+  <desc
+     id="desc4140">arrow circle icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <path
+     style="fill:#00aad5;fill-opacity:1"
+     d="m 512,256 -82.58064,0 C 429.41934,196.69678 405.36733,143.01976 366.55444,104.15524 327.68991,65.342338 274.0129,41.290326 214.70968,41.290322 155.40644,41.290323 101.72942,65.342348 62.864919,104.15525 24.051977,143.01973 -8.0499989e-6,196.69678 2.5000105e-7,256 -6.9499989e-6,315.30323 24.052011,368.98025 62.864919,407.84476 c 38.864481,38.81295 92.541521,62.86492 151.844761,62.86492 12.97968,0 25.68991,-1.15193 38.03426,-3.35886 l -10.65321,-65.22985 c -8.8769,1.65234 -18.02655,2.5242 -27.38105,2.52419 -41.03226,0 -78.19315,-16.61974 -105.13508,-43.51008 C 82.684232,334.19319 66.064516,297.03226 66.064516,256 c 0,-41.03226 16.619747,-78.19314 43.510084,-105.13508 26.94189,-26.89036 64.10283,-43.51007 105.13508,-43.51009 41.03226,3e-5 78.19314,16.61978 105.13508,43.51009 26.8903,26.94198 43.51008,64.10282 43.51009,105.13508 L 280.77418,256 396.3871,371.61292 512,256 Z"
+     id="path4144"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#5fd300;stroke-width:55.33135223;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 212.08384,253.63863 327.62438,414.7288"
+     id="path4158"
+     inkscape:connector-curvature="0" />
+</svg>

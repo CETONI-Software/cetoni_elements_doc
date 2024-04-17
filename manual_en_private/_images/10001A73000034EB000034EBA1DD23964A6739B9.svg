@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="node_restore.svg">
+  <metadata
+     id="metadata4154">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>elements hierarchy icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4152" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4150"
+     showgrid="false"
+     inkscape:zoom="0.26390158"
+     inkscape:cx="124.38588"
+     inkscape:cy="351.49118"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4136" />
+  <title
+     id="title4138">elements hierarchy icon</title>
+  <desc
+     id="desc4140">elements hierarchy icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g7533"
+     transform="translate(-48,0)">
+    <path
+       id="path7535"
+       d="m 102.65,416 41.35,0 0,64 -41.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 C 81.55,465.55 77.8,464 73.35,464 l -25.35,0 0,-32 25.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 z m 0,-96 41.35,0 0,64 -41.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 C 81.55,369.55 77.8,368 73.35,368 l -25.35,0 0,-32 25.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 z m 0,-96 41.35,0 0,64 -41.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 C 81.55,273.55 77.8,272 73.35,272 l -25.35,0 0,-32 25.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 z m 0,-96 41.35,0 0,64 -41.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 C 81.55,177.55 77.8,176 73.35,176 l -25.35,0 0,-32 25.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 z m 0,-96 41.35,0 0,64 -41.35,0 C 98.2,96 94.45,94.45 91.3,91.3 L 84.7,84.7 C 81.55,81.55 77.8,80 73.35,80 L 48,80 48,48 73.35,48 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 C 94.45,33.55 98.2,32 102.65,32 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#cdd7db" />
+    <path
+       id="path7537"
+       d="m 409.35,416 -41.35,0 0,64 41.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 l 25.35,0 0,-32 -25.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 c -3.15,-3.15 -6.9,-4.7 -11.35,-4.7 z m 0,-96 -41.35,0 0,64 41.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 l 25.35,0 0,-32 -25.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 c -3.15,-3.15 -6.9,-4.7 -11.35,-4.7 z m 0,-96 -41.35,0 0,64 41.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 l 25.35,0 0,-32 -25.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 c -3.15,-3.15 -6.9,-4.7 -11.35,-4.7 z m 0,-96 -41.35,0 0,64 41.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 l 25.35,0 0,-32 -25.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 c -3.15,-3.15 -6.9,-4.7 -11.35,-4.7 z m 0,-96 -41.35,0 0,64 41.35,0 c 4.45,0 8.2,-1.55 11.35,-4.7 l 6.6,-6.6 c 3.15,-3.15 6.9,-4.7 11.35,-4.7 l 25.35,0 0,-32 -25.35,0 c -4.45,0 -8.2,-1.55 -11.35,-4.7 l -6.6,-6.6 C 417.55,33.55 413.8,32 409.35,32 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#afbdc3" />
+    <path
+       id="path7539"
+       d="m 144,0 224,0 c 8.8,0 16,7.2 16,16 l 0,480 c 0,8.8 -7.2,16 -16,16 l -224,0 c -8.8,0 -16,-7.2 -16,-16 l 0,-480 c 0,-8.8 7.2,-16 16,-16 z"
+       inkscape:connector-curvature="0"
+       style="fill:#546e7a" />
+    <path
+       id="path7541"
+       d="m 380.8,6.4 c 2,2.7 3.2,6 3.2,9.6 l 0,480 c 0,8.8 -7.2,16 -16,16 l -224,0 c -5.2,0 -9.85,-2.5 -12.8,-6.4 z"
+       inkscape:connector-curvature="0"
+       style="fill:#445a64" />
+    <path
+       id="path7543"
+       d="m 256,464 c 26.5,0 48,21.5 48,48 l -96,0 c 0,-26.5 21.5,-48 48,-48 z"
+       inkscape:connector-curvature="0"
+       style="fill:#36464e" />
+  </g>
+  <g
+     id="g7682"
+     transform="matrix(0.78125,0,0,0.78125,162,112)">
+    <path
+       id="path7684"
+       d="m 80,64 352,0 c 8.8,0 16,7.2 16,16 l 0,416 c 0,8.8 -7.2,16 -16,16 l -352,0 c -8.8,0 -16,-7.2 -16,-16 L 64,80 c 0,-8.8 7.2,-16 16,-16 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ff8d00" />
+    <path
+       id="path7686"
+       d="m 443.65,69.05 c 2.7,2.9 4.35,6.75 4.35,10.95 l 0,416 c 0,8.8 -7.2,16 -16,16 l -352,0 c -4.6,0 -8.75,-1.95 -11.65,-5.05 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ff6e00" />
+    <polygon
+       id="polygon7688"
+       points="416,480 96,480 96,96 416,96 "
+       style="fill:#ffffff" />
+    <polygon
+       id="polygon7690"
+       points="128,80 384,80 384,138.65 416,101.35 416,480 96,480 96,474.65 379.45,144 128,144 "
+       style="fill:#ebedef" />
+    <path
+       id="path7692"
+       d="M 327.4,300.3 361.3,334.25 236.85,458.7 169,390.8 l 33.95,-33.95 33.9,33.95 z m 0,-158.7 33.9,33.9 L 236.85,299.95 169,232.1 l 33.95,-33.95 33.9,33.95 z"
+       inkscape:connector-curvature="0"
+       style="fill:#66b96a" />
+    <path
+       id="path7694"
+       d="M 344.35,158.55 361.3,175.5 236.85,299.95 169,232.1 l 16.95,-17 50.9,50.95 z m 0,158.7 16.95,17 L 236.85,458.7 169,390.8 l 16.95,-16.95 50.9,50.9 z"
+       inkscape:connector-curvature="0"
+       style="fill:#429f46" />
+    <path
+       id="path7696"
+       d="m 256,0 c 28.45,0 53.95,12.35 71.55,32 L 368,32 c 8.8,0 16,7.2 16,16 l 0,80 -256,0 0,-80 c 0,-8.8 7.2,-16 16,-16 l 40.45,0 C 202.05,12.35 227.55,0 256,0 Z m 0,16 c 8.85,0 16,7.15 16,16 0,8.85 -7.15,16 -16,16 -8.85,0 -16,-7.15 -16,-16 0,-8.85 7.15,-16 16,-16 z"
+       inkscape:connector-curvature="0"
+       style="fill:#788f9b" />
+    <polygon
+       id="polygon7698"
+       points="384,128 128,128 128,80 384,80 "
+       style="fill:#546e7a" />
+  </g>
+</svg>

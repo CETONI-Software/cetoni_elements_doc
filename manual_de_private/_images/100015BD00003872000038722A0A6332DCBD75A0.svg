@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="144.49777mm"
+   height="144.49777mm"
+   viewBox="0 0 511.99998 511.99998"
+   id="svg5048"
+   version="1.1"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="variables_declaration.svg">
+  <defs
+     id="defs5050" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.88"
+     inkscape:cx="255.99999"
+     inkscape:cy="384.16205"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5053">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(387.99343,-121.26205)">
+    <g
+       id="g5275"
+       transform="matrix(1.0253906,0,0,1.0253906,379.96857,120.3586)">
+      <path
+         id="path5244"
+         d="m -716.94582,0.88108 h 256 c 17.65,0 32,14.35 32,32 v 256 c 0,17.6 -14.35,32 -32,32 h -256 c -17.65,0 -32,-14.4 -32,-32 v -256 c 0,-17.65 14.35,-32 32,-32 z"
+         inkscape:connector-curvature="0"
+         style="fill:#788f9b;fill-opacity:1" />
+      <path
+         id="path5246"
+         d="m -438.34582,10.28108 c 5.8,5.8 9.4,13.8 9.4,22.6 v 256 c 0,17.6 -14.35,32 -32,32 h -256 c -8.8,0 -16.8,-3.6 -22.6,-9.4 z"
+         inkscape:connector-curvature="0"
+         style="fill:#546e7a;fill-opacity:1" />
+      <path
+         id="path5248"
+         d="m -545.34582,240.98108 h -87.8 l -15.3,47.9 h -68.5 l 97.55,-256 h 60.2 l 98.25,256 h -68.85 z m -72.45,-47.5 h 57.15 l -28.65,-88.9 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <polygon
+         transform="translate(-924.94582,-175.11892)"
+         id="polygon5250"
+         points="379.6,416.1 291.8,416.1 276.5,464 208,464 308.9,363.1 307.15,368.6 364.3,368.6 349.45,322.55 393,279 464,464 395.15,464 "
+         style="fill:#ebedef" />
+    </g>
+    <g
+       id="g4599"
+       transform="matrix(0.70312501,0,0,0.70312501,346.68344,399.61345)">
+      <path
+         id="path5244-59"
+         d="m -787.23206,-173.51922 h 320 c 22.0625,0 40,17.9375 40,40 v 320 c 0,22 -17.9375,40 -40,40 h -320 c -22.0625,0 -40,-18 -40,-40 v -320 c 0,-22.0625 17.9375,-40 40,-40 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffa526;fill-opacity:1" />
+      <path
+         id="path5246-5"
+         d="m -438.98206,-161.76922 c 7.25,7.25 11.75,17.25 11.75,28.25 v 320 c 0,22 -17.9375,40 -40,40 h -320 c -11,0 -21,-4.5 -28.25001,-11.75 z"
+         inkscape:connector-curvature="0"
+         style="fill:#f98b00;fill-opacity:1" />
+      <path
+         id="path5248-2"
+         d="m -572.73206,126.60578 h -109.75 l -19.125,59.875 h -85.625 l 121.9375,-320 h 75.25 l 122.8125,320 h -86.0625 z m -90.56251,-59.375 h 71.4375 l -35.8125,-111.125 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <polygon
+         transform="matrix(1.25,0,0,1.25,-1047.2321,-393.51922)"
+         id="polygon5250-9"
+         points="393,279 464,464 395.15,464 379.6,416.1 291.8,416.1 276.5,464 208,464 308.9,363.1 307.15,368.6 364.3,368.6 349.45,322.55 "
+         style="fill:#ebedef" />
+    </g>
+    <g
+       id="g5275-2-3"
+       transform="matrix(0.64453126,0,0,0.64453126,400.47555,426.44415)">
+      <path
+         id="path5244-5-4"
+         d="m -716.94582,0.88108 h 256 c 17.65,0 32,14.35 32,32 v 256 c 0,17.6 -14.35,32 -32,32 h -256 c -17.65,0 -32,-14.4 -32,-32 v -256 c 0,-17.65 14.35,-32 32,-32 z"
+         inkscape:connector-curvature="0"
+         style="fill:#788f9b;fill-opacity:1" />
+      <path
+         id="path5246-3-9"
+         d="m -438.34582,10.28108 c 5.8,5.8 9.4,13.8 9.4,22.6 v 256 c 0,17.6 -14.35,32 -32,32 h -256 c -8.8,0 -16.8,-3.6 -22.6,-9.4 z"
+         inkscape:connector-curvature="0"
+         style="fill:#546e7a;fill-opacity:1" />
+      <path
+         id="path5248-6-7"
+         d="m -545.34582,240.98108 h -87.8 l -15.3,47.9 h -68.5 l 97.55,-256 h 60.2 l 98.25,256 h -68.85 z m -72.45,-47.5 h 57.15 l -28.65,-88.9 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <polygon
+         transform="translate(-924.94582,-175.11892)"
+         id="polygon5250-1-4"
+         points="276.5,464 208,464 308.9,363.1 307.15,368.6 364.3,368.6 349.45,322.55 393,279 464,464 395.15,464 379.6,416.1 291.8,416.1 "
+         style="fill:#ebedef" />
+    </g>
+  </g>
+</svg>

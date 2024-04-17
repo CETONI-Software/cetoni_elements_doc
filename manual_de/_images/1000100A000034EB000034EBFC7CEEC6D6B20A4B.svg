@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="zoom_rect.svg">
+  <metadata
+     id="metadata4164">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4162" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4160"
+     showgrid="false"
+     inkscape:zoom="1.6601562"
+     inkscape:cx="254.64617"
+     inkscape:cy="256"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4136" />
+  <title
+     id="title4138">magnifying glass icon</title>
+  <desc
+     id="desc4140">magnifying glass icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g4142"
+     transform="matrix(-0.95830838,0,0,0.95830838,527.32096,36.667066)">
+    <path
+       d="m 144.4,333.4 62.7,-62.65 C 187.55,244.25 176,211.45 176,176 176,87.65 247.65,16 336,16 c 88.35,0 160,71.65 160,160 0,88.35 -71.65,160 -160,160 -35.6,0 -68.45,-11.6 -95,-31.25 l -62.65,62.6 z"
+       id="path4144"
+       inkscape:connector-curvature="0"
+       style="fill:#788f9b" />
+    <path
+       d="m 241,304.75 -62.65,62.6 -16.95,-16.95 61.35,-61.35 c 5.65,5.65 11.75,10.9 18.25,15.7 z"
+       id="path4146"
+       inkscape:connector-curvature="0"
+       style="fill:#546e7a" />
+    <path
+       d="m 18.35,437.1 139.7,-139.75 c 3.1,-3.1 8.2,-3.1 11.3,0 l 45.3,45.3 c 3.1,3.1 3.1,8.2 0,11.3 L 74.9,493.65 c -3.1,3.15 -8.2,3.15 -11.3,0 L 40.95,471.05 18.35,448.4 c -3.15,-3.1 -3.15,-8.2 0,-11.3 z"
+       id="path4148"
+       inkscape:connector-curvature="0"
+       style="fill:#ffa526" />
+    <path
+       d="m 192,320 22.65,22.65 c 3.1,3.1 3.1,8.2 0,11.3 L 74.9,493.65 c -3.1,3.15 -8.2,3.15 -11.3,0 l -22.65,-22.6 z"
+       id="path4150"
+       inkscape:connector-curvature="0"
+       style="fill:#f98b00" />
+    <path
+       d="m 336,48 c 70.7,0 128,57.3 128,128 0,70.7 -57.3,128 -128,128 -70.7,0 -128,-57.3 -128,-128 0,-70.7 57.3,-128 128,-128 z"
+       id="path4152"
+       inkscape:connector-curvature="0"
+       style="fill:#b1e3fb" />
+    <path
+       d="m 426.5,85.45 c 23.15,23.2 37.5,55.2 37.5,90.55 0,70.7 -57.3,128 -128,128 -35.35,0 -67.35,-14.35 -90.55,-37.5 z"
+       id="path4154"
+       inkscape:connector-curvature="0"
+       style="fill:#7fd3f9" />
+    <path
+       d="m 336,62.2 c 62.85,0 113.8,50.95 113.8,113.8 0,62.85 -50.95,113.8 -113.8,113.8 -62.85,0 -113.8,-50.95 -113.8,-113.8 0,-62.85 50.95,-113.8 113.8,-113.8 z"
+       id="path4156"
+       inkscape:connector-curvature="0"
+       style="fill:#dff3fd" />
+    <path
+       d="m 416.45,95.55 c 20.6,20.55 33.35,49 33.35,80.45 0,62.85 -50.95,113.8 -113.8,113.8 -31.45,0 -59.9,-12.75 -80.45,-33.35 z"
+       id="path4158"
+       inkscape:connector-curvature="0"
+       style="fill:#b1e3fb" />
+  </g>
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#78e918;stroke-width:16;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect4178"
+     width="400"
+     height="400"
+     x="8"
+     y="8" />
+</svg>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="collapse_all.svg">
+  <metadata
+     id="metadata4164">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>code php icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4162" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4160"
+     showgrid="false"
+     inkscape:zoom="1.6192555"
+     inkscape:cx="256"
+     inkscape:cy="145.13869"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4136" />
+  <title
+     id="title4138">code php icon</title>
+  <desc
+     id="desc4140">code php icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <g
+     id="g4191"
+     transform="matrix(1.0416667,0,0,1.1904762,-66.666669,-3.2e-6)">
+    <path
+       id="polygon4144"
+       d="m 64,0 0,336 384,0 L 448,0 64,0 Z"
+       style="fill:#dff3fd"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon4146"
+       d="M 448,0 196,336 448,336 448,0 Z"
+       style="fill:#b1e3fb"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 112,32 112,0 0,16 -112,0 z m 0,256 160,0 0,16 -160,0 z m 48,-96 112,0 0,16 -112,0 z m -48,64 112,0 0,16 -112,0 z m 48,-32 144,0 0,16 -144,0 z m 0,-64 112,0 0,16 -112,0 z m 64,-32 112,0 0,16 -112,0 z m 0,-32 192,0 0,16 -192,0 z m -64,-32 176,0 0,16 -176,0 z"
+       id="path4148"
+       inkscape:connector-curvature="0"
+       style="fill:#445a64" />
+    <path
+       d="m 220,304 12,-16 40,0 0,16 z m 48,-64 12,-16 24,0 0,16 z m 96,-128 12,-16 40,0 0,16 z"
+       id="path4150"
+       inkscape:connector-curvature="0"
+       style="fill:#36464e" />
+  </g>
+  <g
+     id="g4245"
+     transform="matrix(0.58333333,0,0,0.64605506,222.66667,233.31929)">
+    <polygon
+       id="polygon4247"
+       points="16,320 16,192 496,192 496,320 "
+       style="fill:#f3501e" />
+    <polygon
+       id="polygon4249"
+       points="192,320 320,192 496,192 496,320 "
+       style="fill:#e54a18" />
+  </g>
+</svg>
