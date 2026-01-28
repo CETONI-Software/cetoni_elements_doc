@@ -22,8 +22,8 @@ startup screen (figure below).
 .. admonition:: Important
    :class: note
 
-   Also after a system crash or after an    
-   update of the software, the default configuration is     
+   Also after a system crash or after an
+   update of the software, the default configuration is
    loaded, and the start-up screen appears.
 
 If you want to start the application in demo mode, eg
@@ -37,7 +37,7 @@ Activate License
 ~~~~~~~~~~~~~~~~
 
 Right after the initial installation of the software, you have an active
-demo license. To view your installed licenses, select 
+demo license. To view your installed licenses, select
 :menuselection:`Help --> Show License Information` from the main menu.
 
 .. image:: ../../img/qmixelements/1000020100000174000000D78571510911B97AEE.png
@@ -85,10 +85,10 @@ Device Configurations
 
 You have
 to install and load a device configuration, in order to be able to
-control your devices with the software. A device configuration is a folder 
-with a set of XML files which contain a complete description of the 
-configuration of all devices in the current setup. Only devices that are 
-properly configured in the device configuration are available in the CETONI 
+control your devices with the software. A device configuration is a folder
+with a set of XML files which contain a complete description of the
+configuration of all devices in the current setup. Only devices that are
+properly configured in the device configuration are available in the CETONI
 Elements software. In the startup screen you can see all ways to get to a valid device
 configuration:
 
@@ -107,7 +107,7 @@ device configurations. To use individual devices or complete systems
 consisting of several individual devices in CETONI Elements, you must
 create a device configuration. For this purpose, use the Device
 Configurator, which is integrated in CETONI Elements. For detailed
-instructions on how to create device configurations, see 
+instructions on how to create device configurations, see
 :ref:`Device Configurator<Creating Device Configurations>` section.
 
 Open Configuration
@@ -138,10 +138,10 @@ you received with your device.
 Perform the following steps to import an existing device configuration:
 
 .. tip::
-   If you create a configuration with the Device 
-   Configurator, the configuration will be installed       
-   automatically and you don't need to perform the         
-   following steps. 
+   If you create a configuration with the Device
+   Configurator, the configuration will be installed
+   automatically and you don't need to perform the
+   following steps.
 
 .. rst-class:: steps
 
@@ -151,8 +151,8 @@ Perform the following steps to import an existing device configuration:
    .. image:: ../../img/qmixelements/10000000000001310000010F1E67A086173830FE.png
 
 #. Now select whether you
-   want to import a folder with a device configuration (:guilabel:`Import Folder`) 
-   or a compressed device configuration file (:guilabel:`Import .qcf File`). 
+   want to import a folder with a device configuration (:guilabel:`Import Folder`)
+   or a compressed device configuration file (:guilabel:`Import .qcf File`).
    On the installation media that came with your device, the
    device configurations are stored in folders. Therefore, select the
    item :guilabel:`Import Folder`.
@@ -174,14 +174,14 @@ Perform the following steps to import an existing device configuration:
 
    |Figure 1.4: Restart application|
 
-After completing these steps, the software with the device-specific plugins will 
+After completing these steps, the software with the device-specific plugins will
 start to load.
 
 .. admonition:: Important
    :class: note
 
-   When importing, device configurations,   
-   these are always imported into the current project. 
+   When importing, device configurations,
+   these are always imported into the current project.
 
 Export Device Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,7 +190,7 @@ You can also export device configurations. If you would like to give a
 device configuration to employees or if you need the send a device
 configuration to the CETONI support staff, then you should export a
 device configuration as compressed :file:`.qcf` file. To export a device
-configuration, select the main menu item 
+configuration, select the main menu item
 :menuselection:`Device --> Export Configuration`.
 
 |Figure 1.5: Export device configuration|
@@ -228,7 +228,7 @@ The software PDF manual can be accessed via the application's help menu
    A PDF-viewer must be installed on your system to be able to view the PDF
    software manual.
 
-To show this online software manual select the menu item 
+To show this online software manual select the menu item
 :menuselection:`Help --> Open Online Manual`.
 
 Show Software Version
@@ -267,7 +267,7 @@ and the name of the currently loaded device configuration. The following
 example illustrates this more clearly. If the title bar contains the
 following text:
 
-:code:`CETONI Elements – C:\Users\Public\\Documents\CETONI Elements\Projects\default_project [demo (shared)]`
+:code:`CETONI Elements – C:\\Users\\Public\\Documents\\CETONI Elements\\Projects\\default_project [demo (shared)]`
 
 then you will get the following information:
 
@@ -323,7 +323,7 @@ simply drag the view from its position :guinum:`❷` with the mouse button held
 down. As long as you do not release the mouse button, you can move the
 view freely (see figure below).
 
-|Figure 1.11: Move View via Drag & Drop| 
+|Figure 1.11: Move View via Drag & Drop|
 
 Alternatively, you can detach
 the view from its position by double-clicking on its tab. The third
@@ -490,10 +490,10 @@ the perspectives from the main menu. To do this, select the menu item
 .. image:: ../../img/qmixelements/1000020100000225000000F171D95022C6176EB6.png
 
 .. tip::
-   If you have lost the overview when arranging  
-   the views or if you want to start again with the        
-   arrangement of the views, simply use the Perspective    
-   button in the toolbar to call the Standard Perspective  
+   If you have lost the overview when arranging
+   the views or if you want to start again with the
+   arrangement of the views, simply use the Perspective
+   button in the toolbar to call the Standard Perspective
    :guilabel:`Default`.
 
 Creating Perspectives
@@ -542,11 +542,11 @@ displayed and display a menu for selecting the view (see figure below).
 .. image:: ../../img/qmixelements/10000201000000E10000005F05B9041439F8E1EF.png
 
 .. tip::
-   The sidebar, and also all toolbars, can be    
-   freely positioned and arranged in the peripheral areas  
-   of the main window. If you right-click on a toolbar,    
-   you will see a menu for showing and hiding the          
-   toolbars.  
+   The sidebar, and also all toolbars, can be
+   freely positioned and arranged in the peripheral areas
+   of the main window. If you right-click on a toolbar,
+   you will see a menu for showing and hiding the
+   toolbars.
 
 
 .. _event_log:
@@ -560,8 +560,8 @@ automatically displayed when an event is written to the log.
 
 .. image:: ../../img/qmixelements/eventlog.png
 
-If you want to display the event log view manually, select 
-:menuselection:`Window --> Show View --> Event Log`` from the main menu of the 
+If you want to display the event log view manually, select
+:menuselection:`Window --> Show View --> Event Log`` from the main menu of the
 application.
 
 |Figure : Showing Event Log View|
@@ -592,17 +592,17 @@ corresponding icons.
 
 .. rst-class:: inlineimg
 
-- |log_info| :blue-marker:`blue - Information` 
+- |log_info| :blue-marker:`blue - Information`
       General information, status messages or non-critical messages from script
       functions with an informative character. These events indicate, for example,
       that a certain operation has been successfully completed or that a certain
-      state has been reached. 
+      state has been reached.
 - |log_warn| :yellow-marker:`yellow - Warning`
       Warning events indicate that a specific event has occurred that may have
       an impact on the system or application. They indicate a possible problem,
       but the application / script may continue to function.
 - |log_err| :red-marker:`red - Error`
-      These events indicate that errors have occurred that may cause the script, 
+      These events indicate that errors have occurred that may cause the script,
       the application or certain devices to no longer function correctly.
 - |log_user| :green-marker:`green - User Interaction`
       These events inform the user that user interactions, such as pressing a
@@ -612,7 +612,7 @@ corresponding icons.
 Event Log Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Various actions are available in the Event Log header :guinum:`❶` or via the 
+Various actions are available in the Event Log header :guinum:`❶` or via the
 context menu :guinum:`❷`:
 
 .. image:: ../../img/qmixelements/eventlog_contextmenu.png
@@ -621,7 +621,7 @@ context menu :guinum:`❷`:
    :width: 60
    :align: left
 
-With the :guilabel:`Filter` action, you can filter the event log according to a 
+With the :guilabel:`Filter` action, you can filter the event log according to a
 certain event category. This makes it easier to keep track of many entries in
 the log or to find specific events.
 
@@ -635,7 +635,7 @@ When new events are written to the log, the system automatically scrolls to the
 last element inserted so that the most recent element is always visible. If the
 event log is to be searched for a specific entry or if you want to analyze the
 chronological sequence of events, this automatic scrolling may be undesirable.
-In this case, check the :guilabel:`Scroll Lock` button to deactivate automatic 
+In this case, check the :guilabel:`Scroll Lock` button to deactivate automatic
 scrolling.
 
 .. image:: ../../img/qmixelements/10000F570000350500003505D59CCCB32AAEA5EE.svg
@@ -662,10 +662,10 @@ You can clear the event log by pressing the :guilabel:`Clear Event Log` button.
    :width: 60
    :align: left
 
-If you right-click on a log entry that was caused by a script function, you 
-will additionally see the menu item :menuselection:`Go to Script Function` in the context menu. 
-If you select this menu item, the function that caused the log event is 
-displayed and highlighted in the :ref:`Script Editor<Script Editor>`. A double click with the 
+If you right-click on a log entry that was caused by a script function, you
+will additionally see the menu item :menuselection:`Go to Script Function` in the context menu.
+If you select this menu item, the function that caused the log event is
+displayed and highlighted in the :ref:`Script Editor<Script Editor>`. A double click with the
 mouse on the corresponding log entry gives the same result.
 
 .. tip::
@@ -691,9 +691,9 @@ Elements with your device(s).
 .. admonition:: Important
    :class: note
 
-   The device must be connected to the PC   
-   via USB and the power supply to the device must be      
-   switched on to connect to the device. 
+   The device must be connected to the PC
+   via USB and the power supply to the device must be
+   switched on to connect to the device.
 
 Working with projects
 ---------------------
@@ -710,7 +710,7 @@ user-specific settings are loaded. So you can easily switch between
 different projects or share projects with other employees.
 
 The `Title bar`_ always shows your current
-project path. If you select the menu item :menuselection:`File --> Browse Project Folder` 
+project path. If you select the menu item :menuselection:`File --> Browse Project Folder`
 in the main menu, the current project will be opened in File
 Explorer.
 
@@ -748,8 +748,8 @@ from the main menu.
 In the dialog window that is then
 displayed, you can configure the new project. First enter a unique
 project name :guinum:`❶`. Then select whether you want to copy the settings of
-the current project into the new project via 
-:guilabel:`Copy current project settings` or whether you want to start with an 
+the current project into the new project via
+:guilabel:`Copy current project settings` or whether you want to start with an
 empty project via :guilabel:`Create empty project` :guinum:`❷`.
 
 Then select the location where the project folder is to be created. If
@@ -766,16 +766,16 @@ Complete the creation of the new project by clicking :guilabel:`OK` :guinum:`❺
 .. admonition:: Important
    :class: note
 
-   Save project data, such as scripts,      
-   images, log files, etc., in the project directory or    
-   subdirectories whenever possible. This is the only way  
-   to ensure that all important data is exported or saved  
-   during project export. 
+   Save project data, such as scripts,
+   images, log files, etc., in the project directory or
+   subdirectories whenever possible. This is the only way
+   to ensure that all important data is exported or saved
+   during project export.
 
 Open an existing project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To open an existing project, select the menu item 
+To open an existing project, select the menu item
 :menuselection:`File --> Open Project` from the main menu.
 
 |Figure 1.37: Open an existing project|
@@ -793,7 +793,7 @@ an external device).
 |Figure 1.38: Dialog for opening an existing project|
 
 Then open the new project by clicking :guilabel:`OK` :guinum:`❸`.
- 
+
 Export current project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -821,11 +821,11 @@ or no element.
 .. admonition:: Important
    :class: note
 
-   Exporting directories with large amounts 
-   of data, e.g. Pictures and Videos directories, leads to 
-   large project files and longer times for the export of  
-   a project. Export such directories only if it is        
-   necessary for the transfer of data. 
+   Exporting directories with large amounts
+   of data, e.g. Pictures and Videos directories, leads to
+   large project files and longer times for the export of
+   a project. Export such directories only if it is
+   necessary for the transfer of data.
 
 During the export, you will be informed about the current state of the
 export by the *Event Log* :guinum:`❶`, the *Progress Window* :guinum:`❷`, and the
@@ -855,9 +855,9 @@ directory.
 .. admonition:: Important
    :class: note
 
-   Assign a unique project name. If you use 
-   a name for which a project already exists in the        
-   project directory, an import is not possible. 
+   Assign a unique project name. If you use
+   a name for which a project already exists in the
+   project directory, an import is not possible.
 
 During the import, you will be informed about the current state of the
 import by the *Event Log* :guinum:`❶`, the *Progress Window* :guinum:`❷` and the
@@ -924,10 +924,10 @@ palette of predefined colors :guinum:`❷` or by defining your own color using t
 .. admonition:: Important
    :class: note
 
-   Adjusting the graphical user interface   
-   after a change blocks the application for a short time. 
-   You should therefore not perform these changes if you   
-   are working with devices or if a critical control       
+   Adjusting the graphical user interface
+   after a change blocks the application for a short time.
+   You should therefore not perform these changes if you
+   are working with devices or if a critical control
    application / script is active.
 
 Using the :guilabel:`Color Theme` selection box, you can switch the complete color
@@ -961,7 +961,7 @@ controls.
 Configuring Access to User Interface Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To configure access to the software interface, select 
+To configure access to the software interface, select
 :menuselection:`Edit --> Configure UI Access` from the main menu.
 
 |Figure 1.46: Open UI Access Configuration|
@@ -988,9 +988,9 @@ you can access this mode by entering the password and thus show
 previously hidden operating elements.
 
 .. tip::
-   For the protected mode, you should set all    
-   control elements to visible in order to have access to  
-   them if necessary. 
+   For the protected mode, you should set all
+   control elements to visible in order to have access to
+   them if necessary.
 
 You can set the password for the protected area by double-clicking in
 the corresponding cell of the third column and entering the password.
@@ -1004,16 +1004,16 @@ dialog and save the configuration.
 .. admonition:: Important
    :class: note
 
-   The configuration is saved in the        
-   current project. This means that the configuration of   
-   the interface is project-specific and not global. 
+   The configuration is saved in the
+   current project. This means that the configuration of
+   the interface is project-specific and not global.
 
 Switching UI Access Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 After starting the application, the standard mode is always active. This
 means that the interface is displayed with the configuration that you
-have configured for standard mode. To enter protected mode, select 
+have configured for standard mode. To enter protected mode, select
 :menuselection:`Edit --> Select UI Access Mode` from the main menu.
 
 |Figure 1.49: Switching UI Access Mode|

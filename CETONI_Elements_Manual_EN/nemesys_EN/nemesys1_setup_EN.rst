@@ -10,7 +10,7 @@ existing and configured syringe pumps.
 
 |Figure 1: Nemesys workspace|
 
-If the Nemesys View is not visible, then select 
+If the Nemesys View is not visible, then select
 :menuselection:`Window --> Show View --> Nemesys` from the main menu or click
 the :guilabel:`Nemesys` button in the sidebar.
 
@@ -35,9 +35,9 @@ The panel consists of
 #. Level indicator
 #. Control elements (depending on operating mode)
 #. Valve switching and status
-#. Display of the internal force sensor if supported by the device 
+#. Display of the internal force sensor if supported by the device
 
-The force sensor display is hidden by default. To show the display, select 
+The force sensor display is hidden by default. To show the display, select
 :menuselection:`Show Force Indicator` from the context menu.
 
 .. image:: Pictures/show_force_sensor.png
@@ -77,10 +77,10 @@ This color coding of the direction of motion is also used in all other
 parts of the Nemesys plugin.
 
 .. tip::
-   The colours of the syringes help you identify 
-   the direction of motion quickly, especially with very   
-   low flow rates, because it is almost impossible to see  
-   the position of the syringe piston changing.  
+   The colours of the syringes help you identify
+   the direction of motion quickly, especially with very
+   low flow rates, because it is almost impossible to see
+   the position of the syringe piston changing.
 
 The thickness of the syringe in the display indicates the approximate
 size of the currently clamped syringe. You should be very cautious with
@@ -92,9 +92,9 @@ the device (valve) or your application.
 .. admonition:: Attention
    :class: caution
 
-   Risk of high pressures damaging the      
-   connectors in the liquid path. To avoid high pressures  
-   causing damage, never make a reference move with a      
+   Risk of high pressures damaging the
+   connectors in the liquid path. To avoid high pressures
+   causing damage, never make a reference move with a
    high-pressure syringe clamped.
 
 Software limits
@@ -104,7 +104,7 @@ The travel path of a syringe is limited in the software by a minimum and
 a maximum value in order to prevent irreparable damage to the syringe or
 the piston being pulled out of the body of the syringe. These values are
 indicated by two red marks in the fill level indicator (Figure below),
-and they have to be defined for each syringe in the 
+and they have to be defined for each syringe in the
 :ref:`syringe configuration`.
 
 .. image:: Pictures/syringe_software_limits.png
@@ -240,9 +240,9 @@ Reference Move
 ---------------------------
 
 .. tip::
-   With the current *Nemesys M* and *Nemesys S*     
-   pumps, a reference move is no longer necessary and you  
-   can skip this chapter. 
+   With the current *Nemesys M* and *Nemesys S*
+   pumps, a reference move is no longer necessary and you
+   can skip this chapter.
 
 The drives of the dosing units are monitored and controlled by a digital
 positioning unit. You can make a reference move of the dosing unit to
@@ -255,10 +255,10 @@ and calibrates your zero position when it reaches the limit position.
 .. admonition:: Important
    :class: note
 
-   Always make a reference move if you      
-   operate the pumps from another PC, because the          
-   calibration data are stored on the PC and not in the    
-   dosing units.  
+   Always make a reference move if you
+   operate the pumps from another PC, because the
+   calibration data are stored on the PC and not in the
+   dosing units.
 
 .. image:: Pictures/start_reference_move.png
 
@@ -270,17 +270,17 @@ that will open now.
 .. admonition:: Attention
    :class: caution
 
-   Danger of damaging syringes! The system  
-   may only be calibrated when a syringe is not installed  
+   Danger of damaging syringes! The system
+   may only be calibrated when a syringe is not installed
    in the dosing unit.
 
 .. admonition:: Attention
    :class: caution
 
-   Risk of high pressures damaging the      
-   connectors in the liquid path. To avoid high pressures  
-   causing damage, never make a reference move with a      
-   high-pressure syringe clamped.  
+   Risk of high pressures damaging the
+   connectors in the liquid path. To avoid high pressures
+   causing damage, never make a reference move with a
+   high-pressure syringe clamped.
 
 Valve
 -----
@@ -293,8 +293,8 @@ panel. The current switching status of the valve is indicated by the
 valve control element.
 
 .. tip::
-   Move the mouse cursor over the valve to get   
-   additional information about the valve.   
+   Move the mouse cursor over the valve to get
+   additional information about the valve.
 
 Manual valve switching
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -315,7 +315,7 @@ positions in the opposite direction:
 
 Alternatively, you can
 select the desired valve position directly. Click with the right mouse
-button on the valve, and then select the context menu item 
+button on the valve, and then select the context menu item
 :menuselection:`Switch Valve`.
 
 |Figure 7: Showing valve context menu|
@@ -345,7 +345,7 @@ menu item :menuselection:`Enable Valve Automatic`.
 
 To configure the
 automatic valve mode, click with the right mouse button on a valve and
-select the menu item :menuselection:`Configure Valve Automatic`. 
+select the menu item :menuselection:`Configure Valve Automatic`.
 The valve automatic configuration dialog will then appear.
 
 |Figure 11: Valve automatic configuration dialog|
@@ -353,18 +353,18 @@ The valve automatic configuration dialog will then appear.
 You can configure the
 target valve position for each pump state (*Aspiration, Stopped and
 Dispensing*) separately. To activate valve switching for a certain
-state, check the check box :guinum:`❶`. It is then displayed a selection box 
-:guinum:`❷` for selection of the valve position. If you want to disable valve 
+state, check the check box :guinum:`❶`. It is then displayed a selection box
+:guinum:`❷` for selection of the valve position. If you want to disable valve
 switching for a certain state, simply uncheck the check box :guinum:`❸`.
 Finish the configuration by clicking the :guilabel:`OK` :guinum:`❹` button.
 
 .. admonition:: Important
    :class: note
 
-   In certain dosing modes, such as during  
-   continuous dosing with two pumps, the valve automatic   
-   is temporarily disabled because the valves are switched 
-   by the logic of the respective operating mode.  
+   In certain dosing modes, such as during
+   continuous dosing with two pumps, the valve automatic
+   is temporarily disabled because the valves are switched
+   by the logic of the respective operating mode.
 
 Assigning a Valve
 ~~~~~~~~~~~~~~~~~
@@ -397,7 +397,7 @@ dispensing liquid and when stopping the pump.
 .. admonition:: Important
    :class: note
 
-   You can only assign one single valve to a certain pump.    
+   You can only assign one single valve to a certain pump.
 
 If you want to restore the original valve configuration later, select
 the context menu item :menuselection:`Restore Default Valve`.
@@ -405,11 +405,11 @@ the context menu item :menuselection:`Restore Default Valve`.
 .. image:: Pictures/100000000000017600000098413180ED58246500.png
 
 .. tip::
-   In section :ref:`Connect external valves to I/O    
-   interface` you will find a detailed      
-   guide how to integrate external valve modules connected 
-   to the I/O interface (such as external ball valves) in  
-   the software. 
+   In section :ref:`Connect external valves to I/O
+   interface` you will find a detailed
+   guide how to integrate external valve modules connected
+   to the I/O interface (such as external ball valves) in
+   the software.
 
 I/O Interface
 -------------
@@ -428,7 +428,7 @@ inputs and outputs and/or analog inputs. All I/O channels can be found
 in the software window *I/O Channels*. If this window is not visible,
 you can show it by clicking the menu item :menuselection:`Window --> Show View --> I/O Channels`
 in the main menu (see figure below). The channels of a pump are grouped below the
-corresponding pump node. 
+corresponding pump node.
 
 |Figure 18: Showing I/O channel window|
 
@@ -453,8 +453,8 @@ In the following example, we will show you, how to connect a pressure
 sensor with the measuring range: 0.5 V - 4.5 V corresponds to 0 - 20
 bar. The sensor is connected to analog input 1. We will now define a
 scaling for this pressure sensor. To do this, click with the right mouse
-button in the channel row if of the I/O channel view and select the menu 
-item :menuselection:`Configure channel`. The following configuration dialog is 
+button in the channel row if of the I/O channel view and select the menu
+item :menuselection:`Configure channel`. The following configuration dialog is
 then displayed.
 
 |Figure 20: Example: input scaling for pressure sensor|
@@ -480,14 +480,14 @@ window in bar (see figure below).
 .. image:: Pictures/1000020100000217000000D0C2BA47560EE1E867.png
 
 .. tip::
-   For a detailed description of I/O channels,   
+   For a detailed description of I/O channels,
    configuration and scaling, see the :ref:`I/O Plugin` documentation.
 
 Connect external valves to I/O interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can connect various external valves to the Nemesys I/O interface connector. 
-To configure an external valve choose the context menu item 
+You can connect various external valves to the Nemesys I/O interface connector.
+To configure an external valve choose the context menu item
 :menuselection:`Configure external valves`.
 
 |Figure 22: External valve configuration|
@@ -557,7 +557,7 @@ the control panel of the pump.
 .. |Figure 5: Manual valve switching| image:: Pictures/1000000000000195000000ADA27EB388AC14806E.png
 
 .. |Figure 6: Inverted manual valve switching| image:: Pictures/10000000000001B10000009674312B473919102F.png
- 
+
 .. |Figure 7: Showing valve context menu| image:: Pictures/100000000000016E000000B3905F4EAA693DD621.png
 
 .. |Figure 8: Selection of valve switching position| image:: Pictures/100000000000017C000000FBB8D53C0B60FC4150.png
@@ -590,9 +590,3 @@ the control panel of the pump.
 .. |Figure 25: Valve list with external valve as last list entry| image:: Pictures/10000000000001AC000000FE4D17491FB27B7A90.png
 
 .. |Figure 26: Deleting external valve| image:: Pictures/10000000000001AC00000091DBC619732FF93701.png
-
-
-
-.. include:: nemesys2_directcontrol_EN.rst
-.. include:: nemesys3_contiflow_EN.rst
-.. include:: nemesys4_scriptfunctions_EN.rst

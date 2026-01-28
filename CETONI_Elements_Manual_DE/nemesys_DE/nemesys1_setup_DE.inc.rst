@@ -12,8 +12,8 @@ konfigurierten Spritzenpumpen Bedienpanels angezeigt.
 .. image:: ./Pictures/100000000000045E000002BE838E4D417C3553CE.png
    :alt: Nemesys Arbeitsbereich
 
-Wenn die Nemesys-Ansicht nicht sichtbar ist, dann wählen Sie 
-:menuselection:`Window --> Show View --> Nemesys` aus dem Hauptmenü oder klicken 
+Wenn die Nemesys-Ansicht nicht sichtbar ist, dann wählen Sie
+:menuselection:`Window --> Show View --> Nemesys` aus dem Hauptmenü oder klicken
 Sie die Schaltfläche :guilabel:`Nemesys` in der Seitenleiste.
 
 Dosiereinheiten-Bedienpanel
@@ -29,8 +29,8 @@ Visualisierung des aktuellen Status.
 
 .. image:: ./Pictures/10000201000000DA0000027D087AA389826F3C49.png
 
-                                                         
-Das Panel besteht aus:    
+
+Das Panel besteht aus:
 
 .. rst-class:: guinums
 
@@ -38,12 +38,12 @@ Das Panel besteht aus:
 #. Füllstandsanzeige
 #. Bedienelemente (je nach Betriebsart)
 #. Ventilschaltung und -status
-#. Anzeige des internen Kraftsensors, sofern vom Gerät unterstützt    
+#. Anzeige des internen Kraftsensors, sofern vom Gerät unterstützt
 
-Die Anzeige des Kraftsensors ist standardmäßig ausgeblendet. Um die Anzeige 
+Die Anzeige des Kraftsensors ist standardmäßig ausgeblendet. Um die Anzeige
 einzublenden, wählen Sie  :menuselection:`Show Force Indicator` aus dem Kontextmenü.
-                                                                   
-.. image:: Pictures/show_force_sensor.png                                              
+
+.. image:: Pictures/show_force_sensor.png
 
 Modulnamen ändern
 ~~~~~~~~~~~~~~~~~
@@ -84,10 +84,10 @@ anderen Teilen des Nemesys Plugins verwendet.
 .. admonition:: Tipp
    :class: tip
 
-   Besonders bei sehr niedrigen Flussraten    
-   hilft Ihnen die Einfärbung der Spritzen bei der         
-   Erkennung der Bewegungsrichtung da eine Änderung der    
-   Position des Spritzenkolbens kaum wahrnehmbar ist.  
+   Besonders bei sehr niedrigen Flussraten
+   hilft Ihnen die Einfärbung der Spritzen bei der
+   Erkennung der Bewegungsrichtung da eine Änderung der
+   Position des Spritzenkolbens kaum wahrnehmbar ist.
 
 Die Dicke der dargestellten Spritze informiert Sie über die ungefähre
 Größe der Spritze, die im Moment eingespannt ist. Besonders bei großen
@@ -98,11 +98,11 @@ Gerät (Ventil) oder Ihre Applikation beschädigen.
 .. admonition:: Achtung
    :class: caution
 
-   Gefahr der Beschädigung der fluidischen    
-   Anschlusstechnik durch hohe Drücke. Führen Sie eine     
-   Referenzfahrt niemals mit eingespannter                 
-   Hochdruck-Spritze durch, um Beschädigungen durch hohe   
-   Drücke zu vermeiden.  
+   Gefahr der Beschädigung der fluidischen
+   Anschlusstechnik durch hohe Drücke. Führen Sie eine
+   Referenzfahrt niemals mit eingespannter
+   Hochdruck-Spritze durch, um Beschädigungen durch hohe
+   Drücke zu vermeiden.
 
 Softwarelimits
 ^^^^^^^^^^^^^^
@@ -259,9 +259,9 @@ Referenzfahrt durchführen
 .. admonition:: Tipp
    :class: tip
 
-   Bei den aktuellen *Nemesys M* und *Nemesys S*     
-   Pumpen ist keine Referenzfahrt mehr notwendig und Sie   
-   können das Kapitel überspringen.    
+   Bei den aktuellen *Nemesys M* und *Nemesys S*
+   Pumpen ist keine Referenzfahrt mehr notwendig und Sie
+   können das Kapitel überspringen.
 
 Die Antriebe der Dosiereinheiten werden durch eine digitale
 Positioniereinheit überwacht und gesteuert. Um diese Positioniereinheit
@@ -275,14 +275,14 @@ Nullposition.
 .. admonition:: Wichtig
    :class: note
 
-   Führen Sie auf jeden Fall eine             
-   Referenzfahrt durch, wenn Sie die Pumpen an einem       
-   anderen PC betreiben da die Kalibrierungsdaten auf dem  
-   PC und nicht in den Dosiereinheiten gespeichert werden. 
+   Führen Sie auf jeden Fall eine
+   Referenzfahrt durch, wenn Sie die Pumpen an einem
+   anderen PC betreiben da die Kalibrierungsdaten auf dem
+   PC und nicht in den Dosiereinheiten gespeichert werden.
 
 Um eine Referenzfahrt zu starten, klicken Sie mit der rechten Maustaste
 in das Bedienpanel der Dosiereinheit die kalibriert werden soll. In dem
-Kontextmenü was sich nun öffnet, wählen Sie den Menüpunkt :menuselection:`Reference Move` 
+Kontextmenü was sich nun öffnet, wählen Sie den Menüpunkt :menuselection:`Reference Move`
 (siehe Abbildung unten).
 
 .. image:: Pictures/start_reference_move.png
@@ -291,19 +291,19 @@ Kontextmenü was sich nun öffnet, wählen Sie den Menüpunkt :menuselection:`Re
 .. admonition:: Achtung
    :class: caution
 
-   Gefahr der Beschädigung von Spritzen! Die  
-   Kalibrierung des Systems darf nur durchgeführt werden,  
-   wenn keine Spritze auf der Dosiereinheit installiert    
-   ist.   
+   Gefahr der Beschädigung von Spritzen! Die
+   Kalibrierung des Systems darf nur durchgeführt werden,
+   wenn keine Spritze auf der Dosiereinheit installiert
+   ist.
 
 .. admonition:: Achtung
    :class: caution
 
-   Gefahr der Beschädigung der fluidischen    
-   Anschlusstechnik durch hohe Drücke. Führen Sie eine     
-   Referenzfahrt niemals mit eingespannter                 
-   Hochdruck-Spritze durch um Beschädigungen durch hohe    
-   Drücke zu vermeiden. 
+   Gefahr der Beschädigung der fluidischen
+   Anschlusstechnik durch hohe Drücke. Führen Sie eine
+   Referenzfahrt niemals mit eingespannter
+   Hochdruck-Spritze durch um Beschädigungen durch hohe
+   Drücke zu vermeiden.
 
 
 Ventil
@@ -319,8 +319,8 @@ der aktuelle Schaltzustand des Ventils angezeigt.
 .. admonition:: Tipp
    :class: tip
 
-   Bewegen Sie die Maus über das Ventil, um      
-   zusätzliche Informationen zum Ventil zu erhalten. 
+   Bewegen Sie die Maus über das Ventil, um
+   zusätzliche Informationen zum Ventil zu erhalten.
 
 Manuelle Ventilschaltung
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -350,7 +350,7 @@ den Punkt :menuselection:`Switch Valve`.
 
 .. image:: ./Pictures/100000000000016E000000B3905F4EAA693DD621.png
    :alt: Ventil-Kontextmenü anzeigen
- 
+
 
 Ihnen wird nun eine Auswahl
 der gewünschten Ventilposition angezeigt. Sobald Sie eine Position
@@ -400,11 +400,11 @@ Sie die Konfiguration durch Klick auf :guilabel:`OK` :guinum:`❹` ab.
 .. admonition:: Wichtig
    :class: note
 
-   In bestimmten Betriebsarten, z.B. bei der  
-   kontinuierlichen Dosierung mit zwei Pumpen, wird die    
-   Ventilautomatik vorübergehend deaktiviert, da die       
-   Ventile dann von der Software der jeweiligen            
-   Betriebsart geschaltet werden.   
+   In bestimmten Betriebsarten, z.B. bei der
+   kontinuierlichen Dosierung mit zwei Pumpen, wird die
+   Ventilautomatik vorübergehend deaktiviert, da die
+   Ventile dann von der Software der jeweiligen
+   Betriebsart geschaltet werden.
 
 
 Ventil zuweisen
@@ -444,7 +444,7 @@ beim Aufziehen, Dosieren und Stoppen der Pumpe geschaltet.
 .. admonition:: Wichtig
    :class: note
 
-   Sie können einer Pumpe immer nur ein Ventil zuweisen. 
+   Sie können einer Pumpe immer nur ein Ventil zuweisen.
 
 Wenn Sie später die Original-Ventilkonfiguration wieder herstellen
 möchten, wählen Sie im Kontextmenü der Pumpe oder im Kontextmenü des
@@ -456,10 +456,10 @@ Ventils den Punkt :menuselection:`Restore Default Valve`.
 .. admonition:: Tipp
    :class: tip
 
-   Im Abschnitt :ref:`Externe Ventile an I/O—Schnittstelle anschließen<externe_ventile>` 
-   finden Sie eine detaillierte Anleitung, wie Sie externe 
-   Ventilmodule (z.B. Kugelhahnventile) in die Software    
-   einbinden. 
+   Im Abschnitt :ref:`Externe Ventile an I/O—Schnittstelle anschließen<externe_ventile>`
+   finden Sie eine detaillierte Anleitung, wie Sie externe
+   Ventilmodule (z.B. Kugelhahnventile) in die Software
+   einbinden.
 
 
 I/O Schnittstelle
@@ -479,8 +479,8 @@ externer Signale und Sensoren oder zur Ausgabe von Triggersignalen
 Die Schnittstelle verfügt je nach Gerätekonfiguration über digitale Ein- und
 Ausgänge und / oder analoge Eingänge. Alle I/O Kanäle finden Sie in der
 Software im Fenster *I/O Channels*. Wenn das Fenster in der Software
-nicht sichtbar ist, können Sie es mit dem Menüpunkt 
-:menuselection:`Window --> Show View --> I/O Channels` 
+nicht sichtbar ist, können Sie es mit dem Menüpunkt
+:menuselection:`Window --> Show View --> I/O Channels`
 im Hauptmenü einblenden (siehe Abbildung unten).
 
 .. image:: ./Pictures/100002010000013E000000B74AE0265CA479D65B.png
@@ -491,7 +491,7 @@ eindeutigen Namen (z.B. *Nemesys 1 Analog In 1*) der aus dem Namen der
 Pumpe (z.B. *Nemesys 1*) und dem Namen des I/O Kanals (z.B. *Analog In
 1*) zusammengesetzt ist (siehe Abbildung unten).
 
-.. image:: ./Pictures/100002010000021D0000011FD08A581F4A0DB149.png 
+.. image:: ./Pictures/100002010000021D0000011FD08A581F4A0DB149.png
    :alt: Nemesys I/O Kanäle
 
 Skalierung der analogen Eingänge
@@ -539,9 +539,9 @@ Drucksensors in bar angezeigt (siehe Abbildung unten).
 .. admonition:: Tipp
    :class: tip
 
-   Eine ausführliche Beschreibung der I/O        
-   Kanäle, deren Konfiguration und zur Skalierung finden   
-   Sie in der :ref:`I/O Plugin`-Dokumentation.    
+   Eine ausführliche Beschreibung der I/O
+   Kanäle, deren Konfiguration und zur Skalierung finden
+   Sie in der :ref:`I/O Plugin`-Dokumentation.
 
 
 .. _externe_ventile:
@@ -558,9 +558,9 @@ konfigurieren, wählen Sie im Kontextmenü den Punkt :menuselection:`Configure e
 
 Aus der Liste der externen
 Ventile können Sie nun ein Gerät wählen, welches Sie an die I/O
-Schnittstelle anschließen möchten. Die Liste der verfügbaren Ventile 
-(:guilabel:`Available Valves` :guinum:`❶`) zeigt alle Ventilgeräte, die Sie 
-auswählen können. Im Abschnitt :guilabel:`Valve Parameters` :guinum:`❷` sehen Sie 
+Schnittstelle anschließen möchten. Die Liste der verfügbaren Ventile
+(:guilabel:`Available Valves` :guinum:`❶`) zeigt alle Ventilgeräte, die Sie
+auswählen können. Im Abschnitt :guilabel:`Valve Parameters` :guinum:`❷` sehen Sie
 detaillierte Informationen über den ausgewählten Ventiltyp.
 
 .. image:: ./Pictures/10000201000001AE00000171BFE2001F1F2DF986.png
@@ -614,8 +614,3 @@ Bedienpanel der Pumpe.
 .. |image10| image:: Pictures/1000000000000046000000555AB1B48CFF3950BB.png
    :width: 60
 
-
-
-.. include:: nemesys2_direktsteuerung_DE.inc.rst
-.. include:: nemesys3_kontiflow_DE.inc.rst
-.. include:: nemesys4_scriptfunktionen_DE.inc.rst

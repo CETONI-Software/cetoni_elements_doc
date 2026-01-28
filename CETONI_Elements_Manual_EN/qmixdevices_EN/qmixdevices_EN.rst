@@ -20,9 +20,9 @@ You can start the *Device Configurator* by selecting the menu item
 
 .. image:: Pictures/1000020100000142000000E460C63C6ECF459963.png
 
-To use the Device Configurator to configure your devices, a valid license must 
-be installed. If you only have a demo license, then only device configurations 
-with simulated devices can be created and it is not possible to configure your 
+To use the Device Configurator to configure your devices, a valid license must
+be installed. If you only have a demo license, then only device configurations
+with simulated devices can be created and it is not possible to configure your
 devices with it.
 
 
@@ -31,7 +31,7 @@ devices with it.
 .. admonition:: Important
    :class: note
 
-   :ref:`Activate your License<Activate License>` before you start the 
+   :ref:`Activate your License<Activate License>` before you start the
    *Device Configurator* if you want to configure your real devices.
 
 Import a device database
@@ -53,9 +53,9 @@ import a new device database. If your installation media contains the
 file :file:`devices.db`, you should import it now.
 
 .. tip::
-   If your installation media does not contain a  
-   device database, your devices are already supported by   
-   the CETONI Elements software and you can skip the device 
+   If your installation media does not contain a
+   device database, your devices are already supported by
+   the CETONI Elements software and you can skip the device
    database import.
 
 .. rst-class:: steps
@@ -66,38 +66,38 @@ file :file:`devices.db`, you should import it now.
 
 #. A file selection dialog opens. Select the database file :file:`devices.db` located in the
    root directory of the CETONI Elements CD (see figure below).
-   
+
    |Figure 3: Device database import dialog|
-   
+
 #. The device configurator now has an actual device database available.
 
 .. admonition:: Important
    :class: note
 
-   The device database contains important    
-   configuration information about your devices. You always 
-   have to import an actual device database if you purchase 
-   new devices from the CETONI GmbH.  
+   The device database contains important
+   configuration information about your devices. You always
+   have to import an actual device database if you purchase
+   new devices from the CETONI GmbH.
 
 As long as you don't purchase new devices you needn't import a device
 database on start of the device configurator. If you don't want CETONI
-Elements to further ask for database import just check 
-:guilabel:`Do not ask me again` and confirm by left-clicking :guilabel:`No` 
+Elements to further ask for database import just check
+:guilabel:`Do not ask me again` and confirm by left-clicking :guilabel:`No`
 (see figure below).
 
 |Figure 4: Deselect device database import|
 
 If you want to import a device database in the
-future you can reach the import dialog by selecting 
+future you can reach the import dialog by selecting
 :menuselection:`Device → Import Device Database` from the main menu (see figure below).
 
 |Figure 5: Import device database menu item|
 
 .. tip::
-   You don't have to import a device database on  
-   each start of the device configurator. As long as you    
-   don't purchase any new devices, you don't need to import 
-   a new device database.    
+   You don't have to import a device database on
+   each start of the device configurator. As long as you
+   don't purchase any new devices, you don't need to import
+   a new device database.
 
 Overview
 --------
@@ -147,7 +147,7 @@ Device Configuration Wizard
 |Figure 8: The Device Configuration Wizard|
 
 The *Device Configuration Wizard* guides you through the integration of your
-devices into your device configuration. You **must** execute the 
+devices into your device configuration. You **must** execute the
 Device Configuration Wizard after:
 
 -  creating a new device configuration or changing an existing one.
@@ -158,10 +158,10 @@ Device Configuration Wizard after:
 .. admonition:: Important
    :class: note
 
-   Device configurations and devices belong 
+   Device configurations and devices belong
    together. Always execute the Device Configuration Wizard if you want to
    change a device configuration or integrate a new device into an existing
-   device configuration.        
+   device configuration.
 
 Your device configuration should always be created with the software
 version with which you want to use the configuration, otherwise errors
@@ -193,14 +193,14 @@ containing a Nemesys S dosing module and a Qmix Q+ module.
    double-clicking on it in the device list.
 
    .. tip::
-      You can add devices via drag & drop or by a double click.  
+      You can add devices via drag & drop or by a double click.
 
    .. image:: Pictures/1000020100000315000001F95769560860DF416C.png
 
    .. tip::
-      You can remove devices from the device        
-      configuration by selecting the device by clicking it    
-      and then pressing the Delete key.   
+      You can remove devices from the device
+      configuration by selecting the device by clicking it
+      and then pressing the Delete key.
 
 #. Proceed in the same way with the Qmix Q+ module.
 #. Save your configuration under a meaningful name by clicking on the
@@ -211,11 +211,11 @@ containing a Nemesys S dosing module and a Qmix Q+ module.
    .. admonition:: Attention
       :class: caution
 
-      Make sure that the mains voltage on your 
-      Base module or on your power supply is switched off     
-      before connecting or disconnecting modules to your      
-      system. Not doing so may result in damage or            
-      malfunction.  
+      Make sure that the mains voltage on your
+      Base module or on your power supply is switched off
+      before connecting or disconnecting modules to your
+      system. Not doing so may result in damage or
+      malfunction.
 
 #. The Device Configuration Wizard advices you to follow these
    instructions:
@@ -240,10 +240,10 @@ containing a Nemesys S dosing module and a Qmix Q+ module.
    .. admonition:: Important
       :class: note
 
-      During the configuration of a device, no 
-      other switched-on devices may be connected to the Base  
-      module, as otherwise errors may occur during the        
-      configuration or subsequent malfunctions.   
+      During the configuration of a device, no
+      other switched-on devices may be connected to the Base
+      module, as otherwise errors may occur during the
+      configuration or subsequent malfunctions.
 
    -  Click :guilabel:`Next` to start device configuration
 
@@ -253,7 +253,7 @@ containing a Nemesys S dosing module and a Qmix Q+ module.
 
 #. The Device Configuration Wizard displays the Nemesys S dosing module
    configured successfully. Left-click :guilabel:`Next` to proceed.
-   
+
    |Figure 12: Device configuration successful|
 
 #. The Device Configuration Wizard advices you to follow these instructions (see
@@ -299,7 +299,7 @@ containing a Nemesys S dosing module and a Qmix Q+ module.
 
    |Figure 16: Confirming restart of CETONI Elements|
 
-#. CETONI Elements now offers the functions of the Nemesys S dosing module and 
+#. CETONI Elements now offers the functions of the Nemesys S dosing module and
    the Qmix Q+ module.
 
 Extending an existing device configuration
@@ -315,13 +315,13 @@ configuration created in the previous section.
    currently loaded by the CETONI Elements software is shown. The green
    checks displayed on top of the devices indicate that these devices
    have already been configured.
-   
+
    |Figure 17: Displaying the currently loaded device configuration|
-    
+
 #. If you want to change another device configuration
    as the one currently loaded by CETONI Elements, you have to load the
    desired device configuration using the :guilabel:`Open` button.
-   
+
    |Figure 18: Loading a device configuration|
 
 #. Add a further device
@@ -334,13 +334,13 @@ configuration created in the previous section.
    .. admonition:: Important
       :class: note
 
-      If a device configuration contains not   
-      configured devices, it is invalid and can't be used     
-      yet.  
+      If a device configuration contains not
+      configured devices, it is invalid and can't be used
+      yet.
 
-#. Save the configuration and start the *Device Configuration Wizard* by 
+#. Save the configuration and start the *Device Configuration Wizard* by
    clicking the :guilabel:`Configure` button.
-   
+
    |Figure 20: Starting the Device Configuration Wizard|
 
 #. If the software has already been connected to the plugged devices, the
@@ -350,7 +350,7 @@ configuration created in the previous section.
    agree.
 
    |Figure 21: Restart the Device Configurator|
-   
+
 #. The device configuration process known from the previous section starts. But
    this time the wizard proposes on the second page to exclude devices
    from the device configuration process that have already been
@@ -363,7 +363,7 @@ configuration created in the previous section.
    device (Qmix P in this example).
 
    |Figure 23: Configuration of the newly added device|
-   
+
 #. Just finish the *Device Configuration Wizard* the same way you would have done
    if you had created a device configuration from scratch.
 #. After restart the functionality of the new device is available to
@@ -397,7 +397,7 @@ Proceed as follows in order to simulate a single device:
 #. Left-click the button :guilabel:`Simulate`
 
    |Figure 25: Simulating a single device|
-   
+
 #. The device is marked as
    simulated. Save the device configuration. The next time you load
    this device configuration in CETONI Elements the simulated device
@@ -405,68 +405,10 @@ Proceed as follows in order to simulate a single device:
 
    |Figure 26: Simulated device|
 
-You can simulate a whole device configuration by left-clicking 
+You can simulate a whole device configuration by left-clicking
 :guilabel:`Simulate All` in the main toolbar.
 
 |Figure 27: Simulating a whole device configuration|
-
-Optional Add-On Plugins
------------------------
-
-There are optional extensions of the software, which CETONI has
-developed, possibly on your behalf, according to customer
-specifications. However, certain plugins may not be required for a
-certain device configuration, or may not be suitable for this purpose.
-When creating and editing a device configuration, you can freely
-configure which optional plugins should be loaded with your device
-configuration.
-
-.. tip::
-   The CETONI Elements software can be extended  
-   with customer-specific plugins. Please contact us if    
-   you need a specific adaptation of the software          
-   functionality.
-
-If you only have a standard version of CETONI Elements installed, no
-optional add-on plugins will be available. Accordingly, the function for
-configuring optional add-on plugins is disabled (see figure below).
-
-.. image:: Pictures/100002010000023E000000515D00BAB8AAC98C98.png
-
-If you have installed a CETONI Elements add-on that contains optional plugins,
-this function is available (see figure below).
-
-.. image:: Pictures/100002010000025100000053D81EEF100715C18F.png
-
-.. admonition:: Important
-   :class: note
-
-   Not every CETONI Elements add-on       
-   contains optional plugins. Many add-ons (e.g.           
-   Spectroscopy Add-On) contain only mandatory plugins     
-   that must be loaded to provide device functionality.    
-   Mandatory plugins cannot be selected using this         
-   function. These are always loaded automatically if the  
-   respective device (e.g. Qmix λ) has been configured. 
-
-If you click with the left mouse button on the :guilabel:`Add-On Plugins`
-function, the Add-On Plugins Selection Dialog appears. In the lower half
-of the dialog, there is a table that displays all available optional
-add-on plugins (see figure below).
-
-.. image:: Pictures/10000201000001F1000001F405E5F7AACBD5FB5C.png
-
-You can display information about the Add-On plugin by moving the mouse
-over the respective table entry (see figure below).
-
-.. image:: Pictures/100002010000031B000001207309E46F4E0A2038.png
-
-To add an optional add-on plugin to your device configuration, check the
-box next to the plugin :guinum:`❶` and then click :guilabel:`Ok` :guinum:`❷`.
-Finally, you must save the configuration :guinum:`❸` to permanently apply the
-changes (see figure below).
-
-.. image:: Pictures/1000020100000394000002698426A6B470626331.png
 
 .. |Figure 2: Query for device database import| image:: Pictures/100002010000021400000104F1C5A4A3FB36B583.png
 

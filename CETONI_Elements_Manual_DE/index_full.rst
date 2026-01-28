@@ -66,7 +66,6 @@ Navigation durch dieses Dokument unterstützen:
    videobuilder_DE/videobuilder_DE.rst
    datalogger_DE/datalogger_full_DE.rst
    graphlogger_DE/graphlogger_full_DE.rst
-   python_DE/python_DE.rst
    database_DE/database_DE.rst
    sila_DE/sila_DE.rst
    spectroscopy_DE/spectroscopy_DE.rst

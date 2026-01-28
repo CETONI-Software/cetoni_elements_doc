@@ -30,15 +30,15 @@ Gerätekonfiguration zu laden:
 .. admonition:: Wichtig
    :class: note
 
-   Die Auslieferungskonfiguration mit dem      
-   Startbildschirm wird auch nach einem Softwareabsturz     
-   oder nach einem Update der Software geladen und          
-   angezeigt.      
+   Die Auslieferungskonfiguration mit dem
+   Startbildschirm wird auch nach einem Softwareabsturz
+   oder nach einem Update der Software geladen und
+   angezeigt.
 
 Wenn Sie die Anwendung im Demonstrationsmodus starten
 möchten, z.B. bei Präsentationen, zum ausprobieren und testen oder
 wenn Sie im Moment keine Geräte haben, dann klicken Sie die
-Schaltfläche :guilabel:`Start Demo` an. 
+Schaltfläche :guilabel:`Start Demo` an.
 
 
 Lizenzschlüssel
@@ -61,7 +61,7 @@ Geräten erstellen und alle Funktionen der Software testen.
 
 Um die Software zur Steuerung Ihrer Geräte verwenden zu
 können, müssen Sie den Lizenzcode den Sie erhalten haben in der Software
-registrieren. Wählen Sie dafür im Hauptmenü den Punkt 
+registrieren. Wählen Sie dafür im Hauptmenü den Punkt
 :menuselection:`Help --> Activate License`.
 
 .. image:: ../../img/qmixelements/10000201000001ED00000145C29F8E208FCC285C.png
@@ -72,7 +72,7 @@ korrekt eingegeben haben, wird Ihnen die Aktivierung der Lizenz
 bestätigt und nach dem Neustart der Software können Sie mit der
 aktivierten Lizenz arbeiten:
 
-.. image:: ../../img/qmixelements/10000201000001ED0000015700FCDFDE9D20030C.png 
+.. image:: ../../img/qmixelements/10000201000001ED0000015700FCDFDE9D20030C.png
 
 Wenn Sie Ihre Lizenz upgraden oder zusätzliche Lizenzen für
 weitere Add-ons aktivieren möchten, können Sie genau wie oben
@@ -81,7 +81,7 @@ beschrieben vorgehen.
 Übersicht der aktivierten Lizenzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Über die Menüpunkt :menuselection:`Help --> Show License Information` 
+Über die Menüpunkt :menuselection:`Help --> Show License Information`
 Information im Hauptmenü der
 Anwendung, können Sie sich eine Übersicht der aktuellen Lizenzen
 anzeigen lassen:
@@ -93,23 +93,23 @@ Lizenzen entfernen
 ~~~~~~~~~~~~~~~~~~
 
 Wenn Sie alle Lizenzen entfernen möchten, wählen Sie im Hauptmenü den
-Menüpunkt :menuselection:`Help --> Remove License Data` Data. 
+Menüpunkt :menuselection:`Help --> Remove License Data` Data.
 Es lassen sich keine einzelnen
 Lizenzen entfernen sondern nur alle Lizenzen gemeinsam. Nach dem
 Entfernen der Lizenzen arbeiten Sie wieder mit einer Demo Lizenz.
 
 Gerätekonfiguration
 -------------------
-Um mit der Software ihre Geräte ansteuern zu können, müssen Sie eine 
-Gerätekonfiguration installieren und laden. Eine Gerätekonfiguration 
-ist eine Sammlung von Konfigurationsdateien, welche die Konfiguration 
-aller Geräte und Module beschreiben, die zusammen ein komplexes System 
-oder Gerät bilden. Im Startbildschirm sehen Sie alle Möglichkeiten, 
+Um mit der Software ihre Geräte ansteuern zu können, müssen Sie eine
+Gerätekonfiguration installieren und laden. Eine Gerätekonfiguration
+ist eine Sammlung von Konfigurationsdateien, welche die Konfiguration
+aller Geräte und Module beschreiben, die zusammen ein komplexes System
+oder Gerät bilden. Im Startbildschirm sehen Sie alle Möglichkeiten,
 eine entsprechende Gerätekonfiguration zu laden:
 
 .. image:: ../../img/qmixelements/1000020100000422000002BE2B654AE685AA4D8E.png
 
-Gerätekonfiguration erstellen  
+Gerätekonfiguration erstellen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../../img/qmixelements/100002010000009600000096EA64110C769BEAC3.png
@@ -127,7 +127,7 @@ integriert ist.
 
 |
 
-Gerätekonfiguration öffnen 
+Gerätekonfiguration öffnen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mit dieser Schaltfläche können Sie eine vorhandene Gerätekonfiguration laden, die zuvor auf Ihrem System installiert wurde.
@@ -154,10 +154,10 @@ folgenden Schritte durch:
 .. admonition:: Tipp
    :class: tip
 
-   Wenn Sie eine Konfiguration mit dem           
-   Gerätekonfigurator erstellen, wird diese automatisch    
-   installiert und Sie brauchen die folgenden Schritte     
-   nicht durchzuführen.     
+   Wenn Sie eine Konfiguration mit dem
+   Gerätekonfigurator erstellen, wird diese automatisch
+   installiert und Sie brauchen die folgenden Schritte
+   nicht durchzuführen.
 
 .. rst-class:: steps
 
@@ -179,7 +179,7 @@ folgenden Schritte durch:
    anderes Verzeichnis, dass eine gültige Gerätekonfiguration enthält.
 
      .. image:: ../../img/qmixelements/10000201000002810000018F6EE2B3E17DBB7FD1.png
-    
+
 #. Geben Sie nun noch einen kurzen eindeutigen Namen für die
    Konfiguration ein, unter dem diese auf ihrem Rechner gespeichert
    werden soll.
@@ -192,7 +192,7 @@ folgenden Schritte durch:
      .. image:: ../../img/qmixelements/100000000000020900000097955C208F8F030D3B.png
       :alt: Anwendung neu starten
 
-Nach diesen Schritten sollte die Software nun mit der gewählten Konfiguration 
+Nach diesen Schritten sollte die Software nun mit der gewählten Konfiguration
 geladen werden.
 
 .. admonition:: Wichtig
@@ -236,7 +236,7 @@ Bedienungsanleitung anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Bedienungsanleitung der Software können Sie sich über den
-Menüpunkt :menuselection:`Help --> Show PDF Manual` im Hauptmenü der 
+Menüpunkt :menuselection:`Help --> Show PDF Manual` im Hauptmenü der
 Anwendung anzeigen lassen.
 
 .. image:: ../../img/qmixelements/10000000000000DC000000A56971ED828CA56C1E.png
@@ -244,8 +244,8 @@ Anwendung anzeigen lassen.
 .. admonition:: Wichtig
    :class: note
 
-   Zur Anzeige der Bedienungsanleitung muss eine PDF-Betrachtungssoftware 
-   installiert sein. 
+   Zur Anzeige der Bedienungsanleitung muss eine PDF-Betrachtungssoftware
+   installiert sein.
 
 
 Softwareversion anzeigen
@@ -287,7 +287,7 @@ Projektpfad und der Name der aktuell geladenen Gerätekonfiguration
 angezeigt. Das folgende Beispiel verdeutlicht dies etwas genauer.
 Enthält die Titelleiste z.B. den folgenden Text:
 
-:code:`CETONI Elements – C:\Users\Public\\Documents\CETONI Elements\Projects\default_project [demo (shared)]`
+:code:`CETONI Elements – C:\\Users\\Public\\Documents\\CETONI Elements\\Projects\\default_project [demo (shared)]`
 
 dann können Sie daraus die folgenden Informationen entnehmen:
 
@@ -557,11 +557,11 @@ dafür den Menüpunkt :menuselection:`Window --> Perspective`.
 .. admonition:: Tipp
    :class: tip
 
-   Wenn Sie bei der Anordnung der Views einmal   
-   die Übersicht verloren haben oder mit der Anordnung neu 
-   beginnen möchten, rufen Sie über die Perspektive        
-   Schaltfläche in der Werkzeugleiste einfach die Standard 
-   Perspektive (:guilabel:`Default`) auf.   
+   Wenn Sie bei der Anordnung der Views einmal
+   die Übersicht verloren haben oder mit der Anordnung neu
+   beginnen möchten, rufen Sie über die Perspektive
+   Schaltfläche in der Werkzeugleiste einfach die Standard
+   Perspektive (:guilabel:`Default`) auf.
 
 
 Perspektiven anlegen
@@ -590,7 +590,7 @@ Um Perspektiven zu löschen, wählen Sie im Perspektivemenü den Menüpunkt
 
 .. image:: ../../img/qmixelements/10000201000001A9000000C56CAD6237DD6652DC.png
    :alt: Perspektiven verwalten
- 
+
 Es wird nun ein Dialog mit
 einer Liste aller Perspektiven angezeigt. In der Liste (:guinum:`❶`) können Sie
 nun ähnlich wie im Dateiexplorer einzelne oder mehrere Perspektiven
@@ -618,12 +618,12 @@ zeigen dafür ein Menü an (siehe Abbildung unten).
 .. admonition:: Tipp
    :class: tip
 
-   Die Seitenleiste, und auch alle               
-   Werkzeugleisten, können frei in den Randbereichen des   
-   Hauptfensters positioniert und angeordnet werden. Wenn  
-   Sie mit der rechten Maustaste in eine Werkzeugleiste    
-   klicken, sehen Sie ein Menü zum Ein- und Ausblenden der 
-   Werkzeugleisten.   
+   Die Seitenleiste, und auch alle
+   Werkzeugleisten, können frei in den Randbereichen des
+   Hauptfensters positioniert und angeordnet werden. Wenn
+   Sie mit der rechten Maustaste in eine Werkzeugleiste
+   klicken, sehen Sie ein Menü zum Ein- und Ausblenden der
+   Werkzeugleisten.
 
 
 Ereignisprotokoll
@@ -632,7 +632,7 @@ Ereignisprotokoll
 Übersicht zum Ereignisprotokoll
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Im Ereignisprotokoll :guilabel:`Event Log` werden wichtige Ereignisse angezeigt. 
+Im Ereignisprotokoll :guilabel:`Event Log` werden wichtige Ereignisse angezeigt.
 Dazu gehören Hinweise, Warnmeldungen und Fehlermeldungen. Der View mit dem
 Ereignisprotokoll wird automatisch eingeblendet, wenn ein Ereignis in
 das Protokoll geschrieben wird.
@@ -646,7 +646,7 @@ Hauptmenü der Anwendung den Punkt :menuselection:`Window --> Show View --> Even
 
 Das Ereignisprotokoll listet
 die einzelnen Ereignisse in zeitlicher Abfolge auf. Das neueste Ereignis
-ist dabei immer das Ereignis, welches als letztes Element am Ende des 
+ist dabei immer das Ereignis, welches als letztes Element am Ende des
 Protokolls eingefügt wurde. Dies wir auch an den Zeitstempeln in
 der ersten Spalte deutlich.
 
@@ -660,8 +660,8 @@ Ereignisquelle (vom gleichen Gerät) vorhanden ist, in der die
 Fehlerfreiheit des Gerätes gemeldet wird.
 
 In dem Beispiel (Abbildung oben) melden alle 3 Achsen der Rotaxys
-Probenhandlers einen Fehler (:guinum:`❶`). Die aktuellsten letzten drei 
-Meldungen (:guinum:`❷`) zeigen aber, das kein Fehler mehr vorhanden ist und 
+Probenhandlers einen Fehler (:guinum:`❶`). Die aktuellsten letzten drei
+Meldungen (:guinum:`❷`) zeigen aber, das kein Fehler mehr vorhanden ist und
 das Gerät fehlerfrei arbeitet.
 
 Ereigniskategorien
@@ -673,23 +673,23 @@ entsprechende Icons gekennzeichnet.
 
 .. rst-class:: inlineimg
 
-- |log_info| :blue-marker:`blau - Information` 
+- |log_info| :blue-marker:`blau - Information`
       Allgemeine Informationen, Statusmeldungen
       oder unkritische Meldungen von Scriptfunktionen mit informativem Character.
-      Diese Ereignisse geben z.B. an, dass ein bestimmter Vorgang erfolgreich 
-      abgeschlossen wurde oder dass ein bestimmter Zustand erreicht wurde. 
+      Diese Ereignisse geben z.B. an, dass ein bestimmter Vorgang erfolgreich
+      abgeschlossen wurde oder dass ein bestimmter Zustand erreicht wurde.
 - |log_warn| :yellow-marker:`gelb - Warnung`
-      Diese Ereignisse geben an, dass 
-      ein bestimmtes Ereignis eingetreten ist, das möglicherweise Auswirkungen auf 
-      das System oder die Anwendung hat. Sie weisen auf ein mögliches Problem hin, 
+      Diese Ereignisse geben an, dass
+      ein bestimmtes Ereignis eingetreten ist, das möglicherweise Auswirkungen auf
+      das System oder die Anwendung hat. Sie weisen auf ein mögliches Problem hin,
       aber die Anwendung / das Script können weiterhin funktionieren.
 - |log_err| :red-marker:`rot - Fehler`
-      Diese Ereignisse geben an, dass 
+      Diese Ereignisse geben an, dass
       Fehler aufgetreten sind, die dazu führen können, dass das Script,
       die Anwendung oder bestimmte Geräte nicht mehr korrekt funktionieren.
 - |log_user| :green-marker:`grün - Anwenderinteraktion`
-      Diese Ereignisse informieren den Anwender darüber, dass Nutzerinteraktionen, 
-      wie z.B. das Drücken eine Taste oder die Bestätigung einer Meldung, 
+      Diese Ereignisse informieren den Anwender darüber, dass Nutzerinteraktionen,
+      wie z.B. das Drücken eine Taste oder die Bestätigung einer Meldung,
       erforderlich sind.
 
 
@@ -774,7 +774,7 @@ Verbindungsstatus zum Gerät, angezeigt.
 Verbindung zum Gerät herstellen
 -------------------------------
 
-In der Werkzeugleiste finden Sie die Schaltfläche :guilabel:`Connect to device` 
+In der Werkzeugleiste finden Sie die Schaltfläche :guilabel:`Connect to device`
 mit einem Steckersymbol (siehe Abbildung unten). Drücken Sie
 diese Schaltfläche, um eine Verbindung zum Gerät herzustellen.
 
@@ -784,9 +784,9 @@ diese Schaltfläche, um eine Verbindung zum Gerät herzustellen.
 .. admonition:: Wichtig
    :class: note
 
-   Um eine Verbindung zum Gerät herzustellen, 
-   muss das Gerät über USB mit dem PC verbunden und die    
-   Spannungsversorgung für das Gerät aktiv sein.   
+   Um eine Verbindung zum Gerät herzustellen,
+   muss das Gerät über USB mit dem PC verbunden und die
+   Spannungsversorgung für das Gerät aktiv sein.
 
 
 Arbeiten mit Projekten
@@ -867,12 +867,12 @@ Anklicken von :guilabel:`OK` :guinum:`❺` ab.
 .. admonition:: Wichtig
    :class: note
 
-   Speichern Sie Projektdaten, wie z.B.       
-   Scripte, Bilder, Log-Dateien wenn möglich immer im      
-   Projektverzeichnis oder in den entsprechenden           
-   Unterverzeichnissen ab. Nur so ist sichergestellt, dass 
-   beim Projektexport alle wichtigen Daten exportiert oder 
-   gesichert werden.     
+   Speichern Sie Projektdaten, wie z.B.
+   Scripte, Bilder, Log-Dateien wenn möglich immer im
+   Projektverzeichnis oder in den entsprechenden
+   Unterverzeichnissen ab. Nur so ist sichergestellt, dass
+   beim Projektexport alle wichtigen Daten exportiert oder
+   gesichert werden.
 
 Ein vorhandenes Projekt öffnen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -926,16 +926,16 @@ sollen :guinum:`❶`.
 
 Klicken Sie die Schaltflächen :guilabel:`Select All` :guinum:`❷` oder
 :guilabel:`Select None` :guinum:`❸` an, um alle Elemente oder kein Element auszuwählen.
- 
+
 .. admonition:: Wichtig
    :class: note
 
-   Der Export von Verzeichnissen mit großen   
-   Datenmengen, wie z.B. Pictures und Videos, führt zu     
-   großen Projektdateien und längeren Zeiten für den       
-   Export eines Projektes. Exportieren Sie solche          
-   Verzeichnisse nur, wenn es für die Weitergabe der Daten 
-   notwendig ist.  
+   Der Export von Verzeichnissen mit großen
+   Datenmengen, wie z.B. Pictures und Videos, führt zu
+   großen Projektdateien und längeren Zeiten für den
+   Export eines Projektes. Exportieren Sie solche
+   Verzeichnisse nur, wenn es für die Weitergabe der Daten
+   notwendig ist.
 
 Während des Exports erhalten Sie durch das Ereignis-Protokoll
 (*Event-Log*) :guinum:`❶`, das *Progress-Fenster* :guinum:`❷` und in der Statuszeile
@@ -951,7 +951,7 @@ Projekte importieren
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Mit der Importfunktion können Sie Projektdateien (:file:`*.qpr`) in die
-Software importieren. Wählen Sie dafür im Hauptmenü den Menüpunkt 
+Software importieren. Wählen Sie dafür im Hauptmenü den Menüpunkt
 :menuselection:`File --> Import Project`.
 
 .. image:: ../../img/qmixelements/10000201000001AA000000C9957BE44F06738675.png
@@ -969,10 +969,10 @@ Projektverzeichnis gespeichert werden soll.
 .. admonition:: Wichtig
    :class: note
 
-   Vergeben Sie einen eindeutigen             
-   Projektnamen. Wenn Sie einen Namen verwenden für den    
-   bereits ein Projekt im Projektverzeichnis vorhanden     
-   ist, dann ist ein Import nicht möglich.    
+   Vergeben Sie einen eindeutigen
+   Projektnamen. Wenn Sie einen Namen verwenden für den
+   bereits ein Projekt im Projektverzeichnis vorhanden
+   ist, dann ist ein Import nicht möglich.
 
 Wie beim Export so erhalten Sie auch beim Projektimport durch das
 Ereignis-Protokoll (*Event-Log*) :guinum:`❶`, das *Progress-Fenster* :guinum:`❷` und in
@@ -1044,11 +1044,11 @@ definieren.
 .. admonition:: Wichtig
    :class: note
 
-   Die Anpassung der grafischen Oberfläche    
-   nach einer Änderung blockiert die Anwendung für eine    
-   kurze Zeit. Sie sollten diese Anpassungen deshalb nicht 
-   durchführen, wenn Sie mit Geräten arbeiten oder eine    
-   kritische Steuerungsanwendung / -script aktiv ist.      
+   Die Anpassung der grafischen Oberfläche
+   nach einer Änderung blockiert die Anwendung für eine
+   kurze Zeit. Sie sollten diese Anpassungen deshalb nicht
+   durchführen, wenn Sie mit Geräten arbeiten oder eine
+   kritische Steuerungsanwendung / -script aktiv ist.
 
 Über die Auswahlbox :guilabel:`Color Theme` können Sie das komplette Farb-Design
 der Anwendung zwischen verschiedenen Themes umschalten. So können Sie
@@ -1112,9 +1112,9 @@ aufrufen, und damit vorher ausgeblendete Bedienelemente einblenden.
 .. admonition:: Wichtig
    :class: note
 
-   In der Konfiguration für den geschützten      
-   Bereich sollten Sie alle Bedienelemente auf sichtbar    
-   setzen um ggf. Zugriff darauf zu haben. 
+   In der Konfiguration für den geschützten
+   Bereich sollten Sie alle Bedienelemente auf sichtbar
+   setzen um ggf. Zugriff darauf zu haben.
 
 Das Passwort für den geschützten Bereich können Sie festlegen, indem Sie
 in die entsprechende Zelle der dritten Spalte doppelt klicken und das
@@ -1130,9 +1130,9 @@ Konfiguration fertiggestellt haben, klicken Sie auf die Schaltfläche
 .. admonition:: Wichtig
    :class: note
 
-   Die Konfiguration wird im aktuellen        
-   Projekt abgespeichert. D.h. die Konfiguration der       
-   Oberfläche ist projektspezifisch und nicht global. 
+   Die Konfiguration wird im aktuellen
+   Projekt abgespeichert. D.h. die Konfiguration der
+   Oberfläche ist projektspezifisch und nicht global.
 
 
 Modus für den UI-Zugriff auswählen

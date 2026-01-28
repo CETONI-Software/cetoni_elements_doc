@@ -64,7 +64,6 @@ your navigation through this document:
    datalogger_EN/datalogger_full_EN.rst
    graphlogger_EN/graphlogger_full_EN.rst
    database_EN/database_EN.rst
-   python_EN/python_EN.rst
    sila_EN/sila_EN.rst
    spectroscopy_EN/spectroscopy_EN.rst
    daq_EN/daq_EN.rst

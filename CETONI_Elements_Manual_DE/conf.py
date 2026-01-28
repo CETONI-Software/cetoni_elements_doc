@@ -21,8 +21,8 @@ from sphinx.roles import MenuSelection
 
 
 # -- Project information -----------------------------------------------------
-project = 'CETONI Elements Manual'
-copyright = '2022, CETONI GmbH'
+project = 'CETONI Elements Handbuch'
+copyright = '2026, CETONI GmbH'
 author = 'CETONI GmbH'
 html_show_copyright = True
 html_show_sphinx = True
@@ -33,7 +33,7 @@ html_show_sourcelink = False
 # master_doc = 'index_private'
 
 # The full version, including alpha/beta/rc tags
-release = '20220504'
+release = '20260128'
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,31 +41,31 @@ release = '20220504'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-#extensions = [  
-#    'breathe', 
-#    'myst_parser', 
-#    'sphinx.ext.autodoc', 
-#    'sphinx.ext.autosummary', 
-#    'sphinx_rtd_dark_mode' 
+#extensions = [
+#    'breathe',
+#    'myst_parser',
+#    'sphinx.ext.autodoc',
+#    'sphinx.ext.autosummary',
+#    'sphinx_rtd_dark_mode'
 #]
 
 
-extensions = [  
-    'breathe', 
-    'myst_parser', 
-    'sphinx.ext.autodoc', 
+extensions = [
+    'breathe',
+    'myst_parser',
+    'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx_rtd_dark_mode',
     'sphinx_fontawesome',
     'sphinx_togglebutton',
-    'sphinx.ext.autosectionlabel' 
+    'sphinx.ext.autosectionlabel'
 ]
 
 # user starts in, light mode
 default_dark_mode = False
 
 # Breathe Configuration
-breathe_projects = { 
+breathe_projects = {
     "python": "../doxygen/xml"
 }
 breathe_default_project = "python"
@@ -79,10 +79,10 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
-    '_build', 
-    'Thumbs.db', 
-    '.DS_Store', 
-    'venv', 
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'venv',
     'ReadTheDocs.md',
     'Appendix_EN/content/*',
     '*/*.inc.rst'
@@ -90,15 +90,22 @@ exclude_patterns = [
 
 # get environment variables (set as part of make .bat files)
 env_private = os.getenv("PRIVATE_DOC", "0")
+env_full = os.getenv("FULL_DOC", "0")
 
 if env_private == "1":
     print("private build")
     root_doc = 'index_private'
-    exclude_patterns.append('index.rst')
+    exclude_patterns += ['index.rst', 'index_full.rst']
+    project = project.replace("Handbuch", "Privat Handbuch")
+elif env_full == "1":
+    print("full build")
+    root_doc = 'index_full'
+    exclude_patterns += ['index.rst', 'index_private.rst']
+    project = project.replace("Handbuch", "Full Handbuch")
 else:
     print("public build")
     root_doc = 'index'
-    exclude_patterns.append('index_private.rst')
+    exclude_patterns += ['index_private.rst', 'index_full.rst']
 
 
 # Set a bullet character for :menuselection: role
@@ -182,7 +189,7 @@ html_favicon = '_static/favicon.png'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 html_logo = '_static/logo_cetoni_elements4.svg'
-html_title = 'CETONI Elements Manual'
+html_title = 'CETONI Elements {type}Handbuch'.format(type='Privat ' if env_private == '1' else 'Full ' if env_full =='1' else '')
 html_last_updated_fmt = '%b %d, %Y %H:%M'
 html_show_sphinx = False
 

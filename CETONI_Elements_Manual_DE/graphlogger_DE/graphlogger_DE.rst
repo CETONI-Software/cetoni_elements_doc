@@ -9,7 +9,7 @@ Datalogger-Plugin Prozessdaten in Diagrammen aufzeichnen und damit in
 Echtzeit die zeitliche Veränderung dieser Prozessdaten grafisch
 visualisieren. Zur Anzeige der Prozessdaten-Diagramme klicken Sie in der
 Seitenleiste auf die Schaltfläche :guilabel:`Logging` :guinum:`❶` (siehe Abbildung unten)
-oder blenden den Logging View über das Hauptmenü ein (::menuselection:`Window --> ShowView --> Logging`) 
+oder blenden den Logging View über das Hauptmenü ein (::menuselection:`Window --> ShowView --> Logging`)
 :guinum:`❷`.
 
 .. image:: Pictures/10000201000002AB000001ABF50BD6283D944D83.png
@@ -119,7 +119,7 @@ Bereichen:
 Der Objektbaum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte) 
+Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte)
 und deren Kindobjekte (wie z.B. untergeordnete Geräte):
 
 .. image:: ../../img/datalogger/object_tree.png
@@ -131,12 +131,12 @@ und deren Kindobjekte (wie z.B. untergeordnete Geräte):
    Aufklappen in der nächsten Ebene die beiden Elemente **Children** und
    **Properties**.
 
-2. **Children** - Das Children Element gruppiert alle Kindobjekte des 
+2. **Children** - Das Children Element gruppiert alle Kindobjekte des
    übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
    bzw. Geräte, die dem Gerät **Nemesys_M_1** untergeordnet sind bzw. zu
    diesem Gerät gehören.
 
-3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des 
+3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des
    übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
    des Gerätes **Nemesys_M_1**, welche im Logger aufgezeichnet werden können.
 
@@ -146,7 +146,7 @@ und deren Kindobjekte (wie z.B. untergeordnete Geräte):
    **Nemesys_M_1_DigOUT1**. Diese Objekte können wiederum aufgeklappt werden,
    um deren Kindobjekte und Eigenschaften anzuzeigen.
 
-5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften 
+5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften
    des übergeordneten Objektes. Beim Beispiel **Nemesys_M_1** sind dies z.B.
    die Eigenschaften **SyringeFillLevel** oder **ActualFlow**. Diese
    Eigenschaften können Sie einfach per Drag & Drop in die Kanalliste ziehen,
@@ -157,7 +157,7 @@ Objektbaum filtern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
-nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox 
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox
 :guilabel:`Devices Only` :guinum:`❶` aktiviert. D.h. im Objektbaum werden nur
 Geräte, die vom internen Gerätemanager (:guilabel:`Core.DeviceManager`) verwaltet
 werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
@@ -224,16 +224,16 @@ Kanäle hinzufügen
    :alt: Diagrammkurven via Drag & Drop hinzufügen
 
 Ziehen Sie aus dem Objektbaum :guilabel:`Object Tree` die Objekteigenschaft,
-welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste 
-:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an 
+welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste
+:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an
 der sie die Maustaste loslassen (siehe Abbildung unten).
 
 .. admonition:: Tipp
    :class: tip
 
-   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den 
-   Objektbaum nach verschiedenen Kriterien filtern. 
-   
+   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den
+   Objektbaum nach verschiedenen Kriterien filtern.
+
 :step:`Schritt 2 - Kanalbeschriftung festlegen`
 
 In der Spalte :guilabel:`Label` können Sie für jeden Kanal eine eigene
@@ -245,7 +245,7 @@ Legende des Graphen als Beschriftung der Kurve angezeigt.
 
 Klicken Sie zum Ändern der
 Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
-geben Sie dann die neue Bezeichnung ein. 
+geben Sie dann die neue Bezeichnung ein.
 
 :step:`Schritt 3 - Aufzeichnungsintervall festlegen`
 
@@ -253,7 +253,7 @@ geben Sie dann die neue Bezeichnung ein.
    :alt: Log-Intervall konfigurieren
 
 
-Im Feld :guilabel:`Log Interval` können Sie im Bereich :guilabel:`Logger Configuration` 
+Im Feld :guilabel:`Log Interval` können Sie im Bereich :guilabel:`Logger Configuration`
 das Intervall festlegen, in dem neue
 Messwerte aufgezeichnet werden sollen. Sie können das Intervall mit
 einer Auflösung von 0,1 Sekunden festlegen.
@@ -261,9 +261,9 @@ einer Auflösung von 0,1 Sekunden festlegen.
 .. admonition:: Wichtig
    :class: note
 
-   Wählen Sie das Intervall so groß wie       
-   möglich und so klein wie nötig um die Menge der         
-   aufzuzeichnenden Daten so gering wie möglich zu halten. 
+   Wählen Sie das Intervall so groß wie
+   möglich und so klein wie nötig um die Menge der
+   aufzuzeichnenden Daten so gering wie möglich zu halten.
 
 Die Konfiguration wird beim Beenden der Anwendung gespeichert und beim
 erneuten Start wieder geladen.
@@ -336,8 +336,8 @@ Ausschnitt zu verschieben.
 .. admonition:: Wichtig
    :class: note
 
-   Das Verschieben des Ausschnittes bewirkt   
-   eine Deaktivierung der automatischen Skalierung.     
+   Das Verschieben des Ausschnittes bewirkt
+   eine Deaktivierung der automatischen Skalierung.
 
 Werte einer Kurve anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -366,7 +366,7 @@ Ausschnittvergrößerung mit Vergrößerungsrahmen wählen
 .. image:: Pictures/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg
    :width: 60
    :height: 60
-   :align: left 
+   :align: left
 
 Mit dem Vergrößerungswerkzeug (*Zoom Tool*) können Sie
 gezielt einen Ausschnitt auswählen, den Sie vergrößert darstellen
@@ -422,18 +422,18 @@ getrennt für X- und Y-Achse aktivieren:
 .. admonition:: Wichtig
    :class: note
 
-   Die Änderung der Vergrößerung oder das     
-   Verschieben des Ausschnittes bewirken eine              
-   Deaktivierung der automatischen Skalierung.   
+   Die Änderung der Vergrößerung oder das
+   Verschieben des Ausschnittes bewirken eine
+   Deaktivierung der automatischen Skalierung.
 
 Kurven ein- und ausblenden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um die Skalierung und damit die Anzeige einzelner Kurven zu verbessern,
-können Sie Kurven ein- und ausblenden. Klicken Sie dazu mit der rechten Maustaste 
-auf das gewünschte Element in der Diagrammlegende und wählen Sie die gewünschte 
-Funktion, um entweder nur die entsprechende Kurve auszublenden :menuselection:`Hide Curve` 
-oder alle anderen außer der entsprechenden Kurve :menuselection:`Show only this curve`, 
+können Sie Kurven ein- und ausblenden. Klicken Sie dazu mit der rechten Maustaste
+auf das gewünschte Element in der Diagrammlegende und wählen Sie die gewünschte
+Funktion, um entweder nur die entsprechende Kurve auszublenden :menuselection:`Hide Curve`
+oder alle anderen außer der entsprechenden Kurve :menuselection:`Show only this curve`,
 wie in der Abbildung unten dargestellt.
 
 .. image:: Pictures/10000000000001A40000005CD26CCB4A8D0DF1F9.png
@@ -487,7 +487,7 @@ Zielverzeichnis aus.
 Anschließend geben Sie
 den Dateinamen der Bilddatei ein :guinum:`❶`. Dann wählen Sie in dem Auswahlfeld
 den Dateityp :guinum:`❷` der Bilddatei aus. Die Exportfunktion unterstützt sowohl
-Bilddateien (:file:`png, jpg...`) als auch skalierbare Vektorgrafiken 
+Bilddateien (:file:`png, jpg...`) als auch skalierbare Vektorgrafiken
 (:file:`pdf, svg...`). Wählen Sie das für Sie passende Bildformat aus.
 
 Klicken Sie zum Abschluss auf :guilabel:`Save` :guinum:`❸`, um den Export zu starten.
@@ -513,7 +513,7 @@ Diagrammdaten löschen
    :height: 60
    :align: left
 
-Klicken Sie im Kontextmenü auf den Eintrag :menuselection:`Clear plot data` 
+Klicken Sie im Kontextmenü auf den Eintrag :menuselection:`Clear plot data`
 um alle aufgezeichneten Daten zu löschen und mit einem leeren
 Diagramm die Aufzeichnung neu zu beginnen.
 
@@ -542,7 +542,7 @@ markiert hier den Zeitpunkt an dem die Aufzeichnung gestartet wurde .
 .. image:: Pictures/100002010000022B000000660DDD07486701950A.png
 
 Um die Achse umzuschalten, klicken Sie mit der rechten Maustaste in das
-Diagramm und wählen Sie dann aus dem Kontextmenü den Punkt 
+Diagramm und wählen Sie dann aus dem Kontextmenü den Punkt
 :menuselection:`Toggle X-axis scale`.
 
 .. image:: Pictures/100002010000010D000000C7FB8978837EA08B41.png
@@ -581,74 +581,6 @@ den Plot geladen werden.
    identisch** sein. Wenn Sie zwischen Speichern und Laden die
    Logger-Konfiguration ändern, z.B. Kanäle entfernen, werden ggf. nicht
    alle Kurven geladen.
-
-Script Funktionen
------------------
-
-.. image:: Pictures/10000201000001330000006F1CA99CCDC5308AD8.png
-   :alt: Logger Script Funktionen
-
-
-Der grafische Logger kann über das Scriptsystem der Software gestartet
-und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
-mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
-finden Sie in der :guilabel:`Logging` Kategorie der verfügbaren Scriptfunktionen.
-
-Funktion Start Plot Logger
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/10001A4C000034EB000034EBE789A979D3788852.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-Mit dieser Funktion starten Sie den grafischen Logger mit den
-aktuell konfigurierten Einstellungen und Kanälen. Der Inhalt des
-Diagramms wird dabei nicht gelöscht.
-
-|
-
-.. image:: Pictures/100002010000019E00000070391F13307E263DEB.png
-
-Setzen Sie einen Haken bei :guilabel:`Clear Plot before the start of logging` 
-wenn Sie alle Plotdaten vor der Aufzeichnung löschen möchten.
-
-Funktion Stop Plot Logger
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/100019EB000034EB000034EBA805BBEA9A6F9422.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-Diese Funktion stoppt die Aufzeichnung der Daten in das
-Prozessdaten Diagramm.
-
-|
-
-Funktion Export Plot Data
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/10001130000035050000350554D46258E4776750.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-Diese Funktion ermöglicht den Export der Diagrammdaten in
-unterschiedliche Formate. Im Konfigurationsbereich können Sie den
-Dateinamen und den Speicherort wählen, indem Sie auf das Ordner Symbol :guinum:`❶`
-klicken. Beim Speicherort sollten Sie den vorgegebenen Speicherort
-innerhalb des Projektordners behalten.
-
-.. image:: Pictures/10000201000001C9000000DDA39DA50FAC824913.png
-
-Im Bereich :guilabel:`Export Formats` :guinum:`❷` wählen Sie alle Formate aus, in denen die
-Plot-Daten exportiert werden sollen. Die Software speichert die Dateien
-mit dem gewählten Dateinamen + Zeitstempel + der Dateiendung des
-Exportformats (siehe Beispiel in Abbildung unten):
-
-.. image:: Pictures/100002010000016F000000BF0B98C28E08049AED.png
-
 
 
 .. |image32| image:: Pictures/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg

@@ -14,14 +14,14 @@ der Konfiguration ihrer Geräte unterstützt.
 Aufruf des Gerätekonfigurators
 ------------------------------
 
-Sie starten den Gerätekonfigurator durch Auswahl des Menüpunktes 
+Sie starten den Gerätekonfigurator durch Auswahl des Menüpunktes
 :menuselection:`Device --> Create Configuration` im Hauptmenü.
 
 .. image:: Pictures/1000020100000142000000E460C63C6ECF459963.png
    :alt: Aufruf Gerätekonfigurator
 
- 
-Um den Gerätekonfigurator zur Konfiguration Ihrer Geräte zu verwenden, muss eine gültige Lizenz 
+
+Um den Gerätekonfigurator zur Konfiguration Ihrer Geräte zu verwenden, muss eine gültige Lizenz
 installiert sein. Wenn Sie keine Lizenz besitzen, können Sie die Erstellung von
 Gerätekonfigurationen testen, sie können ihre Geräte aber nicht mit
 Hilfe des Konfigurationsassistenten :guinum:`❶` konfigurieren. Eine nicht
@@ -60,34 +60,34 @@ Sie diese importieren.
 .. admonition:: Tipp
    :class: tip
 
-   Wenn keine Gerätedatenbank auf dem             
-   Installationsdatenträger vorhanden ist, wird ihr Gerät   
-   bereits durch die CETONI Elements Software unterstützt   
-   und Sie können den Import überspringen.  
+   Wenn keine Gerätedatenbank auf dem
+   Installationsdatenträger vorhanden ist, wird ihr Gerät
+   bereits durch die CETONI Elements Software unterstützt
+   und Sie können den Import überspringen.
 
-.. rst-class:: steps   
+.. rst-class:: steps
 
 #. Bestätigen sie die Abfrage durch Linksklick auf die Schaltfläche :guilabel:`Yes`.
 
    .. image:: Pictures/100002010000021400000104F1C5A4A3FB36B583.png
-      :alt: Abfrage Gerätedatenbankimport  
+      :alt: Abfrage Gerätedatenbankimport
 
 #. Es öffnet sich ein
    Dateidialog. Wählen sie die Datenbankdatei :file:`devices.db`, die sich im
    Wurzelverzeichnis der mitgelieferten CETONI Elements CD befindet (siehe Abbildung unten).
 
    .. image:: Pictures/100002010000030C000001D07377795B057AC007.png
-      :alt: Dateidialog Gerätedatenbank  
+      :alt: Dateidialog Gerätedatenbank
 
 #. Der Gerätekonfigurator verfügt jetzt über eine aktuelle Gerätedatenbank.
 
 .. admonition:: Wichtig
    :class: note
 
-   Die Gerätedatenbank enthält wichtige        
-   Konfigurationsinformationen über ihre Geräte. Sie müssen 
-   immer dann eine aktuelle Gerätedatenbank importieren,    
-   wenn sie ein neues Gerät der cetoni GmbH erwerben.   
+   Die Gerätedatenbank enthält wichtige
+   Konfigurationsinformationen über ihre Geräte. Sie müssen
+   immer dann eine aktuelle Gerätedatenbank importieren,
+   wenn sie ein neues Gerät der cetoni GmbH erwerben.
 
 Solange sie keine neuen Geräte erwerben, müssen sie nicht bei jedem
 Start des Gerätekonfigurators eine Gerätedatenbank importieren. Wenn Sie
@@ -109,10 +109,10 @@ Gerätedatenbank importieren möchten, erreichen sie den Import-Dialog
 .. admonition:: Tipp
    :class: tip
 
-   Sie müssen nicht bei jedem Start des           
-   Gerätekonfigurators eine Gerätedatenbank importieren.    
-   Solange sie keine neuen Geräte erwerben, müssen Sie kein 
-   neue Gerätedatenbank importieren.  
+   Sie müssen nicht bei jedem Start des
+   Gerätekonfigurators eine Gerätedatenbank importieren.
+   Solange sie keine neuen Geräte erwerben, müssen Sie kein
+   neue Gerätedatenbank importieren.
 
 Übersicht
 ---------
@@ -177,11 +177,11 @@ ausführen, wenn Sie:
 .. admonition:: Wichtig
    :class: note
 
-   Konfiguration und Geräte gehören zusammen. 
-   Führen sie den Konfigurationsassistenten immer aus,     
-   wenn sie eine Konfiguration ändern oder ein anderes     
-   Gerät in eine vorhandene Konfiguration einbinden        
-   wollen.     
+   Konfiguration und Geräte gehören zusammen.
+   Führen sie den Konfigurationsassistenten immer aus,
+   wenn sie eine Konfiguration ändern oder ein anderes
+   Gerät in eine vorhandene Konfiguration einbinden
+   wollen.
 
 Ihre Gerätekonfiguration sollte stets mit der Softwareversion erstellt
 worden sein, mit der Sie die Konfiguration verwenden möchten, da es
@@ -216,7 +216,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    .. admonition:: Tipp
       :class: tip
 
-       Sie können Geräte via Drag & Drop oder durch Doppelklick hinzufügen.  
+       Sie können Geräte via Drag & Drop oder durch Doppelklick hinzufügen.
 
    .. image:: Pictures/1000020100000315000001F95769560860DF416C.png
       :alt: Erstellen der Gerätekonfiguration
@@ -224,9 +224,9 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    .. admonition:: Tipp
       :class: tip
 
-      Sie können Geräte aus der Gerätekonfiguration 
-      entfernen, indem Sie das Gerät durch Anklicken          
-      auswählen und dann die Entfernen Taste drücken.     
+      Sie können Geräte aus der Gerätekonfiguration
+      entfernen, indem Sie das Gerät durch Anklicken
+      auswählen und dann die Entfernen Taste drücken.
 
 
 #. Verfahren Sie auf gleiche Weise mit dem Qmix Q+ Modul.
@@ -238,9 +238,9 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    .. admonition:: Achtung
          :class: caution
 
-         Schalten Sie das Basismodul immer aus,     
-         bevor Sie Geräte entfernen oder anstecken um Schaden an 
-         den Geräten zu vermeiden. 
+         Schalten Sie das Basismodul immer aus,
+         bevor Sie Geräte entfernen oder anstecken um Schaden an
+         den Geräten zu vermeiden.
 
 #. Der Konfigurationsassistent fordert sie nun auf, folgende Schritte
    durchzuführen:
@@ -268,11 +268,11 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
    .. admonition:: Wichtig
       :class: note
 
-      Während der Konfiguration eines Gerätes    
-      dürfen Siech keine anderen eingeschalteten Geräte am    
-      Basismodul befinden, da es ansonsten zu Fehlern bei der 
-      Konfiguration oder zu späteren Fehlfunktionen kommen    
-      kann.    
+      Während der Konfiguration eines Gerätes
+      dürfen Siech keine anderen eingeschalteten Geräte am
+      Basismodul befinden, da es ansonsten zu Fehlern bei der
+      Konfiguration oder zu späteren Fehlfunktionen kommen
+      kann.
 
    -  Klicken sie mit der linken Maustaste auf die Schaltfläche :guilabel:`Next`
       um fortzufahren.
@@ -288,7 +288,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 
    .. image:: Pictures/1000020100000386000002780368D5E4C23E8331.png
       :alt: Gerätekonfiguration erfolgreich
-   
+
 #. Der Konfigurationsassistent fordert sie auf, folgende Schritte zu tätigen:
 
    -  Verbinden Sie das Qmix Q+ Modul mit Ihrem Basismodul
@@ -310,7 +310,7 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
       Basismodul befinden.
 
    .. image:: Pictures/100002010000038600000278BB49B91B78BAF742.png
-      :alt: Konfiguriertes Gerät trennen   
+      :alt: Konfiguriertes Gerät trennen
 
 #. Klicken Sie :guilabel:`Next`, um das QmixQ+ Modul zu konfigurieren.
 #. Setzen sie auf der folgenden Seite mit der linken Maustaste das
@@ -335,12 +335,12 @@ bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.
 
    .. image:: Pictures/10000201000002DC000001E960A7B6801635EFFC.png
       :alt: Abschluss des Konfigurationsassistenten
-  
+
 #. Bestätigen sie den Neustart der Software mit der neuen Konfiguration.
 
    .. image:: Pictures/1000020100000209000000973518A94FC04F6523.png
       :alt: Neustart von CETONI Elements bestätigen
-   
+
 #. CETONI Elements steht Ihnen nun mit den Funktionen der Nemesys S Pumpe und
    des Qmix Q+ Moduls zur Verfügung.
 
@@ -353,7 +353,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
 
 .. rst-class:: steps
 
-#. Starten sie den Gerätekonfigurator wie in Abschnitt 
+#. Starten sie den Gerätekonfigurator wie in Abschnitt
    :ref:`Aufruf des Gerätekonfigurators` beschrieben.
 #. Nach dem Start des Gerätekonfigurators wird die Konfiguration
    angezeigt, die momentan durch die CETONI Elements Software geladen
@@ -381,9 +381,9 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
    .. admonition:: Wichtig
       :class: note
 
-      Beinhaltet eine Gerätekonfiguration nicht  
-      konfigurierte Geräte, dann ist sie (noch) ungültig und  
-      kann nicht verwendet werden.           
+      Beinhaltet eine Gerätekonfiguration nicht
+      konfigurierte Geräte, dann ist sie (noch) ungültig und
+      kann nicht verwendet werden.
 
 #. Starten sie den *Konfigurationsassistenten* durch Anklicken der
    Schaltfläche :guilabel:`Configure`.
@@ -417,7 +417,7 @@ und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.
 
 #. Führen sie den Konfigurationsablauf auf die gleiche Weise wie beim Neuerstellen
    einer Konfiguration zu Ende.
-#. Nach dem Neustart der Software steht Ihnen nun auch die Funktionalität des 
+#. Nach dem Neustart der Software steht Ihnen nun auch die Funktionalität des
    neuen Gerätes zur Verfügung.
 
 Konfiguration eines einzelnen Gerätes
@@ -444,7 +444,7 @@ nicht zur Verfügung stehen. Die Demo-Konfiguration der CETONI
 Elements-Software, zum Beispiel, besteht vollständig aus simulierten
 Geräten. Um ein einzelnes Gerät zu simulieren gehen Sie wie folgt vor.
 
-.. rst-class:: steps  
+.. rst-class:: steps
 
 #. Klicken Sie mit der rechten Maustaste auf das Gerät, das sie
    simulieren möchten.
@@ -466,80 +466,6 @@ Eine gesamte Gerätekonfiguration simulieren Sie, indem sie die Schaltfläche
 
 .. image:: Pictures/10000201000003A4000001AB6990B251D2B11E55.png
    :alt: Simulieren einer gesamten Gerätekonfiguration
-
-
-Optionale Add-On-Plugins
-------------------------
-
-Es gibt optionale Erweiterungen der Software, die CETONI, unter
-Umständen in Ihrem Auftrag, kundenspezifisch entwickelt hat.
-Gegebenenfalls werden bestimmte Plugins für eine bestimmte
-Gerätekonfiguration aber gar nicht benötigt, bzw. sind hierfür gar nicht
-geeignet. Beim Erstellen und Bearbeiten einer Gerätekonfiguration können
-Sie frei konfigurieren, welche optionalen Plugins mit Ihrer
-Gerätekonfiguration geladen werden sollen.
-
-.. admonition:: Tipp
-   :class: tip
-
-   Die Software CETONI Elements kann um          
-   kundenspezifische Plugins erweitert werden. Sprechen    
-   Sie uns bitte an, sollten Sie eine spezifische          
-   Anpassung der Softwarefunktionalität benötigen. 
-
-Wenn Sie lediglich eine Standard-CETONI Elements-Version installiert
-haben, werden keine optionalen Add-On-Plugins verfügbar sein.
-Dementsprechend ist die Funktion für die Konfiguration von optionalen
-Add-On-Plugins deaktiviert (siehe Abbildung unten).
-
-.. image:: Pictures/100002010000023E000000515D00BAB8AAC98C98.png
-   :alt: Funktion zur Auswahl von optionalen Add-On-Plugins bei Standard-CETONI Elements-Installation
-
-Haben Sie ein CETONI
-Elements-Add-On installiert, welches optionale Plugins enthält, ist
-diese Funktion verfügbar (siehe Abbildung unten).
-
-.. image:: Pictures/100002010000025100000053D81EEF100715C18F.png
-   :alt: Funktion zur Auswahl von optionalen Add-On-Plugins, wenn optionale Plugins verfügbar sind
-
-.. admonition:: Wichtig
-   :class: note
-
-   Nicht jedes CETONI Elements-Add-On enthält 
-   optionale Plugins. Viele Add-Ons (z.B. Spectroscopy     
-   Add-On) enthalten ausschließlich obligatorische         
-   Plugins, die geladen werden müssen, um die              
-   Gerätefunktionalität bereitzustellen. Obligatorische    
-   Plugins können über diese Funktion nicht ausgewählt     
-   werden. Diese werden automatisch immer geladen, wenn    
-   das jeweilige Gerät (z.B. Qmix λ) konfiguriert wurde. 
-
-Wenn Sie mit der linken Maustaste auf die Funktion :guilabel:`Add-On Plugins`
-klicken, erscheint der Auswahldialog für Add-On-Plugins. In der unteren
-Hälfte des Dialogs befindet sich eine Tabelle, in der alle verfügbaren
-optionalen Add-On-Plugins angezeigt werden (siehe Abbildung unten).
-
-.. image:: Pictures/10000201000001F1000001F405E5F7AACBD5FB5C.png
-   :alt: Add-On-Plugins-Auswahldialog mit verfügbaren optionalen Plugins
-
-Sie können sich Informationen über das Add-On-Plugin anzeigen
-lassen, indem Sie mit der Maus über den jeweiligen Tabelleneintrag
-fahren (siehe Abbildung unten).
-
-.. image:: Pictures/100002010000031B000001207309E46F4E0A2038.png
-   :alt: Einblenden von Detailinformationen zum Add-On-Plugin
-
-Um ihrer Gerätekonfiguration ein optionales
-Add-On-Plugin hinzuzufügen, markieren Sie das Feld neben dem Plugin :guinum:`❶`
-und klicken anschließend auf :guilabel:`Ok` :guinum:`❷`. Zum Abschluss müssen Sie die
-Konfiguration speichern :guinum:`❸`, um die Änderungen dauerhaft zu übernehmen
-(siehe Abbildung unten).
-
-.. image:: Pictures/1000020100000394000002698426A6B470626331.png
-   :alt: Hinzufügen eines Add-On-Plugins zu einer Konfiguration
-
-
-
 
 
 .. |image26| image:: Pictures/100016B7000034EB000034EBF007ABD978022879.svg

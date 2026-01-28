@@ -7,8 +7,8 @@ Introduction
 In addition to recording data in CSV files, you can use the Datalogger plug-in
 to record process data in diagrams and thus graphically visualise the changes
 in these process data over time in real time. Use the push button
-:guilabel:`Logging` :guinum:`❶` (see figure below) in the sidebar to display 
-the process data graphs or show the logging view via the main menu 
+:guilabel:`Logging` :guinum:`❶` (see figure below) in the sidebar to display
+the process data graphs or show the logging view via the main menu
 ::menuselection:`Window --> ShowView --> Logging` :guinum:`❷`.
 
 To display the process data diagrams, click on the :guilabel:`Logging` button
@@ -107,10 +107,10 @@ sections:
    properties that are present in the application. You can use various filters
    to filter the object tree for specific objects. By default, only devices and
    device properties are displayed.
-   
+
 2. **Logger Channels** - lists all channels that may be recorded by the
    logger.
-   
+
 3. **Logger Configuration** - in this section you find various settings
    to configure the data recording.
 
@@ -125,8 +125,8 @@ In the Object Tree you will find a hierarchical list of all objects
 
 .. rst-class:: guinums
 
-1. **Object** - An object can be, for example, a device (here **Nemesys_M_1**) or 
-   another application object. You will find the two elements **Children** and 
+1. **Object** - An object can be, for example, a device (here **Nemesys_M_1**) or
+   another application object. You will find the two elements **Children** and
    **Properties** in each object after expanding it in the next level.
 
 2. **Children** - The Children element groups all child objects of the parent
@@ -137,14 +137,14 @@ In the Object Tree you will find a hierarchical list of all objects
    object. In our example, these are all the properties of the **Nemesys_M_1**
    device that can be recorded in the logger.
 
-4. **Child Object** - All child objects can be found in the **Children** group. 
+4. **Child Object** - All child objects can be found in the **Children** group.
    In the example **Nemesys_M_1**, these are, for example, the digital and
-   analogue inputs and outputs of the device, such as **Nemesys_M_1_DigOUT1**. 
+   analogue inputs and outputs of the device, such as **Nemesys_M_1_DigOUT1**.
    These objects can in turn be expanded to display their child objects and
    properties.
 
 5. **Property** - In the **Properties** group you will find all properties of
-   the parent object. In the example of **Nemesys_M_1**, these are, for example, 
+   the parent object. In the example of **Nemesys_M_1**, these are, for example,
    the properties **SyringeFillLevel** or **ActualFlow**. You can simply
    drag and drop these properties into the channel list to record their values.
 
@@ -152,22 +152,22 @@ In the Object Tree you will find a hierarchical list of all objects
 Filtering the Object Tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Above the object tree you will find various filters with which you can filter 
+Above the object tree you will find various filters with which you can filter
 the object tree according to certain criteria. The :guilabel:`Devices Only` :guinum:`❶`
 checkbox is activated by default. This means that only devices that are managed
 by the internal device manager (:guilabel:`Core.DeviceManager`) are displayed in
 the object tree. If you deactivate this checkbox, other application objects are
 displayed in the object tree.
 
-If the :guilabel:`Devices Only`:guinum:`❶` checkbox is activated, a selection 
+If the :guilabel:`Devices Only`:guinum:`❶` checkbox is activated, a selection
 box :guinum:`❷` is displayed with which you can filter the device tree according
-to a specific device type. In the illustration below, for example, the tree was 
+to a specific device type. In the illustration below, for example, the tree was
 filtered for syringe pumps:
 
 .. image:: ../../img/datalogger/object_tree_filter.png
 
 In addition, you will find an input field :guinum:`❸` directly above the object tree,
-with which you can filter the object tree according to a specific term, e.g. a 
+with which you can filter the object tree according to a specific term, e.g. a
 device name or a device property. In the image below, for example, a filter has
 been set for the device property **ActualFlow**. This means that only objects
 or devices with this property are displayed in the object tree:
@@ -180,7 +180,7 @@ List of Logger Channels
 
 .. image:: ../../img/datalogger/logger_channels_view.png
 
-The channel :guilabel:`Logger Channels` list shows the configuration of the 
+The channel :guilabel:`Logger Channels` list shows the configuration of the
 graphical logger in tabular form. Each line in the table corresponds to exactly
 one curve in the diagram, i.e. one logger channel. The following columns are available:
 
@@ -214,8 +214,8 @@ Add Logger Channels
 .. image:: ../../img/datalogger/graph_logger_drag_and_drop.png
 
 Drag-and-Drop the object property you want to record from the
-:guilabel:`Object Tree` into the :guilabel:`Logger Channels` list. 
-The new channel is inserted in the line where you release the mouse button 
+:guilabel:`Object Tree` into the :guilabel:`Logger Channels` list.
+The new channel is inserted in the line where you release the mouse button
 (see figure below).
 
 .. tip::
@@ -237,26 +237,26 @@ label text (see figure above).
 .. admonition:: Important
    :class: note
 
-   Upon choosing a new device property, a   
-   new channel description will be assigned automatically. 
-   That is, you should change the channel label only once  
-   the correct device property has been selected. 
+   Upon choosing a new device property, a
+   new channel description will be assigned automatically.
+   That is, you should change the channel label only once
+   the correct device property has been selected.
 
 :step:`Step 3 - Defining the Recording Interval`
 
 .. image:: ../../img/datalogger/graph_logger_interval.png
 
 In the :guilabel:`Log Interval` field in the :guilabel:`Logger Configuration`
-area, you can define the interval at which new measured values are to be recorded. 
+area, you can define the interval at which new measured values are to be recorded.
 You can set the interval with a resolution of 0.1 seconds.
 
 .. admonition:: Important
    :class: note
 
-   Choose a log interval that is as large   
-   as possible and as small as necessary in order to       
-   minimize the amount of data that needs to be recorded   
-   and transmitted by the system.        
+   Choose a log interval that is as large
+   as possible and as small as necessary in order to
+   minimize the amount of data that needs to be recorded
+   and transmitted by the system.
 
 Deleting Channels
 ~~~~~~~~~~~~~~~~~
@@ -267,7 +267,7 @@ channels from the list, and then use either the :kbd:`Delete` key or the
 
 |image58| |image59|
 
-To delete the entire channel list, use the context menu item 
+To delete the entire channel list, use the context menu item
 :menuselection:`Clear Logger`.
 
 Start/Stop Data Logging
@@ -303,7 +303,7 @@ axis shows the respective measurement data; it is without units as it
 potentially represents a variety of very different values and
 measurement units.
 
-A right mouse click within the plot area will open a context menu :guinum:`❷` 
+A right mouse click within the plot area will open a context menu :guinum:`❷`
 with a number of additional functions.
 
 Changing the Displayed Section
@@ -322,8 +322,8 @@ mouse whilst keeping the left button pressed.
 .. admonition:: Important
    :class: note
 
-   Panning of the displayed plot section    
-   will deactivate the auto-scaling of the diagram axes. 
+   Panning of the displayed plot section
+   will deactivate the auto-scaling of the diagram axes.
 
 Display Curve Values
 ~~~~~~~~~~~~~~~~~~~~
@@ -401,8 +401,8 @@ context menu:
 .. admonition:: Important
    :class: note
 
-   Zooming or panning within the displayed  
-   plot section will deactivate auto-scaling.  
+   Zooming or panning within the displayed
+   plot section will deactivate auto-scaling.
 
 Show/Hide Individual Curves
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -547,72 +547,6 @@ identical when saving and loading. If you change the logger
 configuration between saving and loading, e.g. remove channels, not all
 curves may be loaded.
 
-Script Functions
-----------------
-
-.. image:: Pictures/10000201000001330000006F1CA99CCDC5308AD8.png
-
-To automate the capture of data or
-to synchronize data capture with other processes, the graphical plot
-logger can be started and stopped using script functions.
-The corresponding functions can be found in the :guilabel:`Logging` category in
-the list of the available script functions.
-
-Start Plot Logger
-~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/10001A4C000034EB000034EBE789A979D3788852.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-This function is used to start the graphical logger with the
-currently configured settings and channels. The current content of the
-plot is not deleted.
-
-|
-
-.. image:: Pictures/100002010000019E00000070391F13307E263DEB.png
-
-Check :guilabel:`Clear Plot before the start of logging` if you want to clear all
-plot data before logging. Starts.
-
-Stop Plot Logger
-~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/100019EB000034EB000034EBA805BBEA9A6F9422.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-This function stops the current logging of process data into
-the process data plot.
-
-|
-
-Export Plot Data
-~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/10001130000035050000350554D46258E4776750.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-This function allows you to export the plot data to different
-formats. In the configuration area you can choose the file name and the
-saving location by clicking on the folder icon :guinum:`❶`. For the saving
-location, you should keep the default location within the project
-folder.
-
-.. image:: Pictures/10000201000001C9000000DDA39DA50FAC824913.png
-
-In the :guilabel:`Export Formats` :guinum:`❷` area, select all formats you want the plot data
-to be exported in. The software saves the files with the selected file
-name + timestamp + the file extension of the export format (see example
-in figure below):
-
-.. image:: Pictures/100002010000016F000000BF0B98C28E08049AED.png
-
 
 
 
@@ -644,26 +578,28 @@ in figure below):
 
 .. |image40| image:: Pictures/1000032600003505000035052A2D87EA9B64D7C0.svg
    :width: 40
-   
+
 .. |image41| image:: Pictures/100019CB000035050000350509AD2B23340F765E.svg
    :width: 40
-   
+
 .. |image42| image:: Pictures/100018130000350500003505CADD59D81E3150FD.svg
    :width: 40
-   
+
 .. |image43| image:: Pictures/10001855000034EB000034EBA6C6DA993124AA4C.svg
    :width: 40
-   
+
 .. |image44| image:: Pictures/10000FBE000034EB000034EB9506C15D6D175810.svg
    :width: 40
-   
+
 .. |image45| image:: Pictures/1000040D000035050000350542F550057A626C6D.svg
    :width: 40
-   
+
 .. |image46| image:: Pictures/1000044C000035050000350571A7475A9B633EF8.svg
    :width: 40
 
 .. |image58| image:: Pictures/100000000000012100000091DA9FF37806721579.png
+
+.. |image59| image:: Pictures/10000000000001220000008F22C1F8D0316FE153.png
 
 .. |image68| image:: Pictures/Mouse_Wheel_up.png
    :width: 80

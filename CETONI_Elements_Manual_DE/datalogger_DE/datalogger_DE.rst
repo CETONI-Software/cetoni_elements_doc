@@ -14,10 +14,10 @@ strukturierter Daten. Die Dateinamenserweiterung lautet *csv*.
 .. admonition:: Tipp
    :class: tip
 
-   CSV-Dateien können, wenn Sie das richtige      
-   Trennzeichen und das richtige Dezimalzeichen verwenden,  
-   ohne Probleme im Tabellenkalkulationsprogramm Microsoft  
-   Excel geöffnet und weiterverarbeitet werden.    
+   CSV-Dateien können, wenn Sie das richtige
+   Trennzeichen und das richtige Dezimalzeichen verwenden,
+   ohne Probleme im Tabellenkalkulationsprogramm Microsoft
+   Excel geöffnet und weiterverarbeitet werden.
 
 
 Konfigurationsdialog
@@ -36,7 +36,7 @@ zusätzliche Schaltflächen für die Konfiguration der Datenprotokollierung
 Übersicht Konfigurationsdialog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sobald die Konfiguration der Datenaufzeichnung aktiviert wurde, wird der 
+Sobald die Konfiguration der Datenaufzeichnung aktiviert wurde, wird der
 folgende Konfigurationsdialog angezeigt:
 
 .. image:: ../../img/datalogger/configuration_dialog_overview.png
@@ -51,7 +51,7 @@ aus den folgenden Bereichen:
    Objekte und deren Eigenschaften, die in der Applikation vorhanden sind.
    Mit verschiedenen Filtern können Sie den Objektbaum nach bestimmten Objekten
    filtern. Standardmäßig werden nur Geräte und Geräteeigenschaften angezeigt.
-   
+
 2. **Logger Channels** - hier sehen Sie in tabellarischer Form alle
    Kanäle die vom Logger aufgezeichnet werden.
 
@@ -62,7 +62,7 @@ aus den folgenden Bereichen:
 Der Objektbaum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte) 
+Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte)
 und deren Kindobjekte (wie z.B. untergeordnete Geräte):
 
 .. image:: ../../img/datalogger/object_tree.png
@@ -74,12 +74,12 @@ und deren Kindobjekte (wie z.B. untergeordnete Geräte):
    Aufklappen in der nächsten Ebene die beiden Elemente **Children** und
    **Properties**.
 
-2. **Children** - Das Children Element gruppiert alle Kindobjekte des 
+2. **Children** - Das Children Element gruppiert alle Kindobjekte des
    übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
    bzw. Geräte, die dem Gerät **Nemesys_M_1** untergeordnet sind bzw. zu
    diesem Gerät gehören.
 
-3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des 
+3. **Properties** - Das Properties Element gruppiert alle Eigenschaften des
    übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
    des Gerätes **Nemesys_M_1**, welche im Logger aufgezeichnet werden können.
 
@@ -89,7 +89,7 @@ und deren Kindobjekte (wie z.B. untergeordnete Geräte):
    **Nemesys_M_1_DigOUT1**. Diese Objekte können wiederum aufgeklappt werden,
    um deren Kindobjekte und Eigenschaften anzuzeigen.
 
-5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften 
+5. **Eigenschaft** - In der **Properties** Gruppe finden sie alle Eigenschaften
    des übergeordneten Objektes. Beim Beispiel **Nemesys_M_1** sind dies z.B.
    die Eigenschaften **SyringeFillLevel** oder **ActualFlow**. Diese
    Eigenschaften können Sie einfach per Drag & Drop in die Kanalliste ziehen,
@@ -100,7 +100,7 @@ Objektbaum filtern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
-nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox 
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox
 :guilabel:`Devices Only` :guinum:`❶` aktiviert. D.h. im Objektbaum werden nur
 Geräte, die vom internen Gerätemanager (:guilabel:`Core.DeviceManager`) verwaltet
 werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
@@ -164,8 +164,8 @@ Kanäle hinzufügen
 :step:`Schritt 1 - Kanäle hinzufügen`
 
 Ziehen Sie aus dem Objektbaum :guilabel:`Object Tree` die Objekteigenschaft,
-welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste 
-:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an 
+welche Sie aufzeichnen möchten, per Drag & Drop in die Kanalliste
+:guilabel:`Logger Channels`. Der neue Kanal wird in der Zeile eingefügt, an
 der sie die Maustaste loslassen (siehe Abbildung unten).
 
 .. image:: ../../img/datalogger/csv_logger_drag_and_drop.png
@@ -173,7 +173,7 @@ der sie die Maustaste loslassen (siehe Abbildung unten).
 .. admonition:: Tipp
    :class: tip
 
-   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den 
+   Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den
    Objektbaum nach verschiedenen Kriterien filtern.
 
 :step:`Schritt 2 - Kanalbeschriftung festlegen`
@@ -207,7 +207,7 @@ Kontextmenü den Punkt :menuselection:`Clear Logger` auswählen.
 CSV Eigenschaften konfigurieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Im Bereich :guilabel:`CSV File Configuration` können Sie globale Eigenschaften 
+Im Bereich :guilabel:`CSV File Configuration` können Sie globale Eigenschaften
 des CSV Loggers und zum
 Format der Aufzeichnung konfigurieren (siehe Abbildung unten).
 
@@ -236,9 +236,9 @@ Auflösung von 0,1 Sekunden festlegen.
 .. admonition:: Wichtig
    :class: note
 
-   Wählen Sie das Intervall so groß wie       
-   möglich und so klein wie nötig um die Menge der         
-   aufzuzeichnenden Daten so gering wie möglich zu halten. 
+   Wählen Sie das Intervall so groß wie
+   möglich und so klein wie nötig um die Menge der
+   aufzuzeichnenden Daten so gering wie möglich zu halten.
 
 Datenfeld-Trennzeichen festlegen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -252,17 +252,17 @@ auszuwählen.
 .. admonition:: Tipp
    :class: tip
 
-   Um die CSV Log-Dateien optimal in Microsoft   
-   Excel importieren zu können, sollten Sie als            
-   Trennzeichen ein Semikolon verwenden.  
+   Um die CSV Log-Dateien optimal in Microsoft
+   Excel importieren zu können, sollten Sie als
+   Trennzeichen ein Semikolon verwenden.
 
 .. admonition:: Wichtig
    :class: note
 
-   Alle Konfigurationseinstellungen des       
-   Prozessdatenloggers werden beim Verlassen des           
-   Konfigurationsdialogs gespeichert und sind auch nach    
-   einem erneuten Start der Anwendung vorhanden.   
+   Alle Konfigurationseinstellungen des
+   Prozessdatenloggers werden beim Verlassen des
+   Konfigurationsdialogs gespeichert und sind auch nach
+   einem erneuten Start der Anwendung vorhanden.
 
 
 Protokollierung starten / stoppen
@@ -316,52 +316,5 @@ Datensatzes berechnen.
 .. admonition:: Tipp
    :class: tip
 
-   Der absolute Zeitpunkt t0 der Aufzeichnung    
-   einer CSV Log-Datei ist im Dateinamen enthalten.   
-
-
-Script Funktionen
------------------
-
-Der CSV-Datenlogger kann über das Scriptsystem der Software gestartet
-und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
-mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
-finden Sie in der :guilabel:`Logging`-Kategorie der verfügbaren Scriptfunktionen.
-
-.. image:: Pictures/10000201000001060000008EE8252D88C2E8FBC7.png
-   :alt: Logger Script Funktionen
-
-Funktion Start CSV Logger
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/1000106B000034EB000034EBCD48AF0AC896EFC6.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-Mit dieser Funktion starten Sie den CSV-Logger mit den
-aktuell konfigurierten Einstellungen und Kanälen. Eine neue Log-Datei
-wird mit aktuellem Zeitstempel angelegt.
-
-|
-
-Funktion Stop CSV Logger
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: Pictures/1000101A000034EB000034EB2614684FE9CC8E2D.svg
-   :width: 60
-   :height: 60
-   :align: left
-
-Diese Funktion stoppt das aktuelle Logging und schließt die
-geöffnete Log-Datei.
-
-.. |image14| image:: Pictures/100000000000012100000091D7BFE42C03BA6ECE.png
-.. |image15| image:: Pictures/10000000000001220000008F424E5926A933056B.png  
-
-.. |icon-num| image:: ../../img/datalogger/property_number.svg
-   :width: 40
-.. |icon-bool| image:: ../../img/datalogger/property_bool.svg
-   :width: 40
-.. |icon-text| image:: ../../img/datalogger/property_text.svg
-   :width: 40
+   Der absolute Zeitpunkt t0 der Aufzeichnung
+   einer CSV Log-Datei ist im Dateinamen enthalten.
