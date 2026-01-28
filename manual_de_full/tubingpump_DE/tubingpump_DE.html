@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11. Schlauchpumpen Plugin &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="12. Rotaxys / Nemaxys Plugins" href="../rotaxys_DE/rotaxys_DE.html" />
+    <link rel="prev" title="10. Ventil Plugin" href="../qmixv_DE/qmixv_full_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Schlauchpumpen Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">11.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#schlauchpumpen-bedienpanel">11.2. Schlauchpumpen Bedienpanel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bedienelemente">11.2.1. Bedienelemente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beschriftung-andern">11.2.2. Beschriftung ändern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schlauchkonfiguration">11.2.3. Schlauchkonfiguration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manuelle-dosierung">11.3. Manuelle Dosierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-funktionen">11.4. Script Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-volumendosierung-pump-volume">11.4.1. Funktion Volumendosierung - <em>Pump Volume</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-konstanter-fluss-generate-flow">11.4.2. Funktion Konstanter Fluss - <em>Generate Flow</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-dosierung-stoppen-stop-pumping">11.4.3. Funktion Dosierung stoppen - <em>Stop Pumping</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">23. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Schlauchpumpen Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="schlauchpumpen-plugin">
+<h1><span class="section-number">11. </span>Schlauchpumpen Plugin<a class="headerlink" href="#schlauchpumpen-plugin" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">11.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<img alt="../_images/1000000000000068000000579F580EDEB3E6712F.png" class="align-left" src="../_images/1000000000000068000000579F580EDEB3E6712F.png" />
+<p>Drücken Sie die Schaltfläche <span class="guilabel">Tubing Pump</span> in der Seitenleiste, um
+den Schlauchpumpe-View anzuzeigen. Der View zeigt die Bedienpanels für alle
+Schlauchpumpen an.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="Tubing Pump Arbeitsbereich" src="../_images/10000000000002370000016FE8244C6EB3A2238E.png" />
+</section>
+<section id="schlauchpumpen-bedienpanel">
+<h2><span class="section-number">11.2. </span>Schlauchpumpen Bedienpanel<a class="headerlink" href="#schlauchpumpen-bedienpanel" title="Link to this heading"></a></h2>
+<section id="bedienelemente">
+<h3><span class="section-number">11.2.1. </span>Bedienelemente<a class="headerlink" href="#bedienelemente" title="Link to this heading"></a></h3>
+<img alt="../_images/10000000000000BC0000016FB42FD11BDAB75F52.png" src="../_images/10000000000000BC0000016FB42FD11BDAB75F52.png" />
+<ol class="arabic simple guinums">
+<li><p>Pumpenbeschriftung (anpassbar)</p></li>
+<li><p>Konfiguration der Schläuche (Innendurchmesser)</p></li>
+<li><p>Zielwert (Durchflussmenge, Volumen)</p></li>
+<li><p>Dosierung starten / stoppen -Taste</p></li>
+<li><p>Indikatoren für Aktivität und dosiertes Volumen</p></li>
+</ol>
+</section>
+<section id="beschriftung-andern">
+<h3><span class="section-number">11.2.2. </span>Beschriftung ändern<a class="headerlink" href="#beschriftung-andern" title="Link to this heading"></a></h3>
+<p>Die Beschriftung der Pumpe kann von Ihnen jederzeit neu vergeben werden
+um bestimmte Substanzen oder Nährmedien, die mit der Pumpe dosiert
+werden, zu kennzeichnen. Klicken Sie zum Ändern der Beschriftung einfach
+auf die Beschriftung <span class="guinum">❶</span> und geben Sie dann einen neuen Namen für die
+Pumpe ein.</p>
+</section>
+<section id="schlauchkonfiguration">
+<h3><span class="section-number">11.2.3. </span>Schlauchkonfiguration<a class="headerlink" href="#schlauchkonfiguration" title="Link to this heading"></a></h3>
+<p>In dem Feld <span class="guilabel">Tube</span> <span class="guinum">❷</span> wird der Name des aktuell konfigurierten Schlauches
+angezeigt. Klicken Sie zum Ändern der Schlauchkonfiguration auf den
+Knopf mit dem Schraubenschlüssel rechts neben dem Eingabefeld.</p>
+<img alt="Schlauch Auswahl Dialog" src="../_images/100002010000020B0000018E4422B75A9DD5CE30.png" />
+<p>In dem Schlauch Auswahl Dialog
+(<em>Tube Selection</em>) der nun angezeigt wird (Abbildung oben), können Sie
+den Schlauch konfigurieren. Sie können dafür entweder aus einer Liste
+von vorhandenen Schläuchen wählen <span class="guinum">❶</span>, oder einen eigenen Schlauch im
+Bereich <span class="guilabel">Custom Tube</span> <span class="guinum">❷</span> definieren.</p>
+<p>Zur Auswahl eines vorhandenen Schlauches, klicken Sie diesen einfach in
+der Liste <span class="guinum">❶</span> an und bestätigen die Auswahl durch Klicken auf <span class="guilabel">OK</span>. In der
+Liste wird Ihnen für jeden Schlauch in der ersten Spalte (<em>Tube</em>) der
+Name angezeigt. Der Wert in der zweiten Spalte (<em>Milliliters per
+pumphead revolution</em>) zeigt an, wie viel Milliliter bei einer
+vollständigen Umdrehung des Pumpenkopfes gefördert werden.</p>
+<p>Wenn Sie einen eigenen Schlauch konfigurieren möchten, geben Sie im Bereich
+<span class="guilabel">Custom Tube</span> <span class="guinum">❷</span> einen Namen für den Schlauch ein und die
+Milliliter, die bei einer Umdrehung des Pumpenkopfes durch diesen Schlauch gefördert
+werden. Bestätigen Sie dann auch hier die Konfiguration durch Klick auf <em>OK</em>.</p>
+</section>
+</section>
+<section id="manuelle-dosierung">
+<h2><span class="section-number">11.3. </span>Manuelle Dosierung<a class="headerlink" href="#manuelle-dosierung" title="Link to this heading"></a></h2>
+<p>Um manuell zu Dosieren, gehen Sie wie folgt vor:</p>
+<img alt="Manuelle Dosierung" src="../_images/10000000000000BC000000EA4601210AAF5F0BB0.png" />
+<ol class="arabic simple guinums">
+<li><p>Geben Sie zuerst im Feld <span class="guilabel">Flow</span> die
+gewünschte Flussrate ein. Negative Flussraten bewirken eine Änderung
+der Drehrichtung des Pumpenkopfes. Sie können somit abgeben und
+aufsaugen.</p></li>
+<li><p>Geben Sie dann im Feld <span class="guilabel">Target Volume</span> das Volumen, welches Sie
+dosieren möchten. Wenn Sie für das Volumen den Wert 0 eingeben,
+dosiert die Pumpe im Flussmodus. D.h. Die Pumpe dosiert solange, bis
+die Dosierung wieder manuell gestoppt wird. Ein negatives Volumen
+bewirkt eine Änderung der Drehrichtung des Pumpenkopfes.</p></li>
+<li><p>Klicken Sie die Schaltfläche <span class="guilabel">Start Dosage</span> um die Dosierung zu
+starten und ein zweites Mal um die Dosierung wieder zu stoppen.</p></li>
+<li><p>Im Bereich <span class="guilabel">Dosed Volume</span> wird nun der Fortschritt bei der Dosierung
+angezeigt</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Ein Volumen von 0 kennzeichnet eine
+unbegrenzte kontinuierliche Förderung. D.h. nach dem
+Start der Pumpe fördert diese solange, bis die Dosierung
+vom Anwender gestoppt wird.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Durch Eingabe von negativen Werten im Feld
+Flussrate, können Sie die Drehrichtung der Pumpe
+umdrehen (z.B. für Saugbetrieb).</p>
+</div>
+</section>
+<section id="script-funktionen">
+<h2><span class="section-number">11.4. </span>Script Funktionen<a class="headerlink" href="#script-funktionen" title="Link to this heading"></a></h2>
+<p>Das Schlauchpumpen-Plugin bietet eine Reihe von Scriptfunktionen die für
+die Programmierung von automatischen Abläufen und Dosierplänen verwendet
+werden können. Die folgenden Scriptfunktionen sind verfügbar:</p>
+<img alt="Pumpen Scriptfunktionen" src="../_images/100002010000013E00000090BB3C192C92C4530C.png" />
+<section id="funktion-volumendosierung-pump-volume">
+<h3><span class="section-number">11.4.1. </span>Funktion Volumendosierung - <em>Pump Volume</em><a class="headerlink" href="#funktion-volumendosierung-pump-volume" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000090100003505000035055D465DF5B68FF7A7.svg"><img alt="../_images/1000090100003505000035055D465DF5B68FF7A7.svg" class="align-left" src="../_images/1000090100003505000035055D465DF5B68FF7A7.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie ein bestimmtes Volumen mit
+einer genau definierten Flussrate dosieren. Alle Parameter, wie die
+Pumpe <span class="guinum">❶</span>, das zu dosierende Volumen und die Flussrate <span class="guinum">❷</span> stellen Sie im
+Konfigurationsbereich ein.</p>
+<img alt="Pump Volume Script Konfiguration" src="../_images/10000000000001EE000000FFE3C6610DEDC51BB5.png" />
+<p>Zusätzlich können Sie
+im Konfigurationsbereich noch den Parameter <em>Run to completion</em> <span class="guinum">❸</span> ein-
+oder ausschalten. Wenn <em>Run to completion</em> aktiviert ist, wir die
+Skriptausführung erst fortgesetzt, wenn das komplette Volumen dosiert
+wurde und der Dosiervorgang beendet ist. Ist dieser Parameter nicht
+aktiv, wir die Dosierung gestartet, und dann sofort die nächste
+Scriptfunktion bearbeitet. Damit können Sie z.B. mehrere Dosiermodule
+nahezu gleichzeitig starten.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Alle Pumpfunktionen unterstützen die
+Verwendung von Variablen. D.h. in allen Eingabefeldern
+die im Konfigurationsbereich mit einem gelben V
+gekennzeichnet sind (z.B. Flussrate und Volumen) können
+Sie Variablen eintragen.</p>
+</div>
+</section>
+<section id="funktion-konstanter-fluss-generate-flow">
+<h3><span class="section-number">11.4.2. </span>Funktion Konstanter Fluss - <em>Generate Flow</em><a class="headerlink" href="#funktion-konstanter-fluss-generate-flow" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000990000035050000350554270FC6A841A39C.svg"><img alt="../_images/10000990000035050000350554270FC6A841A39C.svg" class="align-left" src="../_images/10000990000035050000350554270FC6A841A39C.svg" width="60" /></a>
+<p>Diese Funktion dient zur Erzeugung einer konstanten
+Flussrate. Im Konfigurationsbereich können Sie das Dosiermodul auswählen
+und die Flussrate einstellen. Wenn der Parameter <em>Run to completion</em>
+aktiv ist, wird die nächste Skriptfunktion erst bearbeitet, wenn das
+Modul manuell vom Anwender gestoppt wurde.</p>
+</section>
+<section id="funktion-dosierung-stoppen-stop-pumping">
+<h3><span class="section-number">11.4.3. </span>Funktion Dosierung stoppen - <em>Stop Pumping</em><a class="headerlink" href="#funktion-dosierung-stoppen-stop-pumping" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg"><img alt="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg" class="align-left" src="../_images/1000148E000034EB000034EB84F72DE5B6C09574.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie einen aktiven Pumpvorgang einer Pumpe sofort stoppen.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../qmixv_DE/qmixv_full_DE.html" class="btn btn-neutral float-left" title="10. Ventil Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../rotaxys_DE/rotaxys_DE.html" class="btn btn-neutral float-right" title="12. Rotaxys / Nemaxys Plugins" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

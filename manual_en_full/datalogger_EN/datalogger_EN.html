@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSV Data Logger &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CSV Data Logger</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csv-data-logger">
+<h1>CSV Data Logger<a class="headerlink" href="#csv-data-logger" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The data logger plug-in provides the user with a powerful tool to record
+any of the data provided by connected devices in a user-defined time
+interval. Data are written into a CSV file (CSV:
+comma/character-separated values). This text file format is commonly
+used to save and exchange simply-structured data.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>CSV files can be opened and worked with in
+spreadsheet applications, such as Microsoft Excel if the
+correct value-separating and decimal sign has been used.</p>
+</div>
+</section>
+<section id="configuration-dialogue">
+<h2>Configuration Dialogue<a class="headerlink" href="#configuration-dialogue" title="Link to this heading"></a></h2>
+<section id="open-the-configuration-dialogue">
+<h3>Open the Configuration Dialogue<a class="headerlink" href="#open-the-configuration-dialogue" title="Link to this heading"></a></h3>
+<img alt="../_images/10000201000001B600000043E638CC3BBADD620A.png" src="../_images/10000201000001B600000043E638CC3BBADD620A.png" />
+<p>When the data logging plug-in has
+been loaded, the toolbar will display two additional buttons for the
+configuration of the logging of data <span class="guinum">❶</span> and to start/stop the logging
+process <span class="guinum">❷</span>.</p>
+</section>
+<section id="overview-csv-logger-configuration-dialogue">
+<h3>Overview CSV-Logger Configuration Dialogue<a class="headerlink" href="#overview-csv-logger-configuration-dialogue" title="Link to this heading"></a></h3>
+<p>Once the data logging configuration has been activated, the following
+configuration dialogue will be displayed:</p>
+<img alt="../_images/configuration_dialog_overview.png" src="../_images/configuration_dialog_overview.png" />
+<p>The configuration dialogue contains the following elements:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Object Tree</strong> - The Object Tree contains a tree of all objects and their
+properties that are present in the application. You can use various filters
+to filter the object tree for specific objects. By default, only devices and
+device properties are displayed.</p></li>
+<li><p><strong>Logger Channels</strong> - lists all channels that may be recorded by the
+logger.</p></li>
+<li><p><strong>CSV File Configuration</strong> - allows the user to set various settings
+for the data logging file.</p></li>
+</ol>
+</section>
+<section id="object-tree">
+<h3>Object Tree<a class="headerlink" href="#object-tree" title="Link to this heading"></a></h3>
+<p>In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):</p>
+<img alt="../_images/object_tree.png" src="../_images/object_tree.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Object</strong> - An object can be, for example, a device (here <strong>Nemesys_M_1</strong>) or
+another application object. You will find the two elements <strong>Children</strong> and
+<strong>Properties</strong> in each object after expanding it in the next level.</p></li>
+<li><p><strong>Children</strong> - The Children element groups all child objects of the parent
+object. In our example, these are all objects or devices that are
+subordinate to the device <strong>Nemesys_M_1</strong> or belong to this device.</p></li>
+<li><p><strong>Properties</strong> - The Properties element groups all properties of the parent
+object. In our example, these are all the properties of the <strong>Nemesys_M_1</strong>
+device that can be recorded in the logger.</p></li>
+<li><p><strong>Child Object</strong> - All child objects can be found in the <strong>Children</strong> group.
+In the example <strong>Nemesys_M_1</strong>, these are, for example, the digital and
+analogue inputs and outputs of the device, such as <strong>Nemesys_M_1_DigOUT1</strong>.
+These objects can in turn be expanded to display their child objects and
+properties.</p></li>
+<li><p><strong>Property</strong> - In the <strong>Properties</strong> group you will find all properties of
+the parent object. In the example of <strong>Nemesys_M_1</strong>, these are, for example,
+the properties <strong>SyringeFillLevel</strong> or <strong>ActualFlow</strong>. You can simply
+drag and drop these properties into the channel list to record their values.</p></li>
+</ol>
+</section>
+<section id="filtering-the-object-tree">
+<h3>Filtering the Object Tree<a class="headerlink" href="#filtering-the-object-tree" title="Link to this heading"></a></h3>
+<p>Above the object tree you will find various filters with which you can filter
+the object tree according to certain criteria. The <span class="guilabel">Devices Only</span> <span class="guinum">❶</span>
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (<span class="guilabel">Core.DeviceManager</span>) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.</p>
+<p>If the <span class="guilabel">Devices Only</span><span class="guinum">❶</span> checkbox is activated, a selection
+box <span class="guinum">❷</span> is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was
+filtered for syringe pumps:</p>
+<img alt="../_images/object_tree_filter.png" src="../_images/object_tree_filter.png" />
+<p>In addition, you will find an input field <span class="guinum">❸</span> directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a
+device name or a device property. In the image below, for example, a filter has
+been set for the device property <strong>ActualFlow</strong>. This means that only objects
+or devices with this property are displayed in the object tree:</p>
+<img alt="../_images/object_tree_filter_text.png" src="../_images/object_tree_filter_text.png" />
+</section>
+<section id="list-of-logger-channels">
+<h3>List of Logger Channels<a class="headerlink" href="#list-of-logger-channels" title="Link to this heading"></a></h3>
+<img alt="../_images/logger_channels_view.png" src="../_images/logger_channels_view.png" />
+<p>The table <span class="guilabel">Logger Channels</span> shows the configuration of the logger.
+Each row in that table corresponds to one column in the recorded
+CSV file. The following columns are available:</p>
+<ul>
+<li><p><strong>Object</strong> - contains the name of the object from which the value of a
+certain property is to be recorded and the icon of the object.</p></li>
+<li><p><strong>Property</strong> - this is the name of the object property/process data
+value that will be recorded. Its type (numeric or boolean) can be
+identified by the displayed icon.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numeric value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolean value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text value</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> - allows you to define a customized description for the
+selected channel. This description will be used as the column header
+in the CSV file.</p></li>
+</ul>
+<p>In order to add a channel to the data logging process, simply follow the
+steps below.</p>
+</section>
+</section>
+<section id="logger-configuration">
+<h2>Logger Configuration<a class="headerlink" href="#logger-configuration" title="Link to this heading"></a></h2>
+<section id="add-logger-channels">
+<h3>Add Logger Channels<a class="headerlink" href="#add-logger-channels" title="Link to this heading"></a></h3>
+<p><span class="step">Step 1- Adding of Channels</span></p>
+<p>Drag-and-Drop the object property you want to record from the
+<span class="guilabel">Object Tree</span> into the <span class="guilabel">Logger Channels</span> list.
+The new channel is inserted in the line where you release the mouse button
+(see figure below).</p>
+<img alt="../_images/csv_logger_drag_and_drop.png" src="../_images/csv_logger_drag_and_drop.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To simplify the selection of an object property, you can filter the object
+tree according to various criteria.</p>
+</div>
+<p><span class="step">Step 2 - Setting the Channel Label</span></p>
+<p>In the column <span class="guilabel">Label</span> you can customize the label for each
+channel. This label will be used as the column header of the CSV file
+for the selected channel.</p>
+<img alt="../_images/log_channel_label.png" src="../_images/log_channel_label.png" />
+<p>To do this, double-click
+into the respective table cell that is to be changed and insert the new
+description (see figure above).</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Upon choosing a new device property, a
+new channel description will be assigned automatically.
+That is, you should change the channel label only once
+the correct device property has been selected.</p>
+</div>
+</section>
+<section id="deleting-channels">
+<h3>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Link to this heading"></a></h3>
+<p>Highlight the desired channels using the mouse to delete one or more
+channels from the list, and then use either the <kbd class="kbd docutils literal notranslate">Delete</kbd> key or the
+<span class="menuselection">Delecte Selection</span> item of the right-click context menu:</p>
+<p><img alt="image14" src="../_images/100000000000012100000091D7BFE42C03BA6ECE.png" /> <img alt="image15" src="../_images/10000000000001220000008F424E5926A933056B.png" /></p>
+<p>To delete the entire channel list, use the context menu item
+<span class="menuselection">Clear Logger</span>.</p>
+</section>
+<section id="configuration-of-csv-properties">
+<h3>Configuration of CSV Properties<a class="headerlink" href="#configuration-of-csv-properties" title="Link to this heading"></a></h3>
+<p>In the <span class="guilabel">CSV File Configuration</span> section you can set the global
+properties of the CSV logger as well as the format of the recorded data
+(see figure below).</p>
+<img alt="../_images/10000201000002740000005D7814BAB01380FB40.png" src="../_images/10000201000002740000005D7814BAB01380FB40.png" />
+<section id="select-file-name-and-folder">
+<h4>Select File Name and Folder<a class="headerlink" href="#select-file-name-and-folder" title="Link to this heading"></a></h4>
+<p>Set the file name and location of the log file via <span class="guilabel">Log Filename</span>
+<span class="guinum">❶</span>. For this, click on the folder symbol on the right, select the target
+folder and give a file name.</p>
+<img alt="../_images/100000000000028F000001D742CE00F60CA536D2.png" src="../_images/100000000000028F000001D742CE00F60CA536D2.png" />
+</section>
+<section id="setting-the-recording-interval">
+<h4>Setting the Recording Interval<a class="headerlink" href="#setting-the-recording-interval" title="Link to this heading"></a></h4>
+<p>Set the time interval at which the data of all channels is to be
+recorded via the field <span class="guilabel">Log Interval</span> <span class="guinum">❷</span>. The time unit for the interval
+is seconds and you may set it in 0.1 second increments.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Choose the recording interval as large
+as possible and as small as necessary. This will
+minimize amount of data that will be recorded.</p>
+</div>
+</section>
+<section id="set-the-separating-character">
+<h4>Set the Separating Character<a class="headerlink" href="#set-the-separating-character" title="Link to this heading"></a></h4>
+<p>The character that will be used to separate individual data (columns)
+needs to be set via the selection field <span class="guilabel">CSV Separator</span>
+<span class="guinum">❸</span>. Depending on the software that is to be used for data
+evaluation, the character that needs to be used may change.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To obtain a CSV file that can be imported
+into Microsoft Excel, the semicolon (;) should be used.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>All configuration settings of the
+process data logger will be saved upon closing the
+configuration dialogue and are available when the
+application will be restarted.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="start-stop-of-the-logging-process">
+<h2>Start/Stop of the Logging Process<a class="headerlink" href="#start-stop-of-the-logging-process" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg"><img alt="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" class="align-left" height="60" src="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" width="60" /></a>
+<p>Use the relevant toolbar button to start and stop the data
+logging process.</p>
+<p>A new data file will be created each time the logging process is
+started. A time stamp with date and time will be added as a suffix to
+file name <code class="file docutils literal notranslate"><span class="pre">_YYYYMMDD_hhmmss</span></code>. That means, if the file name
+<code class="file docutils literal notranslate"><span class="pre">ProcessDataLog.csv</span></code> has been assigned by the user, starting the logging
+process on November 05, 2012 at 10:32 am and 9 secondswill create a
+logging file with the name <code class="file docutils literal notranslate"><span class="pre">ProcessDataLog_20121105_103209.csv.</span></code>
+This ensures, that a new logging file with a unique time stamp will be
+created each time the logging process is started.</p>
+</section>
+<section id="log-file-data-format">
+<h2>Log File Data Format<a class="headerlink" href="#log-file-data-format" title="Link to this heading"></a></h2>
+<p>The recorded CSV files have the following structure:</p>
+<ul class="simple">
+<li><p>Each CSV file consists of multiple data sets organized in rows and
+separated by line breaks.</p></li>
+<li><p>Each data set consists of a number of data fields (columns) that are
+separated by a specific character (e.g., semicolon).</p></li>
+<li><p>The first column always contains the relative time point (in seconds)
+of the corresponding data set.</p></li>
+<li><p>The first row shows the channel labels as configured by the user.</p></li>
+</ul>
+<img alt="../_images/10000000000002EF000000E6889ECE76397F99EB.png" src="../_images/10000000000002EF000000E6889ECE76397F99EB.png" />
+<p>To obtain the
+absolute time stamp for a data set, you may simply add an extra column
+to the spreadsheet and calculate the time by adding the data set’s
+relative time to the absolute time given in the file names time stamp.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The absolute time stamp at which logging
+started is given in the file name of the log file.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

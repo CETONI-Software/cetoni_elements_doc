@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valve Plugin &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Valve Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="valve-plugin">
+<h1>Valve Plugin<a class="headerlink" href="#valve-plugin" title="Link to this heading"></a></h1>
+<section id="introduction-to-valve-plugin">
+<h2>Introduction to Valve Plugin<a class="headerlink" href="#introduction-to-valve-plugin" title="Link to this heading"></a></h2>
+<p>The valve plugin is used to control QmixV valve modules or valves that are part
+of other devices (e.g. valves of Nemesys syringe pumps).</p>
+<img alt="../_images/valve_devices_numbered.jpg" src="../_images/valve_devices_numbered.jpg" />
+<ol class="arabic simple guinums">
+<li><p>CETONI QmixV valve modules</p></li>
+<li><p>valve devices that are part of other devices (i.e. valves
+mounted on Nemesys syringe pumps)</p></li>
+<li><p>supported valves from other manufacturers (e.g. VICI valves)</p></li>
+</ol>
+</section>
+<section id="valve-device-list">
+<h2>Valve Device List<a class="headerlink" href="#valve-device-list" title="Link to this heading"></a></h2>
+<p>The plugin mainly consists of the valve device list,
+which is displayed as a separate view in the graphical user interface.</p>
+<p><img alt="Figure 1: QmixV valve device list" src="../_images/10000201000001EB000000F0B98E00020FCB7DA7.png" /></p>
+<p>You
+can move the window to another position in the graphic interface at any
+time by dragging and dropping the title bar, or you can move it out of
+the interface to become a separate window.</p>
+<p>The valve device list shows you all the available Qmix valve devices in
+tabular form. The name of the module and the actual valve position
+status icon is shown in the left-hand table column, and the right-hand
+column shows the name of the current position of the valve.</p>
+<section id="editing-valve-names">
+<h3>Editing valve names<a class="headerlink" href="#editing-valve-names" title="Link to this heading"></a></h3>
+<p>You can change the name of a valve at any time and, for example, assign
+a name suitable for your particular application. You change a name by the
+following steps:</p>
+<p><img alt="Figure 2: change valve name" src="../_images/10000201000001EB000000CB9499C52DA337663E.png" /></p>
+<ol class="arabic simple steps">
+<li><p>Double-click the table cell containing the name you want to change.</p></li>
+<li><p>Enter the new name in the Editing window which now appears (see
+Figure above)</p></li>
+<li><p>Complete your changes by pressing the <kbd class="kbd docutils literal notranslate">Return</kbd> key.</p></li>
+</ol>
+</section>
+<section id="switching-valve-position">
+<h3>Switching valve position<a class="headerlink" href="#switching-valve-position" title="Link to this heading"></a></h3>
+<p>You can also switch the valve position in the module list. For this
+purpose proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>Double-click in the table cell showing the valve position.</p></li>
+<li><p>Select the desired valve position in the selection box that now
+appears (see Figure below).</p></li>
+<li><p>Confirm the selection by pressing <kbd class="kbd docutils literal notranslate">Return</kbd> key or click on another
+table cell to close the selection box.</p></li>
+</ol>
+<p><img alt="Figure 3: Switch valve position" src="../_images/10000201000001EB000000FD1C5E9DD6F4B5AE61.png" /></p>
+<p>The valve is now switched into the new valve position.</p>
+</section>
+<section id="naming-valve-positions">
+<h3>Naming valve positions<a class="headerlink" href="#naming-valve-positions" title="Link to this heading"></a></h3>
+<p>You can give each valve position an individual name in the software, and
+so configure the names of the valve positions to suit your application.
+Perform the following steps to change the names of the valve positions.</p>
+<ol class="arabic steps">
+<li><p>Make a right mouse click in the line of the table of the valve for
+which you want to rename the positions.</p>
+<p><img alt="Figure 4: Open valve configuration" src="../_images/10000201000001EB000000CBBC80A0A020333068.png" /></p>
+</li>
+<li><p>Select the <span class="guilabel">Configure valve positions…</span> menu item in the context
+menu, that is being displayed.</p></li>
+<li><p>A configuration dialog opens (Figure below), which consists of a
+valve selection box <span class="guinum">❶</span> and the list of valve positions <span class="guinum">❷</span>.</p>
+<p><img alt="Figure 5: Open valve configuration" src="../_images/10000201000001640000014B947BCFC5B43A8B70.png" /></p>
+</li>
+<li><p>Double click the line in the
+table containing the valve position you want to name.</p></li>
+<li><p>An Editing window <span class="guinum">❸</span> opens in the table cell, in which you can enter
+the new name of the valve position.</p></li>
+<li><p>Confirm your entry by pressing the <kbd class="kbd docutils literal notranslate">Return</kbd> key.</p></li>
+<li><p>You can close the configuration dialog when you have named all the
+valve positions.</p></li>
+</ol>
+<p>From now on, the valve positions will always be shown with the new names
+in all areas of the software.</p>
+</section>
+</section>
+<section id="creating-valves">
+<h2>Creating Valves<a class="headerlink" href="#creating-valves" title="Link to this heading"></a></h2>
+<p>You can control CETONI valves via one or more digital outputs. If you
+have connected your valve to the corresponding digital outputs, you must
+configure it in the software.</p>
+<p>The first step is to open the I/O channels window and manually switch
+the digital outputs to check that the valve is correctly connected and
+switching.</p>
+<p><img alt="Figure 6: List of I/O channels - Test by manual switching of the digital outputs" src="../_images/10000201000001AB000000D1DDFEC2AE0EE1C649.png" /></p>
+<p>Click on the LED in the column <span class="guilabel">On</span> at the
+corresponding channel to switch the digital channels off and on again.
+Check whether the valve is switched when switching the digital output.
+If the valve is not switched, it is either connected incorrectly or you
+are switching the wrong output. If the valve switches, you can continue
+creating the valve in the software.</p>
+<p>To do this, right-click in the list of valves and then select
+<span class="menuselection">Create Valve</span> from the context menu.</p>
+<p><img alt="FFfFigure 7: Open dialog for valve creation" src="../_images/1000020100000175000000C43F31CADA59024611.png" /></p>
+<p>The dialog for creating and configuring a valve is now displayed.</p>
+<p><img alt="Figure 8: Dialog for valve creation and configuration" src="../_images/100002010000022800000141A28095D6BFFF3542.png" /></p>
+<p>In the window, first select the type of valve you have connected in the field
+<span class="guilabel">Valve Type</span> <span class="guinum">❶</span>. Then you must configure the digital outputs
+for the valve in the <em>Dig-Out Channels</em> table. Depending on the valve type, these can be
+one or more outputs. To configure an output, double-click in the table
+cell <span class="guinum">❷</span> for this channel and then select the corresponding digital output
+from the list. The <span class="guilabel">OK</span> button <span class="guinum">❸</span> is only activated when the
+corresponding digital output channel has been configured for each
+switching input of the valve. You can then complete the configuration by
+clicking <span class="guilabel">OK</span>.</p>
+<p>The newly created valve now appears in the list of valves. Valves
+created with the <span class="guilabel">Create Valve</span> function get the prefix <code class="code docutils literal notranslate"><span class="pre">DO_</span></code> to
+indicate that they are valves controlled by digital outputs.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Valves created with the <em>Create Valve</em>
+function can be identified by the prefix <code class="code docutils literal notranslate"><span class="pre">DO_</span></code> in
+the valve list.</p>
+</div>
+</section>
+<section id="deleting-valves">
+<h2>Deleting Valves<a class="headerlink" href="#deleting-valves" title="Link to this heading"></a></h2>
+<p>Valves that you have created dynamically in the software, e.g. with the
+<a class="reference internal" href="#creating-valves"><span class="std std-ref">Create Valve</span></a> function (see previous section), can be deleted from the
+valve list via the context menu. To do this, right-click on the line of
+the valve you want to delete and then select the <span class="menuselection">Delete Valve</span> menu
+item.</p>
+<img alt="../_images/10000201000001A0000000C3567ED07E7C53F439.png" src="../_images/10000201000001A0000000C3567ED07E7C53F439.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Valves created and configured with the
+<em>Device Configurator</em>, or that are part of other
+devices, cannot be deleted with <span class="guilabel">Delete Valve</span> menu
+item.</p>
+</div>
+</section>
+<section id="valve-script-functions">
+<h2>Valve Script Functions<a class="headerlink" href="#valve-script-functions" title="Link to this heading"></a></h2>
+<p><img alt="Figure 10: Qmix valve script functions" src="../_images/10000201000000F70000003E8592638162A9459E.png" /></p>
+<p>The Qmix valve plugin contains a script function for switching the Qmix valves
+from a script.</p>
+<section id="switch-valve">
+<h3>Switch Valve<a class="headerlink" href="#switch-valve" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002F3400003505000035057520F6A9E5AEC280.svg"><img alt="../_images/10002F3400003505000035057520F6A9E5AEC280.svg" class="align-left" src="../_images/10002F3400003505000035057520F6A9E5AEC280.svg" width="60" /></a>
+<p>You use this function to switch the valve position. In the
+configuration area of this function, you can select the valve device <span class="guinum">❶</span>,
+and the target position <span class="guinum">❷</span> to which the valve is to be switched. The
+preview image visualizes the selected target position <span class="guinum">❸</span>.</p>
+<img alt="../_images/10000000000001A3000000A14DDC5565A638D882.png" src="../_images/10000000000001A3000000A14DDC5565A638D882.png" />
+<p>Both selection boxes support the use of variables. That means, in the device
+selection box <span class="guinum">❶</span> you can use a variable that contains a valve device reference.
+In the target position selection box <span class="guinum">❷</span> you can use a script variable
+that contains a target position index.</p>
+<p>The following example shows a script, that creates two variables <span class="guinum">❶</span>. The
+<code class="code docutils literal notranslate"><span class="pre">$ProcessValve</span></code> variable stores the device reference to valve device
+<strong>Valve_0</strong>. The <code class="code docutils literal notranslate"><span class="pre">$RefillPosition</span></code> variable stores the valve target
+position for syringe refill.</p>
+<img alt="../_images/switch_valve_variables.png" src="../_images/switch_valve_variables.png" />
+<p>These variables are then used in the <em>Switch Valve</em> script <span class="guinum">❷</span> for the
+<span class="guilabel">Valve</span> and <span class="guilabel">Target Position</span> definition.</p>
+</section>
+</section>
+<section id="supported-vici-valves">
+<h2>Supported VICI Valves<a class="headerlink" href="#supported-vici-valves" title="Link to this heading"></a></h2>
+<p>The Valve Plugin supports VICI valves that use a universal actuator with a USB or RS-232 interface.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are using a valve with the RS-232 interface you might experience problems with the communication if you connect the valve directly to a physical RS-232 port on your PC.</p>
+<p>Use a USB-to-serial adapter instead to connect the valve via USB to you PC!</p>
+</div>
+<img alt="../_images/Vici_Valve.jpg" src="../_images/Vici_Valve.jpg" />
+<p>The following list shows all types of VICI valves that are supported by the software:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10Pos11Port_PositionIcon0.svg"><img alt="image-vici-10pos11port" src="../_images/10Pos11Port_PositionIcon0.svg" width="60" /></a></p></td>
+<td><p>10 Position dead-end selector (SD) valve (e.g. <a class="reference external" href="https://www.vici.com/vval/sd.php">low pressure</a>, <a class="reference external" href="https://www.vici.com/vval/sduw.php">high pressure</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/6Pos7Port_PositionIcon0.svg"><img alt="image-vici-6pos7port" src="../_images/6Pos7Port_PositionIcon0.svg" width="60" /></a></p></td>
+<td><p>6 Position dead-end selector (SD) valve (e.g. <a class="reference external" href="https://www.vici.com/vval/sd.php">low pressure</a>, <a class="reference external" href="https://www.vici.com/vval/sduw.php">high pressure</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/2Pos6Port_PositionIcon1.svg"><img alt="image-vici-2pos6port" src="../_images/2Pos6Port_PositionIcon1.svg" width="60" /></a></p></td>
+<td><p>6 Port injector valve (e.g. <a class="reference external" href="https://www.vici.com/vval/vval_gc.php">GC injectors</a>, <a class="reference external" href="https://www.vici.com/vval/vval_hplc.php">HPLC injectors</a>)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

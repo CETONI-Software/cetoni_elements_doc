@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemesys Plugin &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nemesys Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nemesys-plugin">
+<h1>Nemesys Plugin<a class="headerlink" href="#nemesys-plugin" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The Nemesys Plugin is for controlling the CETONI Nemesys syringe pumps.
+In the Nemesys View (figure below), operating panels are displayed for all
+existing and configured syringe pumps.</p>
+<p><img alt="Figure 1: Nemesys workspace" src="../_images/100000000000045E000002BE838E4D417C3553CE.png" /></p>
+<p>If the Nemesys View is not visible, then select
+<span class="menuselection">Window → Show View → Nemesys</span> from the main menu or click
+the <span class="guilabel">Nemesys</span> button in the sidebar.</p>
+</section>
+<section id="pump-operating-panel">
+<h2>Pump Operating Panel<a class="headerlink" href="#pump-operating-panel" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>Each operating panel is used to control, configure and visualize a
+Nemesys dosing module. It contains all the control elements for
+configuring and controlling the pump parameters and for visualizing the
+current status.</p>
+<p><img alt="image1" src="../_images/10000201000000DA0000027D087AA389826F3C49.png" /></p>
+<p>The panel consists of</p>
+<ol class="arabic simple guinums">
+<li><p>Caption of the syringe pump</p></li>
+<li><p>Level indicator</p></li>
+<li><p>Control elements (depending on operating mode)</p></li>
+<li><p>Valve switching and status</p></li>
+<li><p>Display of the internal force sensor if supported by the device</p></li>
+</ol>
+<p>The force sensor display is hidden by default. To show the display, select
+<span class="menuselection">Show Force Indicator</span> from the context menu.</p>
+<img alt="../_images/show_force_sensor.png" src="../_images/show_force_sensor.png" />
+</section>
+<section id="changing-module-names">
+<h3>Changing module names<a class="headerlink" href="#changing-module-names" title="Link to this heading"></a></h3>
+<p>You can assign a unique name to each
+dosing unit. For example, you can indicate which liquid a dosing unit
+doses or what it is used for. To assign a new name, simply make a left
+mouse click on the name of the dosing unit. You can then enter a new
+name, and confirm the entry with <kbd class="kbd docutils literal notranslate">Return</kbd> (Figure below).</p>
+<p><img alt="Figure 2: Changing module name" src="../_images/1000020100000153000000865EA46C8D528E4051.png" /></p>
+</section>
+<section id="syringe-level-indicator">
+<h3>Syringe level indicator<a class="headerlink" href="#syringe-level-indicator" title="Link to this heading"></a></h3>
+<p>The fill level indicator of the syringe always shows the current
+position of the drive unit, and thus the current fill level of the
+syringe used. The colour of the syringe also indicates the current
+motion of the dosing unit, so you can immediately see the direction of
+motion of the syringe even with a very low flow rate. The following
+colours are possible:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000004600000055B5BD133DBED7017F.png"><img alt="image8" src="../_images/100000000000004600000055B5BD133DBED7017F.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Grey</strong> - The drive unit is currently inactive.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000000460000005571CC2832E2E47223.png"><img alt="image9" src="../_images/10000000000000460000005571CC2832E2E47223.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Blue</strong> - The syringe piston is moving in the direction
+of the syringe clamp (Dispensing).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000046000000555AB1B48CFF3950BB.png"><img alt="image10" src="../_images/1000000000000046000000555AB1B48CFF3950BB.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Orange</strong> - The syringe piston is moving away from the
+syringe clamp (Aspirating).</p></td>
+</tr>
+</tbody>
+</table>
+<p>This color coding of the direction of motion is also used in all other
+parts of the Nemesys plugin.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The colours of the syringes help you identify
+the direction of motion quickly, especially with very
+low flow rates, because it is almost impossible to see
+the position of the syringe piston changing.</p>
+</div>
+<p>The thickness of the syringe in the display indicates the approximate
+size of the currently clamped syringe. You should be very cautious with
+the use of higher flow rates, especially with very large syringes,
+because very high pressures can develop very quickly, which could damage
+the device (valve) or your application.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Risk of high pressures damaging the
+connectors in the liquid path. To avoid high pressures
+causing damage, never make a reference move with a
+high-pressure syringe clamped.</p>
+</div>
+</section>
+<section id="software-limits">
+<h3>Software limits<a class="headerlink" href="#software-limits" title="Link to this heading"></a></h3>
+<p>The travel path of a syringe is limited in the software by a minimum and
+a maximum value in order to prevent irreparable damage to the syringe or
+the piston being pulled out of the body of the syringe. These values are
+indicated by two red marks in the fill level indicator (Figure below),
+and they have to be defined for each syringe in the
+<a class="reference internal" href="nemesys_full_EN.html#syringe-configuration"><span class="std std-ref">Syringe configuration</span></a>.</p>
+<img alt="../_images/syringe_software_limits.png" src="../_images/syringe_software_limits.png" />
+</section>
+</section>
+<section id="force-monitoring">
+<h2>Force Monitoring<a class="headerlink" href="#force-monitoring" title="Link to this heading"></a></h2>
+<section id="introduction-to-force-monitoring">
+<h3>Introduction to Force Monitoring<a class="headerlink" href="#introduction-to-force-monitoring" title="Link to this heading"></a></h3>
+<p>The latest pumps in the Nemesys range (Nemesys M and Nemesys S) have an
+internal force sensor to monitor the force with which the syringe
+plunger is pressed into the syringe. This serves to minimize the risk of
+damage to the device, the syringes and the application.</p>
+<p>Each pump has a fixed maximum force value at which dosing stops:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Nemesys S</strong></p></td>
+<td><p>0.48 kN</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Nemesys M</strong></p></td>
+<td><p>1.3 kN</p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the maximum force can be further limited by a user
+adjustable force limit.</p>
+</section>
+<section id="operating-controls">
+<h3>Operating Controls<a class="headerlink" href="#operating-controls" title="Link to this heading"></a></h3>
+<p>In the operating panel of the pump you will find the display of the
+force monitoring <span class="guinum">❶</span> below the syringe display: If the display is hidden,
+you can show the display again via the context menu of the pump. In the
+context menu, select the menu item <span class="menuselection">Show Force Indicator</span>:</p>
+<img alt="../_images/show_force_sensor.png" src="../_images/show_force_sensor.png" />
+<p>The protective shield symbol <span class="guinum">❷</span> (see figure below) in the upper left
+corner of the force display indicates whether the force monitoring is
+active or inactive (symbol greyed out).</p>
+<p><img alt="image17" src="../_images/100002010000011500000099B1E7B77D37E1332E.png" /></p>
+<p>Dosage is only possible when force monitoring is activated.
+If you move the mouse arrow over the force indicator, additional
+information is displayed in a small window <span class="guinum">❸</span>:</p>
+<ul class="simple">
+<li><p><strong>Name</strong> of the force sensor channel (e.g. to query the sensor in the
+script or to use it in the logger).</p></li>
+<li><p><strong>Force range</strong> - the adjustable range of force monitoring</p></li>
+<li><p><strong>Force limit</strong> - the currently set maximum permissible force</p></li>
+<li><p><strong>Monitoring</strong> - indicates whether the force monitoring is active.</p></li>
+</ul>
+<p>To limit the maximum force, right-click in the force display and select
+the menu item <span class="menuselection">Configure Force Limit</span>:</p>
+<p><img alt="image18" src="../_images/1000020100000146000000800BD9B0432D00F22A.png" /></p>
+<p>Then enter the desired maximum force and click <span class="guilabel">OK</span>:</p>
+<img alt="../_images/100002010000010000000070D53D2787371955AA.png" src="../_images/100002010000010000000070D53D2787371955AA.png" />
+</section>
+<section id="what-to-do-after-a-force-overload-stop">
+<h3>What to do after a force overload stop<a class="headerlink" href="#what-to-do-after-a-force-overload-stop" title="Link to this heading"></a></h3>
+<p>If the maximum set force is exceeded while the pump is in use, the pump
+is stopped immediately and set to a fault state. This is shown in the
+figure below. The value of the force sensor (green curve) has exceeded
+the set force limit (red line) <span class="guinum">❶</span>.</p>
+<p><img alt="image19" src="../_images/100002010000041C0000027F06C58E855A268253.png" /></p>
+<p>The error status of the pump is indicated by the red flashing
+LED <span class="guinum">❷</span>. The current measured value of the force sensor can be seen in the
+force display <span class="guinum">❸</span>. In addition, the reason for the error is shown in the
+event log.</p>
+<p><img alt="image20" src="../_images/10000201000002EA0000005B00458FB9B9C5043B.png" /></p>
+<p>To reset the pump from this “overload” state to normal
+operating mode, proceed as follows:</p>
+<ol class="arabic steps">
+<li><p><strong>Disable force monitoring</strong>. Click with the right mouse button in
+the force display and select the menu item <em>Enable / Disable Force
+Monitoring</em>. The protective shield symbol should then be greyed out.</p>
+<p><img alt="image21" src="../_images/1000020100000205000000628984EFCAD3138B6D.png" /></p>
+<p>The event log informs you that the safety stop has now been
+reset and that only aspiration is possible:</p>
+<img alt="../_images/100002010000028C00000056870799632F9FDD06.png" src="../_images/100002010000028C00000056870799632F9FDD06.png" />
+</li>
+<li><p><strong>Enable pump</strong>. To activate the pump, right-click on the red status
+LED of the pump and select the menu item <em>Enable Pump Drive</em> from
+the context menu. The status LED of the pump must then light up
+green.</p>
+<img alt="../_images/10000201000000F30000006A80846DAA366E3158.png" src="../_images/10000201000000F30000006A80846DAA366E3158.png" />
+</li>
+<li><p><strong>Reduce force</strong>. You can now reduce the force by drawing up the
+syringe or starting a dosage with a negative flow rate. You should
+now see the value in the force display decrease. As soon as the
+force value falls below a threshold, the pump will stop and return
+to an error state. You should then see a corresponding message in
+the event log:</p>
+<img alt="../_images/10000201000002C70000005EE9E5349F4ACFEEAF.png" src="../_images/10000201000002C70000005EE9E5349F4ACFEEAF.png" />
+</li>
+<li><p><strong>Activate force monitoring</strong>. Now click with the right mouse button
+in the force display again and select the menu item <em>Enable /
+Disable Force Monitoring</em>. The force monitoring should then be
+active again and the shield symbol should be coloured:</p>
+<p><img alt="image22" src="../_images/10000201000000630000005FF329372D2B9DEC99.png" /></p>
+<p>In the event log you should now see the information that the
+force monitoring is active again and that the safety stop has been
+reset.</p>
+<img alt="../_images/10000201000001AA00000056EACFFD3C7DD5C0F4.png" src="../_images/10000201000001AA00000056EACFFD3C7DD5C0F4.png" />
+</li>
+<li><p><strong>Activate pump.</strong> To activate the pump, right-click on the red
+status LED of the pump again and select the menu item Enable Pump
+Drive from the context menu. The status LED of the pump must then
+light up green.</p>
+<img alt="../_images/10000201000000F30000006A80846DAA366E3158.png" src="../_images/10000201000000F30000006A80846DAA366E3158.png" />
+</li>
+</ol>
+<p>Now the pump is ready for operation and can be used as usual.</p>
+</section>
+</section>
+<section id="reference-move">
+<h2>Reference Move<a class="headerlink" href="#reference-move" title="Link to this heading"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>With the current <em>Nemesys M</em> and <em>Nemesys S</em>
+pumps, a reference move is no longer necessary and you
+can skip this chapter.</p>
+</div>
+<p>The drives of the dosing units are monitored and controlled by a digital
+positioning unit. You can make a reference move of the dosing unit to
+calibrate this positioning unit. A suitable time for this is, for
+example, when a syringe is changed, because the syringe has to be
+removed from the dosing unit in order to make a reference move. During
+the reference move, the dosing unit travels to its lower limit position,
+and calibrates your zero position when it reaches the limit position.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Always make a reference move if you
+operate the pumps from another PC, because the
+calibration data are stored on the PC and not in the
+dosing units.</p>
+</div>
+<img alt="../_images/start_reference_move.png" src="../_images/start_reference_move.png" />
+<p>To start a reference move, make a
+right mouse click in the operating panel of the dosing unit that is to
+be calibrated. Select the <span class="menuselection">Reference Move</span> menu item in the context menu
+that will open now.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Danger of damaging syringes! The system
+may only be calibrated when a syringe is not installed
+in the dosing unit.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Risk of high pressures damaging the
+connectors in the liquid path. To avoid high pressures
+causing damage, never make a reference move with a
+high-pressure syringe clamped.</p>
+</div>
+</section>
+<section id="valve">
+<h2>Valve<a class="headerlink" href="#valve" title="Link to this heading"></a></h2>
+<img alt="../_images/ventil.png" src="../_images/ventil.png" />
+<p>If your dosing unit has a valve, you can switch the valve or
+configure the automatic valve switching in this part of the operating
+panel. The current switching status of the valve is indicated by the
+valve control element.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Move the mouse cursor over the valve to get
+additional information about the valve.</p>
+</div>
+<section id="manual-valve-switching">
+<h3>Manual valve switching<a class="headerlink" href="#manual-valve-switching" title="Link to this heading"></a></h3>
+<p>To switch the valve, simply make a left mouse click on the valve icon
+(figure below). You should hear a soft click, and the valve image should
+switch to the other switching status.</p>
+<p><img alt="Figure 5: Manual valve switching" src="../_images/1000000000000195000000ADA27EB388AC14806E.png" /></p>
+<p>If you have a valve with more than
+two valve positions, you can cycle through all positions by clicking
+with the left mouse button on the valve image. If you hold down the
+<kbd class="kbd docutils literal notranslate">Shift</kbd> key when you click on the valve, you can cycle through the valve
+positions in the opposite direction:</p>
+<p><img alt="Figure 6: Inverted manual valve switching" src="../_images/10000000000001B10000009674312B473919102F.png" /></p>
+<p>Alternatively, you can
+select the desired valve position directly. Click with the right mouse
+button on the valve, and then select the context menu item
+<span class="menuselection">Switch Valve</span>.</p>
+<p><img alt="Figure 7: Showing valve context menu" src="../_images/100000000000016E000000B3905F4EAA693DD621.png" /></p>
+<p>A small dialog window comes up,
+where you can choose the desired valve switching position from a valve
+selection box. Once you select a position, the valve is switched
+immediately. You can finish the selection of a valve switching position
+by clicking the green check mark (see figure below).</p>
+<p><img alt="Figure 8: Selection of valve switching position" src="../_images/100000000000017C000000FBB8D53C0B60FC4150.png" /></p>
+</section>
+<section id="automatic-valve-switching">
+<h3>Automatic valve switching<a class="headerlink" href="#automatic-valve-switching" title="Link to this heading"></a></h3>
+<p>Each pump has a valve automatic, which automatically switches the
+associated valve when the pump state changes. The small orange
+<strong>A</strong>-icon overlay shows you whether the valve automatic mode is active.</p>
+<p><img alt="Figure 9: Valve automatic mode active" src="../_images/10000000000002230000009D317412D5E296952F.png" /></p>
+<p>To toggle the valve automatic,
+just click with the right mouse button on a valve and then select the
+menu item <span class="menuselection">Enable Valve Automatic</span>.</p>
+<p><img alt="Figure 10: Enable / disable valve automatic" src="../_images/10000000000001320000007D07F9BEE1F917E086.png" /></p>
+<p>To configure the
+automatic valve mode, click with the right mouse button on a valve and
+select the menu item <span class="menuselection">Configure Valve Automatic</span>.
+The valve automatic configuration dialog will then appear.</p>
+<p><img alt="Figure 11: Valve automatic configuration dialog" src="../_images/100000000000024E0000027078F3574498FE2E0F.png" /></p>
+<p>You can configure the
+target valve position for each pump state (<em>Aspiration, Stopped and
+Dispensing</em>) separately. To activate valve switching for a certain
+state, check the check box <span class="guinum">❶</span>. It is then displayed a selection box
+<span class="guinum">❷</span> for selection of the valve position. If you want to disable valve
+switching for a certain state, simply uncheck the check box <span class="guinum">❸</span>.
+Finish the configuration by clicking the <span class="guilabel">OK</span> <span class="guinum">❹</span> button.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>In certain dosing modes, such as during
+continuous dosing with two pumps, the valve automatic
+is temporarily disabled because the valves are switched
+by the logic of the respective operating mode.</p>
+</div>
+</section>
+<section id="assigning-a-valve">
+<h3>Assigning a Valve<a class="headerlink" href="#assigning-a-valve" title="Link to this heading"></a></h3>
+<p>You can assign a valve to each syringe pump, regardless of whether the
+pump has its own valve or not. This valve can be e.g. a Qmix V module,
+an external ball valve or the valve of another syringe pump. You can do
+this via drag &amp; drop. Simply drag the corresponding valve out of the
+valve list <span class="guinum">❶</span> onto the front panel <span class="guinum">❷</span> of the corresponding pump.</p>
+<img alt="../_images/1000020100000469000002A783AE238E93742740.png" src="../_images/1000020100000469000002A783AE238E93742740.png" />
+<p>To assign a valve, select the menu item <span class="menuselection">Assign Valve</span> from the context
+menu of a pump.</p>
+<p><img alt="Figure 13: Valve Assignment" src="../_images/100000000000017C000000A2A0DA88BD315B82A3.png" /></p>
+<p>Then select the valve from the valve
+list, which you want to assign.</p>
+<p><img alt="Figure 14: Valve selection dialog" src="../_images/10000000000001790000011DC571F9CE1064E587.png" /></p>
+<p>The new valve is then displayed
+below the syringe. When you configure and activate the valve automatic
+for this valve, the valve is automatically switched when aspirating and
+dispensing liquid and when stopping the pump.</p>
+<img alt="../_images/10000000000001400000009219520510E258BA22.png" src="../_images/10000000000001400000009219520510E258BA22.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>You can only assign one single valve to a certain pump.</p>
+</div>
+<p>If you want to restore the original valve configuration later, select
+the context menu item <span class="menuselection">Restore Default Valve</span>.</p>
+<img alt="../_images/100000000000017600000098413180ED58246500.png" src="../_images/100000000000017600000098413180ED58246500.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In section <a class="reference internal" href="nemesys_full_EN.html#connect-external-valves-to-i-o-interface"><span class="std std-ref">Connect external valves to I/O interface</span></a> you will find a detailed
+guide how to integrate external valve modules connected
+to the I/O interface (such as external ball valves) in
+the software.</p>
+</div>
+</section>
+</section>
+<section id="i-o-interface">
+<h2>I/O Interface<a class="headerlink" href="#i-o-interface" title="Link to this heading"></a></h2>
+<section id="i-o-interface-overview">
+<h3>I/O Interface Overview<a class="headerlink" href="#i-o-interface-overview" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="../_images/10000000000003880000025CBC968CAE13909DEE.png"><img alt="Figure 17: I/O interface Nemesys mid pressure pump V3" src="../_images/10000000000003880000025CBC968CAE13909DEE.png" style="width: 400px;" /></a></p>
+<p>Various Nemesys
+pumps offer an I/O interface for connecting external sensors and
+signals, or for outputting trigger signals (example shown below).</p>
+<p>Depending on the device configuration the I/O interface features digital
+inputs and outputs and/or analog inputs. All I/O channels can be found
+in the software window <em>I/O Channels</em>. If this window is not visible,
+you can show it by clicking the menu item <span class="menuselection">Window → Show View → I/O Channels</span>
+in the main menu (see figure below). The channels of a pump are grouped below the
+corresponding pump node.</p>
+<p><img alt="Figure 18: Showing I/O channel window" src="../_images/100002010000013E000000B74AE0265CA479D65B.png" /></p>
+<p>Each I/O channel has a unique
+name (e.g. <em>Nemesys 1 Analog In 1</em>), which is composed of the pump name
+(e.g. <em>Nemesys 1</em>) and the name of the channel (e.g. <em>Analog In 1</em>) like
+in the figure below.</p>
+<p><img alt="Figure 19: Nemesys I/O channels" src="../_images/100002010000021D0000011FD08A581F4A0DB149.png" /></p>
+</section>
+<section id="scaling-of-the-analog-inputs">
+<h3>Scaling of the analog inputs<a class="headerlink" href="#scaling-of-the-analog-inputs" title="Link to this heading"></a></h3>
+<p>The analog inputs of the modules measure the input voltage in the range
+of 0 - 5000 mV. For each channel, you can specify a separate scaling.
+This allows you for example to scale the voltage value of 0 - 5000 mV
+into a pressure value of 0 – 20 bar, if you have connected a pressure
+sensor. For details on configuring the channels or on scaling, read the
+section <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#configure-sensor-scaling"><span class="std std-ref">Configure Sensor Scaling</span></a> in the I/O Plugin documentation.</p>
+<p>In the following example, we will show you, how to connect a pressure
+sensor with the measuring range: 0.5 V - 4.5 V corresponds to 0 - 20
+bar. The sensor is connected to analog input 1. We will now define a
+scaling for this pressure sensor. To do this, click with the right mouse
+button in the channel row if of the I/O channel view and select the menu
+item <span class="menuselection">Configure channel</span>. The following configuration dialog is
+then displayed.</p>
+<p><img alt="Figure 20: Example: input scaling for pressure sensor" src="../_images/100002010000029C00000278588D110A32DA5302.png" /></p>
+<p>In this dialog, we configure the following values:</p>
+<ol class="arabic simple guinums">
+<li><p>as sensor type we choose <em>Pressure</em></p></li>
+<li><p>the basic unit bar corresponds to the unit in the data sheet of our
+sensor</p></li>
+<li><p>in the line <span class="guilabel">Device value</span>, enter the measuring range of the analog
+input: 500 mV to 4500 mV. In the <span class="guilabel">Scaled value</span> line, enter the
+measuring range of the sensor 0 - 20 bar.</p></li>
+<li><p>we select a meaningful name for the channel: <em>Presssure 1</em></p></li>
+<li><p>As the display unit, we select the pressure unit <em>psi</em> in the
+<span class="guilabel">Measuring unit</span> input field.</p></li>
+<li><p>by clicking <span class="guilabel">OK</span> we complete the configuration</p></li>
+</ol>
+<p>The measured pressure of the sensor is now displayed in the I/O Channel
+window in bar (see figure below).</p>
+<img alt="../_images/1000020100000217000000D0C2BA47560EE1E867.png" src="../_images/1000020100000217000000D0C2BA47560EE1E867.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For a detailed description of I/O channels,
+configuration and scaling, see the <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#i-o-plugin"><span class="std std-ref">I/O Plugin</span></a> documentation.</p>
+</div>
+</section>
+<section id="connect-external-valves-to-i-o-interface">
+<h3>Connect external valves to I/O interface<a class="headerlink" href="#connect-external-valves-to-i-o-interface" title="Link to this heading"></a></h3>
+<p>You can connect various external valves to the Nemesys I/O interface connector.
+To configure an external valve choose the context menu item
+<span class="menuselection">Configure external valves</span>.</p>
+<p><img alt="Figure 22: External valve configuration" src="../_images/10000201000001F4000000FD1C3EDAD5B9F8862F.png" /></p>
+<p>From the list of external valves, you can now select a device you want to
+connect to the I/O interface. The list of <span class="guilabel">Available Valves</span> <span class="guinum">❶</span> shows
+all valve devices that you can select. In the <span class="guilabel">Valve Parameters</span>
+<span class="guinum">❷</span> section, you will see detailed information abpout the selected valve type.</p>
+<p><img alt="Figure 23: Selection dialog for external I/O devices" src="../_images/10000201000001AE00000171BFE2001F1F2DF986.png" /></p>
+<p>For some valves, you may need to provide additional parameters <span class="guinum">❸</span>.
+If you are finished, confirm your selection with <span class="guilabel">OK</span>.</p>
+<p>After selecting a valve, a dialog may appear where you need to configure
+whether the valve is to be a primary valve or secondary valve.</p>
+<p><img alt="Figure 24: Primary / Secondary valve selection" src="../_images/1000000000000214000000A6D5C37AA1BE5C3A54.png" /></p>
+<p>The <em>primary valve</em> can be connected directly to the I/O interface. If you want to connect a
+second additional valve, you need a Y-cable or a distribution box. Since
+the second valve is connected to a different digital output, you need to
+choose <span class="guinum">❷</span> <em>Second Valve</em>.</p>
+<p>If you added a valve, the new valve will appear at the end of the valve
+list (see figure below). Now you can switch the valve positions or
+<a class="reference internal" href="nemesys_full_EN.html#assigning-a-valve"><span class="std std-ref">assign it to a pump</span></a>.</p>
+<p><img alt="Figure 25: Valve list with external valve as last list entry" src="../_images/10000000000001AC000000FE4D17491FB27B7A90.png" /></p>
+<p>Later,
+if you no longer need a certain valve, you can delete it in the valve
+list. Click with the right mouse button on the valve list entry to open
+the context menu and select the menu item <span class="menuselection">Delete Valve</span>.</p>
+<p><img alt="Figure 26: Deleting external valve" src="../_images/10000000000001AC00000091DBC619732FF93701.png" /></p>
+<p>The valve is then removed from the
+list and if you have assigned it to a pump, then it will be removed from
+the control panel of the pump.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

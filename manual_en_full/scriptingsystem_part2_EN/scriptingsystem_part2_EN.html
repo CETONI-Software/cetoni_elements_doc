@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Generic Script Functions &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Using JavaScript" href="../javascript_EN/javascript_EN.html" />
+    <link rel="prev" title="4. Script System" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Generic Script Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-functions">5.1. Core Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-functions-overview">5.1.1. Core Functions Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-script">5.1.2. Interrupt Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-sequence">5.1.3. Interrupt Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-message">5.1.4. Show Message</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#show-message-function-configuration">Show Message Function Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#displaying-variables-content-or-process-data">Displaying variables content or process data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rich-text-support">Rich Text Support</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-variable">5.1.5. Create Variable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-of-variables">Types of Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculating-using-variables">Calculating using Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operator-precedence">Operator Precedence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#set-variable">5.1.6. Set Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-declaration-sequence">5.1.7. Variable Declaration Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-input">5.1.8. User Input</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rich-text-support-for-label-text">Rich Text Support for Label Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#script-function-call">5.1.9. Script Function Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execute-javascript-code">5.1.10. Execute JavaScript Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#function-sequences">5.2. Function Sequences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-function-sequences">5.2.1. Introduction to Function Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counting-loop">5.2.2. Counting Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-loop">5.2.3. Conditional Loop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-simple-mode">Configuration - Simple Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-javascript-expression">Configuration - JavaScript Expression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#function-sequence">5.2.4. Function Sequence</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#naming-a-function-sequence">Naming a Function Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-function-parameters-and-return-values">Add function parameters and return values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-a-function-sequence">Loading a Function Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#convert-selection-to-function-sequence">Convert Selection to Function Sequence</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-sequence">5.2.5. Conditional Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-sequence">5.2.6. Parallel Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#break">5.2.7. Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#return">5.2.8. Return</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-handling-functions">5.3. Error Handling Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#try-catch">5.3.1. Try…Catch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#throw-error">5.3.2. Throw Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#time-functions">5.4. Time Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-functions-overview">5.4.1. Time Functions Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay">5.4.2. Delay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sample-configuration">Sample Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-until">5.4.3. Wait Until</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-timer">5.4.4. Start Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-timer">5.4.5. Wait for Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-timer">5.4.6. Read Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#device-functions">5.5. Device Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-device-functions">5.5.1. Introduction to Device Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-device-property">5.5.2. Read Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-device-property">5.5.3. Write Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-device-property">5.5.4. Wait For Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-property-variable">5.5.5. Create Property Variable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logging">5.6. Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#log-message">5.6.1. Log Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-event-log">5.6.2. Clear Event Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-event-log">5.6.3. Export Event Log</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-storage">5.7. Data Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-settings-file">5.7.1. Open Settings File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-setting">5.7.2. Read Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-setting">5.7.3. Write Setting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Generic Script Functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generic-script-functions">
+<h1><span class="section-number">5. </span>Generic Script Functions<a class="headerlink" href="#generic-script-functions" title="Link to this heading"></a></h1>
+<p>The <em>Script System</em> comes with a set of generic, or core, functions that
+control the program flow. These functions are always available
+irrespective of the activated plug-ins. You will find these functions in
+the categories <span class="guilabel">Core Functions</span> , <span class="guilabel">Function Sequences</span>,
+and <span class="guilabel">Time Functions</span> (figure below).</p>
+<figure class="align-default">
+<img alt="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" src="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" />
+</figure>
+<section id="core-functions">
+<h2><span class="section-number">5.1. </span>Core Functions<a class="headerlink" href="#core-functions" title="Link to this heading"></a></h2>
+<section id="core-functions-overview">
+<h3><span class="section-number">5.1.1. </span>Core Functions Overview<a class="headerlink" href="#core-functions-overview" title="Link to this heading"></a></h3>
+<p>The category Core Functions contains functions that control program flow
+and the use of variables.</p>
+<img alt="../_images/core_functions1.png" src="../_images/core_functions1.png" />
+</section>
+<section id="interrupt-script">
+<h3><span class="section-number">5.1.2. </span>Interrupt Script<a class="headerlink" href="#interrupt-script" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_script.svg"><img alt="../_images/interrupt_script.svg" class="align-left" src="../_images/interrupt_script.svg" width="60" /></a>
+<p>With this function you can interrupt the script execution. The function has the
+same effect as pressing the <span class="guilabel">Interrupt</span> button in the toolbar. The user can
+continue the script by pressing the <span class="guilabel">Run</span> button in the toolbar.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If script execution is interrupted, all sequences running in parallel are
+interrupted and no communication with the script is possible.</p>
+</div>
+</section>
+<section id="interrupt-sequence">
+<span id="id1"></span><h3><span class="section-number">5.1.3. </span>Interrupt Sequence<a class="headerlink" href="#interrupt-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_sequence3.svg"><img alt="../_images/interrupt_sequence3.svg" class="align-left" src="../_images/interrupt_sequence3.svg" width="60" /></a>
+<p>With this function you can interrupt the execution of the function sequence in
+which the function is contained. If several sequences are executed in parallel
+using the <a class="reference internal" href="#parallel-sequence"><span class="std std-ref">Parallelen Sequence</span></a>, only the sequence containing the
+function is interrupted.</p>
+<p>If the interrupt sequence function is executed, you will receive information in
+the <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#event-log"><span class="std std-ref">Event Log</span></a> of the application that the sequence was interrupted:</p>
+<img alt="../_images/interrupt_sequence_message.png" src="../_images/interrupt_sequence_message.png" />
+<p>You can double-click on the log entry to display the function and its
+operating panel in the Script Editor. You can then continue the execution by clicking on
+<span class="guilabel">Continue</span> in the control panel of the <em>Interrupt Sequence</em> function.</p>
+<img alt="../_images/interrupt_sequence_continue.png" src="../_images/interrupt_sequence_continue.png" />
+</section>
+<section id="show-message">
+<span id="id2"></span><h3><span class="section-number">5.1.4. </span>Show Message<a class="headerlink" href="#show-message" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000490000034EB000034EB215655F378C8DAF2.svg"><img alt="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" class="align-left" src="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" width="60" /></a>
+<p>The Show Message function allows you to display a message
+to the user and optionally interrupt script execution. It is well suited
+for applications that require an intervention by the user at certain
+times during the execution of a script.</p>
+<p>When you run this script function, the message can be displayed both in
+a message window…</p>
+<p><img alt="Figure 1.1.3: Message window" src="../_images/100002010000013E000000AF6775389C8CA3B9A1.png" /></p>
+<p>… and in the <em>Event Log</em> view of the application:</p>
+<p><img alt="Figure 1.1.4: Event log" src="../_images/10000201000002B30000009CE9126D1E71812C4B.png" /></p>
+<p>In the <em>Event Log</em>, all messages are
+listed in chronological order. The optional Message Box always displays
+the last message.</p>
+<section id="show-message-function-configuration">
+<h4>Show Message Function Configuration<a class="headerlink" href="#show-message-function-configuration" title="Link to this heading"></a></h4>
+<p>When configuring the message function, you can configure the following
+options:</p>
+<img alt="../_images/show_message_config.png" src="../_images/show_message_config.png" />
+<ol class="arabic simple guinums">
+<li><p>Enter your message text into the <span class="guilabel">Message</span> field.</p></li>
+<li><p>Select the type of message you want to display in the
+<span class="guilabel">Message Type</span> group. Depending on the message type, the relevant icon appears
+in the event log and in the message window and the message is
+highlighted with a type-specific color in the event log.</p></li>
+<li><p>In the <em>Output</em> pane you can set whether the message should be
+displayed in a separate message window (<span class="guilabel">Show Message Box</span>) and
+whether the message should appear in the <em>Event Log</em>
+(<span class="guilabel">Write to Event Log</span>).</p></li>
+<li><p>Select whether the message should interrupt script execution. If
+there is a check mark in this field, the complete script execution is
+interrupted until the user continues the program execution. If you
+display a message window with a <span class="guilabel">Show Message Box</span>, you should not
+select this option and use option <span class="guinum">❺</span> instead.</p></li>
+<li><p>Here you can select whether the script execution will be continued
+after clicking <span class="guilabel">OK</span> in the message box window.</p></li>
+<li><p>Rich-Text - Turn on this option to format your text with bold, italics, colors,
+and more.</p></li>
+</ol>
+<p>Depending on the options selected, this function works like this:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Show Message Box</p></td>
+<td><p>Write to Event Log</p></td>
+<td><p>Inter-rupt Script Exe-cution</p></td>
+<td><p>Continue Script if User Clicks OK</p></td>
+<td><p>Result</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>A message is written to the event log and then the next function is
+executed.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td><p>A message is written to the event log and script execution is
+interrupted. The execution can be continued by clicking the
+<span class="guilabel">Run Script</span> button in the script toolbar.</p></td>
+</tr>
+<tr class="row-even"><td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>A message is written to the event log, a message box is displayed
+and then the next function is executed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p>A message box is displayed. When the user clicks OK, the
+next script  function is executed.</p></td>
+</tr>
+<tr class="row-even"><td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>A message  window is displayed and script execution is
+interrupted. Execution can be continued by clicking the
+<span class="guilabel">Run Script</span> button in the script toolbar.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="displaying-variables-content-or-process-data">
+<h4>Displaying variables content or process data<a class="headerlink" href="#displaying-variables-content-or-process-data" title="Link to this heading"></a></h4>
+<p>In the <span class="guilabel">Message</span> field of the function, you can also use variables
+(like <code class="code docutils literal notranslate"><span class="pre">$Volume</span></code>) or <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#device-property-identifiers"><span class="std std-ref">Device property Identifiers</span></a>
+(like <code class="code docutils literal notranslate"><span class="pre">$$neMESYS1.SyringeFillLevel</span></code>).
+These serve as place holders and are replaced at script runtime by the
+contents of the variables or the process data of a certain device. As
+soon as you enter a dollar sign $ in the message input field, a list
+of available variables is displayed, from which you can select a
+variable (see figure below).</p>
+<p><img alt="Figure 1.1.6: Using variables in Show Message function" src="../_images/10000201000001DB000000D68C630A99C4BAD6D1.png" /></p>
+<p>E.g. you can enter the following text in the message input field:</p>
+<p class="centered">
+<strong><em>The contents of variable A is $A.</em></strong></p><p>If the variable <code class="code docutils literal notranslate"><span class="pre">$A</span></code> contains the value 25.3 at runtime, then the
+function will display the following message:</p>
+<p class="centered">
+<strong><em>The contents of variable A is 25.3.</em></strong></p><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can display the contents of variables
+using the Show Message function, e.g. to check the
+results of calculations.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click with the right mouse button in the input
+field and then select the context menu item <strong>Insert
+device property</strong> to insert a process data identifier of
+device process data you would like to print out, when
+Show Message function is executed.</p>
+</div>
+</section>
+<section id="rich-text-support">
+<h4>Rich Text Support<a class="headerlink" href="#rich-text-support" title="Link to this heading"></a></h4>
+<p>If you activate the <span class="guilabel">Enable rich text</span> option, you get extensive
+possibilities to format your message text, to design lists or to insert
+pictures and hyperlinks. If the option is activated, a toolbar similar to that
+in a word processing application will be displayed:</p>
+<img alt="../_images/show_message_rich_text.png" src="../_images/show_message_rich_text.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Rich text needs more file space when script files are saved and may increase
+load times of script files so switch it on only in case you really need it.</p>
+</div>
+</section>
+</section>
+<section id="create-variable">
+<span id="id3"></span><h3><span class="section-number">5.1.5. </span>Create Variable<a class="headerlink" href="#create-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000119100003872000038728AF29595FE1DD321.svg"><img alt="../_images/1000119100003872000038728AF29595FE1DD321.svg" class="align-left" src="../_images/1000119100003872000038728AF29595FE1DD321.svg" width="60" /></a>
+<p>With <em>Create Variable</em> you can define a new variable and
+assign a name, a type hint, and a value to that variable (see figure below):</p>
+<img alt="../_images/create_variable_function.png" src="../_images/create_variable_function.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Name</strong> – set a unique
+name for your variable. For details concerning the naming of
+variables, please refer to section <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#naming-variables"><span class="std std-ref">Naming Variables</span></a>.</p></li>
+<li><p><strong>Type Hint</strong> – choose the kind of variable you want to set.</p></li>
+<li><p><strong>Value</strong> – give the variable a value or, if the variable is of the
+type <em>JavaScript Expression</em>, enter the JavaScript code to calculate
+the variable.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To prevent an incorrect variable name, the
+<span class="guilabel">Name</span> field accepts only names that start with a
+<code class="code docutils literal notranslate"><span class="pre">$</span></code> symbol.</p>
+</div>
+<section id="types-of-variables">
+<h4>Types of Variables<a class="headerlink" href="#types-of-variables" title="Link to this heading"></a></h4>
+<p>The variables in the script system are not typed and can hold a wide
+variety of values. For example, a numeric value can be assigned to a
+variable when it is created and a text can be stored in the same
+variable later. The <span class="guilabel">Type Hint</span> field in the configuration area is
+simply a hint as to which type is to be stored and is used to display a
+corresponding input field depending on the type. All
+types, <em>Boolean</em>, <em>Number</em> or <em>Text</em> can also be entered via a
+JavaScript expression. The following table is an overview of a selection
+of data that can be stored into variables:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 33.3%" />
+<col style="width: 44.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type Hint</p></th>
+<th class="head"><p>Data / Values</p></th>
+<th class="head"><p>Examples</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000034B000035050000350585C9BEED447C4FB81.svg"><img alt="image31" src="../_images/1000034B000035050000350585C9BEED447C4FB81.svg" width="40" /></a></p></td>
+<td><p>Boolean</p></td>
+<td><p>Boolean values</p></td>
+<td><p>true, false</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004EA000035050000350581CFD983D12D425F1.svg"><img alt="image32" src="../_images/100004EA000035050000350581CFD983D12D425F1.svg" width="40" /></a></p></td>
+<td><p>Number</p></td>
+<td><p>Numeric values</p></td>
+<td><p>24, 10, -13.23,
+-128, 0.001</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B740000350500003505221106A05ED7DC851.svg"><img alt="image33" src="../_images/10000B740000350500003505221106A05ED7DC851.svg" width="40" /></a></p></td>
+<td><p>Text</p></td>
+<td><p>Strings, words or
+text</p></td>
+<td><p>Value1, Enter a
+value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Device References
+(e.g. for passing
+devices to
+functions)</p></td>
+<td><p>$$Nemesys_M_1
+or
+$$Nemesys
+_M_1_ForceSensor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array of numbers</p></td>
+<td><p>[3, 7, 8.5, 12,
+23.5]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array of strings</p></td>
+<td><p>[User1, User2,
+User3, User4]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array of device
+references</p></td>
+<td><p>[$$Nemesys_M_1,
+$$Nemesys_M_2]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Calculation
+result</p></td>
+<td><p>25 +
+$TargetPositionX</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Read device
+properties /
+process data</p></td>
+<td><p>$$Nemesy
+s_M_1.DosedVolume</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculating-using-variables">
+<h4>Calculating using Variables<a class="headerlink" href="#calculating-using-variables" title="Link to this heading"></a></h4>
+<p>If you set the variable type to <em>JavaScript Expression</em>, you can define an
+expression in the field <span class="guilabel">Value</span> that is to be calculated during run
+time. This expression may include other variables to use their
+respective values. Script variables can be accessed via the variable
+name, which starts with a dollar $ sign.</p>
+<p><img alt="Figure 1.1.8: Defining calculation variables" src="../_images/10000201000001F4000000F212FF4BFC515C9AB5.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The auto-complete feature will support you
+during entering a new expression by listing all
+previously defined variables.</p>
+</div>
+<p>You can also directly read the properties / process data of a device
+within a JavasScript expression and include it in a calculation. In the
+following example, the variable <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code> <span class="guinum">❶</span> is calculated as a twentieth
+of the device property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.MaxFlow</span></code> <span class="guinum">❷</span>. Device properties
+can be easily added using the context menu entry <em>Insert device property</em> <span class="guinum">❸</span>.</p>
+<img alt="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" src="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click with the right mouse button in the
+input field and then select the context menu item
+<em>Insert device property</em> to directly access device
+process data values in the calculation.</p>
+</div>
+<p>Using the context menu you can also insert device references into the
+JavaScript code. This makes it possible to store device references
+(e.g. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code>) or arrays with device references
+(e.g. <code class="code docutils literal notranslate"><span class="pre">[$$Nemesys_M_1,</span> <span class="pre">$$Nemesys_M_2,</span> <span class="pre">$$Nemesys_M_3]</span></code>)
+in variables. In the following example, a reference of the <code class="code docutils literal notranslate"><span class="pre">$$QmixP1_Pressure1</span></code>
+pressure sensor is stored in the <code class="code docutils literal notranslate"><span class="pre">$PressureSensor</span></code> variable.</p>
+<p><img alt="image46" src="../_images/10000201000001C2000000CAB0BD6169AA4D32FD.png" /></p>
+<p>The identifiers for device references start with two dollar
+signs like <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#device-property-identifiers"><span class="std std-ref">Device Properties</span></a>, but consist
+only of the device name without any additional device property.</p>
+</section>
+<section id="operators">
+<h4>Operators<a class="headerlink" href="#operators" title="Link to this heading"></a></h4>
+<p>The following tables summarize available operators and their syntax:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Arithmetic Operators</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Addition</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">+</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Subtraction</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">-</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Division</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">/</span> <span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>%</p></td>
+<td><p>Division and returning the remainder</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">%</span> <span class="pre">5</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Logical Operators</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>Checks for
+equivalence</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1</span> <span class="pre">==</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>Checks for
+difference</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">!=</span> <span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>Checks for
+Larger Than</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">7</span> <span class="pre">&gt;</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;</p></td>
+<td><p>Checks for
+Smaller Than</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">$a</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>≥</p></td>
+<td><p>Checks for
+Larger or
+Equivalent</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$b</span> <span class="pre">≥</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>≤</p></td>
+<td><p>Checks for
+Smaller or
+Equivalent</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">≤</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&amp;&amp;</p></td>
+<td><p>Links two values
+with the logical
+AND</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">true</span> <span class="pre">&amp;&amp;</span> <span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>||</p></td>
+<td><p>Links two values
+with the logical
+OR</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">||</span> <span class="pre">(b</span> <span class="pre">&lt;</span> <span class="pre">5)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>!</p></td>
+<td><p>Links a value
+with the logical
+NOT</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">!true</span> <span class="pre">==</span> <span class="pre">false</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>String Operators</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Assembles two strings or texts</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">text</span> <span class="pre">+</span> <span class="pre">$a</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operator-precedence">
+<h4>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Link to this heading"></a></h4>
+<p>Operator precedence determines the order in which operators are evaluated.
+Operators with higher precedence are evaluated first.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Precedence</p></th>
+<th class="head"><p>Operators</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>||</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>&amp;&amp;</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>== !=</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>&lt; ≤ &gt; ≥</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>+ -</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>\ / %</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>!</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>()</p></td>
+</tr>
+</tbody>
+</table>
+<p>Parentheses allow you to influence the precedence in which the
+various operators are executed according to your needs. Refer to the
+<a class="reference external" href="https://docs.w3cub.com/javascript/operators/operator_precedence">JavaScript specification</a> for more details about operator precedence.</p>
+</section>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h4>
+<p>The following examples show how to use variables for calculations:</p>
+<section id="example-1">
+<h5>Example 1<a class="headerlink" href="#example-1" title="Link to this heading"></a></h5>
+<p>Adding two variables <em>a</em> and <em>b</em> and storing the result as a third
+variable <em>c</em>:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$c</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">+</span> <span class="pre">$b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-2">
+<h5>Example 2<a class="headerlink" href="#example-2" title="Link to this heading"></a></h5>
+<p>Multiplication of the variable <em>Speed</em> with 5 and storing the result as
+the same variable:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Speed</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$Speed</span> <span class="pre">*</span> <span class="pre">5</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-3">
+<h5>Example 3<a class="headerlink" href="#example-3" title="Link to this heading"></a></h5>
+<p>Connecting the two Boolean variables <em>SwitchedOn</em> and <em>CheckOk</em> with the
+logical AND and save the result as the variable <em>TurnOn</em>:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$TurnOn</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$SwitchedOn</span> <span class="pre">&amp;&amp;</span> <span class="pre">$CheckOk</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-4">
+<h5>Example 4<a class="headerlink" href="#example-4" title="Link to this heading"></a></h5>
+<p>You want to assign the current flow rate of the pump <em>Nemesys_M_1</em> to
+the variable <em>$Flow</em>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Flow</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.ActualFlow</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-5">
+<h5>Example 5<a class="headerlink" href="#example-5" title="Link to this heading"></a></h5>
+<p>You want to create an array with 4 flow rates and assign it to the
+<em>$TargetFlows</em> variable.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$TargetFlows</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">[0.12,</span> <span class="pre">0.05,</span> <span class="pre">0.2,</span> <span class="pre">0.21]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-6">
+<h5>Example 6<a class="headerlink" href="#example-6" title="Link to this heading"></a></h5>
+<p>The <em>$TargetFlows</em> variable contains an array of 4 numeric values. You
+want to assign the third value in the array to the
+<em>$NextFlow</em> variable. The index for the array access is numbered
+starting from 0. I.e. to access the third element the index is 2.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$NextFlow</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$TargetFlows[2]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-7">
+<h5>Example 7<a class="headerlink" href="#example-7" title="Link to this heading"></a></h5>
+<p>You want to store an array with the two current values of the pressure
+sensors <em>QmixP_1_Pressure1</em> and <em>QmixP_1_Pressure2</em> in the variable
+<em>$Pressures</em>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Pressures</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">[$$QmixP_1_Pressure1.ActualValue,</span> <span class="pre">$$QmixP_1_Pressure2.ActualValue]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-8">
+<h5>Example 8<a class="headerlink" href="#example-8" title="Link to this heading"></a></h5>
+<p>You want to store a device reference of the <em>Nemesys_M_1</em> pump in the
+variable <em>$Process Pump</em> to be able to pass it to a function later.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$ProcessPump</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="set-variable">
+<span id="id4"></span><h3><span class="section-number">5.1.6. </span>Set Variable<a class="headerlink" href="#set-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000132400003872000038722A8DDCED1A890F1C.svg"><img alt="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" class="align-left" src="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" width="60" /></a>
+<p>With <em>Set Variable</em> you can assign a new value to an already
+existing variable. The configuration of the variable is equivalent to
+the function <a class="reference internal" href="#id3">Create Variable</a>.</p>
+<figure class="align-default">
+<img alt="Figure : Entering a variable name using the auto-complete" src="../_images/10000201000001AB00000115B0297DFCE8D1556F.png" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When entering a name, the auto-complete
+feature will provide you with a selection of all
+previously defined variable names.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>To be able to set the value of a
+variable using the <strong>Set Variable</strong> function, the
+variable has to be defined beforehand, e.g., by using
+the function <a class="reference internal" href="#id3">Create Variable</a>.</p>
+</div>
+</section>
+<section id="variable-declaration-sequence">
+<h3><span class="section-number">5.1.7. </span>Variable Declaration Sequence<a class="headerlink" href="#variable-declaration-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg"><img alt="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" class="align-left" src="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" width="60" /></a>
+<p>With the variable Declaration Sequence you can combine
+variables that you declare with <a class="reference internal" href="#id3">Create Variable</a> or <a class="reference internal" href="#create-property-variable">Create Property
+Variable</a> functions. This helps you to improve the clarity of your
+script. Instead of many individual variables, only the variable
+declaration sequence is visible and only when this sequence is expanded,
+the user sees the declared variables.</p>
+<p>All variables are visible at the level in which the declaration sequence
+is located. This means that the variables within the sequence are
+declared as if they were at the level of the declaration sequence.</p>
+<p><img alt="Figure : Example sequence with variables" src="../_images/100002010000019E000000C0724835B0FD04E921.png" /></p>
+<p>With the sequence you can
+also group variables that logically belong together, making it easier
+for the user to find specific variables.</p>
+</section>
+<section id="user-input">
+<h3><span class="section-number">5.1.8. </span>User Input<a class="headerlink" href="#user-input" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001DE9000038720000387289754B44B2610975.svg"><img alt="../_images/10001DE9000038720000387289754B44B2610975.svg" class="align-left" src="../_images/10001DE9000038720000387289754B44B2610975.svg" width="60" /></a>
+<p>This function allows the reading of a single input value
+(number or text) into an existing variable. In the configuration area of
+the <em>User Input</em> function (see figure below), you can configure the
+following parameters:</p>
+<img alt="../_images/user_input_config.png" src="../_images/user_input_config.png" />
+<ol class="arabic guinums">
+<li><p><strong>Label Text</strong> - Here you
+specify a text that will be displayed to the user during the
+execution of the function above the input field as a label and
+explanatory text.</p></li>
+<li><p><strong>Variable</strong> - In this field you specify the variable to store the
+value entered by the user. In addition, the value of the variable is also
+used as the initial value when the input dialogue is displayed. This means
+if you initialise the variable with the value 5 beforehand, for example,
+the value 5 is displayed as the default value when the input dialogue is
+shown.</p></li>
+<li><p><strong>Type Hint</strong> - You can specify the input type, number or text, here.
+Depending on the selected input type the user input dialog accepts
+only certain values.</p></li>
+<li><p><strong>Enable Cancellation</strong> - If this checkbox is active, the displayed
+dialogue contains a <span class="guilabel">Cancel</span> button that allows you to cancel the
+input dialog.</p></li>
+<li><p><strong>Rich Text</strong> - Turn on this option to format your text with bold, italics,
+colors, and more.</p></li>
+<li><p><strong>Test Input Dialog</strong> - Clicking this button allows you to test the
+input dialog to check how the user will see the input dialog later
+during execution of the script function (see figure below).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Input Dialog</p></td>
+<td><p>Input Dialog with Cancel Button</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="input_dialog" src="../_images/input_dialog.png" /></p></td>
+<td><p><img alt="input_dialog_cancel" src="../_images/input_dialog_cancel.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>If the input is confirmed with <span class="guilabel">OK</span> during script execution, the
+variable contains the value entered by the user. If the dialogue is cancelled
+with <span class="guilabel">Cancel</span>, the variable contains an undefined value.
+In JavaScript, e.g. in a <a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a>, you can then test whether
+the value is undefined as follows:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$InputVariable</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span>
+</pre></div>
+</div>
+<p>The following example script tests whether the user has cancelled the input
+dialogue. In this case, a corresponding message is written in the event log:</p>
+<img alt="../_images/input_dialog_canceled.png" src="../_images/input_dialog_canceled.png" />
+<section id="rich-text-support-for-label-text">
+<h4>Rich Text Support for Label Text<a class="headerlink" href="#rich-text-support-for-label-text" title="Link to this heading"></a></h4>
+<p>If you activate the <span class="guilabel">Rich Text</span> option, you get extensive
+possibilities to format your label text, to design lists or to insert
+pictures and hyperlinks. If the option is activated, a toolbar similar to that
+in a word processing application will be displayed:</p>
+<img alt="../_images/user_input_rich_text.png" src="../_images/user_input_rich_text.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Rich text needs more file space when script files are saved and may increase
+load times of script files so switch it on only in case you really need it.</p>
+</div>
+</section>
+</section>
+<section id="script-function-call">
+<h3><span class="section-number">5.1.9. </span>Script Function Call<a class="headerlink" href="#script-function-call" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C101.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" class="align-left" src="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" width="60" /></a>
+<p>Script Function Calls allow you to integrate your own scripts
+as functions. I.e. just as you create functions as reusable modules in
+other programming languages, you can also call your own functions in the
+script system in the form of external scripts.</p>
+<img alt="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" src="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" />
+<p>External script functions can have 0 – 10 input parameters <span class="guinum">❶</span> and 0 – 10
+return values <span class="guinum">❷</span>. This allows you to pass values to the script (e.g.
+numeric values or variables) and read return values from the script and
+store them in script variables. <span class="guilabel">Script File</span> <span class="guinum">❸</span> shows you the path to
+the external script file that is executed when the script is invoked.</p>
+<p>In the section <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#programming-your-own-script-functions"><span class="std std-ref">Programming your own script functions</span></a> you
+will find detailed instructions on how to create your own script
+functions.</p>
+</section>
+<section id="execute-javascript-code">
+<h3><span class="section-number">5.1.10. </span>Execute JavaScript Code<a class="headerlink" href="#execute-javascript-code" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/javascript_logo1.svg"><img alt="../_images/javascript_logo1.svg" class="align-left" src="../_images/javascript_logo1.svg" width="60px" /></a>
+<p>This function allows you to execute JavaScript code in the script
+system of the application. When you insert the function into your
+script, you will see the initial JavaScript code in the configuration
+area.</p>
+<img alt="../_images/javascript_script_function_config.png" src="../_images/javascript_script_function_config.png" />
+<p>When the script is executed, it is loaded by the JavaScript engine and then
+the <code class="code docutils literal notranslate"><span class="pre">main()</span></code> function is called. I.e. this function is the main
+function of the script and the logic should be implemented there.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Read the section <a class="reference internal" href="../javascript_EN/javascript_EN.html#using-javascript"><span class="std std-ref">Using JavaScript</span></a> for a detailed
+introduction into the use of JavaScript for Script programming and how to use
+this function.</p>
+</div>
+</section>
+</section>
+<section id="function-sequences">
+<h2><span class="section-number">5.2. </span>Function Sequences<a class="headerlink" href="#function-sequences" title="Link to this heading"></a></h2>
+<section id="introduction-to-function-sequences">
+<span id="function-sequence-overview"></span><h3><span class="section-number">5.2.1. </span>Introduction to Function Sequences<a class="headerlink" href="#introduction-to-function-sequences" title="Link to this heading"></a></h3>
+<p><img alt="Figure : List of function sequences" src="../_images/1000020100000100000000C3B3C3827EFC5DBC99.png" /></p>
+<p>The Function Sequences category
+contains various types of function sequences. Function sequences are
+script functions that may contain a number of different functions. When
+Function Sequence is called, all script functions contained within
+this sequence are executed.</p>
+</section>
+<section id="counting-loop">
+<span id="id5"></span><h3><span class="section-number">5.2.2. </span>Counting Loop<a class="headerlink" href="#counting-loop" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg"><img alt="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" class="align-left" src="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" width="60" /></a>
+<p>The Counting Loop function allows for multiple sequential
+executions of the same function(s) within that loop. The number of times
+the loop is to be run is defined in the configuration area
+<span class="guilabel">Loop Cycles</span>.</p>
+<p>In addition, you may set a name for the count variable
+<span class="guilabel">Counter Variable</span> of that loop. Within that loop, functions that
+support the use of variables may then use this variable to execute specific
+tasks or to perform additional calculations.</p>
+<p>The number of loops may be defined explicitly, by setting a number, or
+implicitly, via a variable that returns a number (figure below, <span class="guinum">❶</span>).</p>
+<p><img alt="image62" src="../_images/10000201000001FA0000007BEEA293AE47742C49.png" /></p>
+<p>Additionally, you can assign a custom name to the Counter Variable of
+the present loop function (figure above, <span class="guinum">❷</span>). Within this loop, other
+functions may access the current loop count via this variable and use it
+for further calculations. This may be used, e.g., to control
+incremental moves of positioning systems.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The counting variable of a counting loop
+always starts with the value 0 (zero). This is, a loop
+count set to 10 contains the values 0 to 9 for the
+successive loops.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>You should always insert a <a class="reference internal" href="#delay">Delay</a> in a loop to
+prevent the loop from blocking the application
+interface by consuming 100% processor power. A small
+delay of 10 ms – 100 ms is sufficient.</p>
+</div>
+<p>You can use the count variable <span class="guilabel">Counter Variable</span> to end the loop
+prematurely (abort). If you set the value of the count variable to a
+value &gt;= the number of <span class="guilabel">Loop Cycles</span> within the loop using the
+<a class="reference internal" href="#id4">Set Variable</a> function, the loop is terminated at the next loop run.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can end the counting loop prematurely by
+changing the counting variable.</p>
+</div>
+</section>
+<section id="conditional-loop">
+<h3><span class="section-number">5.2.3. </span>Conditional Loop<a class="headerlink" href="#conditional-loop" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg"><img alt="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" class="align-left" src="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" width="60" /></a>
+<p>This conditional loop function is used for multiple execution
+of functions within the loop as long as the loop condition set at its
+beginning is met. The termination condition in the loop header is
+checked before each iteration of the loop. The loop execution is stopped
+or skipped if the termination condition is false.</p>
+<p>Spelled out, the <em>Conditional Loop</em> function reads as follows:</p>
+<p class="centered">
+<strong>“Repeat the loop and execute the function(s) contained within that loop
+as long as the loop condition holds true.””</strong></p><p>There are two ways to set the parameters for loop checking: a simple mode
+and as a JavaScript expression.</p>
+<section id="configuration-simple-mode">
+<h4>Configuration - Simple Mode<a class="headerlink" href="#configuration-simple-mode" title="Link to this heading"></a></h4>
+<p>In the configuration panel, you may choose the simple mode to
+comfortably set the loop conditions directly via the Graphic User
+Interface – simply uncheck <em>JavaScript Expression</em> <span class="guinum">❶</span>. The following
+parameters may be set:</p>
+<figure class="align-default">
+<img alt="../_images/10000201000001FF000001568EF29AE39EE9077E.png" src="../_images/10000201000001FF000001568EF29AE39EE9077E.png" />
+</figure>
+<ol class="arabic simple guinums">
+<li><p><strong>JavaScript Expression</strong> – this button is to toggle between the
+simple mode and <a class="reference external" href="Configuration-JavaScriptExpression">JavaScript Expression mode</a>
+(see section below).</p></li>
+<li><p><strong>Name</strong> – Enter the name of the variable whose value is to be compared or checked in
+the condition. The variable is on the left side of the comparison condition
+and must start with a dollar sign <code class="code docutils literal notranslate"><span class="pre">$</span></code> (such as <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>).</p></li>
+<li><p><strong>Type</strong> – allows you to give a type hint to the variable and thus toggle
+the controls in the Condition section.</p></li>
+<li><p><strong>Comparison operator</strong> – with the combo box you can conveniently select
+the comparison operator.</p></li>
+<li><p><strong>Comparison condition</strong> – the value or a variable that the variable
+from <span class="guinum">❷</span> is to be compared with.</p></li>
+</ol>
+<section id="sample-configuration-simple-mode">
+<h5>Sample Configuration: Simple Mode<a class="headerlink" href="#sample-configuration-simple-mode" title="Link to this heading"></a></h5>
+<p>The loop condition to be checked against is whether a the variable
+<code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <strong>25000,31</strong>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable Name <span class="guinum">❷</span></p></th>
+<th class="head"><p>Type <span class="guinum">❸</span></p></th>
+<th class="head"><p>Operator <span class="guinum">❹</span></p></th>
+<th class="head"><p>Condition <span class="guinum">❺</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>$Position</em></p></td>
+<td><p><em>Number</em></p></td>
+<td><p><em>≤</em></p></td>
+<td><p><em>25.000,31</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>The script editor shows the complete mathematical expression:</p>
+<p><img alt="Figure 1.1.15: Example for a Conditional Loop" src="../_images/100002010000016F000000B71ED1E13FA12FB8D2.png" /></p>
+<p>The resulting
+expression effects that the loop will be rerun as long as the value of
+the variable <code class="code docutils literal notranslate"><span class="pre">$Position</span></code> is smaller than or the same as <strong>25000,31</strong>.</p>
+</section>
+</section>
+<section id="configuration-javascript-expression">
+<h4>Configuration - JavaScript Expression<a class="headerlink" href="#configuration-javascript-expression" title="Link to this heading"></a></h4>
+<p>Whereas the simple mode provides the user with a graphical interface,
+the JavaScript mode allows to directly insert an JavaScript expression
+with variable names and mathematical and logical expression.</p>
+<p><img alt="Figure : Configuration panel for conditional loops – advanced mode" src="../_images/1000020100000204000000F1DD2E88C4898B65B8.png" /></p>
+<p>In advanced mode, a JavaScript editor is displayed with syntax highlighting
+and line numbers. Here you can set the loop condition using JavaScript
+expressions. As shown in the example above, you can insert rather
+complex mathematical expressions or multiple variables to set
+conditions. JavaScript functions like <code class="code docutils literal notranslate"><span class="pre">Math.round()</span></code> can also be used.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>You should always insert a <a class="reference internal" href="#delay">Delay</a> function in a loop to
+prevent the loop from blocking the application
+interface by consuming 100% processor power. A small
+delay of 10ms – 100ms is sufficient.</p>
+</div>
+</section>
+</section>
+<section id="function-sequence">
+<h3><span class="section-number">5.2.4. </span>Function Sequence<a class="headerlink" href="#function-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000944000038720000387225245FA0499799FC1.svg"><img alt="../_images/10000944000038720000387225245FA0499799FC1.svg" class="align-left" src="../_images/10000944000038720000387225245FA0499799FC1.svg" width="60" /></a>
+<p>The <em>Function Sequence</em> is used to group functions. This makes navigation in the
+function tree easier, since the function sequence can be collapsed if necessary.
+Furthermore, the sequence also eases the copying of function sequences that
+consist of several functions. If, for example, you want to copy several
+functions that are executed one after the other, then simply move them into
+an empty function sequence. Then you can conveniently move or copy the entire
+sequence and thus reuse it in different places in the program.</p>
+<p><img alt="Figure 1.1.17: Function sequence configuration" src="../_images/10000201000001C800000183A3E022ED20FA32CC.png" /></p>
+<section id="naming-a-function-sequence">
+<h4>Naming a Function Sequence<a class="headerlink" href="#naming-a-function-sequence" title="Link to this heading"></a></h4>
+<p>A function sequence may be given a name; that name will then be shown
+in the function tree. This simplifies navigation in particular with
+larger numbers of function sequences. To do this, simply enter the name
+by double-clicking the <span class="guilabel">Caption Field</span> (Figure above <span class="guinum">❶</span>).</p>
+</section>
+<section id="add-function-parameters-and-return-values">
+<h4>Add function parameters and return values<a class="headerlink" href="#add-function-parameters-and-return-values" title="Link to this heading"></a></h4>
+<p>You can access variables defined outside the function sequence from
+within the function sequence. Alternatively, you can also define
+function parameters and return values. <em>Function parameters</em> are values
+that are passed to the function when it is called. <em>Return values</em> are
+values (e.g. results of calculations) that are returned by the function
+to the calling script. Up to 10 function parameters and up to 10 return
+values can be defined for each function sequence. The functions in the
+sequence then only access the function parameters and not the external
+variables. This improves encapsulation and makes the function more
+independent of external variables and thus easier to maintain.</p>
+<p>You can add function parameters <span class="guinum">❷</span> or return values <span class="guinum">❸</span> by clicking the
+<span class="guilabel">Add</span> buttons. Assign meaningful parameter names by clicking the
+parameter names above the input fields (figure below):</p>
+<p><img alt="image77" src="../_images/10000201000001570000008695AB6CE95EA00D6D.png" /></p>
+</section>
+<section id="loading-a-function-sequence">
+<h4>Loading a Function Sequence<a class="headerlink" href="#loading-a-function-sequence" title="Link to this heading"></a></h4>
+<p>The <em>Function Sequence</em> also allows the loading of pre-stored scripts:
+You may load a script, which you have created and saved previously, into
+your current function sequence. To do this, just click on the
+<span class="guilabel">Load from script file</span> button (figure above, <span class="guinum">❹</span>) and select the
+desired file. The scripts are loaded into the current script. I.e. you can
+make changes to the loaded function sequence without affecting the external
+script.</p>
+</section>
+<section id="convert-selection-to-function-sequence">
+<h4>Convert Selection to Function Sequence<a class="headerlink" href="#convert-selection-to-function-sequence" title="Link to this heading"></a></h4>
+<p>To improve the clarity and readability of your script, you can quickly
+and easily group sequences of functions into function sequences. To do
+this, simply select a contiguous set of functions, and then click
+<em>Convert Selection To Function Sequence</em> in the context menu.</p>
+<p><img alt="Figure : Grouping Functions" src="../_images/1000020100000162000000A95990FD078AE74F5D.png" /></p>
+<p>The selected functions are now replaced by a function sequence containing
+the selected functions.</p>
+<p><img alt="image78" src="../_images/10000201000002AD000000B49490E03AE7CD8CE6.png" /></p>
+</section>
+</section>
+<section id="conditional-sequence">
+<span id="id6"></span><h3><span class="section-number">5.2.5. </span>Conditional Sequence<a class="headerlink" href="#conditional-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100010E0000038720000387245E0E2D44AF732BF.svg"><img alt="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" class="align-left" src="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" width="60" /></a>
+<p>The conditional sequence contains a set of script functions that will be
+executed only if the check condition in the conditional sequence header is true.
+If the check condition is not true at the time of script execution, then the
+conditional sequence is simply skipped. In text form, the function execution
+can be described as follows:</p>
+<p class="centered">
+<strong>“If the check condition is true, then execute the functions within the sequence.”</strong></p><p>The configuration of the conditional sequence is identical to the configuration
+of the <a class="reference internal" href="#conditional-loop">Conditional Loop</a>.</p>
+</section>
+<section id="parallel-sequence">
+<span id="id7"></span><h3><span class="section-number">5.2.6. </span>Parallel Sequence<a class="headerlink" href="#parallel-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000F0500003872000038726C61F7339CE41618.svg"><img alt="../_images/10000F0500003872000038726C61F7339CE41618.svg" class="align-left" src="../_images/10000F0500003872000038726C61F7339CE41618.svg" width="60" /></a>
+<p>This script function enables the parallel execution of functions or function
+sequences. The configuration of this script function is identical to the
+configuration of a normal function sequence. In contrast, however, to a standard
+function sequence, the individual functions are not executed
+sequentially but in parallel. In other words, when executing this
+function, all direct child functions start simultaneously.</p>
+<p>If you want to execute complex workflows in parallel, you should combine
+them in a function sequence. The following figure shows you a parallel
+sequence in which the three individual processes (function sequences)
+run in parallel:</p>
+<p><img alt="Figure 1.1.19: Example of a parallel sequence" src="../_images/1000020100000183000000C4A35D59BF937B06FE.png" /></p>
+<p>The parallel sequence
+finishes only after all parallel child functions have been completed.
+Thus, the function is suitable for execution of parallel processes in
+which it is important to wait for the end of the process that takes the
+longest before proceeding to the next step.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Parallel sequences increase complexity and
+are difficult to debug, which means that it can be
+difficult to find errors in parallel sequences.</p>
+</div>
+</section>
+<section id="break">
+<h3><span class="section-number">5.2.7. </span>Break<a class="headerlink" href="#break" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000CF40000387200003872240B44CEBEA58C98.svg"><img alt="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" class="align-left" src="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" width="60" /></a>
+<p>This function causes the enclosing function sequence to
+terminate. This works with all function sequences from the <a class="reference internal" href="#function-sequences">Function
+Sequences</a> category and with the script itself.</p>
+<p>With the <span class="guilabel">Termination Depth</span> parameter you can control up to which
+level the enclosing function sequences are terminated. With the default
+value 0, only the sequence containing the break function is terminated.
+If the value is 1, the sequence that is one level higher is also
+terminated, and so on.</p>
+<p>If, for example, you want to terminate a <a class="reference internal" href="#function-sequence">Function Sequence</a> <span class="guinum">❶</span> when a
+certain condition occurs, insert a <a class="reference internal" href="#id6">Conditional Sequence</a> <span class="guinum">❷</span> into the
+function sequence to check the termination condition and a break
+function <span class="guinum">❸</span> with the termination depth 1 into this conditional sequence.
+The break function <span class="guinum">❸</span> will then terminate the conditional sequence <span class="guinum">❷</span>
+and the function sequence <span class="guinum">❶</span> above it if the condition is true.</p>
+<img alt="../_images/1000020100000175000000A03698480BFF00A770.png" src="../_images/1000020100000175000000A03698480BFF00A770.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If you move or copy the break function, e.g. one level up or to a
+lower level, you should always check whether the <span class="guilabel">Termination Depth</span>
+needs to be adjusted.</p>
+</div>
+</section>
+<section id="return">
+<h3><span class="section-number">5.2.8. </span>Return<a class="headerlink" href="#return" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/return.svg"><img alt="../_images/return.svg" class="align-left" src="../_images/return.svg" width="60" /></a>
+<p>You can use the return function to return immediately from a script or
+a <a class="reference internal" href="#script-function-call"><span class="std std-ref">Script Function Call</span></a> to the caller. This function has a similar functionality
+as the <strong>return</strong> statement in languages such as JavaScript or C++.</p>
+</section>
+</section>
+<section id="error-handling-functions">
+<span id="id8"></span><h2><span class="section-number">5.3. </span>Error Handling Functions<a class="headerlink" href="#error-handling-functions" title="Link to this heading"></a></h2>
+<img alt="../_images/error_handling_category.png" src="../_images/error_handling_category.png" />
+<p>The <em>Error Handling</em> category contains functions that you can use to
+implement proper error handling in your scripts.</p>
+<section id="try-catch">
+<span id="id9"></span><h3><span class="section-number">5.3.1. </span>Try…Catch<a class="headerlink" href="#try-catch" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/try_except1.svg"><img alt="../_images/try_except1.svg" class="align-left" src="../_images/try_except1.svg" width="60" /></a>
+<p>The Try…Catch block is used to catch and handle errors that occur during
+script execution. This enables similar error handling like known from
+other programming languages such as <a class="reference external" href="https://www.w3schools.com/js/js_errors.asp">JavaScript</a>
+or <a class="reference external" href="https://www.w3schools.com/python/python_try_except.asp">Python</a>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The Try…Catch block is comprised of the following two code blocks:</p>
+<ul class="inlineimg simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="../_images/try_block.svg"><img alt="try_block" src="../_images/try_block.svg" width="40" /></a> Try</dt><dd><p>With the Try statement, you define a code block that is tested for errors
+during its execution. Here you implement your normal function logic as in
+any other function sequence.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="../_images/except_block2.svg"><img alt="catch_block" src="../_images/except_block2.svg" width="40" /></a> Catch</dt><dd><p>In the Catch Block, you define a code block that is only executed if an
+error occurs in the Try Block.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It works like this:</p>
+<ol class="arabic simple">
+<li><p>First, the code in the <strong>Try</strong> block is executed.</p></li>
+<li><p>If there were no errors, then <strong>Catch</strong> is ignored: the execution reaches
+the end of <strong>Try</strong> and goes on, skipping <strong>Catch</strong>.</p></li>
+<li><p>If an error occurs, then the <strong>Try</strong> execution is stopped, and control flows to
+the beginning of <strong>Catch</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/try_catch_flow.png"><img alt="../_images/try_catch_flow.png" src="../_images/try_catch_flow.png" style="width: 500px;" /></a>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>This means that an error in the <strong>Try</strong> block does not interrupt the script,
+parallel sequences continue to run and you have the chance to deal
+with the error.</p>
+</div>
+<p>If the <strong>Catch</strong> Block is executed, then the two script variables <code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code>
+and <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> are available in this block. The <code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code> variable
+contains the error message generated by the script function that caused
+the error. The optional <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> variable can contain a unique error
+id (e.g. <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code>) that can be used in <strong>Catch</strong> to handle
+different errors differently.</p>
+<p>In the configuration section of the Try…Catch Block, you can
+activate (default) or deactivate the <span class="guilabel">Print Error Message To Event Log</span> setting.</p>
+<img alt="../_images/try_catch_print_error.png" src="../_images/try_catch_print_error.png" />
+<p>If the option is deactivated, the error message is not automatically
+output in the event log. I.e., if you handle the error in the
+<strong>Catch</strong> block and do not want the users of your script to see any error,
+you can disable the error output here. You can then still output the error
+in the <strong>Catch</strong> block using a <a class="reference internal" href="#show-message"><span class="std std-ref">Show Message</span></a> function
+or a <a class="reference internal" href="#log-message"><span class="std std-ref">Log Message</span></a> function and access to the
+<code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code> variable to create your own custom error message. By default,
+error output is enabled and a warning message is generated in the event log.</p>
+<p>The following script shows an example of error handling:</p>
+<img alt="../_images/try_catch_example.png" src="../_images/try_catch_example.png" />
+<p>The <strong>Try</strong> Block contains a <a class="reference internal" href="#wait-for-device-property-func"><span class="std std-ref">Wait For Device Property</span></a>
+function <span class="guinum">❶</span>. A timeout has been set for this function in the configuration
+section of the function. This causes the function to trigger an error with
+the error ID <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> in the case of a timeout.</p>
+<p>This error causes the <strong>Try</strong> block to be stopped immediately and the
+<strong>Catch</strong> block to be executed. There is a <a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a>
+<span class="guinum">❷</span> in the <strong>Catch</strong> block. In its test condition, it is tested whether
+it is an <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> error. The following JavaScript code is used for
+this purpose:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">ErrorIdString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$ErrorId</span><span class="p">;</span><span class="w"> </span><span class="nx">ErrorIdString</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;ERR_TIMEOUT&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The content of the <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> is stored in the string object <code class="code docutils literal notranslate"><span class="pre">ErrorIdString</span></code>.
+Afterwards, the string function <code class="code docutils literal notranslate"><span class="pre">indexOf</span></code> can be used to test whether the
+error ID begins with <code class="code docutils literal notranslate"><span class="pre">&quot;ERR_TIMEOUT&quot;</span></code>. In this case, one could also test
+with the isequal operator. However, testing for the beginning of the
+string also enables the detection of a group of errors. If, for example,
+there were the error codes <code class="code docutils literal notranslate"><span class="pre">ERR_PUMP_DOSING</span></code> and <code class="code docutils literal notranslate"><span class="pre">ERR_PUMP_ENABLE</span></code>, then the
+test</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">ErrorIdString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$ErrorId</span><span class="p">;</span><span class="w"> </span><span class="nx">ErrorIdString</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;ERR_PUMP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>would recognize both errors and thus all pump errors.</p>
+<p>If the timeout error was detected, a custom error message is then
+output in the next step <span class="guinum">❸</span> using the <a class="reference internal" href="#log-message"><span class="std std-ref">Log Message</span></a> function.</p>
+<img alt="../_images/try_catch_example_message.png" src="../_images/try_catch_example_message.png" />
+<p>The user then sees the following error output in the application’s event log:</p>
+<img alt="../_images/try_catch_example_log.png" src="../_images/try_catch_example_log.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you double-click on a log entry in the Event Log, the function that
+caused the log entry is opened in the <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#script-editor"><span class="std std-ref">Script Editor</span></a> and highlighted
+in color. This way, in the case of an error, you can quickly jump to
+the function that caused the error. Alternatively, you can also use the
+menu item <span class="menuselection">Got to Script Function</span> in the context menu of the
+Event Log (right mouse button).</p>
+</div>
+</section>
+<section id="throw-error">
+<h3><span class="section-number">5.3.2. </span>Throw Error<a class="headerlink" href="#throw-error" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/throw_error.svg"><img alt="../_images/throw_error.svg" class="align-left" src="../_images/throw_error.svg" width="60" /></a>
+<p>The <em>Throw Error</em> function allows you to throw an error that interrupts
+script execution or can be caught in a <a class="reference internal" href="#try-catch"><span class="std std-ref">Try…Catch</span></a> block.
+If you want to detect errors in your script or create your own error from a
+<strong>Catch</strong> block, you can use this function.</p>
+<p>In the configuration area of the function you can set the <span class="guilabel">Error Message</span>
+<span class="guinum">❶</span> and the <span class="guilabel">Error Identifier</span> <span class="guinum">❷</span>:</p>
+<img alt="../_images/throw_error_config.png" src="../_images/throw_error_config.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the <span class="guilabel">Error Message</span> field, you can use script variables and
+device properties (see picture above).</p>
+</div>
+</section>
+</section>
+<section id="time-functions">
+<h2><span class="section-number">5.4. </span>Time Functions<a class="headerlink" href="#time-functions" title="Link to this heading"></a></h2>
+<section id="time-functions-overview">
+<h3><span class="section-number">5.4.1. </span>Time Functions Overview<a class="headerlink" href="#time-functions-overview" title="Link to this heading"></a></h3>
+<p><img alt="Figure : List of timing functions" src="../_images/1000020100000145000000ACCA98E3B49CC6CFEB.png" /></p>
+<p>This category contains functions to
+enable a time-controlled program flow. The execution of scripts may be
+suspended for a certain amount of time or can be interrupted to wait for
+certain timer events.</p>
+</section>
+<section id="delay">
+<h3><span class="section-number">5.4.2. </span>Delay<a class="headerlink" href="#delay" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100007700000350500003505BC110D46A028D1D8.svg"><img alt="../_images/100007700000350500003505BC110D46A028D1D8.svg" class="align-left" src="../_images/100007700000350500003505BC110D46A028D1D8.svg" width="60" /></a>
+<p>The <em>Delay</em> function interrupts program execution for a
+configurable length of time. You can set the delay time (hours, minutes,
+seconds, or milliseconds) in the configuration area (see figure below).</p>
+<p><img alt="Figure : Configuration of Delay function" src="../_images/100000000000021E00000077C7524A66137294EE.png" /></p>
+<p>All input fields support the use of variables. You can freely and flexibly
+assign any values to the input fields and you can freely mix variables and
+values with each other.</p>
+<section id="sample-configuration">
+<h4>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Link to this heading"></a></h4>
+<p>If you e.g. would like to set a delay of 10 minutes and 15 seconds, you
+can do so by very different assignments of the input fields:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hours</p></th>
+<th class="head"><p>Minutes</p></th>
+<th class="head"><p>Seconds</p></th>
+<th class="head"><p>Milliseconds</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>15</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>615</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>615000</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>15000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="wait-until">
+<h3><span class="section-number">5.4.3. </span>Wait Until<a class="headerlink" href="#wait-until" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000087800003505000035058C9536180430C275.svg"><img alt="../_images/1000087800003505000035058C9536180430C275.svg" class="align-left" src="../_images/1000087800003505000035058C9536180430C275.svg" width="60" /></a>
+<p>You can delay program execution until a precisely defined
+date and time with the <em>Wait until</em> function. Program execution is not
+resumed until the configured date and time has been reached.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Please note that the Wait until function
+can only be correctly executed once. If the script is
+executed again, and the time point thus lies in the
+past, this function will simply be ignored. In other
+words, date and time of a Wait until function must be
+re-configured before restarting a script so that an
+effective delay can again be executed.</p>
+</div>
+</section>
+<section id="start-timer">
+<h3><span class="section-number">5.4.4. </span>Start Timer<a class="headerlink" href="#start-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000095E0000350500003505163F47DDE33790B9.svg"><img alt="../_images/1000095E0000350500003505163F47DDE33790B9.svg" class="align-left" src="../_images/1000095E0000350500003505163F47DDE33790B9.svg" width="60" /></a>
+<p>This function starts a millisecond timer which can be waited
+for with the <a class="reference internal" href="#wait-for-timer">Wait for Timer</a> function (see below) or whose current
+millisecond value can be read with the <a class="reference internal" href="#read-timer">Read Timer</a> function. For
+configuration, assign a unique name for the timer <span class="guilabel">Timer Name</span>.</p>
+<p>If this function is called with the name of a timer that has already
+been started, this timer is restarted with the configured time span.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to measure the execution time for
+a particular process or sequence of functions in your
+script, simply start a timer before the sequence and
+read the milliseconds after the sequence with the <a class="reference internal" href="#read-timer">Read
+Timer</a> function.</p>
+</div>
+</section>
+<section id="wait-for-timer">
+<h3><span class="section-number">5.4.5. </span>Wait for Timer<a class="headerlink" href="#wait-for-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000D500000350500003505855C71628C55D85A.svg"><img alt="../_images/10000D500000350500003505855C71628C55D85A.svg" class="align-left" src="../_images/10000D500000350500003505855C71628C55D85A.svg" width="60" /></a>
+<p>This function interrupts the further program execution until
+the <em>Timer Running Time</em> configured in this function has elapsed for the
+selected timer. A timer with the configured timer name must have been
+started before via the function <a class="reference internal" href="#start-timer">Start Timer</a>. If the timer
+has already expired when this function is called, the program execution
+continues without interruption.</p>
+<p>With the two above functions, <a class="reference internal" href="#start-timer">Start Timer</a> and <a class="reference internal" href="#wait-for-timer">Wait for Timer</a> , it
+is very easy to execute functions at fixed intervals. For this, you can,
+for example, run a function or function sequence along a timer function
+in a <a class="reference internal" href="#id7">Parallel Sequence</a>.</p>
+</section>
+<section id="read-timer">
+<h3><span class="section-number">5.4.6. </span>Read Timer<a class="headerlink" href="#read-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg"><img alt="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" class="align-left" src="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" width="60" /></a>
+<p>With this function you can read out the current millisecond
+value of a particular timer and store it in a variable. You can then use
+the <a class="reference internal" href="#id2">Show Message</a> function to display this variable value. This allows you
+to measure and display the times of program sequences in your script, for
+example.</p>
+</section>
+</section>
+<section id="device-functions">
+<h2><span class="section-number">5.5. </span>Device Functions<a class="headerlink" href="#device-functions" title="Link to this heading"></a></h2>
+<section id="introduction-to-device-functions">
+<span id="device-functions-introduction"></span><h3><span class="section-number">5.5.1. </span>Introduction to Device Functions<a class="headerlink" href="#introduction-to-device-functions" title="Link to this heading"></a></h3>
+<img alt="../_images/device_functions_category.png" src="../_images/device_functions_category.png" />
+<p>The script system comes with a
+number of generic script functions for accessing devices (device process
+data, device properties). These functions are available independently of
+the loaded plugins. You find these generic device functions in the
+category <em>Device Functions</em>.</p>
+</section>
+<section id="read-device-property">
+<h3><span class="section-number">5.5.2. </span>Read Device Property<a class="headerlink" href="#read-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg"><img alt="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" class="align-left" src="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" width="60" /></a>
+<p>This function allows you to read process data from a device and save it to a
+variable.</p>
+<p>Select the device you want to access from the drop-down list
+<span class="guilabel">Device</span> <span class="guinum">❷</span>, which lists all devices that are part of the current
+configuration. To simplify the search for a device, you can filter the
+device list by selecting an appropriate filter (device type) from the
+<span class="guilabel">Filter</span> drop-down field <span class="guinum">❶</span>. After the device has been selected, use
+the last drop-down list <span class="guilabel">Property</span> <span class="guinum">❸</span> to select the device property
+that you want to access.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Only devices and device properties are
+displayed that allow read access.</p>
+</div>
+<p>In the input field <span class="guilabel">Variable</span> <span class="guinum">❹</span>, enter the name of the variable into
+which the value is to be saved during script runtime (figure below).</p>
+<p><img alt="Figure : Reading device property set-up panel" src="../_images/10000201000001DE000001244F9C5E31F069E4F2.png" /></p>
+<p>In abbreviated form, the set-up follows the following logic:</p>
+<p class="centered">
+<strong>Read from device <span class="guinum">❷</span> the value of parameter <span class="guinum">❸</span> and save it into variable <span class="guinum">❹</span>.</strong></p><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When entering a name, the auto-complete
+feature will provide you with a selection of all
+previously defined variable names.</p>
+</div>
+</section>
+<section id="write-device-property">
+<h3><span class="section-number">5.5.3. </span>Write Device Property<a class="headerlink" href="#write-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg"><img alt="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" class="align-left" src="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" width="60" /></a>
+<p>This function is for writing process data from devices. In
+the input field <span class="guinum">❶</span> enter the value to be written. You can also use
+variables or <a class="reference external" href="#1.7.DevicePropertyIdentifiers|outline">Device Property Identifiers</a> in this field.</p>
+<p>In the configuration panel (figure below), select the device and the
+appropriate device property that you want to write <span class="guinum">❷</span> as described for
+function <a class="reference internal" href="#read-device-property">Read Device Property</a>. The device selection controls <span class="guinum">❷</span> only show
+devices and device properties, which allow write access.</p>
+<p><img alt="Figure : Scriptconfiguration Write Device Property" src="../_images/10000201000001DE00000122138AE1DCD5FBF187.png" /></p>
+<p>The value in the input field <span class="guinum">❶</span> is then written at run time in the selected device
+property.</p>
+</section>
+<section id="wait-for-device-property">
+<span id="wait-for-device-property-func"></span><h3><span class="section-number">5.5.4. </span>Wait For Device Property<a class="headerlink" href="#wait-for-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002565000034EB000034EB5C19DADB200F9112.svg"><img alt="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" class="align-left" src="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" width="60" /></a>
+<p>This function allows a script to wait for a specific device
+property to reach a predefined condition. Once this condition is
+fulfilled, the script will resume. In the configuration panel (figure below), select the device and the
+appropriate device property that you want to monitor <span class="guinum">❶</span> as described for
+function <a class="reference internal" href="#read-device-property">Read Device Property</a>.</p>
+<img alt="../_images/wait_for_device_property_function.png" src="../_images/wait_for_device_property_function.png" />
+<p>In the  <em>Condition</em> section you can configure the condition that is to
+be checked against. First define an <em>operator</em> <span class="guinum">❷</span> and then the <em>target
+value</em> <span class="guinum">❸</span> the device parameter is to be compared with. In the value
+field <span class="guinum">❸</span>, you can also use Script Variables (e.g. <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>) or
+Device Properties (e.G. <code class="code docutils literal notranslate"><span class="pre">Nemesys_M_1.ActualFlow</span></code>) to set a test condition.</p>
+<p>To prevent the function from blocking further execution for too long, you can
+set a time limit in the <span class="guilabel">Timeout (ms)</span> field. If the time limit has expired and
+the test condition is not yet true, the function generates an <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> error.
+To deactivate the timeout, simply set the value to 0.</p>
+<p>In short, the function can be described as follows:</p>
+<p class="centered">
+<strong>Continue script execution, if the selected property of the
+device <span class="guinum">❶</span> meets the condition <span class="guinum">❷</span> <span class="guinum">❸</span>.</strong></p><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Script Variables (such as <code class="code docutils literal notranslate"><span class="pre">$Value</span></code>) can be used as test / comparison condition.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A timeout value of 0 deactivates the time limit.</p>
+</div>
+</section>
+<section id="create-property-variable">
+<h3><span class="section-number">5.5.5. </span>Create Property Variable<a class="headerlink" href="#create-property-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001162000038720000387269894D0D5041B1EE.svg"><img alt="../_images/10001162000038720000387269894D0D5041B1EE.svg" class="align-left" src="../_images/10001162000038720000387269894D0D5041B1EE.svg" width="60" /></a>
+<p>Use this function to create a special variable that is
+associated with a certain property of a certain device. Via this
+variable you can directly access the assigned device property from
+within a script, without any additional function calls.</p>
+<p>If you e.g. want to read an analog input value using normal variables,
+you first need to create a variable via <a class="reference internal" href="#id3">Create Variable</a> function and then use
+the <a class="reference internal" href="#read-device-property">Read Device Property</a>  function to store the analog
+input value into this variable. Only then you can use this variable for
+further calculations and tests in script functions. Whenever you need a
+new analog input value, you must call the <a class="reference internal" href="#read-device-property">Read Device Property</a> function again.</p>
+<p><img alt="Figure : Create Property Variable configuration panel" src="../_images/10000201000001F7000001347DCF10AF4AE123D0.png" /></p>
+<p>With property
+variables that access to device properties (e.g. analog input value) is
+considerably simplified. If you create a property variable, you use the
+configuration panel to connect a device property permanently with a
+variable. Whenever you read the value of this variable from within a
+script function, automatically the current value of the connected device
+property is read.</p>
+<p>You can set the name of the variable in the input box <span class="guilabel">Variable</span> <span class="guinum">❶</span>
+(figure above). Select the device you want to access from the drop-down
+list <span class="guilabel">Device</span> <span class="guinum">❸</span>, which lists all devices that are part of the current
+configuration. To simplify the search for a device, you can filter the
+device list by selecting an appropriate filter (device type) from the
+<span class="guilabel">Filter</span> drop-down field <span class="guinum">❷</span>.</p>
+<p>After the device has been selected, use the last drop-down list
+<span class="guilabel">Property</span> <span class="guinum">❹</span> to select the device property, the process data value that
+you want to access.</p>
+<p>In summary, this function can be described as follows:</p>
+<p class="centered">
+<strong>“Assign the device property <span class="guinum">❹</span> of the device <span class="guinum">❸</span> to the variable <span class="guinum">❶</span> and
+return the device property value if a read access on the variable takes
+place.”</strong></p><div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Property variables can not be used to
+store values during calculations— use normal variables
+for calculations and value storage.</p>
+</div>
+</section>
+</section>
+<section id="logging">
+<h2><span class="section-number">5.6. </span>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h2>
+<p>The Logging category contains script functions for controlling various
+log functions and accessing the event log.</p>
+<img alt="../_images/logging_category.png" src="../_images/logging_category.png" />
+<section id="log-message">
+<span id="id10"></span><h3><span class="section-number">5.6.1. </span>Log Message<a class="headerlink" href="#log-message" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/log_message2.svg"><img alt="../_images/log_message2.svg" class="align-left" src="../_images/log_message2.svg" width="60" /></a>
+<p>With this function you can output a message in the <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#event-log"><span class="std std-ref">Event Log</span></a>
+of the application. In the configuration area of the function you can configure
+the following:</p>
+<img alt="../_images/log_message_config.png" src="../_images/log_message_config.png" />
+<ol class="arabic simple guinums">
+<li><p>Enter your message text in the <span class="guilabel">Message</span> field.</p></li>
+<li><p>Select the type of message you want to display in the <span class="guilabel">Message Type</span>
+group. Depending on the message type, the relevant icon appears in the
+event log and the message is highlighted with a type-specific color.</p></li>
+</ol>
+<p>You can use <a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> and
+<a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html#script-variables"><span class="std std-ref">Script Variables</span></a> in the text. These serve as
+placeholders and are replaced by the content of the variables or the process
+data of a device at runtime of the script. As soon as you enter a dollar sign
+<code class="code docutils literal notranslate"><span class="pre">$</span></code> in the text, a list of available variables is displayed from which you
+can select a variable.</p>
+<img alt="../_images/log_message_text_input.png" src="../_images/log_message_text_input.png" />
+<p>In the figure above, the script variable <code class="code docutils literal notranslate"><span class="pre">$TargetVolume</span></code> and the device
+property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1.DosedVolume</span></code> have been inserted. When executed,
+the message is output in the event log of the application:</p>
+<img alt="../_images/log_message_output.png" src="../_images/log_message_output.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Device properties can be conveniently inserted via the context menu of the
+<span class="guilabel">Message</span> field (right-click with the mouse).</p>
+</div>
+<p>If you select the message type <span class="guilabel">Debug / Trace</span>, the message is only
+output when the debug mode is active. This way you can activate additional
+log output for debugging your scripts that do not appear when the script is
+executed normally.</p>
+</section>
+<section id="clear-event-log">
+<h3><span class="section-number">5.6.2. </span>Clear Event Log<a class="headerlink" href="#clear-event-log" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/clear_event_log.svg"><img alt="../_images/clear_event_log.svg" class="align-left" src="../_images/clear_event_log.svg" width="60" /></a>
+<p>This script function deletes all entries from the event log
+window of the application.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="export-event-log">
+<h3><span class="section-number">5.6.3. </span>Export Event Log<a class="headerlink" href="#export-event-log" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/export_event_log.svg"><img alt="../_images/export_event_log.svg" class="align-left" src="../_images/export_event_log.svg" width="60" /></a>
+<p>The export function exports the contents of the Event Log
+window to a text file. Click on the folder icon in the configuration
+area (see figure below) to select a file name and location. We recommend
+that you keep the location in the Log folder of the current project.</p>
+<p><img alt="image111" src="../_images/10000201000001CE00000085ECEBD0BB80415B83.png" /></p>
+<p>The function saves the exported file with a timestamp, e.g.
+<code class="file docutils literal notranslate"><span class="pre">EventLog_20220121_161653.txt</span></code>.</p>
+</section>
+</section>
+<section id="data-storage">
+<h2><span class="section-number">5.7. </span>Data Storage<a class="headerlink" href="#data-storage" title="Link to this heading"></a></h2>
+<p>This category contains functions for reading data from files and for storing
+data persistently.</p>
+<img alt="../_images/data_storage_category.png" src="../_images/data_storage_category.png" />
+<section id="open-settings-file">
+<h3><span class="section-number">5.7.1. </span>Open Settings File<a class="headerlink" href="#open-settings-file" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/open_settings_file.svg"><img alt="../_images/open_settings_file.svg" class="align-left" src="../_images/open_settings_file.svg" width="60" /></a>
+<p>This function opens a settings file <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> for reading / writing data persistently.
+An *.ini file is a structured data file that consists of sections and keys.
+The name of a section in the *.ini file is always entered inside square brackets.
+The name of a key is always on a separate line and the content is assigned by the
+<code class="code docutils literal notranslate"><span class="pre">=</span></code> char. The following example shows a typical *.ini file:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SyringeConfig]</span>
+<span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+<span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+<span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+
+<span class="k">[Variables]</span>
+<span class="na">Flow</span><span class="o">=</span><span class="s">100</span>
+<span class="na">Caption</span><span class="o">=</span><span class="s">Water</span>
+</pre></div>
+</div>
+<p>The file has two sections (<code class="code docutils literal notranslate"><span class="pre">SyringeConfig</span></code> and <code class="code docutils literal notranslate"><span class="pre">Variables</span></code>) and each
+section contains a number of key-value pairs.</p>
+<p>To open a settings file or to create a new one, you need to provide a filename <span class="guinum">❶</span>
+and a script variable <span class="guinum">❷</span> to store the created settings file object.</p>
+<img alt="../_images/open_settings_config.png" src="../_images/open_settings_config.png" />
+<p>In the input field for the file name <span class="guinum">❶</span>, you have various options for entering a
+file name:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Selection via file dialog:</dt><dd><p>Click on the file folder icon <span class="guinum">❶</span> and select the target directory as
+well as the file name and file type.</p>
+</dd>
+<dt>Enter an absolute file path:</dt><dd><p>Enter an absolute file path, e.g. <code class="code docutils literal notranslate"><span class="pre">C:tempMySettings.ini</span></code>,
+using the keyboard.</p>
+</dd>
+<dt>Entering a relative file path</dt><dd><p>Enter a relative file path, e.g. <code class="code docutils literal notranslate"><span class="pre">.DataMySettings.ini</span></code>
+using the keyboard. In this case, the <code class="code docutils literal notranslate"><span class="pre">MySettings.ini</span></code> file is saved
+in the current project directory in the Data subfolder. If the current
+project for example folder is
+<code class="code docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/Nemesys</span></code>,
+then the following file would be created:
+<code class="code docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/Nemesys/Data/MySettings.ini</span></code></p>
+</dd>
+<dt>Using a script variable</dt><dd><p>You can save an absolute or relative file path in a script variable and
+then use this variable in the input field.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>If the file exists, it will be opened. If it does not exist yet, it will be
+created. You can now use the variable in the <a class="reference internal" href="#read-setting">Read Setting</a> and <a class="reference internal" href="#write-setting">Write Setting</a>
+functions to provide a valid and properly initialized settings object.</p>
+</section>
+<section id="read-setting">
+<h3><span class="section-number">5.7.2. </span>Read Setting<a class="headerlink" href="#read-setting" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/settings_read.svg"><img alt="../_images/settings_read.svg" class="align-left" src="../_images/settings_read.svg" width="60" /></a>
+<p>This function reads a single value from settings file. If the setting doesn’t
+exist, the function returns the given optional <span class="guilabel">Default Value</span>.
+If the settings doesn’t exist and no default value is given, the function raises
+and error.</p>
+<p>If you would like to read the syringe length from the following settings file:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[SyringeConfig]</span>
+<span class="hll"><span class="linenos">2</span><span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+</span><span class="linenos">3</span><span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+<span class="linenos">4</span><span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+</pre></div>
+</div>
+<p>then you would use the following parameters:</p>
+<img alt="../_images/read_setting_config.png" src="../_images/read_setting_config.png" />
+<p>In the <span class="guilabel">Settings Object Variable</span> <span class="guinum">❶</span> you provide a variable with a valid
+settings object created with <a class="reference internal" href="#open-settings-file">Open Settings File</a> function. Then you need
+to provide the <span class="guilabel">Settings Group</span> <em>SyingeConfig</em> <span class="guinum">❷</span> and the
+<span class="guilabel">Key</span> <em>Length</em> <span class="guinum">❸</span>. The function now reads the value <code class="code docutils literal notranslate"><span class="pre">60</span></code> from
+the file and stores it into the given script variable <code class="code docutils literal notranslate"><span class="pre">$SyringeLength</span></code>.</p>
+</section>
+<section id="write-setting">
+<h3><span class="section-number">5.7.3. </span>Write Setting<a class="headerlink" href="#write-setting" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/settings_write.svg"><img alt="../_images/settings_write.svg" class="align-left" src="../_images/settings_write.svg" width="60" /></a>
+<p>This function writes a single value into a settings file. If the key given in
+<span class="guilabel">Key</span> field already exists, the previous value is overwritten. To use
+this function, you need to open or create a settings file before using the
+function <a class="reference internal" href="#open-settings-file">Open Settings File</a>.</p>
+<p>In the following example, the syringe volume 1000 shall be stored into the
+settings file:</p>
+<img alt="../_images/write_setting_config.png" src="../_images/write_setting_config.png" />
+<p>In the <span class="guilabel">Settings Object Variable</span> <span class="guinum">❶</span> you provide a variable with a valid
+settings object created with <a class="reference internal" href="#open-settings-file">Open Settings File</a> function. Then you need to
+provide an optional <span class="guilabel">Settings Group</span> and the <span class="guilabel">Key</span> <span class="guinum">❷</span>.
+In the <span class="guilabel">Value</span> field <span class="guinum">❸</span> you provide the value or a script variable
+containing the value.</p>
+<p>The provided parameters will write the syringe volume into line 3 of the settings
+file:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[SyringeConfig]</span>
+<span class="linenos">2</span><span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+<span class="hll"><span class="linenos">3</span><span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+</span><span class="linenos">4</span><span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html" class="btn btn-neutral float-left" title="4. Script System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../javascript_EN/javascript_EN.html" class="btn btn-neutral float-right" title="6. Using JavaScript" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

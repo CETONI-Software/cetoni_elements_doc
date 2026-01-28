@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>23. DAQ-Add-on &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="24. CANopen Tools Plugin" href="../canopentools_DE/canopentools_DE.html" />
+    <link rel="prev" title="22. Spektroskopie Add-on" href="../spectroscopy_DE/spectroscopy_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">23. DAQ-Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">23.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">23.2. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#werkzeugleiste">23.3. Werkzeugleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#konfigurationsdialog">23.4. Konfigurationsdialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-konfigurationsdialog">23.4.1. Übersicht Konfigurationsdialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-tabelle-daq-channels">23.4.2. Übersicht Tabelle DAQ Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datenaufzeichnung-konfigurieren">23.5. Datenaufzeichnung konfigurieren.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kanale-loschen">23.5.1. Kanäle löschen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datenerfassung-starten-stoppen">23.6. Datenerfassung starten / stoppen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagramm-navigation-und-bedienung">23.7. Diagramm Navigation und Bedienung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht">23.7.1. Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ausschnitt-verschieben">23.7.2. Ausschnitt verschieben</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#werte-einer-kurve-anzeigen">23.7.3. Werte einer Kurve anzeigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vergroszerung-mit-mausrad-einstellen">23.7.4. Vergrößerung mit Mausrad einstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen">23.7.5. Ausschnittvergrößerung mit Vergrößerungsrahmen wählen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anzeige-passend-automatisch-skalieren">23.7.6. Anzeige passend / automatisch skalieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kurven-ein-und-ausblenden">23.7.7. Kurven ein- und ausblenden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kurvenfarbe-andern">23.7.8. Kurvenfarbe ändern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagramm-bild-exportieren">23.7.9. Diagramm-Bild exportieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagrammdaten-loschen">23.7.10. Diagrammdaten löschen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skalierung-der-x-achse-umschalten">23.7.11. Skalierung der X-Achse umschalten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#script-funktionen">23.8. Script Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-data-acquisition">23.8.1. Start Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-data-acquisition">23.8.2. Stop Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einlesen-von-log-dateien">23.9. Einlesen von Log-Dateien</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mustererkennung">23.10. Mustererkennung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurieren-und-ausfuhren-der-mustererkennung">23.10.1. Konfigurieren und Ausführen der Mustererkennung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verwendung-eines-existierenden-pattern-scanners">23.10.2. Verwendung eines existierenden Pattern-Scanners</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aktivieren-deaktivieren-der-mustererkennung-fur-eine-plot-kurve">23.10.3. Aktivieren / Deaktivieren der Mustererkennung für eine Plot-Kurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ergebnisanalyse-fur-die-mustererkennung">23.10.4. Ergebnisanalyse für die Mustererkennung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Übersicht</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#durchfuhrung-einer-ergebnisanalyse">Durchführung einer Ergebnisanalyse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">23. </span>DAQ-Add-on</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="daq-add-on">
+<h1><span class="section-number">23. </span>DAQ-Add-on<a class="headerlink" href="#daq-add-on" title="Link to this heading"></a></h1>
+<section id="installation">
+<h2><span class="section-number">23.1. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>Das DAQ Add-on ist nicht im Standard Installationspaket enthalten,
+sondern muss als Addon zusätzlich installiert werden. Die Versionen von
+DAQ Add-on und installierter Software sollten übereinstimmen. Wenn Sie
+z.B. das DAQ Add-on mit der Versionsnummer 20190721 installieren
+möchten, sollte die CETONI Elements Software mit der Versionsnummer
+20190721 installiert sein.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Versionsnummer der CETONI Elements
+Software und des DAQ Plugins sollten übereinstimmen.</p>
+</div>
+<p>Bitte schließen Sie vor der Installation alle anderen Programme.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Installieren Sie das DAQ Plugin +
+Gerätetreiber, bevor Sie Ihre DAQ Geräte erstmalig über
+USB mit dem PC verbinden.</p>
+</div>
+<p>Starten Sie zur Installation die Datei
+<code class="file docutils literal notranslate"><span class="pre">CETONI_Elements_DAQ_Setup_64bit.exe</span></code>. Der
+Installationsassistent führt Sie anschließend durch die Installation der
+Software- und Hardware-Treiber.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Unter Windows müssen Sie mit
+Administratorrechten angemeldet sein, um die
+Installation der Hardware-Treiber durchführen zu können.</p>
+</div>
+</section>
+<section id="einfuhrung">
+<h2><span class="section-number">23.2. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Das DAQ-Plugin dient der Aufzeichnung und Auswertung von Daten, welche
+mit hoher Messrate erfasst wurden (&gt; 1000 Samples pro Sekunde). Es
+werden Geräte unterstützt, die hohe Datenerfassungsraten erlauben (z.B.
+National Instruments USB 600x Multifunktions-I/O-Geräte). Das
+Mess-Plugin unterstützt aber auch Geräte mit niedriger
+Datenerfassungsrate. Die Daten werden gleichzeitig in ein
+Prozessdatendiagramm und in eine CSV-Datei geloggt. Eine separate
+Konfiguration ist nicht erforderlich. Zur Anzeige des Mess-Diagramms
+klicken Sie in der Seitenleiste auf die Schaltfläche <span class="guilabel">DAQ</span> <span class="guinum">❶</span> (siehe
+Abbildung unten).</p>
+<img alt="Übersicht DAQ" src="../_images/100002010000036C00000297163E6666C1D280B6.png" />
+<p>In der Abbildung oben sehen Sie die wichtigsten Bedienelemente:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>DAQ-Schaltflächen</strong> – Hiermit blenden Sie das
+Prozessdaten-Diagramm, sowie die Workbench für die Ergebnisanalyse
+der Mustererkennung ein. Ersteres wird im Abschnitt <a class="reference internal" href="#diagramm-navigation-und-bedienung">Diagramm Navigation und Bedienung</a>
+näher erläutert, letzteres im Abschnitt <a class="reference internal" href="#ergebnisanalyse-fur-die-mustererkennung">Ergebnisanalyse für die
+Mustererkennung</a>.</p></li>
+<li><p><strong>Zeichenfläche</strong> – Hier sehen Sie die Kurven aller Prozessdaten die
+von dem Diagramm aufgezeichnet werden.</p></li>
+<li><p><strong>Legende</strong> – Die Legende enthält die Bezeichnung aller Kurven die im
+Diagramm aufgezeichnet werden mit der entsprechenden Farbe. Über die
+Legende können Kurven selektiv ein- / und ausgeblendet werden.</p></li>
+<li><p><strong>Werkzeugleiste</strong> – Hier finden Sie Schaltflächen zur Konfiguration
+der Datenaufzeichnung, zum Starten und Stoppen der Aufzeichnung und
+zur Navigation innerhalb der Darstellung.</p></li>
+</ol>
+</section>
+<section id="werkzeugleiste">
+<h2><span class="section-number">23.3. </span>Werkzeugleiste<a class="headerlink" href="#werkzeugleiste" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg"><img alt="image34" src="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg" width="60" /></a></p></td>
+<td><p>Öffnet den Konfigurationsdialog zur Konfiguration der
+Datenerfassung</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg"><img alt="image35" src="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" width="60" /></a></p></td>
+<td><p>Startet / stoppt die Datenaufzeichnung</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg"><img alt="image36" src="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" width="60" /></a></p></td>
+<td><p>Handwerkzeug zum Verschieben des aktuellen Ausschnitts
+der im Diagramm angezeigt wird</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg"><img alt="image37" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" width="60" /></a></p></td>
+<td><p>Vergrößerungsrahmen aufziehen zum gezielten Vergrößern
+bestimmter Bereiche</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF3.svg"><img alt="image38" src="../_images/10000AAD0000350500003505B065E97D3266EBF3.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC24106.svg"><img alt="image39" src="../_images/10000AA70000350500003505B68BB28A6EC24106.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der Y-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA448.svg"><img alt="image40" src="../_images/10000D410000350500003505737D2F8FEABFA448.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse und Y-Achse so an,
+dass alle Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E.svg"><img alt="image41" src="../_images/10001744000034EB000034EBD90F77816321BB6E.svg" width="60" /></a></p></td>
+<td><p>Aktiviert die automatische Skalierung – solange
+Messewerte aufgezeichnet werden, wird die Skalierung
+der X- und Y-Achse automatisch so angepasst, dass alle
+Messwerte auf den Bildschirm passen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000032600003505000035052A2D87EA9B64D7C0.svg"><img alt="image42" src="../_images/1000032600003505000035052A2D87EA9B64D7C0.svg" width="60" /></a></p></td>
+<td><p>Alle Kurven anzeigen. Wenn Kurven ausgeblendet sind,
+werden diese wieder eingeblendet.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100019CB000035050000350509AD2B23340F765E.svg"><img alt="image43" src="../_images/100019CB000035050000350509AD2B23340F765E.svg" width="60" /></a></p></td>
+<td><p>Löscht alle Daten aus dem Diagramm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100018130000350500003505CADD59D81E3150FD.svg"><img alt="image44" src="../_images/100018130000350500003505CADD59D81E3150FD.svg" width="60" /></a></p></td>
+<td><p>Skalierung umschalten. Damit schalten Sie die
+Skalierung der X-Achse zwischen absolutem
+Zeit-/Datumsstempel und relativer Zeit in Sekunden und
+Millisekunden seit Start der Aufzeichnung um.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg"><img alt="image45" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" width="60" /></a></p></td>
+<td><p>Exportiert ein Bild des der aktuell dargestellten
+Ausschnitts</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="konfigurationsdialog">
+<h2><span class="section-number">23.4. </span>Konfigurationsdialog<a class="headerlink" href="#konfigurationsdialog" title="Link to this heading"></a></h2>
+<section id="ubersicht-konfigurationsdialog">
+<h3><span class="section-number">23.4.1. </span>Übersicht Konfigurationsdialog<a class="headerlink" href="#ubersicht-konfigurationsdialog" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg"><img alt="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg" class="align-left" src="../_images/10004180000034EB000034EB6DA9ACE22B65C020.svg" width="60" /></a>
+<p>Klicken Sie in der Werkzeugleiste auf die Schaltfläche
+<span class="guilabel">Configure data acquisition</span>, um den Konfigurationsdialog (unten) zu
+öffnen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="Konfigurationsdialog DAQ" src="../_images/1000020100000371000001D48D6E763E7F12EB56.png" />
+<p>Der Konfigurationsdialog besteht im Wesentlichen aus den folgenden Bereichen:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Geräteliste (Device List)</strong> – die Geräteliste enthält alle Geräte
+von denen Prozessdaten aufgezeichnet werden können. Mit der
+Filterauswahl über der Geräteliste, können Sie diese nach einem
+bestimmten Gerätetyp (z.B. Ventile) filtern.</p></li>
+<li><p><strong>DAQ Channels</strong> – hier sehen Sie in tabellarischer Form alle Kurven
+die vom Diagramm aufgezeichnet werden.</p></li>
+<li><p><strong>DAQ Configuration</strong> – in diesem Bereich können Sie die Sample-Rate
+anpassen und den Pfad der CSV-Log-Datei angeben, die gleichzeitig zu
+dem graphischen Diagramm geschrieben wird.</p></li>
+</ol>
+</section>
+<section id="ubersicht-tabelle-daq-channels">
+<h3><span class="section-number">23.4.2. </span>Übersicht Tabelle DAQ Channels<a class="headerlink" href="#ubersicht-tabelle-daq-channels" title="Link to this heading"></a></h3>
+<img alt="DAQ-Logger-Kanäle" src="../_images/10000201000002340000009A60C2C459DC16C006.png" />
+<p>Die Tabelle <span class="guilabel">DAQ Channels</span> zeigt in
+tabellarischer Form die konfigurierten Datenerfassungskanäle. Jede Zeile
+in der Tabelle entspricht genau einer Kurve in der grafischen
+Darstellung. Folgende Spalten sind vorhanden:</p>
+<ul>
+<li><p><strong>Channel</strong> – zeigt die Kanalnummer des entsprechenden Kanals</p></li>
+<li><p><strong>Device</strong> – enthält den Gerätenamen des Gerätes, von dem ein
+bestimmter Gerätewert aufgezeichnet werden soll und das Geräteicon</p></li>
+<li><p><strong>Property</strong> – dies ist der Name der Geräteeigenschaft / des
+Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
+Geräteeigenschaft (numerischer oder boolescher Wert) können Sie an
+dem Typ-Icon einfach erkennen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004EA000035050000350581CFD983D12D425F.svg"><img alt="image47" src="../_images/100004EA000035050000350581CFD983D12D425F.svg" width="40" /></a></p></td>
+<td><p>Numerischer Wert</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000034B000035050000350585C9BEED447C4FB8.svg"><img alt="image48" src="../_images/1000034B000035050000350585C9BEED447C4FB8.svg" width="40" /></a></p></td>
+<td><p>Boolescher Wert</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000B740000350500003505221106A05ED7DC85.svg"><img alt="image49" src="../_images/10000B740000350500003505221106A05ED7DC85.svg" width="40" /></a></p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> – hier können Sie eine eigene Bezeichnung des Kanals
+festlegen. Diese Bezeichnung erscheint dann in der Legende des
+Graphen.</p></li>
+</ul>
+<p>Zum Hinzufügen von Kanälen führen Sie einfach folgende Schritte durch.</p>
+</section>
+</section>
+<section id="datenaufzeichnung-konfigurieren">
+<h2><span class="section-number">23.5. </span>Datenaufzeichnung konfigurieren.<a class="headerlink" href="#datenaufzeichnung-konfigurieren" title="Link to this heading"></a></h2>
+<p><span class="step">Schritt 1- Kanäle hinzufügen</span></p>
+<img alt="Diagrammkurven via Drag &amp; Drop hinzufügen" src="../_images/10000000000002CC00000188EAF4D5DCF6382AA7.png" />
+<p>Um einen Kanal hinzuzufügen, verwenden Sie die Tabelle <span class="guilabel">Logger Channels</span>.
+Ziehen Sie dazu den entsprechenden Eintrag aus der <span class="guilabel">Device List</span>
+per Drag-&amp;-Drop (Ziehen und Ablegen) in die Tabelle <span class="guilabel">Logger Channels</span>. Der neue Kanal wird
+an der Stelle hinzugefügt, an der Sie die Maustaste loslassen (siehe Abbildung oben).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Um die Geräteauswahl zu erleichtern, können
+Sie die Geräteliste nach Gerätetyp filtern.</p>
+</div>
+<p><span class="step">Schritt 2- Geräteeigenschaft auswählen</span></p>
+<p>Wählen Sie nun im Bereich der Diagrammkurven <span class="guilabel">DAQ Channels</span> die
+Geräteeigenschaft (<em>Property</em>) aus, die Sie aufzeichnen möchten. Klicken
+Sie dafür doppelt in die <span class="guilabel">Property</span> Spalte des Gerätes, welches Sie
+konfigurieren möchten. Nach dem Doppelklick wird Ihnen ein Auswahlfeld
+angezeigt, aus dem Sie die Geräteeigenschaft auswählen können (siehe
+Abbildung unten).</p>
+<img alt="Geräteeigenschaft zum Aufzeichnen auswählen" src="../_images/10000000000002CC0000016B456742182C113BB4.png" />
+<p><span class="step">Schritt 3 – Kanalbeschriftung festlegen</span></p>
+<p>In der Spalte <span class="guilabel">Label</span> können Sie für jeden Kanal eine eigene
+Beschriftung vergeben. Diese Beschriftung wird später dann in der
+Legende des Graphen als Beschriftung der Kurve angezeigt.</p>
+<img alt="Kanalbeschriftung ändern" src="../_images/100000000000025F000000BE2048E5FE978F309A.png" />
+<p>Klicken Sie zum Ändern der
+Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
+geben Sie dann die neue Bezeichnung ein.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Bei der Auswahl einer anderen
+Geräteeigenschaft wird automatisch eine neue
+Kanalbezeichnung vergeben. D.h. Sie sollten die
+Kanalbezeichnung erst nach der Auswahl der
+Geräteeigenschaft festlegen.</p>
+</div>
+<section id="kanale-loschen">
+<h3><span class="section-number">23.5.1. </span>Kanäle löschen<a class="headerlink" href="#kanale-loschen" title="Link to this heading"></a></h3>
+<p>Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
+mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
+<kbd class="kbd docutils literal notranslate">Entf</kbd>-Taste drücken oder mit der rechten Maustaste das Kontextmenü
+aufrufen und den Menüpunkt <span class="menuselection">Delete Selection</span> auswählen.</p>
+<p><img alt="image56" src="../_images/100000000000012100000091DA9FF37806721579.png" /> <img alt="image57" src="../_images/10000000000001220000008F22C1F8D0316FE153.png" /></p>
+<p>Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
+Kontextmenü den Punkt <em>Clear Logger</em> auswählen.</p>
+<p><span class="step">Schritt 4 – Sample Rate festlegen</span></p>
+<p>Im Feld <span class="guilabel">Sample Rate (Hz)</span> können Sie die Frequenz angeben, mit der
+Messwerte im Plot und in der Log-Datei aufgezeichnet werden. Die
+maximale Sample Rate hängt von der Messfrequenz ab, die mit der
+verwendeten Hardware möglich ist.</p>
+<img alt="Sample Rate konfigurieren" src="../_images/10000201000002030000006E8920DC98A24B4880.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wählen Sie die Samplerate stets nur so
+groß wie nötig. Bei hohen Sampleraten entstehen sehr
+viele Daten. Das Zeichnen von großen Datenmengen
+benötigt mehr Rechnerleistung und kann ggf. die
+Bedienbarkeit der Anwendung verlangsamen.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Verwenden Sie zur Datenaufzeichnung über
+mehrere Tage eine niedrige Samplerate oder verwenden
+Sie stattdessen den grafischen Logger.</p>
+</div>
+<p>Die Konfiguration wird beim Beenden der Anwendung gespeichert und beim
+erneuten Start wieder geladen.</p>
+<p><span class="step">Schritt 5 – Log-Datei konfigurieren</span></p>
+<p>In diesem Bereich können Sie den Namen der CSV.Log-Dateiangeben <span class="guinum">❶</span>, in
+die, zusätzlich zum graphischen Logger, alle aufgezeichneten Messwerte
+geschrieben werden. Außerdem können Sie das Trennzeichen angeben, mit
+dem die Werte der einzelnen Kanäle in der Log-Datei voneinander getrennt
+werden <span class="guinum">❷</span>.</p>
+<img alt="Log-Datei konfigurieren" src="../_images/10000201000002A1000000B9F4DB74E960861B0F.png" />
+</section>
+</section>
+<section id="datenerfassung-starten-stoppen">
+<h2><span class="section-number">23.6. </span>Datenerfassung starten / stoppen<a class="headerlink" href="#datenerfassung-starten-stoppen" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg"><img alt="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" class="align-left" src="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" width="60" /></a>
+<p>Über die entsprechende Schaltfläche in der Werkzeugleiste
+können Sie die Datenaufzeichnung starten und stoppen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="diagramm-navigation-und-bedienung">
+<h2><span class="section-number">23.7. </span>Diagramm Navigation und Bedienung<a class="headerlink" href="#diagramm-navigation-und-bedienung" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3><span class="section-number">23.7.1. </span>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Das DAQ-Plug-in bietet eine Reihe von Möglichkeiten zur Anpassung der Datendarstellung.
+Dazu gehören die Größenänderung von Teilen einer Kurve und das Ein- und Ausblenden
+einzelner Kurven. Das Diagramm besteht aus einem Plotbereich <span class="guinum">❶</span> sowie
+einer X-Achse (Zeit) <span class="guinum">❸</span> und einer Y-Achse (Prozessdaten) <span class="guinum">❹</span>.</p>
+<img alt="Übersicht DAQ-Graph" src="../_images/10000201000002C60000018E72664BA750C67A4C.png" />
+<p>Die Zeitachse zeigt Datum und Uhrzeit als absolute Werte an. Die Prozessdatenachse
+zeigt die jeweiligen Messdaten; sie ist einheitenlos, da sie potentiell eine
+Vielzahl von sehr unterschiedlichen Werten und Maßeinheiten repräsentiert.</p>
+<p>Wenn Sie mit der rechten Maustaste in die Zeichenfläche klicken, wird
+ein Kontextmenü <span class="guinum">❷</span> mit zusätzlichen Funktionen angezeigt.</p>
+</section>
+<section id="ausschnitt-verschieben">
+<h3><span class="section-number">23.7.2. </span>Ausschnitt verschieben<a class="headerlink" href="#ausschnitt-verschieben" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg"><img alt="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" class="align-left" src="../_images/100005C7000035050000350518807CBDF5FF2BAE.svg" width="60" /></a>
+<p>Mit dem Verschiebewerkzeug (<em>Pan Tool</em>) können Sie bequem den
+Ausschnitt verschieben, der im Diagramm angezeigt wird. Aktivieren Sie
+das Werkzeug durch anklicken der Schaltfläche. Klicken Sie nun in die
+Zeichenfläche und bewegen Sie die Maus mit gedrückter Maustaste um den
+Ausschnitt zu verschieben.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Das Verschieben des Ausschnittes bewirkt
+eine Deaktivierung der automatischen Skalierung.</p>
+</div>
+</section>
+<section id="werte-einer-kurve-anzeigen">
+<h3><span class="section-number">23.7.3. </span>Werte einer Kurve anzeigen<a class="headerlink" href="#werte-einer-kurve-anzeigen" title="Link to this heading"></a></h3>
+<p>Wenn das Verschiebewerkzeug (<em>Pan Tool</em>) aktiv ist, können Sie den
+Mauszeiger über eine Kurve bewegen, um sich den Wert an der betreffenden
+Position anzeigen zu lassen.</p>
+<img alt="Werte einer Kurve anzeigen" src="../_images/1000020100000255000000C02731E793C603A163.png" />
+</section>
+<section id="vergroszerung-mit-mausrad-einstellen">
+<h3><span class="section-number">23.7.4. </span>Vergrößerung mit Mausrad einstellen<a class="headerlink" href="#vergroszerung-mit-mausrad-einstellen" title="Link to this heading"></a></h3>
+<p>Durch drehen des Mausrades können Sie die Vergrößerung der Anzeige
+erhöhen (hinein zoomen) oder verringern (heraus zoomen).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E9E123686A038FFB99.png"><img alt="image69" src="../_images/10000000000001EC000002E9E123686A038FFB99.png" style="width: 80px;" /></a></p></td>
+<td><p>Vergrößerungsfaktor erhöhen (hinein zoomen)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E9C869BC0EE323BD20.png"><img alt="image70" src="../_images/10000000000001EC000002E9C869BC0EE323BD20.png" style="width: 80px;" /></a></p></td>
+<td><p>Vergrößerungsfaktor verringern (heraus zoomen)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen">
+<h3><span class="section-number">23.7.5. </span>Ausschnittvergrößerung mit Vergrößerungsrahmen wählen<a class="headerlink" href="#ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg"><img alt="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" class="align-left" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B.svg" width="60" /></a>
+<p>Mit dem Vergrößerungswerkzeug (<em>Zoom Tool</em>) können Sie
+gezielt einen Ausschnitt auswählen, den Sie vergrößert darstellen
+möchten. Gehen Sie dafür wie folgt vor (siehe Abbildung unten):</p>
+<ol class="arabic simple guinums">
+<li><p>Klicken Sie mit der linken Maustaste in die Zeichenfläche um die
+erste Ecke des Vergrößerungsrahmens festzulegen.</p></li>
+<li><p>Ziehen Sie nun mit gedrückter Maustaste ein Vergrößerungsrahmen auf
+die gewünschte Größe.</p></li>
+<li><p>Sobald Sie die Maustaste loslassen, wird der gewählte Ausschnitt auf
+die aktuelle Größe der Anzeige skaliert.</p></li>
+</ol>
+<img alt="Vergrößerungsrahmen aufziehen" src="../_images/10000000000001FA0000015E46DAC1CBDA6E2854.png" />
+</section>
+<section id="anzeige-passend-automatisch-skalieren">
+<h3><span class="section-number">23.7.6. </span>Anzeige passend / automatisch skalieren<a class="headerlink" href="#anzeige-passend-automatisch-skalieren" title="Link to this heading"></a></h3>
+<p>Die Werkzeugleiste und das Kontextmenü enthalten verschiedene Tools um
+die Anzeige automatisch so anzupassen, dass alle Daten im sichtbaren
+Bereich liegen.</p>
+<p>Folgende Möglichkeiten der Anpassung sind vorhanden:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF3.svg"><img alt="image80" src="../_images/10000AAD0000350500003505B065E97D3266EBF3.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC24106.svg"><img alt="image81" src="../_images/10000AA70000350500003505B68BB28A6EC24106.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der Y-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA448.svg"><img alt="image82" src="../_images/10000D410000350500003505737D2F8FEABFA448.svg" width="60" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse und Y-Achse so an,
+dass alle Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E.svg"><img alt="image83" src="../_images/10001744000034EB000034EBD90F77816321BB6E.svg" width="60" /></a></p></td>
+<td><p>Aktiviert die automatische Skalierung – solange
+Messwerte aufgezeichnet werden, wird die Skalierung der
+X- und Y-Achse automatisch so angepasst, dass alle
+Messwerte auf den Bildschirm passen.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Die automatische Skalierung können Sie auch über das Kontextmenü
+getrennt für X- und Y-Achse aktivieren:</p>
+<img alt="Automatische Skalierung für X- und Y-Achse" src="../_images/1000000000000109000001040CF9729CD97C9A4D.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Änderung der Vergrößerung oder das
+Verschieben des Ausschnittes bewirken eine
+Deaktivierung der automatischen Skalierung.</p>
+</div>
+</section>
+<section id="kurven-ein-und-ausblenden">
+<h3><span class="section-number">23.7.7. </span>Kurven ein- und ausblenden<a class="headerlink" href="#kurven-ein-und-ausblenden" title="Link to this heading"></a></h3>
+<p>Um die Skalierung und Sichtbarkeit zu verbessern, können Sie einzelne Kurven ein-
+oder ausblenden. Klicken Sie dazu mit der rechten Maustaste auf das gewünschte
+Element in der Plotlegende und wählen Sie die gewünschte Funktion, um entweder
+nur die entsprechende Kurve auszublenden <span class="menuselection">Hide Curve</span> oder alle
+anderen außer der entsprechenden Kurve <span class="menuselection">Show only this curve</span>, wie
+in der Abbildung unten dargestellt.</p>
+<img alt="Kontextmenü Legendeneintrag" src="../_images/10000000000001A40000005CD26CCB4A8D0DF1F9.png" />
+<p>Wenn Sie alle ausgeblendeten Kurven wieder einblenden möchten,
+aktivieren Sie in der Zeichenfläche das Kontextmenü mit der rechten
+Maustaste und wählen Sie dann den Menüpunkt <span class="menuselection">Show all curves</span> (siehe
+Abbildung unten).</p>
+<img alt="Menüpunkt Show all curves im Kontext-Menü" src="../_images/1000000000000109000001041C877E8A24D5AB94.png" />
+</section>
+<section id="kurvenfarbe-andern">
+<h3><span class="section-number">23.7.8. </span>Kurvenfarbe ändern<a class="headerlink" href="#kurvenfarbe-andern" title="Link to this heading"></a></h3>
+<p>Um eine andere Kurvenfarbe zu wählen, klicken Sie mit der rechten
+Maustaste auf einen Eintrag in der Legende. Wählen Sie im Kontextmenü den Menüpunkt
+<span class="menuselection">Select Color</span> (siehe Abbildung unten).</p>
+<img alt="Kontextmenü Legendeneintrag - Farbwahl" src="../_images/10000000000002100000007CF77B5C49CD7E0D88.png" />
+<p>Es wird Ihnen nun ein Farbauswahldialog
+angezeigt, in dem Sie eine beliebige Kurvenfarbe auswählen können.</p>
+<img alt="Farbauswahldialog" src="../_images/1000000000000222000001B58F8CFB4F56DCF4FD.png" />
+</section>
+<section id="diagramm-bild-exportieren">
+<h3><span class="section-number">23.7.9. </span>Diagramm-Bild exportieren<a class="headerlink" href="#diagramm-bild-exportieren" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg"><img alt="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" class="align-left" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C.svg" width="60" /></a>
+<p>Über den Menüeintrag <span class="menuselection">Export plot image</span> im Kontextmenü
+können Sie ein Bild des aktuellen Diagramms exportieren. In dem Dateidialog der
+nun eingeblendet wird, wählen Sie zuerst ihr
+Zielverzeichnis aus.</p>
+<img alt="Diagramm Bildexport Dateidialog" src="../_images/100002010000010C000000E1260A96B6F1A86108.png" />
+<p>Anschließend geben Sie
+den Dateinamen der Bilddatei ein <span class="guinum">❶</span>. Dann wählen Sie in dem Auswahlfeld
+den Dateityp <span class="guinum">❷</span> der Bilddatei aus. Die Exportfunktion unterstützt sowohl
+Bilddateien (<code class="file docutils literal notranslate"><span class="pre">png,</span> <span class="pre">jpg...</span></code>) als auch skalierbare Vektorgrafiken
+(<code class="file docutils literal notranslate"><span class="pre">.pdf,</span> <span class="pre">svg...</span></code>). Wählen Sie das für Sie passende Bildformat aus.</p>
+<img alt="../_images/100002010000026300000143DB4B32F0CF0E84B4.png" src="../_images/100002010000026300000143DB4B32F0CF0E84B4.png" />
+<p>Klicken Sie zum Abschluss auf <span class="guilabel">Save</span><span class="guinum">❸</span>, um den Export zu starten.</p>
+</section>
+<section id="diagrammdaten-loschen">
+<h3><span class="section-number">23.7.10. </span>Diagrammdaten löschen<a class="headerlink" href="#diagrammdaten-loschen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100019CB000035050000350509AD2B23340F765E.svg"><img alt="../_images/100019CB000035050000350509AD2B23340F765E.svg" class="align-left" src="../_images/100019CB000035050000350509AD2B23340F765E.svg" width="60" /></a>
+<p>Klicken Sie im Kontextmenü auf den Eintrag <span class="menuselection">Clear plot data</span>
+um alle aufgezeichneten Daten zu löschen und mit einem leeren Diagramm
+die Aufzeichnung neu zu beginnen.</p>
+<img alt="Menüpunkt Clear plot data im Kontext-Menü" src="../_images/100002010000010D000000D1835EC0ADB6A09475.png" />
+</section>
+<section id="skalierung-der-x-achse-umschalten">
+<h3><span class="section-number">23.7.11. </span>Skalierung der X-Achse umschalten<a class="headerlink" href="#skalierung-der-x-achse-umschalten" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100018130000350500003505CADD59D81E3150FD.svg"><img alt="../_images/100018130000350500003505CADD59D81E3150FD.svg" class="align-left" src="../_images/100018130000350500003505CADD59D81E3150FD.svg" width="60" /></a>
+<p>Sie können die Skalierung der X-Achse zwischen zwei
+verschiedenen Modi umschalten. Standardmäßig zeigt die X-Achse einen
+absoluten Zeit- / Datumsstempel an.</p>
+<img alt="Plot-Zeitachse mit absolutem Zeit-/Datumstempel" src="../_images/100002010000022B0000006E35B772A9B9B293D2.png" />
+<p>Sie können die X-Achse aber auch auf die Anzeige der relativen Zeit in
+Sekunden und Millisekunden umschalten. D.h. der Zeitpunkt t<sub>0</sub>
+markiert hier den Zeitpunkt an dem die Aufzeichnung gestartet wurde .</p>
+<p>Um die Achse
+umzuschalten, klicken Sie mit der rechten Maustaste in das Diagramm und
+wählen Sie dann aus dem Kontextmenü den Punkt <span class="menuselection">Toggle X-axis scale</span>.</p>
+<img alt="Menüpunkt Toggle X-axis scale im Kontext-Menü" src="../_images/100002010000010D000000C7FB8978837EA08B41.png" />
+</section>
+</section>
+<section id="script-funktionen">
+<h2><span class="section-number">23.8. </span>Script Funktionen<a class="headerlink" href="#script-funktionen" title="Link to this heading"></a></h2>
+<img alt="DAQ Script Funktionen" src="../_images/10000201000000FB0000005C7BE945F338BAE398.png" />
+<p>Die Datenerfassung des DAQ Plugins kann über das CETONI Elements
+Scriptsystem gestartet und gestoppt werden, um die Aufnahme von Daten zu
+automatisieren oder mit anderen Prozessen zu synchronisieren. Die
+entsprechenden Funktionen finden Sie in der <span class="guilabel">DAQ</span> Kategorie der
+verfügbaren Scriptfunktionen.</p>
+<section id="start-data-acquisition">
+<h3><span class="section-number">23.8.1. </span>Start Data Acquisition<a class="headerlink" href="#start-data-acquisition" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg"><img alt="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" class="align-left" src="../_images/10002C2B000034EB000034EB03167AF23B475C0B.svg" width="60" /></a>
+<p>Mit dieser Funktion starten Sie die Datenerfassung mit den
+aktuell konfigurierten Einstellungen und Kanälen. Der Inhalt des
+Diagramms wird dabei nicht gelöscht.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="stop-data-acquisition">
+<h3><span class="section-number">23.8.2. </span>Stop Data Acquisition<a class="headerlink" href="#stop-data-acquisition" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg"><img alt="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg" class="align-left" src="../_images/10002BC8000034EB000034EB9AA7EDFD557960B7.svg" width="60" /></a>
+<p>Diese Funktion stoppt die Aufzeichnung der Daten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="einlesen-von-log-dateien">
+<h2><span class="section-number">23.9. </span>Einlesen von Log-Dateien<a class="headerlink" href="#einlesen-von-log-dateien" title="Link to this heading"></a></h2>
+<p>Das DAQ-Addon bietet die Möglichkeit, aufgezeichnete Log-Dateien noch
+einmal in den Plot einzulesen. Das Tool zum Einlesen einer Log-Datei ist
+dabei in der Lage zusammengehörige Log-Dateien einer
+Langzeitaufzeichnung zu erkennen und alle zusammengehörigen Log-Dateien
+in chronologischer Reihenfolge einzulesen. Bei großen Datenmengen werden
+einzelne Datenpunkte ausgelassen, sodass maximal eine Million
+Datenpunkte pro Log-Kurve im Plot angezeigt werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Das Einlese-Tool erkennt zusammengehörige
+Log-Dateien und liest diese in chronologischer
+Reihenfolge ein.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Es werden maximal eine Million Datenpunkte
+pro Log-Kurve im Plot angezeigt.</p>
+</div>
+<p>Um eine einzelne Log-Datei oder eine Serie von Log-Dateien einzulesen,
+gehen Sie bitte wie folgt vor.</p>
+<ol class="arabic steps">
+<li><p>Wählen Sie aus der Werkzeugleiste das Tool zum Einlesen von
+Log-Dateien.</p></li>
+<li><p>Wählen Sie eine beliebige Datei aus der Log-Dateien-Serie aus, die
+Sie einlesen möchten. Im dargestellten Beispiel erkennt das Tool
+anhand der Dateinummerierungen, dass die Log-Dateien
+zusammengehören.</p>
+<img alt="../_images/1000020100000278000001D0E39D30D1CC066F05.png" src="../_images/1000020100000278000001D0E39D30D1CC066F05.png" />
+</li>
+<li><p>Anschließend werden die Log-Dateien eingelesen. Im
+<em>Progress</em>-Fenster wird der Fortschritt des Einlesevorgangs
+angezeigt. Während des Einlesens können Sie mit der Software
+weiterarbeiten.</p>
+<img alt="../_images/10000201000002FC00000282E7401BFC642FC493.png" src="../_images/10000201000002FC00000282E7401BFC642FC493.png" />
+</li>
+<li><p>Nach Beendigung des Einlesevorgangs werden die Log-Kurven mit Angabe des
+Dateinamens im graphischen Plot angezeigt.</p>
+<img alt="../_images/100002010000025C00000201E71E54E4AEA77F6D.png" src="../_images/100002010000025C00000201E71E54E4AEA77F6D.png" />
+</li>
+</ol>
+</section>
+<section id="mustererkennung">
+<h2><span class="section-number">23.10. </span>Mustererkennung<a class="headerlink" href="#mustererkennung" title="Link to this heading"></a></h2>
+<p>Das DAQ-Addon bietet die Möglichkeit, Plot-Kurven nach Mustern zu
+durchsuchen und diese im graphischen Plot zu kennzeichnen.</p>
+<section id="konfigurieren-und-ausfuhren-der-mustererkennung">
+<h3><span class="section-number">23.10.1. </span>Konfigurieren und Ausführen der Mustererkennung<a class="headerlink" href="#konfigurieren-und-ausfuhren-der-mustererkennung" title="Link to this heading"></a></h3>
+<p>Im folgenden einfachen Beispiel wird die Mustererkennung anhand der
+Erkennung von Rechtecksignalen erläutert.</p>
+<ol class="arabic steps">
+<li><p>Gegeben ist eine Plot-Kurve, welche Rechtecksignale mit einer Breite
+zwischen 5 und 8 Sekunden, sowie einem Spitzenwert von 5V enthält.</p>
+<img alt="../_images/10000201000004EF000001D3F48FD363154B3642.png" src="../_images/10000201000004EF000001D3F48FD363154B3642.png" />
+</li>
+<li><p>Um die Mustererkennung zu konfigurieren, klicken Sie mit der rechten
+Maustaste auf die Kurve , die sie untersuchen möchten, <span class="guinum">❶</span> und wählen
+<span class="menuselection">Configure Pattern Scan</span> <span class="guinum">❷</span>.</p>
+<img alt="../_images/10000201000002BC0000019435E84DFC0044B4A8.png" src="../_images/10000201000002BC0000019435E84DFC0044B4A8.png" />
+</li>
+<li><p>In dem Dialog, der sich anschließend öffnet, müssen Sie zunächst einen
+neuen Pattern Scanner erstellen. Klicken Sie hierzu auf die
+Schaltfläche <span class="guilabel">Add New Time Value Pattern Scanner</span> <span class="guinum">❶</span>. Anschließend
+können Sie dem Pattern Scanner einen aussagekräftigen Namen geben <span class="guinum">❷</span>.
+Im Beispiel wird <em>Rectangle Pattern Scanner</em> gewählt. Mit der
+Schaltfläche <span class="guinum">❸</span> löschen Sie den selektierten Pattern Scanner und mit
+<span class="guinum">❹</span> können sie alle Pattern Scanner löschen.</p>
+<img alt="../_images/100002010000023C0000025250C7943D7A04C238.png" src="../_images/100002010000023C0000025250C7943D7A04C238.png" />
+</li>
+<li><p>Während der Mustererkennung wird ein Report-File erzeugt. Dieses enthält die
+Messwerte um den Median des erkannten Musters. Wieviele Werte um den
+Median im Report-File enthalten sein sollen, können Sie über das
+Eingabefeld <span class="guilabel">Number of Median Values</span> <span class="guinum">❶</span> konfigurieren. Möchten Sie,
+dass alle Messwerte innerhalb des erkannten Musters im Report-File
+angegeben werden, wählen sie das Kontrollkästchen <span class="guilabel">Use All</span> <span class="guinum">❷</span>.</p>
+<img alt="../_images/10000201000002240000013BA4342E81413037EB.png" src="../_images/10000201000002240000013BA4342E81413037EB.png" />
+</li>
+<li><p>Im nächsten Schritt konfigurieren Sie die
+Muster, die durch den Pattern Scanner erkannt werden sollen. Hierzu
+müssen Sie den Pattern Scanner <span class="guinum">❶</span> auswählen, dessen Muster Sie
+konfigurieren wollen. Ein neues Muster können Sie dann über die
+Schaltfläche <span class="guilabel">Create Item</span> erzeugen <span class="guinum">❷</span>. Dem erzeugten Muster können
+Sie nun einen aussagekräftigen Namen geben <span class="guinum">❸</span>.</p>
+<img alt="../_images/100002010000023C00000252E671EDC37054DC8E.png" src="../_images/100002010000023C00000252E671EDC37054DC8E.png" />
+</li>
+<li><p>Im nächsten Schritt muss das
+zu erkennende Muster beschrieben werden. Da Rechtecksignale mit
+einer Dauer von 5 – 8 Sekunden und eine Höhe von 5V erkannt werden
+sollen, wird ein Abschnitt mit einer minimalen Dauer von 5 Sekunden
+und einer maximalen Dauer von 8 Sekunden, sowie einem minimalen Wert
+von 4,8 und einem maximalen Wert von 5,2 erstellt. Der Wertebereich
+wird zwischen 4,8 und 5,2 gewählt, um ein gewisses Rauschen des
+Messsignals zu tolerieren. Tragen Sie hierzu in die erste
+Musterzeile, die automatisch erzeugt wurde, die genannten Werte ein.</p>
+<img alt="../_images/10000201000002270000012D0A91CE9C8E182551.png" src="../_images/10000201000002270000012D0A91CE9C8E182551.png" />
+</li>
+<li><p>Anschließend muss das Ende des Rechteckmusters erkannt werden. Das Messsignal
+muss für eine gewisse Zeit wieder auf ca. 0V zurückgehen. Es wird
+somit ein neuer Abschnitt mit einer Dauer von 0,2 bis 0,5 Sekunden,
+in dem sich das Messsignal zwischen -0,2 und +0,2 aufhalten muss,
+eingefügt. Klicken Sie hierzu die Stelle an, nach welcher der neue
+Abschnitt eingefügt werden soll <span class="guinum">❶</span>, und klicken Sie dann auf <span class="guilabel">Add Item</span>
+<span class="guinum">❷</span>. Tragen Sie anschließend die genannten Werte in die
+neu erzeugte Zeile.</p>
+<img alt="../_images/10000201000002310000012F01CDDA082C5126D6.png" src="../_images/10000201000002310000012F01CDDA082C5126D6.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Ein einzelner Pattern-Scanner kann mehrere Muster erkennen. Wiederholen Sie
+die Schritte <strong>5</strong> – <strong>7</strong>, um ihrem Pattern Scanner ein weiteres Muster
+hinzuzufügen.</p>
+</div>
+</li>
+<li><p>Im vorletzten Schritt können Sie noch einen Dateipfad angeben, an
+dem das Report-File abgelegt wird. Klicken Sie hierzu auf die
+Schaltfläche <span class="guilabel">Report File</span> und geben Sie im sich darauf öffnenden
+Dateidialog den Dateipfad und -namen an. Klicken Sie abschließend
+auf die Schaltfläche <span class="guilabel">OK</span>, um die Konfiguration des Pattern-Scanners
+abzuschließen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Einstellungen der Mustererkennung für
+eine Plot-Kurve werden gespeichert. Wird die
+Plot-Kurve erneut geladen, wird ihr der entsprechende
+Pattern-Scanner automatisch zugeordnet.</p>
+</div>
+</li>
+<li><p>Im letzten Schritt führen Sie die Mustererkennung aus. Klicken Sie
+hierzu auf die Schaltfläche <span class="guilabel">Run Pattern Scan</span> <span class="guinum">❶</span>. Die Anfangs- <span class="guinum">❷</span>
+und Endpunkte <span class="guinum">❸</span> der erkannten Muster werden daraufhin im Plot
+markiert. Eine Meldung <span class="guinum">❹</span> zeigt Ihnen an, wieviele Muster in den
+untersuchten Plot-Kurven erkannt wurden. Außerdem wird das
+Report-File geschrieben.</p>
+<img alt="../_images/10000201000004E40000026C5BCC6D58152989B2.png" src="../_images/10000201000004E40000026C5BCC6D58152989B2.png" />
+</li>
+</ol>
+</section>
+<section id="verwendung-eines-existierenden-pattern-scanners">
+<h3><span class="section-number">23.10.2. </span>Verwendung eines existierenden Pattern-Scanners<a class="headerlink" href="#verwendung-eines-existierenden-pattern-scanners" title="Link to this heading"></a></h3>
+<p>Einen Pattern-Scanner, den Sie einmal konfiguriert haben, können Sie
+einer Vielzahl an anderen Plot-Kurven zuordnen. Gehen Sie hierzu wie
+folgt vor:</p>
+<ol class="arabic steps">
+<li><p>Klicken Sie mit der rechten Maustaste auf die Kurve die Sie
+untersuchen möchten und wählen Sie <span class="guilabel">Configure Pattern Scan</span>.</p>
+<img alt="../_images/10000201000002BC0000019435E84DFC0044B4A8.png" src="../_images/10000201000002BC0000019435E84DFC0044B4A8.png" />
+</li>
+<li><p>Im sich daraufhin öffnenden Dialog wählen Sie den Pattern-Scanner,
+den Sie verwenden möchten und klicken anschließend auf <span class="guilabel">OK</span>.</p>
+<img alt="../_images/100002010000023C00000252776076AF95048BA6.png" src="../_images/100002010000023C00000252776076AF95048BA6.png" />
+</li>
+</ol>
+</section>
+<section id="aktivieren-deaktivieren-der-mustererkennung-fur-eine-plot-kurve">
+<h3><span class="section-number">23.10.3. </span>Aktivieren / Deaktivieren der Mustererkennung für eine Plot-Kurve<a class="headerlink" href="#aktivieren-deaktivieren-der-mustererkennung-fur-eine-plot-kurve" title="Link to this heading"></a></h3>
+<p>Um die Mustererkennung für eine Plot-Kurve zu aktivieren oder zu
+deaktivieren, klicken sie mit der rechten Maustaste auf die Plot-Kurve <span class="guinum">❶</span>
+und wählen Sie <span class="menuselection">Enable / Disable Pattern Scan</span> <span class="guinum">❷</span>.</p>
+<img alt="Pattern Scan aktivieren / deaktivieren" src="../_images/100002010000013C000000F65410305BA939F782.png" />
+</section>
+<section id="ergebnisanalyse-fur-die-mustererkennung">
+<h3><span class="section-number">23.10.4. </span>Ergebnisanalyse für die Mustererkennung<a class="headerlink" href="#ergebnisanalyse-fur-die-mustererkennung" title="Link to this heading"></a></h3>
+<section id="id1">
+<h4>Übersicht<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>Mittels der Ergebnisanalyse für die Mustererkennung können Sie die
+einzelnen Resultate einer Mustererkennung innerhalb einer Messwertkurve
+miteinander vergleichen. Die einzelnen Resultate werden in einem
+separaten Analyse-Plot übereinandergelegt. Hierdurch können Sie
+beurteilen, wie sie sich im Verlauf der Messung verändert haben. Zur
+Ergebnisanalyse der Mustererkennung gelangen Sie über die Schaltfläche
+<span class="guilabel">Pattern Analysis</span> <span class="guinum">❶</span> in der Gruppe <span class="guilabel">DAQ</span> (siehe Abbildung unten).</p>
+<img alt="Pattern Analysis Übersicht" src="../_images/10000201000003B700000297E47C9D294ED8BE10.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Pattern-Analysis-Schaltfläche</strong> – Über diese Schaltfläche gelangen
+Sie zur Ergebnisanalyse der Mustererkennung.</p></li>
+<li><p><strong>Diagramm</strong> – Im Diagramm werden die Messwerte eines jeden einzelnen
+Resultats der Mustererkennung übereinander dargestellt. Hier können
+Sie die einzelnen Resultate miteinander vergleichen.</p></li>
+<li><p><strong>Legende</strong> – Die Legende enthält die Bezeichnung aller Kurven die im
+Diagramm mit der entsprechenden Farbe dargestellt werden. Die
+Kurvenbezeichnung enthält den relativen Zeitpunkt an dem das Resultat
+in der ursprünglichen Messkurve aufgetreten ist.</p></li>
+<li><p><strong>Werkzeugleiste</strong> – Hier finden Sie Schaltflächen zur Navigation
+innerhalb der Darstellung, sowie zur Auswahl der Plot-Kurve im
+Prozessdatendiagramm, deren Mustererkennungsresultate in der
+Ergebnisanalyse dargestellt werden sollen. Die Bedienelemente der
+Navigation arbeiten genauso wie die Bedienelemente im
+Prozessdatendiagramm (siehe Abschnitt <a class="reference internal" href="#diagramm-navigation-und-bedienung">Diagramm Navigation und Bedienung</a>) und
+werden daher nicht noch einmal erläutert.</p></li>
+</ol>
+</section>
+<section id="durchfuhrung-einer-ergebnisanalyse">
+<h4>Durchführung einer Ergebnisanalyse<a class="headerlink" href="#durchfuhrung-einer-ergebnisanalyse" title="Link to this heading"></a></h4>
+<p>In Abschnitt <a class="reference internal" href="#konfigurieren-und-ausfuhren-der-mustererkennung">Konfigurieren und Ausführen der Mustererkennung</a>
+wird die Durchführung einer Mustererkennung beschrieben. Angenommen nach
+der Durchführung einer Mustererkennung liegen zwei Plot-Kurven mit
+Resultaten vor (siehe Abbildung unten).</p>
+<img alt="Mustererkennung mit zwei Plot-Kurven" src="../_images/10000201000003B7000002978124C09E73F81507.png" />
+<ol class="arabic steps">
+<li><p>Im ersten Schritt wählen Sie aus der <span class="guilabel">DAQ</span>-Gruppe die Schaltfläche
+<span class="guilabel">Pattern Analysis</span> um zur Ergebnisanalyse zu gelangen.</p>
+<img alt="../_images/10000201000001CA0000011B98CA543B7F823990.png" src="../_images/10000201000001CA0000011B98CA543B7F823990.png" />
+</li>
+<li><p>Im zweiten Schritt wählen Sie aus dem Drop-Down-Feld in der Werkzeugleiste die
+Plot-Kurve aus, deren Ergebnisse Sie dargestellt haben möchten. Im
+dargestellten Beispiel wird „Channel 2 Extinction“ gewählt</p>
+<img alt="../_images/10000201000002D2000000AAF371EF2EC38EC678.png" src="../_images/10000201000002D2000000AAF371EF2EC38EC678.png" />
+</li>
+<li><p>Im Diagramm werden nun die einzelnen Ergebnisse der Mustererkennung für
+„Channel 2 Extinction“ dargestellt. Bei dieser Plot-Kurve wurden
+zwei Übereinstimmungen mit dem konfigurierten Muster festgestellt.
+Man erkennt, dass beide Resultate die gleiche Amplitude aufweisen.
+Das Resultat, welches nach 30,7 Sekunden aufgetreten ist, dauert
+jedoch um ca. 1,6 Sekunden länger als das Resultat, welches nach
+12,9 Sekunden aufgetreten ist.</p>
+<img alt="../_images/10000201000003B700000297B9603A75211E898D.png" src="../_images/10000201000003B700000297B9603A75211E898D.png" />
+</li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../spectroscopy_DE/spectroscopy_DE.html" class="btn btn-neutral float-left" title="22. Spektroskopie Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../canopentools_DE/canopentools_DE.html" class="btn btn-neutral float-right" title="24. CANopen Tools Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

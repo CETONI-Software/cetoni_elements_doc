@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <title>document checks icon</title>
+ <desc>document checks icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+ <g transform="translate(20)">
+  <path d="m224 0h-216c-4.4 0-8 3.6-8 8v496c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-344c0-8.85-3.6-16.85-9.4-22.65l-127.95-127.95c-5.8-5.8-13.8-9.4-22.65-9.4z" fill="#f1f8fb"/>
+  <path d="m2.1 509.35c1.45 1.65 3.55 2.65 5.9 2.65h368c4.4 0 8-3.6 8-8v-344c0-8.85-3.6-16.85-9.4-22.65-5.8-5.75-13.8-9.35-22.6-9.35h-48z" fill="#d4e8f1"/>
+  <path d="m374.6 137.35c-5.8-5.75-13.8-9.35-22.6-9.35h-88c-4.4 0-8-3.6-8-8v-88c0-8.5-3.4-16.6-9.4-22.6z" fill="#77b8d7"/>
+  <path d="m263.4 300.3 33.9 33.95-124.45 124.45-67.85-67.9 33.95-33.95 33.9 33.95zm0-158.7 33.9 33.9-124.45 124.45-67.85-67.85 33.95-33.95 33.9 33.95z" fill="#4ec1f5"/>
+  <path d="m280.35 158.55 16.95 16.95-124.45 124.45-67.85-67.85 16.95-17 50.9 50.95zm0 158.7 16.95 17-124.45 124.45-67.85-67.9 16.95-16.95 50.9 50.9z" fill="#0299e3"/>
+ </g>
+ <g transform="matrix(-1 0 0 1 737.67 0)">
+  <polygon transform="matrix(0,1.1263,1.1263,0,242.69,79.513)" points="384 96 256 224 128 96 208 96 208 0 304 0 304 96" fill="#ff7042"/>
+  <polygon transform="matrix(0,1.1263,1.1263,0,242.69,79.513)" points="384 96 256 224 256 0 304 0 304 96" fill="#f3501e" stroke-width=".7883"/>
+ </g>
+</svg>

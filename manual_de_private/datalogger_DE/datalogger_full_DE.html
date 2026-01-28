@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18. CSV-Datenlogger &mdash; CETONI Elements Privat Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="19. Grafischer Datenlogger" href="../graphlogger_DE/graphlogger_full_DE.html" />
+    <link rel="prev" title="17. Video Builder Plugin" href="../videobuilder_DE/videobuilder_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Privat Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">18. CSV-Datenlogger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">18.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#konfigurationsdialog">18.2. Konfigurationsdialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurationsdialog-aufrufen">18.2.1. Konfigurationsdialog aufrufen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-konfigurationsdialog">18.2.2. Übersicht Konfigurationsdialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#der-objektbaum">18.2.3. Der Objektbaum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objektbaum-filtern">18.2.4. Objektbaum filtern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liste-der-logger-kanale">18.2.5. Liste der Logger-Kanäle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datenaufzeichnung-konfigurieren">18.3. Datenaufzeichnung konfigurieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kanale-hinzufugen">18.3.1. Kanäle hinzufügen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kanale-loschen">18.3.2. Kanäle löschen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-eigenschaften-konfigurieren">18.3.3. CSV Eigenschaften konfigurieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dateinamen-und-ordner-wahlen">Dateinamen und Ordner wählen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aufzeichnungsintervall-festlegen">Aufzeichnungsintervall festlegen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datenfeld-trennzeichen-festlegen">Datenfeld-Trennzeichen festlegen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#protokollierung-starten-stoppen">18.4. Protokollierung starten / stoppen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-der-aufzeichnung">18.5. Format der Aufzeichnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-funktionen">18.6. Script Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-start-csv-logger">18.6.1. Funktion Start CSV Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-stop-csv-logger">18.6.2. Funktion Stop CSV Logger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_DE/python_DE.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">21. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">23. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">24. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">26. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Privat Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">18. </span>CSV-Datenlogger</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csv-datenlogger">
+<h1><span class="section-number">18. </span>CSV-Datenlogger<a class="headerlink" href="#csv-datenlogger" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">18.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Mit dem Datalogger-Plugin erhalten Sie ein leistungsfähiges Werkzeug zur
+Aufzeichnung beliebiger Prozessdaten von beliebigen Geräten in eine
+CSV-Datei. Das Dateiformat CSV steht für englisch <em>Comma-separated
+values</em> (seltener <em>Character-separated values</em>) und beschreibt den
+Aufbau einer Textdatei zur Speicherung oder zum Austausch einfach
+strukturierter Daten. Die Dateinamenserweiterung lautet <em>csv</em>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>CSV-Dateien können, wenn Sie das richtige
+Trennzeichen und das richtige Dezimalzeichen verwenden,
+ohne Probleme im Tabellenkalkulationsprogramm Microsoft
+Excel geöffnet und weiterverarbeitet werden.</p>
+</div>
+</section>
+<section id="konfigurationsdialog">
+<h2><span class="section-number">18.2. </span>Konfigurationsdialog<a class="headerlink" href="#konfigurationsdialog" title="Link to this heading"></a></h2>
+<section id="konfigurationsdialog-aufrufen">
+<h3><span class="section-number">18.2.1. </span>Konfigurationsdialog aufrufen<a class="headerlink" href="#konfigurationsdialog-aufrufen" title="Link to this heading"></a></h3>
+<img alt="Werkzeugleiste Datenprotokollierung" src="../_images/10000201000001B600000043E638CC3BBADD620A.png" />
+<p>Wenn das Datalogger-Plugin geladen wurde, sind in der Werkzeugleiste zwei
+zusätzliche Schaltflächen für die Konfiguration der Datenprotokollierung
+<span class="guinum">❶</span> und zum Start / Stopp der Aufzeichnung <span class="guinum">❷</span> vorhanden.</p>
+</section>
+<section id="ubersicht-konfigurationsdialog">
+<h3><span class="section-number">18.2.2. </span>Übersicht Konfigurationsdialog<a class="headerlink" href="#ubersicht-konfigurationsdialog" title="Link to this heading"></a></h3>
+<p>Sobald die Konfiguration der Datenaufzeichnung aktiviert wurde, wird der
+folgende Konfigurationsdialog angezeigt:</p>
+<img alt="../_images/configuration_dialog_overview.png" src="../_images/configuration_dialog_overview.png" />
+<p>Der
+Konfigurationsdialog zur Datenprotokollierung besteht im Wesentlichen
+aus den folgenden Bereichen:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Objektbaum (Object Tree)</strong> - Der Objektbaum enthält einen Baum aller
+Objekte und deren Eigenschaften, die in der Applikation vorhanden sind.
+Mit verschiedenen Filtern können Sie den Objektbaum nach bestimmten Objekten
+filtern. Standardmäßig werden nur Geräte und Geräteeigenschaften angezeigt.</p></li>
+<li><p><strong>Logger Channels</strong> - hier sehen Sie in tabellarischer Form alle
+Kanäle die vom Logger aufgezeichnet werden.</p></li>
+<li><p><strong>CSV File Configuration</strong> - in diesem Bereich können Sie verschiedene
+Einstellungen zur Aufzeichnung der CSV-Datei konfigurieren.</p></li>
+</ol>
+</section>
+<section id="der-objektbaum">
+<h3><span class="section-number">18.2.3. </span>Der Objektbaum<a class="headerlink" href="#der-objektbaum" title="Link to this heading"></a></h3>
+<p>Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte)
+und deren Kindobjekte (wie z.B. untergeordnete Geräte):</p>
+<img alt="../_images/object_tree.png" src="../_images/object_tree.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Objekt</strong> - Ein Objekt kann z.B. ein Gerät (hier <strong>Nemesys_M_1</strong>) oder
+ein anderes Anwendungsobjekt sein. In jedem Objekt finden Sie nach dem
+Aufklappen in der nächsten Ebene die beiden Elemente <strong>Children</strong> und
+<strong>Properties</strong>.</p></li>
+<li><p><strong>Children</strong> - Das Children Element gruppiert alle Kindobjekte des
+übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
+bzw. Geräte, die dem Gerät <strong>Nemesys_M_1</strong> untergeordnet sind bzw. zu
+diesem Gerät gehören.</p></li>
+<li><p><strong>Properties</strong> - Das Properties Element gruppiert alle Eigenschaften des
+übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
+des Gerätes <strong>Nemesys_M_1</strong>, welche im Logger aufgezeichnet werden können.</p></li>
+<li><p><strong>Untergeordnetes Objekt</strong> - In der <strong>Children</strong> Gruppe sind alle untergeordneten
+Objekte zu finden. Beim Beispiel <strong>Nemesys_M_1</strong> sind dies z.B. die
+digitalen und analogen Ein- und Ausgänge des Gerätes, wie z.B.
+<strong>Nemesys_M_1_DigOUT1</strong>. Diese Objekte können wiederum aufgeklappt werden,
+um deren Kindobjekte und Eigenschaften anzuzeigen.</p></li>
+<li><p><strong>Eigenschaft</strong> - In der <strong>Properties</strong> Gruppe finden sie alle Eigenschaften
+des übergeordneten Objektes. Beim Beispiel <strong>Nemesys_M_1</strong> sind dies z.B.
+die Eigenschaften <strong>SyringeFillLevel</strong> oder <strong>ActualFlow</strong>. Diese
+Eigenschaften können Sie einfach per Drag &amp; Drop in die Kanalliste ziehen,
+um deren Werte aufzuzeichnen.</p></li>
+</ol>
+</section>
+<section id="objektbaum-filtern">
+<h3><span class="section-number">18.2.4. </span>Objektbaum filtern<a class="headerlink" href="#objektbaum-filtern" title="Link to this heading"></a></h3>
+<p>Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox
+<span class="guilabel">Devices Only</span> <span class="guinum">❶</span> aktiviert. D.h. im Objektbaum werden nur
+Geräte, die vom internen Gerätemanager (<span class="guilabel">Core.DeviceManager</span>) verwaltet
+werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
+Objektbaum weitere Anwendungsobjekte angezeigt.</p>
+<p>Ist die Checkbox <span class="guilabel">Devices Only</span><span class="guinum">❶</span> aktiviert, wird Ihnen
+eine Auswahlbox <span class="guinum">❷</span> angezeigt, mit der Sie den Gerätebaum nach einem
+bestimmten Gerätetyp filtern können. In der Abbildung unten wurde z.B. nach
+Spritzenpumpen gefiltert:</p>
+<img alt="../_images/object_tree_filter.png" src="../_images/object_tree_filter.png" />
+<p>Zusätzlich finden Sie direkt über dem Objektbaum ein Eingabefeld <span class="guinum">❸</span>,
+mit dem Sie den Objektbaum nach einem bestimmten Begriff, z.B. einem
+Gerätenamen oder eine Geräteeigenschaft, filtern können. In der Abbildung unten
+wurde z.B. nach der Geräteeigenschaft <strong>ActualFlow</strong> gefiltert. D.h.,
+es werden nur Objekte oder Geräte mit dieser Eigenschaft im Objektbaum
+angezeigt:</p>
+<img alt="../_images/object_tree_filter_text.png" src="../_images/object_tree_filter_text.png" />
+</section>
+<section id="liste-der-logger-kanale">
+<h3><span class="section-number">18.2.5. </span>Liste der Logger-Kanäle<a class="headerlink" href="#liste-der-logger-kanale" title="Link to this heading"></a></h3>
+<img alt="../_images/logger_channels_view.png" src="../_images/logger_channels_view.png" />
+<p>Die Kanalliste <span class="guilabel">Logger Channels</span> zeigt in tabellarischer Form die
+Konfiguration des Loggers. Jede Zeile in der Tabelle
+entspricht genau einer Spalte in der CSV-Dateien die aufgezeichnet wird.
+Folgende Spalten sind vorhanden:</p>
+<ul>
+<li><p><strong>Object</strong> - enthält den Namen des Objektes, von dem der Wert einer
+bestimmten Eigenschaft (Property) aufgezeichnet werden soll und das Icon des
+Objekts.</p></li>
+<li><p><strong>Property</strong> - dies ist der Name der Objekteigenschaft / des
+Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
+Eigenschaft (numerischer oder boolescher Wert) können Sie an
+dem Typ-Icon einfach erkennen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numerischer Wert</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolescher Wert</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> - hier können Sie eine eigene Bezeichnung des Kanals
+festlegen. Diese Bezeichnung erscheint dann in der CSV-Datei in der
+Kopfzeile über der Spalte mit den Prozessdaten.</p></li>
+</ul>
+<p>Zum Hinzufügen eines Kanals zum Logger, führen Sie einfach
+folgende Schritte durch:</p>
+</section>
+</section>
+<section id="datenaufzeichnung-konfigurieren">
+<h2><span class="section-number">18.3. </span>Datenaufzeichnung konfigurieren<a class="headerlink" href="#datenaufzeichnung-konfigurieren" title="Link to this heading"></a></h2>
+<section id="kanale-hinzufugen">
+<h3><span class="section-number">18.3.1. </span>Kanäle hinzufügen<a class="headerlink" href="#kanale-hinzufugen" title="Link to this heading"></a></h3>
+<p><span class="step">Schritt 1 - Kanäle hinzufügen</span></p>
+<p>Ziehen Sie aus dem Objektbaum <span class="guilabel">Object Tree</span> die Objekteigenschaft,
+welche Sie aufzeichnen möchten, per Drag &amp; Drop in die Kanalliste
+<span class="guilabel">Logger Channels</span>. Der neue Kanal wird in der Zeile eingefügt, an
+der sie die Maustaste loslassen (siehe Abbildung unten).</p>
+<img alt="../_images/csv_logger_drag_and_drop.png" src="../_images/csv_logger_drag_and_drop.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den
+Objektbaum nach verschiedenen Kriterien filtern.</p>
+</div>
+<p><span class="step">Schritt 2 - Kanalbeschriftung festlegen</span></p>
+<p>In der Spalte <span class="guilabel">Label</span> können Sie für jeden Kanal eine eigene
+Beschriftung vergeben. Diese Beschriftung wird später dann in der
+CSV-Datei in der Kopfzeile in der Spalte des entsprechenden Kanals
+erscheinen.</p>
+<img alt="Kanalbeschriftung ändern" src="../_images/log_channel_label.png" />
+<p>Klicken Sie zum Ändern der
+Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
+geben Sie dann die neue Bezeichnung ein.</p>
+</section>
+<section id="kanale-loschen">
+<h3><span class="section-number">18.3.2. </span>Kanäle löschen<a class="headerlink" href="#kanale-loschen" title="Link to this heading"></a></h3>
+<p>Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
+mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
+<kbd class="kbd docutils literal notranslate">Delete</kbd>-Taste drücken oder mit der rechten Maustaste das Kontextmenü
+aufrufen und den Menüpunkt <span class="menuselection">Delecte Selection</span> auswählen.</p>
+<p><img alt="image14" src="../_images/100000000000012100000091D7BFE42C03BA6ECE.png" /> <img alt="image15" src="../_images/10000000000001220000008F424E5926A933056B.png" /></p>
+<p>Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
+Kontextmenü den Punkt <span class="menuselection">Clear Logger</span> auswählen.</p>
+</section>
+<section id="csv-eigenschaften-konfigurieren">
+<h3><span class="section-number">18.3.3. </span>CSV Eigenschaften konfigurieren<a class="headerlink" href="#csv-eigenschaften-konfigurieren" title="Link to this heading"></a></h3>
+<p>Im Bereich <span class="guilabel">CSV File Configuration</span> können Sie globale Eigenschaften
+des CSV Loggers und zum
+Format der Aufzeichnung konfigurieren (siehe Abbildung unten).</p>
+<img alt="CSV Eigenschaften konfigurieren" src="../_images/10000201000002740000005D7814BAB01380FB40.png" />
+<section id="dateinamen-und-ordner-wahlen">
+<h4>Dateinamen und Ordner wählen<a class="headerlink" href="#dateinamen-und-ordner-wahlen" title="Link to this heading"></a></h4>
+<p>Mit dem Parameter <span class="guilabel">Log Filename</span> <span class="guinum">❶</span> können Sie den Dateinamen der
+Protokolldatei festlegen. Klicken Sie dafür auf die Schaltfläche mit dem
+Ordnersymbol und wählen Sie dann in dem Dateidialog den Zielordner und
+den Dateinamen aus.</p>
+<img alt="Dateinamen und Ordner der Protokolldatei wählen" src="../_images/100000000000028F000001D742CE00F60CA536D2.png" />
+</section>
+<section id="aufzeichnungsintervall-festlegen">
+<h4>Aufzeichnungsintervall festlegen<a class="headerlink" href="#aufzeichnungsintervall-festlegen" title="Link to this heading"></a></h4>
+<p>Im Feld <span class="guilabel">Log Interval</span> <span class="guinum">❷</span> können Sie das Intervall für die Aufzeichnung
+eines CSV-Datensatzes mit den Werten aller Kanäle festlegen. Die Einheit
+für das Intervall sind Sekunden und Sie können das Intervall mit einer
+Auflösung von 0,1 Sekunden festlegen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wählen Sie das Intervall so groß wie
+möglich und so klein wie nötig um die Menge der
+aufzuzeichnenden Daten so gering wie möglich zu halten.</p>
+</div>
+</section>
+<section id="datenfeld-trennzeichen-festlegen">
+<h4>Datenfeld-Trennzeichen festlegen<a class="headerlink" href="#datenfeld-trennzeichen-festlegen" title="Link to this heading"></a></h4>
+<p>Mit dem Auswahlfeld <span class="guilabel">CSV Separator</span> <span class="guinum">❸</span> können Sie das Trennzeichen
+auswählen, dass zur Trennung der einzelnen Datenfelder (Spalten)
+verwendet werden soll. Je nach Applikation, die Sie zur Auswertung der
+Daten verwenden, kann es notwendig sein, ein bestimmtes Trennzeichen
+auszuwählen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Um die CSV Log-Dateien optimal in Microsoft
+Excel importieren zu können, sollten Sie als
+Trennzeichen ein Semikolon verwenden.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Alle Konfigurationseinstellungen des
+Prozessdatenloggers werden beim Verlassen des
+Konfigurationsdialogs gespeichert und sind auch nach
+einem erneuten Start der Anwendung vorhanden.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="protokollierung-starten-stoppen">
+<h2><span class="section-number">18.4. </span>Protokollierung starten / stoppen<a class="headerlink" href="#protokollierung-starten-stoppen" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg"><img alt="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" class="align-left" height="60" src="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" width="60" /></a>
+<p>Über die entsprechende Schaltfläche in der Werkzeugleiste
+können Sie die Datenaufzeichnung starten und stoppen.</p>
+<p>Beim Start der Aufzeichnung wird eine neue Protokolldatei erstellt. An
+den Dateinamen der Protokolldatei wird ein Zeitstempel mit dem Datum und
+der Uhrzeit zum Zeitpunkt der Erstellung der Datei angehängt (Syntax: <code class="file docutils literal notranslate"><span class="pre">_YYYYMMDD_hhmmss</span></code>). D.h wenn
+Sie z.B. den Dateinamen <code class="file docutils literal notranslate"><span class="pre">ProcessDataLog.csv</span></code> konfigurieren, wird beim
+Starten der Aufzeichnung z.B. eine Datei mit dem Namen
+<code class="file docutils literal notranslate"><span class="pre">ProcessDataLog_20121105_103209.csv</span></code> angelegt. D.h. Die Datei wurde am
+5.11.2012 um 10:32 Uhr und 9 Sekunden angelegt.</p>
+<p>So wird bei jedem erneuten Start der Aufzeichnung eine neue
+Protokolldatei mit einem eindeutigen Zeitstempel angelegt.</p>
+</section>
+<section id="format-der-aufzeichnung">
+<h2><span class="section-number">18.5. </span>Format der Aufzeichnung<a class="headerlink" href="#format-der-aufzeichnung" title="Link to this heading"></a></h2>
+<p>Die aufgezeichneten CSV-Dateien sind wir folgt aufgebaut:</p>
+<ul class="simple">
+<li><p>Die CSV-Dateien besteht aus einer Reihe von Datensätzen (Zeilen) die
+durch einen Zeilenumbruch getrennt sind.</p></li>
+<li><p>Jeder Datensatz besteht aus einer Reihe von Datenfeldern (Spalten)
+die durch ein Trennzeichen (z.B. Semikolon) getrennt sind.</p></li>
+<li><p>Die erste Spalte enthält stets einen relativen Zeitstempel des
+Zeitpunktes an dem der betreffende Datensatz (Zeile) aufgezeichnet
+wurde.</p></li>
+<li><p>Die erste Zeile enthält die Kanalbezeichnung die vom Anwender
+konfiguriert wurde.</p></li>
+</ul>
+<img alt="CSV Log-Datei nach dem Öffnen in Microsoft Excel" src="../_images/10000000000002EF000000E6889ECE76397F99EB.png" />
+<p>Wenn Sie zur Auswertung den absoluten Zeitstempel der Aufzeichnung eines
+Datensatzes benötigen, können Sie sich diesen Zeitpunkt sehr einfach
+ausrechnen (z.B. in einer extra Spalte der Tabellenkalkulation). Der
+absolute Zeitpunkt t<sub>0</sub> ist in dem Dateinamen der Log-Datei
+enthalten. D.h. Sie können die absoluten Zeitpunkte stets durch Addition
+von t<sub>0</sub> und dem relativen Zeitstempel in der ersten Spalte eines
+Datensatzes berechnen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Der absolute Zeitpunkt t0 der Aufzeichnung
+einer CSV Log-Datei ist im Dateinamen enthalten.</p>
+</div>
+</section>
+<section id="script-funktionen">
+<h2><span class="section-number">18.6. </span>Script Funktionen<a class="headerlink" href="#script-funktionen" title="Link to this heading"></a></h2>
+<p>Der CSV-Datenlogger kann über das Scriptsystem der Software gestartet
+und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
+mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
+finden Sie in der <span class="guilabel">Logging</span>-Kategorie der verfügbaren Scriptfunktionen.</p>
+<img alt="Logger Script Funktionen" src="../_images/10000201000001060000008EE8252D88C2E8FBC7.png" />
+<section id="funktion-start-csv-logger">
+<h3><span class="section-number">18.6.1. </span>Funktion Start CSV Logger<a class="headerlink" href="#funktion-start-csv-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg"><img alt="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" class="align-left" height="60" src="../_images/1000106B000034EB000034EBCD48AF0AC896EFC6.svg" width="60" /></a>
+<p>Mit dieser Funktion starten Sie den CSV-Logger mit den
+aktuell konfigurierten Einstellungen und Kanälen. Eine neue Log-Datei
+wird mit aktuellem Zeitstempel angelegt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="funktion-stop-csv-logger">
+<h3><span class="section-number">18.6.2. </span>Funktion Stop CSV Logger<a class="headerlink" href="#funktion-stop-csv-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg"><img alt="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg" class="align-left" height="60" src="../_images/1000101A000034EB000034EB2614684FE9CC8E2D.svg" width="60" /></a>
+<p>Diese Funktion stoppt das aktuelle Logging und schließt die
+geöffnete Log-Datei.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../videobuilder_DE/videobuilder_DE.html" class="btn btn-neutral float-left" title="17. Video Builder Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../graphlogger_DE/graphlogger_full_DE.html" class="btn btn-neutral float-right" title="19. Grafischer Datenlogger" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

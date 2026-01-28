@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controller Channel List &mdash; CETONI Elements Private Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Private Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_EN/python_EN.html">21. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">23. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">24. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">26. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Private Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Controller Channel List</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="controller-channel-list">
+<h1>Controller Channel List<a class="headerlink" href="#controller-channel-list" title="Link to this heading"></a></h1>
+<p>All controller channels are shown in the <span class="guilabel">Controller Channels</span> list.</p>
+<p><img alt="Figure 1: Controller Channel list" src="../_images/10000000000001D5000000F75FCDB73E.png" /></p>
+<p>You can identify the different types of channels (cooling module Q-,
+heating module Q+…) by the different signs in front of the module
+names (see Figure above). The list of controller channels is a
+<a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a>,
+that you can move freely at any time to another position in the
+graphic interface by dragging and dropping the title bar, or you can
+move it out of the interface to become a separate window.</p>
+<p>The channel list shows all the available controller channels in
+tabular form. The following columns are present:</p>
+<ul class="simple">
+<li><p><strong>Controller</strong> - shows the name of the controller module and indicates
+its type by a sign.</p></li>
+<li><p><strong>On</strong> - indicates by a green LED whether the controller is switched on
+or off. Click the LED to switch the control loop on / off.</p></li>
+<li><p><strong>Setpoint</strong> -contains the set setpoint of the controller channel</p></li>
+<li><p><strong>Actual Value</strong> - shows the actual value</p></li>
+</ul>
+<section id="channel-types">
+<h2>Channel types<a class="headerlink" href="#channel-types" title="Link to this heading"></a></h2>
+<p>The following types of channels are currently supported:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004AA90000387200003872C4D36C50.svg"><img alt="image1" src="../_images/10004AA90000387200003872C4D36C50.svg" width="40" /></a></p></td>
+<td><p>Qmix Q- cooling modules</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100051AC0000387200003872CA0648E8.svg"><img alt="image2" src="../_images/100051AC0000387200003872CA0648E8.svg" width="40" /></a></p></td>
+<td><p>Qmix Q+ heating modules</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100046F500003872000038724548056A.svg"><img alt="image3" src="../_images/100046F500003872000038724548056A.svg" width="40" /></a></p></td>
+<td><p>dynamically generated, custom channels</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="changing-channel-names">
+<h2>Changing channel names<a class="headerlink" href="#changing-channel-names" title="Link to this heading"></a></h2>
+<p>You can change the name of a channel at any time and, for example,
+assign a name suitable for your particular application.</p>
+<p><img alt="Figure 2: Changing channel names" src="../_images/10000000000001D5000000F7561B0C23.png" /></p>
+<p>You change a name by the following steps:</p>
+<ol class="arabic simple steps">
+<li><p>Double-click the table cell containing the name you want to change.</p></li>
+<li><p>Enter the new name in the Editing window which now appears (Figure
+above).</p></li>
+<li><p>Complete your entry by pressing the <kbd class="kbd docutils literal notranslate">Return</kbd> key.</p></li>
+</ol>
+</section>
+<section id="switching-control-devices-on-off">
+<h2>Switching control devices on / off<a class="headerlink" href="#switching-control-devices-on-off" title="Link to this heading"></a></h2>
+<p><img alt="Figure 3: Switching control devices on/off" src="../_images/10000000000001D5000000D144CCA89A.png" /></p>
+<p>To switch the controller on or off, simply click the LED of the channel you
+want to switch.</p>
+</section>
+<section id="entering-setpoint">
+<h2>Entering setpoint<a class="headerlink" href="#entering-setpoint" title="Link to this heading"></a></h2>
+<p>To input a setpoint, double-click in the <span class="guilabel">Setpoint</span> column of the channel
+with the setpoint you want to change. Now enter the setpoint in the
+editing window that opens (Figure below) or use the arrow buttons to
+raise or lower the setpoint incrementally.</p>
+<p><img alt="Figure 4: Changing setpoint" src="../_images/10000000000001D5000000F728D7F291.png" /></p>
+</section>
+</section>
+<section id="context-menu-for-control-channels">
+<h1>Context menu for control channels<a class="headerlink" href="#context-menu-for-control-channels" title="Link to this heading"></a></h1>
+<p>By right-click into the control channel list you can display a context
+menu with additional functions.</p>
+<img alt="../_images/100002010000022300000129ACB2B97D.png" src="../_images/100002010000022300000129ACB2B97D.png" />
+<p>The context menu contains the following menu items:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000BB30000388E0000388E998532D4.svg"><img alt="image18" src="../_images/10000BB30000388E0000388E998532D4.svg" width="40" /></a></p></td>
+<td><p><strong>Configure Channel…</strong></p>
+<p>Opens the configuration dialog of the channel for
+configuring all channel parameters.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000046A0000388E0000388EB24BAE1A.svg"><img alt="image19" src="../_images/1000046A0000388E0000388EB24BAE1A.svg" width="40" /></a></p></td>
+<td><p><strong>Restore Default Settings</strong></p>
+<p>Restores the default settings of the channel.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100002C10000388E0000388E08119BA0.svg"><img alt="image20" src="../_images/100002C10000388E0000388E08119BA0.svg" width="40" /></a></p></td>
+<td><p><strong>Reset Calibration</strong></p>
+<p>Resets the two-point scaling to scale factor 1 and
+offset 0</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100010A40000388E0000388EA92DC2A7.svg"><img alt="image21" src="../_images/100010A40000388E0000388EA92DC2A7.svg" width="40" /></a></p></td>
+<td><p><strong>Configure scaling…</strong></p>
+<p>Opens the configuration dialog displaying the page for
+configuration of the controller scaling.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AC700003872000038724DFCC517.svg"><img alt="image22" src="../_images/10000AC700003872000038724DFCC517.svg" width="40" /></a></p></td>
+<td><p><strong>Select PID parameters…</strong></p>
+<p>Opens the configuration dialog displaying the page for
+configuration of the PID control parameters.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100015FC00003872000038727653FE88.svg"><img alt="image23" src="../_images/100015FC00003872000038727653FE88.svg" width="40" /></a></p></td>
+<td><p><strong>Delete user channel</strong></p>
+<p>If the selected channel is a user-specified channel, it
+is deleted by selecting this menu item. For other
+channels this menu item is disabled.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100015DE0000387200003872946736F7.svg"><img alt="image24" src="../_images/100015DE0000387200003872946736F7.svg" width="40" /></a></p></td>
+<td><p><strong>Create user channel</strong></p>
+<p>Opens up the wizard for creating user-specified control
+channels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configure-channel-settings">
+<h1>Configure Channel Settings<a class="headerlink" href="#configure-channel-settings" title="Link to this heading"></a></h1>
+<p>For opening the scaling configuration dialog select <span class="menuselection">Configure channel</span>
+in the context menu of the control channel.</p>
+<p><img alt="Figure 6: Configure scaling" src="../_images/100002010000034C000001C3C2B07A89.png" /></p>
+<p>The configuration of the general channel
+settings and the calibration of the controller channels are identical to
+the configuration of the I/O channels of the <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#i-o-plugin"><span class="std std-ref">I/O Plugin</span></a>. For a
+detailed description read the section <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#i-o-channel-configuration"><span class="std std-ref">I/O Channel Configuration</span></a>.</p>
+</section>
+<section id="selection-and-configuration-of-controller-parameters">
+<h1>Selection and configuration of controller parameters<a class="headerlink" href="#selection-and-configuration-of-controller-parameters" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>To set the optimal control behavior, you can adjust the controller
+parameters of each single channel. For this you can either choose from a
+list of predefined PID parameter sets or create new parameter sets.</p>
+<p>To access the controller parameters selection, choose
+<span class="menuselection">Select PID parameters</span> from the controller channel context
+menu.</p>
+<p><img alt="Figure 7: Selecting a control parameter set" src="../_images/100002010000034C000002287E739DAD.png" /></p>
+<p>The upper area shows the current parameters of the device <span class="guinum">❶</span>
+<span class="guilabel">Current Channel Parameters</span>. In the lower area you will find a list
+of <span class="guilabel">PID Parameter Presets</span> <span class="guinum">❷</span>.</p>
+</section>
+<section id="changing-controller-parameters">
+<h2>Changing controller parameters<a class="headerlink" href="#changing-controller-parameters" title="Link to this heading"></a></h2>
+<p>To edit the current controller parameters, double-click with the mouse
+in the <span class="guilabel">Current Channel Parameters</span> area in the field you want to change
+and enter the new value:</p>
+<p><img alt="Figure 8: Changing controller parameters" src="../_images/100002010000025A0000008921C42A7E.png" /></p>
+</section>
+<section id="selecting-a-pid-parameter-preset">
+<h2>Selecting a PID Parameter Preset<a class="headerlink" href="#selecting-a-pid-parameter-preset" title="Link to this heading"></a></h2>
+<p><img alt="Figure 9: Selecting a PID Parameter Preset" src="../_images/100002010000034C00000228CAC67298.png" /></p>
+<p>Select a PID Preset from
+the table of available presets by left-clicking on it <span class="guinum">❶</span> and then click
+on the <span class="guilabel">Apply Preset</span> <span class="guinum">❷</span> button to apply the control parameters. The
+values in the <span class="guilabel">Current Channel Parameters</span> <span class="guinum">❸</span> area are updated with the
+new values from the preset. Complete the configuration by clicking the
+<span class="guilabel">Ok</span> <span class="guinum">❹</span> button.</p>
+<p>The PID parameter presets already contain default controller parameter
+sets for different devices like Qmix Q+, Qmix Q- or Qmix TC or
+certain accessories, i.e. syringe heating or tube heating.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For optimum adaptation to the controlled
+systems in your application, you can create your own
+parameter sets with controller parameters.</p>
+</div>
+</section>
+<section id="creating-a-pid-parameter-preset">
+<h2>Creating a PID Parameter Preset<a class="headerlink" href="#creating-a-pid-parameter-preset" title="Link to this heading"></a></h2>
+<p>By selecting the <span class="guilabel">Create Preset</span> button <span class="guinum">❶</span> you create a new set of
+controller parameters <span class="guinum">❷</span>. (see figure below) You can then edit the
+individual values of the parameter set by double-clicking in a field <span class="guinum">❸</span>
+and entering a new value.</p>
+<p><img alt="Figure 10: Creating a PID Parameter Preset" src="../_images/1000020100000335000000F62671DF1C.png" /></p>
+<p>Enter a meaningful, unique
+name for each parameter set and adapt the controller parameters to the
+controlled system in your application. For finding adequate controller
+parameters proceed as described in section <a class="reference internal" href="qmixcontroller_pid_EN.inc.html#how-to-set-controller-parameters"><span class="std std-ref">How to set controller parameters</span></a>.</p>
+</section>
+<section id="deleting-pid-parameter-presets">
+<h2>Deleting PID Parameter Presets<a class="headerlink" href="#deleting-pid-parameter-presets" title="Link to this heading"></a></h2>
+<p>Select a set of controller parameters from the table <span class="guinum">❶</span> and left-click
+the <span class="guilabel">Delete Selected Preset</span> button <span class="guinum">❷</span> for deleting it. (see figure
+below).</p>
+<img alt="../_images/1000020100000333000000D15C7BAB96.png" src="../_images/1000020100000333000000D15C7BAB96.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Predefined controller parameters are
+locked and can not be deleted. Locked parameters can be
+recognized in the table by the lock symbol.</p>
+</div>
+</section>
+</section>
+<section id="user-defined-control-channels">
+<h1>User defined control channels<a class="headerlink" href="#user-defined-control-channels" title="Link to this heading"></a></h1>
+<section id="introduction">
+<span id="user-defined-control-channels-introduction"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>You can create customized control channels using arbitrary device
+properties for control loop input and output. Thus using i.e. a pressure
+measurement channel of a QmixP device and a Nemesys syringe pump you
+can build up a pressure control.</p>
+</section>
+<section id="creating-control-channels">
+<h2>Creating control channels<a class="headerlink" href="#creating-control-channels" title="Link to this heading"></a></h2>
+<p>By right-clicking the control channel list and selecting the menu item
+<span class="menuselection">Create user channel</span> in the context menu, you open the dialog
+for creating custom control channels.</p>
+<p><img alt="Figure 12: Open controller channel creation dialog" src="../_images/100002010000022300000129BD54D696.png" /></p>
+<p>In the configuration wizard that is displayed now, proceed as follows:</p>
+<p><img alt="Figure 13: Selecting input and output values of the controller channel" src="../_images/1000020100000340000001A6ED2C69A6.png" /></p>
+<ol class="arabic simple">
+<li><p>Select the device that provides the measurement value of the controller:
+<span class="guilabel">Controller Input</span></p></li>
+<li><p>Select the device property that is used as measurement value.</p></li>
+<li><p>Select the device that provides the control value of the controller:
+<span class="guilabel">Controller Output</span></p></li>
+<li><p>Select the device property that is used as control value.</p></li>
+<li><p>Click <span class="guilabel">Next</span> in order to proceed.</p></li>
+</ol>
+<p>The final page of the wizard allows configuration of controller channel
+parameters as described in section <a class="reference internal" href="qmixcontroller_full_EN.html#selection-and-configuration-of-controller-parameters"><span class="std std-ref">Selection and configuration of controller parameters</span></a>. You complete the control channel creation by clicking
+the <span class="guilabel">Finish</span> button.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can change the controller parameters at
+any later time and adapt them perfectly to your
+controlled system.</p>
+</div>
+</section>
+<section id="changing-the-output-value-scaling-or-unit">
+<h2>Changing the output value scaling or unit<a class="headerlink" href="#changing-the-output-value-scaling-or-unit" title="Link to this heading"></a></h2>
+<p>The output value is determined by the PID control algorithm and written
+to the output device without any scaling information. This means that
+you need to adjust the controller parameters, in particular the control
+value limits, each time you change the scaling or the unit of the
+appropriate device. With a Nemesys dosing module this is also true if
+you change the syringe size.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If you change the scaling or unit of a
+device beeing part of a control loop you must check the
+control parameters and adjust them if necessary. With a
+neMESYS dosing module this also applies if you change
+the syringe.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

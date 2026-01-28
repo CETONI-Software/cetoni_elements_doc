@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9. Graphical Data Logger &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Appendix" href="../Appendix_EN/Appendix_EN.html" />
+    <link rel="prev" title="8. CSV Data Logger" href="../datalogger_EN/datalogger_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Graphical Data Logger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">9.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">9.2. Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-dialog">9.3. Configuration Dialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">9.3.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-tree">9.3.2. Object Tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtering-the-object-tree">9.3.3. Filtering the Object Tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-logger-channels">9.3.4. List of Logger Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logger-configuration">9.4. Logger Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-logger-channels">9.4.1. Add Logger Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-channels">9.4.2. Deleting Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#start-stop-data-logging">9.5. Start/Stop Data Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagram-navigation-use">9.6. Diagram Navigation &amp; Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagram-navigation-overview">9.6.1. Diagram Navigation Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-displayed-section">9.6.2. Changing the Displayed Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-curve-values">9.6.3. Display Curve Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zooming-via-the-mouse-wheel">9.6.4. Zooming via the Mouse Wheel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-section">9.6.5. Display Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-fit-auto-scale">9.6.6. Auto-Fit &amp; Auto-Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-hide-individual-curves">9.6.7. Show/Hide Individual Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-curve-color">9.6.8. Select Curve Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-plot-image">9.6.9. Exporting Plot Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-export">9.6.10. CSV Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-of-diagram-data">9.6.11. Deleting of Diagram Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switching-the-scaling-of-the-x-axis">9.6.12. Switching the scaling of the X-axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-plot-data">9.6.13. Saving plot data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-plot-data">9.6.14. Loading plot data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Graphical Data Logger</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graphical-data-logger">
+<h1><span class="section-number">9. </span>Graphical Data Logger<a class="headerlink" href="#graphical-data-logger" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">9.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In addition to recording data in CSV files, you can use the Datalogger plug-in
+to record process data in diagrams and thus graphically visualise the changes
+in these process data over time in real time. Use the push button
+<span class="guilabel">Logging</span> <span class="guinum">❶</span> (see figure below) in the sidebar to display
+the process data graphs or show the logging view via the main menu
+:<span class="menuselection">Window → ShowView → Logging</span> <span class="guinum">❷</span>.</p>
+<p>To display the process data diagrams, click on the <span class="guilabel">Logging</span> button
+<span class="guinum">❶</span> in the sidebar (see figure below) or show the Logging View via the
+main menu :<span class="menuselection">Window → ShowView → Logging</span> <span class="guinum">❷</span>.</p>
+<p><img alt="image1" src="../_images/10000201000002AB000001ABF50BD6283D944D83.png" /></p>
+<p>The main elements of the process data graph area are as
+follows:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Logging button</strong> - Click this to show the process data graphs.</p></li>
+<li><p><strong>View Menu</strong>- this can also be used to show and hide the process data
+graph</p></li>
+<li><p><strong>Graph canvas</strong> - This displays the curves of all process data sets
+that are being recorded.</p></li>
+<li><p><strong>Legend</strong> - The legend lists all data sets that are displayed with
+their respective colors. Here you can toggle between whether or not a
+curve is being displayed.</p></li>
+<li><p><strong>Toolbar</strong> - Here you find buttons to configure the data logging, to
+start and stop the recording and to navigate the display.</p></li>
+</ol>
+</section>
+<section id="toolbar">
+<h2><span class="section-number">9.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg"><img alt="image32" src="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" width="40" /></a></p></td>
+<td><p>Opens the configuration dialog of the graphic process
+data logger.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="image33" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="40" /></a></p></td>
+<td><p>Toggles the recording of process data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg"><img alt="image34" src="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" width="40" /></a></p></td>
+<td><p>Panning tool to move the currently displayed section of
+the graph.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg"><img alt="image35" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" width="40" /></a></p></td>
+<td><p>Draws a zoom-in frame to enlarge a desired area of the
+graph.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg"><img alt="image36" src="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg" width="40" /></a></p></td>
+<td><p>Auto-scales the X axis to fit all process data on the
+screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC241061.svg"><img alt="image37" src="../_images/10000AA70000350500003505B68BB28A6EC241061.svg" width="40" /></a></p></td>
+<td><p>Auto-scales the Y axis to fit all process data on the
+screen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA4481.svg"><img alt="image38" src="../_images/10000D410000350500003505737D2F8FEABFA4481.svg" width="40" /></a></p></td>
+<td><p>Auto-scales both X and Y axes to fit all process data
+on the screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg"><img alt="image39" src="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg" width="40" /></a></p></td>
+<td><p>Activates auto-scaling: during a recording, both x- and
+y-axes are continuously rescaled to fit all process
+data on the screen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000032600003505000035052A2D87EA9B64D7C01.svg"><img alt="image40" src="../_images/1000032600003505000035052A2D87EA9B64D7C01.svg" width="40" /></a></p></td>
+<td><p>Show all curves. If curves are hidden, they are
+displayed again.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100019CB000035050000350509AD2B23340F765E1.svg"><img alt="image41" src="../_images/100019CB000035050000350509AD2B23340F765E1.svg" width="40" /></a></p></td>
+<td><p>Clear plot data. Deletes all data from the diagram.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100018130000350500003505CADD59D81E3150FD1.svg"><img alt="image42" src="../_images/100018130000350500003505CADD59D81E3150FD1.svg" width="40" /></a></p></td>
+<td><p>Toggle X-axis scale. Skalierung umschalten. This
+switches the scaling of the X-axis between absolute
+date/time stamp and relative time in seconds and
+milliseconds since the start of recording.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg"><img alt="image43" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" width="40" /></a></p></td>
+<td><p>Export plot image. Exports an image of the currently
+displayed section.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg"><img alt="image44" src="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" width="40" /></a></p></td>
+<td><p>Export CSV-File. Exports all data of the plot as CSV
+file</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000040D000035050000350542F550057A626C6D.svg"><img alt="image45" src="../_images/1000040D000035050000350542F550057A626C6D.svg" width="40" /></a></p></td>
+<td><p>Saves the plot data to a file that can later be
+reloaded into the plot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000044C000035050000350571A7475A9B633EF8.svg"><img alt="image46" src="../_images/1000044C000035050000350571A7475A9B633EF8.svg" width="40" /></a></p></td>
+<td><p>Loads previously saved plot data</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configuration-dialog">
+<h2><span class="section-number">9.3. </span>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3><span class="section-number">9.3.1. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg"><img alt="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" class="align-left" height="60" src="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" width="60" /></a>
+<p>Click on the button <span class="guilabel">Configure process data graph</span> in the
+toolbar to open the configuration dialog. This opens
+the <em>Plot Logger Configuration</em> dialog that contains the following main
+sections:</p>
+<img alt="../_images/graph_logger_configuration_dialog.png" src="../_images/graph_logger_configuration_dialog.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Object Tree</strong> - The Object Tree contains a tree of all objects and their
+properties that are present in the application. You can use various filters
+to filter the object tree for specific objects. By default, only devices and
+device properties are displayed.</p></li>
+<li><p><strong>Logger Channels</strong> - lists all channels that may be recorded by the
+logger.</p></li>
+<li><p><strong>Logger Configuration</strong> - in this section you find various settings
+to configure the data recording.</p></li>
+</ol>
+</section>
+<section id="object-tree">
+<h3><span class="section-number">9.3.2. </span>Object Tree<a class="headerlink" href="#object-tree" title="Link to this heading"></a></h3>
+<p>In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):</p>
+<img alt="../_images/object_tree.png" src="../_images/object_tree.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Object</strong> - An object can be, for example, a device (here <strong>Nemesys_M_1</strong>) or
+another application object. You will find the two elements <strong>Children</strong> and
+<strong>Properties</strong> in each object after expanding it in the next level.</p></li>
+<li><p><strong>Children</strong> - The Children element groups all child objects of the parent
+object. In our example, these are all objects or devices that are
+subordinate to the device <strong>Nemesys_M_1</strong> or belong to this device.</p></li>
+<li><p><strong>Properties</strong> - The Properties element groups all properties of the parent
+object. In our example, these are all the properties of the <strong>Nemesys_M_1</strong>
+device that can be recorded in the logger.</p></li>
+<li><p><strong>Child Object</strong> - All child objects can be found in the <strong>Children</strong> group.
+In the example <strong>Nemesys_M_1</strong>, these are, for example, the digital and
+analogue inputs and outputs of the device, such as <strong>Nemesys_M_1_DigOUT1</strong>.
+These objects can in turn be expanded to display their child objects and
+properties.</p></li>
+<li><p><strong>Property</strong> - In the <strong>Properties</strong> group you will find all properties of
+the parent object. In the example of <strong>Nemesys_M_1</strong>, these are, for example,
+the properties <strong>SyringeFillLevel</strong> or <strong>ActualFlow</strong>. You can simply
+drag and drop these properties into the channel list to record their values.</p></li>
+</ol>
+</section>
+<section id="filtering-the-object-tree">
+<h3><span class="section-number">9.3.3. </span>Filtering the Object Tree<a class="headerlink" href="#filtering-the-object-tree" title="Link to this heading"></a></h3>
+<p>Above the object tree you will find various filters with which you can filter
+the object tree according to certain criteria. The <span class="guilabel">Devices Only</span> <span class="guinum">❶</span>
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (<span class="guilabel">Core.DeviceManager</span>) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.</p>
+<p>If the <span class="guilabel">Devices Only</span><span class="guinum">❶</span> checkbox is activated, a selection
+box <span class="guinum">❷</span> is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was
+filtered for syringe pumps:</p>
+<img alt="../_images/object_tree_filter.png" src="../_images/object_tree_filter.png" />
+<p>In addition, you will find an input field <span class="guinum">❸</span> directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a
+device name or a device property. In the image below, for example, a filter has
+been set for the device property <strong>ActualFlow</strong>. This means that only objects
+or devices with this property are displayed in the object tree:</p>
+<img alt="../_images/object_tree_filter_text.png" src="../_images/object_tree_filter_text.png" />
+</section>
+<section id="list-of-logger-channels">
+<h3><span class="section-number">9.3.4. </span>List of Logger Channels<a class="headerlink" href="#list-of-logger-channels" title="Link to this heading"></a></h3>
+<img alt="../_images/logger_channels_view.png" src="../_images/logger_channels_view.png" />
+<p>The channel <span class="guilabel">Logger Channels</span> list shows the configuration of the
+graphical logger in tabular form. Each line in the table corresponds to exactly
+one curve in the diagram, i.e. one logger channel. The following columns are available:</p>
+<ul>
+<li><p><strong>Object</strong> - contains the name of the object from which the value of a
+certain property is to be recorded and the icon of the object.</p></li>
+<li><p><strong>Property</strong> - this is the name of the object property/process data
+value that will be recorded. Its type (numeric or boolean) can be
+identified by the displayed icon.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numeric value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolean value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text value</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> - allows you to define a customized label for the
+selected channel. This label will also be used in the legend of the plotted
+graph.</p></li>
+</ul>
+<p>In order to add a channel to the data logging process, simply follow the
+steps below:</p>
+</section>
+</section>
+<section id="logger-configuration">
+<h2><span class="section-number">9.4. </span>Logger Configuration<a class="headerlink" href="#logger-configuration" title="Link to this heading"></a></h2>
+<section id="add-logger-channels">
+<h3><span class="section-number">9.4.1. </span>Add Logger Channels<a class="headerlink" href="#add-logger-channels" title="Link to this heading"></a></h3>
+<p><span class="step">Step 1- Adding of Channels</span></p>
+<img alt="../_images/graph_logger_drag_and_drop.png" src="../_images/graph_logger_drag_and_drop.png" />
+<p>Drag-and-Drop the object property you want to record from the
+<span class="guilabel">Object Tree</span> into the <span class="guilabel">Logger Channels</span> list.
+The new channel is inserted in the line where you release the mouse button
+(see figure below).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To simplify the selection of an object property, you can filter the object
+tree according to various criteria.</p>
+</div>
+<p><span class="step">Step 2 - Setting the Channel Label</span></p>
+<p>In the column <span class="guilabel">Label</span> you can customize the label for each
+channel. This label will later be displayed in the legend of the graph as the
+label of the curve.</p>
+<img alt="../_images/log_channel_label.png" src="../_images/log_channel_label.png" />
+<p>To do this, double-click
+into the respective table cell that is to be changed and insert the new
+label text (see figure above).</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Upon choosing a new device property, a
+new channel description will be assigned automatically.
+That is, you should change the channel label only once
+the correct device property has been selected.</p>
+</div>
+<p><span class="step">Step 3 - Defining the Recording Interval</span></p>
+<img alt="../_images/graph_logger_interval.png" src="../_images/graph_logger_interval.png" />
+<p>In the <span class="guilabel">Log Interval</span> field in the <span class="guilabel">Logger Configuration</span>
+area, you can define the interval at which new measured values are to be recorded.
+You can set the interval with a resolution of 0.1 seconds.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Choose a log interval that is as large
+as possible and as small as necessary in order to
+minimize the amount of data that needs to be recorded
+and transmitted by the system.</p>
+</div>
+</section>
+<section id="deleting-channels">
+<h3><span class="section-number">9.4.2. </span>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Link to this heading"></a></h3>
+<p>Highlight the desired channels using the mouse to delete one or more
+channels from the list, and then use either the <kbd class="kbd docutils literal notranslate">Delete</kbd> key or the
+<span class="menuselection">Delecte Selection</span> item of the right-click context menu:</p>
+<p><img alt="image58" src="../_images/100000000000012100000091DA9FF378067215791.png" /> <img alt="image59" src="graphlogger_EN/Pictures/10000000000001220000008F22C1F8D0316FE153.png" /></p>
+<p>To delete the entire channel list, use the context menu item
+<span class="menuselection">Clear Logger</span>.</p>
+</section>
+</section>
+<section id="start-stop-data-logging">
+<h2><span class="section-number">9.5. </span>Start/Stop Data Logging<a class="headerlink" href="#start-stop-data-logging" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" class="align-left" height="60" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="60" /></a>
+<p>The data logging process may be started/stopped via the
+relevant button in the toolbar.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="diagram-navigation-use">
+<h2><span class="section-number">9.6. </span>Diagram Navigation &amp; Use<a class="headerlink" href="#diagram-navigation-use" title="Link to this heading"></a></h2>
+<section id="diagram-navigation-overview">
+<h3><span class="section-number">9.6.1. </span>Diagram Navigation Overview<a class="headerlink" href="#diagram-navigation-overview" title="Link to this heading"></a></h3>
+<p>The processdata graphing plug-in offers a number of possibilities to
+customize the way data are displayed. This includes resizing parts of a
+curve and showing or hiding individual curves.</p>
+<img alt="../_images/1000020100000304000001DECD37A2D16344540B.png" src="../_images/1000020100000304000001DECD37A2D16344540B.png" />
+<p>The diagram consists of a
+plot area <span class="guinum">❶</span> plus both an X-axis (time) <span class="guinum">❸</span> and a Y-axis
+(process data) <span class="guinum">❹</span>. The time axis shows date and time as absolute values.
+The process-data
+axis shows the respective measurement data; it is without units as it
+potentially represents a variety of very different values and
+measurement units.</p>
+<p>A right mouse click within the plot area will open a context menu <span class="guinum">❷</span>
+with a number of additional functions.</p>
+</section>
+<section id="changing-the-displayed-section">
+<h3><span class="section-number">9.6.2. </span>Changing the Displayed Section<a class="headerlink" href="#changing-the-displayed-section" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg"><img alt="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" class="align-left" height="60" src="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" width="60" /></a>
+<p>The <em>Pan Tool</em> provides you with a simple way to move the
+displayed section of the plot area. It may be activated via its toolbar
+button and the displayed section may then be moved around using the
+mouse whilst keeping the left button pressed.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Panning of the displayed plot section
+will deactivate the auto-scaling of the diagram axes.</p>
+</div>
+</section>
+<section id="display-curve-values">
+<h3><span class="section-number">9.6.3. </span>Display Curve Values<a class="headerlink" href="#display-curve-values" title="Link to this heading"></a></h3>
+<p>When the <em>Pan Tool</em> is active, you can move the mouse pointer over a
+curve to display the value at that specific position.</p>
+<img alt="../_images/100002010000024C000000D8EF633321C7CB7321.png" src="../_images/100002010000024C000000D8EF633321C7CB7321.png" />
+</section>
+<section id="zooming-via-the-mouse-wheel">
+<h3><span class="section-number">9.6.4. </span>Zooming via the Mouse Wheel<a class="headerlink" href="#zooming-via-the-mouse-wheel" title="Link to this heading"></a></h3>
+<p>Turning the mouse wheel whilst the pointer is within the plot area will
+allow you to adjust the displayed section of a graph by increasing
+(zooming in) or decreasing (zooming out) its zoom level.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/Mouse_Wheel_up.png"><img alt="image68" src="../_images/Mouse_Wheel_up.png" style="width: 80px;" /></a></p></td>
+<td><p>Increase zoom level (zoom in)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/Mouse_Wheel_down.png"><img alt="image69" src="../_images/Mouse_Wheel_down.png" style="width: 80px;" /></a></p></td>
+<td><p>Decrease zoom level (zoom out)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="display-section">
+<h3><span class="section-number">9.6.5. </span>Display Section<a class="headerlink" href="#display-section" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg"><img alt="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" class="align-left" height="60" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" width="60" /></a>
+<p>The <em>Zoom Tool</em> allows you to directly select a specific area
+of the plot and increase its resolution. To do this, please proceed as
+follows (see figure below):</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/10000000000001FA0000015E46DAC1CBDA6E28541.png" src="../_images/10000000000001FA0000015E46DAC1CBDA6E28541.png" />
+<ol class="arabic simple guinums">
+<li><p>Using the mouse, left-click-and-hold into the plot area to set the
+first corner of the zoom frame.</p></li>
+<li><p>Move the mouse pointer to define the size of the frame as desired.</p></li>
+<li><p>Releasing the mouse button will finalize the size of the frame. The
+selected area will be scaled to the current graph size (zoom in).</p></li>
+</ol>
+</section>
+<section id="auto-fit-auto-scale">
+<h3><span class="section-number">9.6.6. </span>Auto-Fit &amp; Auto-Scale<a class="headerlink" href="#auto-fit-auto-scale" title="Link to this heading"></a></h3>
+<p>The toolbar and the context menu both contain a number of tools to
+adjust what is displayed in the diagram, in particular to ensure that
+all or specific data are visible.</p>
+<p>The following possibilities exist:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg"><img alt="image79" src="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg" width="40" /></a></p></td>
+<td><p>Rescales the X axis to display all current time data
+values for a given process data resolution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC241061.svg"><img alt="image80" src="../_images/10000AA70000350500003505B68BB28A6EC241061.svg" width="40" /></a></p></td>
+<td><p>Rescales the Y axis to display all current process data
+values within a given time period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA4481.svg"><img alt="image81" src="../_images/10000D410000350500003505737D2F8FEABFA4481.svg" width="40" /></a></p></td>
+<td><p>Rescales both X and Y axes to display all currently
+available data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg"><img alt="image82" src="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg" width="40" /></a></p></td>
+<td><p>(Re-)activates auto-scaling: as long as data are being
+recorded, both X and Y axes will be adjusted
+dynamically to ensure all data are being displayed.</p></td>
+</tr>
+</tbody>
+</table>
+<p>You may also activate auto-scaling for X and Y axes individually via the
+context menu:</p>
+<img alt="../_images/1000000000000109000001040CF9729CD97C9A4D1.png" src="../_images/1000000000000109000001040CF9729CD97C9A4D1.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Zooming or panning within the displayed
+plot section will deactivate auto-scaling.</p>
+</div>
+</section>
+<section id="show-hide-individual-curves">
+<h3><span class="section-number">9.6.7. </span>Show/Hide Individual Curves<a class="headerlink" href="#show-hide-individual-curves" title="Link to this heading"></a></h3>
+<p>To improve scaling and visibility, you may show or hide individual
+curves. To do this, right-click the desired item in the plot legend and
+select the desired function to either hide the corresponding curve only
+<span class="menuselection">Hide Curve</span> or all other but the corresponding curve
+<span class="menuselection">Show only this curve</span> as indicated in the figure below.</p>
+<img alt="../_images/10000000000001A40000005CD26CCB4A8D0DF1F91.png" src="../_images/10000000000001A40000005CD26CCB4A8D0DF1F91.png" />
+<p>To revert to displaying all
+curves, activate the context menu from within the plot area and select
+the menu item <span class="menuselection">Show all curves</span> (see figure below).</p>
+<img alt="../_images/1000000000000109000001041C877E8A24D5AB941.png" src="../_images/1000000000000109000001041C877E8A24D5AB941.png" />
+</section>
+<section id="select-curve-color">
+<h3><span class="section-number">9.6.8. </span>Select Curve Color<a class="headerlink" href="#select-curve-color" title="Link to this heading"></a></h3>
+<p>To choose a different curve color, right click an item in the plot
+legend. From the context menu select the menu item <span class="menuselection">Select Color</span>
+(see figure below).</p>
+<img alt="../_images/10000000000002100000007CF77B5C49CD7E0D881.png" src="../_images/10000000000002100000007CF77B5C49CD7E0D881.png" />
+<p>In the color
+selection dialog which is now shown (figure below), you can choose any
+color.</p>
+<img alt="../_images/100002010000020A000001B855540FDC883B53CF.png" src="../_images/100002010000020A000001B855540FDC883B53CF.png" />
+</section>
+<section id="exporting-plot-image">
+<h3><span class="section-number">9.6.9. </span>Exporting Plot Image<a class="headerlink" href="#exporting-plot-image" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg"><img alt="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" class="align-left" height="60" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" width="60" /></a>
+<p>You may export a picture of the current diagram using the
+right-click context menu and selecting <span class="menuselection">Export plot image</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/100002010000010C000000E1260A96B6F1A861081.png" src="../_images/100002010000010C000000E1260A96B6F1A861081.png" />
+<p>This will open a dialog box (see figure below) to define the location (folder)
+where the image is to be saved:</p>
+<img alt="../_images/1000000000000293000001D6F3848773F9BE9543.png" src="../_images/1000000000000293000001D6F3848773F9BE9543.png" />
+<p>Please enter a name for the image file <span class="guinum">❶</span> and select the desired file
+type <span class="guinum">❷</span>. The export function supports standard image file formats
+<code class="file docutils literal notranslate"><span class="pre">png,</span> <span class="pre">jpg...</span></code> as well as scalable vector graphic formats <code class="file docutils literal notranslate"><span class="pre">pdf,</span> <span class="pre">svg...</span></code>.</p>
+<p>To close the dialog and to start the image export, click <span class="guilabel">Save</span> <span class="guinum">❸</span>.</p>
+</section>
+<section id="csv-export">
+<h3><span class="section-number">9.6.10. </span>CSV Export<a class="headerlink" href="#csv-export" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg"><img alt="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" class="align-left" height="60" src="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" width="60" /></a>
+<p>You can export all diagram data to a CSV file using the
+<span class="menuselection">Export CSV file</span> menu item.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="deleting-of-diagram-data">
+<h3><span class="section-number">9.6.11. </span>Deleting of Diagram Data<a class="headerlink" href="#deleting-of-diagram-data" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100019CB000035050000350509AD2B23340F765E1.svg"><img alt="../_images/100019CB000035050000350509AD2B23340F765E1.svg" class="align-left" height="60" src="../_images/100019CB000035050000350509AD2B23340F765E1.svg" width="60" /></a>
+<p>You may clear the plot area and delete all data recorded
+since the start of the present recording using the context menu item
+<span class="menuselection">Clear plot data</span>. Recording will resume from this point.</p>
+<img alt="../_images/100002010000010D000000D1835EC0ADB6A094751.png" src="../_images/100002010000010D000000D1835EC0ADB6A094751.png" />
+</section>
+<section id="switching-the-scaling-of-the-x-axis">
+<h3><span class="section-number">9.6.12. </span>Switching the scaling of the X-axis<a class="headerlink" href="#switching-the-scaling-of-the-x-axis" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100018130000350500003505CADD59D81E3150FD1.svg"><img alt="../_images/100018130000350500003505CADD59D81E3150FD1.svg" class="align-left" height="60" src="../_images/100018130000350500003505CADD59D81E3150FD1.svg" width="60" /></a>
+<p>You can switch the scaling of the X-axis between two
+different modes. By default, the X axis displays an absolute date/time
+stamp.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/100002010000022B0000006E35B772A9B9B293D21.png" src="../_images/100002010000022B0000006E35B772A9B9B293D21.png" />
+<p>You can switch the X-axis to display the relative time in seconds and
+milliseconds. This means that the event <strong>t0</strong> marks the point in
+time at which the recording was started.</p>
+<img alt="../_images/100002010000022B000000660DDD07486701950A.png" src="../_images/100002010000022B000000660DDD07486701950A.png" />
+<p>To toggle the axis, right-click in the diagram and select
+<span class="menuselection">Toggle X-axis scale</span> from the context menu.</p>
+<img alt="../_images/100002010000010D000000C7FB8978837EA08B411.png" src="../_images/100002010000010D000000C7FB8978837EA08B411.png" />
+</section>
+<section id="saving-plot-data">
+<h3><span class="section-number">9.6.13. </span>Saving plot data<a class="headerlink" href="#saving-plot-data" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000040D000035050000350542F550057A626C6D.svg"><img alt="../_images/1000040D000035050000350542F550057A626C6D.svg" class="align-left" height="60" src="../_images/1000040D000035050000350542F550057A626C6D.svg" width="60" /></a>
+<p>If you click the <span class="guilabel">Save Plot Data</span> button, all plot data will
+be saved to a file <code class="file docutils literal notranslate"><span class="pre">*.dat</span></code> that can be loaded back into the plot
+later.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-plot-data">
+<h3><span class="section-number">9.6.14. </span>Loading plot data<a class="headerlink" href="#loading-plot-data" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000044C000035050000350571A7475A9B633EF8.svg"><img alt="../_images/1000044C000035050000350571A7475A9B633EF8.svg" class="align-left" height="60" src="../_images/1000044C000035050000350571A7475A9B633EF8.svg" width="60" /></a>
+<p>By clicking the <span class="guilabel">Load Plot Data</span> button, plot data that was
+previously saved with <span class="guilabel">Save Plot Data</span> can be loaded back into the
+plot. Only the curves that are present in the current configuration of
+the logger are loaded. I.e. if you record data, save it with <em>Save Plot
+Data</em> and load it again later, the logger configuration should be
+identical when saving and loading. If you change the logger
+configuration between saving and loading, e.g. remove channels, not all
+curves may be loaded.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../datalogger_EN/datalogger_EN.html" class="btn btn-neutral float-left" title="8. CSV Data Logger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Appendix_EN/Appendix_EN.html" class="btn btn-neutral float-right" title="10. Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

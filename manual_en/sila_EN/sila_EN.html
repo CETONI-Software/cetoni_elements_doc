@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiLA 2 Add-on &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SiLA 2 Add-on</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sila-2-add-on">
+<h1>SiLA 2 Add-on<a class="headerlink" href="#sila-2-add-on" title="Link to this heading"></a></h1>
+<img alt="../_images/sila_header.svg" src="../_images/sila_header.svg" /><section id="introduction-to-sila-2-add-on">
+<h2>Introduction to SiLA 2 Add-on<a class="headerlink" href="#introduction-to-sila-2-add-on" title="Link to this heading"></a></h2>
+<p>The SiLA Add-on allows you to integrate any SiLA device into the CETONI
+Elements software. A generic, dynamically generated interface allows you to
+manually access all SiLA features, commands and properties of any SiLA device.
+With the help of several script functions you can automate your SiLA devices
+and integrate them into CETONI Elements scripts.</p>
+</section>
+<section id="installation-of-sila-2-add-on">
+<h2>Installation of SiLA 2 Add-on<a class="headerlink" href="#installation-of-sila-2-add-on" title="Link to this heading"></a></h2>
+<p>The SiLA 2 add-on is not included in the standard CETONI Elements
+installation package, but must be installed additionally as an add-on.
+The versions of SiLA 2 Plugin and installed CETONI Elements software
+should match. For example, if you want to install SiLA 2 Plugin with
+version number <strong>20210707</strong>, CETONI Elements software should be installed
+with version number <strong>20210707</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The version number of the CETONI Elements
+software and the SiLA add-on should match. The version
+number of the SiLA add-on must never be greater than
+that of the CETONI Elements software. The greater the
+difference between the version numbers, the greater the
+risk of problems and errors.</p>
+</div>
+<p>Please close all other programs before installation.</p>
+<p>Start the file <code class="file docutils literal notranslate"><span class="pre">CETONI_Elements_SiLA_64bit_Setup.exe</span></code> for installation.
+The installation wizard will then guide you through the installation of
+the software and hardware drivers.</p>
+<img alt="../_images/sila_install_01.png" src="../_images/sila_install_01.png" />
+<p>During the installation, the Bonjour Print Services are installed which
+are necessary for the automatic discovery of SiLA Servers in the
+network. This step is only required if the Bonjour Services are not
+already installed on your computer. If they are already installed,
+please deactivate the corresponding component (figure below).</p>
+<img alt="../_images/sila_install_02.png" src="../_images/sila_install_02.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>On Windows, you must be logged in with
+administrator privileges to install the hardware
+drivers.</p>
+</div>
+</section>
+<section id="sila-2-basics">
+<h2>SiLA 2 Basics<a class="headerlink" href="#sila-2-basics" title="Link to this heading"></a></h2>
+<p>SiLA 2 is a communication standard for laboratory instruments, such as readers,
+liquid handling robots and chromatography and other analytical equipment.
+The primary goal of SiLA is to create an international, open connectivity
+standard in laboratory automation that allows devices from different
+manufacturers to communicate with each other in one application.</p>
+<section id="client-server-concept">
+<h3>Client-Server concept<a class="headerlink" href="#client-server-concept" title="Link to this heading"></a></h3>
+<p>Communication is client-server based and uses established network
+standards. A <strong>SiLA server</strong> is usually provided by a <strong>device</strong> while a
+<strong>SiLA client</strong> is usually a control software (e.g. a LIMS or CETONI Elements).
+Since a SiLA server represents a device in most cases, the terms SiLA
+server (or just server) and device are used synonymously in this
+document.</p>
+<img alt="../_images/client_server.png" src="../_images/client_server.png" />
+<p>Each SiLA Server has a certain number of Features implemented. <strong>SiLA Features</strong>
+are a key component of the SiLA 2 Standard as they define the
+interaction between the SiLA Client and the SiLA Server. Every single Feature
+describes a certain aspect of the overall behavior of the Server.</p>
+<p>The features of a device (that is, a SiLA server) are described using an XML
+file where the functionality is described using:</p>
+<ul class="simple">
+<li><p><strong>Properties</strong>: data values that can be static (e.g. serial number) or dynamic (e.g. current temperature)</p></li>
+<li><p><strong>Commands</strong>: an interaction to control or pass information to/from the SiLA ,
+an action that can be executed by a SiLA server</p></li>
+<li><p><strong>Parameters</strong>: expected information required to execute the command</p></li>
+<li><p><strong>Return values</strong>: expected output of the command</p></li>
+<li><p><strong>Errors</strong>: expected errors that might occur during the operation</p></li>
+</ul>
+<img alt="../_images/sila_feature.png" src="../_images/sila_feature.png" />
+</section>
+<section id="commands-and-properties">
+<h3>Commands and Properties<a class="headerlink" href="#commands-and-properties" title="Link to this heading"></a></h3>
+<p>Properties and commands can be both <strong>unobservable</strong> and <strong>observable</strong>.</p>
+<ul class="simple">
+<li><p><strong>Unobservable properties</strong> are static data of a server that do not
+change during the runtime of a server (e.g. the number of possible
+switching positions of a valve).</p></li>
+<li><p><strong>Observable properties</strong> are dynamic data of a server that can change
+during the runtime of a server and about which clients should be
+informed (e.g. the current flow rate of a syringe pump). Clients can
+subscribe to observable properties so that they are notified of any
+changes to the property.</p></li>
+<li><p><strong>Unobservable commands</strong> are actions that can be performed on a device
+and that take very little time (e.g., to change settings such as the
+syringe parameters of a pump).</p></li>
+<li><p><strong>Observable commands</strong> are actions that can potentially take a long
+time to execute on the device (e.g., fluid dispensing). Here, a client
+can subscribe to the so-called <em>Execution Info</em> to be notified about the
+progress of the command execution.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A comprehensive introduction to the SiLA
+standard is available on the SiLA homepage:
+<a class="reference external" href="https://sila-standard.com/standards/">https://sila-standard.com/standards/</a> or in this
+<a class="reference external" href="https://matthieu-croissant.medium.com/sila-2-hands-on-bringing-automation-to-the-laboratory-dacc12df7152">blog post</a>.</p>
+</div>
+</section>
+</section>
+<section id="enabling-the-sila-2-plugin">
+<h2>Enabling the SiLA 2 Plugin<a class="headerlink" href="#enabling-the-sila-2-plugin" title="Link to this heading"></a></h2>
+<p>The SiLA 2 Plugin will not be automatically loaded after you have installed the AddOn.
+To enable the plugin you need to change your device configuration or create a new one.</p>
+<p>In the device configurator’s device list there are two new devices available with the SiLA Plugin:
+A “Generic SiLA Client” and a “SiLA Device”.</p>
+<img alt="../_images/device_configurator_devices.png" src="../_images/device_configurator_devices.png" />
+<section id="generic-sila-client">
+<h3>“Generic SiLA Client”<a class="headerlink" href="#generic-sila-client" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/generic_sila_client.svg"><img alt="../_images/generic_sila_client.svg" class="align-left" src="../_images/generic_sila_client.svg" width="80" /></a>
+<p>This “device” enables the support for the generic SiLA Client UI
+(see section <a class="reference internal" href="#overview-of-generic-ui">Overview of generic UI</a>) and is thus only allowed once in a device configuration.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="sila-device">
+<h3>“SiLA Device”<a class="headerlink" href="#sila-device" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/sila_server.svg"><img alt="../_images/sila_server.svg" class="align-left" src="../_images/sila_server.svg" width="80" /></a>
+<p>Using this device you can statically configure any number of SiLA 2 Servers that should always be present in your device configuration.
+Simply drag and drop the number of desired SiLA Devices from the devices list into the configuration area and configure the connection to the Servers.</p>
+<img alt="../_images/configure_sila_device.png" src="../_images/configure_sila_device.png" />
+<p>To configure the device enter the SiLA Server’s IP address or hostname and the port on which the Server is running.
+I necessary you can also force the use of insecure (i.e. unencrypted) communication to the Server.
+Then hit the <span class="guilabel">Check Connection</span> button.
+If the connection to the Server could be established you’ll see the green check mark.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Unencrypted communication should only be used for testing purposes but not in a production environment!</p>
+</div>
+</section>
+</section>
+<section id="sila-ui-overview">
+<h2>SiLA UI Overview<a class="headerlink" href="#sila-ui-overview" title="Link to this heading"></a></h2>
+<p>By clicking the <span class="guilabel">SiLA 2</span> button and selecting <em>Server Overview</em> <span class="guinum">❶</span> in the
+sidebar, you switch to the SiLA 2 add-on (see figure below).</p>
+<img alt="../_images/server_overview.png" src="../_images/server_overview.png" />
+<ol class="arabic simple guinums">
+<li><p><span class="guilabel">SiLA 2</span> button for display of <em>Server Overview</em> and connected SiLA 2
+servers.</p></li>
+<li><p>Button to perform a network scan to find available SiLA 2 servers</p></li>
+<li><p>Button to connect to all servers in the list</p></li>
+<li><p>Display of all SiLA 2 servers found in the network or added manually</p></li>
+<li><p>Button for adding a SiLA 2 server manually</p></li>
+<li><p>Indicator displaying whether the connection to th SiLA 2 server is secure or insecure</p></li>
+<li><p>Button to connect or disconnect from a SiLA 2 server</p></li>
+<li><p>Button to delete the server from the list</p></li>
+</ol>
+<p>You can use the sidebar button <span class="guinum">❶</span> or the view tabs to switch between the
+currently connected SiLA 2 servers and the <em>Server Overview</em>. A tab is
+created for each server.</p>
+</section>
+<section id="connecting-to-a-sila-2-server">
+<h2>Connecting to a SiLA 2 server<a class="headerlink" href="#connecting-to-a-sila-2-server" title="Link to this heading"></a></h2>
+<section id="connecting-to-automatically-detected-servers">
+<h3>Connecting to automatically detected servers<a class="headerlink" href="#connecting-to-automatically-detected-servers" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/link.svg" id="server-overview"><img alt="../_images/link.svg" class="align-left" id="server-overview" src="../_images/link.svg" width="40" /></a>
+<p>To connect to a SiLA 2 server that was found in the local network via
+SiLA Server Discovery, simply click on the <em>Connect</em> icon <span class="guinum">❶</span> in the
+corresponding row in the <em>Server Overview</em>.</p>
+<a class="reference internal image-reference" href="../_images/broken_link.svg"><img alt="../_images/broken_link.svg" class="align-left" src="../_images/broken_link.svg" width="40" /></a>
+<p>After the connection has
+been successfully established, the <em>Disconnect</em> icon <span class="guinum">❷</span> appears instead
+of the <em>Connect</em> icon. By clicking on this icon you can disconnect from
+this device again.</p>
+<img alt="../_images/1000000100000433000000D8B27B749FA02DEB20.png" src="../_images/1000000100000433000000D8B27B749FA02DEB20.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<a class="reference internal image-reference" href="../_images/link_multi.svg"><img alt="../_images/link_multi.svg" class="align-left" src="../_images/link_multi.svg" width="40" /></a>
+<p>The <em>Connect-To-All</em> <span class="guinum">❸</span> button allows you to
+connect to all devices at once, rather than having to
+connect to each device individually.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<a class="reference internal image-reference" href="../_images/wifi.svg"><img alt="../_images/wifi.svg" class="align-left" src="../_images/wifi.svg" width="40" /></a>
+<p>If the software did not find one or more of
+your SiLA devices, it may help to restart the servers
+and run a new network scan <span class="guinum">❹</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you close the software while still
+connected to one or more SiLA servers, it will attempt
+to restore those connections the next time you start
+the software.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If you delete a server with an active
+connection to the software from the <em>Server Overview</em>
+list, then the connection is automatically
+disconnected.</p>
+</div>
+<p>Normally, communication between SiLA server and client is encrypted.
+If you try to connect to a server that does not provide encryption a dialog will warn you about the insecure connection that will be established to the server.
+If you are sure that you want to connect to the server then selecting <span class="guilabel">Yes</span> will connect to the server without encryption.</p>
+<img alt="../_images/allow_unsecure.png" src="../_images/allow_unsecure.png" />
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>You should never establish an
+unencrypted connection to a device that is outside your
+local network, otherwise all communication between the
+device and the software can be read by third parties.</p>
+</div>
+</section>
+<section id="manually-add-and-connect-to-a-server">
+<h3>Manually add and connect to a server<a class="headerlink" href="#manually-add-and-connect-to-a-server" title="Link to this heading"></a></h3>
+<img alt="../_images/add_server.png" src="../_images/add_server.png" />
+<p>If a server in your local network is not found automatically, or if you
+want to connect to a server outside your local network, you must add
+this server manually. To do this, click the <span class="guilabel">Add server</span> <span class="guinum">❻</span> button (see
+figure above). The following dialog box appears.</p>
+<img alt="../_images/add_server_dialog.png" src="../_images/add_server_dialog.png" />
+<p>Enter either the host name or the IP address of your device
+and the port on which the SiLA server is running.
+Additionally, you have the option to force using an unencrypted communication to the Server.
+Then click <span class="guilabel">Connect</span>.</p>
+<p>The software will now try to connect to this server. If this is
+successful, the server will appear in the <em>Server Overview</em> list. If the
+connection cannot be established, you will find an error message in the
+<em>Event Log</em> with information about why the connection failed.</p>
+</section>
+<section id="accept-untrusted-certificates">
+<h3>Accept untrusted certificates<a class="headerlink" href="#accept-untrusted-certificates" title="Link to this heading"></a></h3>
+<p>SSL certificates are used to encrypt the communication between server
+and client, which are also used to encrypt the communication on the
+Internet. Usually, these certificates are signed by a trusted
+certificate authority. If you try to connect to a server that uses a
+self-signed certificate, the following dialog box appears:</p>
+<img alt="../_images/untrusted_certificate.png" src="../_images/untrusted_certificate.png" />
+<p>If you trust the certificate, click <span class="guilabel">Yes</span> in the dialog box to continue
+the connection, otherwise click <span class="guilabel">No</span>. In this case, the connection will
+be aborted.</p>
+<p>By default the software will only remember your choice until you close the software.
+If you want the software to save your choice you can check the <span class="guilabel">Always trust this certificate</span> box.
+The next time you connect to this server you won’t be asked again to accept the certificate.</p>
+<p>By clicking <span class="guilabel">View Certificate</span> you get more
+information about the certificate. There you can see, most importantly,
+which institution created and signed the certificate.</p>
+<img alt="../_images/untrusted_certificate2.png" src="../_images/untrusted_certificate2.png" />
+</section>
+</section>
+<section id="control-of-a-sila-2-server">
+<h2>Control of a SiLA 2 server<a class="headerlink" href="#control-of-a-sila-2-server" title="Link to this heading"></a></h2>
+<section id="overview-of-generic-ui">
+<h3>Overview of generic UI<a class="headerlink" href="#overview-of-generic-ui" title="Link to this heading"></a></h3>
+<p>After you have successfully connected to a SiLA server, you can control
+it via a generic interface. This interface looks the same for any type
+of SiLA server, that is, for any device regardless of the type or
+manufacturer of the device.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While this interface allows you to control
+every aspect of a SiLA server, it cannot be used to create complex
+workflows. For this purpose, the script functions provided by the
+plugin, which are presented in Section <a class="reference internal" href="#sila-2-script-functions">SiLA 2 Script Functions</a>, are more
+suitable.</p>
+</div>
+<p>Open the generic interface by selecting the desired server with the
+<span class="guilabel">SiLA 2</span> button in the sidebar
+(see section <a class="reference internal" href="#sila-2-basics">SiLA 2 Basics</a>).
+You will first see all SiLA 2 features provided by the server <span class="guinum">❶</span>. If you move the
+mouse pointer over one of the <span class="guilabel">i</span> icons, a tooltip with the
+description of the feature <span class="guinum">❷</span> will appear.</p>
+<img alt="../_images/feature_overview.png" src="../_images/feature_overview.png" />
+<p>By clicking on the feature
+name or the arrow to the left of the name, you can expand the feature (see figure below).
+Now you can see all available commands and properties of this feature.
+Commands can be found on the left side  <span class="guinum">❶</span>, properties on the right side
+<span class="guinum">❷</span>. With the splitter  <span class="guinum">❸</span> you can resize the width that is
+available to the commands or properties.</p>
+<img alt="../_images/commands_and_properties.png" src="../_images/commands_and_properties.png" />
+</section>
+<section id="sila-commands-ui">
+<h3>SiLA Commands UI<a class="headerlink" href="#sila-commands-ui" title="Link to this heading"></a></h3>
+<p>If a command has parameters metadata or return values,
+such as the <span class="guilabel">Set Fill Level</span> command <span class="guinum">❶</span> in the figure below, it can also be
+expanded to enter the parameters <span class="guinum">❷</span> or metadata and display the return
+values. The following picture shows all commands of the <span class="guilabel">Pump Fluid Dosing Service</span>
+feature:</p>
+<img alt="../_images/sila_commands.png" src="../_images/sila_commands.png" />
+<p>If a command has no parameters or only one, such as the <span class="guilabel">Generate Flow</span>
+command in the figure above, then the command  cannot be expanded and at most one
+input field is displayed directly next to the command name <span class="guinum">❸</span>.
+To execute the command, click the <span class="guilabel">Execute</span> button <span class="guinum">❹</span>.</p>
+</section>
+<section id="sila-properties-ui">
+<h3>SiLA Properties UI<a class="headerlink" href="#sila-properties-ui" title="Link to this heading"></a></h3>
+<p>Normally, properties cannot be expanded. The picture below shows the SiLA properties
+of the <span class="guilabel">Analog In Channel Provider</span> feature. Here, only a field with the
+current value of the property is displayed <span class="guinum">❶</span>. To the right is a button for
+re-polling the property <span class="guinum">❷</span>.</p>
+<img alt="../_images/sila_properties.png" src="../_images/sila_properties.png" />
+<p>Clicking the re-polling button button <span class="guinum">❷</span> triggers one of the following two actions:</p>
+<ul class="simple">
+<li><p>If the property is <em>Unobservable</em> (see Section <a class="reference internal" href="#commands-and-properties">Commands and Properties</a>),
+then it is simply queried again by the server.</p></li>
+<li><p>If the property is <em>Observable</em>, the subscription running in the
+background is canceled and a new subscription is started. This may be
+necessary, for example, if the subscription was automatically
+canceled due to an error.</p></li>
+</ul>
+<p>It is possible that a property requires metadata. In this case, the
+property can be expanded like a command and the input fields for the
+metadata <span class="guinum">❸</span> appear. After you have entered the metadata, you must query
+the property again or start a new subscription so that this data is sent
+to the server.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>When the generic interface is opened for
+the first time, all unobservable properties are queried
+once and subscriptions are automatically started in the
+background for observable properties. However, this
+only works if the property does not require metadata.
+In this case you have to enter the metadata first and
+then query the value yourself or start a subscription
+yourself.</p>
+</div>
+</section>
+<section id="terminating-a-connection-to-a-server">
+<h3>Terminating a connection to a server<a class="headerlink" href="#terminating-a-connection-to-a-server" title="Link to this heading"></a></h3>
+<p>If you terminate the connection to a server or the connection is
+automatically terminated, e.g. due to a network error, the interface
+remains open, but all input fields and buttons are locked. If you then
+want to close the tab for the affected server, the following dialog box
+appears:</p>
+<p><img alt="image30" src="../_images/1000000100000214000000B01BBEEFCD43CEAC03.png" /></p>
+<p>Clicking on <span class="guilabel">Yes</span> will close the interface (<em>View</em>) for
+this server and recreate it when the same server is reconnected later.
+By clicking on <span class="guilabel">No</span>, the view is retained and is only hidden. This
+allows you to reopen the view later, for example to see certain
+parameters or command responses. Furthermore, this view is automatically
+reused when the connection to the server is re-established.</p>
+</section>
+</section>
+<section id="automatic-reconnect">
+<h2>Automatic reconnect<a class="headerlink" href="#automatic-reconnect" title="Link to this heading"></a></h2>
+<p>If you’re repeatedly working with SiLA devices that were connected to the corresponding server via the <a class="reference internal" href="#server-overview"><span class="std std-ref">Server Overview</span></a> you can enable that the servers that were connected the last time you used the software are automatically reconnected at the next start of the software.</p>
+<p>To do this select <span class="menuselection">Edit → Settings…</span> from the top menu.</p>
+<img alt="../_images/open_settings.png" src="../_images/open_settings.png" />
+<p>In the settings window select <span class="guilabel">SiLA 2</span>.
+To enable the automatic reconnect to previously connected servers check the first box.</p>
+<img alt="../_images/sila_settings.png" src="../_images/sila_settings.png" />
+<p>In this windows you can also enable that the software tries to automatically reconnect to a server that disappeared from the network (e.g. due to a temporary network issue).
+To enable this feature check the second box.
+If the connection to a server is lost the software monitors the network and tries to reconnect to the server once it thinks that the server is available again.
+How many times the software will try to connect can also be specified.</p>
+<p>If you don’t enable these features then you have to manually reconnect to the server in these cases.</p>
+</section>
+<section id="sila-2-script-functions">
+<h2>SiLA 2 Script Functions<a class="headerlink" href="#sila-2-script-functions" title="Link to this heading"></a></h2>
+<section id="introduction-to-sila-script-functions">
+<h3>Introduction to SiLA Script Functions<a class="headerlink" href="#introduction-to-sila-script-functions" title="Link to this heading"></a></h3>
+<p>The SiLA 2 plugin contains various script functions for script-driven
+execution of commands and querying of properties.</p>
+<img alt="../_images/sila_script_functions.png" src="../_images/sila_script_functions.png" />
+</section>
+<section id="execute-sila-command">
+<h3>Execute SiLA Command<a class="headerlink" href="#execute-sila-command" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100002E8000035050000350510C5FE834025052E.svg"><img alt="../_images/100002E8000035050000350510C5FE834025052E.svg" class="align-left" height="60" src="../_images/100002E8000035050000350510C5FE834025052E.svg" width="60" /></a>
+<p>With this function you can execute a SiLA command and store
+the result of the execution in a variable.</p>
+<p><img alt="image33" src="../_images/1000000100000345000001D7A7109FF96388C318.png" /></p>
+<p><img alt="image34" src="../_images/100000010000032D000000CB19F74944FFDAB71C.png" /></p>
+<p>You can set the command to be executed <span class="guinum">❶</span>, as well
+as the required parameters and metadata <span class="guinum">❷</span> in the configuration area.</p>
+<p>In addition, you can enable or disable the <span class="guilabel">Run to completion</span> <span class="guinum">❸</span> option
+for <em>Observable Commands</em>. If <span class="guilabel">Run to completion</span> is enabled, script
+execution will not continue until the command has been fully executed.
+If this option is not active, the command is only started and then the
+next script function is processed immediately.</p>
+<p>If the command has return values, you can also specify variables <span class="guinum">❹</span> in
+which these values are to be stored.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All SiLA script functions support the use of
+variables. This means that you can enter variables in
+all input fields marked with a colored <strong>V</strong> in the
+configuration area.</p>
+</div>
+</section>
+<section id="read-sila-property">
+<h3>Read SiLA Property<a class="headerlink" href="#read-sila-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100043500000350500003505BEBA0AAB65FAB614.svg"><img alt="../_images/100043500000350500003505BEBA0AAB65FAB614.svg" class="align-left" height="60" src="../_images/100043500000350500003505BEBA0AAB65FAB614.svg" width="60" /></a>
+<p>With this function you can query a property and store the
+value into a variable.</p>
+<p><img alt="image39" src="../_images/1000000100000345000001FD6EA9B6588936741F.png" /></p>
+<p>You can set the property <span class="guinum">❶</span> to be queried and the possible
+required metadata <span class="guinum">❷</span> in the configuration area.</p>
+<p>Enter the name of the variable that is supposed to store the value of
+the read property in the field below <span class="guinum">❸</span>. If the property returns a
+structure of several values, corresponding fields will appear for each
+element of the structure, in which you can enter the individual script
+variables.</p>
+</section>
+<section id="wait-for-sila-property-value">
+<h3>Wait For SiLA Property Value<a class="headerlink" href="#wait-for-sila-property-value" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100041250000350500003505032351FB39BC478A.svg"><img alt="../_images/100041250000350500003505032351FB39BC478A.svg" class="align-left" height="60" src="../_images/100041250000350500003505032351FB39BC478A.svg" width="60" /></a>
+<p>This function allows you to make the script execution wait
+for a specific property to meet a defined condition. The function will
+not continue until the condition is met.</p>
+<img alt="../_images/sila_wait_for_property_function.png" src="../_images/sila_wait_for_property_function.png" />
+<p>In the configuration area, first select the property <span class="guinum">❶</span> you
+want to check and the optionally required metadata <span class="guinum">❷</span>, as described for the
+<a class="reference internal" href="#read-sila-property">Read SiLA Property</a> function.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The SiLA property must be Observable to
+be used in this script function.</p>
+</div>
+<p>In the <em>Condition</em> area <span class="guinum">❸</span>, you configure the check condition. To do this,
+first select a comparison operator and then the value to be
+compared with. In the value fields you can also use variables to set
+the check condition.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To quickly find a specific feature, command or
+property, you can enter the name or part of the name in
+the filter input field. The selection boxes for the
+feature, command or property will then only contain
+entries that match the filter entered.</p>
+</div>
+<p>To prevent the function from blocking further execution for too long, you can
+set a time limit in the <span class="guilabel">Timeout (ms)</span> field. If the time limit has expired and
+the test condition is not yet true, the function generates an <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> error.
+To deactivate the timeout, simply set the value to 0.</p>
+<p>In short, the function can be described as follows:</p>
+<p class="centered">
+<strong>Continue script execution, if the selected property of the
+device <span class="guinum">❶</span> meets the condition <span class="guinum">❸</span> or throw an error in case
+of a timeout.</strong></p><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Script Variables (such as <code class="code docutils literal notranslate"><span class="pre">$Value</span></code>) can be used as test / comparison condition.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A timeout value of 0 deactivates the time limit.</p>
+</div>
+</section>
+<section id="replace-sila-server">
+<h3>Replace SiLA server<a class="headerlink" href="#replace-sila-server" title="Link to this heading"></a></h3>
+<p>A SiLA server is always uniquely identified by its UUID (Universally
+Unique Identifier). When you create a script function for a specific
+server, this UUID is stored in the background. As a result, scripts are
+always bound to the SiLA server for which they were written. Now it can
+be possible that you want to use e.g. a script that you have written for
+a Nemesys low pressure pump with another low pressure pump or that a
+certain SiLA server had to be exchanged and therefore its UUID has
+changed. In these cases, you can replace the configured SiLA servers in
+your scripts with the new servers.</p>
+<p>To do this, load the script in where you want to replace the servers
+into the script editor. Then select a SiLA 2 function where you want to
+change the server. The configuration interface of the function should be
+grayed out because the corresponding SiLA server is not connected. In
+addition, you will also see a warning message <span class="guinum">❶</span>.</p>
+<p><img alt="image48" src="../_images/10000001000003B5000001C901728FB6CD47BE5B.png" /></p>
+<p>Now click on the icon for changing the SiLA server <span class="guinum">❷</span>. The
+following dialog box opens:</p>
+<img alt="../_images/10000001000001C600000172BBE267CD9A17CF31.png" src="../_images/10000001000001C600000172BBE267CD9A17CF31.png" />
+<p>Here you can now select one of the connected SiLA servers to be used
+instead of the configured server.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The new server must provide exactly the
+same features as the previous server. The selection
+dialog will inform you if this is not the case.</p>
+</div>
+<p>If you have selected a compatible server, click on
+<span class="guilabel">Assign selected Server</span>. Now the previous server will be replaced
+by the selected server in <strong>all</strong> script functions. Afterwards, the
+configuration areais no longer grayed out and you can edit the function again.
+When you save the script, the server you just selected will be saved and used the
+next time you load the script.</p>
+</section>
+</section>
+<section id="read-sila-properties-via-process-data-identifiers">
+<h2>Read SiLA properties via process data identifiers<a class="headerlink" href="#read-sila-properties-via-process-data-identifiers" title="Link to this heading"></a></h2>
+<p>Certain SiLA properties are automatically provided as process data. This
+makes it possible, for example, to initialize script variables directly
+via the respective process date or to use this data in the graphical
+process data logger.</p>
+<p>For this purpose, the SiLA Properties must fulfill the following
+requirements:</p>
+<ul class="simple">
+<li><p>the property must be observable.</p></li>
+<li><p>the property must not require metadata.</p></li>
+<li><p>the data type of the property must be a numeric (integer or real) or
+Boolean data type.</p></li>
+</ul>
+<section id="use-in-other-script-functions">
+<h3>Use in other script functions<a class="headerlink" href="#use-in-other-script-functions" title="Link to this heading"></a></h3>
+<p>SiLA process data can be accessed in exactly the same way as other
+process data from other devices:</p>
+<img alt="../_images/insert_device_property.png" src="../_images/insert_device_property.png" />
+<p>The selected process data identifier is now entered in the
+input field. These also have a specific form based on the usual process
+data identifier:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">$$ServerName_ServerUUID.FeatureIdentifier_PropertyIdentifier</span></code></p>
+<p>Each identifier starts with two dollar signs and a dot separates the
+unique device name from the unique process data name. The device name is
+derived from the name of the SiLA server as well as its unique ID (UUID,
+Universally Unique Identifier) and the name for the process data is
+derived from the name of the feature and the respective property. The
+entire process data identifier must not contain any spaces or other
+special characters.</p>
+</section>
+<section id="use-in-graphical-process-data-logger">
+<h3>Use in graphical process data logger<a class="headerlink" href="#use-in-graphical-process-data-logger" title="Link to this heading"></a></h3>
+<p>SiLA process data can be used in the graphical process data logger as
+known from other devices:</p>
+<p><img alt="image53" src="../_images/1000000100000550000002C759AE7BAD95D9239D.png" /></p>
+<p>First, open the Plotlogger configuration <span class="guinum">❶</span>. There, drag and
+drop the desired SiLA device into the list of plot curves <span class="guinum">❷</span>. Then
+double-click on the device property cell to select the SiLA property to
+be recorded <span class="guinum">❸</span>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

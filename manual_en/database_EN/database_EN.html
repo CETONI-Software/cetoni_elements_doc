@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database Add-on &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Database Add-on</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="database-add-on">
+<h1>Database Add-on<a class="headerlink" href="#database-add-on" title="Link to this heading"></a></h1>
+<p>The database Add-on adds SQL database support. It allows you to log process
+data values into a SQL database via the SQL Data Logger and it provides support
+for executing SQL queries.</p>
+<section id="sql-database-logger">
+<h2>SQL Database Logger<a class="headerlink" href="#sql-database-logger" title="Link to this heading"></a></h2>
+<p>The SQL database logger enables logging of process data into an SQL database.
+The logger is not intended to record process data at very high sample rates but
+to log important process data over a longer period of time to document
+experiments or automated processes in the laboratory.</p>
+<p>The SQL database logger supports various databases such as SQLite, MySQL or
+PostgreSQL. It has been tested with SQLite and MySQL databases.</p>
+<section id="sql-logger-configuration-dialog">
+<h3>SQL Logger Configuration Dialog<a class="headerlink" href="#sql-logger-configuration-dialog" title="Link to this heading"></a></h3>
+<img alt="../_images/toolbar_sql_logger_buttons.png" src="../_images/toolbar_sql_logger_buttons.png" />
+<p>When the data logging plug-in has
+been loaded, the toolbar will display two additional buttons for the
+configuration of the SQL database logger <span class="guinum">❶</span> and to start/stop the logging
+process <span class="guinum">❷</span>.</p>
+<a class="reference internal image-reference" href="../_images/sql_log_config.svg"><img alt="../_images/sql_log_config.svg" class="align-left" src="../_images/sql_log_config.svg" width="60" /></a>
+<p>Click the <span class="guilabel">Configure SQL Logger</span> button to open the configuration dialog.
+The following configuration dialog will be displayed:</p>
+<img alt="../_images/sql_logger_config_dialog.png" src="../_images/sql_logger_config_dialog.png" />
+<p>The configuration dialog contains the following elements:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Object Tree</strong> - The Object Tree contains a tree of all objects and their
+properties that are present in the application. You can use various filters
+to filter the object tree for specific objects. By default, only devices and
+device properties are displayed.</p></li>
+<li><p><strong>Logger Channels</strong> - lists all channels that may be recorded by the
+logger.</p></li>
+<li><p><strong>Configure Database Connection</strong> - allows the user to configure the database
+settings such as database server and port.</p></li>
+</ol>
+</section>
+<section id="object-tree">
+<h3>Object Tree<a class="headerlink" href="#object-tree" title="Link to this heading"></a></h3>
+<p>In the Object Tree you will find a hierarchical list of all objects
+(e.g. devices) and their child objects (such as child devices):</p>
+<img alt="../_images/object_tree.png" src="../_images/object_tree.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Object</strong> - An object can be, for example, a device (here <strong>Nemesys_M_1</strong>) or
+another application object. You will find the two elements <strong>Children</strong> and
+<strong>Properties</strong> in each object after expanding it in the next level.</p></li>
+<li><p><strong>Children</strong> - The Children element groups all child objects of the parent
+object. In our example, these are all objects or devices that are
+subordinate to the device <strong>Nemesys_M_1</strong> or belong to this device.</p></li>
+<li><p><strong>Properties</strong> - The Properties element groups all properties of the parent
+object. In our example, these are all the properties of the <strong>Nemesys_M_1</strong>
+device that can be recorded in the logger.</p></li>
+<li><p><strong>Child Object</strong> - All child objects can be found in the <strong>Children</strong> group.
+In the example <strong>Nemesys_M_1</strong>, these are, for example, the digital and
+analogue inputs and outputs of the device, such as <strong>Nemesys_M_1_DigOUT1</strong>.
+These objects can in turn be expanded to display their child objects and
+properties.</p></li>
+<li><p><strong>Property</strong> - In the <strong>Properties</strong> group you will find all properties of
+the parent object. In the example of <strong>Nemesys_M_1</strong>, these are, for example,
+the properties <strong>SyringeFillLevel</strong> or <strong>ActualFlow</strong>. You can simply
+drag and drop these properties into the channel list to record their values.</p></li>
+</ol>
+</section>
+<section id="filtering-the-object-tree">
+<h3>Filtering the Object Tree<a class="headerlink" href="#filtering-the-object-tree" title="Link to this heading"></a></h3>
+<p>Above the object tree you will find various filters with which you can filter
+the object tree according to certain criteria. The <span class="guilabel">Devices Only</span> <span class="guinum">❶</span>
+checkbox is activated by default. This means that only devices that are managed
+by the internal device manager (<span class="guilabel">Core.DeviceManager</span>) are displayed in
+the object tree. If you deactivate this checkbox, other application objects are
+displayed in the object tree.</p>
+<p>If the <span class="guilabel">Devices Only</span><span class="guinum">❶</span> checkbox is activated, a selection
+box <span class="guinum">❷</span> is displayed with which you can filter the device tree according
+to a specific device type. In the illustration below, for example, the tree was
+filtered for syringe pumps:</p>
+<img alt="../_images/object_tree_filter.png" src="../_images/object_tree_filter.png" />
+<p>In addition, you will find an input field <span class="guinum">❸</span> directly above the object tree,
+with which you can filter the object tree according to a specific term, e.g. a
+device name or a device property. In the image below, for example, a filter has
+been set for the device property <strong>ActualFlow</strong>. This means that only objects
+or devices with this property are displayed in the object tree:</p>
+<img alt="../_images/object_tree_filter_text.png" src="../_images/object_tree_filter_text.png" />
+</section>
+<section id="list-of-logger-channels">
+<h3>List of Logger Channels<a class="headerlink" href="#list-of-logger-channels" title="Link to this heading"></a></h3>
+<p>The table <span class="guilabel">Logger Channels</span> shows the configuration of the logger.</p>
+<img alt="../_images/sql_logger_channels_view.png" src="../_images/sql_logger_channels_view.png" />
+<p>The table contains the following columns:</p>
+<ul>
+<li><p><strong>Object</strong> - contains the name of the object from which the value of a
+certain property is to be recorded and the icon of the object.</p></li>
+<li><p><strong>Property</strong> - this is the name of the object property/process data
+value that will be recorded. Its type (numeric or boolean) can be
+identified by the displayed icon.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numeric value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolean value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_array.svg"><img alt="icon-array" src="../_images/property_array.svg" width="40" /></a></p></td>
+<td><p>Data Array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_structure.svg"><img alt="icon-struct" src="../_images/property_structure.svg" width="40" /></a></p></td>
+<td><p>Data Structure</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_object.svg"><img alt="icon-obj" src="../_images/property_object.svg" width="40" /></a></p></td>
+<td><p>Object</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Interval (s)</strong> - the sampling interval in seconds. The minimum sample time
+is 1 seconds.</p></li>
+<li><p><strong>Label</strong> - allows you to define a customized description for the
+selected channel.</p></li>
+</ul>
+</section>
+<section id="database-settings">
+<h3>Database Settings<a class="headerlink" href="#database-settings" title="Link to this heading"></a></h3>
+<p>To configure the database settings, click the
+<span class="guilabel">Configure Database Connection</span> button in the configuration dialog.</p>
+<img alt="../_images/config_db_connection.png" src="../_images/config_db_connection.png" />
+<p>Intially the database logger uses a SQLite database in the current project
+folder for logging. The default SQLite database file is located in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:/Users/Public/Documents/QmixElements/Projects/MyProject/Log/ProcessDataDbLog.sqlite
+</pre></div>
+</div>
+<p>With the following steps you can easily find the database file</p>
+<ul class="simple">
+<li><p>from the application main menu select the menu item <span class="menuselection">File → Browse Project Folder</span></p></li>
+<li><p>the project folder will be opened in Windows file explorer</p></li>
+<li><p>now open the <strong>Log</strong> folder</p></li>
+<li><p>inside of the <strong>Log</strong> folder you should see the file <code class="file docutils literal notranslate"><span class="pre">ProcessDataDbLog.sqlite</span></code></p></li>
+</ul>
+<p>If you open the database configuration for the first time, you should see this
+default configuration:</p>
+<img alt="../_images/default_db_settings.png" src="../_images/default_db_settings.png" />
+<p>As soon as you click the <span class="guilabel">Check Connection</span> button <span class="guinum">❶</span> you should see
+the green checkmark <span class="guinum">❷</span>. Whenever you want to restore these default
+settings, just click the <span class="guilabel">Restore default settings</span> button <span class="guinum">❸</span>.</p>
+<p>If you use the <strong>SQLite</strong> database driver, you just need to select the database
+filename. If you select any other database driver, you need to provide additional
+database settings. The following picture shows the configurations settings for
+a <strong>MySQL</strong> database:</p>
+<img alt="../_images/mysql_db_settings.png" src="../_images/mysql_db_settings.png" />
+<p>The following fields must be filled in:</p>
+<ul class="simple">
+<li><p><strong>Database Driver</strong>: the database driver that matches your database</p></li>
+<li><p><strong>Server Hostname or IP</strong>: the hostname or IP address of the server running the
+database. In this example the MySQL database runs locally and we use localhost</p></li>
+<li><p><strong>Port</strong>: the server port number to connect to database. In this example whe
+use localhost as hostname and therefore the port does not matter</p></li>
+<li><p><strong>Database Name</strong>: name of the database to use for data logging</p></li>
+<li><p><strong>User Name</strong>: database user to use for database access</p></li>
+<li><p><strong>Password</strong>: password to connect to database</p></li>
+</ul>
+<p>As soon as you have properly entered all fields, the <span class="guilabel">Check Connection</span>
+button will be enabled. Click this button, to check your database connection.
+If this check succeeds, you can click <span class="guilabel">OK</span> to accept the
+settings.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The <span class="guilabel">Check Connection</span> will be enabled only, if you have entered
+values in all required fields. The <span class="guilabel">OK</span> button will be enabled
+as soon as you have successfully checked your database connection.</p>
+</div>
+</section>
+<section id="sql-logger-configuration">
+<h3>SQL Logger Configuration<a class="headerlink" href="#sql-logger-configuration" title="Link to this heading"></a></h3>
+<section id="step-1-add-channels">
+<h4>Step 1 - Add Channels<a class="headerlink" href="#step-1-add-channels" title="Link to this heading"></a></h4>
+<p>Drag-and-Drop the object property you want to record from the
+<span class="guilabel">Object Tree</span> into the <span class="guilabel">Logger Channels</span> list.
+The new channel is inserted in the line where you release the mouse button
+(see figure below).</p>
+<img alt="../_images/csv_logger_drag_and_drop.png" src="../_images/csv_logger_drag_and_drop.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To simplify the selection of an object property, you can filter the object
+tree according to various criteria.</p>
+</div>
+</section>
+<section id="step-2-configure-sample-interval">
+<h4>Step 2 - Configure Sample Interval<a class="headerlink" href="#step-2-configure-sample-interval" title="Link to this heading"></a></h4>
+<p>You can set a different sample interval for each individual logger channel.
+The minimum sample time is 1 second. To configure the log interval double-click
+into the respective field within the column <span class="guilabel">Interval (s)</span> and enter
+the interval time.</p>
+<img alt="../_images/log_interval_config.png" src="../_images/log_interval_config.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Choose a log interval that is as large
+as possible and as small as necessary in order to
+minimize the amount of data that needs to be recorded
+and stored into the database.</p>
+</div>
+</section>
+<section id="step-3-set-channel-label">
+<h4>Step 3 - Set Channel Label<a class="headerlink" href="#step-3-set-channel-label" title="Link to this heading"></a></h4>
+<p>In the column <span class="guilabel">Label</span> you can customize the description for each
+channel. You can use this column to add additional information, a meaningful
+name or a SI unit identifier.</p>
+<img alt="../_images/log_label_config.png" src="../_images/log_label_config.png" />
+<p>To do this, double-click
+into the respective table cell within the column <span class="guilabel">Label</span> and enter
+the label text.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Upon choosing a new device property, a
+new channel description will be assigned automatically.
+That is, you should change the channel label only once
+the correct device property has been selected.</p>
+</div>
+<p>The object property and the label are separate columns in the SQL table</p>
+</section>
+<section id="deleting-channels">
+<h4>Deleting Channels<a class="headerlink" href="#deleting-channels" title="Link to this heading"></a></h4>
+<p>Highlight the desired channels using the mouse to delete one or more
+channels from the list, and then use either the <kbd class="kbd docutils literal notranslate">Delete</kbd> key or the
+<span class="menuselection">Delecte Selection</span> item of the right-click context menu:</p>
+<p><img alt="delete_key" src="../_images/delete_channel_key.png" /> <img alt="delete_menu" src="../_images/delete_channel_menu.png" /></p>
+<p>To delete the entire channel list, use the context menu item
+<span class="menuselection">Clear Logger</span>.</p>
+</section>
+</section>
+<section id="database-schema">
+<h3>Database Schema<a class="headerlink" href="#database-schema" title="Link to this heading"></a></h3>
+<p>The SQL logger uses the following database schema to store its data:</p>
+<a class="reference internal image-reference" href="../_images/eer_diagram.svg"><img alt="../_images/eer_diagram.svg" src="../_images/eer_diagram.svg" width="600px" /></a>
+<p>The schema consists of two tables. The first table is
+the <code class="code docutils literal notranslate"><span class="pre">process_data</span></code> for storage of process data information. The
+following code is used to create this table:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">process_data</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<span class="w">   </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">label</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>The <code class="code docutils literal notranslate"><span class="pre">name</span></code> column stores the process data identifiers that are build from the
+device name and the selected property. The <code class="code docutils literal notranslate"><span class="pre">label</span></code> column stores the value
+entered in the Label column of the <span class="guilabel">Logger Channels</span> table. The
+following picture shows the entered values in the <em>Logger Channels</em> table:</p>
+<img alt="../_images/logger_channels_table_example.png" src="../_images/logger_channels_table_example.png" />
+<p>This configuration results in the following entries in the <code class="code docutils literal notranslate"><span class="pre">process_data</span></code>
+table (screenshot from MySQL workbench):</p>
+<img alt="../_images/mysql_tbl_process_data_example.png" src="../_images/mysql_tbl_process_data_example.png" />
+<p>Entries will never get removed from the <code class="code docutils literal notranslate"><span class="pre">process_data</span></code> table. If an
+entry is missing, it will get added. Changing the label of a channel in the
+<span class="guilabel">Logger Channels</span> table, may result in a new entry in the
+<code class="code docutils literal notranslate"><span class="pre">process_data</span></code>. The following example picture shows this:</p>
+<img alt="../_images/mysql_tbl_process_data_labels.png" src="../_images/mysql_tbl_process_data_labels.png" />
+<p>The analog input <strong>Nemesys_S_1_AnIN1</strong> property
+<strong>ActualValue</strong> (process data identifier <code class="code docutils literal notranslate"><span class="pre">Nemesys_S_1_AnIN1.ActualValue</span></code>)
+was used to log different physical quantities in various experiments:</p>
+<ul class="simple">
+<li><p>the temperature of a shaker unit in °C</p></li>
+<li><p>the ozon concentration in %</p></li>
+<li><p>and the value of a flowmeter in ml/s</p></li>
+</ul>
+<p>This shows, that a change of the <code class="code docutils literal notranslate"><span class="pre">Label</span></code> value results in different
+database entries.</p>
+<p>The second table is the <code class="code docutils literal notranslate"><span class="pre">data_log</span></code> which is used to store the actual
+values read from the device properties. This table is created with the
+following SQL code:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">data_log</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<span class="w">   </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">log_datetime</span><span class="o">`</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">process_data_id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="o">`</span><span class="n">value_str</span><span class="o">`</span><span class="w"> </span><span class="nb">TEXT</span>
+<span class="w">   </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">process_data_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">process_data</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_data_log_process_data_id</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">data_log</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">process_data_id</span><span class="o">`</span><span class="w"> </span><span class="k">ASC</span><span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_data_log_log_datetime</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">data_log</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">log_datetime</span><span class="o">`</span><span class="w"> </span><span class="k">ASC</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The code creates the following table layout:</p>
+<img alt="../_images/mysql_tbl_data_log.png" src="../_images/mysql_tbl_data_log.png" />
+<ul>
+<li><p><strong>log_datetime</strong>: stores the date and time when the value was logged</p></li>
+<li><p><strong>process_data_id</strong>: is a foreign key into the <code class="code docutils literal notranslate"><span class="pre">process_data</span></code>
+table to identify the process data that has been logged</p></li>
+<li><p><strong>value</strong>: the actual logged value if it is a numeric or boolean value</p>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numeric value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolean value</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p><strong>value_str</strong>: a string of the logged value - this can be used to record
+non-numeric values such as text, data arrays, data structures or any other
+data types.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_array.svg"><img alt="icon-array" src="../_images/property_array.svg" width="40" /></a></p></td>
+<td><p>Data Array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_structure.svg"><img alt="icon-struct" src="../_images/property_structure.svg" width="40" /></a></p></td>
+<td><p>Data Structure</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_object.svg"><img alt="icon-obj" src="../_images/property_object.svg" width="40" /></a></p></td>
+<td><p>Object</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+<p>You can use SQL query language to get the logged data that you need. The
+following example SQL statement shows, how to get all logged values from the process
+data labeled with <strong>Flowmeter (ml/s)</strong>:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">log_datetime</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">label</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">value</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">data_log</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">b</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">process_data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">process_data_id</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%Flowmeter%&#39;</span>
+</pre></div>
+</div>
+<p>This is the resulting table from the given SQL statement:</p>
+<img alt="../_images/mysql_tbl_log_data_query.png" src="../_images/mysql_tbl_log_data_query.png" />
+</section>
+</section>
+<section id="script-functions">
+<h2>Script Functions<a class="headerlink" href="#script-functions" title="Link to this heading"></a></h2>
+<p>To automate the data logging or to synchronize data logging with
+other processes, the SQL database logger can be started and stopped using
+script functions. The corresponding functions can be found
+in the <span class="guilabel">Logging</span> category in the list of the available script
+functions.</p>
+<img alt="../_images/sql_logger_script_functions.png" src="../_images/sql_logger_script_functions.png" />
+<section id="start-sql-logger">
+<h3>Start SQL Logger<a class="headerlink" href="#start-sql-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/sql_log_start.svg"><img alt="../_images/sql_log_start.svg" class="align-left" src="../_images/sql_log_start.svg" width="60" /></a>
+<p>This function is used to start the SQL logger with the
+currently configured settings and channels.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="stop-sql-logger">
+<h3>Stop SQL Logger<a class="headerlink" href="#stop-sql-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/sql_log_stop.svg"><img alt="../_images/sql_log_stop.svg" class="align-left" src="../_images/sql_log_stop.svg" width="60" /></a>
+<p>This function stops logging into SQL database.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="trigger-sql-data-logging">
+<h3>Trigger SQL Data Logging<a class="headerlink" href="#trigger-sql-data-logging" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/sql_log_trigger.svg"><img alt="../_images/sql_log_trigger.svg" class="align-left" src="../_images/sql_log_trigger.svg" width="60" /></a>
+<p>This function triggers the immediate logging of all channels of the SQL logger.
+Normally the data will be logged with the configured <span class="xref std std-ref">interval</span>.
+If you would like to force the immediate logging of all channels, for example
+if you would like to capture the current state of all channels if a certain
+event occurs, then you can use this function.</p>
+</section>
+</section>
+<section id="javascript-database-access">
+<h2>JavaScript Database Access<a class="headerlink" href="#javascript-database-access" title="Link to this heading"></a></h2>
+<p>The Database Add-on provides some functionality, to access SQL databases from
+<a class="reference internal" href="../javascript_EN/javascript_EN.html#using-javascript"><span class="std std-ref">JavaScript code</span></a>. If you enter the <code class="code docutils literal notranslate"><span class="pre">help()</span></code>
+command in th JavaScript Console, you should see the database objects
+such as <a class="reference internal" href="#qsqldatabase">QSqlDatabase</a> or <a class="reference internal" href="#qsqlquery">QSqlQuery</a>.</p>
+<img alt="../_images/database_help.png" src="../_images/database_help.png" />
+<section id="example-1-sqlite-database-query">
+<h3>Example 1 - SQLite Database Query<a class="headerlink" href="#example-1-sqlite-database-query" title="Link to this heading"></a></h3>
+<p>The following example code shows, how to use the database objects in a
+JavaScript function to execute a SQL query for an SQLite database:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">QSqlDatabase</span><span class="p">();</span>
+<span class="w">   </span><span class="nx">db</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">(</span><span class="s2">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JsScript&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">projectPath</span><span class="p">(</span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">LocationLog</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/ProcessDataDbLog.sqlite&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">db</span><span class="p">.</span><span class="nx">setDatabaseName</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">db</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="w">   </span><span class="nx">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">createQuery</span><span class="p">();</span>
+<span class="w">   </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM tbl_process_dat&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">print</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">recordValues</span><span class="p">());</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2-create-sqlite-database-schema">
+<h3>Example 2 - Create SQLite Database Schema<a class="headerlink" href="#example-2-create-sqlite-database-schema" title="Link to this heading"></a></h3>
+<p>The following example shows, how to create the following database schema in
+an SQLite database using JavaScript code:</p>
+<a class="reference internal image-reference" href="../_images/create_schema_javascript.svg"><img alt="../_images/create_schema_javascript.svg" src="../_images/create_schema_javascript.svg" width="100%" /></a>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">createSchema</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="nx">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">QSqlDatabase</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">db</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">(</span><span class="s2">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JsConsole&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">lastError</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">setDatabaseName</span><span class="p">(</span><span class="s2">&quot;C:/temp/test3.sqlite&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">db</span><span class="p">.</span><span class="nx">open</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="nx">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">createQuery</span><span class="p">();</span>
+<span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS substance ( &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;name TEXT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;description TEXT)&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS method (&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;name TEXT)&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS experiment (&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;substance_id INTEGER, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;method_id INTEGER, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;FOREIGN KEY (substance_id) REFERENCES substance (id), &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;FOREIGN KEY (method_id) REFERENCES method (id))&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="w">   </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS experiment_log (&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;log_datatime TIMESTAMP, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;event TEXT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;experiment_id INTEGER, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;FOREIGN KEY (experiment_id) REFERENCES experiment (id))&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="w">   </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS ms_measurement (&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;data_file_path TEXT, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="s2">&quot;FOREIGN KEY (id) REFERENCES experiment_log (id))&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">lastError</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="k">return</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="javascript-api-reference">
+<h2>JavaScript API Reference<a class="headerlink" href="#javascript-api-reference" title="Link to this heading"></a></h2>
+<section id="qsqldatabase">
+<h3>QSqlDatabase<a class="headerlink" href="#qsqldatabase" title="Link to this heading"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabaseE">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabaseE"></span><span id="DbPlugin::CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabaseE" title="Link to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSQLDatabase object to use it in JavaScript. </p>
+<p>The following code shows, how to open a database connection in JavaScript and how to execute a simple query</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QSqlDatabase</span><span class="p">();</span>
+<span class="n">db</span><span class="p">.</span><span class="n">createConnection</span><span class="p">(</span><span class="s">&quot;QSQLITE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;JsScript&quot;</span><span class="p">);</span>
+<span class="n">db</span><span class="p">.</span><span class="n">setDatabaseName</span><span class="p">(</span><span class="s">&quot;C:/Users/Public/Documents/QmixElements/Projects/Entwicklung/Log/ProcessDataDbLog.sqlite&quot;</span><span class="p">);</span>
+<span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">();</span>
+<span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">recordValues</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::createConnection__QStringCR.QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae002d08b936088700317dbac8f9584c1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase16createConnectionERK7QStringRK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::createQuery__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a3ca41f48e74e85d5dc5caa3c919a2d03"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">createQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11createQueryERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv"></span><span id="DbPlugin::CScriptQSqlDatabase::CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7211479a3c959719d70f723a33f80c52"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase19CScriptQSqlDatabaseEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::databaseNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a104ae2b4bdcd6d1403f80f2366e176e1"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">databaseName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase12databaseNameEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase7driversEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase7driversEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase7driversEv"></span><span id="DbPlugin::CScriptQSqlDatabase::driversC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac644814a14c86c690afd13a55171dd72"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drivers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase7driversEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::executeQuery__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac50a8e80b1abb79c9c38875c04c2bb0e"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">executeQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase12executeQueryERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::fields__QStringCRC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a4cd4e88488b0cbd3a36b39898ec60184"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fields</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tablename</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6fieldsERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8hostNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8hostNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8hostNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::hostNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a65d603b2c0d3cf43056d9790fff70652"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hostName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8hostNameEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6isOpenEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6isOpenEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6isOpenEv"></span><span id="DbPlugin::CScriptQSqlDatabase::isOpenC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a0a6c6f6c77c76768afd59886da60781b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6isOpenEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase7isValidEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase7isValidEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase7isValidEv"></span><span id="DbPlugin::CScriptQSqlDatabase::isValidC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a726b40660f13d495d23536a9c4316311"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase7isValidEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv"></span><span id="DbPlugin::CScriptQSqlDatabase::lastErrorC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab68935edaa8c64474347d8d95dc52ca6"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase9lastErrorEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase4openEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase4openEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase4openEv"></span><span id="DbPlugin::CScriptQSqlDatabase::open"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ae7b722e955fb081ce3406bf78388405b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase4openEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8passwordEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8passwordEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8passwordEv"></span><span id="DbPlugin::CScriptQSqlDatabase::passwordC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a492bcbae6e344a78a04a139ba18ecb43"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8passwordEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase4portEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase4portEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase4portEv"></span><span id="DbPlugin::CScriptQSqlDatabase::portC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aa31876577c32a607414120013a808bd2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">port</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase4portEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv"></span><span id="DbPlugin::CScriptQSqlDatabase::qSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7ffd47db405d965e485450d09eab184a"></span><span class="n"><span class="pre">QSqlDatabase</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase12qSqlDatabaseEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the internal database object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setDatabaseName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ad81e5047f6fd5e7cb2041a445c5e6cf2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDatabaseName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase15setDatabaseNameERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setHostName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aae8537672db9ab3281bd2b5650b5a2b0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHostName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setHostNameERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setPassword__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a8149e2219173eccc90ddc40a5a41e941"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPassword</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">password</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setPasswordERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase7setPortEi">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase7setPortEi"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase7setPortEi"></span><span id="DbPlugin::CScriptQSqlDatabase::setPort__i"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1af37db571469bc9c7fc6fdc1c939710cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPort</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase7setPortEi" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setUrl__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aff0854ac30eb045e1a7d8a8bfe691c44"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUrl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Url</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase6setUrlERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString"></span><span id="DbPlugin::CScriptQSqlDatabase::setUserName__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ac72acd07faca3dedfe0803dfe9891c5f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUserName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabase11setUserNameERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase6tablesEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase6tablesEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase6tablesEv"></span><span id="DbPlugin::CScriptQSqlDatabase::tablesC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1aedfbb90ce1cce419937c7a0666d6863e"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tables</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase6tablesEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase3urlEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase3urlEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase3urlEv"></span><span id="DbPlugin::CScriptQSqlDatabase::urlC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a7db1458d62b1d8e430b55cbdcf44d42c"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">url</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase3urlEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin19CScriptQSqlDatabase8userNameEv">
+<span id="_CPPv3NK8DbPlugin19CScriptQSqlDatabase8userNameEv"></span><span id="_CPPv2NK8DbPlugin19CScriptQSqlDatabase8userNameEv"></span><span id="DbPlugin::CScriptQSqlDatabase::userNameC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1a08e1bed7f6198c8d5b8878d27446d132"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">userName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin19CScriptQSqlDatabase8userNameEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin19CScriptQSqlDatabaseD0Ev">
+<span id="_CPPv3N8DbPlugin19CScriptQSqlDatabaseD0Ev"></span><span id="_CPPv2N8DbPlugin19CScriptQSqlDatabaseD0Ev"></span><span id="DbPlugin::CScriptQSqlDatabase::~CScriptQSqlDatabase"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlDatabase_1ab557d305c983758444e658a8ed3e98f6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlDatabase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin19CScriptQSqlDatabaseD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="qsqlquery">
+<h3>QSqlQuery<a class="headerlink" href="#qsqlquery" title="Link to this heading"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQueryE">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQueryE"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQueryE"></span><span id="DbPlugin::CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQueryE" title="Link to this definition"></a><br /></dt>
+<dd><p>Wrapper for QSqlQuery to use it in JavaScript. </p>
+<p>There are several options how to execute a query. The first option is, to call the executeQuery() function of the database object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The second option is, to create the query via the database object and to execute it later:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>or you create the query object and the pass the actual query to the executeQuery() function</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">();</span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">&quot;SELECT * FROM tbl_process_data&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you want to insert data into the database, then you can build the complete query string with JavaScript or you can use the bindValues() function with placeholders like in the code below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">createQuery</span><span class="p">(</span><span class="s">&quot;INSERT INTO person (id, forename, surename) VALUES (?, ?, ?)&quot;</span><span class="p">);</span>
+<span class="n">q</span><span class="p">.</span><span class="n">bindValues</span><span class="p">([</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bart&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Simpson&quot;</span><span class="p">]);</span>
+<span class="n">q</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList"></span><span id="DbPlugin::CScriptQSqlQuery::bindValues__QVariantListCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a7b8f13d10c2a4fd8e4acda2155bfa9fe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bindValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery10bindValuesERK12QVariantList" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery"></span><span id="DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery__QSqlQueryCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1aff1c1c2d483136321a4ce8aabe972eae"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QSqlQuery</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryERK9QSqlQuery" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv"></span><span id="DbPlugin::CScriptQSqlQuery::CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1aa10938b4fe0171b21d0c5d9f7212f881"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery16CScriptQSqlQueryEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery4execERK7QString">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery4execERK7QString"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery4execERK7QString"></span><span id="DbPlugin::CScriptQSqlQuery::exec__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a53a348680bcf9a3b62c455d073745db0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery4execERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery9lastErrorEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery9lastErrorEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery9lastErrorEv"></span><span id="DbPlugin::CScriptQSqlQuery::lastErrorC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a29ae276e28ec52a6ad3027f870e9b8d5"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery9lastErrorEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery4nextEv">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery4nextEv"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery4nextEv"></span><span id="DbPlugin::CScriptQSqlQuery::next"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a09f69f37121b8958ce34481705b12e2d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery4nextEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQuery7prepareERK7QString">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQuery7prepareERK7QString"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQuery7prepareERK7QString"></span><span id="DbPlugin::CScriptQSqlQuery::prepare__QStringCR"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a2dfd70e8856eff140fc5a0710dd71990"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prepare</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">query</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQuery7prepareERK7QString" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery6recordEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery6recordEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery6recordEv"></span><span id="DbPlugin::CScriptQSqlQuery::recordC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a723ca57ad17006b122b52314dc11cff7"></span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">record</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery6recordEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8DbPlugin16CScriptQSqlQuery12recordValuesEv">
+<span id="_CPPv3NK8DbPlugin16CScriptQSqlQuery12recordValuesEv"></span><span id="_CPPv2NK8DbPlugin16CScriptQSqlQuery12recordValuesEv"></span><span id="DbPlugin::CScriptQSqlQuery::recordValuesC"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1a65d45bf5cab220d5e9ba1c5af81caf71"></span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8DbPlugin16CScriptQSqlQuery12recordValuesEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8DbPlugin16CScriptQSqlQueryD0Ev">
+<span id="_CPPv3N8DbPlugin16CScriptQSqlQueryD0Ev"></span><span id="_CPPv2N8DbPlugin16CScriptQSqlQueryD0Ev"></span><span id="DbPlugin::CScriptQSqlQuery::~CScriptQSqlQuery"></span><span class="target" id="classDbPlugin_1_1CScriptQSqlQuery_1ad4a3bc9bf4db021ee964950801d9ebda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CScriptQSqlQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8DbPlugin16CScriptQSqlQueryD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

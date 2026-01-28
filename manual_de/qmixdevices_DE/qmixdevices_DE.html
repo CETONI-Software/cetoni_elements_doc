@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Erstellen von Gerätekonfigurationen &mdash; CETONI Elements Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4. Nemesys Plugin" href="../nemesys_DE/nemesys_DE.html" />
+    <link rel="prev" title="2. Einführung CETONI Elements Software" href="../QmixElementsADS_DE/QmixElementsADS_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Erstellen von Gerätekonfigurationen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einleitung">3.1. Einleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aufruf-des-geratekonfigurators">3.2. Aufruf des Gerätekonfigurators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importieren-einer-geratedatenbank">3.3. Importieren einer Gerätedatenbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubersicht">3.4. Übersicht</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#die-werkzeugleiste">3.5. Die Werkzeugleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#der-konfigurationsassistent">3.6. Der Konfigurationsassistent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#erstellung-einer-beispielkonfiguration">3.7. Erstellung einer Beispielkonfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#erweitern-einer-vorhandenen-konfiguration">3.8. Erweitern einer vorhandenen Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#konfiguration-eines-einzelnen-gerates">3.9. Konfiguration eines einzelnen Gerätes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulierte-gerate">3.10. Simulierte Geräte</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_DE.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_DE.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_DE.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_DE.html">7. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_DE.html">8. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_DE.html">9. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">10. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Erstellen von Gerätekonfigurationen</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="erstellen-von-geratekonfigurationen">
+<h1><span class="section-number">3. </span>Erstellen von Gerätekonfigurationen<a class="headerlink" href="#erstellen-von-geratekonfigurationen" title="Link to this heading"></a></h1>
+<section id="einleitung">
+<h2><span class="section-number">3.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link to this heading"></a></h2>
+<p>Um einzelne Geräte oder komplette Systeme bestehend aus mehreren
+Einzelgeräten in CETONI Elements zu benutzen, müssen Sie eine
+Gerätekonfiguration erstellen. Hierfür verwenden Sie den
+<em>Gerätekonfigurator</em>, welcher in CETONI Elements integriert ist. Der
+Gerätekonfigurator enthält einen <em>Konfigurationsassistenten</em>, der Sie bei
+der Konfiguration ihrer Geräte unterstützt.</p>
+</section>
+<section id="aufruf-des-geratekonfigurators">
+<h2><span class="section-number">3.2. </span>Aufruf des Gerätekonfigurators<a class="headerlink" href="#aufruf-des-geratekonfigurators" title="Link to this heading"></a></h2>
+<p>Sie starten den Gerätekonfigurator durch Auswahl des Menüpunktes
+<span class="menuselection">Device → Create Configuration</span> im Hauptmenü.</p>
+<img alt="Aufruf Gerätekonfigurator" src="../_images/1000020100000142000000E460C63C6ECF459963.png" />
+<p>Um den Gerätekonfigurator zur Konfiguration Ihrer Geräte zu verwenden, muss eine gültige Lizenz
+installiert sein. Wenn Sie keine Lizenz besitzen, können Sie die Erstellung von
+Gerätekonfigurationen testen, sie können ihre Geräte aber nicht mit
+Hilfe des Konfigurationsassistenten <span class="guinum">❶</span> konfigurieren. Eine nicht
+aktivierte Software-Version erkennen Sie an einer Warnmeldung in der
+Statusleiste des Gerätekonfigurators <span class="guinum">❷</span> (siehe Abbildung unten).</p>
+<figure class="align-default">
+<img alt="nicht aktivierte Version des Gerätekonfigurators" src="../_images/1000020100000335000001D8DF2765F4CE46116A.png" />
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn Sie Ihre echten Geräte konfigurieren möchten, aktivieren Sie Ihre Lizenz,
+bevor Sie den <em>Gerätekonfigurator</em> starten. Eine Anleitung dazu finden Sie im
+Kapitel <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#lizenzen-aktivieren"><span class="std std-ref">Lizenzen aktivieren</span></a>.</p>
+</div>
+</section>
+<section id="importieren-einer-geratedatenbank">
+<h2><span class="section-number">3.3. </span>Importieren einer Gerätedatenbank<a class="headerlink" href="#importieren-einer-geratedatenbank" title="Link to this heading"></a></h2>
+<p>Der Gerätekonfigurator und der Konfigurationsassistent verwenden eine
+Gerätedatenbank (<code class="file docutils literal notranslate"><span class="pre">devices.db</span></code>) aus denen die gerätespezifischen
+Parameter für die Konfiguration der Geräte auslesen werden. Bei der
+Installation der CETONI Elements Software wird diese Gerätedatenbank
+bereits installiert.</p>
+<p>Wenn Sie Geräte verwenden, die noch nicht in der Gerätedatenbank
+enthalten sind, müssen Sie ggf. eine aktuellere Version der
+Gerätedatenbank importieren. Diese finden Sie entweder auf Ihrem
+Installationsdatenträger oder Sie erhalten Sie direkt von CETONI.</p>
+<p>Beim Start des Gerätekonfigurators, werden Sie gefragt, ob Sie eine neue
+Gerätedatenbank importieren möchten. Wenn auf Ihrem
+Installationsdatenträger die Datei <code class="file docutils literal notranslate"><span class="pre">devices.db</span></code> enthalten ist, sollten
+Sie diese importieren.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn keine Gerätedatenbank auf dem
+Installationsdatenträger vorhanden ist, wird ihr Gerät
+bereits durch die CETONI Elements Software unterstützt
+und Sie können den Import überspringen.</p>
+</div>
+<ol class="arabic steps">
+<li><p>Bestätigen sie die Abfrage durch Linksklick auf die Schaltfläche <span class="guilabel">Yes</span>.</p>
+<img alt="Abfrage Gerätedatenbankimport" src="../_images/100002010000021400000104F1C5A4A3FB36B583.png" />
+</li>
+<li><p>Es öffnet sich ein
+Dateidialog. Wählen sie die Datenbankdatei <code class="file docutils literal notranslate"><span class="pre">devices.db</span></code>, die sich im
+Wurzelverzeichnis der mitgelieferten CETONI Elements CD befindet (siehe Abbildung unten).</p>
+<img alt="Dateidialog Gerätedatenbank" src="../_images/100002010000030C000001D07377795B057AC007.png" />
+</li>
+<li><p>Der Gerätekonfigurator verfügt jetzt über eine aktuelle Gerätedatenbank.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Gerätedatenbank enthält wichtige
+Konfigurationsinformationen über ihre Geräte. Sie müssen
+immer dann eine aktuelle Gerätedatenbank importieren,
+wenn sie ein neues Gerät der cetoni GmbH erwerben.</p>
+</div>
+<p>Solange sie keine neuen Geräte erwerben, müssen sie nicht bei jedem
+Start des Gerätekonfigurators eine Gerätedatenbank importieren. Wenn Sie
+nicht möchten, dass CETONI Elements sie weiter nach einer
+Gerätedatenbank fragt, setzen sie den Haken bei <span class="guilabel">Do not ask me again</span> und
+klicken sie auf die Schaltfläche <span class="guilabel">No</span> (siehe Abbildung unten).</p>
+<img alt="Abfrage Gerätedatenbank" src="../_images/10000201000002140000010401848AB92A244C42.png" />
+<p>Wenn sie zukünftig eine
+Gerätedatenbank importieren möchten, erreichen sie den Import-Dialog
+über den Menüpunkt <span class="menuselection">Device → Import Device Database</span> des Hauptmenüs
+(siehe Abbildung unten).</p>
+<img alt="Menüpunkt Gerätedatenbank importieren" src="../_images/100002010000012C000000D9432772F445244F1B.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie müssen nicht bei jedem Start des
+Gerätekonfigurators eine Gerätedatenbank importieren.
+Solange sie keine neuen Geräte erwerben, müssen Sie kein
+neue Gerätedatenbank importieren.</p>
+</div>
+</section>
+<section id="ubersicht">
+<h2><span class="section-number">3.4. </span>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h2>
+<img alt="Übersicht Gerätekonfigurator" src="../_images/10000201000003A8000002551C97F93586909741.png" />
+<p>Der Gerätekonfigurator
+ist in folgende drei Bereiche untergliedert:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Toolbar</strong> – Funktionen zum Anlegen, Laden und Speichern von
+Konfigurationen, sowie zum Starten des Konfigurationsassistenten</p></li>
+<li><p><strong>Device List</strong> – Auswahl aller konfigurierbaren Geräte</p></li>
+<li><p><strong>Device configuration</strong> – individuelle, vom Nutzer erstellte Gerätekonfiguration</p></li>
+</ol>
+</section>
+<section id="die-werkzeugleiste">
+<h2><span class="section-number">3.5. </span>Die Werkzeugleiste<a class="headerlink" href="#die-werkzeugleiste" title="Link to this heading"></a></h2>
+<p>Die Werkzeugleiste enthält folgende Funktionen:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100016B7000034EB000034EBF007ABD978022879.svg"><img alt="image26" src="../_images/100016B7000034EB000034EBF007ABD978022879.svg" width="40" /></a></p></td>
+<td><p>Erstellt eine neue, leere Gerätekonfiguration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000069300003505000035059CEEC88E17AC3A44.svg"><img alt="image27" src="../_images/1000069300003505000035059CEEC88E17AC3A44.svg" width="40" /></a></p></td>
+<td><p>Lädt eine vorhandene Gerätekonfiguration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000CE50000350500003505303BFDEECD65BB70.svg"><img alt="image28" src="../_images/10000CE50000350500003505303BFDEECD65BB70.svg" width="40" /></a></p></td>
+<td><p>Speichert die erstellte Gerätekonfiguration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000173B0000387200003872AFCF364C5ED9850F.svg"><img alt="image29" src="../_images/1000173B0000387200003872AFCF364C5ED9850F.svg" width="40" /></a></p></td>
+<td><p>Speichert die erstellte Gerätekonfiguration unter einem
+neuen Namen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100011C0000034EB000034EBDA043906CEBA5F5A.svg"><img alt="image30" src="../_images/100011C0000034EB000034EBDA043906CEBA5F5A.svg" width="40" /></a></p></td>
+<td><p>Setzt alle Geräte der Konfiguration als simulierte
+Geräte.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AD00000350500003505C47905C00A889D90.svg"><img alt="image31" src="../_images/10000AD00000350500003505C47905C00A889D90.svg" width="40" /></a></p></td>
+<td><p>Startet den Dialog für die Auswahl von Add-On-Plugins.
+Es handelt sich dabei um optionale Erweiterungen der
+Software, die CETONI, unter Umständen in Ihrem Auftrag,
+kundenspezifisch entwickelt hat.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10002680000034EB000034EBD15B809B1EA625C8.svg"><img alt="image32" src="../_images/10002680000034EB000034EBD15B809B1EA625C8.svg" width="40" /></a></p></td>
+<td><p>Startet den Konfigurationsassistenten.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001BD3000034EB000034EBF4CF559786D64E36.svg"><img alt="image33" src="../_images/10001BD3000034EB000034EBF4CF559786D64E36.svg" width="40" /></a></p></td>
+<td><p>Startet die Software mit der Gerätekonfiguration die im
+Gerätekonfigurator aktiv ist</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="der-konfigurationsassistent">
+<h2><span class="section-number">3.6. </span>Der Konfigurationsassistent<a class="headerlink" href="#der-konfigurationsassistent" title="Link to this heading"></a></h2>
+<img alt="Der Konfigurationsassistent" src="../_images/1000020100000386000002786DDB775867DDCAEB.png" />
+<p>Der <em>Konfigurationsassistent</em> unterstützt Sie bei der Integration ihrer Geräte
+in ihre spezifische Gerätekonfiguration. Sie <strong>müssen</strong> ihn immer dann
+ausführen, wenn Sie:</p>
+<ul class="simple">
+<li><p>eine Gerätekonfiguration neu erstellen oder ändern.</p></li>
+<li><p>Ein Gerät einer vorhanden Konfiguration tauschen oder ein neues Gerät
+einbinden.</p></li>
+<li><p>Ihre CETONI Elements Software aktualisiert haben.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Konfiguration und Geräte gehören zusammen.
+Führen sie den Konfigurationsassistenten immer aus,
+wenn sie eine Konfiguration ändern oder ein anderes
+Gerät in eine vorhandene Konfiguration einbinden
+wollen.</p>
+</div>
+<p>Ihre Gerätekonfiguration sollte stets mit der Softwareversion erstellt
+worden sein, mit der Sie die Konfiguration verwenden möchten, da es
+sonst unter Umständen zu Fehlern kommen kann. Wenn die
+Gerätekonfiguration mit einer anderen Softwareversion erstellt wurde,
+erhalten Sie beim Start der Anwendung einen Warnhinweis.</p>
+<img alt="../_images/outdated_device_config.png" src="../_images/outdated_device_config.png" />
+<p>Wenn Sie diese Warnung sehen, sollten Sie die
+Gerätekonfiguration im Gerätekonfigurator öffnen, speichern und dann
+alle Geräte mit dem Konfigurationsassistenten konfigurieren.</p>
+</section>
+<section id="erstellung-einer-beispielkonfiguration">
+<h2><span class="section-number">3.7. </span>Erstellung einer Beispielkonfiguration<a class="headerlink" href="#erstellung-einer-beispielkonfiguration" title="Link to this heading"></a></h2>
+<p>Im folgenden Beispiel wird die Erstellung einer Gerätekonfiguration
+bestehend aus einem Nemesys s Dosiermodul und einem Qmix Q+ Modul erklärt.</p>
+<ol class="arabic steps">
+<li><p>Starten sie den Gerätekonfigurator wie in Abschnitt
+<a class="reference internal" href="qmixdevices_full_DE.html#aufruf-des-geratekonfigurators"><span class="std std-ref">Aufruf des Gerätekonfigurators</span></a> beschrieben.</p></li>
+<li><p>Klicken sie mit der linken Maustaste auf die Nemesys S Spritzenpumpe
+in der Geräteliste <span class="guinum">❶</span> und halten sie diese gedrückt.</p></li>
+<li><p>Ziehen sie die Nemesys S Pumpe mit gedrückter Maustaste in die
+Gerätekonfiguration <span class="guinum">❷</span>. Sobald sie die Maustaste loslassen, wird die
+Pumpe in die Konfiguration eingefügt. Alternativ können Sie ein
+Gerät auch hinzufügen, indem Sie es in der Geräteliste doppelt
+anklicken.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<blockquote>
+<div><p>Sie können Geräte via Drag &amp; Drop oder durch Doppelklick hinzufügen.</p>
+</div></blockquote>
+</div>
+<img alt="Erstellen der Gerätekonfiguration" src="../_images/1000020100000315000001F95769560860DF416C.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können Geräte aus der Gerätekonfiguration
+entfernen, indem Sie das Gerät durch Anklicken
+auswählen und dann die Entfernen Taste drücken.</p>
+</div>
+</li>
+<li><p>Verfahren Sie auf gleiche Weise mit dem Qmix Q+ Modul.</p></li>
+<li><p>Speichern Sie Ihre Konfiguration jetzt unter einem aussagekräftigen
+Namen ab durch Klick auf Sie Schaltfläche <span class="guilabel">Save</span> <span class="guinum">❸</span>.</p></li>
+<li><p>Starten sie durch Klicken mit der linken Maustaste auf die
+Schaltfläche <span class="guilabel">Configure</span> <span class="guinum">❹</span> den Konfigurationsassistenten .</p>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Schalten Sie das Basismodul immer aus,
+bevor Sie Geräte entfernen oder anstecken um Schaden an
+den Geräten zu vermeiden.</p>
+</div>
+</li>
+<li><p>Der Konfigurationsassistent fordert sie nun auf, folgende Schritte
+durchzuführen:</p>
+<ul class="simple">
+<li><p>Schließen Sie die Nemesys S Pumpe an das Basismodul an.</p></li>
+<li><p>Schalten Sie den Power Schalter der Nemesys S Pumpe in die
+ON-Stellung.</p></li>
+<li><p>Schalten Sie den Power Schalter von allen anderen Geräten
+die am Basismodul angeschlossen sind aus.</p></li>
+<li><p>Entfernen Sie alle Geräte vom Basismodul, die nicht über
+einen Schalter verfügen um sie auszuschalten – das wäre in
+diesem Fall das Qmix Q+ Modul (Schalten Sie das Basismodul
+aus, bevor Sie Geräte entfernen und anstecken).</p></li>
+<li><p>Stecken sie den Busterminator auf das letzte Modul in Ihrem
+System – die Nemesys S Pumpe.</p></li>
+<li><p>Schalten Sie das Basismodul wieder ein.</p></li>
+<li><p>Überprüfen Sie, dass die Nemesys S Pumpe, welche Sie
+konfigurieren möchten, das einzige Modul, welches nun
+eingeschaltet ist. Während der Konfiguration des Moduls,
+dürfen sich keine anderen eingeschalteten Geräte am
+Basismodul befinden.</p></li>
+</ul>
+<img alt="../_images/10000201000003860000027872DE1FBA980DE172.png" src="../_images/10000201000003860000027872DE1FBA980DE172.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Während der Konfiguration eines Gerätes
+dürfen Siech keine anderen eingeschalteten Geräte am
+Basismodul befinden, da es ansonsten zu Fehlern bei der
+Konfiguration oder zu späteren Fehlfunktionen kommen
+kann.</p>
+</div>
+<ul class="simple">
+<li><p>Klicken sie mit der linken Maustaste auf die Schaltfläche <span class="guilabel">Next</span>
+um fortzufahren.</p></li>
+</ul>
+</li>
+<li><p>Die Nemesys S Pumpe wird konfiguriert. Dies kann einige Sekunden dauern.</p>
+<img alt="Gerät wird konfiguriert" src="../_images/1000020100000386000002783B7DFF9EE7B610D1.png" />
+</li>
+<li><p>Der Konfigurationsassistent zeigt Ihnen die erfolgreiche
+Konfiguration der Nemesys S Pumpe an. Klicken sie mit der linken
+Maustaste auf die Schaltfläche <span class="guilabel">Next</span> um fortzufahren.</p>
+<img alt="Gerätekonfiguration erfolgreich" src="../_images/1000020100000386000002780368D5E4C23E8331.png" />
+</li>
+<li><p>Der Konfigurationsassistent fordert sie auf, folgende Schritte zu tätigen:</p>
+<ul class="simple">
+<li><p>Verbinden Sie das Qmix Q+ Modul mit Ihrem Basismodul
+(Schalten Sie das Basismodul aus, bevor Sie Geräte entfernen
+und anstecken).</p></li>
+<li><p>Schalten Sie den Power Schalter von allen anderen Geräten
+die am Basismodul angeschlossen sind aus – das wäre in
+diesem Fall die Nemesys S Pumpe. Alternative können Sie auch
+die Nemesys S Pumpe vom Basismodul entfernen und nur das
+Qmix Q+ Modul anschließen.</p></li>
+<li><p>Entfernen Sie alle Geräte vom Basismodul, die nicht über
+einen Schalter verfügen um sie auszuschalten.</p></li>
+<li><p>Stecken sie den Busterminator auf das letzte Modul in Ihrem
+System.</p></li>
+<li><p>Schalten Sie das Basismodul wieder ein.</p></li>
+<li><p>Überprüfen Sie, dass das Qmix Q+ Modul das einzige Modul ist
+welches nun eingeschaltet ist. Während der Konfiguration des
+Moduls, dürfen sich keine anderen eingeschalteten Geräte
+Basismodul befinden.</p></li>
+</ul>
+<img alt="Konfiguriertes Gerät trennen" src="../_images/100002010000038600000278BB49B91B78BAF742.png" />
+</li>
+<li><p>Klicken Sie <span class="guilabel">Next</span>, um das QmixQ+ Modul zu konfigurieren.</p></li>
+<li><p>Setzen sie auf der folgenden Seite mit der linken Maustaste das
+Häkchen neben <em>Import and activate new device configuration into
+CETONI Elements now</em>. Auf diese Weise aktiviert CETONI Elements die
+neue Gerätekonfiguration und startet nach dem Beenden des
+Konfigurationsassistenten neu.</p>
+<img alt="Gerätekonfiguration aktivieren" src="../_images/10000201000002DC000001E9CA80FBFC63198D1D.png" />
+</li>
+<li><p>Bereiten sie den Neustart von CETONI Elements mit der erstellten Konfiguration vor:</p>
+<ul class="simple">
+<li><p>Schalten sie das Basismodul aus.</p></li>
+<li><p>Verbinden Sie die Nemesys S Pumpe und das Qmix Q+ Modul mit dem
+Basismodul.</p></li>
+<li><p>Stecken sie den Busterminator an.</p></li>
+<li><p>Schalten sie das Basismodul wieder ein.</p></li>
+<li><p>Schalten Sie den Power Schalter der Nemesys S Pumpe ein</p></li>
+<li><p>Schließen sie den Konfigurationsassistenten durch Betätigen der
+Schaltfläche <span class="guilabel">Finish</span> ab.</p></li>
+</ul>
+<img alt="Abschluss des Konfigurationsassistenten" src="../_images/10000201000002DC000001E960A7B6801635EFFC.png" />
+</li>
+<li><p>Bestätigen sie den Neustart der Software mit der neuen Konfiguration.</p>
+<img alt="Neustart von CETONI Elements bestätigen" src="../_images/1000020100000209000000973518A94FC04F6523.png" />
+</li>
+<li><p>CETONI Elements steht Ihnen nun mit den Funktionen der Nemesys S Pumpe und
+des Qmix Q+ Moduls zur Verfügung.</p></li>
+</ol>
+</section>
+<section id="erweitern-einer-vorhandenen-konfiguration">
+<h2><span class="section-number">3.8. </span>Erweitern einer vorhandenen Konfiguration<a class="headerlink" href="#erweitern-einer-vorhandenen-konfiguration" title="Link to this heading"></a></h2>
+<p>Im folgenden Beispiel wird gezeigt, wie sie die im vorangegangenen
+Abschnitt erzeugte Konfiguration bestehend aus einem Nemesys S Dosiermodul
+und einem Qmix Q+ Modul um ein weiteres Gerät erweitern können.</p>
+<ol class="arabic steps">
+<li><p>Starten sie den Gerätekonfigurator wie in Abschnitt
+<a class="reference internal" href="qmixdevices_full_DE.html#aufruf-des-geratekonfigurators"><span class="std std-ref">Aufruf des Gerätekonfigurators</span></a> beschrieben.</p></li>
+<li><p>Nach dem Start des Gerätekonfigurators wird die Konfiguration
+angezeigt, die momentan durch die CETONI Elements Software geladen
+wurde. Die grünen Haken über den Geräten bedeuten ihnen, dass die
+Geräte bereits konfiguriert wurden.</p>
+<img alt="Anzeige der geladenen Konfiguration" src="../_images/1000020100000495000002DBC4E00C234E4AF418.png" />
+</li>
+<li><p>Möchten Sie eine andere Konfiguration als die, die derzeit von der CETONI
+Elements Software geladen wurde, ändern, müssen sie diese über die
+Schaltfläche <span class="guilabel">Open</span> in der Werkzeugleiste aufrufen.</p>
+<img alt="Laden einer Gerätekonfiguration" src="../_images/100002010000025F000000564EB0B2BD3EA73911.png" />
+</li>
+<li><p>Fügen Sie, wie im vorangegangenen Abschnitt beschrieben, ein weiteres Gerät durch Drag
+&amp; Drop hinzu. Das Ausrufezeichen über dem neuen Gerät zeigt Ihnen,
+dass das Gerät noch nicht konfiguriert wurde. Die Konfiguration ist
+in diesem Zustand noch nicht verwendbar.</p>
+<img alt="Hinzufügen eines Gerätes zu einer bestehenden Konfiguration" src="../_images/1000020100000495000002DBE574762DF8C08052.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Beinhaltet eine Gerätekonfiguration nicht
+konfigurierte Geräte, dann ist sie (noch) ungültig und
+kann nicht verwendet werden.</p>
+</div>
+</li>
+<li><p>Starten sie den <em>Konfigurationsassistenten</em> durch Anklicken der
+Schaltfläche <span class="guilabel">Configure</span>.</p>
+<img alt="Starte den Konfigurationsassistenten" src="../_images/100002010000026E0000005A49AF5264C0E989FD.png" />
+</li>
+<li><p>Wenn die Software bereits mit den angeschlossenen Geräten
+verbunden wurde, dann kann der Konfigurationsprozess nicht
+fortgesetzt werden. In diesem Fall schlägt ihnen der
+Konfigurationsassistent vor, die Software und den Gerätekonfigurator
+automatisch neu zu starten. Klicken sie auf die Schaltfläche <span class="guilabel">Yes</span>,
+wenn sie den Konfigurationsprozess fortsetzen möchten.</p>
+<img alt="Neustart des Gerätekonfigurators" src="../_images/1000020100000214000000B9F911FCCD726CA849.png" />
+</li>
+<li><p>Es startet der aus dem vorangegangenen Abschnitt bekannte Konfigurationsablauf. Auf
+der zweiten Seite schlägt ihnen der Assistent diesmal jedoch vor,
+bereits konfigurierte Geräte vom Konfigurationsprozess
+auszuschließen. Setzen sie den Haken neben <span class="guilabel">Skip configured devices</span>.</p>
+<img alt="konfigurierte Geräte auslassen" src="../_images/10000201000002DC000001A6F3562502AF0DE59C.png" />
+</li>
+<li><p>Der <em>Konfigurationsassistent</em> fährt nun direkt mit der Konfiguration des
+neu hinzugefügten Gerätes (im Beispiel Qmix P) fort.</p>
+<img alt="Konfiguration des neuen Gerätes" src="../_images/10000201000002DC000001C34265519F69AC6D55.png" />
+</li>
+<li><p>Führen sie den Konfigurationsablauf auf die gleiche Weise wie beim Neuerstellen
+einer Konfiguration zu Ende.</p></li>
+<li><p>Nach dem Neustart der Software steht Ihnen nun auch die Funktionalität des
+neuen Gerätes zur Verfügung.</p></li>
+</ol>
+</section>
+<section id="konfiguration-eines-einzelnen-gerates">
+<h2><span class="section-number">3.9. </span>Konfiguration eines einzelnen Gerätes<a class="headerlink" href="#konfiguration-eines-einzelnen-gerates" title="Link to this heading"></a></h2>
+<p>Sie können im Gerätekonfigurator auch jederzeit nur ein einzelnes Gerät
+aus Ihrer Konfiguration konfigurieren – z.B. wenn Sie ein defektes Gerät
+gegen ein neues getauscht haben. Klicken Sie dazu einfach mit der
+rechten Maustaste auf das Gerät, welches konfiguriert werden soll und
+wählen Sie den Menüpunkt <span class="menuselection">Configure</span>.</p>
+<img alt="Einzelgerät konfigurieren" src="../_images/1000020100000432000002BB096CA19B52A6276F.png" />
+<p>Der Konfigurationsassistent führt Sie nun durch die Konfiguration des einzelnen Gerätes.</p>
+</section>
+<section id="simulierte-gerate">
+<h2><span class="section-number">3.10. </span>Simulierte Geräte<a class="headerlink" href="#simulierte-gerate" title="Link to this heading"></a></h2>
+<p>Sie können einzelne Geräte oder eine vollständige Gerätekonfiguration
+simulieren. Dies ist sinnvoll, wenn sie beispielsweise Skripte
+programmieren und hierbei Geräte benutzen möchten, die Ihnen momentan
+nicht zur Verfügung stehen. Die Demo-Konfiguration der CETONI
+Elements-Software, zum Beispiel, besteht vollständig aus simulierten
+Geräten. Um ein einzelnes Gerät zu simulieren gehen Sie wie folgt vor.</p>
+<ol class="arabic steps">
+<li><p>Klicken Sie mit der rechten Maustaste auf das Gerät, das sie
+simulieren möchten.</p></li>
+<li><p>Klicken sie mit der linken Maustaste auf die Schaltfläche <span class="guilabel">Simulate</span>.</p>
+<img alt="Simulieren eines einzelnen Gerätes" src="../_images/100002010000024900000114FAB67531E84DD8FF.png" />
+</li>
+<li><p>Das Gerät wird hierauf als simuliertes Gerät gekennzeichnet. Speichern Sie die
+Konfiguration. Wenn Sie CETONI Elements das nächste Mal mit dieser
+Gerätekonfiguration laden, wird Ihnen das Gerät als simuliertes
+Gerät zur Verfügung stehen.</p>
+<img alt="Simuliertes Gerät" src="../_images/100002010000024500000103CAAD327CC34BFAE1.png" />
+</li>
+</ol>
+<p>Eine gesamte Gerätekonfiguration simulieren Sie, indem sie die Schaltfläche
+<span class="guilabel">Simulate All</span> in der Hauptwerkzeugleiste mit der linken Maustaste anklicken.</p>
+<img alt="Simulieren einer gesamten Gerätekonfiguration" src="../_images/10000201000003A4000001AB6990B251D2B11E55.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../QmixElementsADS_DE/QmixElementsADS_DE.html" class="btn btn-neutral float-left" title="2. Einführung CETONI Elements Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../nemesys_DE/nemesys_DE.html" class="btn btn-neutral float-right" title="4. Nemesys Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

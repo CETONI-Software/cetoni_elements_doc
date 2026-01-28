@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12. Rotaxys / Nemaxys Plugins &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="13. Waagen Plugin" href="../balance_DE/balance_DE.html" />
+    <link rel="prev" title="11. Schlauchpumpen Plugin" href="../tubingpump_DE/tubingpump_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Rotaxys / Nemaxys Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">12.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seitenleiste">12.2. Seitenleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#werkzeugleiste">12.3. Werkzeugleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steuerkreuz">12.4. Steuerkreuz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rotaxys-steuerkreuz">12.4.1. Rotaxys Steuerkreuz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nemaxys-steuerkreuz">12.4.2. Nemaxys Steuerkreuz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geschwindigkeit-verandern">12.4.3. Geschwindigkeit verändern</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#positionierkarte">12.5. Positionierkarte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfuhrung-zur-positionierkarte">12.5.1. Einführung zur Positionierkarte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#positioniermodi">12.5.2. Positioniermodi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freie-positionierung">12.5.3. Freie Positionierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#container-positionierung">12.5.4. Container Positionierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kontextmenu-aufrufen">12.5.5. Kontextmenü aufrufen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#z-panel-fur-die-positionierung-der-z-achse">12.6. Z-Panel für die Positionierung der Z-Achse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schaltflache-fur-vordefinierte-positionen">12.6.1. Schaltfläche für vordefinierte Positionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hohenanzeige">12.6.2. Höhenanzeige</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#statusleiste">12.7. Statusleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sicherheitshub">12.8. Sicherheitshub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mikrotiterplatte-konfigurieren-rotaxys">12.9. Mikrotiterplatte konfigurieren (Rotaxys)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">12.9.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vorhandene-mikrotiterplatte-auswahlen">12.9.2. Vorhandene Mikrotiterplatte auswählen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neue-mikrotiterplatte-erstellen">12.9.3. Neue Mikrotiterplatte erstellen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rotaxys360-arbeitstisch-konfigurieren">12.10. Rotaxys360 Arbeitstisch konfigurieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arbeitstisch-konfiguration-laden">12.10.1. Arbeitstisch-Konfiguration laden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#standard-arbeitstisch-wiederherstellen">12.10.2. Standard Arbeitstisch wiederherstellen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nullwinkel-konfigurieren-rotaxys-360">12.11. Nullwinkel konfigurieren (Rotaxys 360)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#positionierung-mit-dem-spacemouse">12.12. Positionierung mit dem SpaceMouse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rotaxys-mit-spacemouse-positionieren">12.12.1. Rotaxys mit SpaceMouse positionieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ubersicht">Übersicht</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rotationsachse-positionieren">Rotationsachse positionieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#radiusachse-positionieren">Radiusachse positionieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hubachse-positionieren">Hubachse positionieren</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nemaxys-mit-spacemouse-positionieren">12.13. Nemaxys mit SpaceMouse positionieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">12.13.1. Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#x-achse-positionieren">12.13.2. X-Achse positionieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#y-achse-positionieren">12.13.3. Y-Achse positionieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">12.13.4. Hubachse positionieren</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#steuerung-von-einzelnen-achsen">12.14. Steuerung von einzelnen Achsen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weitere-funktionen">12.15. Weitere Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#achssystem-kalibrieren">12.15.1. Achssystem kalibrieren</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#script-funktionen-zum-positionieren">12.16. Script Funktionen zum Positionieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-xy-bewegung-move-xy">12.16.1. Funktion XY Bewegung - <em>Move XY</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-hubbewegung-move-z">12.16.2. Funktion Hubbewegung - <em>Move Z</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-referenzfahrt-find-home">12.16.3. Funktion Referenzfahrt – <em>Find Home</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-einzelachse-verfahren-move-axis">12.16.4. Funktion Einzelachse verfahren - <em>Move Axis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-zu-container-verfahren-move-to-container">12.16.5. Funktion Zu Container verfahren – Move to container</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">23. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12. </span>Rotaxys / Nemaxys Plugins</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rotaxys-nemaxys-plugins">
+<h1><span class="section-number">12. </span>Rotaxys / Nemaxys Plugins<a class="headerlink" href="#rotaxys-nemaxys-plugins" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">12.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Diese Plugins unterstützen die Steuerung und Visualisierung verschiedener
+CETONI-Positionierungssysteme wie Rotaxys- und Nemaxys-Geräte. Für jedes Gerät
+wird ein <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">View</span></a> erstellt, der alle UI-Elemente zur manuellen
+Steuerung eines einzelnen Geräts bereitstellt (siehe Abbildung unten).</p>
+<img alt="Arbeitsbereich für Positioniersysteme" src="../_images/10000201000003DC00000264E20C70B3.png" />
+<p>Sie können eine Ansicht (View) für ein bestimmtes Gerät über den Hauptmenüpunkt
+<span class="menuselection">Window → Show View → Rotaxys</span> oder
+<span class="menuselection">Window → Show View → Nemaxys</span> oder über die entsprechenden
+Schaltflächen in der Anwendung <a class="reference internal" href="#seitenleiste"><span class="std std-ref">Sidebar (Seitenleiste)</span></a>  anzeigen.</p>
+<p>Eine solcher View besteht hauptsächlich aus den folgenden Komponenten:</p>
+<ol class="arabic simple guinums">
+<li><p>Werkzeugleiste</p></li>
+<li><p>Positionierkarte für XY-Positionierung</p></li>
+<li><p>Steuerkreuz für manuelle Positionierung</p></li>
+<li><p>Z-Panel für die Positionierung der Z-Achse (Hubachse)</p></li>
+<li><p>Seitenleiste</p></li>
+<li><p>Statusleiste</p></li>
+</ol>
+</section>
+<section id="seitenleiste">
+<h2><span class="section-number">12.2. </span>Seitenleiste<a class="headerlink" href="#seitenleiste" title="Link to this heading"></a></h2>
+<img alt="../_images/10000201000000AF0000012F9C3F78B4.png" src="../_images/10000201000000AF0000012F9C3F78B4.png" />
+<p>In der Seitenleiste, die ein- und ausgeblendet werden kann,
+finden Sie zusätzliche Steuerelemente zur Konfiguration und Steuerung
+Ihres Positioniersystems. So können Sie z.B. im Bereich <span class="guilabel">Velocities</span>
+(siehe Abbildung) die Geschwindigkeiten aller Achsen frei konfigurieren.
+Alle Positionierungen in der <em>Positionierkarte</em> oder im <em>Z-Panel</em> werden
+dann mit den eingestellten Geschwindigkeiten durchgeführt.</p>
+</section>
+<section id="werkzeugleiste">
+<h2><span class="section-number">12.3. </span>Werkzeugleiste<a class="headerlink" href="#werkzeugleiste" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000CF90000388E0000388E1FD1A88B.svg"><img alt="image26" src="../_images/10000CF90000388E0000388E1FD1A88B.svg" width="40" /></a></p></td>
+<td><p>Blendet die Seitenleiste mit zusätzlichen
+Konfigurations- und Steuerelementen ein oder aus</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000D410000388E0000388E35A2B3B1.svg"><img alt="image27" src="../_images/10000D410000388E0000388E35A2B3B1.svg" width="40" /></a></p></td>
+<td><p>Ändert die Vergrößerung der Positionierkarte so, dass
+die Anzeige vollständig in den Arbeitsbereich passt</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100009990000388E0000388E1BA93A61.svg"><img alt="image28" src="../_images/100009990000388E0000388E1BA93A61.svg" width="40" /></a></p></td>
+<td><p>Ändert die Vergrößerung der Positionierkarte auf die
+tatsächliche Pixelgröße</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100006470000388E0000388E347518E6.svg"><img alt="image29" src="../_images/100006470000388E0000388E347518E6.svg" width="40" /></a></p></td>
+<td><p>Erhöht den Vergrößerungsfaktor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100005ED0000388E0000388ED759EE76.svg"><img alt="image30" src="../_images/100005ED0000388E0000388ED759EE76.svg" width="40" /></a></p></td>
+<td><p>Verringert den Vergrößerungsfaktor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000D0D0000387200003872DC49EFEE.svg"><img alt="image31" src="../_images/10000D0D0000387200003872DC49EFEE.svg" width="40" /></a></p></td>
+<td><p>Schaltet zwischen freier Positionierung und
+Container-Positionierung um (siehe Abschnitt
+<a class="reference internal" href="#positionierkarte">Positionierkarte</a> )</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10006A1200003872000038721E5AEA51.svg"><img alt="image32" src="../_images/10006A1200003872000038721E5AEA51.svg" width="40" /></a></p></td>
+<td><p>Fügt die Skriptfunktion <em>Move XY</em> mit der aktuellen
+XY-Position als Zielposition zum Skript Editor hinzu</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10004B2D000038720000387201D5E26F.svg"><img alt="image33" src="../_images/10004B2D000038720000387201D5E26F.svg" width="40" /></a></p></td>
+<td><p>Fügt die Skriptfunktion <em>Move Z</em> mit der aktuellen
+Position der Z-Achse als Zielposition zum Skript Editor
+hinzu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000DBF0000388E0000388EA99541AC.svg"><img alt="image34" src="../_images/10000DBF0000388E0000388EA99541AC.svg" width="40" /></a></p></td>
+<td><p>Stoppt sofort die Bewegungen aller Achsen des
+Positioniersystems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B3C0000388E0000388EB899FB65.svg"><img alt="image35" src="../_images/10000B3C0000388E0000388EB899FB65.svg" width="40" /></a></p></td>
+<td><p>Aktiviert/deaktiviert den <a class="reference internal" href="#sicherheitshub">Sicherheitshub</a>. Ist
+dieser aktiv, fährt die Z-Achse vor jeder
+Positionierung in der XY Ebene in eine sichere
+Position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000C840000387200003872CDFFD2CA.svg"><img alt="image36" src="../_images/10000C840000387200003872CDFFD2CA.svg" width="40" /></a></p></td>
+<td><p>Legt die aktuelle Position der Z-Achse als sichere
+Position fest. Ist die Sicherheitshebefunktion aktiv,
+fährt das Positioniersystem vor jeder Bewegung in der
+XY-Ebene auf diese Höhe.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000DA30000388E0000388E5B234FC2.svg"><img alt="image37" src="../_images/10000DA30000388E0000388E5B234FC2.svg" width="40" /></a></p></td>
+<td><p>Nullwinkel konfigurieren – der Nullwinkel wird vom
+Achssystem nicht überfahren und ist der Anfangs- und
+Endpunkt des 360°-Drehbereichs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004F40000388E0000388E24B4D5C8.svg"><img alt="image38" src="../_images/100004F40000388E0000388E24B4D5C8.svg" width="40" /></a></p></td>
+<td><p>Find Home - Führt eine Referenzfahrt aus, um die
+Ausgangsposition des Geräts zu finden.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="steuerkreuz">
+<h2><span class="section-number">12.4. </span>Steuerkreuz<a class="headerlink" href="#steuerkreuz" title="Link to this heading"></a></h2>
+<section id="rotaxys-steuerkreuz">
+<h3><span class="section-number">12.4.1. </span>Rotaxys Steuerkreuz<a class="headerlink" href="#rotaxys-steuerkreuz" title="Link to this heading"></a></h3>
+<p>Mit dem 6-Wege-Steuerkreuz können Sie alle Achsen des Rotaxys Positioniersystems
+manuell positionieren.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_left.svg"><img alt="image48" src="../_images/rotaxys_control_pad_left.svg" width="120" /></a></p></td>
+<td><p>Rotationsachse entgegen dem Uhrzeigersinn drehen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_right.svg"><img alt="image49" src="../_images/rotaxys_control_pad_right.svg" width="120" /></a></p></td>
+<td><p>Rotationsachse im Uhrzeigersinn drehen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_up.svg"><img alt="image50" src="../_images/rotaxys_control_pad_up.svg" width="120" /></a></p></td>
+<td><p>Radiusachse vom Drehzentrum weg bewegen
+(Radius vergrößern)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_down.svg"><img alt="image51" src="../_images/rotaxys_control_pad_down.svg" width="120" /></a></p></td>
+<td><p>Radiusachse Richtung Drehzentrum bewegen
+(Radius verringern)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_center.svg"><img alt="image52" src="../_images/rotaxys_control_pad_center.svg" width="120" /></a></p></td>
+<td><p>Hubachse nach oben oder unten bewegen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nemaxys-steuerkreuz">
+<h3><span class="section-number">12.4.2. </span>Nemaxys Steuerkreuz<a class="headerlink" href="#nemaxys-steuerkreuz" title="Link to this heading"></a></h3>
+<p>Mit dem 6-Wege-Steuerkreuz können Sie alle Achsen des Nemaxys Positioniersystems
+manuell positionieren.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_left.svg"><img alt="image53" src="../_images/nemaxys_control_pad_left.svg" width="120" /></a></p></td>
+<td><p>X-Achse nach links bewegen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_right.svg"><img alt="image54" src="../_images/nemaxys_control_pad_right.svg" width="120" /></a></p></td>
+<td><p>X-Achse nach rechts bewegen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_up.svg"><img alt="image55" src="../_images/nemaxys_control_pad_up.svg" width="120" /></a></p></td>
+<td><p>Y-Achse zur Rückseite des Gerätes bewegen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_down.svg"><img alt="image56" src="../_images/nemaxys_control_pad_down.svg" width="120" /></a></p></td>
+<td><p>Y-Achse zur Vorderseite des Gerätes bewegen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_center.svg"><img alt="image57" src="../_images/nemaxys_control_pad_center.svg" width="120" /></a></p></td>
+<td><p>Z-Achse nach oben oder unten bewegen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="geschwindigkeit-verandern">
+<h3><span class="section-number">12.4.3. </span>Geschwindigkeit verändern<a class="headerlink" href="#geschwindigkeit-verandern" title="Link to this heading"></a></h3>
+<p>Bei der Auswahl einer Richtung auf dem Steuerkreuz, wird die
+entsprechende Achse mit einer festen Geschwindigkeit positioniert. Diese
+Geschwindigkeit kann durch das gleichzeitige Drücken einer Taste auf der
+Tastatur verändert werden. Drücken Sie dafür zuerst die Taste auf der
+Tastatur und klicken Sie anschließend auf eine Richtungstaste im
+Steuerkreuz.</p>
+<p>Die folgen Tasten können verwendet werden:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000227000000DC165AEB92.png"><img alt="image62" src="../_images/1000000000000227000000DC165AEB92.png" style="width: 4.489cm;" /></a></p></td>
+<td><p><strong>Shift key</strong></p>
+<p>Increases the velocity by a fixed factor</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000000E9000000DA41A245E6.png"><img alt="image63" src="../_images/10000000000000E9000000DA41A245E6.png" style="width: 1.91cm;" /></a></p></td>
+<td><p><strong>Control key</strong></p>
+<p>Decreases the velocity be a fixed factor
+for precise, fine positioning</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Gefahr von Beschädigung durch Kollision mit
+Probenbehälter! Achten Sie darauf, bei abgesenkter
+Werkzeugspitze, z.B. wenn sich eine Kanüle in einem
+Behälter befindet, keine Kollisionen durch Bewegung der
+Rotations- oder Linearachse zu verursachen.</p>
+</div>
+</section>
+</section>
+<section id="positionierkarte">
+<h2><span class="section-number">12.5. </span>Positionierkarte<a class="headerlink" href="#positionierkarte" title="Link to this heading"></a></h2>
+<section id="einfuhrung-zur-positionierkarte">
+<h3><span class="section-number">12.5.1. </span>Einführung zur Positionierkarte<a class="headerlink" href="#einfuhrung-zur-positionierkarte" title="Link to this heading"></a></h3>
+<p>Die Positionierungskarte ist eine Gesamtansicht der XY-Ebene Ihres Achsensystems.
+Sie zeigt den Verfahrbereich und die Arbeitsplatzkonfiguration Ihres Geräts.</p>
+<img alt="../_images/positioning_map.png" src="../_images/positioning_map.png" />
+<p>Mit der Positionierkarte können Sie Ihr Achsensystem in der XY-Ebene
+positionieren, indem Sie Punkte auf der Positionierkarte anklicken.
+Die Vergrößerung der Karte kann über das Kontextmenü in festen
+Schritten verändert oder mit dem Mausrad stufenlos eingestellt werden.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E98AB541701.png"><img alt="image67" src="../_images/10000000000001EC000002E98AB541701.png" style="width: 2.5cm;" /></a></p></td>
+<td><p>Vergrößerungsfaktor erhöhen (hineinzoomen)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E9389967B01.png"><img alt="image68" src="../_images/10000000000001EC000002E9389967B01.png" style="width: 2.5cm;" /></a></p></td>
+<td><p>Vergrößerungsfaktor verringern (heraus zoomen)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Zur Navigation innerhalb der Positionierkarte können Sie ebenfalls die
+Maus verwenden. Sie können den aktuell sichtbaren Ausschnitt über die
+beiden Scrollbalken am rechten und unteren Rand der Karte verschieben.
+Alternativ können Sie auch die freie Mausnavigation aktivieren. Gehen
+Sie dafür wie folgt vor:</p>
+<ol class="arabic steps">
+<li><p>Klicken Sie mit der mittleren Maustaste in die Positionierkarte</p>
+<a class="reference internal image-reference" href="../_images/10000000000001EC000002E9F2BF71491.png"><img alt="../_images/10000000000001EC000002E9F2BF71491.png" src="../_images/10000000000001EC000002E9F2BF71491.png" style="width: 2.5cm;" /></a>
+</li>
+<li><p>Es wird nun ein Navigationskreuz eingeblendet und die
+freie Navigation wird aktiviert</p>
+<img alt="../_images/100002010000018300000083E415CE9E.png" src="../_images/100002010000018300000083E415CE9E.png" />
+</li>
+<li><p>Sie können nun durch verschieben der Maus den aktuell
+sichtbaren Ausschnitt in der Positionierkarte verschieben. Je weiter
+Sie den Mauszeiger von dem eingeblendeten Navigationskreuz weg
+bewegen, um so schneller wird die Karte verschoben.</p></li>
+</ol>
+</section>
+<section id="positioniermodi">
+<h3><span class="section-number">12.5.2. </span>Positioniermodi<a class="headerlink" href="#positioniermodi" title="Link to this heading"></a></h3>
+<p>Die Positionierkarte kann in zwei verschiedenen Modi verwendet werden:</p>
+<ul class="simple">
+<li><p>freie Positionierung</p></li>
+<li><p>Container-Positionierung</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/10000D0D0000387200003872DC49EFEE.svg"><img alt="../_images/10000D0D0000387200003872DC49EFEE.svg" class="align-left" src="../_images/10000D0D0000387200003872DC49EFEE.svg" width="60" /></a>
+<p>Zur Umschaltung zwischen den beiden Modi, verwenden Sie die
+Schaltfläche <em>Positioning Map</em> in der Werkzeugleiste oder im Kontextmenü
+der Positionierkarte. Die aktuelle Position des Rotaxys Gerätes wird auf
+der Positionierkarte durch ein grünes Kreuz angezeigt.</p>
+<img alt="../_images/100000000000021B000001883AC10950.png" src="../_images/100000000000021B000001883AC10950.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Um Kollisionen zu vermeiden, wird vor dem
+Anfahren einer Position die Hubachse stets automatisch
+in die oberste Position verfahren.</p>
+</div>
+</section>
+<section id="freie-positionierung">
+<h3><span class="section-number">12.5.3. </span>Freie Positionierung<a class="headerlink" href="#freie-positionierung" title="Link to this heading"></a></h3>
+<img alt="Freie Positionierung" src="../_images/100002010000026F00000160893A15AD.png" />
+<p>Bei der freien Positionierung
+können Sie alle Positionen innerhalb eines erlaubten Bereiches <span class="guinum">❹</span>
+anfahren. Der erlaubte Bereich ist durch eine grüne Umrandung
+gekennzeichnet (siehe Abbildung). Wenn Sie die Maus bewegen, wird die
+potentielle Zielposition <span class="guinum">❶</span> durch ein Zielkreuz, das aus zwei
+gestrichelten Linien besteht, gekennzeichnet. Wenn Sie mit der linken
+Maustaste die Zielposition anklicken, verfährt das Positioniersystem zu
+der gewählten Position. Die Anzeige der aktuellen Position <span class="guinum">❷</span> bewegt sich
+dann zur Zielposition <span class="guinum">❸</span>.</p>
+</section>
+<section id="container-positionierung">
+<h3><span class="section-number">12.5.4. </span>Container Positionierung<a class="headerlink" href="#container-positionierung" title="Link to this heading"></a></h3>
+<p>In diesem Modus, klicken Sie zur Positionierung einfach in einen der
+vorhandenen Container (Wells). Sobald Sie den Zielcontainer angeklickt
+haben, verfährt das System automatisch zum Mittelpunkt des gewählten
+Zielcontainers.</p>
+<img alt="Container Positionierung" src="../_images/10000000000001820000011C044844B8.png" />
+<p>Der gewählte Zielcontainer wird durch eine farbliche Markierung gekennzeichnet.</p>
+</section>
+<section id="kontextmenu-aufrufen">
+<h3><span class="section-number">12.5.5. </span>Kontextmenü aufrufen<a class="headerlink" href="#kontextmenu-aufrufen" title="Link to this heading"></a></h3>
+<p>Klicken Sie mit der rechten Maustaste in die Positionierkarte, um das
+Kontextmenü aufzurufen.</p>
+<img alt="Kontextmenü Positionierkarte" src="../_images/100002010000026400000183CB728E2F.png" />
+</section>
+</section>
+<section id="z-panel-fur-die-positionierung-der-z-achse">
+<h2><span class="section-number">12.6. </span>Z-Panel für die Positionierung der Z-Achse<a class="headerlink" href="#z-panel-fur-die-positionierung-der-z-achse" title="Link to this heading"></a></h2>
+<img alt="../_images/100002010000008400000179E985566C.png" src="../_images/100002010000008400000179E985566C.png" />
+<p>Das Z-Panel rechts neben der Positionierkarte zeigt Ihnen stets die
+aktuelle Position der Hubachse an und gibt Ihnen verschiedene
+Möglichkeiten zur Positionierung der Hub-Achse. Es besteht aus:</p>
+<ol class="arabic simple guinums">
+<li><p>Schaltflächen für vordefinierte Positionen</p></li>
+<li><p>numerische Höhenanzeige (Position Hubachse)</p></li>
+<li><p>Slider zu Auswahl der Zielposition</p></li>
+<li><p>grafische Höhenanzeige</p></li>
+</ol>
+<section id="schaltflache-fur-vordefinierte-positionen">
+<h3><span class="section-number">12.6.1. </span>Schaltfläche für vordefinierte Positionen<a class="headerlink" href="#schaltflache-fur-vordefinierte-positionen" title="Link to this heading"></a></h3>
+<p>Die beiden Schaltflächen für das Heben und Senken <span class="guinum">❶</span> erleichtern die
+schnelle Positionierung der Hubachse auf vorher von Ihnen definierte
+Maximal- und Minimal-Positionen. Wenn Sie eine der beiden Schaltflächen
+anklicken, verfährt die Hubachse mit der eingestellten Geschwindigkeit
+an die vorher für diese Schaltfläche definierte Position. Mit den beiden
+Schaltflächen legen Sie auch den Verfahrbereich fest, der mit dem
+Positionsslider <span class="guinum">❸</span> ausgewählt werden kann.</p>
+<p>Um die aktuelle Position zuzuweisen, klicken Sie auf eine der beiden
+Schaltflächen mit der rechten Maustaste und wählen Sie dann im
+Kontextmenü den Punkt <span class="menuselection">Assign actual position</span>.</p>
+<img alt="Aktuelle Position zuweisen" src="../_images/10000201000001260000005F5060C7EB.png" />
+<p>Die zugewiesene Position wird
+in den Konfigurationsdaten gespeichert und ist auch beim erneuten Start
+der Software wieder vorhanden. Der konfigurierte Verfahrbereich mit
+maximaler und minimaler Position wird Ihnen in der grafischen
+Höhenanzeige durch zwei blaue Markierungen angezeigt (siehe Abschnitt <a class="reference internal" href="#hohenanzeige">Höhenanzeige</a>).</p>
+</section>
+<section id="hohenanzeige">
+<h3><span class="section-number">12.6.2. </span>Höhenanzeige<a class="headerlink" href="#hohenanzeige" title="Link to this heading"></a></h3>
+<p>Die numerische Höhenanzeige zeigt Ihnen die aktuelle Höhe der Achse in
+Millimetern an. Die grafische Anzeige stellt in einem Balken die
+aktuelle Position innerhalb des Verfahrbereichs der Achse dar.</p>
+<img alt="../_images/1000020100000077000000F2F26E6F5B.png" src="../_images/1000020100000077000000F2F26E6F5B.png" />
+<ul class="guinums simple">
+<li><p><strong>Aktuelle Position / Höhe</strong> – der farbige Balken zeigt
+die aktuelle Position der Achse</p></li>
+<li><p><strong>Softwarelimit Maximum</strong> – zeigt die maximale Position, die Sie
+mit dem Slider auswählen können. Im Abschnitt <a class="reference internal" href="#schaltflache-fur-vordefinierte-positionen">Schaltfläche für vordefinierte Positionen</a>
+ist beschrieben, wie Sie das Limit festlegen.</p></li>
+<li><p><strong>Softwarelimit Minimum</strong> – zeigt die minimale Position, die Sie
+mit dem Slider auswählen können</p></li>
+<li><p><strong>Zielauswahl-Markierung</strong> – zeigt die potentielle Zielposition,
+die per Mausklick zur Zielposition wird. Den Wert für diese Position
+wird im Hinweisfenster neben der Markierung angezeigt</p></li>
+<li><p><strong>Zielposition</strong> – wenn Sie mit der Maus in die Höhenanzeige
+klicken, wird eine neue Zielposition festgelegt und die Achse
+verfährt an diese Position. Die neue Zielposition kann nur innerhalb
+der Softwarelimits liegen. Klicken Sie außerhalb der Limits, verfährt
+die Achse bis zum entsprechenden Limit.</p></li>
+<li><p><strong>Sichere Position für XY-Bewegung</strong> – zeigt für bestimmte
+Achssysteme (z.B. Rotaxys) die sichere Position für XY-Bewegungen an.
+D.h. wenn die Achse tiefer steht als diese Position, wird vor einer
+XY-Bewegung die Achse auf diese Höhe verfahren.</p></li>
+</ul>
+</section>
+</section>
+<section id="statusleiste">
+<h2><span class="section-number">12.7. </span>Statusleiste<a class="headerlink" href="#statusleiste" title="Link to this heading"></a></h2>
+<p>In Statusleiste des Rotaxys / Nemaxys Arbeitsbereiches können Sie stets
+die aktuelle XY-Position und den aktuellen Status des Gerätes ablesen.</p>
+<img alt="Statusleiste" src="../_images/10000201000001A40000003D95DACEE7.png" />
+</section>
+<section id="sicherheitshub">
+<h2><span class="section-number">12.8. </span>Sicherheitshub<a class="headerlink" href="#sicherheitshub" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10000B3C0000388E0000388EB899FB65.svg"><img alt="../_images/10000B3C0000388E0000388EB899FB65.svg" class="align-left" src="../_images/10000B3C0000388E0000388EB899FB65.svg" width="60" /></a>
+<p>Sie können über diese Schaltfläche in der Werkzeugleiste den
+Sicherheitshub ein- und ausschalten. Ist der Sicherheitshub aktiv, fährt
+die Z-Achse vor jeder XY-Positionierung auf eine vorgegebene
+Sicherheitshöhe. Dies verhindert Kollisionen mit Probengefäßen oder
+anderen Gegenständen auf dem Arbeitstisch.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/10000C840000387200003872CDFFD2CA.svg"><img alt="../_images/10000C840000387200003872CDFFD2CA.svg" class="align-left" src="../_images/10000C840000387200003872CDFFD2CA.svg" width="60" /></a>
+<p>Durch Drücken dieser Schaltfläche definieren Sie die aktuelle
+Position der Z-Achse als sichere Höhe. Wenn der Sicherheitshub aktiv
+ist, wird das Achssystem vor jeder XY-Positionierung automatisch auf
+diese Höhe fahren.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="mikrotiterplatte-konfigurieren-rotaxys">
+<h2><span class="section-number">12.9. </span>Mikrotiterplatte konfigurieren (Rotaxys)<a class="headerlink" href="#mikrotiterplatte-konfigurieren-rotaxys" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">12.9.1. </span>Einführung<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Diese Funktion ist nur für Rotaxys-Geräte verfügbar. Wenn Sie ein Nemaxys-
+oder Rotaxys 360-Gerät haben, überspringen Sie diesen Abschnitt.</p>
+</div>
+<p>In der <a class="reference internal" href="#positionierkarte">Positionierkarte</a> wird stets
+die aktuell konfigurierte Mikrotiterplatte angezeigt. Sie können in der
+Software neue Platten konfigurieren und einem Rotaxys Gerät zuweisen.
+Wählen Sie dafür im Hauptmenü den Punkt <span class="menuselection">Edit → Configure Well Plate</span>
+(siehe Abbildung unten).</p>
+<img alt="Aufruf Konfigurationsdialog Mikrotiterplatte" src="../_images/1000000000000185000000A437A90768.png" />
+<p>Es wird
+Ihnen nun der Konfigurationsdialog für Mikrotiterplatten angezeigt.
+Dieser Konfigurationsdialog ist wie folgt aufgebaut:</p>
+<ol class="arabic simple guinums">
+<li><p>Liste der erstellten Mikrotiterplatten</p></li>
+<li><p>Konfigurationsparameter der aktuellen Platte</p></li>
+<li><p>grafische Darstellung der aktuellen Platte</p></li>
+</ol>
+</section>
+<section id="vorhandene-mikrotiterplatte-auswahlen">
+<h3><span class="section-number">12.9.2. </span>Vorhandene Mikrotiterplatte auswählen<a class="headerlink" href="#vorhandene-mikrotiterplatte-auswahlen" title="Link to this heading"></a></h3>
+<p>Wenn die Liste der vorhandenen Platten <span class="guinum">❶</span> bereits eine passende
+Mikrotiterplatte enthält, wählen Sie diese einfach durch Anklicken aus
+und bestätigen Sie die Auswahl durch Anklicken der <span class="guilabel">OK</span>-Schaltfläche im
+Dialog.</p>
+<img alt="Konfigurationsdialog für Mikrotiterplatten" src="../_images/100000000000029A0000020185A439FC.png" />
+</section>
+<section id="neue-mikrotiterplatte-erstellen">
+<h3><span class="section-number">12.9.3. </span>Neue Mikrotiterplatte erstellen<a class="headerlink" href="#neue-mikrotiterplatte-erstellen" title="Link to this heading"></a></h3>
+<p>Um ein neue Mikrotiterplatte zu erstellen, führen Sie die folgenden
+Schritte durch:</p>
+<ol class="arabic steps">
+<li><p>Konfigurieren Sie im Bereich <em>Well plate geometry</em> <span class="guinum">❷</span> die Geometrie
+der Wellplatte. Sie konfigurieren die Anzahl der Zeilen <span class="guilabel">Rows</span> und
+Spalten <span class="guilabel">Columns</span> und den Abstand zwischen den Zeilen <span class="guilabel">Row Spacing</span>
+und Spalten <span class="guilabel">Column Spacing</span>. Diese Daten finden Sie im
+Datenblatt der Mikrotiterplatte.</p></li>
+<li><p>Als nächstes konfigurieren Sie die Geometrie der Kavitäten im
+Bereich <em>Cavity geometry</em>. Legen Sie hier die Größe der Kavitäten
+fest <span class="guilabel">Cavity Size</span> sowie deren Tiefe <span class="guilabel">Cavity Height</span>. Mit dem
+Auswahlfeld <span class="guilabel">Circular Cavities</span> legen Sie fest, ob die neue Platte
+runde oder quadratische Kavitäten haben soll.</p></li>
+<li><p>Bestimmen Sie abschließend die Farbe der neuen Platte.
+Wählen Sie dafür im Farbauswahlfeld <span class="guilabel">Color</span> die gewünschte Farbe.
+Sollte die passende Farbe nicht vorhanden sein, wählen Sie den
+Eintrag <em>More…</em>. Es wird dann ein Farbauswahldialog zur freien
+Farbwahl angezeigt (siehe Abbildung unten).</p>
+<img alt="../_images/1000000000000222000001B52D5E1599.png" src="../_images/1000000000000222000001B52D5E1599.png" />
+</li>
+<li><p>Klicken Sie nun auf die Schaltfläche <span class="guilabel">Add Well Plate</span>, um
+die neue Mikrotiterplatte der Liste hinzuzufügen. In dem
+Eingabedialog der nun angezeigt wird, müssen Sie einen eindeutigen
+Namen für die neue Platte vergeben. Drücken Sie nun <kbd class="kbd docutils literal notranslate">Enter</kbd> oder klicken
+Sie <span class="guilabel">OK</span></p>
+<img alt="../_images/10000000000000F6000000A48331D83C.png" src="../_images/10000000000000F6000000A48331D83C.png" />
+</li>
+<li><p>Die neue Platte wird nun der Liste hinzugefügt und kann von Ihnen
+ausgewählt werden.</p></li>
+</ol>
+</section>
+</section>
+<section id="rotaxys360-arbeitstisch-konfigurieren">
+<h2><span class="section-number">12.10. </span>Rotaxys360 Arbeitstisch konfigurieren<a class="headerlink" href="#rotaxys360-arbeitstisch-konfigurieren" title="Link to this heading"></a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion ist nur für Rotaxys 360 Geräte verfügbar. Wenn Sie ein Nemaxys
+oder Rotaxys-Gerät besitzen, können Sie diesen Abschnitt überspringen.</p>
+</div>
+<section id="arbeitstisch-konfiguration-laden">
+<h3><span class="section-number">12.10.1. </span>Arbeitstisch-Konfiguration laden<a class="headerlink" href="#arbeitstisch-konfiguration-laden" title="Link to this heading"></a></h3>
+<p>Für das Rotaxys 360 Positioniersystem können im Moment die einzelnen
+Mikrotiterplatten noch nicht vom Anwender konfiguriert werden, wie beim
+Rotaxys Positioniersystem. Das Rotaxys 360 Positioniersystem unterstützt
+aber das Laden von vorgefertigten Arbeitstisch-Konfigurationsdateien, in
+denen die gesamte Konfiguration eines bestimmten Arbeitstisches
+beschrieben ist.</p>
+<p>Um eine Arbeitstisch-Konfiguration zu laden, blenden Sie sich die
+Oberfläche des entsprechenden Rotaxys 360 Gerätes ein. Wählen Sie dann
+im Hauptmenü den Punkt <span class="menuselection">Device → rotAXYS 360 → Load Table Configuration</span>.</p>
+<img alt="Rotaxys360 Arbeitstisch-Konfiguration laden" src="../_images/10000201000001F90000016C8210A438.png" />
+<p>Wählen Sie
+dann in dem Dateiauswahldialog der angezeigt wird die
+Konfigurationsdatei für den Arbeitstisch aus und laden Sie diese. Die
+Anzeige des Arbeitstisches wird dann sofort auf die neue Konfiguration
+aktualisiert (siehe Abbildung Beispielkonfiguration).</p>
+<img alt="Arbeitstisch Beispielkonfiguration" src="../_images/100002010000029700000167F3466823.png" />
+</section>
+<section id="standard-arbeitstisch-wiederherstellen">
+<h3><span class="section-number">12.10.2. </span>Standard Arbeitstisch wiederherstellen<a class="headerlink" href="#standard-arbeitstisch-wiederherstellen" title="Link to this heading"></a></h3>
+<p>Wählen Sie zum Wiederherstellen des Standard-Arbeitstisches im Hauptmenü
+den Punkt <span class="menuselection">Device → rotAXYS 360 → Restore Default Table</span>.</p>
+<img alt="Standard Arbeitstisch wiederherstellen" src="../_images/10000201000001D2000000ACD92863B0.png" />
+</section>
+</section>
+<section id="nullwinkel-konfigurieren-rotaxys-360">
+<h2><span class="section-number">12.11. </span>Nullwinkel konfigurieren (Rotaxys 360)<a class="headerlink" href="#nullwinkel-konfigurieren-rotaxys-360" title="Link to this heading"></a></h2>
+<p>Das Rotaxys360 Achssystem verfügt über einen Drehbereich, der
+theoretisch größer als 360 Grad ist. Um ein Verwickeln und Verfitzen des
+Schlauches für die Fluiddosierung zu verhindern, wurde der Drehbereich
+auf 360° begrenzt.</p>
+<img alt="Nullwinkel konfigurieren" src="../_images/10000000000001F4000001F443D41FA1.png" />
+<p>Mit dem Nullwinkel
+konfigurieren Sie den Winkel, der vom Positioniersystem nie überfahren
+wird. Der Nullwinkel ist gleichzeitig der Start- und Endpunkt für den
+Drehbereich. Wenn der Nullwinkel genau zwischen zwei Probenbehältern
+liegt, die Sie prozessieren möchten, wird das Positioniersystem den
+längeren Weg in die entgegengesetzte Richtung wählen, um den Nullwinkel
+nicht zu überfahren.</p>
+<a class="reference internal image-reference" href="../_images/10000DA30000388E0000388E5B234FC2.svg"><img alt="../_images/10000DA30000388E0000388E5B234FC2.svg" class="align-left" src="../_images/10000DA30000388E0000388E5B234FC2.svg" width="60" /></a>
+<p>Sie können den Nullwinkel an eine anderen Winkelposition
+verschieben, um dieses Problem zu umgehen. Drücken Sie dafür die
+Schaltfläche zur Konfiguration des Nullwinkels.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000015E00000176CAF82C1C.png"><img alt="image85" src="../_images/100000000000015E00000176CAF82C1C.png" style="width: 6.807cm;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/10000000000001F4000001F46EE2C177.png"><img alt="image86" src="../_images/10000000000001F4000001F46EE2C177.png" style="width: 6.807cm;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>In dem Dialog der Ihnen nun angezeigt wird (siehe Abbildung oben),
+können Sie den Nullwinkel im Bereich von 0 – 360° frei einstellen.</p>
+</section>
+<section id="positionierung-mit-dem-spacemouse">
+<h2><span class="section-number">12.12. </span>Positionierung mit dem SpaceMouse<a class="headerlink" href="#positionierung-mit-dem-spacemouse" title="Link to this heading"></a></h2>
+<img alt="../_images/10000000000001BC000001A5A84978561.png" src="../_images/10000000000001BC000001A5A84978561.png" />
+<p>Die <a class="reference external" href="https://3dconnexion.com/us/product/spacemouse-compact/">SpaceMouse</a>
+ist ein intuitives Eingabegerät, welches Ihnen die
+Steuerung von allen Achsen (Rotationsachse, Radius-Achse und Hubachse)
+gleichzeitig ermöglicht.
+Um die SpaceMouse zu nutzen, schließen Sie diese an einen freien
+USB-Anschluss an Ihrem PC an. Aktuelle Treiber finden Sie auf unserer
+Internetseite:</p>
+<p><a class="reference external" href="https://cetoni.de/software-downloads/">https://cetoni.de/software-downloads/</a></p>
+<p>oder auf dem Datenträger (CD oder USB-Stick) den Sie beim Kauf der
+Software erhalten haben. Installieren Sie den Treiber, um die SpaceMouse
+nutzen zu können.</p>
+<img alt="../_images/1000000000000500000002D03030564E1.png" src="../_images/1000000000000500000002D03030564E1.png" />
+<p>Positionieren Sie die SpaceMouse so, dass das Verbindungskabel von
+Ihnen weg zeigt und der <strong>3D Connexion</strong>-Schriftzug von Ihnen aus lesbar
+ist.</p>
+<section id="rotaxys-mit-spacemouse-positionieren">
+<h3><span class="section-number">12.12.1. </span>Rotaxys mit SpaceMouse positionieren<a class="headerlink" href="#rotaxys-mit-spacemouse-positionieren" title="Link to this heading"></a></h3>
+<section id="ubersicht">
+<h4>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000000DF000000CCCD58FB2B.png"><img alt="image94" src="../_images/10000000000000DF000000CCCD58FB2B.png" style="width: 80px;" /></a></p></td>
+<td><p>Rotationsachse im Uhrzeigersinn oder entgegen dem
+Uhrzeigersinn rotieren</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000000000000116000000E97F22C9171.png"><img alt="image95" src="../_images/1000000000000116000000E97F22C9171.png" style="width: 80px;" /></a></p></td>
+<td><p>Radiusachse zum Außenradius oder zum Drehzentrum
+bewegen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000009D000000DF60858E321.png"><img alt="image96" src="../_images/100000000000009D000000DF60858E321.png" style="width: 80px;" /></a></p></td>
+<td><p>Hubachse nach oben oder unten bewegen</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Benutzen Sie die SpaceMouse nicht,
+wenn die Software das System verfährt (z.B. bei aktiver
+Scriptausführung), um die Verfahrbewegungen nicht zu
+unterbrechen.</p>
+</div>
+</section>
+<section id="rotationsachse-positionieren">
+<h4>Rotationsachse positionieren<a class="headerlink" href="#rotationsachse-positionieren" title="Link to this heading"></a></h4>
+<p>Um die Rotationsachse zu positionieren, drehen Sie das Steuerelement im
+Uhrzeigersinn oder entgegen dem Uhrzeigersinn.</p>
+<img alt="Positionierung Rotationsachse mit SpaceMouse" src="../_images/100000000000023C00000157E76FE648.png" />
+<p>Die Geschwindigkeit, mit der die Achsen verfahren werden, kontrollieren Sie
+durch die Stärke der Auslenkung des Bedienteils. D.h. je stärker Sie das
+Bedienelement in eine bestimmte Richtung drücken oder drehen, umso
+schneller bewegt sich das Verfahrsystem. So können Sie durch eine
+geringe Auslenkung des Bedienteils sehr fein und gezielt positionieren.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Je stärker Sie das Bedienteil auslenken, um
+so höher sind die Verfahrgeschwindigkeiten der Achsen.</p>
+</div>
+</section>
+<section id="radiusachse-positionieren">
+<h4>Radiusachse positionieren<a class="headerlink" href="#radiusachse-positionieren" title="Link to this heading"></a></h4>
+<p>Zum Verfahren der Radius-Achse schieben Sie das Bedienteil des Space
+Navigators nach vorn oder hinten. Um die Radius-Achse zum Außenradius zu
+bewegen, drücken Sie das Bedienelement nach vorn von sich weg. Um die
+Radius-Achse zum Zentrum der Rotationsachse zu verfahren, ziehen Sie das
+Bedienelement zu sich heran.</p>
+<img alt="Positionierung Radius-Achse mit SpaceMouse" src="../_images/10000000000001BA0000016A872C4EFA.png" />
+</section>
+<section id="hubachse-positionieren">
+<h4>Hubachse positionieren<a class="headerlink" href="#hubachse-positionieren" title="Link to this heading"></a></h4>
+<p>Um die Z-Achse zu positionieren, drücken Sie das Bedienelement nach
+unten oder ziehen Sie das Bedienelement nach oben. Die Z-Achse wird in
+die Richtung bewegt, in die Sie das Bedienelement der SpaceMouse
+bewegen.</p>
+<img alt="../_images/1000000000000153000002091D224344.png" src="../_images/1000000000000153000002091D224344.png" />
+</section>
+</section>
+</section>
+<section id="nemaxys-mit-spacemouse-positionieren">
+<h2><span class="section-number">12.13. </span>Nemaxys mit SpaceMouse positionieren<a class="headerlink" href="#nemaxys-mit-spacemouse-positionieren" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">12.13.1. </span>Übersicht<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000000C40000008BD9BAE1821.png"><img alt="image103" src="../_images/10000000000000C40000008BD9BAE1821.png" style="width: 80px;" /></a></p></td>
+<td><p>X-Achse nach links oder rechts bewegen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000000000000116000000E97F22C9171.png"><img alt="image104" src="../_images/1000000000000116000000E97F22C9171.png" style="width: 80px;" /></a></p></td>
+<td><p>Y-Achse nach vorn (in Richtung Anwender) oder nach hinten bewegen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000009D000000DF60858E321.png"><img alt="image105" src="../_images/100000000000009D000000DF60858E321.png" style="width: 80px;" /></a></p></td>
+<td><p>Positioning vertical Z-axis</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Benutzen Sie die SpaceMouse nicht,
+wenn die Software das System verfährt (z.B. bei aktiver
+Scriptausführung), um die Verfahrbewegungen nicht zu
+unterbrechen.</p>
+</div>
+</section>
+<section id="x-achse-positionieren">
+<h3><span class="section-number">12.13.2. </span>X-Achse positionieren<a class="headerlink" href="#x-achse-positionieren" title="Link to this heading"></a></h3>
+<p>Um die Bewegung der X-Achse zu steuern, schieben Sie das Bedienelement des Space
+Navigators in die gewünschte Richtung. Schieben Sie den Regler nach links, um
+die X-Achse nach links zu bewegen, und nach rechts, um die Achse nach rechts zu bewegen.</p>
+<img alt="Positionierung X-Achse mit SpaceMouse" src="../_images/100000000000021E0000012A75C2B620.png" />
+<p>Die Geschwindigkeit, mit der die Achsen verfahren werden, kontrollieren Sie
+durch die Stärke der Auslenkung des Bedienteils. D.h. je stärker Sie das
+Bedienelement in eine bestimmte Richtung drücken oder drehen, umso
+schneller bewegt sich das Verfahrsystem. So können Sie durch eine
+geringe Auslenkung des Bedienteils sehr fein und gezielt positionieren.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Je stärker Sie das Bedienteil auslenken, um
+so höher sind die Verfahrgeschwindigkeiten der Achsen.</p>
+</div>
+</section>
+<section id="y-achse-positionieren">
+<h3><span class="section-number">12.13.3. </span>Y-Achse positionieren<a class="headerlink" href="#y-achse-positionieren" title="Link to this heading"></a></h3>
+<img alt="Positionierung Y-Achse mit SpaceMouse" src="../_images/10000000000001BA0000016A872C4EFA.png" />
+<p>Um die Y-Achse zu verfahren, ziehen Sie das Bedienelement zu sich heran
+oder schieben Sie das von sich weg. Entsprechend der Auslenkung des
+Bedienelementes verfährt die Y-Achse zur Geräterückseite oder nach vorn
+in Ihre Richtung.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können beide Richtungen gleichzeitig steuern, wenn Sie den Controller
+vorwärts oder rückwärts und gleichzeitig nach links oder rechts bewegen.</p>
+</div>
+</section>
+<section id="id3">
+<h3><span class="section-number">12.13.4. </span>Hubachse positionieren<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<img alt="Positionierung Hubachse mit SpaceMouse" src="../_images/1000000000000153000002091D224344.png" />
+<p>Um die Z-Achse zu positionieren, drücken Sie das Bedienelement nach
+unten oder ziehen Sie das Bedienelement nach oben. Die Z-Achse wird in
+die Richtung bewegt, in die Sie das Bedienelement der SpaceMouse
+bewegen.</p>
+</section>
+</section>
+<section id="steuerung-von-einzelnen-achsen">
+<h2><span class="section-number">12.14. </span>Steuerung von einzelnen Achsen<a class="headerlink" href="#steuerung-von-einzelnen-achsen" title="Link to this heading"></a></h2>
+<p>Zusätzlich zur Steuerung von Achssystemen, können auch einzelne Achsen
+manuell gesteuert werden. Dies kann notwendig sein, wenn Ihr Achssystem
+über zusätzliche Werkzeugachsen verfügt (z.B. zweite Z-Achse oder
+Rotationsachse) die nicht Bestandteil der XYZ-Steuerung sind.</p>
+<img alt="Anzeige Bedienpanel zur Steuerung von Einzelachsen" src="../_images/10000000000001DC000000DF02C90C52.png" />
+<p>Das Fenster zur Steuerung der Einzelachsen können Sie über den Menüpunkt
+<span class="menuselection">Window → Single Axis Control</span> im Hauptmenü der Anwendung einblenden
+(Abbildung unten).</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Das Fenster zur Steuerung der Einzalachsen
+ist ein Werkzeugfenster und kann frei in der Anwendung
+platziert und in allen vier Seitenbereichen angedockt
+werden.</p>
+</div>
+<p>Im Fenster zur Steuerung der Einzalachsen stehen Ihnen folgende
+Bedienelemente zur Verfügung:</p>
+<ol class="arabic guinums">
+<li><p>Auswahlfeld <strong>Axis Device</strong> zur Auswahl der Einzelachse, die Sie
+steuern möchten.</p></li>
+<li><p>Im Bereich <strong>Position</strong> wird Ihnen die aktuelle Position im Bereich
+zwischen Minimal- und Maximalposition als Fortschrittsbalken
+angezeigt. Über die Plus- / Minustasten können Sie die ausgewählte
+Achse verfahren. Die Verfahrbewegung dauert solange an, wie die
+entsprechende Schaltfläche gedrückt ist.</p>
+<img alt="../_images/10000000000001620000013436ED2B99.png" src="../_images/10000000000001620000013436ED2B99.png" />
+</li>
+<li><p>Im Bereich <em>Velocity</em> können Sie die Geschwindigkeit für die Verfahrbewegung einstellen.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Mit der Scriptfunktion <a class="reference internal" href="#einzelachse-verfahren"><span class="std std-ref">Einzelachse verfahren</span></a>
+können Sie einzelne Achsen aus einem Script-Programm heraus steuern.</p>
+</div>
+</section>
+<section id="weitere-funktionen">
+<h2><span class="section-number">12.15. </span>Weitere Funktionen<a class="headerlink" href="#weitere-funktionen" title="Link to this heading"></a></h2>
+<section id="achssystem-kalibrieren">
+<h3><span class="section-number">12.15.1. </span>Achssystem kalibrieren<a class="headerlink" href="#achssystem-kalibrieren" title="Link to this heading"></a></h3>
+<p>Wenn der Verfahrweg einer Achse blockiert ist (z.B. im Fall einer
+Kollision) kann es dazu kommen, dass die Schrittmotoren in dem Gerät
+Schritte “verlieren”, so dass die Positionswerte nicht mehr korrekt
+angezeigt werden. In diesem Fall ist es notwendig, eine Kalibrierung des
+Achssystems durchzuführen. Zum Start der Kalibrierung wählen Sie im
+Hauptmenü den Punkt <span class="menuselection">Device → rotAXYS → Find Home</span> (siehe Abbildung
+unten). Wenn Sie ein Nemaxys System haben, erreichen Sie die
+Kalibrierung über <span class="menuselection">Device → neMAXYS → Find Home</span>.</p>
+<img alt="Positioniersystem kalibrieren" src="../_images/10000201000001DD00000099ECA5B3B8.png" />
+</section>
+</section>
+<section id="script-funktionen-zum-positionieren">
+<h2><span class="section-number">12.16. </span>Script Funktionen zum Positionieren<a class="headerlink" href="#script-funktionen-zum-positionieren" title="Link to this heading"></a></h2>
+<p>Das Plugin bietet eine Reihe von Skriptfunktionen, die für die Integration der
+CETONI-Positionierungssysteme in das Skripting-System CETONI Elements erforderlich
+sind. Die folgenden Skriptfunktionen sind verfügbar:</p>
+<img alt="Script Funktionen zum Positionieren" src="../_images/100002010000013E000000C4FF06E1BD.png" />
+<section id="funktion-xy-bewegung-move-xy">
+<h3><span class="section-number">12.16.1. </span>Funktion XY Bewegung - <em>Move XY</em><a class="headerlink" href="#funktion-xy-bewegung-move-xy" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000668B0000388E0000388EDE73FA6F.svg"><img alt="../_images/1000668B0000388E0000388EDE73FA6F.svg" class="align-left" src="../_images/1000668B0000388E0000388EDE73FA6F.svg" width="60" /></a>
+<p>Diese Funktion dient dazu, das ein Achssystem in einem Qmix
+Script in der XY-Ebene zu positionieren. Das Achssystem <span class="guinum">❶</span>, und die
+Zielposition (X- und Y- Position) <span class="guinum">❷</span> können Sie im
+Konfigurationsbereich dieser Funktion eingeben . Alternativ können Sie
+auch das Achssystem manuell an eine bestimmte Position verfahren (z.B.
+mit der Positionierkarte - siehe Abschnitt <a class="reference internal" href="#positionierkarte"><span class="std std-ref">Positionierkarte</span></a>)
+und dann mit der Schaltfläche <span class="guilabel">Capture Actual Position</span> der Scriptfunktion
+die aktuellen Positionswerte zuweisen.</p>
+<img alt="Konfigurationsbereich XY-Positionierung" src="../_images/1000000000000222000001A467F71F03.png" />
+<p>Wenn Sie keine
+weiteren Einstellungen vornehmen, erfolgen alle Positionierungen mit der
+maximal möglichen Geschwindigkeit. Wenn Sie eigene Geschwindigkeiten
+eingeben möchten, blenden Sie durch Anklicken von <span class="guilabel">Axis Velocities</span> die
+Bedienelemente zur Eingabe der Geschwindigkeiten ein <span class="guinum">❸</span>. Hier können Sie
+nun für jede Achse die Geschwindigkeit der Positionierung einstellen.</p>
+<p>Mit dem Auswahlfeld <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> legen Sie fest, ob nach dem
+Start des Positioniervorganges:</p>
+<ul class="simple">
+<li><p>sofort mit der Bearbeitung der nächsten Scriptfunktion begonnen wird
+(<em>Run to completion</em> inaktiv)</p></li>
+<li><p>oder ob die nächste Funktion erst aufgerufen wird, wenn die
+Zielposition erreicht wurde (<em>Run to completion</em> aktiv).</p></li>
+</ul>
+</section>
+<section id="funktion-hubbewegung-move-z">
+<h3><span class="section-number">12.16.2. </span>Funktion Hubbewegung - <em>Move Z</em><a class="headerlink" href="#funktion-hubbewegung-move-z" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100028D60000388E0000388E7FEE4E05.svg"><img alt="../_images/100028D60000388E0000388E7FEE4E05.svg" class="align-left" src="../_images/100028D60000388E0000388E7FEE4E05.svg" width="60" /></a>
+<p>Mit dieser Funktion kann die Hubachse (Z-Achse)
+eines Achssystems positioniert werden. Das Achssystem <span class="guinum">❶</span>, und die
+Positionsparameter (Z-Position <span class="guinum">❷</span> und Geschwindigkeit <span class="guinum">❸</span>) können Sie im
+Konfigurationsbereich dieser Funktion eingeben. Alternativ können Sie
+auch die Z-Achse manuell an eine bestimmte Position verfahren (z.B. mit
+dem Z-Panel - siehe Abschnitt <a class="reference internal" href="#z-panel-fur-die-positionierung-der-z-achse">Z-Panel für die Positionierung der Z-Achse</a> ) und dann mit der
+Schaltfläche <span class="guilabel">Capture Actual Position</span> der Scriptfunktion die aktuellen
+Z-Position zuweisen.</p>
+<img alt="Konfigurationsbereich Z-Positionierung" src="../_images/10000000000001F80000011DC4B4D896.png" />
+<p>Wenn Sie keine
+weiteren Einstellungen vornehmen, erfolgen alle Positionierungen mit der
+maximal möglichen Geschwindigkeit. Wenn Sie eigene Geschwindigkeiten
+eingeben möchten, blenden Sie durch Anklicken von <span class="guilabel">Velocity</span> <span class="guinum">❸</span> die
+Bedienelemente zur Eingabe der Geschwindigkeiten ein. Ein erneuter Klick
+auf dieses Element, blendet die Eingabefelder für die Geschwindigkeit
+wieder aus.</p>
+<p>Mit dem Auswahlfeld <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> legen Sie fest, ob nach dem
+Start des Positioniervorganges:</p>
+<ul class="simple">
+<li><p>sofort mit der Bearbeitung der nächsten Scriptfunktion begonnen wird
+(<em>Run to completion</em> inaktiv)</p></li>
+<li><p>oder ob die nächste Funktion erst aufgerufen wird, wenn die
+Zielposition erreicht wurde (<em>Run to completion</em> aktiv).</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn <span class="guilabel">Run to completion</span> nicht aktiviert ist, können Sie mehrere
+Achsen gleichzeitig verfahren. Sie können z.B. mit der Positionierung des
+XY-Systems beginnen, und während die XY-Achsen verfahren werden, können Sie
+die Positionierung mit der Z-Achse durchführen.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Eingabefelder zur Konfiguration der
+Geschwindigkeiten sind standardmäßig ausgeblendet und
+müssen erst durch das Anklicken von <span class="guilabel">Velocity</span> eingeblendet werden.</p>
+</div>
+</section>
+<section id="funktion-referenzfahrt-find-home">
+<h3><span class="section-number">12.16.3. </span>Funktion Referenzfahrt – <em>Find Home</em><a class="headerlink" href="#funktion-referenzfahrt-find-home" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100004F40000388E0000388E24B4D5C8.svg"><img alt="../_images/100004F40000388E0000388E24B4D5C8.svg" class="align-left" src="../_images/100004F40000388E0000388E24B4D5C8.svg" width="60" /></a>
+<p>Diese Funktion ermöglicht den Start einer Referenzfahrt aus
+dem Script heraus. Das Positioniersystem fährt zu seiner
+Referenzposition und initialisiert sein Wegmessystem neu. Mit dem
+<span class="guilabel">Run to Completion</span>-Parameter können Sie wählen, ob die Funktion beendet
+werden soll nach dem Start der Referenzfahrt oder erst wenn die
+Referenzfahrt abgeschlossen ist.</p>
+</section>
+<section id="funktion-einzelachse-verfahren-move-axis">
+<span id="einzelachse-verfahren"></span><h3><span class="section-number">12.16.4. </span>Funktion Einzelachse verfahren - <em>Move Axis</em><a class="headerlink" href="#funktion-einzelachse-verfahren-move-axis" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000083F0000388E0000388E79629C8E.svg"><img alt="../_images/1000083F0000388E0000388E79629C8E.svg" class="align-left" src="../_images/1000083F0000388E0000388E79629C8E.svg" width="60" /></a>
+<p>Mit dieser Funktion kann eine Einzelachse
+positioniert werden. Im Auswahlfeld <span class="guilabel">Axis device</span> <span class="guinum">❶</span> wählen
+Sie die Achse aus, die
+verfahren werden soll. Die Positionsparameter (Position <span class="guinum">❷</span> und
+Geschwindigkeit <span class="guinum">❸</span>) können Sie im Konfigurationsbereich dieser Funktion
+eingeben. Alternativ können Sie auch die Achse manuell an eine bestimmte
+Position verfahren (z.B. mit dem Bedienpanel zur Einzelachssteuerung -
+siehe Abschnitt <a class="reference internal" href="#steuerung-von-einzelnen-achsen">Steuerung von einzelnen Achsen</a>) und dann mit der Schaltfläche
+<span class="guilabel">Capture Position</span> der Scriptfunktion die aktuellen Position zuweisen.</p>
+<img alt="Konfigurationsbereich Positionierung Einzelachse" src="../_images/10000000000001F50000011DA0097ABC.png" />
+<p>Wenn
+Sie keine weiteren Einstellungen vornehmen, erfolgen alle
+Positionierungen mit der maximal möglichen Geschwindigkeit. Wenn Sie
+eigene Geschwindigkeiten eingeben möchten, blenden Sie durch Anklicken
+von <span class="guilabel">Velocity</span> die Bedienelemente zur Eingabe der Geschwindigkeiten <span class="guinum">❸</span>
+ein. Ein erneuter Klick auf dieses Element, blendet die Eingabefelder
+für die Geschwindigkeit wieder aus.</p>
+<p>Mit dem Auswahlfeld <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> legen Sie fest, ob nach dem
+Start des Positioniervorganges:</p>
+<ul class="simple">
+<li><p>sofort mit der Bearbeitung der nächsten Scriptfunktion begonnen wird
+(<em>Run to completion</em> inaktiv)</p></li>
+<li><p>oder ob die nächste Funktion erst aufgerufen wird, wenn die
+Zielposition erreicht wurde (<em>Run to completion</em> aktiv).</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Eingabefelder zur Konfiguration der
+Geschwindigkeiten sind standardmäßig ausgeblendet und
+müssen erst eingeblendet werden.</p>
+</div>
+</section>
+<section id="funktion-zu-container-verfahren-move-to-container">
+<h3><span class="section-number">12.16.5. </span>Funktion Zu Container verfahren – Move to container<a class="headerlink" href="#funktion-zu-container-verfahren-move-to-container" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001F860000387200003872C360796C.svg"><img alt="../_images/10001F860000387200003872C360796C.svg" class="align-left" src="../_images/10001F860000387200003872C360796C.svg" width="60" /></a>
+<p>Diese Funktion dient dazu, ein Achssystem in der XY-Ebene
+zum Mittelpunkt eines bestimmten Containers (Becherglas, Fluidtank,
+Kavität einer Wellplatte) zu verfahren.</p>
+<p>In der Auswahlbox <span class="guilabel">XY Device</span> (Abbildung unten – <span class="guinum">❶</span>) wählen Sie das
+Achssystem aus. Den Zielcontainer wählen Sie in der Auswahlbox <span class="guinum">❷</span> aus.
+Falls der Container über mehrere Kavitäten verfügt (z.B. die Wells einer
+Wellplatte), geben Sie im Bereich <span class="guinum">❸</span> die Spalte <span class="guilabel">column</span> und Zeile
+<span class="guilabel">row</span> der Kavität ein. Die Nummerierung erfolgt dabei von 0
+beginnend. D.h. bei einer Wellplatte mit 12 Spalten und 8 Zeilen können
+Sie bei <span class="guilabel">column</span> Werte von 0 bis 11 und bei <span class="guilabel">row</span> Werte von 0 bis 7
+eingeben. Bei Container mit nur einer Kavität (z.B. Becherglas) sind die
+Eingabefelder für Zeile und Spalte ausgegraut.*</p>
+<img alt="../_images/1000000000000235000001BE75B30F65.png" src="../_images/1000000000000235000001BE75B30F65.png" />
+<p>Wenn Sie
+keine weiteren Einstellungen vornehmen, erfolgen alle Positionierungen
+mit der maximal möglichen Geschwindigkeit. Wenn Sie eigene
+Geschwindigkeiten eingeben möchten, blenden Sie durch Anklicken von
+<span class="guilabel">Axis Velocities</span> die Bedienelemente zur Eingabe der Geschwindigkeiten
+ein <span class="guinum">❹</span>. Hier können Sie nun für jede Achse die Geschwindigkeit der
+Positionierung einstellen.</p>
+<p>Mit dem Auswahlfeld <span class="guilabel">Run to completion</span> <span class="guinum">❺</span> legen Sie fest, ob nach dem
+Start des Positioniervorganges:</p>
+<ul class="simple">
+<li><p>sofort mit der Bearbeitung der nächsten Scriptfunktion begonnen wird
+(<em>Run to completion</em> inaktiv)</p></li>
+<li><p>oder ob die nächste Funktion erst aufgerufen wird, wenn die
+Zielposition erreicht wurde (<em>Run to completion</em> aktiv).</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können in den Zeilen- und Spalteneingabefeldern Skriptvariablen verwenden.
+Auf diese Weise können Sie alle Kavitäten einer Kavitätenplatte in einer
+Schleife unter Verwendung der Schleifenzählervariablen verarbeiten.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tubingpump_DE/tubingpump_DE.html" class="btn btn-neutral float-left" title="11. Schlauchpumpen Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../balance_DE/balance_DE.html" class="btn btn-neutral float-right" title="13. Waagen Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

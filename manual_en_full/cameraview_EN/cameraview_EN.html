@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15. Camera Add-on &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16. Image Analysis Plugin" href="../imageanalysis_EN/imageanalysis_EN.html" />
+    <link rel="prev" title="14. LED Array Plugin" href="../ledarray_EN/ledarray_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Camera Add-on</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-camera-add-on">15.1. Introduction to Camera Add-on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#camera-live-image">15.2. Camera Live Image</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#live-image-overview">15.2.1. Live Image Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toolbar">15.2.2. Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adjust-zoom-level">15.2.3. Adjust Zoom Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-image-capture">15.2.4. Manual Image Capture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-video-recording">15.2.5. Manual Video Recording</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#camera-settings">15.3. Camera Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">15.3.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-exposure-parameters">15.3.2. Setting Exposure Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-camera-parameters">15.3.3. Setting Camera Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#camera-script-functions">15.4. Camera Script Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#capture-image">15.4.1. Capture Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-video-recording">15.4.2. Start Video Recording</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-video-settings">Configuring video settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-camera-settings">Configuring camera settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#record-video-sequence">15.4.3. Record Video Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-video-recording">15.4.4. Stop Video Recording</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">15. </span>Camera Add-on</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="camera-add-on">
+<h1><span class="section-number">15. </span>Camera Add-on<a class="headerlink" href="#camera-add-on" title="Link to this heading"></a></h1>
+<section id="introduction-to-camera-add-on">
+<h2><span class="section-number">15.1. </span>Introduction to Camera Add-on<a class="headerlink" href="#introduction-to-camera-add-on" title="Link to this heading"></a></h2>
+<p>The Camera Add-on allows the user to integrate a range of cameras
+into the software. The plug-in supports, e.g., Firewire 1394 cameras
+(DCAM standard), USB cameras, as well as all standard Windows DirectShow
+cameras.</p>
+<img alt="../_images/10000000000003AF00000279E3F4A83D.png" src="../_images/10000000000003AF00000279E3F4A83D.png" />
+<p>For each camera device the software provides a separate live <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> <span class="guinum">❶</span>
+that shows the current live camera image. The <a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html#image-analysis-plugin"><span class="std std-ref">Image Analysis View</span></a>
+<span class="guinum">❷</span> shows images captured from the camera devices for analysis or storage into files.</p>
+</section>
+<section id="camera-live-image">
+<h2><span class="section-number">15.2. </span>Camera Live Image<a class="headerlink" href="#camera-live-image" title="Link to this heading"></a></h2>
+<section id="live-image-overview">
+<h3><span class="section-number">15.2.1. </span>Live Image Overview<a class="headerlink" href="#live-image-overview" title="Link to this heading"></a></h3>
+<p>The live image of each camera device is
+displayed in a <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> that the user may move freely on the screen
+desktop via drag-and-drop of the window’s title frame. Thus the user can
+place the live image on a second monitor and may observe the live image
+whilst maintaining complete oversight and control over the software
+settings on the first monitor.</p>
+<img alt="../_images/live_image_overview.png" src="../_images/live_image_overview.png" />
+<ol class="arabic simple guinums">
+<li><p>Toolbar</p></li>
+<li><p>Camera live image</p></li>
+</ol>
+<p>You can show the live image view for a certain camera device via the main menu
+item <span class="menuselection">Window → Show View → Camera → DeviceName</span>.</p>
+</section>
+<section id="toolbar">
+<h3><span class="section-number">15.2.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h3>
+<p>A Camera Live View provides the following functions via its toolbar or
+context menu:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/fit_to_size.svg"><img alt="image15" src="../_images/fit_to_size.svg" width="60" /></a></p></td>
+<td><p>Resize image to fit window to fit the image into the
+available display space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/view_1_1.svg"><img alt="image16" src="../_images/view_1_1.svg" width="60" /></a></p></td>
+<td><p>Resize image to its native pixel resolution relative to
+the screen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/zoom_in.svg"><img alt="image17" src="../_images/zoom_in.svg" width="60" /></a></p></td>
+<td><p>Increase digital zoom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/zoom_out.svg"><img alt="image18" src="../_images/zoom_out.svg" width="60" /></a></p></td>
+<td><p>Decrease digital zoom</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/camera.svg"><img alt="image19" src="../_images/camera.svg" width="60" /></a></p></td>
+<td><p>Capture the currently displayed image into the
+<em>Image Analysis</em> view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/videocamera.svg"><img alt="image20" src="../_images/videocamera.svg" width="60" /></a></p></td>
+<td><p>Record video</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/camera_settings.svg"><img alt="image21" src="../_images/camera_settings.svg" width="60" /></a></p></td>
+<td><p>Opens dialog for configuration of camera settings</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adjust-zoom-level">
+<h3><span class="section-number">15.2.3. </span>Adjust Zoom Level<a class="headerlink" href="#adjust-zoom-level" title="Link to this heading"></a></h3>
+<p>The digital zoom may be adjusted using one of three alternatives:</p>
+<ul>
+<li><p><strong>Toolbar</strong> – using the toolbar buttons will change the zoom between
+preset levels.</p></li>
+<li><p><strong>Context menu</strong> – a right-click into the live image opens a context menu
+that contains the relevant items to adjust the zoom level.</p></li>
+<li><p><strong>Mouse wheel</strong> – changes the zoom level smoothly</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/mouse_scroll_up.png"><img alt="image23" src="../_images/mouse_scroll_up.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_in.svg"><img alt="image17" src="../_images/zoom_in.svg" width="60" /></a></p></td>
+<td><p>Increase zoom (zoom in)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/mouse_scroll_down.png"><img alt="image24" src="../_images/mouse_scroll_down.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_out.svg"><img alt="image18" src="../_images/zoom_out.svg" width="60" /></a></p></td>
+<td><p>Decrease zoom (zoom out)</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="manual-image-capture">
+<h3><span class="section-number">15.2.4. </span>Manual Image Capture<a class="headerlink" href="#manual-image-capture" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/camera.svg"><img alt="../_images/camera.svg" class="align-left" src="../_images/camera.svg" width="60" /></a>
+<p>Click on the toolbar button <em>Capture Image</em> to capture the
+currently displayed camera live image. The captured image will be
+saved to the software’s <em>Image Viewer</em> for further adjustments.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="manual-video-recording">
+<h3><span class="section-number">15.2.5. </span>Manual Video Recording<a class="headerlink" href="#manual-video-recording" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera.svg"><img alt="../_images/videocamera.svg" class="align-left" src="../_images/videocamera.svg" width="60" /></a>
+<p>If you want to record the current camera live image as a video, simply
+press the <em>Record Video</em> button. The video recording will remain active
+until you stop it by clicking the <em>Record Video</em> button again.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/videocamera.svg"><img alt="image20" src="../_images/videocamera.svg" width="60" /></a></p></td>
+<td><p>Video recording inactive</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/videocamera_record.svg"><img alt="image22" src="../_images/videocamera_record.svg" width="60" /></a></p></td>
+<td><p>Video recording active</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#event-log"><span class="std std-ref">Event Log</span></a> of the application you will get status information
+about the recording state and about the file name of the saved video
+file.</p>
+<img alt="../_images/1000000000000394000000A6112D2D74.png" src="../_images/1000000000000394000000A6112D2D74.png" />
+<p>The file name of each
+video file is extended with a time stamp that indicates the start of the
+recording. E.g. the recording of the video file
+<code class="file docutils literal notranslate"><span class="pre">Camera_Recording_20220711_104731.avi</span></code> started 2022-07-11 at 10:47
+o’clock.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The XVID codec is used for video
+recording. If you want to play back the recorded videos
+with your media player, it needs to support this codec
+or the XVID codec should be installed on you computer
+system.</p>
+</div>
+</section>
+</section>
+<section id="camera-settings">
+<h2><span class="section-number">15.3. </span>Camera Settings<a class="headerlink" href="#camera-settings" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3><span class="section-number">15.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>The quality of the images depends on the lighting conditions and the
+chosen camera settings. The following will provide an overview of the
+most important parameters that may be changed via the software.</p>
+<a class="reference internal image-reference" href="../_images/camera_settings.svg"><img alt="../_images/camera_settings.svg" class="align-left" src="../_images/camera_settings.svg" width="60" /></a>
+<p>The window pane to adjust the camera settings may be opened via
+the <em>Camera Settings</em> toolbar button. It has to main areas:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/10000000000000EF00000242417541CE.png" src="../_images/10000000000000EF00000242417541CE.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Exposure Settings</strong> - to set the exposure settings</p></li>
+<li><p><strong>Camera Features</strong> - to adjust general camera settings</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Depending on the used camera type
+(Direct Show, USB, or Firewire) or model, the actual
+camera settings dialog may look differently.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Some cameras may not be supported by the
+Camera Settings dialog and will show their own
+configuration panel instead.</p>
+</div>
+</section>
+<section id="setting-exposure-parameters">
+<h3><span class="section-number">15.3.2. </span>Setting Exposure Parameters<a class="headerlink" href="#setting-exposure-parameters" title="Link to this heading"></a></h3>
+<p>With <span class="guilabel">Exposure Settings</span> you may set the exposure time of the image
+sensor inside of the camera. It may operate either in manual mode or in
+automatic mode. The <em>Auto Exposure</em> mode will adjust the exposure time
+automatically according to the brightness of the image.</p>
+</section>
+<section id="setting-camera-parameters">
+<h3><span class="section-number">15.3.3. </span>Setting Camera Parameters<a class="headerlink" href="#setting-camera-parameters" title="Link to this heading"></a></h3>
+<p>All settings of the camera may be adjusted via the <span class="guilabel">Camera Features</span>
+controls. The feature selection and their respective value
+ranges may vary according to the type of camera used.</p>
+<img alt="../_images/10000201000000DC000001255CF2B007.png" src="../_images/10000201000000DC000001255CF2B007.png" />
+<p>If supported by your camera, you may toggle between manual
+and automatic modes <span class="guinum">❶</span>. In manual mode the values may be changed either
+numerically via the input box or adjusted via the sliding controller <span class="guinum">❷</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Depending on the type of camera used,
+the available parameters and their value ranges may
+differ.</p>
+</div>
+</section>
+</section>
+<section id="camera-script-functions">
+<h2><span class="section-number">15.4. </span>Camera Script Functions<a class="headerlink" href="#camera-script-functions" title="Link to this heading"></a></h2>
+<p>The camera plug-in contains script functions for capturing still images
+and for recording videos:</p>
+<img alt="../_images/100000000000011B000000A9B77908AD.png" src="../_images/100000000000011B000000A9B77908AD.png" />
+<section id="capture-image">
+<h3><span class="section-number">15.4.1. </span>Capture Image<a class="headerlink" href="#capture-image" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/camera.svg"><img alt="../_images/camera.svg" class="align-left" src="../_images/camera.svg" width="60" /></a>
+<p>This function allows you to capture and save a single image from the selected
+camera device <span class="guinum">❶</span>. The <span class="guilabel">Image File</span> section  <span class="guinum">❷</span> is
+to set the file path and file name of the captures image files.
+Subsequently you may set whether the camera settings should be used unaltered
+<span class="guinum">❷</span> <span class="guilabel">Keep Camera Settings</span> or whether to reset them to
+pre-defined and saved values <span class="guinum">❸</span> <span class="guilabel">Change Camera Settings</span>
+before capturing an image.</p>
+<img alt="../_images/1000000000000203000000F6E0EBC144.png" src="../_images/1000000000000203000000F6E0EBC144.png" />
+<p>The current camera settings may be saved as function parameters by
+pressing the button <span class="guilabel">Capture current settings</span> to be able to reset the
+camera to those parameters just prior to capturing another image at a
+later point. Thus you can take images of different objects with
+completely different camera settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You may select from different image formats
+by setting the appropriate file extension (<code class="file docutils literal notranslate"><span class="pre">.png</span></code> or <code class="file docutils literal notranslate"><span class="pre">.jpg</span></code>).</p>
+</div>
+<p>Every image file name will be appended with a time stamp at the time of
+capture. This is, when you have defined the file name as <code class="file docutils literal notranslate"><span class="pre">Photo.jpg</span></code> the
+resulting file will be saved as <code class="file docutils literal notranslate"><span class="pre">Photo_20120921_154502.jpg</span></code> according to
+the syntax <strong>name_YYYYMMDD_hhmmss.jpg</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You may capture images at set intervals to
+subsequently compile them to a stop-motion movie using
+the <a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html#video-builder-plugin"><span class="std std-ref">Video Builder</span></a> plug-in.</p>
+</div>
+</section>
+<section id="start-video-recording">
+<h3><span class="section-number">15.4.2. </span>Start Video Recording<a class="headerlink" href="#start-video-recording" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_run.svg"><img alt="../_images/videocamera_run.svg" class="align-left" src="../_images/videocamera_run.svg" width="60" /></a>
+<p>With this function you can start recording of the camera
+live image into a video file. The record will remain active until it is
+stopped with the <a class="reference internal" href="#stop-video-recording">Stop Video Recording</a> function. The video
+recording will stop automatically when the script execution ends.</p>
+<p>In the configuration area you can configure all the video recording
+parameters. Enter a unique name for this recording session in the input
+field <span class="guilabel">Recording Session Name</span> <span class="guinum">❶</span>. This name is required
+to stop the recording later with the <a class="reference internal" href="#stop-video-recording">Stop Video Recording</a> function.</p>
+<img alt="../_images/10000000000001F00000014BBF4C97A5.png" src="../_images/10000000000001F00000014BBF4C97A5.png" />
+<section id="configuring-video-settings">
+<h4>Configuring video settings<a class="headerlink" href="#configuring-video-settings" title="Link to this heading"></a></h4>
+<p>In the <span class="guilabel">Video Settings</span> tab, you configure all video settings. Click on
+the button with the folder icon <span class="guinum">❷</span> to select a file name and a storage
+location for the video file in the <span class="guilabel">Video Filename</span> field.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Every video file name will be appended
+with a time stamp that identifies the start of its
+recording. This is, when you have defined the file name
+as <code class="file docutils literal notranslate"><span class="pre">Video.avi</span></code> the resulting file will be saved as
+<code class="file docutils literal notranslate"><span class="pre">Video_20130522_154502.avi</span></code>.</p>
+</div>
+<p>By clicking <span class="guilabel">Extended Settings</span> <span class="guinum">❸</span> you can display
+additional settings.
+In the field <span class="guilabel">Recording Frames per Second</span> set the number of images to
+be recorded per second. To get a real-time video playback later, you
+should use the current camera frame rate.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you create a new recording function, the
+current camera frame rate is automatically entered into
+the <span class="guilabel">Recording Frames per Second</span> field.</p>
+</div>
+<p>If you want to monitor slower processes, you can also choose a smaller
+frame rate for recording. If you check the check box
+<span class="guilabel">Recording Seconds per frame</span>, you can choose very slow frame
+rates (several seconds or minutes per image).</p>
+<p>This mode is suited for creating time-lapse recordings of very slow
+processes. So you can for example, take a picture every 30 minutes for
+several days and then play back these captured images in a video with a
+frame rate of 24 frames per second.</p>
+<p>In the input field <span class="guilabel">Playback Frame Rate (fps)</span>, set the frame rate at
+which the film is played back in media player later. In the fields of
+video production or motion picture a frame rate of 24 images per second
+is the standard frame rate. If you want to play back the movie in real
+time, that means with its real recording speed, you should choose a
+frame rate here, that matches the recording frame rate.</p>
+</section>
+<section id="configuring-camera-settings">
+<h4>Configuring camera settings<a class="headerlink" href="#configuring-camera-settings" title="Link to this heading"></a></h4>
+<p>Select the <span class="guilabel">Camera Setup</span> <span class="guinum">❶</span> tab to display the controls
+for configuring the camera settings:</p>
+<img alt="../_images/10000000000001E1000000B61082E57D.png" src="../_images/10000000000001E1000000B61082E57D.png" />
+<p>Here you may set whether the camera settings should be used
+unaltered <span class="guinum">❷</span> <span class="guilabel">Keep Camera Settings</span> or whether to reset them to
+pre-defined and saved values <span class="guinum">❸</span> <span class="guilabel">Change Camera Settings</span> before
+capturing an image.</p>
+<p>The current camera settings may be saved as function parameters by
+pressing the button <span class="guilabel">Capture current settings</span> to be able to reset the
+camera to those parameters just prior to capturing another image at a
+later point. Thus you can take images of different objects with
+completely different camera settings.</p>
+</section>
+</section>
+<section id="record-video-sequence">
+<h3><span class="section-number">15.4.3. </span>Record Video Sequence<a class="headerlink" href="#record-video-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_clock.svg"><img alt="../_images/videocamera_clock.svg" class="align-left" src="../_images/videocamera_clock.svg" width="60" /></a>
+<p>Use this function to record a video sequence with a fixed
+duration. You can configure the desired recording duration and the
+recording stops automatically after the expiry of the recording time.</p>
+<p>All video settings and camera settings for this script function are
+identical to the settings of the <a class="reference internal" href="#start-video-recording">Start Video Recording</a> function.
+Additionally you may set the recording duration for this function.</p>
+<img alt="../_images/10000000000001FF000000B373DB4CAC.png" src="../_images/10000000000001FF000000B373DB4CAC.png" />
+<p>Select the tab <span class="guilabel">Rec. Duration</span> <span class="guinum">❶</span>. Now you can set the
+recording duration accurate to the second <span class="guinum">❷</span>. Use the selection field
+<span class="guilabel">Run to completion</span> <span class="guinum">❸</span> to determine, when the recording
+function is finished and when the next script function will be executed:</p>
+<ul class="simple">
+<li><p><strong>Check box active</strong> – the next function is executed when the recording
+is completed</p></li>
+<li><p><strong>Check box inactive</strong>  the recording is started and then script
+execution immediately continues with the next script function</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The recording of a video sequence can be
+stopped at any time by calling the Stop Video Recording
+function.</p>
+</div>
+</section>
+<section id="stop-video-recording">
+<h3><span class="section-number">15.4.4. </span>Stop Video Recording<a class="headerlink" href="#stop-video-recording" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_stop.svg"><img alt="../_images/videocamera_stop.svg" class="align-left" src="../_images/videocamera_stop.svg" width="60" /></a>
+<p>A running video recording that was started with the functions
+<a class="reference internal" href="#start-video-recording">Start Video Recording</a> or <a class="reference internal" href="#record-video-sequence">Record Video Sequence</a> can be
+terminated at any time with this function. Simply enter the name of the
+recording session you want to quit into the input field
+<span class="guilabel">Recording Session</span>.</p>
+<img alt="../_images/100000000000019D000000AF63421F29.png" src="../_images/100000000000019D000000AF63421F29.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ledarray_EN/ledarray_EN.html" class="btn btn-neutral float-left" title="14. LED Array Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../imageanalysis_EN/imageanalysis_EN.html" class="btn btn-neutral float-right" title="16. Image Analysis Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

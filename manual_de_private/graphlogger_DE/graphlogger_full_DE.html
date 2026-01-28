@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>19. Grafischer Datenlogger &mdash; CETONI Elements Privat Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="20. Python Add-on" href="../python_DE/python_DE.html" />
+    <link rel="prev" title="18. CSV-Datenlogger" href="../datalogger_DE/datalogger_full_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Privat Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">19. Grafischer Datenlogger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">19.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#werkzeugleiste">19.2. Werkzeugleiste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#konfigurationsdialog">19.3. Konfigurationsdialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-konfigurationsdialog">19.3.1. Übersicht Konfigurationsdialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#der-objektbaum">19.3.2. Der Objektbaum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objektbaum-filtern">19.3.3. Objektbaum filtern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liste-der-logger-kanale">19.3.4. Liste der Logger-Kanäle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datenaufzeichnung-konfigurieren">19.4. Datenaufzeichnung konfigurieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kanale-hinzufugen">19.4.1. Kanäle hinzufügen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kanale-loschen">19.4.2. Kanäle löschen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datenaufzeichnung-starten-stoppen">19.5. Datenaufzeichnung starten / stoppen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagramm-navigation-und-bedienung">19.6. Diagramm Navigation und Bedienung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht">19.6.1. Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ausschnitt-verschieben">19.6.2. Ausschnitt verschieben</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#werte-einer-kurve-anzeigen">19.6.3. Werte einer Kurve anzeigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vergroszerung-mit-mausrad-einstellen">19.6.4. Vergrößerung mit Mausrad einstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen">19.6.5. Ausschnittvergrößerung mit Vergrößerungsrahmen wählen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anzeige-passend-automatisch-skalieren">19.6.6. Anzeige passend / automatisch skalieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kurven-ein-und-ausblenden">19.6.7. Kurven ein- und ausblenden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kurvenfarbe-andern">19.6.8. Kurvenfarbe ändern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagramm-bild-exportieren">19.6.9. Diagramm-Bild exportieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-export">19.6.10. CSV Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagrammdaten-loschen">19.6.11. Diagrammdaten löschen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skalierung-der-x-achse-umschalten">19.6.12. Skalierung der X-Achse umschalten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plodaten-speichern">19.6.13. Plodaten speichern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plodaten-laden">19.6.14. Plodaten laden</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#script-funktionen">19.7. Script Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-start-plot-logger">19.7.1. Funktion Start Plot Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-stop-plot-logger">19.7.2. Funktion Stop Plot Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-export-plot-data">19.7.3. Funktion Export Plot Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python_DE/python_DE.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">21. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">23. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">24. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">26. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Privat Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">19. </span>Grafischer Datenlogger</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="grafischer-datenlogger">
+<h1><span class="section-number">19. </span>Grafischer Datenlogger<a class="headerlink" href="#grafischer-datenlogger" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">19.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Neben der Datenaufzeichnung in CSV-Dateien können Sie mit dem
+Datalogger-Plugin Prozessdaten in Diagrammen aufzeichnen und damit in
+Echtzeit die zeitliche Veränderung dieser Prozessdaten grafisch
+visualisieren. Zur Anzeige der Prozessdaten-Diagramme klicken Sie in der
+Seitenleiste auf die Schaltfläche <span class="guilabel">Logging</span> <span class="guinum">❶</span> (siehe Abbildung unten)
+oder blenden den Logging View über das Hauptmenü ein (:<span class="menuselection">Window → ShowView → Logging</span>)
+<span class="guinum">❷</span>.</p>
+<img alt="../_images/10000201000002AB000001ABF50BD6283D944D83.png" src="../_images/10000201000002AB000001ABF50BD6283D944D83.png" />
+<p>In der Abbildung oben sehen Sie die wichtigsten
+Bedienelemente:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Logging-Schaltfläche</strong> - Hiermit blenden Sie das
+Prozessdaten-Diagramm ein.</p></li>
+<li><p><strong>View Menü</strong> - damit kann das Prozessdaten Diagramm ebenfalls ein-
+und ausgeblendet werden</p></li>
+<li><p><strong>Zeichenfläche</strong> - Hier sehen Sie die Kurven aller Prozessdaten die
+von dem Diagramm aufgezeichnet werden.</p></li>
+<li><p><strong>Legende</strong> - Die Legende enthält die Bezeichnung aller Kurven die im
+Diagramm aufgezeichnet werden mit der entsprechenden Farbe. Über die
+Legende können Kurven selektiv ein- / und ausgeblendet werden.</p></li>
+<li><p><strong>Werkzeugleiste</strong> - Hier finden Sie Schaltflächen zur Konfiguration
+der Datenaufzeichnung, zum Starten und Stoppen der Aufzeichnung und
+zur Navigation innerhalb der Darstellung.</p></li>
+</ol>
+</section>
+<section id="werkzeugleiste">
+<h2><span class="section-number">19.2. </span>Werkzeugleiste<a class="headerlink" href="#werkzeugleiste" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg"><img alt="image32" src="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" width="40" /></a></p></td>
+<td><p>Öffnet den Konfigurationsdialog zur Konfiguration des
+grafischen Prozessdatenloggers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="image33" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="40" /></a></p></td>
+<td><p>Startet / stoppt die Aufzeichnung von Prozessdaten</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg"><img alt="image34" src="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" width="40" /></a></p></td>
+<td><p>Handwerkzeug zum Verschieben des aktuellen Ausschnitts
+der im Diagramm angezeigt wird</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg"><img alt="image35" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" width="40" /></a></p></td>
+<td><p>Vergrößerungsrahmen aufziehen zum gezielten Vergrößern
+bestimmter Bereiche</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg"><img alt="image36" src="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC241061.svg"><img alt="image37" src="../_images/10000AA70000350500003505B68BB28A6EC241061.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der Y-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA4481.svg"><img alt="image38" src="../_images/10000D410000350500003505737D2F8FEABFA4481.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse und Y-Achse so an,
+dass alle Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg"><img alt="image39" src="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg" width="40" /></a></p></td>
+<td><p>Aktiviert die automatische Skalierung – solange
+Messewerte aufgezeichnet werden, wird die Skalierung
+der X- und Y-Achse automatisch so angepasst, dass alle
+Messwerte auf den Bildschirm passen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000032600003505000035052A2D87EA9B64D7C01.svg"><img alt="image40" src="../_images/1000032600003505000035052A2D87EA9B64D7C01.svg" width="40" /></a></p></td>
+<td><p>Alle Kurven anzeigen. Wenn Kurven ausgeblendet sind,
+werden diese wieder eingeblendet.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100019CB000035050000350509AD2B23340F765E1.svg"><img alt="image41" src="../_images/100019CB000035050000350509AD2B23340F765E1.svg" width="40" /></a></p></td>
+<td><p>Löscht alle Daten aus dem Diagramm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100018130000350500003505CADD59D81E3150FD1.svg"><img alt="image42" src="../_images/100018130000350500003505CADD59D81E3150FD1.svg" width="40" /></a></p></td>
+<td><p>Skalierung umschalten. Damit schalten Sie die
+Skalierung der X-Achse zwischen absolutem
+Zeit-/Datumsstempel und relativer Zeit in Sekunden und
+Millisekunden seit Start der Aufzeichnung um.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg"><img alt="image43" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" width="40" /></a></p></td>
+<td><p>Exportiert ein Bild des der aktuell dargestellten
+Ausschnitts</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg"><img alt="image44" src="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" width="40" /></a></p></td>
+<td><p>Exportiert alle Daten des Plots als CSV-Datei</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000040D000035050000350542F550057A626C6D.svg"><img alt="image45" src="../_images/1000040D000035050000350542F550057A626C6D.svg" width="40" /></a></p></td>
+<td><p>Speichert die Plotdaten in eine Datei, die später
+wieder geladen werden kann</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000044C000035050000350571A7475A9B633EF8.svg"><img alt="image46" src="../_images/1000044C000035050000350571A7475A9B633EF8.svg" width="40" /></a></p></td>
+<td><p>Lädt Plotdaten, die vorher gespeichert wurden.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="konfigurationsdialog">
+<h2><span class="section-number">19.3. </span>Konfigurationsdialog<a class="headerlink" href="#konfigurationsdialog" title="Link to this heading"></a></h2>
+<section id="ubersicht-konfigurationsdialog">
+<h3><span class="section-number">19.3.1. </span>Übersicht Konfigurationsdialog<a class="headerlink" href="#ubersicht-konfigurationsdialog" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg"><img alt="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" class="align-left" height="60" src="../_images/10002F2F000034EB000034EBDBA40A7FF6EF8292.svg" width="60" /></a>
+<p>Klicken Sie in der Werkzeugleiste auf die Schaltfläche
+<span class="guilabel">Configure process data graph</span>, um den Konfigurationsdialog (unten) zu
+öffnen. Der Konfigurationsdialog besteht im Wesentlichen aus den folgenden
+Bereichen:</p>
+<img alt="Konfigurationsdialog grafischer Datenlogger" src="../_images/graph_logger_configuration_dialog.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Objektbaum (Object Tree)</strong> - Der Objektbaum enthält einen Baum aller
+Objekte und deren Eigenschaften, die in der Applikation vorhanden sind.
+Mit verschiedenen Filtern können Sie den Objektbaum nach bestimmten Objekten
+filtern. Standardmäßig werden nur Geräte und Geräteeigenschaften angezeigt.</p></li>
+<li><p><strong>Logger Channels</strong> - hier sehen Sie in tabellarischer Form alle
+Kanäle die vom Logger aufgezeichnet werden.</p></li>
+<li><p><strong>Logger Configuration</strong> - in diesem Bereich können Sie verschiedene
+Einstellungen zur Aufzeichnung der Daten konfigurieren.</p></li>
+</ol>
+</section>
+<section id="der-objektbaum">
+<h3><span class="section-number">19.3.2. </span>Der Objektbaum<a class="headerlink" href="#der-objektbaum" title="Link to this heading"></a></h3>
+<p>Im Objektbaum finden Sie eine hierarchische Auflistung aller Objekte (z.B. Geräte)
+und deren Kindobjekte (wie z.B. untergeordnete Geräte):</p>
+<img alt="../_images/object_tree.png" src="../_images/object_tree.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Objekt</strong> - Ein Objekt kann z.B. ein Gerät (hier <strong>Nemesys_M_1</strong>) oder
+ein anderes Anwendungsobjekt sein. In jedem Objekt finden Sie nach dem
+Aufklappen in der nächsten Ebene die beiden Elemente <strong>Children</strong> und
+<strong>Properties</strong>.</p></li>
+<li><p><strong>Children</strong> - Das Children Element gruppiert alle Kindobjekte des
+übergeordneten Objektes. In unserem Beispiel sind dies alle Objekte,
+bzw. Geräte, die dem Gerät <strong>Nemesys_M_1</strong> untergeordnet sind bzw. zu
+diesem Gerät gehören.</p></li>
+<li><p><strong>Properties</strong> - Das Properties Element gruppiert alle Eigenschaften des
+übergeordneten Objektes. In unserem Beispiel sind dies alle Eigenschaften
+des Gerätes <strong>Nemesys_M_1</strong>, welche im Logger aufgezeichnet werden können.</p></li>
+<li><p><strong>Untergeordnetes Objekt</strong> - In der <strong>Children</strong> Gruppe sind alle untergeordneten
+Objekte zu finden. Beim Beispiel <strong>Nemesys_M_1</strong> sind dies z.B. die
+digitalen und analogen Ein- und Ausgänge des Gerätes, wie z.B.
+<strong>Nemesys_M_1_DigOUT1</strong>. Diese Objekte können wiederum aufgeklappt werden,
+um deren Kindobjekte und Eigenschaften anzuzeigen.</p></li>
+<li><p><strong>Eigenschaft</strong> - In der <strong>Properties</strong> Gruppe finden sie alle Eigenschaften
+des übergeordneten Objektes. Beim Beispiel <strong>Nemesys_M_1</strong> sind dies z.B.
+die Eigenschaften <strong>SyringeFillLevel</strong> oder <strong>ActualFlow</strong>. Diese
+Eigenschaften können Sie einfach per Drag &amp; Drop in die Kanalliste ziehen,
+um deren Werte aufzuzeichnen.</p></li>
+</ol>
+</section>
+<section id="objektbaum-filtern">
+<h3><span class="section-number">19.3.3. </span>Objektbaum filtern<a class="headerlink" href="#objektbaum-filtern" title="Link to this heading"></a></h3>
+<p>Über dem Objektbaum finden Sie verschiedene Filter, mit denen Sie den Objektbaum
+nach bestimmten Kriterien filtern können. Standardmäßig ist die Checkbox
+<span class="guilabel">Devices Only</span> <span class="guinum">❶</span> aktiviert. D.h. im Objektbaum werden nur
+Geräte, die vom internen Gerätemanager (<span class="guilabel">Core.DeviceManager</span>) verwaltet
+werden angezeigt. Wenn Sie diese Checkbox deaktivieren, werden Ihnen im
+Objektbaum weitere Anwendungsobjekte angezeigt.</p>
+<p>Ist die Checkbox <span class="guilabel">Devices Only</span><span class="guinum">❶</span> aktiviert, wird Ihnen
+eine Auswahlbox <span class="guinum">❷</span> angezeigt, mit der Sie den Gerätebaum nach einem
+bestimmten Gerätetyp filtern können. In der Abbildung unten wurde z.B. nach
+Spritzenpumpen gefiltert:</p>
+<img alt="../_images/object_tree_filter.png" src="../_images/object_tree_filter.png" />
+<p>Zusätzlich finden Sie direkt über dem Objektbaum ein Eingabefeld <span class="guinum">❸</span>,
+mit dem Sie den Objektbaum nach einem bestimmten Begriff, z.B. einem
+Gerätenamen oder eine Geräteeigenschaft, filtern können. In der Abbildung unten
+wurde z.B. nach der Geräteeigenschaft <strong>ActualFlow</strong> gefiltert. D.h.,
+es werden nur Objekte oder Geräte mit dieser Eigenschaft im Objektbaum
+angezeigt:</p>
+<img alt="../_images/object_tree_filter_text.png" src="../_images/object_tree_filter_text.png" />
+</section>
+<section id="liste-der-logger-kanale">
+<h3><span class="section-number">19.3.4. </span>Liste der Logger-Kanäle<a class="headerlink" href="#liste-der-logger-kanale" title="Link to this heading"></a></h3>
+<img alt="../_images/logger_channels_view.png" src="../_images/logger_channels_view.png" />
+<p>Die Kanalliste <span class="guilabel">Logger Channels</span> zeigt in tabellarischer Form die
+Konfiguration des grafischen Loggers. Jede Zeile in der Tabelle
+entspricht genau einer Kurve in der grafischen Darstellung, d.h. einem
+Logger-Kanal. Folgende Spalten sind vorhanden:</p>
+<ul>
+<li><p><strong>Object</strong> - enthält den Namen des Objektes, von dem der Wert einer
+bestimmten Eigenschaft (Property) aufgezeichnet werden soll und das Icon des
+Objekts.</p></li>
+<li><p><strong>Property</strong> - dies ist der Name der Objekteigenschaft / des
+Prozessdatenwertes, der aufgezeichnet wird. Den Typ der
+Eigenschaft (numerischer oder boolescher Wert) können Sie an
+dem Typ-Icon einfach erkennen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_number.svg"><img alt="icon-num" src="../_images/property_number.svg" width="40" /></a></p></td>
+<td><p>Numerischer Wert</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/property_bool.svg"><img alt="icon-bool" src="../_images/property_bool.svg" width="40" /></a></p></td>
+<td><p>Boolescher Wert</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/property_text.svg"><img alt="icon-text" src="../_images/property_text.svg" width="40" /></a></p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Label</strong> - hier können Sie eine eigene Bezeichnung des Kanals
+festlegen. Diese Bezeichnung erscheint dann in der Legende des
+Graphen.</p></li>
+</ul>
+<p>Zum Hinzufügen eines Kanals zum Logger, führen Sie einfach
+folgende Schritte durch:</p>
+</section>
+</section>
+<section id="datenaufzeichnung-konfigurieren">
+<h2><span class="section-number">19.4. </span>Datenaufzeichnung konfigurieren<a class="headerlink" href="#datenaufzeichnung-konfigurieren" title="Link to this heading"></a></h2>
+<section id="kanale-hinzufugen">
+<h3><span class="section-number">19.4.1. </span>Kanäle hinzufügen<a class="headerlink" href="#kanale-hinzufugen" title="Link to this heading"></a></h3>
+<p><span class="step">Schritt 1 - Kanäle hinzufügen</span></p>
+<img alt="Diagrammkurven via Drag &amp; Drop hinzufügen" src="../_images/graph_logger_drag_and_drop.png" />
+<p>Ziehen Sie aus dem Objektbaum <span class="guilabel">Object Tree</span> die Objekteigenschaft,
+welche Sie aufzeichnen möchten, per Drag &amp; Drop in die Kanalliste
+<span class="guilabel">Logger Channels</span>. Der neue Kanal wird in der Zeile eingefügt, an
+der sie die Maustaste loslassen (siehe Abbildung unten).</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Um die Auswahl einer Objekteigenschaft (Property) zu erleichtern, können Sie den
+Objektbaum nach verschiedenen Kriterien filtern.</p>
+</div>
+<p><span class="step">Schritt 2 - Kanalbeschriftung festlegen</span></p>
+<p>In der Spalte <span class="guilabel">Label</span> können Sie für jeden Kanal eine eigene
+Beschriftung vergeben. Diese Beschriftung wird später dann in der
+Legende des Graphen als Beschriftung der Kurve angezeigt.</p>
+<img alt="Kanalbeschriftung ändern" src="../_images/log_channel_label.png" />
+<p>Klicken Sie zum Ändern der
+Beschriftung doppelt in die Tabellenzelle (siehe Abbildung oben) und
+geben Sie dann die neue Bezeichnung ein.</p>
+<p><span class="step">Schritt 3 - Aufzeichnungsintervall festlegen</span></p>
+<img alt="Log-Intervall konfigurieren" src="../_images/graph_logger_interval.png" />
+<p>Im Feld <span class="guilabel">Log Interval</span> können Sie im Bereich <span class="guilabel">Logger Configuration</span>
+das Intervall festlegen, in dem neue
+Messwerte aufgezeichnet werden sollen. Sie können das Intervall mit
+einer Auflösung von 0,1 Sekunden festlegen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wählen Sie das Intervall so groß wie
+möglich und so klein wie nötig um die Menge der
+aufzuzeichnenden Daten so gering wie möglich zu halten.</p>
+</div>
+<p>Die Konfiguration wird beim Beenden der Anwendung gespeichert und beim
+erneuten Start wieder geladen.</p>
+</section>
+<section id="kanale-loschen">
+<h3><span class="section-number">19.4.2. </span>Kanäle löschen<a class="headerlink" href="#kanale-loschen" title="Link to this heading"></a></h3>
+<p>Um einen oder mehrere Kanäle zu löschen, markieren Sie zuerst die Kanäle
+mit der Maus. Sie können dann die Kanäle löschen, indem Sie entweder die
+<kbd class="kbd docutils literal notranslate">Delete</kbd>-Taste drücken oder mit der rechten Maustaste das Kontextmenü
+aufrufen und den Menüpunkt <span class="menuselection">Delete Selection</span> auswählen.</p>
+<p><img alt="image58" src="../_images/100000000000012100000091DA9FF378067215791.png" /> <img alt="image59" src="../_images/10000000000001220000008F22C1F8D0316FE1531.png" /></p>
+<p>Sie können alle Kanäle des Loggers gleichzeitig löschen, indem Sie im
+Kontextmenü den Punkt <span class="menuselection">Clear Logger</span> auswählen.</p>
+</section>
+</section>
+<section id="datenaufzeichnung-starten-stoppen">
+<h2><span class="section-number">19.5. </span>Datenaufzeichnung starten / stoppen<a class="headerlink" href="#datenaufzeichnung-starten-stoppen" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" class="align-left" height="60" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="60" /></a>
+<p>Über die entsprechende Schaltfläche in der Werkzeugleiste
+können Sie die Datenaufzeichnung starten und stoppen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="diagramm-navigation-und-bedienung">
+<h2><span class="section-number">19.6. </span>Diagramm Navigation und Bedienung<a class="headerlink" href="#diagramm-navigation-und-bedienung" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3><span class="section-number">19.6.1. </span>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Das Diagramm bietet Ihnen verschiedene Möglichkeiten die Darstellung
+anzupassen, bestimmte Bereiche vergrößert darzustellen oder Kurven ein-
+und auszublenden.</p>
+<img alt="Übersicht Prozessdatengraph" src="../_images/1000020100000304000001DECD37A2D16344540B.png" />
+<p>Das Diagramm besteht aus der
+Zeichenfläche <span class="guinum">❶</span>, die durch die Zeitachse unten (X-Achse) <span class="guinum">❸</span> und die
+Prozessdatenachse links (Y-Achse) <span class="guinum">❹</span> begrenzt wird. Die Zeitachse zeigt
+Datum und Uhrzeit als absolute Werte an. Die Prozessdatenachse zeigt den
+Messwert zu einem bestimmten Zeitpunkt an. Die Messwertachse ist
+einheitenlos und stellt unterschiedlichste Werte und Einheiten dar.</p>
+<p>Wenn Sie mit der rechten Maustaste in die Zeichenfläche klicken, wird
+ein Kontextmenü <span class="guinum">❷</span> mit zusätzlichen Funktionen angezeigt.</p>
+</section>
+<section id="ausschnitt-verschieben">
+<h3><span class="section-number">19.6.2. </span>Ausschnitt verschieben<a class="headerlink" href="#ausschnitt-verschieben" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg"><img alt="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" class="align-left" height="60" src="../_images/100005C7000035050000350518807CBDF5FF2BAE1.svg" width="60" /></a>
+<p>Mit dem Verschiebewerkzeug (<em>Pan Tool</em>) können Sie bequem den
+Ausschnitt verschieben, der im Diagramm angezeigt wird. Aktivieren Sie
+das Werkzeug durch anklicken der Schaltfläche. Klicken Sie nun in die
+Zeichenfläche und bewegen Sie die Maus mit gedrückter Maustaste um den
+Ausschnitt zu verschieben.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Das Verschieben des Ausschnittes bewirkt
+eine Deaktivierung der automatischen Skalierung.</p>
+</div>
+</section>
+<section id="werte-einer-kurve-anzeigen">
+<h3><span class="section-number">19.6.3. </span>Werte einer Kurve anzeigen<a class="headerlink" href="#werte-einer-kurve-anzeigen" title="Link to this heading"></a></h3>
+<p>Wenn das Verschiebewerkzeug (<em>Pan Tool</em>) aktiv ist, können Sie den
+Mauszeiger über eine Kurve bewegen, um sich den Wert an der betreffenden
+Position anzeigen zu lassen.</p>
+<img alt="../_images/100002010000024C000000D8EF633321C7CB7321.png" src="../_images/100002010000024C000000D8EF633321C7CB7321.png" />
+</section>
+<section id="vergroszerung-mit-mausrad-einstellen">
+<h3><span class="section-number">19.6.4. </span>Vergrößerung mit Mausrad einstellen<a class="headerlink" href="#vergroszerung-mit-mausrad-einstellen" title="Link to this heading"></a></h3>
+<p>Durch drehen des Mausrades können Sie die Vergrößerung der Anzeige
+erhöhen (hinein zoomen) oder verringern (heraus zoomen).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/Mouse_Wheel_up.png"><img alt="image68" src="../_images/Mouse_Wheel_up.png" style="width: 80px;" /></a></p></td>
+<td><p>Vergrößerungsfaktor erhöhen (hinein zoomen)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/Mouse_Wheel_down.png"><img alt="image69" src="../_images/Mouse_Wheel_down.png" style="width: 80px;" /></a></p></td>
+<td><p>Vergrößerungsfaktor verringern (heraus zoomen)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen">
+<h3><span class="section-number">19.6.5. </span>Ausschnittvergrößerung mit Vergrößerungsrahmen wählen<a class="headerlink" href="#ausschnittvergroszerung-mit-vergroszerungsrahmen-wahlen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg"><img alt="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" class="align-left" height="60" src="../_images/1000100A000034EB000034EBFC7CEEC6D6B20A4B1.svg" width="60" /></a>
+<p>Mit dem Vergrößerungswerkzeug (<em>Zoom Tool</em>) können Sie
+gezielt einen Ausschnitt auswählen, den Sie vergrößert darstellen
+möchten. Gehen Sie dafür wie folgt vor (siehe Abbildung unten):</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="Vergrößerungsrahmen aufziehen" src="../_images/10000000000001FA0000015E46DAC1CBDA6E28541.png" />
+<ol class="arabic simple guinums">
+<li><p>Klicken Sie mit der linken Maustaste in die Zeichenfläche um die
+erste Ecke des Vergrößerungsrahmens festzulegen.</p></li>
+<li><p>Ziehen Sie nun mit gedrückter Maustaste ein Vergrößerungsrahmen auf
+die gewünschte Größe.</p></li>
+<li><p>Sobald Sie die Maustaste loslassen, wird der gewählte Ausschnitt auf
+die aktuelle Größe der Anzeige skaliert.</p></li>
+</ol>
+</section>
+<section id="anzeige-passend-automatisch-skalieren">
+<h3><span class="section-number">19.6.6. </span>Anzeige passend / automatisch skalieren<a class="headerlink" href="#anzeige-passend-automatisch-skalieren" title="Link to this heading"></a></h3>
+<p>Die Werkzeugleiste und das Kontextmenü enthalten verschiedene Tools um
+die Anzeige automatisch so anzupassen, dass alle Daten im sichtbaren
+Bereich liegen.</p>
+<p>Folgende Möglichkeiten der Anpassung sind vorhanden:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg"><img alt="image79" src="../_images/10000AAD0000350500003505B065E97D3266EBF31.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AA70000350500003505B68BB28A6EC241061.svg"><img alt="image80" src="../_images/10000AA70000350500003505B68BB28A6EC241061.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der Y-Achse so an, dass alle
+Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000D410000350500003505737D2F8FEABFA4481.svg"><img alt="image81" src="../_images/10000D410000350500003505737D2F8FEABFA4481.svg" width="40" /></a></p></td>
+<td><p>Passt die Skalierung der X-Achse und Y-Achse so an,
+dass alle Messwerte auf den Bildschirm passen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg"><img alt="image82" src="../_images/10001744000034EB000034EBD90F77816321BB6E1.svg" width="40" /></a></p></td>
+<td><p>Aktiviert die automatische Skalierung – solange
+Messewerte aufgezeichnet werden, wird die Skalierung
+der X- und Y-Achse automatisch so angepasst, dass alle
+Messwerte auf den Bildschirm passen.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Die automatische Skalierung können Sie auch über das Kontextmenü
+getrennt für X- und Y-Achse aktivieren:</p>
+<img alt="Automatische Skalierung für X- und Y-Achse" src="../_images/1000000000000109000001040CF9729CD97C9A4D1.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Änderung der Vergrößerung oder das
+Verschieben des Ausschnittes bewirken eine
+Deaktivierung der automatischen Skalierung.</p>
+</div>
+</section>
+<section id="kurven-ein-und-ausblenden">
+<h3><span class="section-number">19.6.7. </span>Kurven ein- und ausblenden<a class="headerlink" href="#kurven-ein-und-ausblenden" title="Link to this heading"></a></h3>
+<p>Um die Skalierung und damit die Anzeige einzelner Kurven zu verbessern,
+können Sie Kurven ein- und ausblenden. Klicken Sie dazu mit der rechten Maustaste
+auf das gewünschte Element in der Diagrammlegende und wählen Sie die gewünschte
+Funktion, um entweder nur die entsprechende Kurve auszublenden <span class="menuselection">Hide Curve</span>
+oder alle anderen außer der entsprechenden Kurve <span class="menuselection">Show only this curve</span>,
+wie in der Abbildung unten dargestellt.</p>
+<img alt="Kontextmenü Legendeneintrag" src="../_images/10000000000001A40000005CD26CCB4A8D0DF1F91.png" />
+<p>Wenn Sie alle ausgeblendeten Kurven wieder einblenden möchten,
+aktivieren Sie in der Zeichenfläche das Kontextmenü mit der rechten
+Maustaste und wählen Sie dann den Menüpunkt <span class="menuselection">Show all curves</span> (siehe
+Abbildung unten).</p>
+<img alt="../_images/1000000000000109000001041C877E8A24D5AB941.png" src="../_images/1000000000000109000001041C877E8A24D5AB941.png" />
+</section>
+<section id="kurvenfarbe-andern">
+<h3><span class="section-number">19.6.8. </span>Kurvenfarbe ändern<a class="headerlink" href="#kurvenfarbe-andern" title="Link to this heading"></a></h3>
+<p>Um eine andere Kurvenfarbe zu wählen, klicken Sie mit der rechten
+Maustaste auf einen Eintrag in der Legende. Es wird nun das Kontextmenü
+für diesen Legendeneintrag angezeigt (siehe Abbildung unten).</p>
+<img alt="Kontextmenü Legendeneintrag - Farbwahl" src="../_images/10000000000002100000007CF77B5C49CD7E0D881.png" />
+<p>Wählen Sie den
+Menüpunkt <span class="menuselection">Select Color</span>. Es wird Ihnen nun ein Farbauswahldialog
+angezeigt, in dem Sie eine beliebige Kurvenfarbe auswählen können.</p>
+<img alt="../_images/100002010000020A000001B855540FDC883B53CF.png" src="../_images/100002010000020A000001B855540FDC883B53CF.png" />
+</section>
+<section id="diagramm-bild-exportieren">
+<h3><span class="section-number">19.6.9. </span>Diagramm-Bild exportieren<a class="headerlink" href="#diagramm-bild-exportieren" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg"><img alt="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" class="align-left" height="60" src="../_images/10001855000034EB000034EBA6C6DA993124AA4C1.svg" width="60" /></a>
+<p>Über den Menüeintrag <span class="menuselection">Export plot image</span> im Kontextmenü
+können Sie ein Bild des aktuellen Diagramms exportieren.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="Diagramm-Bild exportieren" src="../_images/100002010000010C000000E1260A96B6F1A861081.png" />
+<p>In dem Dateidialog der nun
+eingeblendet wird (siehe Abbildung unten), wählen Sie zuerst ihr
+Zielverzeichnis aus.</p>
+<img alt="../_images/1000000000000293000001D6F3848773F9BE9543.png" src="../_images/1000000000000293000001D6F3848773F9BE9543.png" />
+<p>Anschließend geben Sie
+den Dateinamen der Bilddatei ein <span class="guinum">❶</span>. Dann wählen Sie in dem Auswahlfeld
+den Dateityp <span class="guinum">❷</span> der Bilddatei aus. Die Exportfunktion unterstützt sowohl
+Bilddateien (<code class="file docutils literal notranslate"><span class="pre">png,</span> <span class="pre">jpg...</span></code>) als auch skalierbare Vektorgrafiken
+(<code class="file docutils literal notranslate"><span class="pre">pdf,</span> <span class="pre">svg...</span></code>). Wählen Sie das für Sie passende Bildformat aus.</p>
+<p>Klicken Sie zum Abschluss auf <span class="guilabel">Save</span> <span class="guinum">❸</span>, um den Export zu starten.</p>
+</section>
+<section id="csv-export">
+<h3><span class="section-number">19.6.10. </span>CSV Export<a class="headerlink" href="#csv-export" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg"><img alt="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" class="align-left" height="60" src="../_images/10000FBE000034EB000034EB9506C15D6D175810.svg" width="60" /></a>
+<p>Über den Menüeintrag <span class="menuselection">Export CSV file</span> im Kontextmenü können
+Sie alle Diagrammdaten in eine CSV-Datei exportieren.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="diagrammdaten-loschen">
+<h3><span class="section-number">19.6.11. </span>Diagrammdaten löschen<a class="headerlink" href="#diagrammdaten-loschen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100019CB000035050000350509AD2B23340F765E1.svg"><img alt="../_images/100019CB000035050000350509AD2B23340F765E1.svg" class="align-left" height="60" src="../_images/100019CB000035050000350509AD2B23340F765E1.svg" width="60" /></a>
+<p>Klicken Sie im Kontextmenü auf den Eintrag <span class="menuselection">Clear plot data</span>
+um alle aufgezeichneten Daten zu löschen und mit einem leeren
+Diagramm die Aufzeichnung neu zu beginnen.</p>
+<img alt="../_images/100002010000010D000000D1835EC0ADB6A094751.png" src="../_images/100002010000010D000000D1835EC0ADB6A094751.png" />
+</section>
+<section id="skalierung-der-x-achse-umschalten">
+<h3><span class="section-number">19.6.12. </span>Skalierung der X-Achse umschalten<a class="headerlink" href="#skalierung-der-x-achse-umschalten" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100018130000350500003505CADD59D81E3150FD1.svg"><img alt="../_images/100018130000350500003505CADD59D81E3150FD1.svg" class="align-left" height="60" src="../_images/100018130000350500003505CADD59D81E3150FD1.svg" width="60" /></a>
+<p>Sie können die Skalierung der X-Achse zwischen zwei
+verschiedenen Modi umschalten. Standardmäßig zeigt die X-Achse einen
+absoluten Zeit- / Datumsstempel an.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/100002010000022B0000006E35B772A9B9B293D21.png" src="../_images/100002010000022B0000006E35B772A9B9B293D21.png" />
+<p>Sie können die X-Achse aber auch auf die Anzeige der relativen Zeit in
+Sekunden und Millisekunden umschalten. D.h. der Zeitpunkt t<sub>0</sub>
+markiert hier den Zeitpunkt an dem die Aufzeichnung gestartet wurde .</p>
+<img alt="../_images/100002010000022B000000660DDD07486701950A.png" src="../_images/100002010000022B000000660DDD07486701950A.png" />
+<p>Um die Achse umzuschalten, klicken Sie mit der rechten Maustaste in das
+Diagramm und wählen Sie dann aus dem Kontextmenü den Punkt
+<span class="menuselection">Toggle X-axis scale</span>.</p>
+<img alt="../_images/100002010000010D000000C7FB8978837EA08B411.png" src="../_images/100002010000010D000000C7FB8978837EA08B411.png" />
+</section>
+<section id="plodaten-speichern">
+<h3><span class="section-number">19.6.13. </span>Plodaten speichern<a class="headerlink" href="#plodaten-speichern" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000040D000035050000350542F550057A626C6D.svg"><img alt="../_images/1000040D000035050000350542F550057A626C6D.svg" class="align-left" height="60" src="../_images/1000040D000035050000350542F550057A626C6D.svg" width="60" /></a>
+<p>Wenn Sie die Schaltfläche <span class="guilabel">Save Plot Data</span> anklicken, werden
+alle Plotdaten in eine Datei gespeichert (<code class="file docutils literal notranslate"><span class="pre">*.dat</span></code>), die später wieder
+in den Plot geladen werden kann.</p>
+</section>
+<section id="plodaten-laden">
+<h3><span class="section-number">19.6.14. </span>Plodaten laden<a class="headerlink" href="#plodaten-laden" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000044C000035050000350571A7475A9B633EF8.svg"><img alt="../_images/1000044C000035050000350571A7475A9B633EF8.svg" class="align-left" height="60" src="../_images/1000044C000035050000350571A7475A9B633EF8.svg" width="60" /></a>
+<p>Durch Klicken der Schaltfläche <span class="guilabel">Load Plot Data</span> können
+Plotdaten, die vorher mit <span class="guilabel">Save Plot Data</span> gespeichert wurden wieder in
+den Plot geladen werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Es werden nur die Kurven geladen, die in der
+aktuellen Konfiguration des Loggers vorhanden sind. D.h. wenn Sie Daten
+aufzeichnen, diese mittels <em>Save Plot Data</em> speichern und später
+wieder Laden, sollte die <strong>Loggerkonfiguration beim Speichern und Laden
+identisch</strong> sein. Wenn Sie zwischen Speichern und Laden die
+Logger-Konfiguration ändern, z.B. Kanäle entfernen, werden ggf. nicht
+alle Kurven geladen.</p>
+</div>
+</section>
+</section>
+<section id="script-funktionen">
+<h2><span class="section-number">19.7. </span>Script Funktionen<a class="headerlink" href="#script-funktionen" title="Link to this heading"></a></h2>
+<img alt="Logger Script Funktionen" src="../_images/10000201000001330000006F1CA99CCDC5308AD8.png" />
+<p>Der grafische Logger kann über das Scriptsystem der Software gestartet
+und gestoppt werden, um die Aufnahme von Daten zu automatisieren oder
+mit anderen Prozessen zu synchronisieren. Die entsprechenden Funktionen
+finden Sie in der <span class="guilabel">Logging</span> Kategorie der verfügbaren Scriptfunktionen.</p>
+<section id="funktion-start-plot-logger">
+<h3><span class="section-number">19.7.1. </span>Funktion Start Plot Logger<a class="headerlink" href="#funktion-start-plot-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001A4C000034EB000034EBE789A979D3788852.svg"><img alt="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" class="align-left" height="60" src="../_images/10001A4C000034EB000034EBE789A979D3788852.svg" width="60" /></a>
+<p>Mit dieser Funktion starten Sie den grafischen Logger mit den
+aktuell konfigurierten Einstellungen und Kanälen. Der Inhalt des
+Diagramms wird dabei nicht gelöscht.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/100002010000019E00000070391F13307E263DEB.png" src="../_images/100002010000019E00000070391F13307E263DEB.png" />
+<p>Setzen Sie einen Haken bei <span class="guilabel">Clear Plot before the start of logging</span>
+wenn Sie alle Plotdaten vor der Aufzeichnung löschen möchten.</p>
+</section>
+<section id="funktion-stop-plot-logger">
+<h3><span class="section-number">19.7.2. </span>Funktion Stop Plot Logger<a class="headerlink" href="#funktion-stop-plot-logger" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg"><img alt="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg" class="align-left" height="60" src="../_images/100019EB000034EB000034EBA805BBEA9A6F9422.svg" width="60" /></a>
+<p>Diese Funktion stoppt die Aufzeichnung der Daten in das
+Prozessdaten Diagramm.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="funktion-export-plot-data">
+<h3><span class="section-number">19.7.3. </span>Funktion Export Plot Data<a class="headerlink" href="#funktion-export-plot-data" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001130000035050000350554D46258E4776750.svg"><img alt="../_images/10001130000035050000350554D46258E4776750.svg" class="align-left" height="60" src="../_images/10001130000035050000350554D46258E4776750.svg" width="60" /></a>
+<p>Diese Funktion ermöglicht den Export der Diagrammdaten in
+unterschiedliche Formate. Im Konfigurationsbereich können Sie den
+Dateinamen und den Speicherort wählen, indem Sie auf das Ordner Symbol <span class="guinum">❶</span>
+klicken. Beim Speicherort sollten Sie den vorgegebenen Speicherort
+innerhalb des Projektordners behalten.</p>
+<img alt="../_images/10000201000001C9000000DDA39DA50FAC824913.png" src="../_images/10000201000001C9000000DDA39DA50FAC824913.png" />
+<p>Im Bereich <span class="guilabel">Export Formats</span> <span class="guinum">❷</span> wählen Sie alle Formate aus, in denen die
+Plot-Daten exportiert werden sollen. Die Software speichert die Dateien
+mit dem gewählten Dateinamen + Zeitstempel + der Dateiendung des
+Exportformats (siehe Beispiel in Abbildung unten):</p>
+<img alt="../_images/100002010000016F000000BF0B98C28E08049AED.png" src="../_images/100002010000016F000000BF0B98C28E08049AED.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../datalogger_DE/datalogger_full_DE.html" class="btn btn-neutral float-left" title="18. CSV-Datenlogger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../python_DE/python_DE.html" class="btn btn-neutral float-right" title="20. Python Add-on" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

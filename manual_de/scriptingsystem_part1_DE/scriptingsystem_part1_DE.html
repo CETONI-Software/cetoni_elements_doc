@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script-System &mdash; CETONI Elements Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_DE.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_DE.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_DE.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_DE.html">7. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_DE.html">8. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_DE.html">9. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">10. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Script-System</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="script-system">
+<h1>Script-System<a class="headerlink" href="#script-system" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Mit dem CETONI Elements Script-System können Sie Prozesse steuern und automatisieren.
+Überprüfen Sie die erstellten Skripte/Programme sowie die Parametereinträge, bevor Sie
+sie zum ersten Mal ausführen! CETONI übernimmt keine Haftung für direkte und/oder
+indirekte Schäden an Ihrem System oder externen Hard- und Softwarekomponenten,
+die durch die von Ihnen erstellten Skripte/Programme oder durch die Eingabe von Parametern
+die für Ihren speziellen Anwendungsfall nicht geeignet oder ungünstig sind.</p>
+</div>
+<p>Die Software verfügt über ein leistungsfähiges Script-System, um
+Prozessabläufe zu automatisieren.</p>
+<img alt="Script-System Übersicht" src="../_images/10000201000003C9000001AAB18C614061F55B68.png" />
+<p>Die Benutzeroberfläche des Skriptsystems besteht aus zwei einzelnen Ansichten:</p>
+<ol class="arabic simple guinums">
+<li><p><em>Script Editor</em>- enthält das vom Anwender programmierte Script (siehe <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">Views</span></a>).</p></li>
+<li><p><em>Script Pool</em> - enthält alle verfügbaren Scriptfunktionen.</p></li>
+<li><p><em>Script-Konfiguration</em> - dient zur Konfiguration der Parameter einer
+Scriptfunktion, die im Scripteditor ausgewählt ist</p></li>
+</ol>
+</section>
+<section id="script-pool">
+<h2>Script Pool<a class="headerlink" href="#script-pool" title="Link to this heading"></a></h2>
+<section id="uberblick">
+<h3>Überblick<a class="headerlink" href="#uberblick" title="Link to this heading"></a></h3>
+<p>Um den <em>Script Pool</em> einzublenden, aktivieren Sie auf der Seitenleiste die
+Schaltfläche <span class="guilabel">Scripting</span>.</p>
+<img alt="Script Pool einblenden" src="../_images/10000201000001BC00000116F459D83094022ABD.png" />
+<p>Zusammen mit dem <em>Script Pool</em>
+wird auch der Bereich zur <em>Script-Konfiguration</em> eingeblendet. Der <em>Script
+Pool</em> enthält alle Scriptfunktionen, die für die Programmierung von
+Scripten zur Verfügung stehen. Die Scriptfunktionen sind dabei nach
+Kategorien unterteilt. Jedes Gerät bzw. jedes Plugin registriert seine
+Scriptfunktionen in einer eigenen Kategorie.
+Die Kategorien können vom Anwender jederzeit im <em>Script Pool</em> ein- und ausgeklappt
+werden.</p>
+<img alt="Script Pool - Kategorie ein- und ausgeklappt" src="../_images/100002010000022E0000017D7475090392B8F4E9.png" />
+<p>Zum Ein-<span class="guinum">❶</span> &amp; Ausklappen <span class="guinum">❷</span> der Funktionen einer Kategorie, klicken Sie
+einfach auf den Kategorienamen (Abbildung oben).</p>
+</section>
+<section id="script-pool-kontextmenu">
+<h3>Script Pool Kontextmenü<a class="headerlink" href="#script-pool-kontextmenu" title="Link to this heading"></a></h3>
+<p>Öffnen Sie das Kontextmenü, indem Sie mit der rechten Maustaste auf den Skript-Pool klicken:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/edit_function.svg"><img alt="editfun" src="../_images/edit_function.svg" width="40" /></a></p></td>
+<td><p>Öffnet die ausgewählte Funktion <em>User Library</em>
+zur Bearbeitung.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/folder.svg"><img alt="folder" src="../_images/folder.svg" width="40" /></a></p></td>
+<td><p>Öffnet den Ordner <em>Benutzerbibliothek</em> im Datei-Explorer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Erweitert alle Kategorien</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Klappt alle Kategorien zusammen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="script-editor">
+<h2>Script Editor<a class="headerlink" href="#script-editor" title="Link to this heading"></a></h2>
+<section id="einfuhrung-1">
+<span id="id1"></span><h3>Einführung<a class="headerlink" href="#einfuhrung-1" title="Link to this heading"></a></h3>
+<p>Der <em>Script Editor</em> dient zur grafischen Programmierung von
+Scripten/Programmen. In der unteren Abbildung (<em>Script Editor</em>) sind
+folgende Elemente des Arbeitsfensters nummeriert:</p>
+<ol class="arabic simple guinums">
+<li><p><em>Werkzeugleiste</em> - zum Laden, Speichern und zur Ablaufsteuerung von
+Scripten.</p></li>
+<li><p>Die Kopfzeile enthält den Dateinamen des aktuell geöffneten Scriptprogramms.</p></li>
+<li><p><em>Funktionsbaum</em> - baumartige Struktur mit allen Scriptfunktionen</p></li>
+<li><p>Die aktuell ausgeführte Funktion wird farblich hervorgehoben (hier
+blau)</p></li>
+<li><p>Wenn Sie eine Funktion durch Anklicken auswählen, wird diese
+mit der Akzentfarbe das aktuellen Themes farblich markiert (hier orange).</p></li>
+</ol>
+<img alt="Script Editor" src="../_images/100002010000025A00000168CC93E6B2FBB4D916.png" />
+<p>Jede Funktion wird im Funktionsbaum in
+einer eigenen Zeile angezeigt. In dieser Zeile sind alle wichtigen
+Parameter der Funktion für Sie sichtbar (siehe Abbildung unten):</p>
+<img alt="Funktion im Skript-Editor" src="../_images/1000020100000272000000627C834EF46698FB03.png" />
+<p>Auf der linken Seite finden
+Sie das grafische Symbol der Funktion <span class="guinum">❶</span>. Unmittelbar rechts neben dem
+Symbol oben <span class="guinum">❷</span> finden Sie den Funktionsnamen. Neben dem Funktionsnamen
+werden Ihnen Statusinformationen <span class="guinum">❸</span> angezeigt. Diese Informationen sind
+bei vielen Funktionen erst während der Ausführung sichtbar und können
+sich währende der Ausführung auch ändern. Direkt unter dem
+Funktionsnamen sehen eine Zusammenfassung aller wichtigen
+Funktionsparameter <span class="guinum">❹</span>, die im Konfigurationsbereich von Ihnen
+konfiguriert wurden.</p>
+<p>Der <em>Script Editor</em> ist in der Software ein bewegliches andockbares
+Fenster. D.h., Sie können den Editor durch Anklicken der Titelleiste und
+anschließendes Ziehen mit der Maus an eine andere Position innerhalb der
+Software verschieben und an beliebiger Stelle wieder andocken. Sollte
+das Fenster des Editor einmal nicht sichtbar sein, dann aktivieren Sie
+es über den Menüpunkt <span class="menuselection">Window → Script Editor</span> im Hauptmenü
+(siehe Abbildung unten).</p>
+<img alt="Script Editor anzeigen" src="../_images/100002010000018B000000E25969D2D1DAB3AE6A.png" />
+<p>Um die Übersichtlichkeit zu
+erhöhen oder die Darstellung des Editors an Ihre Bedürfnisse anzupassen,
+können Sie die Skalierung ändern Klicken Sie dafür mit der rechten
+Maustaste in den Editor um das Kontextmenü zu öffnen und wählen Sie in
+dem Untermenü <em>Set Item Scaling</em> die Größe der Darstellung aus:</p>
+<img alt="Script Editor Skalierung ändern" src="../_images/10000201000001BD000000E95ED186BD70837E01.png" />
+<p>Die folgenden Größen sind auswählbar:</p>
+<ul class="simple">
+<li><p><strong>Small</strong> – sehr kompakte Darstellung für maximale Übersichtlichkeit
+bei komplexen Funktionsabläufen, die Funktionsparameter werden nicht
+mehr mit angezeigt</p></li>
+<li><p><strong>Normal</strong> – normale Darstellung</p></li>
+<li><p><strong>Big</strong> – die Icons und der Funktionsname werden vergrößert
+dargestellt für eine optimale Lesbarkeit</p></li>
+</ul>
+</section>
+<section id="werkzeugleiste">
+<h3>Werkzeugleiste<a class="headerlink" href="#werkzeugleiste" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100018A30000387200003872627AA1597179191F.svg"><img alt="image17" src="../_images/100018A30000387200003872627AA1597179191F.svg" width="40" /></a></p></td>
+<td><p>Erzeugt ein neues, leeres Script.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000F850000350500003505755524BB44FF2E56.svg"><img alt="image18" src="../_images/10000F850000350500003505755524BB44FF2E56.svg" width="40" /></a></p></td>
+<td><p>Lädt eine vorhandene Script-Datei in den Script Editor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000111B000038720000387231FCD7A597623EB3.svg"><img alt="image19" src="../_images/1000111B000038720000387231FCD7A597623EB3.svg" width="40" /></a></p></td>
+<td><p>Speichert das aktuelle Script.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000173B0000387200003872AFCF364C5ED9850F1.svg"><img alt="image20" src="../_images/1000173B0000387200003872AFCF364C5ED9850F1.svg" width="40" /></a></p></td>
+<td><p>Speichert das aktuelle Script unter einem neuen Namen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000C2E000034EB000034EB0815ABACAEE84EE0.svg"><img alt="image21" src="../_images/10000C2E000034EB000034EB0815ABACAEE84EE0.svg" width="40" /></a></p></td>
+<td><p>Beendet die Scriptausführung sofort. Alle Geräte
+bleiben im aktuellen Zustand, sie werden nicht
+abgeschaltet oder gestoppt und gehen nicht in einen
+sicheren Zustand über. Durch Anklicken der
+Start-Schaltfläche beginnt der Programmablauf komplett
+von vorne.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000C46000034EB000034EBC0807B1C81FD15E0.svg"><img alt="image22" src="../_images/10000C46000034EB000034EBC0807B1C81FD15E0.svg" width="40" /></a></p></td>
+<td><p>Script Stopp Anfordern. Beim Klick auf diese
+Schaltfläche wird die globale Scriptvariable
+<em>$StopRequested</em> auf den Wert <em>true</em> gesetzt. Das
+Script kann diese Variable zyklisch abfragen, z.B. in
+der Hauptschleife des Scriptes, um auf eine
+Stopp-Anforderung zu reagieren und das Script zu
+beenden. Dadurch hat das Script die Möglichkeit, Geräte
+in einen sicheren Zustand zu bringen (z.B. Pumpen zu
+stoppen, Ventile zu schalten) bevor die
+Scriptausführung beendet wird.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000E11000034EB000034EB5683B6AF8D85CDA6.svg"><img alt="image23" src="../_images/10000E11000034EB000034EB5683B6AF8D85CDA6.svg" width="40" /></a></p></td>
+<td><p>Unterbricht die aktuelle Programmausführung - durch
+Anklicken der Start-Schaltfläche wird die Ausführung an
+der aktuellen Position fortgesetzt .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg"><img alt="runscript" src="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg" width="40" /></a></p></td>
+<td><p>Startet die Programmausführung oder setzt ein Programm
+nach einer Unterbrechung fort.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a></p></td>
+<td><p>Aktiviert den Einzelschrittbetrieb zum Testen und
+Debuggen von Scriptprogrammen. Ist diese Funktion aktiv
+wird die Scriptausführung nach der Ausführung jeder
+Scriptfunktion unterbrochen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/single_step2.svg"><img alt="execstep" src="../_images/single_step2.svg" width="40" /></a></p></td>
+<td><p>Durch Klicken dieser Schaltfläche kann der nächste
+Schritt, d.h. die nächste Funktion im
+Einzelschrittbetrieb ausgeführt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/scroll_lock1.svg"><img alt="scroll" src="../_images/scroll_lock1.svg" width="40" /></a></p></td>
+<td><p>Scroll Lock - verhindert, das der Script Editor bei der
+Ausführung einer Funktion automatisch zu dieser
+Funktion scrollt</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Klappt alle Funktionen im Script auf</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Klappt alle Funktionen im Script ein so dass nur noch
+die oberste Funktionsebene zu sehen ist</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können Scripte auch einfach per Drag &amp;
+Drop (Ziehen und Ablegen) laden. Ziehen Sie dafür
+einfach eine Script-Datei aus Ihrem Dateisystem auf den
+Script-Editor.</p>
+</div>
+</section>
+<section id="kontextmenu">
+<span id="scripteditor-kontextmenu"></span><h3>Kontextmenü<a class="headerlink" href="#kontextmenu" title="Link to this heading"></a></h3>
+<p>Wenn Sie mit der rechten Maustaste auf eine Funktion im <em>Script-Editor</em>
+klicken, wird ein Kontextmenü mit zusätzlichen Aktionen eingeblendet
+(siehe Abbildung unten).</p>
+<img alt="Kontextmenü Script Editor" src="../_images/100002010000014400000150DF1BE1DD8FC0A460.png" />
+<p>Die folgenden Funktionen stehen über das Kontextmenü zu Verfügung:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/edit_function.svg"><img alt="editfun" src="../_images/edit_function.svg" width="40" /></a></p></td>
+<td><p>Öffnet den ausgewählten
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#script-function-call"><span class="std std-ref">Skriptfunktionsaufruf</span></a>
+zur Bearbeitung (nur bei Rechtsklick auf einen
+Skriptfunktionsaufruf)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000097D000035050000350538CD8A3BED7FE2BC.svg"><img alt="image52" src="../_images/1000097D000035050000350538CD8A3BED7FE2BC.svg" width="40" /></a></p></td>
+<td><p>Verschiebt die ausgewählte Funktion um eine Position
+nach oben</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100009440000350500003505BD31755A160012FF.svg"><img alt="image53" src="../_images/100009440000350500003505BD31755A160012FF.svg" width="40" /></a></p></td>
+<td><p>Verschiebt die ausgewählte Funktion um eine Position
+nach unten</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000089D000034EB000034EB2EF1F414485F4814.svg"><img alt="image54" src="../_images/1000089D000034EB000034EB2EF1F414485F4814.svg" width="40" /></a></p></td>
+<td><p>Kopiert die ausgewählten Funktionen in die
+Zwischenablage</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100006280000350500003505598C9D0C09166EE0.svg"><img alt="image55" src="../_images/100006280000350500003505598C9D0C09166EE0.svg" width="40" /></a></p></td>
+<td><p>Fügt die Funktionen aus der Zwischenablage vor die
+ausgewählte Funktion ein</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/duplicate.svg"><img alt="duplica" src="../_images/duplicate.svg" width="40" /></a></p></td>
+<td><p>Dupliziert die ausgewählte Funktion. Dies ist eine
+Kombination aus Kopieren und Einfügen in einem
+einzigen Schritt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000029600003505000035058E70718A79A91FE8.svg"><img alt="image56" src="../_images/1000029600003505000035058E70718A79A91FE8.svg" width="40" /></a></p></td>
+<td><p>Löscht die ausgewählten Funktionen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100007F200003505000035055B70923F64560DD7.svg"><img alt="image57" src="../_images/100007F200003505000035055B70923F64560DD7.svg" width="40" /></a></p></td>
+<td><p>Löscht alle Funktionen im Script</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000944000038720000387225245FA0499799FC.svg"><img alt="image58" src="../_images/10000944000038720000387225245FA0499799FC.svg" width="40" /></a></p></td>
+<td><p>Ersetzt die ausgewählten Funktionen durch eine
+Funktionssequenz und fügt die Funktionen in die Sequenz
+ein. Damit können Sie schnell Funktionen gruppieren und
+so ihr Script strukturieren und übersichtlicher
+gestalten.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/enable_disable_functions2.svg"><img alt="disable" src="../_images/enable_disable_functions2.svg" width="40" /></a></p></td>
+<td><p>Aktiviert / Deaktiviert die ausgewählten Funktionen.
+Damit können Sie bestimmt Funktionen temporär
+deaktivieren und später wieder aktivieren. Deaktivierte
+Funktionen werden bei der Programmausführung
+übersprungen. Dies entspricht der Funktionalität des
+Auskommentierens von Quelltext in textbasierten
+Programmiersprachen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Klappt alle Funktionen im Script auf</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Klappt alle Funktionen im Script ein so dass nur noch
+die oberste Funktionsebene zu sehen ist</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100003FA00003505000035058DF099368DC3B55E.svg"><img alt="image61" src="../_images/100003FA00003505000035058DF099368DC3B55E.svg" width="40" /></a></p></td>
+<td><p>Ändert die Skalierung der Darstellung der
+Scriptfunktionen. Damit kann die Übersichtlichkeit bei
+komplexen Scripten erhöht werden.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B39000034EB000034EB3EB900673AC29BB5.svg"><img alt="image62" src="../_images/10000B39000034EB000034EB3EB900673AC29BB5.svg" width="40" /></a></p></td>
+<td><p>Startet die Scriptausführung an der ausgewählten
+Funktion. Wenn Variablen im Script vorher initialisiert
+werden, kann es sein, dass sie in diesem Fall noch
+nicht initialisiert sind.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100008F80000350500003505C177441D68208C36.svg"><img alt="image63" src="../_images/100008F80000350500003505C177441D68208C36.svg" width="40" /></a></p></td>
+<td><p>Beendet die Scriptausführung sofort. Alle Geräte
+bleiben im aktuellen Zustand, sie werden nicht
+abgeschaltet oder gestoppt und gehen nicht in einen
+sicheren Zustand über.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/debug.svg"><img alt="debug" src="../_images/debug.svg" width="40" /></a></p></td>
+<td><p>Aktiviert / deaktiviert den Debug Modus.
+Setzt den Wert der globalen Script Variable
+<code class="code docutils literal notranslate"><span class="pre">$DebugMode</span></code>. Diese Variable kann dann im Script
+verwendet werden um Code auszuführen oder zusätliche
+Debug-Ausgaben zu loggen.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Um die Ausführung des Skriptes von einer
+bestimmten Funktion aus zu starten, klicken Sie mit der
+rechten Maustaste auf die Funktion und wählen Sie dann
+im Kontextmenü den Punkt <span class="menuselection">Run From Here</span>.</p>
+</div>
+</section>
+</section>
+<section id="script-konfigurationsbereich">
+<h2>Script Konfigurationsbereich<a class="headerlink" href="#script-konfigurationsbereich" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Der Konfigurationsbereich enthält alle Bedienelemente zur Konfiguration
+der Scriptfunktion, die aktuell im <em>Script Editor</em> ausgewählt ist.</p>
+<img alt="Script Konfigurationsbereich" src="../_images/100002010000021A0000012F07608C2B70720CC7.png" />
+<p>Der Konfigurationsbereich besteht aus:</p>
+<ol class="arabic simple guinums">
+<li><p>Kopfzeile mit der Bezeichnung der aktuell ausgewählten Funktion</p></li>
+<li><p>Eingabe- und Bedienelemente der Funktion</p></li>
+<li><p>Kommentarfeld zur Eingabe eines beliebigen Kommentars</p></li>
+</ol>
+<p>Die Eingabe- und Bedienelemente <span class="guinum">❷</span> sind für jede Script-Funktion
+unterschiedlich. Alle Funktionen haben aber einige Einstellungen
+gemeinsam, wie z.B das Kommentarfeld im unteren Teil des
+Konfigurationsbereiches <span class="guinum">❸</span> oder der Funktionsname im Kopf <span class="guinum">❶</span>.</p>
+</section>
+<section id="funktionsbezeichnung-andern">
+<h3>Funktionsbezeichnung ändern<a class="headerlink" href="#funktionsbezeichnung-andern" title="Link to this heading"></a></h3>
+<p>Sie können im Kopf des Konfigurationsbereiches die Bezeichnung der
+Funktion ändern, um so „sprechende“ Funktionsbezeichnungen zu verwenden,
+die Dritten oder Ihnen später das Lesen und Verstehen des Skriptes
+erleichtern.</p>
+<p>Um die Funktionsbezeichnung zu ändern, klicken Sie entweder mit der
+linken Maustaste auf den Funktionsnamen im Kopf der Funktion oder
+klicken Sie den Namen mit der rechten Maustaste an und wählen Sie im
+Kontextmenü den Punkt <span class="menuselection">Edit Function Caption</span> (siehe Abbildung
+unten).</p>
+<img alt="Aufruf Änderung Funktionsbezeichnung" src="../_images/10000201000001BC0000008C307209237D1183C6.png" />
+<p>In dem Eingabedialog der nun angezeigt wird, geben Sie eine neue Bezeichnung
+für die Funktion ein.</p>
+<img alt="Eingabe Funktionsbezeichnung" src="../_images/10000201000001B00000009EE87E1DC8113145D3.png" />
+<p>Das folgende Beispiel
+zeigt ein kurzes Programm mit den Standardfunktionsnamen auf der linken
+Seite und das gleiche Programm mit eigenen Funktionsnamen auf der
+rechten Seite.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Standard Funktionsnamen</p></td>
+<td><p>Anwendungsspezifische Namen</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="image67" src="../_images/100002010000012C0000009A8EA2B85DC0AE3CC8.png" /></p></td>
+<td><p><img alt="image68" src="../_images/100002010000012C0000009B3D05CC276B4F0D6F.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Verbessern Sie die Lesbarkeit,
+Verständlichkeit und die Wartbarkeit Ihrer Skripte
+durch die Verwendung von sprechenden,
+anwendungsspezifischen Funktionsbezeichnungen.</p>
+</div>
+</section>
+<section id="kommentar-eingeben">
+<h3>Kommentar eingeben<a class="headerlink" href="#kommentar-eingeben" title="Link to this heading"></a></h3>
+<p>Im Kommentarfeld können Sie einen beliebigen Kommentar eingeben, der es
+anderen Anwendern ermöglicht, Ihr Script besser zu verstehen und dem
+Programmablauf leichter zu folgen.</p>
+<img alt="../_images/1000020100000204000000DEFE8A94073FF71C98.png" src="../_images/1000020100000204000000DEFE8A94073FF71C98.png" />
+<p>Wenn Sie im <em>Script Editor</em>
+den Mauspfeil über eine Funktion bewegen, wird Ihnen der entsprechende
+Kommentar dieser Funktion in einem Hinweisfenster (<em>Tooltip</em>)
+eingeblendet (siehe Abbildung oben). So können Sie, ohne dass Sie den
+Konfigurationsbereich einer Funktion öffnen müssen, den Kommentar zu
+dieser Funktion lesen.</p>
+</section>
+<section id="script-eingabefelder">
+<h3>Script Eingabefelder<a class="headerlink" href="#script-eingabefelder" title="Link to this heading"></a></h3>
+<p>In vielen Scriptfunktionen sehen Sie im Konfigurationsbereich spezielle
+Eingabefelder, die mit einem farbigen <strong>V</strong> gekennzeichnet sind:</p>
+<img alt="../_images/script_input_fields.png" src="../_images/script_input_fields.png" />
+<p>Diese speziellen Eingabefelder ermöglichen Ihnen:</p>
+<ul class="simple">
+<li><p>die Eingabe von Werten (z.B. 0.23 oder -24)</p></li>
+<li><p>die Verwendung von <a class="reference internal" href="#scriptvariablen"><span class="std std-ref">Script Variablen</span></a> (z.B. <code class="code docutils literal notranslate"><span class="pre">$TargetFlow</span></code> oder <code class="code docutils literal notranslate"><span class="pre">$Voltage</span></code>)</p></li>
+<li><p>die Verwendung von <a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> (z.B. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.ActualFlow</span></code>)</p></li>
+<li><p>die Nutzung von Inline-JavaScript (z.B. <code class="code docutils literal notranslate"><span class="pre">${</span> <span class="pre">$$Nemesys_M_1.ActualFlow</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">}</span></code>)</p></li>
+</ul>
+<section id="script-variablen-einfugen">
+<h4>Script Variablen einfügen<a class="headerlink" href="#script-variablen-einfugen" title="Link to this heading"></a></h4>
+<p>Um Script-Variablen zu verwenden, müssen Sie im Eingabefeld lediglich ein
+Dollar-Zeichen <code class="code docutils literal notranslate"><span class="pre">$</span></code> eingeben. Dann wird Ihnen sofort eine Auswahlliste
+von Variablen angezeigt, die an der aktuellen Position im Script verfügbar
+sind. Sie können einfach eine Variable aus der Liste wählen oder den Namen
+weiter von Hand eintippen:</p>
+<img alt="../_images/enter_script_variables.png" src="../_images/enter_script_variables.png" />
+<p>Der Wert der Variable wird dann zur Laufzeit für den entsprechenden Parameter
+verwendet. In dem Beispiel oben, wird zur Laufzeit der Wert der Variablen
+<code class="code docutils literal notranslate"><span class="pre">$TargetVolume</span></code> für den Script Parameter Volume verwendet.</p>
+</section>
+<section id="device-properties-einfugen">
+<h4>Device Properties einfügen<a class="headerlink" href="#device-properties-einfugen" title="Link to this heading"></a></h4>
+<p>Um <a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> einzufügen, klicken
+Sie einfach mit der rechten Maustaste in das Eingabefeld und wählen dann den
+Menüpunkt <span class="menuselection">Insert device property…</span>:</p>
+<img alt="../_images/enter_device_properties.png" src="../_images/enter_device_properties.png" />
+<p>Wählen Sie dann die Geräteeigenschaft in dem angezeigten Dialog aus. Der Bezeichner
+für die Geräteeingenschaft wird dann in das Eingabefeld eingefügt.</p>
+<img alt="../_images/device_property_example.png" src="../_images/device_property_example.png" />
+<p>Zur Laufzeit wird dann der Wert der Geräteeigenschaft gelesen und and das
+Script übergeben. Im Beispiel oben, wird die aktuelle Flussrate der Pumpe
+<em>Cedosys 2</em> verwendet (<code class="code docutils literal notranslate"><span class="pre">$$Cedosys_2.ActualFlow</span></code>) um die Flussrate der
+Pumpe <em>Cedosys 1</em> zu setzen.</p>
+</section>
+<section id="inline-javascript-verwenden">
+<h4>Inline-JavaScript verwenden<a class="headerlink" href="#inline-javascript-verwenden" title="Link to this heading"></a></h4>
+<p>Sie können in den speziellen Eingabefeldern sogar Inline-JavaScript verwenden.
+D.h. für kurze, einzeilige Berechnungen, kann JavaScript Code direkt in das
+Eingabefeld geschrieben werden. Inline JavaScript Code beginnen Sie immer mit
+einem Dollarzeichen gefolgt von einer öffnenden, geschweiften Klammer.
+Abgeschlossen wird der Code durch eine schließende, geschweifte Klamme:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">{</span><span class="w"> </span><span class="cm">/* inline code */</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Im folgenden Beispiel soll die Flussrate für die Pumpe <em>Nemesys S 1</em> auf Basis
+des analogen Eingangssignals des Kanals <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN</span></code> berechnet
+werden. Dafür soll das analoge Eingangssignal um den Faktor <code class="code docutils literal notranslate"><span class="pre">0.1</span></code>
+skaliert werden:</p>
+<img alt="../_images/inline_javascript_example.png" src="../_images/inline_javascript_example.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Verwenden Sie Inline-JavaScript nur für sehr einfache Berechnungen, wie z.B.
+Skalierungen. Für komplexere Berechnungen oder logische Vergleiche
+sollten Sie die entsprechende <a class="reference internal" href="../javascript_DE/javascript_DE.html#javascript-script-function"><span class="std std-ref">JavaScript</span></a>
+Funktion oder die <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#set-variable"><span class="std std-ref">Set Variable</span></a> Funktion verwenden.</p>
+</div>
+</section>
+<section id="variablen-mit-gerate-handles-einfugen">
+<h4>Variablen mit Geräte Handles einfügen<a class="headerlink" href="#variablen-mit-gerate-handles-einfugen" title="Link to this heading"></a></h4>
+<p>Geräte Handles sind Geräte Bezeichner, die mit zwei Dollarzeichen beginnen und
+ein Gerät eindeutig identifizieren. Ein Geräte Handle ist z.B. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code>.
+<a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> bestehen immer aus
+einem Geräte Handle und einem Bezeichner für die entsprechende Eigenschaft
+(Property) des Gerätes. So besteht z.B. das Device Property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN1.ActualValue</span></code>
+aus dem Geräte Handle <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN1</span></code> und der Eigenschaft
+<code class="code docutils literal notranslate"><span class="pre">ActualValue</span></code>. D.h., wenn Sie ein Device Property kennen, dann kennen
+Sie auch das entsprechende Geräte Handle.</p>
+<p>In normalen Eingabefeldern werden Geräte Handles gewöhnlich nicht verwendet.
+Allerdings haben viele gerätespezifischen Scriptfunktionen ein Auswahlfeld
+zur Auswahl des Gerätes, für das ein Befehl ausgeführt werden soll.
+Ist dieses Auswahlfeld mit einem farbigen <strong>V</strong> gekennzeichnet, dann können
+Sie dort auch Variablen übergeben, die ein Geräte Handle enthalten.</p>
+<img alt="../_images/enter_device_handle_variable.png" src="../_images/enter_device_handle_variable.png" />
+<p>Im Beispiel oben wird an das Auswahlfeld zur Auswahl der Pumpe die Variable
+<code class="code docutils literal notranslate"><span class="pre">$PumpDevice</span></code> übergeben, welche das Geräte Handle für die Pumpe enthält,
+für die ein Dosiervorgang gestartet werden soll.</p>
+</section>
+</section>
+</section>
+<section id="programmierung">
+<h2>Programmierung<a class="headerlink" href="#programmierung" title="Link to this heading"></a></h2>
+<section id="funktionen-hinzufugen">
+<h3>Funktionen hinzufügen<a class="headerlink" href="#funktionen-hinzufugen" title="Link to this heading"></a></h3>
+<p>Funktionen werden aus dem Script-Pool mit Ziehen-und-Ablegen (Drag &amp;
+Drop) in den Script Editor übernommen. Dazu gehen Sie wie folgt vor:</p>
+<ol class="arabic simple steps">
+<li><p>Klicken Sie mit der linken Maustaste im Script-Pool auf die
+Funktion, die Sie einfügen möchten <span class="guinum">❶</span> und halten Sie die Maus
+gedrückt.</p></li>
+<li><p>Ziehen Sie die Funktion mit gedrückter Maustaste in den <em>Script
+Editor</em> hinein.</p></li>
+<li><p>Sobald Sie die linke Maustaste loslassen <span class="guinum">❷</span>, wird die Funktion in den
+Script- Editor an der entsprechenden Stelle eingefügt.</p></li>
+</ol>
+<img alt="Drag&amp;Drop von Script Funktionen" src="../_images/1000020100000257000000FE60273A82A9E46F3B.png" />
+<p>An welche Stelle die
+Funktion eingefügt wird, hängt davon ab, an welcher Position sich der
+Mauszeiger befindet, wenn Sie die Maustaste loslassen. Folgende
+Varianten sind möglich:</p>
+<img alt="../_images/10000201000001340000012B261E2BD3D1D76AC8.png" src="../_images/10000201000001340000012B261E2BD3D1D76AC8.png" />
+<ol class="arabic simple guinums">
+<li><p>Lassen Sie die Maustaste über einer Funktion los, so wird
+die neue Funktion vor die Funktion eingefügt.</p></li>
+<li><p>Wird die Maustaste über einer Funktionssequenz (z.B., einer
+Schleife/Loop) losgelassen, dann wird die neue Funktion am Ende der
+Sequenz angefügt.</p></li>
+<li><p>Wenn über dem freien Bereich am Ende des Funktionsbaumes die
+Maustaste losgelassen wird, dann wird die Funktion an das Ende
+angehängt.</p></li>
+</ol>
+</section>
+<section id="funktionen-auswahlen">
+<h3>Funktionen auswählen<a class="headerlink" href="#funktionen-auswahlen" title="Link to this heading"></a></h3>
+<p>Um Funktionen zu bewegen, zu kopieren oder zu löschen, müssen Sie die
+Funktionen zuerst auswählen. Sie können entweder eine einzelne Funktion
+durch Anklicken auswählen, oder eine zusammenhängende Folge von
+Funktionen auf der gleichen Hierarchieebene.</p>
+<img alt="Script Editor Mehrfachauswahl" src="../_images/10000201000001F0000000EFC1A07C20DF2E2141.png" />
+<p>Sobald Sie eine
+Funktion mit der linken Maustaste anklicken wird die aktuelle Auswahl
+gelöscht und die neue Funktion ausgewählt <span class="guinum">❶</span>. Wenn Sie jedoch die
+Umschalttaste (<kbd class="kbd docutils literal notranslate">Shift</kbd>) drücken, während Sie auf ein Element klicken <span class="guinum">❷</span>, werden
+alle Elemente zwischen dem aktuellen Element und dem angeklickten
+Element ausgewählt.</p>
+</section>
+<section id="funktionen-bewegen">
+<h3>Funktionen bewegen<a class="headerlink" href="#funktionen-bewegen" title="Link to this heading"></a></h3>
+<p>Durch <em>Ziehen-und-Ablegen</em> können Sie die Funktionen im Funktionsbaum
+bewegen und so an eine neue Position verschieben. Für das Einfügen an
+der neuen Position gelten dieselben Regeln wie beim Hinzufügen von neuen
+Funktionen.</p>
+<img alt="Funktionen bewegen" src="../_images/10000201000001CC000000FCEBE9DEBFD8E32CFF.png" />
+<p>Für das Verschieben von Funktionen
+nach Oben und Unten gibt es eine weitere Alternative. Klicken Sie
+hierfür mit der rechten Maustaste auf die Funktion, die verschoben
+werden soll. Aus dem Kontextmenü (siehe Abbildung unten) wählen Sie dann
+den Menüpunkt <em>Move up</em> oder <em>Move down</em>. Alternativ können Sie auch
+die Tastenkombinationen <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">↑</kbd> oder <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">↓</kbd>
+verwenden.</p>
+<p>Mit dieser zweiten Methode lassen sich Funktionen nur in der aktuellen
+Sequenz noch oben oder unten verschieben. Wollen Sie die Funktion an
+eine komplett andere Position im Funktionsbaum bewegen, so ist dies nur
+mit Ziehen-und Ablegen-möglich.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Mit <em>Move up</em> oder <em>Move down</em> wird immer
+nur die aktuelle Funktion verschoben. Auch wenn mehrere
+Funktionen ausgewählt sind, wird nur die aktuelle
+Funktion verschoben. Wenn Sie die komplette Auswahl
+verschieben möchten, können Sie dies durch
+<em>Ziehen-und-Ablegen</em> (Drag &amp; Drop) erreichen.</p>
+</div>
+</section>
+<section id="funktionen-loschen">
+<h3>Funktionen löschen<a class="headerlink" href="#funktionen-loschen" title="Link to this heading"></a></h3>
+<p>Für das Löschen von Funktionen gibt es zwei Möglichkeiten:</p>
+<ol class="arabic simple">
+<li><p>Wählen Sie die zu löschenden Funktionen aus und klicken Sie dann im
+Kontextmenü auf den Menüpunkt <em>Delete</em>.</p></li>
+<li><p>Wählen Sie die zu löschenden Funktionen aus und drücken Sie dann die
+<em>Entfernen</em> Taste.</p></li>
+</ol>
+</section>
+<section id="funktionen-kopieren">
+<h3>Funktionen kopieren<a class="headerlink" href="#funktionen-kopieren" title="Link to this heading"></a></h3>
+<p>Das Kopieren von Funktionen kann auch wieder wahlweise über das
+Kontextmenü oder mittels Tastenkombinationen erfolgen. Wenn Sie mit dem
+Kontextmenü arbeiten, wählen Sie nacheinander die Menüpunkte <em>Copy</em> und
+<em>Paste</em> (Abbildung unten). Wenn Sie mit der Tastatur arbeiten, verwenden
+Sie die Tastenkombinationen <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd> zum Kopieren und
+<kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd> zum Einfügen.</p>
+<img alt="Funktionen kopieren" src="../_images/1000020100000112000000CF9D471977536A43C2.png" />
+<p>So kopieren Sie eine Funktion:</p>
+<ol class="arabic simple steps">
+<li><p>Wählen Sie die Funktionen, die Sie kopieren möchten, durch Anklicken
+aus.</p></li>
+<li><p>Kopieren Sie die Funktionen mit dem Menüpunkt <em>Copy</em> aus dem
+Kontextmenü oder über die Tastenkombination <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd>.</p></li>
+<li><p>Wählen Sie die Funktion, vor die Sie die kopierten Funktionen
+einfügen möchten, durch Anklicken aus.</p></li>
+<li><p>Fügen Sie die kopierten Funktionen mit dem Menüpunkt <em>Paste</em> oder der
+Tastenkombination <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd> ein.</p></li>
+</ol>
+<p>Den Einfügevorgang <em>Paste</em> können Sie beliebig oft wiederholen, um
+mehrere Kopien der vorher mit <em>Copy</em> kopierten Funktionen aus der
+Zwischenablage einzufügen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Zum schnellen Duplizieren von Funktionen können Sie auch den Menüpunkt
+<span class="menuselection">Duplicate</span> oder die Tastenkombination <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">D</kbd>
+verwenden.</p>
+</div>
+</section>
+<section id="funktionen-gruppieren">
+<h3>Funktionen gruppieren<a class="headerlink" href="#funktionen-gruppieren" title="Link to this heading"></a></h3>
+<p>Um die Übersichtlichkeit und Lesbarkeit Ihres Scripts zu verbessern,
+können Sie Abfolgen von Funktionen schnell und einfach in
+Funktionssequenzen gruppieren. Wählen Sie dafür einfach eine
+zusammenhängende Reihe von Funktionen aus, und klicken Sie dann im
+Kontextmenü auf den Menüpunkt <em>Convert Selection To Function Sequence.</em></p>
+<img alt="Funktionen gruppieren" src="../_images/1000020100000162000000A933F710A74CD5FF30.png" />
+<p>Die ausgewählten Funktionen werden nun durch eine Funktionssequenz ersetzt,
+welche die ausgewählten Funktionen enthält.</p>
+<img alt="../_images/10000201000002AD000000B45887FBE2E338C1B1.png" src="../_images/10000201000002AD000000B45887FBE2E338C1B1.png" />
+</section>
+<section id="funktionen-deaktivieren-aktivieren">
+<span id="funktionen-deaktivieren"></span><h3>Funktionen deaktivieren / aktivieren<a class="headerlink" href="#funktionen-deaktivieren-aktivieren" title="Link to this heading"></a></h3>
+<p>In klassischen textbasierten Programmiersprachen gibt es die Möglichkeit,
+Quelltext durch Auskommentieren temporär zu deaktivieren. Das Script-System
+bietet eine vergleichbare Funktionalität. Um Funktionen zu deaktivieren,
+markieren Sie die Funktionen im Script-Editor und wählen dann aus dem Kontextmenü
+den Eintrag
+<span class="menuselection">Enable / Disable Selected Functions</span>. Alternativ können Sie auch
+die Tastenkombination <kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">/</kbd> verwenden.</p>
+<img alt="../_images/context_menu_disable_functions.png" src="../_images/context_menu_disable_functions.png" />
+<p>Wenn Sie Funktionen
+deaktivieren, werden diese in eine <span class="guilabel">Disabled Functions</span> Sequenz
+eingefügt. Bei der Skriptausführung, wird der Inhalt der Sequenz einfach
+übersprungen.</p>
+<img alt="../_images/disabled_functions.png" src="../_images/disabled_functions.png" />
+<p>Um deaktivierte Funktionen wieder zu aktivieren, wählen Sie eine einzelne
+<span class="guilabel">Disabled Functions</span> Sequenz aus, und verwenden dann den
+gleichen Menüpunkt / Tastenkombination wie beim Deaktivieren.</p>
+</section>
+<section id="funktionsparameter-editieren">
+<h3>Funktionsparameter editieren<a class="headerlink" href="#funktionsparameter-editieren" title="Link to this heading"></a></h3>
+<p>Sobald Sie eine Funktion im Funktionsbaum durch Anklicken auswählen,
+werden im Bereich <em>Script-Konfiguration</em> die Bedienelemente zur
+Konfiguration der gewählten Funktion eingeblendet und Sie können die
+Funktionsparameter editieren.</p>
+</section>
+<section id="tooltip-anzeigen">
+<h3>Tooltip anzeigen<a class="headerlink" href="#tooltip-anzeigen" title="Link to this heading"></a></h3>
+<p>Wenn Sie die Maus über eine Funktion bewegen, wird nach kurzer Zeit das
+Hinweisfenster (<em>Tooltip</em>) für diese Funktion angezeigt (siehe Abbildung
+unten). In diesem Fenster erhalten Sie alle Informationen zu dieser
+Funktion auf einem Blick: Funktionsname <span class="guinum">❶</span>, Kommentar oder
+Funktionsbeschreibung <span class="guinum">❷</span> und Funktionsparameter <span class="guinum">❸</span>.</p>
+<figure class="align-default">
+<img alt="Hinweisfenster für Funktion (Tooltip)" src="../_images/1000020100000204000000DEDBCF89E6569C55A7.png" />
+</figure>
+</section>
+</section>
+<section id="variablen">
+<span id="scriptvariablen"></span><h2>Variablen<a class="headerlink" href="#variablen" title="Link to this heading"></a></h2>
+<section id="variables-introduction">
+<span id="id2"></span><h3>Einführung<a class="headerlink" href="#variables-introduction" title="Link to this heading"></a></h3>
+<p>Das Script-System unterstützt die Verwendung von Variablen. Variablen
+sind in Scriptprogrammen Behälter für Rechengrößen und Werte, die im
+Verlauf der Scriptausführung auftreten. Variablen werden durch einen vom
+Benutzer zu definierenden Namen bezeichnet. Variablen können verwendet
+werden, um Werte (z.B., Schleifenzähler oder von Sensoren gemeldete
+Daten) darin zu speichern oder Ergebnisse von Berechnungen.
+Scriptfunktionen, die die Verwendung von Variablen unterstützen, können
+dann später auf den Inhalt dieser Variablen zugreifen.</p>
+</section>
+<section id="variablen-anlegen">
+<h3>Variablen anlegen<a class="headerlink" href="#variablen-anlegen" title="Link to this heading"></a></h3>
+<p>Bevor im Script Variablen zum Speichern von Werten oder zum Rechnen
+verwendet werden können, müssen die Variablen angelegt werden. Es gibt
+zwei Varianten zum Anlegen von Variablen:</p>
+<ol class="arabic simple">
+<li><p>Explizit: Variablen werden explizit vom Anwender definiert, z.B.
+durch die Funktion <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#variable-erzeugen"><span class="std std-ref">Create Variable</span></a>.</p></li>
+<li><p>Implizit: Das Anlegen erfolgt implizit über Funktionen, die Variablen
+anbieten, wie z.B. durch die Funktion <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#zahlschleife"><span class="std std-ref">Counting Loop</span></a>, deren
+Schleifenzähler eine Variable ist.</p></li>
+</ol>
+</section>
+<section id="benennung-von-variablen">
+<span id="naming-variables"></span><h3>Benennung von Variablen<a class="headerlink" href="#benennung-von-variablen" title="Link to this heading"></a></h3>
+<p>Bezüglich der Namensgebung für Variablen sind einige Besonderheiten zu
+beachten: Jede Variable wird im Programm über einen weitgehend frei
+wählbaren Namen angesprochen. Dieser Name identifiziert die Variable
+eindeutig. Verschiedene Namen bezeichnen verschiedene Variablen. Durch
+ein vorangestelltes <code class="code docutils literal notranslate"><span class="pre">$</span></code>-Symbol können Variablennamen oder die Verwendung
+von Variablen eindeutig visuell identifiziert werden. Das Scriptsystem
+unterscheidet zwischen Groß- und Kleinschreibung: der Name <code class="code docutils literal notranslate"><span class="pre">$Var</span></code>
+benennt also ein andere Variable als der Name <code class="code docutils literal notranslate"><span class="pre">$var</span></code>.</p>
+<p>Für die Benennung von Variablen gelten außerdem folgende Vorgaben:</p>
+<ul class="simple">
+<li><p>Variablennamen müssen immer mit einem Dollarzeichen ($) beginnen und
+dürfen kein weiteres Dollarzeichen beinhalten.</p></li>
+<li><p>Variablennamen dürfen nur Buchstaben und Ziffern enthalten (a-Z,
+0-9).</p></li>
+<li><p>Sonderzeichen (z.B., $, &amp;, /, -, …) dürfen nicht verwendet werden.</p></li>
+<li><p>Variablennamen dürfen nicht mit einer Ziffer beginnen.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können den Inhalt von Variablen mit Hilfe
+der Show Message Funktion anzeigen lassen, um so z.B.
+die Ergebnisse von Berechnungen zu überprüfen.</p>
+</div>
+</section>
+<section id="sichtbarkeitsbereich-von-variablen-scope">
+<h3>Sichtbarkeitsbereich von Variablen (Scope)<a class="headerlink" href="#sichtbarkeitsbereich-von-variablen-scope" title="Link to this heading"></a></h3>
+<p>Unter dem Sichtbarkeitsbereich einer Variable versteht man den
+Programmabschnitt, in dem die Variable nutzbar und sichtbar ist. Die
+Qmix Scripte haben im Scripteditor eine baumartige Struktur mit beliebig
+vielen Ebenen. Eine Variable ist stets nur auf der Ebene sichtbar, auf
+der Sie erstellt wurde und auf allen tieferen Ebenen.</p>
+<p>Im folgenden Beispielprogramm ist die Variable <code class="code docutils literal notranslate"><span class="pre">$a</span></code> im rot markierten
+Bereich sichtbar – d.h. von Scriptfunktionen verwendbar (Abbildungen
+unten):</p>
+<img alt="../_images/10000201000001CB00000183136E0FD0BB1DB56C.png" src="../_images/10000201000001CB00000183136E0FD0BB1DB56C.png" />
+<p>Die Variable <code class="code docutils literal notranslate"><span class="pre">$b</span></code> dagegen ist nur in der Funktionssequenz
+(<em>FunctionSequence</em>) sichtbar (Abbildung unten).</p>
+<p>Der Zähler <code class="code docutils literal notranslate"><span class="pre">$i</span></code> der Zählschleife ist nur in den Funktionen sichtbar, die
+sich in der Zählschleife (<em>Counting Loop</em>) befinden:</p>
+<img alt="../_images/10000201000001CB000001831A3AF6CDB6960307.png" src="../_images/10000201000001CB000001831A3AF6CDB6960307.png" />
+<p>Die Variable <code class="code docutils literal notranslate"><span class="pre">$c</span></code>, die innerhalb der Zählschleife erstellt
+wird, ist auch nur auf dieser Ebene sichtbar, da keine weiteren
+untergeordneten Ebenen mehr vorhanden sind:</p>
+<img alt="../_images/10000201000001CB00000183CA6D8F113E4CEE33.png" src="../_images/10000201000001CB00000183CA6D8F113E4CEE33.png" />
+<p>Zu beachten ist außerdem, dass eine später (d.h., auf einer
+tieferen Ebene) definierte Variable eine früher (d.h., vorher, auf einer
+höheren Ebene) definierte Variable gleichen Namens überschreibt: wäre
+<code class="code docutils literal notranslate"><span class="pre">$c</span></code> z.B. wiederholt als <code class="code docutils literal notranslate"><span class="pre">$b</span></code> definiert worden, würde der später
+zugeordnete Wert (also 2) den vorhergehenden (also 1) überschreiben.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn Sie Variablen in tieferen Ebenen den
+gleichen Namen geben, wie Variablen in höheren Ebenen,
+dann überdecken die Variablen in der tieferen Ebene die
+Variablen der höheren Ebene. D.h., Funktionen in der
+tieferen Ebene können nicht mehr auf die Variable der
+höheren Ebene (bzw. deren Werte) zugreifen.</p>
+</div>
+</section>
+<section id="verwendung-von-variablen">
+<h3>Verwendung von Variablen<a class="headerlink" href="#verwendung-von-variablen" title="Link to this heading"></a></h3>
+<p>Variablen können in allen Funktionen, die diese unterstützen, verwendet
+werden (z.B. <em>Create Variable</em> Funktion). Über den Variablennamen
+inklusive Dollarzeichen (z.B. <em>$TargetPosition</em>) kann im Script auf eine
+Variable lesend oder schreibend zugegriffen werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Variablen haben erst einen gültigen Wert,
+wenn die Zuweisungsfunktion (z.B. Create Variable)
+durchlaufen wurde. Wenn Sie die Aktion <em>Run From Here</em>
+verwenden, kann es deshalb vorkommen, dass Variablen
+keine gültigen Werte enthalten, da Sie die
+Zuweisungsfunktion übersprungen haben.</p>
+</div>
+<p>Bei Funktionen, die die Verwendung von Variablen unterstützen, sind die
+entsprechenden Eingabefelder durch ein farbiges <span class="guilabel">V</span> markiert
+(siehe Abbildung unten). Sie können dann, alternativ zu einem Wert, den
+Bezeichner einer Variable eintragen, um deren Wert in Ihrem Script zu
+verwenden.</p>
+<img alt="Funktion mit Variablenunterstützung" src="../_images/100002010000020E000001041A67F3D4FCEC9662.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>In fast allen Eingabefeldern, welche die
+Verwendung von Variablen unterstützen können Sie auch
+direkt über Prozessdatenbezeichner auf
+Geräteprozessdaten zugreifen
+(siehe <a class="reference internal" href="#device-properties-prozessdaten">Device Properties (Prozessdaten)</a>).</p>
+</div>
+</section>
+<section id="autovervollstandigung-von-variablennamen">
+<h3>Autovervollständigung von Variablennamen<a class="headerlink" href="#autovervollstandigung-von-variablennamen" title="Link to this heading"></a></h3>
+<p>Eingabefelder, die die Verwendung von Variablen unterstützen, bieten
+eine <em>Autovervollständigung,</em> die Sie bei der Auswahl und Eingabe
+gültiger Variablennamen unterstützt.</p>
+<img alt="Autovervollständigung von Variablennamen" src="../_images/10000201000001C20000014FBE3E569F0981A6AD.png" />
+<p>Sobald Sie
+in diesen Eingabefeldern das Dollarzeichen ($) eingeben, um einen
+Variablennamen einzutragen, wird eine Liste der bereits erstellten
+Variablen eingeblendet (siehe Abbildung oben).</p>
+<p>Mit jedem weiteren Buchstaben den Sie dann eingeben, wird die Liste der
+Variablen erneut gefiltert und an den bisherigen Inhalt des Feldes
+angepasst. Mit den <kbd class="kbd docutils literal notranslate">↑</kbd>- oder <kbd class="kbd docutils literal notranslate">↓</kbd>-Tasten oder mit der Maus können
+Sie einen Eintrag aus der Liste wählen und mit der <kbd class="kbd docutils literal notranslate">Enter</kbd> Taste die
+Auswahl in das Eingabefeld übernehmen.</p>
+</section>
+</section>
+<section id="device-properties-prozessdaten">
+<span id="device-property-identifiers"></span><h2>Device Properties (Prozessdaten)<a class="headerlink" href="#device-properties-prozessdaten" title="Link to this heading"></a></h2>
+<p>In fast allen Eingabefeldern, welche die Verwendung von Variablen
+unterstützen (siehe <a class="reference internal" href="#verwendung-von-variablen">Verwendung von Variablen</a>),
+können Sie auf Prozessdaten (<em>Device Properties</em>) von Geräten auch
+direkt zugreifen. Klicken Sie dafür einfach mit der rechten Maustaste in
+das Eingabefeld und wählen Sie den Menüpunkt <em>Insert device property</em>
+(siehe Abbildung unten).</p>
+<img alt="Device Properties in Eingabefelder einfügen" src="../_images/10000201000001E3000000F91FE4E79FF2747393.png" />
+<p>Es wird nun ein Dialog zur Auswahl der Prozessdaten angezeigt (siehe Abbildung
+unten).</p>
+<img alt="Auswahldialog für Geräte-Prozessdaten" src="../_images/10000201000001C6000000F0B5F49C8D9D01ECE2.png" />
+<p>In diesem Dialog können Sie im Auswahlfeld <span class="guilabel">Filter</span> <span class="guinum">❶</span>, welchen Gerätetyp
+Sie verwenden möchten. Im Auswahlfeld <span class="guilabel">Device</span> <span class="guinum">❷</span> wählen Sie ein
+bestimmtes Gerät aus und die Prozessdaten auf die zugegriffen werden
+soll, wählen Sie im Feld <span class="guilabel">Property</span> <span class="guinum">❸</span>.</p>
+<img alt="Prozessdatenbezeichner in Eingabefeldern verwenden" src="../_images/10000000000001F4000000A145D5D5774F56F660.png" />
+<p>In das Eingabefeld wird nun der ausgewählte Prozessdatenbezeichner
+eingetragen. Ähnlich wie Variablen haben die Bezeichner für Prozessdaten
+einen bestimmte Form:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">$$Gerätename.Prozessdaten</span></code></p>
+<p>Jeder Bezeichner beginnt mit zwei Dollarzeichen und ein Punkt trennt den
+Gerätenamen von dem Bezeichner für die Prozessdaten. Der gesamte
+Prozessdatenbezeichner darf keine Leerzeichen oder andere Sonderzeichen
+enthalten.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Der Gerätename und auch die Bezeichnung
+der Prozessdaten haben eine normalisierte Form - alle
+Leerzeichen wurden entfernt und durch Unterstrich
+ersetzt. Der Gerätename ist der eindeutige Name des
+Gerätes und nicht die Bezeichnung, die der Anwender für
+jedes Gerät konfigurieren kann.</p>
+</div>
+<p>Sobald die Skriptfunktion ausgeführt wird, werden die Prozessdaten vom
+Gerät gelesen und an die Funktion als Parameter übergeben.</p>
+</section>
+<section id="eigene-scriptfunktionen-programmieren">
+<span id="programming-your-own-script-functions"></span><h2>Eigene Scriptfunktionen programmieren<a class="headerlink" href="#eigene-scriptfunktionen-programmieren" title="Link to this heading"></a></h2>
+<section id="scriptfunktion-erstellen">
+<h3>Scriptfunktion erstellen<a class="headerlink" href="#scriptfunktion-erstellen" title="Link to this heading"></a></h3>
+<p>Zusätzlich zu den Scriptfunktionen, die im Script-Pool zur Verfügung
+stehen, haben Sie die Möglichkeit, eigene Scriptfunktionen zu
+programmieren und diese dann später in Ihren Scripten zu verwenden. Um
+eine eigene Scriptfunktion zu implementieren, gehen Sie wie folgt vor:</p>
+<p><span class="step">Schritt 1 - Ein neues Script erstellen</span></p>
+<p>Klicken Sie auf die Schaltfläche <span class="guilabel">Create New Script</span> <span class="guinum">❶</span>
+um ein leeres Script zu erzeugen. Klicken Sie anschließend auf die Schaltfläche
+<span class="guilabel">Save Script</span> <span class="guinum">❷</span> um der Scriptfunktion einen Namen zu geben
+und sie dann mit
+diesem Namen zu speichern. Der Name der Scriptfunktion wird dann im Kopf
+des Scripteditors angezeigt <span class="guinum">❸</span>. In diesem Beispiel verwenden wir den
+Namen <em>AddValues</em>, da wir eine Funktion implementieren möchten, die zwei
+Werte addiert.</p>
+<img alt="../_images/10000201000001E300000081C08337AF408A77E5.png" src="../_images/10000201000001E300000081C08337AF408A77E5.png" />
+<p><span class="step">Schritt 2 - Funktionsparameter definieren</span></p>
+<p>Sie können für Ihre Funktion Funktionsparameter und Rückgabewerte
+definieren. Funktionsparameter sind Werte, die beim Aufruf der Funktion
+an diese übergeben werden. Rückgabewerte sind Werte (z.B. Ergebnisse von
+Berechnungen), die von der Funktion an das aufrufende Script
+zurückgegeben werden. Für jede Funktion können bis zu 10
+Funktionsparameter und bis zu 10 Rückgabewerte definiert werden.</p>
+<p>Um Parameter und Rückgabewerte zu definieren, klicken Sie mit der Maus
+auf eine freie Fläche im Scripteditor oder auf den Kopf des
+Scripteditors <span class="guinum">❶</span> (Abbildung unten), in dem der Name der Funktion
+angezeigt wird.</p>
+<img alt="../_images/100002010000025F000000F613C948DBF14299DF.png" src="../_images/100002010000025F000000F613C948DBF14299DF.png" />
+<p>Im Script-Pool sehen Sie nun das Konfigurationsfenster für
+das Script. Hier können Sie durch Anklicken der <span class="guilabel">Add</span> Schaltflächen
+Funktionsparameter <span class="guinum">❷</span> oder Rückgabewerte <span class="guinum">❸</span> hinzufügen.</p>
+<p>Klicken Sie für dieses Beispiel zweimal auf die <span class="guilabel">Add</span> Schaltfläche
+<span class="guinum">❷</span> um zwei Funktionsparameter hinzuzufügen. Klicken Sie dann auf den
+ersten Parameternamen (Abbildung unten) und vergeben Sie einen
+aussagekräftigeren Namen: <em>Summand1</em>:</p>
+<img alt="../_images/10000201000001AD000000BA59BF59476BCC908C.png" src="../_images/10000201000001AD000000BA59BF59476BCC908C.png" />
+<p>Tragen Sie dann für den Parameter den Default Wert 0 ein <span class="guinum">❷</span>.
+Klicken Sie nun auf den zweiten Parameternamen und benennen Sie diesen
+um in <em>Summand2.</em></p>
+<p><span class="step">Schritt 3 - Rückgabewerte definieren</span></p>
+<p>Klicken Sie jetzt einmal auf die <span class="guilabel">Add</span> Schaltfläche im Bereich <em>Return
+Values</em> <span class="guinum">❶</span> (Abbildung unten) um einen Rückgabewert hinzuzufügen. Klicken
+Sie dann auf den ersten Rückgabewert Namen und benennen Sie diesen um
+in: <em>Sum.</em></p>
+<img alt="../_images/10000201000001510000007CC6466F2943E0596A.png" src="../_images/10000201000001510000007CC6466F2943E0596A.png" />
+<p>Speichern Sie nun die Scriptfunktion, um Ihre Änderungen zu
+sichern. Der Konfigurationsbereich der Scriptfunktion sollte nun wie
+folgt aussehen:</p>
+<img alt="../_images/100002010000024C0000019005AB068207394D76.png" src="../_images/100002010000024C0000019005AB068207394D76.png" />
+<p><span class="step">Schritt 4 - Funktionslogik implementieren</span></p>
+<p>Alle Funktionsparameter und Rückgabewerte stehen innerhalb des Scriptes
+als Variablen zur Verfügung, die gelesen und geschrieben werden können.
+D.h. das Script kann die übergebenen Werte nun aus den beiden Variablen
+<code class="code docutils literal notranslate"><span class="pre">$Summand1</span></code> und <code class="code docutils literal notranslate"><span class="pre">$Summand2</span></code> lesen und das Ergebnis der Berechnung in der
+Variable <code class="code docutils literal notranslate"><span class="pre">$Sum</span></code> speichern und damit zurück an das aufrufende Script
+übergeben.</p>
+<p>Um nun die Addition durchzuführen, fügen Sie eine <em>Set Variable</em>
+Scriptfunktion in das Script ein und setzen den Type der Variable auf
+<em>JavaScript Expression</em>.</p>
+<img alt="../_images/1000020100000256000000F4FC5255AD8336787C.png" src="../_images/1000020100000256000000F4FC5255AD8336787C.png" />
+<p>Im Feld <span class="guilabel">Name</span> tragen Sie den Namen <span class="guinum">❶</span> (Abbildung unten)
+der Variable ein,
+die den Wert speichern soll – in diesem Fall also die Variable <code class="code docutils literal notranslate"><span class="pre">$Sum</span></code>.
+In das Eingabefeld für den JavaScript Code <span class="guinum">❷</span> können Sie nun die Addition
+der beiden Variablen <code class="code docutils literal notranslate"><span class="pre">$Summand1</span></code> und <code class="code docutils literal notranslate"><span class="pre">$Summand2</span></code> eintragen.</p>
+<img alt="../_images/10000201000001A60000010A9B2821B16D5BA0B3.png" src="../_images/10000201000001A60000010A9B2821B16D5BA0B3.png" />
+<p><span class="step">Schritt 5 - Geben Sie der Funktion einen aussagekräftigen Namen</span></p>
+<p>Klicken Sie in das Feld für den Funktionsnamen <span class="guinum">❶</span> und geben Sie der
+Funktion einen aussagekräftigen, eindeutigen, kurzen und beschreibenden Namen.
+Dieser Name wird später im Skript-Editor später als Funktionsname angezeigt.
+Hier verwenden wir den Namen <strong>Add Values</strong> (Werte hinzufügen) <span class="guinum">❷</span>:</p>
+<img alt="../_images/function_name.png" src="../_images/function_name.png" />
+<p><span class="step">Schritt 6 - Fügen Sie einen optionalen Kommentar hinzu</span></p>
+<p>Klicken Sie in das Feld <span class="guilabel">Comment</span> und fügen Sie einen optionalen
+Kommentar hinzu, der dem der dem Benutzer Ihrer Funktion hilft, ihre Parameter,
+ihren Rückgabewert und ihre Verwendung nachzuvollziehen:</p>
+<img alt="../_images/function_comment.png" src="../_images/function_comment.png" />
+<p><span class="step">Schritt 7 - Zuweisen eines optionalen benutzerdefinierten Symbols</span></p>
+<p>Wenn Sie Ihre Funktionen im Skript verwenden, wird das Standardsymbol das
+Symbol des <strong>Skript-Funktionsaufrufs</strong>:</p>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C10.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" src="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" width="60" /></a>
+<p>Wenn Sie Ihre Funktion mit einem benutzerdefinierten SVG-Symbol erweitern möchten,
+dann klicken Sie auf die Schaltfläche <span class="guilabel">Select Icon</span>.
+Die Software zeigt einen Symbolauswahldialog mit einer Bibliothek aller in der
+Software geladenen Icons. Sie können ein Symbol auswählen, indem Sie es doppelt
+anklicken <span class="guinum">❸</span>.</p>
+<img alt="../_images/icon_library.png" src="../_images/icon_library.png" />
+<p>Sie haben zwei Möglichkeiten, die Symbolbibliothek zu filtern. Die erste
+Möglichkeit ist, ein bestimmtes Plugin aus der Liste <span class="guinum">❶</span> auszuwählen,
+wenn Sie ausschließlich an Icons aus diesem Plugin interessiert sind. Die zweite
+Möglichkeit ist die Eingabe eines Filterausdrucks in das Filter-Textfeld
+<span class="guinum">❷</span> einzugeben. Sie können beide Filteroptionen kombinieren:</p>
+<img alt="../_images/filtered_icon_library.png" src="../_images/filtered_icon_library.png" />
+<p>Wenn Sie kein Symbol in der Bibliothek finden, können Sie ein benutzerdefiniertes
+SVG-Symbol laden, indem Sie auf die Schaltfläche <span class="guilabel">Load Custom SVG Icon</span>
+unterhalb der Symbolliste klicken. In diesem Beispiel verwenden wir diese Option,
+um ein benutzerdefiniertes Summensymbol auszuwählen. Sobald Sie das Icon ausgewählt
+haben, wird das Icon der Funktion im Skripteditor <span class="guinum">❶</span> und im
+Konfigurationspanel <span class="guinum">❷</span> aktualisiert:</p>
+<img alt="../_images/script_function_icons.png" src="../_images/script_function_icons.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn Sie das Standardsymbol wiederherstellen möchten, klicken Sie auf die
+Schaltfläche <span class="guilabel">Clear Icon</span> im Konfigurationsbereich der Skriptfunktion.</p>
+</div>
+<p><span class="step">Schritt 8 - Speichern der Funktion</span></p>
+<p>Wenn Sie alle Ihre Änderungen vorgenommen haben, sollten Sie die endgültige
+Funktion erneut speichern.</p>
+<p><span class="step">Schritt 9 – Die Funktion testen</span></p>
+<p>Jetzt können Sie die Scriptfunktion testen.
+Klicken Sie auf die <span class="guilabel">Run Script</span>-Schaltfläche
+<span class="guinum">❶</span> (Abbildung unten) – es sollte kein Fehler auftreten und das Ergebnis
+der Addition sollte im Scripteditor in der <em>Set Variable</em> Funktion angezeigt
+werden <span class="guinum">❷</span>.</p>
+<img alt="../_images/10000201000002670000013365D1FE2B80D7A609.png" src="../_images/10000201000002670000013365D1FE2B80D7A609.png" />
+<p>Falls Fehler auftreten, korrigieren Sie diese und speichern Sie die
+Scriptfunktion erneut.</p>
+</section>
+<section id="eigene-scriptfunktionen-verwenden">
+<h3>Eigene Scriptfunktionen verwenden<a class="headerlink" href="#eigene-scriptfunktionen-verwenden" title="Link to this heading"></a></h3>
+<p>Klicken Sie auf die Schaltfläche <span class="guilabel">Create New Script</span> <span class="guinum">❶</span> um
+ein leeres Script zu erzeugen. Klicken Sie anschließend auf die Schaltfläche
+<span class="guilabel">Save Script</span> <span class="guinum">❷</span> um der Scriptfunktion einen Namen zu geben
+und sie dann mit
+diesem Namen zu speichern. Der Name der Scriptfunktion wird dann im Kopf
+des Scripteditors angezeigt <span class="guinum">❸</span>. In diesem Beispiel verwenden wir den
+Namen <em>CustomScriptFunctionTest</em>.</p>
+<img alt="../_images/custom_script_function_test01.png" src="../_images/custom_script_function_test01.png" />
+<p>Fügen Sie als erste Funktion eine <em>Create Variable</em> Funktion zum Script
+hinzu und konfigurieren Sie die Funktion wie folgt.</p>
+<img alt="../_images/100002010000027000000121D5231907367C5044.png" src="../_images/100002010000027000000121D5231907367C5044.png" />
+<p>Fügen Sie nun als zweite Funktion einen <em>Script Function Call</em> aus der
+<em>Core Functions</em> Kategorie in das Script ein.</p>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C10.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" src="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" width="60" /></a>
+<p>Es öffnet sich ein Dateiauswahldialog, in dem Sie die externe
+Scriptfunktion auswählen können, die vom Script <span class="guinum">❶</span> aufgerufen werden soll.
+Wählen Sie hier die Beispielfunktion <code class="file docutils literal notranslate"><span class="pre">AddValues.qsc</span></code>, die wir im
+vorherigen Abschnitt erstellt haben. Die Funktion wird eingefügt. Der Skript-Editor
+<span class="guinum">❶</span> und das Konfigurationspanel <span class="guinum">❷</span> zeigen beide das
+benutzerdefinierte Symbol. Geben Sie für die
+Funktionsparameter <em>Summand1</em> und <em>Summand2</em> testweise zwei Werte ein,
+z.B. 4 und 3. Sie können in diesen Feldern auch Scriptvariablen
+verwenden. Tragen Sie im Rückgabeparameter <em>Sum</em> die Variable
+<code class="code docutils literal notranslate"><span class="pre">$Result</span></code> ein. D.h., der Rückgabewert von <em>Sum</em> wird in der Variablen
+<code class="code docutils literal notranslate"><span class="pre">$Result</span></code> gespeichert wird. Die Funktion sollte nun wie folgt
+konfiguriert sein:</p>
+<img alt="../_images/10000201000001D1000001A86EEBD1F62A2FEFFD.png" src="../_images/10000201000001D1000001A86EEBD1F62A2FEFFD.png" />
+<p>Fügen Sie als letzte Funktion nun eine <em>ShowMessage</em> Funktion hinzu, um
+den Wert der Variable <code class="code docutils literal notranslate"><span class="pre">$Result</span></code> auszugeben. Tragen Sie im Feld <span class="guilabel">Message</span>
+folgendes ein:</p>
+<img alt="../_images/10000201000001D300000094BED5B208580C66A3.png" src="../_images/10000201000001D300000094BED5B208580C66A3.png" />
+<p>Ihr Script sollte nun wie folgt aussehen:</p>
+<img alt="../_images/100002010000017D000000CE262C3B7A1191FE4E.png" src="../_images/100002010000017D000000CE262C3B7A1191FE4E.png" />
+<p>Führen Sie das Script jetzt aus. Die <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#nachricht-anzeigen"><span class="std std-ref">Show Message</span></a> Funktion sollte
+Ihnen nun das Ergebnis des Aufrufs von <code class="file docutils literal notranslate"><span class="pre">AddValues.qsc</span></code> in einem Fenster
+und im Ereignisprotokoll anzeigen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Durch die Verwendung von eigenen Scriptfunktionen können Sie Ihr Script
+strukturieren und in wiederverwendbare und gut wartbare
+Einzelkomponenten zerlegen.</p>
+</div>
+</section>
+<section id="skriptfunktion-bearbeiten">
+<h3>Skriptfunktion bearbeiten<a class="headerlink" href="#skriptfunktion-bearbeiten" title="Link to this heading"></a></h3>
+<p>Um eine Skriptfunktion später zu bearbeiten, müssen Sie sie nur im Skript-Editor
+öffnen. Sie können dies direkt im Skript-Editor tun, indem Sie mit der rechten
+Maustaste auf eine benutzerdefinierte Funktion klicken und den Kontextmenüeintrag
+<span class="menuselection">Edit Selected Function</span> wählen.</p>
+<img alt="../_images/script_editor_edit_script_functions.png" src="../_images/script_editor_edit_script_functions.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn Sie eine Skriptfunktion zur Bearbeitung öffnen, wird das aktuell geöffnete
+Skript im Skript-Editor durch das zu bearbeitende Skript ersetzt.</p>
+</div>
+</section>
+</section>
+<section id="skript-benutzerbibliothek">
+<h2>Skript-Benutzerbibliothek<a class="headerlink" href="#skript-benutzerbibliothek" title="Link to this heading"></a></h2>
+<p>Der <a class="reference internal" href="#script-pool">Script Pool</a> enthält eine anfänglich leere Kategorie <em>User Library</em> (Benutzerbibliothek).
+Diese Kategorie ermöglicht eine projektspezifische Gruppierung von benutzerdefinierten
+Skriptfunktionen in einer Art Benutzerbibliothek. Dies ermöglicht einen schnellen
+Zugriff auf häufig verwendete Funktionen und das schnelle Hinzufügen von
+benutzerspezifischen Funktionen in den Skript-Editor per Drag &amp; Drop.</p>
+<img alt="../_images/user_library.png" src="../_images/user_library.png" />
+<p>Die Kategorie <em>User Library</em> zeigt den Inhalt des Ordners <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code>
+innerhalb des aktuellen Projektordners <code class="file docutils literal notranslate"><span class="pre">Scripts</span></code>. Zum Durchsuchen des
+Inhalts dieses Ordners im Dateiexplorer zu durchsuchen, klicken Sie einfach mit
+der rechten Maustaste in die Kategorie <em>User Library</em> und
+wählen Sie den Menüpunkt <span class="menuselection">Browse User Library Folder</span>.</p>
+<img alt="../_images/browse_user_library_folder.png" src="../_images/browse_user_library_folder.png" />
+<p>Um Funktionen zur Kategorie <em>User Library</em> hinzuzufügen,
+müssen Sie sie einfach im Ordner <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> oder einem beliebigen
+Unterordner innerhalb des Ordners <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> speichern oder Sie
+verwenden Ihren Datei-Explorer, um die Funktionen in den Ordner <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code>
+zu kopieren. Wenn Sie neue Funktionen zur <em>User Library</em> hinzugefügt haben, müssen
+Sie die Benutzerbibliothek aktualisieren. Klicken Sie dazu mit der rechten
+Maustaste in die Kategorie <em>User Library</em> und wählen Sie den Menüpunkt
+<span class="menuselection">Refresh User Library</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Um neu hinzugefügte Funktionen in der <em>User Library</em> anzuzeigen, müssen Sie
+die die Bibliothek über den Kontextmenüpunkt <span class="menuselection">Refresh User Library</span>
+aktualisieren.</p>
+</div>
+<p>Die Kategorie <em>User Library</em> berücksichtigt auch Unterverzeichnisse im Ordner
+<code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code>. Das heißt, Unterverzeichnisse werden als Ordner in der
+Kategorie <em>User Library</em> angezeigt.</p>
+<img alt="../_images/user_library_folders.png" src="../_images/user_library_folders.png" />
+<p>Standardmäßig wird jeder Ordner mit einem Ordnersymbol <span class="guinum">❶</span> angezeigt,
+aber Sie können für jeden Ordner ein eigenes Symbol erstellen. Kopieren Sie einfach
+ein <code class="file docutils literal notranslate"><span class="pre">SVG</span></code>-Symbol mit demselben Namen in einen Ordner, um es als Ordnersymbol
+festzulegen. Im obigen Beispiel enthält die <em>User Library</em> den Ordner
+<code class="file docutils literal notranslate"><span class="pre">Robot</span> <span class="pre">Functions</span></code>. Dieser Ordner enthält die Datei
+<code class="file docutils literal notranslate"><span class="pre">Robot</span> <span class="pre">Functions.svg</span></code>. Wenn die Software ein SVG-Symbol in einem Ordner
+mit demselben Namen wie der Ordner erkennt, wird es als Ordnersymbol <span class="guinum">❷</span>
+im Script Pool festgelegt.</p>
+<p>Um eine Benutzerfunktion aus der <em>User Library</em> zur Bearbeitung im <a class="reference internal" href="#script-editor">Script Editor</a>
+zu öffnen, klicken Sie mit der rechten Maustaste auf die Funktion und wählen den
+Kontextmenüpunkt <span class="menuselection">Edit Selected Function</span>.</p>
+<img alt="../_images/script_pool_edit_function.png" src="../_images/script_pool_edit_function.png" />
+</section>
+<section id="script-autostart">
+<h2>Script Autostart<a class="headerlink" href="#script-autostart" title="Link to this heading"></a></h2>
+<p>Das Script-System kann so konfiguriert werden, dass nach dem
+erfolgreichen Verbinden zur Gerätehardware automatisch ein Script
+geladen und gestartet wird. Den Dialog mit den entsprechenden
+Einstellungen öffnen Sie über den Menüpunkt <span class="menuselection">Edit → Settings</span> im
+Hauptmenü der Anwendung.</p>
+<img alt="../_images/100002010000022600000126F6C3DD9DEA793D3B.png" src="../_images/100002010000022600000126F6C3DD9DEA793D3B.png" />
+<p>Im Settings-Dialog der
+Anwendung können Sie nun den Script-Autostart konfigurieren. Wählen Sie
+dafür zuerst die Settings Kategorie <em>Scripting</em> <span class="guinum">❶</span> aus. Nun können Sie
+im rechten Bereich den Script-Autostart aktivieren <span class="guinum">❷</span>. Über das
+Eingabefeld <span class="guilabel">Autostart Scriptfile</span> <span class="guinum">❸</span> können Sie das Scriptfile
+auswählen, welches geladen und ausgeführt werden soll. Ist dieses Feld
+leer, wird das Script ausgeführt, welches beim Start der Anwendung
+geladen wird, d.h. das Script, welches beim letzten Schließen der
+Anwendung im Scripteditor geöffnet war. Schließen Sie die Konfiguration
+durch Klicken auf <span class="guilabel">OK</span> <span class="guinum">❹</span> ab.</p>
+<p>Wenn Sie möchten, dass nach dem Hochfahren Ihres Rechners
+vollautomatisch die Software gestartet und ein Script ausgeführt wird,
+dann gehen Sie wie folgt vor:</p>
+<ol class="arabic simple steps">
+<li><p>Tragen Sie <strong>QmixElements.exe</strong> in den <em>Windows Autostart</em> ein, um die
+Software nach dem Hochfahren des Rechners automatisch zu starten.</p></li>
+<li><p>Öffnen Sie den Dialog mit den globalen Einstellungen über das
+Hauptmenü der Anwendung (<span class="menuselection">Edit → Settings</span>).</p></li>
+<li><p>Wählen Sie die Einstellungskategorie <em>General</em> und aktivieren Sie die
+Option <span class="menuselection">Auto connect</span>. Das bewirkt, dass sich die Software
+nach dem Start automatisch zu den angeschlossenen Geräten verbindet.</p></li>
+<li><p>Wählen Sie dann die Einstellungskategorie Scripting um den Script
+Autostart zu konfigurieren.</p></li>
+</ol>
+</section>
+<section id="script-fehlerbehandlung">
+<h2>Script Fehlerbehandlung<a class="headerlink" href="#script-fehlerbehandlung" title="Link to this heading"></a></h2>
+<p>Ganz gleich, wie gut wir programmieren, manchmal sind unsere Skripte fehlerhaft.
+Sie können durch unsere Fehler, eine unerwartete Benutzereingabe, wenn Parameter
+außerhalb des Wertebereichs liegen, durch Fehler bei der Kommunikation mit Geräten
+oder aus tausend anderen Gründen auftreten.</p>
+<p>Tritt im Script ein Fehler auf, sieht die Standard-Reaktion wie folgt aus.</p>
+<ul class="simple">
+<li><p>die Scriptausführung wird unterbrochen <span class="guinum">❶</span></p></li>
+<li><p>das Script stoppt an der Funktion, die den Fehler verursacht hat <span class="guinum">❷</span></p></li>
+<li><p>im <em>Event Log</em> wird eine Fehlermeldung ausgegeben und die Warnung, dass die
+Scriptausführung unterbrochen wurde <span class="guinum">❸</span></p></li>
+<li><p>da das Script unterbrochen ist, werden auch parallele Sequenzen nicht weiter ausgeführt</p></li>
+<li><p>das Script lässt sich nur noch durch Anklicken der Start-Schaltfläche fortführen <span class="guinum">❹</span></p></li>
+</ul>
+<img alt="../_images/default_error_handling.png" src="../_images/default_error_handling.png" />
+<p>Dies Art der Fehlerbehandlung kann z.B. bei der automatischen Steuerung über die I/Os
+einer SPS oder auch aus den Anforderungen eines Prozesses heraus nicht erwünscht
+sein - z.B. wenn parallele Sequenzen weiterlaufen sollen, eine SPS die
+Möglichkeit haben soll auf Fehler zu reagieren oder Fehler zurückzusetzen oder
+wenn ein manuelles Eingreifen durch den Anwender nicht möglich ist.</p>
+<a class="reference internal image-reference" href="../_images/try_except.svg"><img alt="../_images/try_except.svg" class="align-left" src="../_images/try_except.svg" width="60" /></a>
+<p>Dafür gibt es die <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#try-catch"><span class="std std-ref">Try…Catch</span></a> Funktion, mit der wir Fehler
+„abfangen“ können, so dass das Skript, statt zu stoppen, etwas Sinnvolleres tun
+kann wie z.B. den Fehler zu behandeln. Wird ein Fehler in einem
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#try-catch"><span class="std std-ref">Try…Catch</span></a> Block gefangen, so ist nur die Funktionssequenz betroffen,
+in der der Fehler aufgetreten ist - das Script läuft weiter und parallele Sequenzen
+werden weiterhin ausgeführt.</p>
+<p>Alle Details zur Fehlerbehandlung mittels Try…Catch finden Sie in der
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#try-catch"><span class="std std-ref">Dokumentation zum Try…Catch</span></a> Block.</p>
+</section>
+<section id="scripte-debuggen">
+<h2>Scripte Debuggen<a class="headerlink" href="#scripte-debuggen" title="Link to this heading"></a></h2>
+<p>Wenn Sie ein Scriptprogramm entwickeln, gibt es verschiedene Möglichkeiten,
+Fehler zu suchen und zu debuggen. In den folgenden Abschnitten stellen wir
+einige Features vor, die Ihnen beim Debuggen von Scripten helfen.</p>
+<section id="einzelschrittbetrieb">
+<h3>Einzelschrittbetrieb<a class="headerlink" href="#einzelschrittbetrieb" title="Link to this heading"></a></h3>
+<p>Mit dem Einzelschrittbetrieb haben Sie mehr Kontrolle über die einzelnen
+Aktionen ihres Scripts. Ist der Einzelschrittbetrieb aktiv wird die
+Scriptausführung nach der Ausführung jeder Scriptfunktion unterbrochen.
+Um den Einzelschrittbetrieb zu verwenden, gehen Sie wie folgt vor:</p>
+<ol class="arabic steps inlineimg">
+<li><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a> Aktivieren Sie den Einzelschrittbetrieb durch Drücken der
+<em>Enable / Disable Single Stepping</em> Schaltfläche</p>
+<img alt="../_images/single_stepping_buttons.png" src="../_images/single_stepping_buttons.png" />
+</li>
+<li><p><a class="reference internal" href="../_images/single_step2.svg"><img alt="execstep" src="../_images/single_step2.svg" width="40" /></a> Verwenden Sie die <em>Execute Single Step</em> Schaltfläche um die Ausführung
+des nächsten Schrittes zu triggern. Drücken Sie dieses Schaltfläche so oft
+Sie weitere Einzelschritte ausführen wollen.</p></li>
+<li><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a> Deaktivieren Sie den Einzelschrittbetrieb durch erneutes Drücken
+der <em>Enable / Disable Single Stepping</em> Schaltfläche</p></li>
+<li><p><a class="reference internal" href="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg"><img alt="runscript" src="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg" width="40" /></a> Setzen Sie die normale Scriptausführung durch Drücken der
+<em>Run Script</em> Schaltfläche fort.</p></li>
+</ol>
+<p class="inlineimg">So können Sie Schritt für Schritt durch Ihre Programm gehen und den Ablauf in
+Ruhe beobachten. Sie können den Einzelschrittbetrieb jederzeit aktivieren oder
+deaktivieren - auch während ihr Programm bereits läuft.</p>
+</section>
+<section id="debug-modus-aktivieren-deaktivieren">
+<span id="debug-mode"></span><h3>Debug Modus aktivieren / deaktivieren<a class="headerlink" href="#debug-modus-aktivieren-deaktivieren" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/debug.svg"><img alt="../_images/debug.svg" class="align-left" src="../_images/debug.svg" width="60" /></a>
+<p>Über das <a class="reference internal" href="#scripteditor-kontextmenu"><span class="std std-ref">Kontextmenu des Script-Editors</span></a>
+können den Debug-Modus aktivieren und deaktivieren. Das setzt den Wert der
+globalen Script-Variable <code class="code docutils literal notranslate"><span class="pre">$DebugMode</span></code> auf <code class="code docutils literal notranslate"><span class="pre">true</span></code> oder <code class="code docutils literal notranslate"><span class="pre">false</span></code>.
+D.h. Sie können dann abhängig von dieser Variable im Script Code ausführen
+oder zusätzliche Debug-Nachrichten ausgeben. So können Sie z.B. mit der
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#log-message-function"><span class="std std-ref">Log Message</span></a> Funktion Nachrichten loggen,
+die nur ausgegeben werden, wenn der Debug-Modus aktiv ist.</p>
+</section>
+<section id="haltepunkte-einfugen">
+<h3>Haltepunkte einfügen<a class="headerlink" href="#haltepunkte-einfugen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_script.svg"><img alt="../_images/interrupt_script.svg" class="align-left" src="../_images/interrupt_script.svg" width="60" /></a>
+<p>Sie können Ihr Script an bestimmten Stellen unterbrechen, indem Sie eine
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#interrupt-script"><span class="std std-ref">Interrupt Script</span></a> Funktion einfügen. So können Sie
+gezielt an bestimmten Punkten den Programmablauf unterbrechen, um den Zustand
+von Variablen zu untersuchen. Wenn sie die Haltefunktion in eine
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a> einfügen, können Sie das Programm
+unterbrechen, wenn bestimmte Ereignisse eintreten oder Variablen bestimmte
+Werte haben.</p>
+<p>Im folgenden Beispiel wird der Programmablauf unterbrochen, wenn der Wert der
+Variable <code class="code docutils literal notranslate"><span class="pre">EmployeeName</span></code> den Wert <code class="code docutils literal notranslate"><span class="pre">John</span></code> hat.</p>
+<img alt="../_images/conditional_interrupt.png" src="../_images/conditional_interrupt.png" />
+<a class="reference internal image-reference" href="../_images/interrupt_sequence3.svg"><img alt="../_images/interrupt_sequence3.svg" class="align-left" src="../_images/interrupt_sequence3.svg" width="60" /></a>
+<p>Wenn Sie den nicht das komplette Script unterbrechen möchten, z.B. weil parallele
+Sequenzen weiterlaufen sollen, dann können Sie alternativ die
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#interrupt-sequence"><span class="std std-ref">Interrupt Sequence</span></a> Funktion verwenden.
+Diese unterbricht lediglich die Funktionssequenz, in der sie enthalten
+ist, so dass parallele Sequenzen weiterlaufen können.</p>
+</section>
+<section id="debugnachrichten-ausgeben">
+<h3>Debugnachrichten ausgeben<a class="headerlink" href="#debugnachrichten-ausgeben" title="Link to this heading"></a></h3>
+<p>Durch den Einzelschrittbetrieb oder das Einfügen von Haltepunkten wird das
+Laufzeitverhalten des Programms verändert. D.h. der Ablauf wird verlangsamt oder
+unterbrochen. Das Ausgeben von Debugnachrichten ist eine Möglichkeit, den
+Programmablauf, den Wert von Variablen oder den Wert von Geräteeigenschaften
+durch die Ausgabe von Nachrichten im Event-Log zu visualisieren, ohne das
+Laufzeitverhalten stark zu verändern.</p>
+<p>Um eine Debugnachricht auszugeben, müssen Sie lediglich eine
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#log-message-function"><span class="std std-ref">Log Message</span></a>
+Funktion an der Stelle im Programm einfügen, an der Sie eine Nachricht
+in das Event-Log schreiben möchten.</p>
+<p>In der folgenden Abbildung wird z.B. der Wert der Variablen <code class="code docutils literal notranslate"><span class="pre">$Flow1</span></code> in jedem
+Schleifendurchlauf im Event-Log ausgegeben <span class="guinum">❶</span>. Da der <span class="guilabel">Message Type</span>
+hier auf <span class="guilabel">Debug / Trace</span> <span class="guinum">❷</span> eingestellt wurde, werden die Nachrichten
+nur ausgegeben, wenn der <a class="reference internal" href="#debug-mode"><span class="std std-ref">Debug Modus</span></a> aktiv ist.</p>
+<img alt="../_images/debug_show_message.png" src="../_images/debug_show_message.png" />
+<p>Im Event-Log wird dann jede aufgezeichnete Nachricht mit einem Zeitstempel
+angezeigt. Dadurch können Sie die ausgegebenen Werte im zeitlichen Kontext
+analysieren:</p>
+<img alt="../_images/debug_event_log.png" src="../_images/debug_event_log.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<a class="reference internal image-reference" href="../_images/goto_script_function21.svg"><img alt="../_images/goto_script_function21.svg" class="align-left" src="../_images/goto_script_function21.svg" width="60" /></a>
+<p>Wenn Sie im <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#ereignisprotokoll"><span class="std std-ref">Event-Log</span></a> doppelt auf einen Log-Eintrag klicken, wird im
+<a class="reference internal" href="#script-editor"><span class="std std-ref">Script Editor</span></a> die Funktion geöffnet und farblich hervorgehoben, die den
+Log-Eintrag verursacht hat. So können Sie im Fehlerfall schnell zu der
+Funktion springen, die einen Fehler ausgelöst hat. Alternativ können
+Sie auch den Menüpunkt <span class="menuselection">Got to Script Function</span> im
+Kontextmenü des <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#ereignisprotokoll"><span class="std std-ref">Event-Log</span></a> verwenden (rechte Maustaste).</p>
+</div>
+</section>
+<section id="id3">
+<h3>Funktionen deaktivieren<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/enable_disable_functions2.svg"><img alt="../_images/enable_disable_functions2.svg" class="align-left" src="../_images/enable_disable_functions2.svg" width="60" /></a>
+<p>Um bestimmte Programmabschnitte isoliert zu testen, um die Ausführung von
+Funktionen während des Debuggings zu blockieren oder um alternative
+Implementierungen zu testen, kann es erforderlich sein, Funktionen zeitweise
+zu deaktivieren. Deaktivierte Funktionen werden bei der Programmausführung
+übersprungen. Dies entspricht der Funktionalität des Auskommentierens von
+Quelltext in textbasierten Programmiersprachen.</p>
+<p>Details zum Deaktivieren von Funktionen finden Sie im Abschnitt
+<a class="reference internal" href="#funktionen-deaktivieren"><span class="std std-ref">Funktionen aktivieren / deaktivieren</span></a>.</p>
+</section>
+<section id="variablenwerte-anzeigen">
+<h3>Variablenwerte anzeigen<a class="headerlink" href="#variablenwerte-anzeigen" title="Link to this heading"></a></h3>
+<p>Um den aktuellen Wert einer Script-Variable anzuzeigen, bewegen Sie den
+den Mauszeiger einfach über eine <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#create-variable"><span class="std std-ref">Create Variable</span></a>
+oder <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#set-variable"><span class="std std-ref">Set Variable</span></a> Funktion, in der auf diese Variable
+zugegriffen wird. Ihnen wird dann bei <span class="guilabel">Current Value</span> der aktuelle
+Wert der Variable angezeigt.</p>
+<img alt="../_images/debug_variable_value.png" src="../_images/debug_variable_value.png" />
+<p>Im Beispiel oben sehen Sie ein Script, in dem von drei verschiedenen Funktionen
+der Wert der Variable <code class="code docutils literal notranslate"><span class="pre">$Test</span></code> geändert wird. Nach der
+Ausführung des Scriptes wird der Mauszeiger hier über die <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#create-variable"><span class="std std-ref">Create Variable</span></a>
+Funktion bewegt. Obwohl in der Funktion der Wert 0 zugewiesen wird, sehen Sie
+im Hinweisfenster den aktuellen Wert 2, da bereits die beiden
+folgenden <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#set-variable"><span class="std std-ref">Set Variable</span></a> Funktionen ausgeführt wurden.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

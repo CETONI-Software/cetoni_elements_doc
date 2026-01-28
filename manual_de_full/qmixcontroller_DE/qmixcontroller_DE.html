@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controller Plugin &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">23. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Controller Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="controller-plugin">
+<h1>Controller Plugin<a class="headerlink" href="#controller-plugin" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Das Controller Plugin dient zur Erzeugung benutzerdefinierter Regelkreise.</p>
+</section>
+<section id="liste-der-regelkanale">
+<h2>Liste der Regelkanäle<a class="headerlink" href="#liste-der-regelkanale" title="Link to this heading"></a></h2>
+<p>Alle Qmix Regelkanäle werden in der Liste der Regelkanäle (<span class="guilabel">Controller Channels</span>)
+angezeigt.</p>
+<img alt="Liste der Reglerkanäle" src="../_images/10000000000001D5000000F75FCDB73E.png" />
+<p>Die unterschiedlichen Kanaltypen (Kühlmodul Q-, Heizmodul Q+ …) können Sie
+an den unterschiedlichen Symbolen vor dem Kanalnamen unterscheiden
+(siehe Abbildung oben). Die Liste der Regelkanäle ist ein
+<a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">View</span></a>, den Sie durch Anklicken und Ziehen der Titelleiste
+jederzeit an eine andere Position in der grafischen Oberfläche
+verschieben oder aus der Oberfläche als separates Fenster herauslösen
+können.</p>
+<p>Die Kanalliste zeigt ihnen alle verfügbaren Regelkanäle in
+Tabellenform an. Folgende Spalten sind vorhanden:</p>
+<ul class="simple">
+<li><p><strong>Controller</strong> - zeigt den Namen des Regelkanals und den Typ durch ein
+Symbol an.</p></li>
+<li><p><strong>On</strong> - zeigt durch eine grüne LED ob die Regelung ein- oder
+ausgeschaltet ist. Klicken Sie die LED an, um die Regelung ein- oder
+auszuschalten.</p></li>
+<li><p><strong>Setpoint</strong> - enthält den eingestellten Sollwert des Reglers</p></li>
+<li><p><strong>Actual Value</strong> - zeigt den aktuellen Ist-wert</p></li>
+</ul>
+<section id="kanaltypen">
+<h3>Kanaltypen<a class="headerlink" href="#kanaltypen" title="Link to this heading"></a></h3>
+<p>Die folgenden Kanaltypen werden im Moment unterstützt:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004AA90000387200003872C4D36C50.svg"><img alt="image1" src="../_images/10004AA90000387200003872C4D36C50.svg" width="40" /></a></p></td>
+<td><p><em>Schneeflockensymbol</em> - Qmix Q- Kühlmodule</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100051AC0000387200003872CA0648E8.svg"><img alt="image2" src="../_images/100051AC0000387200003872CA0648E8.svg" width="40" /></a></p></td>
+<td><p><em>Thermometersymbol</em> - Qmix Q+ Heizmodule und Qmix TC Module</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100046F500003872000038724548056A.svg"><img alt="image3" src="../_images/100046F500003872000038724548056A.svg" width="40" /></a></p></td>
+<td><p><em>Symbol Reglerkurve</em> – dynamisch erzeugte, benutzerdefinierte Kanäle</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kanalnamen-andern">
+<h3>Kanalnamen ändern<a class="headerlink" href="#kanalnamen-andern" title="Link to this heading"></a></h3>
+<p>Sie können den Namen eines Kanals jederzeit ändern und z.B. einen Namen
+vergeben, der zu Ihrer speziellen Anwendung passt.</p>
+<img alt="Kanalname ändern" src="../_images/10000000000001D5000000F7561B0C23.png" />
+<p>Ändern Sie den Namen mit folgenden Schritten:</p>
+<ol class="arabic simple steps">
+<li><p>Klicken Sie doppelt in die Tabellenzelle mit den Namen den Sie ändern
+möchten.</p></li>
+<li><p>Geben Sie den neuen Namen in das Editierfenster ein, welches nun
+eingeblendet wird (siehe Abbildung oben)</p></li>
+<li><p>Beenden Sie Ihre Eingabe durch Drücken der <kbd class="kbd docutils literal notranslate">Return</kbd>-Taste.</p></li>
+</ol>
+</section>
+<section id="regelung-ein-ausschalten">
+<h3>Regelung ein- / ausschalten<a class="headerlink" href="#regelung-ein-ausschalten" title="Link to this heading"></a></h3>
+<img alt="Regelung ein- / ausschalten" src="../_images/10000000000001D5000000D144CCA89A.png" />
+<p>Zum Ein- und Ausschalten der Regelung klicken Sie einfach auf die LED
+des Kanals, den Sie umschalten möchten.</p>
+</section>
+<section id="sollwert-eingeben">
+<h3>Sollwert eingeben<a class="headerlink" href="#sollwert-eingeben" title="Link to this heading"></a></h3>
+<p>Klicken Sie zur Eingabe des Sollwertes doppelt in die <span class="guilabel">Setpoint</span>-Spalte
+des Kanals dessen Sollwert Sie ändern möchten. Geben Sie nun in das
+Editierfenster das angezeigt wird (siehe Abbildung unten) den Sollwert
+ein, oder verwenden Sie die Pfeil- Schaltflächen um den Sollwert
+schrittweise zu verringern oder zu erhöhen.</p>
+<img alt="Sollwert ändern" src="../_images/10000000000001D5000000F728D7F291.png" />
+</section>
+</section>
+<section id="kontextmenu-fur-reglerkanale">
+<h2>Kontextmenü für Reglerkanäle<a class="headerlink" href="#kontextmenu-fur-reglerkanale" title="Link to this heading"></a></h2>
+<p>Durch Rechtsklick in die Liste der Reglerkanäle können Sie ein
+Kontextmenü mit zusätzlichen Funktionen einblenden:</p>
+<img alt="Kontextmenü aufrufen" src="../_images/100002010000022300000129ACB2B97D.png" />
+<p>Das Kontextmenü enthält die folgenden Menüpunkte:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000BB30000388E0000388E998532D4.svg"><img alt="image18" src="../_images/10000BB30000388E0000388E998532D4.svg" width="40" /></a></p></td>
+<td><p><strong>Configure Channel…</strong></p>
+<p>Öffnet den Konfigurationsdialog des Kanals zur
+Konfiguration aller Kanalparameter.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000046A0000388E0000388EB24BAE1A.svg"><img alt="image19" src="../_images/1000046A0000388E0000388EB24BAE1A.svg" width="40" /></a></p></td>
+<td><p><strong>Restore Default Settings</strong></p>
+<p>Stellt die Standardeinstellungen des Kanals wieder her.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100002C10000388E0000388E08119BA0.svg"><img alt="image20" src="../_images/100002C10000388E0000388E08119BA0.svg" width="40" /></a></p></td>
+<td><p><strong>Reset Calibration</strong></p>
+<p>Setzt die Zweipunktskalierung zurück auf den
+Skalierungsfaktor 1 und den Offset 0</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100010A40000388E0000388EA92DC2A7.svg"><img alt="image21" src="../_images/100010A40000388E0000388EA92DC2A7.svg" width="40" /></a></p></td>
+<td><p><strong>Configure scaling…</strong></p>
+<p>Öffnet den Konfigurationsdialog mit der Seite zur
+Konfiguration der Reglerskalierung.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000AC700003872000038724DFCC517.svg"><img alt="image22" src="../_images/10000AC700003872000038724DFCC517.svg" width="40" /></a></p></td>
+<td><p><strong>Select PID parameters…</strong></p>
+<p>Öffnet den Konfigurationsdialog mit der Seite zur
+Auswahl und Erstellung von PID-Parametersätzen.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100015FC00003872000038727653FE88.svg"><img alt="image23" src="../_images/100015FC00003872000038727653FE88.svg" width="40" /></a></p></td>
+<td><p><strong>Delete user channel</strong></p>
+<p>Wenn der ausgewählte Kanal ein benutzerdefinierter
+Kanal ist, wird dieser durch Anklicken dieses
+Menüpunktes gelöscht. Für andere Reglerkanäle ist
+dieser Menüpunkt ausgegraut.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100015DE0000387200003872946736F7.svg"><img alt="image24" src="../_images/100015DE0000387200003872946736F7.svg" width="40" /></a></p></td>
+<td><p><strong>Create user channel</strong></p>
+<p>Öffnet den Wizard zur Erstellung eines neuen
+benutzerdefinierten Reglerkanals.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kanaleinstellungen-konfigurieren">
+<h2>Kanaleinstellungen konfigurieren<a class="headerlink" href="#kanaleinstellungen-konfigurieren" title="Link to this heading"></a></h2>
+<p>Um den Konfigurationsdialog (siehe Abbildung unten) zur Einstellung der
+Skalierung zu öffnen, wählen Sie im
+<a class="reference internal" href="#kontextmenu-fur-reglerkanale">Kontextmenü für Reglerkanäle</a> den Menüpunkt
+<span class="menuselection">Configure channel</span>.</p>
+<img alt="Konfiguration Skalierung" src="../_images/100002010000034C000001C3C2B07A89.png" />
+<p>Die Konfiguration der
+allgemeinen Kanaleinstellungen sowie die Kalibrierung der Reglerkanäle
+sind identisch mit der Konfiguration der <a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html#i-o-plugin"><span class="std std-ref">I/O Plugin</span></a>-Kanäle.
+Lesen Sie für eine detaillierte Beschreibung der Konfiguration
+den Abschnitt <a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html#i-o-kanal-konfiguration"><span class="std std-ref">I/O Kanal Konfiguration</span></a>.</p>
+</section>
+<section id="auswahl-und-konfiguration-von-reglerparametern">
+<h2>Auswahl und Konfiguration von Reglerparametern<a class="headerlink" href="#auswahl-und-konfiguration-von-reglerparametern" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Um das Regelverhalten der einzelnen Reglerkanäle optimal an Ihre
+Anwendung anzupassen, können Sie für jeden einzelnen Kanal die
+Regelparameter individuell anpassen. Dafür können Sie entweder aus einer
+Liste von vordefinierten PID Parametersätzen wählen, oder neue
+Parametersätze erstellen.</p>
+<p>Um zur Reglerparameterauswahl zu gelangen, wählen Sie im
+<a class="reference internal" href="#kontextmenu-fur-reglerkanale">Kontextmenü für Reglerkanäle</a> den Menüpunkt <span class="menuselection">Select PID parameters</span>.</p>
+<img alt="Auswahl eines Reglerparametersets" src="../_images/100002010000034C000002287E739DAD.png" />
+<p>Im oberen Bereich
+sehen Sie die aktuellen Parameter des Gerätes <span class="guinum">❶</span> (<span class="guilabel">Current Channel Parameters</span>).
+Im unteren Bereich finden Sie eine Liste mit <span class="guilabel">PID Parameter Presets</span> <span class="guinum">❷</span>.</p>
+</section>
+<section id="reglerparameter-andern">
+<h3>Reglerparameter ändern<a class="headerlink" href="#reglerparameter-andern" title="Link to this heading"></a></h3>
+<p>Um die aktuellen Reglerparameter zu editieren, klicken Sie mit der Maus
+im Bereich <span class="guilabel">Current Channel Parameters</span> doppelt in das Feld welches Sie
+ändern möchten und geben den neuen Wert ein:</p>
+<img alt="Regelparameter ändern" src="../_images/100002010000025A0000008921C42A7E.png" />
+</section>
+<section id="pid-parameter-preset-auswahlen">
+<h3>PID Parameter Preset auswählen<a class="headerlink" href="#pid-parameter-preset-auswahlen" title="Link to this heading"></a></h3>
+<img alt="PID Parameter Preset auswählen" src="../_images/100002010000034C00000228CAC67298.png" />
+<p>Wählen Sie aus der
+Tabelle der vorhanden Parametersätze einen Parametersatz durch Anklicken
+mit der linken Maustaste aus <span class="guinum">❶</span> und klicken Sie anschließend auf die
+Schaltfläche <span class="guilabel">Apply Preset</span> <span class="guinum">❷</span> um die Regelparameter zu übernehmen.
+Die Werte im Bereich <span class="guilabel">Current Channel Parameters</span> <span class="guinum">❸</span> werden mit den neuen
+Werten aus dem Preset aktualisiert. Schließen die Konfiguration durch
+Anklicken der Schaltfläche <span class="guilabel">Ok</span> <span class="guinum">❹</span> ab.</p>
+<p>Die PID Parameter Presets enthalten bereits vordefinierte
+Standard-Reglerparameter für verschiedene Qmix Geräte (z.B. Qmix Q+,
+Qmix Q- oder Qmix TC) oder bestimmtes Zubehör (z.B. Spritzenheizung oder
+Schlauchheizung).</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Zur optimalen Anpassung an die Regelstrecken
+in Ihrer Anwendung können Sie eigene Parametersätze mit
+Reglerparametern erstellen.</p>
+</div>
+</section>
+<section id="pid-parameter-preset-erstellen">
+<h3>PID Parameter Preset erstellen<a class="headerlink" href="#pid-parameter-preset-erstellen" title="Link to this heading"></a></h3>
+<p>Durch Anklicken der Schaltfläche <span class="guilabel">Create Preset</span> <span class="guinum">❶</span> erzeugen sie einen
+neuen Satz von Reglerparametern <span class="guinum">❷</span>. (siehe Abbildung unten) Anschließend
+können Sie die einzelnen Werte des Parametersets editieren indem Sie
+doppelt in ein Feld klicken <span class="guinum">❸</span> und einen neuen Wert eingeben.</p>
+<img alt="Erstellen eines PID-Parametersatzes" src="../_images/1000020100000335000000F62671DF1C.png" />
+<p>Vergeben Sie für
+jeden Parametersatz einen aussagekräftigen, eindeutigen Namen und passen
+Sie die Reglerparameter an die Regelstrecke in Ihrer Anwendung an. Um
+geeignete Parameter für einen Regelkreis zu finden, gehen Sie wie im
+Abschnitt <a class="reference internal" href="#vorgehensweise-fur-die-einstellung-von-reglerparametern">Vorgehensweise für die Einstellung von Reglerparametern</a>
+beschrieben vor.</p>
+</section>
+<section id="loschen-von-pid-parameter-presets">
+<h3>Löschen von PID Parameter Presets<a class="headerlink" href="#loschen-von-pid-parameter-presets" title="Link to this heading"></a></h3>
+<p>Sie löschen einen Reglerparametersatz, indem sie ihn durch Anklicken mit
+der linken Maustaste auswählen <span class="guinum">❶</span> und anschließend die Schaltfläche
+<span class="guilabel">Delete Selected Preset</span> <span class="guinum">❷</span> klicken.</p>
+<img alt="Löschen eines Reglerparametersets" src="../_images/1000020100000333000000D15C7BAB96.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Vordefinierte Standard-Reglerparameter
+sind gesperrt und können nicht gelöscht werden.
+Gesperrte Parameter erkennen Sie in der Tabelle an dem
+gelben Schloss.</p>
+</div>
+</section>
+</section>
+<section id="benutzerdefinierte-reglerkanale">
+<h2>Benutzerdefinierte Reglerkanäle<a class="headerlink" href="#benutzerdefinierte-reglerkanale" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Einführung<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Sie können benutzerdefinierte Reglerkanäle erzeugen, bei denen Sie
+beliebige Geräteeigenschaften (Device Properties) als Ein- und
+Ausgangsgrößen für die Regelschleife verwenden können. Damit wird es
+z.B. möglich mit Hilfe eines Druckmesskanals eines <em>Qmix p</em>-Gerätes und
+einer <em>Nemesys Spritzenpumpe</em> eine Druckregelung aufzubauen oder eine
+druckgesteuerte Dosierung zu realisieren.</p>
+</section>
+<section id="erstellen-von-reglerkanalen">
+<h3>Erstellen von Reglerkanälen<a class="headerlink" href="#erstellen-von-reglerkanalen" title="Link to this heading"></a></h3>
+<p>Sie öffnen den Dialog zum Erzeugen von Reglerkanälen durch Rechtsklick
+in die Reglerkanalliste und Auswahl der Menüpunktes <span class="menuselection">Create user channel</span>
+im Kontextmenü.</p>
+<img alt="Dialog für das Erstellen eines Reglerkanals aufrufen" src="../_images/100002010000022300000129BD54D696.png" />
+<p>Im Konfigurationswizard der Ihnen nun angezeigt wird, gehen Sie wie folgt
+vor:</p>
+<img alt="Ein- und Ausgangsgrößen des Reglerkanals auswählen" src="../_images/1000020100000340000001A6ED2C69A6.png" />
+<ol class="arabic simple steps">
+<li><p>Wählen Sie das Gerät, welches die Messgröße
+(Eingangsgröße) des Reglers zur Verfügung stellen soll: <span class="guilabel">Controller Input</span>.</p></li>
+<li><p>Wählen Sie die Geräteeigenschaft (<em>Device Property</em>) aus, die als
+Messgröße verwendet werden soll.</p></li>
+<li><p>Wählen Sie das Gerät, welches die Stellgröße (Ausgangsgröße) des
+Reglers zur Verfügung stellen soll: <span class="guilabel">Controller Output</span>.</p></li>
+<li><p>Wählen Sie die Geräteeigenschaft (<em>Device Property</em>) aus, die als
+Stellgröße verwendet werden soll.</p></li>
+<li><p>Klicken Sie auf die Schaltfläche <span class="guilabel">Next</span>, um die Konfiguration
+fortzusetzen.</p></li>
+</ol>
+<p>Abschließend erscheint ein Fenster für die Konfiguration und Auswahl von
+Reglerparametern. Dort können Sie wie im Abschnitt
+<a class="reference internal" href="#auswahl-und-konfiguration-von-reglerparametern">Auswahl und Konfiguration von Reglerparametern</a>
+beschrieben, die Reglerparameter konfigurieren. Durch Anklicken der
+Schaltfläche <span class="guilabel">Finish</span> schließen sie die Erstellung des Reglerkanals ab.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können die Reglerparameter später
+jederzeit ändern und so optimal an ihre Regelstrecke
+anpassen.</p>
+</div>
+</section>
+<section id="anderung-der-stellgroszenskalierung-oder-einheit">
+<h3>Änderung der Stellgrößenskalierung oder -einheit<a class="headerlink" href="#anderung-der-stellgroszenskalierung-oder-einheit" title="Link to this heading"></a></h3>
+<p>Die Stellgröße, wie zum Beispiel die Flussrate eines
+Nemesys-Dosiersystems bei einer Druckregelung oder der Wert eines
+analogen Ausgangs bei einer Temperaturregelung, wird durch den
+PID-Regelalgorithmus ermittelt und unskaliert an das entsprechende Gerät
+ausgegeben. Das bedeutet, dass sie, die Reglerparameter, besonders die
+Stellgrößengrenzen, jedes Mal neu anpassen müssen, wenn sie die
+Skalierung oder die Einheit des entsprechenden Gerätes ändern. Bei einem
+Nemesys-Dosiersystem trifft dies auch zu, wenn sie die Spritzengröße
+ändern, da sich hierdurch der Flussratenbereich ändert.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn sie die Skalierung oder Einheit eines
+Gerätes ändern, das Bestandteil eines Regelkreises ist,
+müssen sie die Reglerparameter kontrollieren und diese
+gegebenenfalls anpassen. Bei einem Nemesys-Dosiersystem
+trifft dies auch zu, wenn sie die Spritzengröße ändern.</p>
+</div>
+</section>
+</section>
+<section id="vorgehensweise-fur-die-einstellung-von-reglerparametern">
+<h2>Vorgehensweise für die Einstellung von Reglerparametern<a class="headerlink" href="#vorgehensweise-fur-die-einstellung-von-reglerparametern" title="Link to this heading"></a></h2>
+<section id="einfacher-geschlossener-regelkreis-und-pid-reglergleichung">
+<h3>Einfacher geschlossener Regelkreis und PID-Reglergleichung<a class="headerlink" href="#einfacher-geschlossener-regelkreis-und-pid-reglergleichung" title="Link to this heading"></a></h3>
+<p>Der Regler (z.B. PID-Regler) und die zu regelnde Strecke (z.B. zu
+temperierendes System) bilden zusammen ein rückgekoppeltes System, den
+einfachen geschlossenen Regelkreis. (siehe Abbildung unten)</p>
+<img alt="Einfacher geschlossener Regelkreis" src="../_images/1000020100000345000000BBD9E22878.png" />
+<p>Ein PID-Regler
+ermittelt hierbei die Stellgröße <em>u</em> zum Zeitpunkt t<sub>1</sub> nach
+folgender Gleichung.</p>
+<a class="reference internal image-reference" href="../_images/math_08.png"><img alt="../_images/math_08.png" src="../_images/math_08.png" style="width: 317.0px; height: 53.2px;" /></a>
+<p>Die Stellgröße enthält 3 Anteile.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/math_09.png"><img alt="math09" src="../_images/math_09.png" style="width: 39.2px; height: 21.0px;" /></a></p></td>
+<td><p>Der Proportionalanteil (P-Anteil)
+bildet mittels des Faktors
+K<sub>p</sub> die direkte
+Auswirkung des Fehlers auf die
+Stellgröße.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/math_10.png"><img alt="math10" src="../_images/math_10.png" style="width: 78.0px; height: 53.0px;" /></a></p></td>
+<td><p>Der Integrieranteil (I-Anteil)
+errechnet die zeitliche Summe
+des Fehlers und bildet sie
+mittels K<sub>p</sub> und der
+Zeitkonstanten T<sub>i</sub> auf
+die Stellgröße ab. Je größer
+K<sub>p</sub> und je kleiner
+T<sub>i</sub>desto größer wird
+der I-Anteil der Stellgröße.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/math_11.png"><img alt="math11" src="../_images/math_11.png" style="width: 80.60000000000001px; height: 38.800000000000004px;" /></a></p></td>
+<td><p>Der Differenzieranteil (D-Anteil)
+richtet sich nach den zeitlichen
+Änderungen des Istwertes und
+bildet diese über K<sub>p</sub> und
+T<sub>D</sub> auf die Stellgröße
+ab.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vorbereitung-der-reglereinstellung-in-cetoni-elements">
+<h3>Vorbereitung der Reglereinstellung in CETONI Elements<a class="headerlink" href="#vorbereitung-der-reglereinstellung-in-cetoni-elements" title="Link to this heading"></a></h3>
+<p>Zunächst sollten sie sich den aktuellen Wert und die Stellgröße ihres
+Regelkanals im Plot des Data-Loggers anzeigen lassen. (siehe Kapitel
+<a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html#csv-datenlogger"><span class="std std-ref">CSV-Datenlogger</span></a>)
+Sie können sich auch den Sollwert anzeigen lassen <span class="guinum">❶</span> . Dies ist nicht
+unbedingt erforderlich, da sie ihn im Allgemeinen kennen, erleichtert
+aber die Orientierung im Plot. (siehe Abbildung unten)</p>
+<img alt="Konfiguration des graphischen Loggers für die Reglereinstellung" src="../_images/100002010000033E000001B1025EE03C.png" />
+<p>Die Einstellung im Bereich <span class="guilabel">Log Interval</span> <span class="guinum">❷</span> hängt von
+der Änderungshäufigkeit des aktuellen Wertes des Reglerkanals ab. Sie
+sollten einen brauchbaren Graphen erhalten, wenn sie für Log Interval
+die gleiche Größe benutzen, die sie für den Wert Sample Time ihres
+Reglerparametersatzes verwendet haben.</p>
+</section>
+<section id="auswahl-des-parameters-sample-time">
+<h3>Auswahl des Parameters Sample Time<a class="headerlink" href="#auswahl-des-parameters-sample-time" title="Link to this heading"></a></h3>
+<p>Der Parameter Sample Time ist definiert als die Zeitdauer zwischen zwei
+Berechnungen der Stellgröße des Reglers. Je kleiner dieser Wert gewählt
+wird desto häufiger wird die Stellgröße berechnet. Als Faustformel kann
+man sich merken, dass Sample Time nicht größer als ein Zehntel der
+kleinsten im Regelkreis vorkommenden Zeitkonstante sein sollte.
+Erfahrungsgemäß konnten bei folgenden Geräten mit den angegebenen
+Zeitkonstanten brauchbare (stabile Regelung) Ergebnisse erzielt werden:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Anwendung</p></th>
+<th class="head"><p>Sample Time (ms)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Qmix Q+</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-odd"><td><p>Druckregelung mit Nemesys und Qmix p</p></td>
+<td><p>50</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Für die Sample Time sollten Werte gewählt
+werden, die kleiner oder gleich 1/10 der kleinsten im
+Regelkreis vorkommenden Zeitkonstante sind.</p>
+</div>
+</section>
+<section id="festlegen-der-stellgroszengrenzen">
+<h3>Festlegen der Stellgrößengrenzen<a class="headerlink" href="#festlegen-der-stellgroszengrenzen" title="Link to this heading"></a></h3>
+<p>Die minimale (U<sub>min</sub>) und maximale (U<sub>max</sub>) Stellgröße der
+CETONI Elements-Regler kann limitiert werden. Die Stellgrößen sollten über
+einen ausreichenden Hub verfügen, sodass die angestrebten Sollwerte
+erreicht werden können. Gleichzeitig sollten sie darauf achten, dass
+ihre Regelstrecke nicht durch zu groß gewählte Grenzwerte beschädigt
+wird. (z.B. zu hohe Flußrate eines Nemesys Dosiersystems bei
+Druckregelung führt zur Zerstörung des fluidischen Systems) Dies sollten
+sie testen, indem sie ihre Regelstrecke mit dem oberen und unteren Limit
+der Stellgröße beaufschlagen. (z.B. mit Flußrate, die dem
+Stellgrößenlimit entspricht, dosieren) Weiterhin müssen sie einen Wert
+wählen, den die Stellgröße annehmen soll, wenn der Reglerkanal
+deaktiviert (U<sub>disabled</sub>) wird (im Allgemeinen Null).</p>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Unzureichende Limitierung der Stellgrößen
+kann zur Beschädigung ihres zu regelnden Systems
+führen.</p>
+</div>
+</section>
+<section id="ermittlung-von-pi-reglerparametern-am-beispiel-einer-temperaturregelstrecke">
+<h3>Ermittlung von PI-Reglerparametern am Beispiel einer Temperaturregelstrecke<a class="headerlink" href="#ermittlung-von-pi-reglerparametern-am-beispiel-einer-temperaturregelstrecke" title="Link to this heading"></a></h3>
+<p>Eine Temperaturregelstrecke ist im Allgemeinen eine Regelstrecke welche
+eine oder mehrere Verzögerungszeitkonstanten enthält. Häufig kann sie
+durch eine Verzögerungstrecke 1. Ordnung approximiert werden.
+Nachfolgend die Sprungantwort einer Verzögerungstrecke 1. Ordnung im
+Bildbereich.</p>
+<a class="reference internal image-reference" href="../_images/math_12.png"><img alt="../_images/math_12.png" src="../_images/math_12.png" style="width: 112.60000000000001px; height: 46.0px;" /></a>
+<p>Ziel der Reglereinstellung ist es, die Streckenzeitkonstante T<sub>1</sub>
+zu kompensieren und die Reglerverstärkung K<sub>p</sub> anzupassen, sodass ein
+gutes Führungsverhalten des geschlossenen Regelkreises erzielt wird. Da
+T<sub>1</sub> in der Praxis häufig nicht bekannt ist, kann man sich durch
+folgendes Verfahren schrittweise einem brauchbaren Ergebnis annähern.</p>
+<img alt="../_images/graph01.png" src="../_images/graph01.png" />
+<ol class="arabic steps">
+<li><p>Die Werte für Sample Time, U<sub>min</sub>, U<sub>max</sub>
+und U<sub>disabled</sub> wählen sie entsprechend der Empfehlungen in den vorangegangenen Abschnitten.
+Die Werte der einzelnen Reglerzeitkonstanten setzen sie zu Null.
+Hiermit deaktivieren sie den I- und D-Anteil des PID-Reglers.
+Hieraus folgt eine vereinfachte Reglergleichung.</p>
+<div class="math notranslate nohighlight">
+\[U = {K_{p} \cdot e}\]</div>
+<p>Wählen sie für den P-Anteil einen moderaten Verstärkungsfaktor.
+Bedenken sie, dass sich der Fehler der Regelgröße über K<sub>p</sub>
+direkt auf die Stellgröße U auswirkt. Ein zu großer Wert für
+K<sub>P</sub> kann den Regler somit permanent in die Sättigung
+treiben.</p>
+</li>
+<li><p>Beaufschlagen sie ihren Regelkreis mit einem Sollgrößensprung, zum
+Beispiel indem sie die Solltemperatur von Raumtemperatur auf 50°C
+ändern und die Regelung aktivieren. (siehe Abschnitt
+<a class="reference internal" href="qmixcontroller_full_DE.html#sollwert-eingeben"><span class="std std-ref">Sollwert eingeben</span></a> und <a class="reference internal" href="qmixcontroller_full_DE.html#regelung-ein-ausschalten"><span class="std std-ref">Regelung ein- / ausschalten</span></a>)</p></li>
+<li><p>Bei einer Verzögerungsstrecke 1. Ordnung wird sich der Istwert wie
+in folgender Abbildung dargestellt verhalten.</p>
+<img alt="../_images/graph02.png" src="../_images/graph02.png" />
+<p>In Abhängigkeit von der gewählten
+Reglerverstärkung K<sub>p</sub> wird sich die Istgröße unterschiedlich
+schnell in die Nähe des Sollwertes begeben. Außerdem wird sich eine
+bleibende Regelabweichung einstellen. Ein P-Regler ist nämlich nicht
+in der Lage eine Verzögerungstrecke 1. Ordnung vollständig
+auszuregeln. Ist K<sub>p</sub> zu klein eingestellt, verläuft die
+Istwertkurve zu flach und es dauert sehr lang, bis sich der Istwert
+in der Nähe des Sollwertes befindet. (siehe Abbildung oben, Verlauf
+für K<sub>p</sub> = 1) Ein zu großer Wert für K<sub>p</sub> führt
+dagegen zum Überschwingen, gegebenenfalls zu einer Dauerschwingung
+um den Sollwert. (siehe Abbildung oben, Verlauf für K<sub>p</sub> =
+1)  Im dargestellten Beispiel erreicht der Istwert bei K<sub>p</sub> =
+3 recht zügig einen stationären Wert ohne überzuschwingen. Aus
+diesem Grund kann man mit diesem Wert weiterarbeiten.</p>
+</li>
+<li><p>Im nächsten Schritt müssen sie T<sub>i</sub> so einstellen, dass die
+bleibende Regelabweichung verschwindet. Beginnen sie zunächst mit
+einer großen Zeitkonstanten T<sub>i</sub> (kleiner Integrieranteil).</p></li>
+<li><p>Beaufschlagen sie ihren Regelkreis mit einem Sollgrößensprung, zum
+Beispiel indem sie die Solltemperatur von Raumtemperatur auf 50°C
+ändern und die Regelung aktivieren. (siehe Abschnitt
+<a class="reference internal" href="qmixcontroller_full_DE.html#sollwert-eingeben"><span class="std std-ref">Sollwert eingeben</span></a> und <a class="reference internal" href="qmixcontroller_full_DE.html#regelung-ein-ausschalten"><span class="std std-ref">Regelung ein- / ausschalten</span></a>)</p></li>
+<li><p>Sie können die Zeitkonstante T<sub>i</sub> verringern, wenn sie die
+Zeit bis zum dauerhaften Erreichen des Sollwertes verringern
+möchten. Sie müssen hierbei beachten, dass eine zu klein gewählte
+Zeitkonstante T<sub>i</sub> (großer Integrieranteil) zum Schwingen des
+Regelkreises führen kann. Im dargestellten Diagramm kann man sehen,
+dass eine Integrierzeitkonstante von T<sub>i</sub>=260s ein gutes
+Ergebnis liefert. Die Istgröße entspricht der Sollgröße und das
+System schwingt nicht. Mit T<sub>i</sub> = 1000s wird im dargestellten
+Zeitbereich die Sollgröße überhaupt nicht erreicht.
+T<sub>i</sub>=20s führt zu einem starken Überschwingen des Systems.
+(siehe Abbildung unten)</p>
+<img alt="../_images/10000000000001A7000000C4FD6D097D.png" src="../_images/10000000000001A7000000C4FD6D097D.png" />
+</li>
+<li><p>In sehr vielen Fällen (z.B.
+Temperaturregelung) ist ein PI-Regler vollkommen ausreichend. Im
+stationären Zustand verbleibt keine Regelabweichung und die Dynamik
+ist zufriedenstellend. Soll der Regler auch robust gegenüber
+plötzlich auftretenden Störungen sein, so kann es sinnvoll sein,
+einen Differenzieranteil einzubeziehen. Die detaillierte Behandlung
+von Stabilität, Führungs- und Störverhalten der unterschiedlichen
+Regelkreissysteme würde diese praxisnahe Einführung übersteigen.
+Deshalb wird an dieser Stelle auf die Regelungstechnikliteratur
+verwiesen.</p>
+<img alt="../_images/graph03.png" src="../_images/graph03.png" />
+</li>
+<li><p>Erstellen Sie nun ein PID Parameter Preset mit den Werten die Sie
+ermittelt haben und vergeben Sie einen eindeutigen Namen.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

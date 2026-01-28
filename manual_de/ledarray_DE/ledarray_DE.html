@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LED Array Plugin &mdash; CETONI Elements Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_DE.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_DE.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_DE.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_DE.html">7. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_DE.html">8. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_DE.html">9. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">10. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">LED Array Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="led-array-plugin">
+<h1>LED Array Plugin<a class="headerlink" href="#led-array-plugin" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/100000000000006000000061CD30E97F.png"><img alt="../_images/100000000000006000000061CD30E97F.png" class="align-left" src="../_images/100000000000006000000061CD30E97F.png" style="width: 80px;" /></a>
+<p>Durch Drücken der Schaltfläche <span class="guilabel">LED Array</span> in der Seitenleiste oder den
+Menüpunkt <span class="menuselection">Window → Show View → LED Array</span>
+können Sie zum <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">View</span></a> des LED Array Plugins wechseln
+(siehe Abbildung unten).</p>
+<img alt="LED Array Workbench" src="../_images/1000000000000382000002BC2FE3AAFD.png" />
+<p>Der Arbeitsbereich enthält für jedes angeschlossene LED-Array ein eigenes Bedienpanel:</p>
+</section>
+<section id="hardware-version">
+<h2>Hardware Version<a class="headerlink" href="#hardware-version" title="Link to this heading"></a></h2>
+<p>Für jedes LED Array wird je nach Version der LED Array Hardware ein
+entsprechendes LED Array Bedienpanel eingeblendet. Die folgenden beiden
+Hardwareversionen werden unterstützt:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>LED Array Hardware V1</p></th>
+<th class="head"><p>LED Array Hardware V2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="image6" src="../_images/100000000000010E0000022483DA82B5.png" /></p></td>
+<td><p><img alt="image7" src="../_images/10000000000001090000022462F0E95C.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Die <a class="reference internal" href="#led-hardware-v1"><span class="std std-ref">Hardware Version 1</span></a> unterstützt 12 unabhängige
+LED Array Kanäle mit einer Auflösung von 100 Schritten zur Einstellung der
+Helligkeit.</p></td>
+<td><p><a class="reference internal" href="#led-hardware-v2"><span class="std std-ref">Hardware Version 2</span></a> unterstützt eine virtuell
+unbegrenzte Anzahl von unabhängigen LED Kanälen mit einer Auflösung von 4096
+Schritten zur Einstellung der Helligkeit.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="led-array-v1-bedienpanel">
+<span id="led-hardware-v1"></span><h2>LED Array V1 - Bedienpanel<a class="headerlink" href="#led-array-v1-bedienpanel" title="Link to this heading"></a></h2>
+<img alt="../_images/100000000000010E000002353ADBC6BA.png" src="../_images/100000000000010E000002353ADBC6BA.png" />
+<ol class="arabic simple guinums">
+<li><p>Beschriftung (anpassbar)</p></li>
+<li><p>alle LED-Kanäle ein/aus</p></li>
+<li><p>die Helligkeit der einzelnen LED-Kanäle einstellen (0 - 100%)</p></li>
+<li><p>Einstellung der Helligkeit mehrerer LED-Kanäle (LED-Gruppe) gleichzeitig</p></li>
+</ol>
+<p>Die Beschriftung des LED-Arrays kann von Ihnen jederzeit geändert
+werden. Klicken Sie zum Ändern der Beschriftung einfach auf die
+Beschriftung <span class="guinum">❶</span> und geben Sie dann einen neuen Namen für das LED-Array
+ein. Dieser Name wird gespeichert und bei einem späteren Start der
+Software wieder geladen.</p>
+</section>
+<section id="helligkeit-einzelner-led-kanale-einstellen">
+<h2>Helligkeit einzelner LED-Kanäle einstellen<a class="headerlink" href="#helligkeit-einzelner-led-kanale-einstellen" title="Link to this heading"></a></h2>
+<p>Die Helligkeit jedes einzelnen LED-Kanals können Sie einstellen, indem
+Sie den Wert direkt in das Feld unter der LED eintragen <span class="guinum">❷</span> (0 – 100%)
+oder indem Sie mit der rechten Maustaste auf eine LED klicken und die
+Helligkeit dann mit dem Schieberegler <span class="guinum">❶</span> verändern (siehe Abbildung
+unten).</p>
+<img alt="Helligkeit einzelner LEDs ändern" src="../_images/100000000000010A000000A8ED3768DB.png" />
+<p>Um einzelne LED-Kanäle
+ein- und auszuschalten, klicken Sie mit der linken Maustaste auf eine
+LED.</p>
+<img alt="LED Kanal ein- / ausschalten" src="../_images/1000000000000106000000AE9333AD7C.png" />
+<p>Da alle LED-Kanäle in der Software analoge Ausgangskanäle sind, können Sie die
+Helligkeit einzelner LED-Kanäle auch über das Fenster der <a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html#i-o-plugin"><span class="std std-ref">I/O-Kanäle</span></a>
+ändern (siehe Abbildung unten).</p>
+<img alt="Fenster der I/O Kanäle" src="../_images/10000000000001C300000100AD443E83.png" />
+</section>
+<section id="led-kanalgruppen">
+<h2>LED-Kanalgruppen<a class="headerlink" href="#led-kanalgruppen" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Einführung<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Wenn mehrere LED-Kanäle synchron arbeiten sollen, können Sie diese
+Kanäle zu Gruppen zusammenfassen und gemeinsam steuern. Das Bedienpanel
+enthält 3 Schieberegler zur Einstellung der Helligkeit für drei
+verschiedene LED-Kanalgruppen.</p>
+</section>
+<section id="led-kanalgruppe-konfigurieren">
+<h3>LED-Kanalgruppe konfigurieren<a class="headerlink" href="#led-kanalgruppe-konfigurieren" title="Link to this heading"></a></h3>
+<p>Zur Auswahl der Kanäle, die in einer Gruppe zusammengefasst werden
+sollen, klicken Sie mit der rechten Maustaste in den Bedienbereich einer
+Gruppe und wählen Sie im Kontextmenü den Punkt
+<span class="menuselection">Configure Group Channels</span> (siehe Abbildung unten).</p>
+<img alt="Aufruf LED-Gruppenkonfiguration" src="../_images/100000000000013400000067B8EAA03B.png" />
+<p>In dem Konfigurationsfenster das nun eingeblendet wird, können Sie alle
+LED-Kanäle auswählen, die in einer Gruppe zusammengefasst werden sollen.
+Setzen Sie ein Häkchen für jeden Kanal, der Teil dieser Gruppe sein soll
+<span class="guinum">❶</span> und bestätigen Sie die Auswahl durch Klick auf <span class="guilabel">OK</span> <span class="guinum">❷</span>.</p>
+<img alt="LED Gruppenkonfiguration" src="../_images/10000000000001640000019EAE700D89.png" />
+</section>
+<section id="led-kanalgruppe-steuern">
+<h3>LED-Kanalgruppe steuern<a class="headerlink" href="#led-kanalgruppe-steuern" title="Link to this heading"></a></h3>
+<p>Sie können die Helligkeit einer LED-Gruppe mit dem Schieberegler <span class="guinum">❶</span>
+verändern oder durch direkte Eingabe des Helligkeitswertes in das
+Eingabefeld <span class="guinum">❷</span> (Abbildung unten).</p>
+<img alt="LED Gruppensteuerung" src="../_images/10000000000000F60000005AF5E326F1.png" />
+<p>Über das Häkchen in der linken
+oberen Ecke <span class="guinum">❸</span> können Sie alle LEDs der Gruppe gemeinsam ein- und
+ausschalten.</p>
+</section>
+</section>
+<section id="standby-timer-konfigurieren">
+<h2>Standby-Timer konfigurieren<a class="headerlink" href="#standby-timer-konfigurieren" title="Link to this heading"></a></h2>
+<p>Das LED Array verfügt über eine Standby-Timer Funktionalität. D.h. nach
+der letzten Aktion des Anwenders in der Software und nach Ablauf der
+Standby-Zeit werden automatisch alle Sektoren des LED-Arrays
+abgeschaltet. Jede Veränderung von Parametern in der Software, setzt den
+Standby-Timer zurück und aktiviert das Array wieder.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Der Standby-Timer Wert wird im LED Array
+gespeichert. D.h. auch wenn die Verbindung zum PC
+unterbrochen wurde, wird das LED Array nach Ablauf der
+Standby-Zeit abgeschaltet.</p>
+</div>
+<p>Um die Standby-Zeit zu konfigurieren, klicken Sie mit der rechten
+Maustaste auf eine freie Fläche im Bedienpanel des LED-Arrays um das
+Kontextmenü anzuzeigen. Wählen Sie dann den Menüpunkt <span class="menuselection">Configure Standby Timer</span>.</p>
+<img alt="Standby-Timer Konfiguration aufrufen" src="../_images/100000000000010700000096275DD1CF.png" />
+<p>In dem
+Konfigurationsdialog der Ihnen nun angezeigt wird können Sie die
+Stunden, Minuten und Sekunden des Standby-Timers konfigurieren. Durch
+Anklicken der Schaltfläche <span class="guilabel">OK</span> werden Ihre Änderungen übernommen und
+die Standby-Zeit im Gerät gespeichert (Abbildung unten).</p>
+<img alt="Standby-Timer Konfigurationsdialog" src="../_images/100000000000010A000000B3587F0120.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Um den Standby-Timer zu desaktivieren
+konfigurieren Sie die Stunden, Minuten und Sekunden mit
+dem Wert 0.</p>
+</div>
+</section>
+<section id="led-array-v2-bedienpanel">
+<span id="led-hardware-v2"></span><h2>LED Array V2 - Bedienpanel<a class="headerlink" href="#led-array-v2-bedienpanel" title="Link to this heading"></a></h2>
+<img alt="../_images/100000000000010900000224043E069F.png" src="../_images/100000000000010900000224043E069F.png" />
+<p>Die Beschriftung des LED-Arrays kann von Ihnen jederzeit geändert
+werden. Klicken Sie zum Ändern der Beschriftung einfach auf die
+Beschriftung <span class="guinum">❶</span> und geben Sie dann einen neuen Namen für das LED-Array
+ein. Dieser Name wird gespeichert und bei einem späteren Start der
+Software wieder geladen.</p>
+</section>
+<section id="globale-helligkeit-einstellen">
+<h2>Globale Helligkeit einstellen<a class="headerlink" href="#globale-helligkeit-einstellen" title="Link to this heading"></a></h2>
+<p>Die globale Helligkeit aller LED Kanäle gleichzeitig können Sie über den
+Schieberegler <span class="guinum">❷</span> oder über das Eingabefeld im Bereich <span class="guilabel">Global Brightness</span>
+einstellen. Mit dem Ankreuzfeld in der linken oberen Ecke <span class="guinum">❶</span> schalten Sie
+das globale Enable Signal des LED Arrays. Damit können Sie das Array
+ein- / und ausschalten, ohne die Helligkeitswerte der einzelnen Kanäle
+zu verändern.</p>
+<img alt="Globale Helligkeit und Enable Signal" src="../_images/10000000000000F20000008336288511.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Nur wenn das Enable Signal aktiviert ist, leuchten die LEDs des Arrays.</p>
+</div>
+</section>
+<section id="helligkeit-von-led-banken-einstellen">
+<h2>Helligkeit von LED Bänken einstellen<a class="headerlink" href="#helligkeit-von-led-banken-einstellen" title="Link to this heading"></a></h2>
+<p>LED Bänke sind eine geräte- und hardwarespezifische Gruppierung von
+einzelnen LED Kanälen in Gruppen. LED Bänke gruppieren LED Kanäle, die
+auch physisch in der Hardware eine Gruppe bilden, z.B. alle LEDs auf
+einer Platine oder alle LEDs eines bestimmten Typs (z.B. warmweiß oder
+kaltweiß). Diese Gruppen sind in der Firmware verankert und können vom
+Anwender nicht geändert werden.</p>
+<img alt="Bedienelemente für LED Bank Helligkeit" src="../_images/10000000000000EE00000084AF8E2BCD.png" />
+<p>Um die Helligkeit einer Bank zu ändern wählen Sie im Eingabefeld <span class="guilabel">Bank</span> <span class="guinum">❶</span> die
+Bank aus, und stellen Sie dann mit dem Schieberegler oder dem
+Eingabefeld <span class="guinum">❷</span> die Helligkeit der gewählten Bank ein.</p>
+</section>
+<section id="id2">
+<h2>Helligkeit einzelner LED-Kanäle einstellen<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Im Bereich <em>LED Channel Brightness</em> stellen Sie die Helligkeit einzelner
+LED Kanäle ein. Wählen Sie den Kanal im Eingabefeld <span class="guilabel">Channel</span> <span class="guinum">❶</span>. Die
+Helligkeit ändern Sie über das Eingabefeld <span class="guinum">❷</span> oder den Schieberegler.</p>
+<img alt="Helligkeit einzelner LEDs ändern" src="../_images/10000000000000F0000000821CC06826.png" />
+<p>Um einen Kanal ein-
+und auszuschalten, klicken Sie mit der linken Maustaste auf die LED <span class="guinum">❸</span>.</p>
+<p>Da alle LED-Kanäle in der Software analoge Ausgangskanäle
+sind, können Sie die Helligkeit einzelner LED-Kanäle auch über das
+Fenster der <a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html#i-o-plugin"><span class="std std-ref">I/O-Kanäle</span></a> ändern (siehe Abbildung unten).</p>
+<img alt="Fenster der I/O Kanäle" src="../_images/10000000000001C300000100AD443E83.png" />
+</section>
+<section id="id3">
+<h2>LED Kanalgruppen<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Einführung<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>Wenn mehrere LED-Kanäle synchron arbeiten sollen, können Sie diese
+Kanäle zu Gruppen zusammenfassen und gemeinsam steuern. Über die
+Gruppenkanäle können Sie dann alle Kanäle einer LED Gruppe gemeinsam
+steuern</p>
+</section>
+<section id="led-kanalgruppen-konfigurieren">
+<h3>LED Kanalgruppen konfigurieren<a class="headerlink" href="#led-kanalgruppen-konfigurieren" title="Link to this heading"></a></h3>
+<p>Um LED Kanalgruppen zu konfigurieren, klicken Sie mit der rechten
+Maustaste in den Bereich <em>LED Group Brightness</em> und wählen Sie dann aus
+dem Kontextmenü den Menüpunkt <span class="menuselection">Configure LED Groups</span>.</p>
+<img alt="LED Gruppenkonfiguration aufrufen" src="../_images/100000000000012E000000A2EFE72B3A.png" />
+<p>Es wird Ihnen nun der
+Konfigurationsdialog zur Konfiguration der LED Gruppen angezeigt
+(Abbildung unten).</p>
+<img alt="Konfigurationsdialog für LED Kanalgruppen" src="../_images/10000000000002680000019589B3C1D4.png" />
+<p>Um LED Kanäle einer Gruppen hinzuzufügen, gehen Sie wie folgt vor:</p>
+<ol class="arabic steps">
+<li><p>Wählen Sie zuerst mit der Gruppen-Auswahlbox <span class="guinum">❷</span> die Gruppe aus, die
+Sie konfigurieren möchten.</p></li>
+<li><p>Wählen Sie nun in der Kanalliste <span class="guinum">❶</span> die Kanäle, die Sie zur Gruppe
+hinzufügen möchten durch Klicken mit der Maustaste aus.</p>
+<ul class="simple">
+<li><p>einzelne Kanäle wählen Sie durch Anklicken aus</p></li>
+<li><p>mehrere zusammenhängende Kanäle wählen Sie aus, indem Sie den ersten
+Kanal mit der Maus anklicken und dann die <kbd class="kbd docutils literal notranslate">Shift</kbd>-Taste gedrückt
+halten, während Sie den letzten Kanal anklicken</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/10000000000004C90000026AF43AB254.png"><img alt="../_images/10000000000004C90000026AF43AB254.png" src="../_images/10000000000004C90000026AF43AB254.png" style="width: 350px;" /></a>
+<ul class="simple">
+<li><p>mehrere unabhängige Kanäle wählen Sie aus, indem Sie beim
+Anklicken die Steuerungstaste gedrückt halten.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/10000000000003890000026A2EE7BB04.png"><img alt="../_images/10000000000003890000026A2EE7BB04.png" src="../_images/10000000000003890000026A2EE7BB04.png" style="width: 250px;" /></a>
+</li>
+<li><p>Fügen Sie nun die ausgewählten Kanäle durch Anklicken der
+<span class="guilabel">Plus</span>-Schaltfläche zur Gruppe hinzu <span class="guinum">❸</span>. Um einzelne Kanäle aus der
+Gruppe zu löschen, wählen Sie die Kanäle in der Gruppenliste aus und
+klicken Sie anschließend die <span class="guilabel">Minus</span>-Schaltfläche <span class="guinum">❹</span>. Um alle Kanäle
+aus der Gruppe zu löschen, klicken Sie die Schaltfläche
+<span class="guilabel">Clear LED Group</span> <span class="guinum">❺</span> an.</p></li>
+<li><p>Wenn Sie alle Gruppen konfiguriert haben, klicken Sie <span class="guilabel">OK</span> <span class="guinum">❻</span>. Die
+Gruppenkonfiguration wird nun zum Gerät übertragen. Wenn Sie die
+Gruppenkonfiguration dauerhaft im Gerät speichern möchten, klicken
+Sie im angezeigten Meldungsfenster (siehe Abbildung unten) auf
+<span class="guilabel">Yes</span>.</p></li>
+</ol>
+<img alt="Gruppenkonfiguration dauerhaft im Gerät speichern" src="../_images/1000000000000222000000A673BE3A57.png" />
+</section>
+<section id="helligkeit-von-led-gruppen-einstellen">
+<h3>Helligkeit von LED Gruppen einstellen<a class="headerlink" href="#helligkeit-von-led-gruppen-einstellen" title="Link to this heading"></a></h3>
+<p>Um die Helligkeit einer Gruppe zu ändern, wählen Sie im Eingabefeld
+<span class="guilabel">Group</span> <span class="guinum">❶</span> die Gruppe aus, und stellen Sie dann mit dem Schieberegler
+oder dem Eingabefeld <span class="guinum">❷</span> die Helligkeit der gewählten Gruppe ein.</p>
+<img alt="Bedienelemente für LED Gruppen Helligkeit" src="../_images/10000000000000F300000083463C4BD3.png" />
+</section>
+</section>
+<section id="script-funktionen">
+<h2>Script Funktionen<a class="headerlink" href="#script-funktionen" title="Link to this heading"></a></h2>
+<p>Das LED-Array-Plugin bietet eine Reihe von Scriptfunktionen die für die
+Programmierung von automatischen Belichtungssequenzen oder für die
+zeitgesteuerte Belichtung verwendet werden können. Die Scriptfunktionen
+finden Sie in den Kategorien <em>LED Array Functions</em> und <em>I/O Functions</em>.</p>
+<img alt="../_images/1000000000000111000000C6D2F2FCCA.png" src="../_images/1000000000000111000000C6D2F2FCCA.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/10000000000000EA00000078FE1034F4.png" src="../_images/10000000000000EA00000078FE1034F4.png" />
+<section id="funktion-globale-helligkeit-set-global-led-array-brightness">
+<h3>Funktion Globale Helligkeit – <em>Set Global LED Array Brightness</em><a class="headerlink" href="#funktion-globale-helligkeit-set-global-led-array-brightness" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100002010000002E0000002EFB529AA2.png"><img alt="../_images/100002010000002E0000002EFB529AA2.png" class="align-left" src="../_images/100002010000002E0000002EFB529AA2.png" style="width: 60px;" /></a>
+<p>Mit dieser Scriptfunktion stellen Sie die globale Helligkeit
+aller LED Kanäle eines LED Arrays gemeinsam ein. Zur Konfiguration der
+Skriptfunktion gehen Sie wie folgt vor (Abbildung unten):</p>
+<img alt="Skriptfunktion Set Global LED Array Brightness" src="../_images/10000000000001B100000084B2054C84.png" />
+<ol class="arabic simple guinums">
+<li><p>Wählen Sie dazu das LED-Gerät aus der Geräteliste aus</p></li>
+<li><p>Stellen Sie anschließend die Helligkeit (0 – 100%) ein.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt Scriptvariablen.
+Im Feld <span class="guilabel">Brightness</span> können Variablen verwendet
+werden.</p>
+</div>
+</section>
+<section id="funktion-bank-helligkeit-set-led-bank-brightness">
+<h3>Funktion Bank-Helligkeit – <em>Set LED Bank Brightness</em><a class="headerlink" href="#funktion-bank-helligkeit-set-led-bank-brightness" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000020100000030000000309FBA26F9.png"><img alt="../_images/1000020100000030000000309FBA26F9.png" class="align-left" src="../_images/1000020100000030000000309FBA26F9.png" style="width: 60px;" /></a>
+<p>Die Helligkeit kompletter LED Bänke können Sie mit dieser
+Scriptfunktion einstellen. Zur Konfiguration der Skriptfunktion gehen
+Sie wie folgt vor (Abbildung unten):</p>
+<img alt="Skriptfunktion Set LED Bank Brightness" src="../_images/100000000000019100000099D6A36581.png" />
+<ol class="arabic simple guinums">
+<li><p>Wählen Sie das LED-Array Gerät aus</p></li>
+<li><p>Wählen Sie die Bank aus, deren Helligkeit geändert werden soll</p></li>
+<li><p>Stellen Sie die Helligkeit ein (0- - 100%)</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt Scriptvariablen.
+Im Feld <span class="guilabel">Bank</span> und <span class="guilabel">Brightness</span> können Variablen
+verwendet werden.</p>
+</div>
+</section>
+<section id="funktion-led-helligkeit-set-led-channel-brightness">
+<h3>Funktion LED Helligkeit – Set LED Channel Brightness<a class="headerlink" href="#funktion-led-helligkeit-set-led-channel-brightness" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100002010000003000000030BE44A04A.png"><img alt="../_images/100002010000003000000030BE44A04A.png" class="align-left" src="../_images/100002010000003000000030BE44A04A.png" style="width: 60px;" /></a>
+<p>Für einzelne LED Kanäle können Sie die Helligkeit mit dieser
+Scriptfunktion einstellen. Zur Konfiguration der Scriptfunktion gehen
+Sie wie folgt vor (Abbildung unten):</p>
+<img alt="Skriptfunktion Set LED Channel Brightness" src="../_images/100000000000016500000099E30E7287.png" />
+<ol class="arabic simple guinums">
+<li><p>Wählen Sie das LED-Array Gerät aus</p></li>
+<li><p>Wählen Sie den Kanal aus, dessen Helligkeit Sie einstellen möchten</p></li>
+<li><p>Stellen Sie die Helligkeit ein (0- - 100%)</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt Scriptvariablen.
+Im Feld <span class="guilabel">Channel</span> und <span class="guilabel">Brightness</span> können Variablen
+verwendet werden.</p>
+</div>
+</section>
+<section id="funktion-gruppen-helligkeit-set-led-group-brightness">
+<h3>Funktion Gruppen-Helligkeit – Set LED Group Brightness<a class="headerlink" href="#funktion-gruppen-helligkeit-set-led-group-brightness" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000020100000030000000309D549F7D.png"><img alt="../_images/1000020100000030000000309D549F7D.png" class="align-left" src="../_images/1000020100000030000000309D549F7D.png" style="width: 60px;" /></a>
+<p>Mit dieser Funktion können Sie die Helligkeit einer LED
+Gruppe scriptgesteuert einstellen. Zur Konfiguration der Scriptfunktion
+gehen Sie wie folgt vor (Abbildung unten):</p>
+<img alt="Skriptfunktion Set LED Group Brightness" src="../_images/10000000000001690000009BB63CA864.png" />
+<ol class="arabic simple guinums">
+<li><p>Wählen Sie das LED-Array Gerät aus</p></li>
+<li><p>Wählen Sie die Gruppe aus, deren Helligkeit Sie einstellen möchten</p></li>
+<li><p>Stellen Sie die Helligkeit ein (0- - 100%)</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt Scriptvariablen.
+Im Feld <span class="guilabel">Group</span> und <span class="guilabel">Brightness</span> können Variablen verwendet
+werden.</p>
+</div>
+</section>
+<section id="funktion-multi-kanal-helligkeit-set-multi-channel-brightness">
+<h3>Funktion Multi-Kanal Helligkeit – <em>Set Multi Channel Brightness</em><a class="headerlink" href="#funktion-multi-kanal-helligkeit-set-multi-channel-brightness" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000020100000030000000306620BC5F.png"><img alt="../_images/1000020100000030000000306620BC5F.png" class="align-left" src="../_images/1000020100000030000000306620BC5F.png" style="width: 60px;" /></a>
+<p>Mit dieser Funktion können Sie scriptgesteuert die Helligkeit
+mehrere LED-Kanäle gleichzeitig einstellen.Zur Konfiguration der
+Skriptfunktion gehen Sie wie folgt vor (Abbildung unten):</p>
+<img alt="Skriptkonfiguration Set LED Group Brightness" src="../_images/10000000000002260000018E1FF2911A.png" />
+<ol class="arabic simple guinums">
+<li><p>Wählen Sie das LED-Array Gerät aus</p></li>
+<li><p>Stellen Sie die Helligkeit ein (0- - 100%)</p></li>
+<li><p>Setzen Sie für jeden Kanal der geregelt werden soll ein Häkchen in
+der Kanalauswahlliste.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Sind sehr viele Kanäle ausgewählt, kann
+die Datenübertragung für alle Kanäle eine gewisse Zeit
+dauern, so dass nicht alle Kanäle genau synchron
+geschaltet werden. Verwenden Sie ggf. LED Gruppen, wenn
+diese Verzögerung nicht erwünscht ist.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt Scriptvariablen.
+Im Feld <span class="guilabel">Brightness</span> können Variablen verwendet werden.</p>
+</div>
+</section>
+<section id="funktion-analogausgang-setzen-set-analog-out">
+<h3>Funktion Analogausgang setzen - <em>Set Analog Out</em><a class="headerlink" href="#funktion-analogausgang-setzen-set-analog-out" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/analogout_script.svg"><img alt="../_images/analogout_script.svg" class="align-left" src="../_images/analogout_script.svg" width="60" /></a>
+<p>Alle LED
+Kanäle sind in der Software normale analoge Ausgangskanäle.
+Sie können deshalb für das Einstellen der Helligkeit einzelner Kanäle
+die Funktion <em>Set Analog Out</em> aus der Kategorie <a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html#i-o-script-funktionen"><span class="std std-ref">I/O Script-Funktionen</span></a>
+verwenden.</p>
+<img alt="Skriptkonfiguration Set Analog Out" src="../_images/10000000000001C0000000BCBE441A82.png" />
+<p>Wählen Sie im Konfigurationsbereich <span class="guilabel">Analog Output</span> den entsprechenden
+LED-Kanal aus <span class="guinum">❶</span> und tragen Sie im Feld <span class="guilabel">Value</span> den Helligkeitswert <span class="guinum">❷</span> (0
+– 100%) ein.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion unterstützt die Verwendung von
+Variablen. D.h., im Feld <span class="guilabel">Value</span> <span class="guinum">❷</span> können Sie, statt
+eines Wertes, den Namen einer Variablen eintragen, die
+den Helligkeitswert zur Laufzeit des Scripts enthält
+(siehe Abbildung).</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

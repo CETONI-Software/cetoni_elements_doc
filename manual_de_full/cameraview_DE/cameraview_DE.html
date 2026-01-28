@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15. Kamera Plugin &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="16. Bildbetrachter / Bildanalyse Plugin" href="../imageanalysis_DE/imageanalysis_DE.html" />
+    <link rel="prev" title="14. LED Array Plugin" href="../ledarray_DE/ledarray_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Kamera Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">15.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kamera-livebild">15.2. Kamera-Livebild</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht">15.2.1. Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#werkzeugleiste">15.2.2. Werkzeugleiste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vergroszerung-einstellen">15.2.3. Vergrößerung einstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manuelle-bildaufnahme">15.2.4. Manuelle Bildaufnahme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manuelle-videoaufnahme">15.2.5. Manuelle Videoaufnahme</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kamera-einstellungen">15.3. Kamera Einstellungen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">15.3.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#belichtungsparameter-einstellen">15.3.2. Belichtungsparameter einstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kamera-features-einstellen">15.3.3. Kamera-Features einstellen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kamera-script-funktionen">15.4. Kamera Script-Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">15.4.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einzelbildaufnahme-capture-image">15.4.2. Einzelbildaufnahme – <em>Capture Image</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videoaufzeichnung-starten-start-video-recording">15.4.3. Videoaufzeichnung starten – <em>Start Video Recording</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#video-einstellungen-konfigurieren">Video-Einstellungen konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kamera-einstellungen-konfigurieren">Kamera-Einstellungen konfigurieren</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#videosequenz-aufnehmen-record-video-sequence">15.4.4. Videosequenz aufnehmen – <em>Record Video Sequence</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videoaufzeichnung-beenden-stop-video-recording">15.4.5. Videoaufzeichnung beenden – <em>Stop Video Recording</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">23. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">15. </span>Kamera Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kamera-plugin">
+<h1><span class="section-number">15. </span>Kamera Plugin<a class="headerlink" href="#kamera-plugin" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">15.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Das Kamera Plugin ermöglicht die Einbindung unterschiedlichster
+digitaler Kameras in die Software. Das Plugin unterstützt u.a. Firewire
+1394 Kameras (DCAM Standard), verschiedene USB-Kameras und alle Standard
+Windows DirectShow Kameras.</p>
+<img alt="Kamera Livebild und Bildbetrachter" src="../_images/10000000000003AF00000279E3F4A83D.png" />
+<p>Für jedes Kameragerät bietet die Software eine separate <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">Live-Ansicht</span></a>
+<span class="guinum">❶</span>, die  das aktuelle Live-Kamerabild zeigt. Der
+<a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html#bildbetrachter-bildanalyse-plugin"><span class="std std-ref">Bildbetrachter / Bildanalyse View</span></a>
+<span class="guinum">❷</span> zeigt die von den  Kamerageräten erfassten Bilder zur Analyse oder
+Speicherung in Dateien.</p>
+</section>
+<section id="kamera-livebild">
+<h2><span class="section-number">15.2. </span>Kamera-Livebild<a class="headerlink" href="#kamera-livebild" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3><span class="section-number">15.2.1. </span>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Das Kamera-Livebild wird in einem
+<a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#views-ansichten"><span class="std std-ref">View</span></a> angezeigt. D.h., das Kamera-Livebild können Sie durch
+Anklicken und Ziehen der Titelleiste vollständig aus dem Hauptfenster
+der Applikation herauslösen und so z.B. auf einem zweiten Monitor
+platzieren und dort maximieren. So haben Sie stets das volle Kamerabild
+im Blick und können auf dem anderen Monitor in der Software bequem alle
+Einstellungen ändern.</p>
+<img alt="../_images/live_image_overview.png" src="../_images/live_image_overview.png" />
+<ol class="arabic simple guinums">
+<li><p>Werkzeugleiste</p></li>
+<li><p>Kamera-Livebild</p></li>
+</ol>
+<p>Sie können die Livebildansicht für ein bestimmtes Kameragerät über den Hauptmenüpunkt
+<span class="menuselection">Window → Show View → Camera → DeviceName</span> aufrufen.</p>
+</section>
+<section id="werkzeugleiste">
+<h3><span class="section-number">15.2.2. </span>Werkzeugleiste<a class="headerlink" href="#werkzeugleiste" title="Link to this heading"></a></h3>
+<p>Ihnen stehen verschiedene Werkzeuge zur Verfügung um die Anzeige des
+Kamerabildes oder Kameraeinstellungen zu verändern. Diese Werkzeuge sind
+über die Werkzeugleiste am oberen Fensterrand erreichbar.</p>
+<p>Folgende Schaltflächen sind in der Werkzeugleiste enthalten:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/fit_to_size.svg"><img alt="image15" src="../_images/fit_to_size.svg" width="60" /></a></p></td>
+<td><p>Bild in Fenster einpassen – Skaliert das Bild so, dass
+es vollständig in die Anzeige passt</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/view_1_1.svg"><img alt="image16" src="../_images/view_1_1.svg" width="60" /></a></p></td>
+<td><p>Digitale Vergrößerung erhöhen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/zoom_in.svg"><img alt="image17" src="../_images/zoom_in.svg" width="60" /></a></p></td>
+<td><p>Digitale Vergrößerung erhöhen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/zoom_out.svg"><img alt="image18" src="../_images/zoom_out.svg" width="60" /></a></p></td>
+<td><p>Digitale Vergrößerung verringern</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/camera.svg"><img alt="image19" src="../_images/camera.svg" width="60" /></a></p></td>
+<td><p>Bild aufnehmen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/videocamera.svg"><img alt="image20" src="../_images/videocamera.svg" width="60" /></a></p></td>
+<td><p>Video aufnehmen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/camera_settings.svg"><img alt="image21" src="../_images/camera_settings.svg" width="60" /></a></p></td>
+<td><p>Dialog zur Konfiguration der Kameraparameter öffnen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vergroszerung-einstellen">
+<h3><span class="section-number">15.2.3. </span>Vergrößerung einstellen<a class="headerlink" href="#vergroszerung-einstellen" title="Link to this heading"></a></h3>
+<p>Die digitale Vergrößerung können Sie auf 3 verschiedene Arten
+einstellen:</p>
+<ul class="simple">
+<li><p><strong>Werkzeugleiste</strong> – klicken Sie auf die Schaltflächen in der
+Werkzeugleiste um die Vergrößerung in festen Stufen zu ändern</p></li>
+<li><p><strong>Kontextmenü</strong> – klicken Sie mit der rechten Maustaste in das Kamerabild
+und wählen Sie dann die entsprechenden Menüpunkte im angezeigten
+Kontextmenü, um die Vergrößerung zu verändern</p></li>
+<li><p><strong>Mausrad</strong> – ändern Sie die Vergrößerung stufenlos mit dem Mausrad</p></li>
+</ul>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/mouse_scroll_up.png"><img alt="image23" src="../_images/mouse_scroll_up.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_in.svg"><img alt="image17" src="../_images/zoom_in.svg" width="60" /></a></p></td>
+<td><p>Vergrößerungsfaktor erhöhen (hineinzoomen)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/mouse_scroll_down.png"><img alt="image24" src="../_images/mouse_scroll_down.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_out.svg"><img alt="image18" src="../_images/zoom_out.svg" width="60" /></a></p></td>
+<td><p>Vergrößerungsfaktor verringern (heraus zoomen)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="manuelle-bildaufnahme">
+<h3><span class="section-number">15.2.4. </span>Manuelle Bildaufnahme<a class="headerlink" href="#manuelle-bildaufnahme" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/camera.svg"><img alt="../_images/camera.svg" class="align-left" src="../_images/camera.svg" width="60" /></a>
+<p>Um das aktuelle Kamerabild aufzunehmen, klicken Sie das
+Symbol <em>Capture Image</em> in der Werkzeugleiste an. Das aktuelle Kamerabild wird
+dann im Bildbetrachter der Software
+gespeichert und kann dort von Ihnen weiter verarbeitet werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="manuelle-videoaufnahme">
+<h3><span class="section-number">15.2.5. </span>Manuelle Videoaufnahme<a class="headerlink" href="#manuelle-videoaufnahme" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera.svg"><img alt="../_images/videocamera.svg" class="align-left" src="../_images/videocamera.svg" width="60" /></a>
+<p>Wenn Sie das aktuelle Kamera-Livebild als Video aufnehmen möchten,
+drücken Sie einfach die Schaltfläche <span class="guilabel">Record Video</span>. Die
+Videoaufzeichnung bleibt so lange aktiv, bis Sie diese durch erneutes
+Anklicken der Schaltfläche <span class="guilabel">Record Video</span> stoppen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/videocamera.svg"><img alt="image20" src="../_images/videocamera.svg" width="60" /></a></p></td>
+<td><p>Videoaufzeichnung inaktiv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/videocamera_record.svg"><img alt="image22" src="../_images/videocamera_record.svg" width="60" /></a></p></td>
+<td><p>Videoaufzeichnung aktiv</p></td>
+</tr>
+</tbody>
+</table>
+<p>Über das <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#ereignisprotokoll"><span class="std std-ref">Ereignisprotokoll</span></a> der Anwendung erhalten Sie
+Statusinformationen zur Aufzeichnung und zum Dateinamen unter dem die
+Videodatei gespeichert wurde.</p>
+<img alt="Statusinformationen Videoaufzeichnung" src="../_images/1000000000000394000000A6112D2D74.png" />
+<p>Der Dateiname
+jeder Videodatei wird mit einem Zeitstempel des Starts der Aufzeichnung
+versehen. D.h. der Start der Aufzeichnung der Videodatei
+<code class="file docutils literal notranslate"><span class="pre">Camera_Recording_20220711_104731.avi</span></code> war am 11.07.2022 um 10:47
+Uhr.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Zur Aufzeichnung der Videos wird der
+XVID-CoDec verwendet. Wenn Sie die Datei mit Ihrem
+Mediaplayer abspielen möchten, sollte dieser CoDec
+unterstützt werden oder auf Ihrem System installiert
+sein.</p>
+</div>
+</section>
+</section>
+<section id="kamera-einstellungen">
+<h2><span class="section-number">15.3. </span>Kamera Einstellungen<a class="headerlink" href="#kamera-einstellungen" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">15.3.1. </span>Einführung<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Die Qualität eines aufgenommenen Bildes wird beeinflusst durch eine an
+das Beobachtungsobjekt angepasste Beleuchtung und die richtige
+Einstellung der Kamera-Parameter. Im Folgenden geben wir Ihnen einen
+Überblick über die wichtigsten Kamera-Parameter die mit der Software
+verändert werden können.</p>
+<a class="reference internal image-reference" href="../_images/camera_settings.svg"><img alt="../_images/camera_settings.svg" class="align-left" src="../_images/camera_settings.svg" width="60" /></a>
+<p>Das Fenster zur Einstellung der Kameraparameter öffnen
+Sie über die Schaltfläche <em>Camera Settings</em> in der
+Werkzeugleiste des Kamera-Livebildes.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/10000000000000EF00000242417541CE.png" src="../_images/10000000000000EF00000242417541CE.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Exposure Settings</strong> - zum Festlegen der Belichtungseinstellungen</p></li>
+<li><p><strong>Camera Features</strong> - zum Anpassen der allgemeinen Kameraeinstellungen</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Je nach verwendetem Kameratyp (Direct
+Show, USB oder Firewire) oder Kameramodell kann sich
+die Darstellung des Camera Settings Dialogs mehr oder
+weniger stark unterscheiden.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Einige Kameras werden nicht durch den
+Camera Settings Dialog unterstützt und blenden zur
+Konfiguration ggf. ihr eigenes kameraspezifisches
+Konfigurationsfenster ein.</p>
+</div>
+</section>
+<section id="belichtungsparameter-einstellen">
+<h3><span class="section-number">15.3.2. </span>Belichtungsparameter einstellen<a class="headerlink" href="#belichtungsparameter-einstellen" title="Link to this heading"></a></h3>
+<p>Im Bereich <span class="guilabel">Exposure Settings</span> legen Sie die Belichtungszeit des CCD in
+der Kamera fest. Die Belichtungszeit kann manuell oder automatisch
+eingestellt werden. Wenn die automatische Einstellung aktiv ist (<em>Auto
+Exposure</em>), wird der Verschlusszeit automatisch an die Helligkeit des
+Beobachtungsobjektes angepasst.</p>
+</section>
+<section id="kamera-features-einstellen">
+<h3><span class="section-number">15.3.3. </span>Kamera-Features einstellen<a class="headerlink" href="#kamera-features-einstellen" title="Link to this heading"></a></h3>
+<p>Im Bereich <span class="guilabel">Camera Features</span> können Sie alle Einstellungen der in Ihrem
+System eingebauten Kamera verändern. Die Kamera-Features und deren
+Wertebereiche können je nach verwendetem Kameratyp variieren.</p>
+<img alt="../_images/10000201000000DC000001255CF2B007.png" src="../_images/10000201000000DC000001255CF2B007.png" />
+<p>Wenn ein Kamera-Feature einen automatischen Modus
+unterstützt, so können Sie zwischen manuellem und automatischem Modus
+umschalten <span class="guinum">❶</span>. Im manuellen Modus können Sie dann Wert über den
+Schieberegler oder das Werteingabefeld manuell einstellen <span class="guinum">❷</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Je nach verwendetem Kameratyp können sich
+die Einstellmöglichkeiten und Anzahl der
+konfigurierbaren Kamerafeatures unterscheiden.</p>
+</div>
+</section>
+</section>
+<section id="kamera-script-funktionen">
+<h2><span class="section-number">15.4. </span>Kamera Script-Funktionen<a class="headerlink" href="#kamera-script-funktionen" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">15.4.1. </span>Einführung<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>Das Kamera-Plugin enthält verschiedene Script-Funktionen zur
+Aufzeichnung von Videos und Einzelbildern.</p>
+<img alt="Kamera-Scriptfunktionen" src="../_images/100000000000011B000000A9B77908AD.png" />
+</section>
+<section id="einzelbildaufnahme-capture-image">
+<h3><span class="section-number">15.4.2. </span>Einzelbildaufnahme – <em>Capture Image</em><a class="headerlink" href="#einzelbildaufnahme-capture-image" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/camera.svg"><img alt="../_images/camera.svg" class="align-left" src="../_images/camera.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie ein Einzelbild des aktuellen
+Kamerabildes aufnehmen, und auf einem Datenträger speichern <span class="guinum">❶</span>. Im
+Konfigurationsbereich der Funktion <span class="guilabel">Image File</span> <span class="guinum">❷</span> geben Sie
+dafür den Dateipfad und den Namen der Bilddatei an.
+Anschließend können Sie festlegen, ob die Kameraparameter vor der
+Aufnahme unverändert gelassen werden (<span class="guinum">❷</span> <span class="guilabel">Keep Camera Settings</span>) oder ob
+die Kameraparameter auf vorher gespeicherten Werte eingestellt werden (<span class="guinum">❸</span>
+<span class="guilabel">Change Camera Settings</span>).</p>
+<figure class="align-default">
+<img alt="Capture Image Konfiguration" src="../_images/1000000000000203000000F6E0EBC144.png" />
+</figure>
+<p>Die aktuellen Kameraparameter können durch
+Drücken der Schaltfläche in <span class="guilabel">Capture current settings</span> als Parameter in
+der Funktion gespeichert werden, um sie dann vor der Bildaufnahme wieder
+in die Kamera schreiben zu können. Damit können Sie z.B.
+unterschiedliche Objekte mit völlig verschiedenen Kameraeinstellungen
+aufnehmen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Durch die Dateiendung der Bilddatei (<code class="file docutils literal notranslate"><span class="pre">.png</span></code> oder
+<code class="file docutils literal notranslate"><span class="pre">.jpg</span></code>) können Sie das entsprechende Bildformat auswählen.</p>
+</div>
+<p>Bei jeder Aufnahme wird ein Zeitstempel an den Dateinamen angehängt.
+D.h. Wenn Sie z.B. als Dateinamen <code class="file docutils literal notranslate"><span class="pre">Photo.jpg</span></code> konfiguriert haben, wird
+auf dem Datenträger dann z.B. die Datei <code class="file docutils literal notranslate"><span class="pre">Photo_20120921_154502.jpg</span></code> nach dem
+Syntax <strong>Name_YYYYMMDD_hhmmss.jpg</strong> gespeichert.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können in festen zeitlichen Intervallen
+Bilder von einem Objekt aufnehmen, um daraus mit dem
+<a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html#video-builder-plugin"><span class="std std-ref">Video Builder</span></a> später einen Zeitrafferfilm zu
+erstellen.</p>
+</div>
+</section>
+<section id="videoaufzeichnung-starten-start-video-recording">
+<h3><span class="section-number">15.4.3. </span>Videoaufzeichnung starten – <em>Start Video Recording</em><a class="headerlink" href="#videoaufzeichnung-starten-start-video-recording" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_run.svg"><img alt="../_images/videocamera_run.svg" class="align-left" src="../_images/videocamera_run.svg" width="60" /></a>
+<p>Mit dieser Funktion starten Sie die Aufzeichnung des
+Kamera-Livebildes in eine Videodatei. Die Aufzeichnung ist so lange
+aktiv, bis sie mit der Funktion <a class="reference internal" href="#videoaufzeichnung-beenden"><span class="std std-ref">Videoaufzeichnung beenden</span></a>
+gestoppt wird. Die Videoaufzeichnung wird automatisch gestoppt, wenn die
+Skriptausführung endet.</p>
+<p>Im Konfigurationsbereich konfigurieren Sie alle Parameter für die
+Videoaufzeichnung. Im Feld <span class="guilabel">Recording Session Name</span> <span class="guinum">❶</span> vergeben Sie
+einen eindeutigen Namen für diese Aufnahmesitzung. Dieser Name wird
+benötigt, um die Sitzung später mit der Funktion
+<a class="reference internal" href="#videoaufzeichnung-beenden"><span class="std std-ref">Videoaufzeichnung beenden</span></a> stoppen zu können.</p>
+<img alt="Konfiguration Skriptfunktion Start Video Recording" src="../_images/10000000000001F00000014BBF4C97A5.png" />
+<section id="video-einstellungen-konfigurieren">
+<h4>Video-Einstellungen konfigurieren<a class="headerlink" href="#video-einstellungen-konfigurieren" title="Link to this heading"></a></h4>
+<p>Im Bereich <span class="guilabel">Video Settings</span> konfigurieren Sie nun alle
+Video-Einstellungen. Klicken Sie die Schaltfläche mit dem
+Ordnersymbol <span class="guinum">❷</span> an, um einen Dateinamen und Speicherort für die
+Videodatei im Feld <span class="guilabel">Video Filename</span> zu wählen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Bei jeder Aufnahme wird ein Zeitstempel an
+den Dateinamen angehängt. D.h. Wenn Sie z.B. als
+Dateinamen <code class="file docutils literal notranslate"><span class="pre">Video.avi</span></code> konfigurieren, wird auf dem
+Datenträger die Datei <code class="file docutils literal notranslate"><span class="pre">Video_20130522_154502.avi</span></code>
+gespeichert.</p>
+</div>
+<p>Durch Anklicken von <span class="guilabel">Extended Settings</span> <span class="guinum">❸</span> können Sie weitere
+Einstellungen einblenden. Im Feld <span class="guilabel">Recording Frames per Second</span> stellen
+Sie die Anzahl der Bilder ein, die pro Sekunde aufgezeichnet werden
+sollen. Um später eine Echtzeitdarstellung zu erhalten, sollten Sie die
+aktuelle Kamera-Bildrate verwenden.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn Sie die Funktion neu erstellen, wird im
+Feld <span class="guilabel">Recording Frames per Second</span> stets die aktuelle
+Kamera-Bildrate eingetragen.</p>
+</div>
+<p>Wenn Sie langsamere Prozesse beobachten möchten, können Sie auch eine
+kleinere Bildrate für die Aufzeichnung wählen. Wenn Sie das Eingabefeld
+<span class="guilabel">Recording Seconds per frame</span> aktivieren, können Sie sehr langsame
+Aufzeichnungsraten wählen (mehreren Sekunden oder Minuten pro Bild).</p>
+<p>Dieser Modus eignet sich zur Erstellung von Zeitrafferaufnahmen von sehr
+langsamen Vorgängen. So können Sie z.B. über mehrere Tage, aller 30
+Minuten ein Bild aufnehmen, und diese Aufnahmen dann in einem Film mit
+einer Bildrate von 24 Bildern pro Sekunde abspielen.</p>
+<p>Im Feld <span class="guilabel">Playback Frame Rate (fps)</span> stellen Sie die Bildrate ein, mit
+der der Film später im Mediaplayer wiedergegeben wird. Im Bereich
+Videoproduktion oder Kinofilm ist eine Bildrate von 24 Bildern pro
+Sekunde Standard. Wenn Sie den Film in Echtzeit, d.h. mit seiner realen
+Aufnahmegeschwindigkeit wiedergeben wollen, sollten Sie hier eine
+Bildrate wählen, die der Aufzeichnungsbildrate entspricht.</p>
+</section>
+<section id="kamera-einstellungen-konfigurieren">
+<h4>Kamera-Einstellungen konfigurieren<a class="headerlink" href="#kamera-einstellungen-konfigurieren" title="Link to this heading"></a></h4>
+<p>Klicken Sie auf den Karteireiter <span class="guilabel">Camera Setup</span> <span class="guinum">❶</span> um die Bedienelemente
+zur Einstellung der Kamera-Parameter anzuzeigen.:</p>
+<img alt="Konfiguration Kameraparameter für Start Video Recording" src="../_images/10000000000001E1000000B61082E57D.png" />
+<p>Hier können Sie festlegen, ob die Kameraparameter vor der
+Aufnahme unverändert gelassen werden <span class="guinum">❷</span> <span class="guilabel">Keep Camera Settings</span> oder ob
+die Kameraparameter auf vorher gespeicherten Werte eingestellt werden <span class="guinum">❸</span>
+<span class="guilabel">Change Camera Settings</span>.</p>
+<p>Die aktuellen Kameraparameter können durch Drücken der Schaltfläche in
+<span class="guilabel">Capture current settings</span> als Parameter in der Funktion gespeichert
+werden, um sie dann vor der Bildaufnahme wieder in die Kamera schreiben
+zu können. Damit können Sie z.B. unterschiedliche Objekte mit völlig
+verschiedenen Kameraeinstellungen aufnehmen.</p>
+</section>
+</section>
+<section id="videosequenz-aufnehmen-record-video-sequence">
+<h3><span class="section-number">15.4.4. </span>Videosequenz aufnehmen – <em>Record Video Sequence</em><a class="headerlink" href="#videosequenz-aufnehmen-record-video-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_clock.svg"><img alt="../_images/videocamera_clock.svg" class="align-left" src="../_images/videocamera_clock.svg" width="60" /></a>
+<p>Verwenden Sie diese Funktion, um eine Videosequenz mit einer
+festgelegten Dauer aufzuzeichnen. In der Skriptfunktion konfigurieren
+Sie die gewünschte Aufnahmedauer, und die Aufnahme endet automatisch,
+nach dem Ablauf der Aufnahmezeit.</p>
+<p>Alle Videoeinstellungen und Kameraeinstellungen dieser Skript-Funktion
+sind identisch mit den Einstellungen der Funktion <a class="reference internal" href="#videoaufzeichnung-starten-start-video-recording"><span class="std std-ref">Videoaufzeichnung starten</span></a>.
+Zusätzlich können Sie bei dieser Funktion aber noch die Aufnahmedauer
+einstellen.</p>
+<img alt="Konfiguration Record Video Sequence Funktion" src="../_images/10000000000001FF000000B373DB4CAC.png" />
+<p>Wählen Sie
+dafür den Karteireiter <span class="guilabel">Rec. Duration</span> <span class="guinum">❶</span>. Nun können Sie die
+Aufnahmedauer sekundengenau einstellen <span class="guinum">❷</span>. Mit dem Auswahlfeld <span class="guilabel">Run to completion</span>
+<span class="guinum">❸</span> legen Sie fest, wann die Funktion beendet ist und die
+nächste Skriptfunktion ausgeführt wird:</p>
+<ul class="simple">
+<li><p><strong>Auswahlfeld aktiv</strong> - die nächste wird Funktion erst ausgeführt, wenn
+die Aufnahme abgeschlossen ist</p></li>
+<li><p><strong>Auswahlfeld inaktiv</strong> - die Aufnahme wird gestartet und dann sofort die
+Skriptausführung mit der nächsten Funktion fortgesetzt.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Die Aufnahme einer Videosequenz kann
+jederzeit durch den Aufruf der Funktion Stop Video
+Recording beendet werden.</p>
+</div>
+</section>
+<section id="videoaufzeichnung-beenden-stop-video-recording">
+<span id="videoaufzeichnung-beenden"></span><h3><span class="section-number">15.4.5. </span>Videoaufzeichnung beenden – <em>Stop Video Recording</em><a class="headerlink" href="#videoaufzeichnung-beenden-stop-video-recording" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/videocamera_stop.svg"><img alt="../_images/videocamera_stop.svg" class="align-left" src="../_images/videocamera_stop.svg" width="60" /></a>
+<p>Eine laufende Videoaufnahme die mit den Funktionen
+<a class="reference internal" href="#videoaufzeichnung-starten-start-video-recording"><span class="std std-ref">Videoaufzeichnung starten</span></a>
+oder <a class="reference internal" href="#videosequenz-aufnehmen-record-video-sequence"><span class="std std-ref">Videosequenz aufnehmen</span></a>
+gestartet wurde, kann mit dieser Funktion jederzeit beendet werden.
+Geben Sie dafür im Eingabefeld <span class="guilabel">Recording Session</span> einfach den Namen der
+Aufnahmesitzung ein, die Sie beenden möchten.</p>
+<img alt="Konfiguration Stop Video Recording Funktion" src="../_images/100000000000019D000000AF63421F29.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ledarray_DE/ledarray_DE.html" class="btn btn-neutral float-left" title="14. LED Array Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../imageanalysis_DE/imageanalysis_DE.html" class="btn btn-neutral float-right" title="16. Bildbetrachter / Bildanalyse Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

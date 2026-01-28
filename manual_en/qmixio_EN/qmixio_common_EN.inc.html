@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I/O Plugin &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">I/O Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="i-o-plugin">
+<h1>I/O Plugin<a class="headerlink" href="#i-o-plugin" title="Link to this heading"></a></h1>
+<section id="i-o-plugin-overview">
+<h2>I/O Plugin Overview<a class="headerlink" href="#i-o-plugin-overview" title="Link to this heading"></a></h2>
+<p>The I/O plugin is used to integrate various CETONI I/O modules into
+the CETONI Elements software and for displaying I/O channels of other
+devices like Nemaxys positioning systems or Nemesys syringe pumps.</p>
+<img alt="../_images/10000201000001F6000001EFFBB551A475EADF72.png" src="../_images/10000201000001F6000001EFFBB551A475EADF72.png" />
+</section>
+<section id="list-of-i-o-channels">
+<h2>List of I/O channels<a class="headerlink" href="#list-of-i-o-channels" title="Link to this heading"></a></h2>
+<p>All available I/O channels are shown in the I/O channels view.
+You can distinguish the different types of I/Os (AI: analogue input, AO:
+analogue output, DI: digital input, DO: digital output, Pressure:
+pressure sensor) by their symbols and names (see figure above). If the
+I/O list is not visible, you can display the window via the main menu of
+the application <span class="menuselection">Window → Show View → I/O Channels</span>.</p>
+<img alt="../_images/100002010000021B000000AB3B30B0CC6EFEE72A.png" src="../_images/100002010000021B000000AB3B30B0CC6EFEE72A.png" />
+<p>The following columns are present:</p>
+<ul class="simple">
+<li><p><strong>I/O Channel</strong> - contains the name of the I/O channel and displays a
+symbol for the channel type.</p></li>
+<li><p><strong>On</strong> – a lit green LED indicates that a channel is switched on and
+that a digital channel is 1 (instead of 0), respectively.</p></li>
+<li><p><strong>Actual Value</strong> - Shows the current value of the channel - in the case
+of output channels, this is the value that is output, and in the case
+of input channels the value read from the device.</p></li>
+</ul>
+<section id="channel-types">
+<h3>Channel types<a class="headerlink" href="#channel-types" title="Link to this heading"></a></h3>
+<p>The following types of channel are currently supported:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/analog_in.svg"><img alt="image1" src="../_images/analog_in.svg" width="40" /></a></p></td>
+<td><p>analog inputs (voltage and current)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/analog_out.svg"><img alt="image2" src="../_images/analog_out.svg" width="40" /></a></p></td>
+<td><p>analog outputs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/dig_in.svg"><img alt="image3" src="../_images/dig_in.svg" width="40" /></a></p></td>
+<td><p>digital inputs</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/dig_out.svg"><img alt="image4" src="../_images/dig_out.svg" width="40" /></a></p></td>
+<td><p>digital outputs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004C06000034EB000034EB3B64F50CF73C7319.svg"><img alt="image5" src="../_images/10004C06000034EB000034EB3B64F50CF73C7319.svg" width="40" /></a></p></td>
+<td><p>analog pressure sensor inputs</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100051AD000034EB000034EB615CA53F231E2071.svg"><img alt="image6" src="../_images/100051AD000034EB000034EB615CA53F231E2071.svg" width="40" /></a></p></td>
+<td><p>analog temperature sensor inputs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004C5E000034EB000034EB7FFDB68DD93E5C3E.svg"><img alt="image7" src="../_images/10004C5E000034EB000034EB7FFDB68DD93E5C3E.svg" width="40" /></a></p></td>
+<td><p>analog force sensor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100047B2000034EB000034EB7BBD43FF0627D5D3.svg"><img alt="image8" src="../_images/100047B2000034EB000034EB7BBD43FF0627D5D3.svg" width="40" /></a></p></td>
+<td><p>analog flow sensor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000030000000305963F73F938F8699.png"><img alt="image9" src="../_images/1000000000000030000000305963F73F938F8699.png" style="width: 40px;" /></a></p></td>
+<td><p>virtual channels</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grouped-display">
+<h3>Grouped display<a class="headerlink" href="#grouped-display" title="Link to this heading"></a></h3>
+<p>By default, the I/O channels are displayed in groups. This means that
+the channels of a certain device are grouped under the device name, so
+that a tree-like structure is created. I.e., you can show or hide the
+display of channels for certain devices, e.g. for the Nemesys pumps. In
+the following figure, for example, only the channels of the first
+Nemesys pump are displayed.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If you are still working with an older
+device configuration, you may have to save the device
+configuration in the Device Configurator again so that
+the I/O channels are displayed in groups.</p>
+</div>
+<p><img alt="Figure 2: Grouping of I/O channels" src="../_images/100002010000022A00000129BE2F20D0F3631291.png" /></p>
+<p>All I/O channels that do not
+belong to a specific device or channels of devices that do not yet
+support grouping are grouped together in the <em>Ungrouped Channels</em> group.</p>
+<p><img alt="Figure 3: Ungrouped Channels" src="../_images/1000020100000211000000EC8C1F3E3DFF5B05B5.png" /></p>
+<p>You can activate and deactivate the
+grouping of channels at any time. Simply right-click in the list of I/O
+channels and select <span class="guilabel">Group Channels</span> from the context menu (figure
+below).</p>
+<p><img alt="image13" src="../_images/10000201000000BA0000009AEFB00DBBC09E8A96.png" /></p>
+<p>If the channel grouping is deactivated, you get a flat
+display of the I/O channels in list form.</p>
+<p><img alt="Figure 4: Display of I/O channels without grouping." src="../_images/10000201000002410000010956222D3E3459DF4B.png" /></p>
+</section>
+<section id="search-i-o-channels">
+<h3>Search I/O channels<a class="headerlink" href="#search-i-o-channels" title="Link to this heading"></a></h3>
+<p>If you want to quickly search for a specific channel in the list,
+right-click in the first column (<em>I/O Channel</em>) and select
+<span class="guilabel">Search in column</span> from the context menu.</p>
+<p><img alt="image14" src="../_images/1000000000000164000000B8F8746536D6C09088.png" /></p>
+<p>A search dialog is displayed in which you can enter the
+search term. A list of possible hits is displayed as you enter the
+search term. If you select an entry, the corresponding channel is
+displayed in the I/O list and is highlighted in color.</p>
+</section>
+<section id="change-item-scaling">
+<h3>Change Item Scaling<a class="headerlink" href="#change-item-scaling" title="Link to this heading"></a></h3>
+<p>In order to increase clarity or improve readability, the display of the
+list entries can be switched between three sizes. To do this, choose
+<span class="guilabel">Set Item Scaling</span> from the context menu and then select the required
+size:</p>
+<img alt="../_images/100002010000022B000001231C920F293849CD41.png" src="../_images/100002010000022B000001231C920F293849CD41.png" />
+</section>
+</section>
+<section id="set-outputs">
+<h2>Set outputs<a class="headerlink" href="#set-outputs" title="Link to this heading"></a></h2>
+<p>The values of output channels can be changed by the user. Output
+channels include digital and analog output channels as well as virtual
+channels. Digital output channels can be switched on and off by clicking
+on the LED in the <em>On column</em> of the channel.</p>
+<p><img alt="Figure 6: Switching digital output channels on and off" src="../_images/10000201000001F1000000B04F8C214E5ED6F298.png" /></p>
+<p>Analog channels
+can also be switched on and off by clicking on the LED. If an analog
+channel is switched off, the value 0 is output. If an analog channel is
+switched on, the value from the <em>Value column</em> is output. If you want
+to change the analog value, simply double-click with the left mouse
+button in the value column of a channel, or select the value column of
+the channel and then start typing on the keyboard.</p>
+<p><img alt="Figure 7: Changing values of analog output channels" src="../_images/10000201000001F1000000B76EDE046BAAE032A0.png" /></p>
+<p>This also allows
+you to change the values of virtual channels.</p>
+</section>
+<section id="i-o-channel-configuration">
+<h2>I/O Channel Configuration<a class="headerlink" href="#i-o-channel-configuration" title="Link to this heading"></a></h2>
+<section id="changing-channel-captions">
+<h3>Changing channel captions<a class="headerlink" href="#changing-channel-captions" title="Link to this heading"></a></h3>
+<p>You can change the caption of each channel at any time, for example, to
+assign a memorable name suitable for your particular application. You
+may change a caption by the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Double-click</strong> the name you want to change.</p></li>
+<li><p>The name is now highlighted in yellow: Enter the new name (figure
+below).</p></li>
+<li><p>Complete your entry by pressing the <kbd class="kbd docutils literal notranslate">Return</kbd> key.</p></li>
+</ol>
+<p><img alt="Figure 8: Changing a channel name" src="../_images/1000020100000210000000CFEE86A61E8D9261A1.png" /></p>
+</section>
+<section id="activating-the-configuration-dialog">
+<h3>Activating the Configuration Dialog<a class="headerlink" href="#activating-the-configuration-dialog" title="Link to this heading"></a></h3>
+<p>In addition to customizing the name, for most I/O channels there are
+additional parameters that may be configured, such as the scaling of
+analog in- and outputs. You will find these configuration parameters in
+the respective configuration dialog of each channel.</p>
+<p><img alt="Figure 9: Opening the channel configuration panel" src="../_images/1000020100000210000000E26A44508AB4B23B66.png" /></p>
+<p>To open the
+configuration panel, right-click on the respective channel name from the
+I/O channel list and select the context menu item
+<span class="guilabel">Configure channel</span> (figure above).</p>
+</section>
+<section id="configuration-dialog">
+<h3>Configuration Dialog<a class="headerlink" href="#configuration-dialog" title="Link to this heading"></a></h3>
+<p>In the configuration dialog you can configure all accessible parameters
+of an analog in- and output channel:</p>
+<img alt="../_images/1000020100000212000001862DB8297006D93319.png" src="../_images/1000020100000212000001862DB8297006D93319.png" />
+<ol class="arabic guinums">
+<li><p>The title bar shows the name of the channel you are configuring.</p></li>
+<li><p>In the toolbar you can find the actions you can perform:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000046A00003505000035052554114A973E3AD6.svg"><img alt="image21" src="../_images/1000046A00003505000035052554114A973E3AD6.svg" width="40" /></a></p></td>
+<td><p><strong>Restore default settings</strong> By clicking this button,
+all parameters (channel name, decimal points, scaling,
+<em>etc</em>.) are reset to their original values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001183000034EB000034EBDFA4938505ACE302.svg"><img alt="image22" src="../_images/10001183000034EB000034EBDFA4938505ACE302.svg" width="40" /></a></p></td>
+<td><p><strong>Select Scaling Preset</strong> - opens a selection dialog
+with predefined <a class="reference internal" href="#scaling-presets">Scaling Presets</a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100002C1000035050000350588E8C4C80407FC4C.svg"><img alt="image23" src="../_images/100002C1000035050000350588E8C4C80407FC4C.svg" width="40" /></a></p></td>
+<td><p><strong>Reset Calibration</strong>- resets the calibration of the
+channel to the default settings (offset = 0, factor =
+1).</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Here you can configure the general settings of the channel, such as
+name, decimal places or unit of measurement:</p>
+<ul class="simple">
+<li><p><em>Caption</em> – Here you can set a new name for that channel, which is
+then displayed in the channel list.</p></li>
+<li><p><em>Measuring Unit</em>– Enter the measurement unit in which the measured
+values are displayed. The unit must be compatible with the basic
+unit of the channel or sensor. For example, you can use the units
+<strong>bar</strong>, <strong>psi</strong>, or <strong>Pa</strong> for a pressure measurement channel,
+but not the units <strong>mV</strong>, <strong>mA</strong> or <strong>kg</strong>. The software
+automatically converts the measured values of the sensor into the
+selected unit.</p></li>
+<li><p><em>Decimals</em> – This field is to set the number of decimal points of
+the scaled unit of measurement.</p></li>
+</ul>
+</li>
+<li><p>In the <em>Calibration</em> area, you can compensate measurement value
+deviations of channels by means of calibration.</p></li>
+<li><p>For channels that support the connection of sensors (for example,
+voltage or current measuring inputs), you can display the operating
+elements for configuring the scaling of the sensor. To do this, click
+<em>Sensor / Actuator Configuration</em>.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All changes will be activated only after
+being accepted by pressing <span class="guilabel">OK</span>. To cancel all
+changes use <span class="guilabel">Cancel</span>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Clicking <span class="guilabel">Restore default settings</span>
+will instantly reset all parameters to their original
+setting – clicking <span class="guilabel">OK</span> is not required.</p>
+</div>
+</section>
+</section>
+<section id="calibration">
+<h2>Calibration<a class="headerlink" href="#calibration" title="Link to this heading"></a></h2>
+<p>With the two-point calibration you can correct measurement deviations of
+a channel. To do this, you record the measured value of the channel at
+two points <span class="guinum">❶</span> and <span class="guinum">❷</span> <span class="guilabel">Value</span> and enter the actual corrected
+value of the channel for these points <span class="guilabel">Calibrated value</span>.
+The software calculates the slope (factor) and the offset of the scaling.</p>
+<p>If you click on the <span class="guilabel">Capture current channel value</span> <span class="guinum">❸</span> button,
+the current value of the channel is automatically entered into the <span class="guilabel">Value</span>
+field.</p>
+<img alt="../_images/100002010000024C000000FE0348D163BBF02B8A.png" src="../_images/100002010000024C000000FE0348D163BBF02B8A.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>All calibration values are entered in
+the configured unit of measurement. If you change the
+unit of measurement or the scaling of the channel, you
+must check the calibration and adjust it if necessary.</p>
+</div>
+</section>
+<section id="configure-sensor-scaling">
+<h2>Configure Sensor Scaling<a class="headerlink" href="#configure-sensor-scaling" title="Link to this heading"></a></h2>
+<section id="sensor-scaling-overview">
+<h3>Sensor Scaling Overview<a class="headerlink" href="#sensor-scaling-overview" title="Link to this heading"></a></h3>
+<p>For analogue channels that support the connection of sensors (such as
+voltage or current measurement inputs), you can configure
+sensor-specific scaling. This allows you to connect sensors to the
+analog inputs and then scale the measured values to the value range of
+the analog sensors and display them in the correct unit. To do this,
+click on <span class="guilabel">Scaling Configuration</span> in the configuration dialog.</p>
+<p><img alt="Figure 12: Configuration scaling parameters" src="../_images/10000201000002B700000137795168A3F5C0861B.png" /></p>
+</section>
+<section id="select-physical-quantity">
+<h3>Select Physical Quantity<a class="headerlink" href="#select-physical-quantity" title="Link to this heading"></a></h3>
+<p>In the <em>Physical Quantity</em> pane <span class="guinum">❶</span>, select the physical quantity to be
+measured with the sensor. If the desired sensor type is not supported in
+the <span class="guilabel">Type</span> selection box, simply select the <em>Custom</em> type for a
+user-specific scaling. For a pressure sensor you simply select the
+<em>Pressure</em> type.</p>
+<p>In the <span class="guilabel">Unit</span> input field, enter the basic unit of the sensor. When
+selecting a sensor type, a corresponding unit is already suggested to
+you. The unit must be compatible with the selected physical quantity
+(e.g., bar, psi, Pa or atm for pressure sensors).</p>
+</section>
+<section id="two-point-scaling">
+<h3>Two-Point Scaling<a class="headerlink" href="#two-point-scaling" title="Link to this heading"></a></h3>
+<p>The two-point scaling <span class="guinum">❷</span> is used to configure the conversion between the
+analog measured values of the I/O channel (for example in mV or mA) and
+the sensor readings of the sensor connected thereto (for example, bar or
+° C). Normally you will find these values in the data sheet of the
+sensor.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Currently, the software only supports
+linear scaling of measurement values.</p>
+</div>
+<p>For example, if you have a pressure sensor with an analog input range
+from 0.5 V to 4.5 V and a measurement range from 0 bar to 20 bar, you
+can enter the following parameters. Enter the I/O channel range 500 mV
+and 4500 mV in the first column (<em>Device value</em>) and the sensor range 0
+and 20 bar in the second column (<em>Scaled value</em>).</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Make sure that the units used correspond
+to the units in the data sheet of the sensor.</p>
+</div>
+</section>
+<section id="limits">
+<h3>Limits<a class="headerlink" href="#limits" title="Link to this heading"></a></h3>
+<p>In the <em>Limits</em> <span class="guinum">❸</span> pane you define the measuring range of the sensor. In
+many cases, this range matches the range that you entered in two-point
+scaling pane. Therefore, the values for the two-point scaling are
+automatically transferred to the range limits. Here, you can further
+restrict or change the value range.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Clicking <span class="guilabel">Restore default settings</span>
+will instantly reset all parameters to their original
+setting – clicking <span class="guilabel">OK</span> is not required.</p>
+</div>
+</section>
+<section id="user-specific-scaling">
+<h3>User-specific Scaling<a class="headerlink" href="#user-specific-scaling" title="Link to this heading"></a></h3>
+<p>If you are using a sensor which is not yet supported in the <span class="guilabel">Type</span>
+selection box, simply select the sensor type <span class="guilabel">Custom</span> <span class="guinum">❶</span>. In this case,
+the input field measuring unit <span class="guinum">❷</span> is grayed out, since automatic unit
+conversion is no longer possible.</p>
+<img alt="../_images/1000020100000293000001A7CF54CF7D61FB34F6.png" src="../_images/1000020100000293000001A7CF54CF7D61FB34F6.png" />
+</section>
+</section>
+<section id="scaling-presets">
+<h2>Scaling presets<a class="headerlink" href="#scaling-presets" title="Link to this heading"></a></h2>
+<p>Some analog input and output channels offer a choice of predefined
+configurations. These include pressure sensor configurations for the
+analog inputs of Nemesys syringe pump devices.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Predefined configurations are not
+offered by all analog channels. For those channels the
+menu item <span class="guilabel">Select scaling preset</span> is not displayed in
+the context menu.</p>
+</div>
+<p><img alt="Figure 14: Opening predefined configurations dialog" src="../_images/10000201000002010000010D504DB5DF96F402B1.png" /></p>
+<p>To select a
+predefined configuration proceed as follows, right-click the respective
+analog channel in order to show the context menu (see figure below).
+Choose <span class="guilabel">Select scaling preset.</span> A dialog containing a selection of
+scaling presets appears (figure below). Select the preset you are going
+to use and confirm your choice by left-clicking <span class="guilabel">Ok</span>.</p>
+<p><img alt="Figure 15: Selecting predefined configurations" src="../_images/100000000000022D0000015CEA4C9E2A9528BEA1.png" /></p>
+<p>To restore the default
+channel settings, simply click the menu item <span class="guilabel">Restore default settings</span>
+in the channel context menu (see figure below).</p>
+<img alt="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" src="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" />
+</section>
+<section id="virtual-channels">
+<h2>Virtual Channels<a class="headerlink" href="#virtual-channels" title="Link to this heading"></a></h2>
+<section id="creating-virtual-channels">
+<h3>Creating virtual channels<a class="headerlink" href="#creating-virtual-channels" title="Link to this heading"></a></h3>
+<p>The software allows the creation of virtual I/O channels. These channels
+are not assigned to a physical I/O device, but they are a kind of
+memory. You can write values into virtual channels and read them out
+later - just like a memory. Using these channels, you can, for example,
+show calculated values from a script in the graphical
+logger. You only have to create the channel, add the channel to the
+logger, and then you can write values from the script into the channel
+and you will see them in the graphical logger.</p>
+<p>To create a virtual channel, click with the right mouse button in the
+I/O channel list and select the context menu item
+<span class="guilabel">Create virtual channel</span>.</p>
+<p><img alt="Figure 17: Creating virtual channels" src="../_images/100002010000023A00000102ED9CC097AC4CA17D.png" /></p>
+<p>A virtual channel will then be
+added and you can configure the channel further - e.g. change the
+channel name. If channel grouping is active, all virtual channels are
+grouped together in the <em>Virtual Channels</em> group and inserted there when
+they are created.</p>
+<p><img alt="Figure 18: Virtual channels in the list of I/O channels" src="../_images/10000201000001EB000000BFAE47483A07671078.png" /></p>
+<p>If channel
+grouping is disabled, the newly created virtual channel is inserted at
+the end of the list.</p>
+</section>
+<section id="access-to-virtual-channels-from-a-script-program">
+<h3>Access to virtual channels from a script program<a class="headerlink" href="#access-to-virtual-channels-from-a-script-program" title="Link to this heading"></a></h3>
+<p>To access virtual channels out of script programs (read and
+write access), you can use the script functions from the category
+<a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#device-functions"><span class="std std-ref">Device Functions</span></a> (figure below).</p>
+<p><img alt="Figure 19: Read and write access to virtual channels" src="../_images/100002010000010B000000720E021D287C297538.png" /></p>
+</section>
+<section id="deleting-virtual-channels">
+<h3>Deleting virtual channels<a class="headerlink" href="#deleting-virtual-channels" title="Link to this heading"></a></h3>
+<p>To delete a virtual channel, click with the right mouse button on the
+channel in the I/O channel list, and then select from the context menu
+the item <span class="guilabel">Delete virtual channel</span> (figure below).</p>
+<p><img alt="Figure 20: Deleting virtual channels" src="../_images/10000000000001E8000000D1A8C8F0B61AD24CD2.png" /></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13. Balances Plugin &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="14. LED Array Plugin" href="../ledarray_EN/ledarray_EN.html" />
+    <link rel="prev" title="12. Rotaxys / Nemaxys Plugins" href="../rotaxys_EN/rotaxys_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Balances Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-balances-plugin">13.1. Introduction to Balances Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-of-sartorius-scales">13.2. Configuration of Sartorius Scales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#device-rs232-menu">13.2.1. Device / RS232 Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-usb-menu">13.2.2. Device / USB Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-out-com-sbi-menu">13.2.3. DATA.OUT. / COM. SBI Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-scale-to-a-cetoni-elements-device-configuration">13.3. Adding a scale to a CETONI Elements device configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operation">13.4. Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display-read-the-values">13.4.1. Display / Read the values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tare-balance">13.4.2. Tare balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">13. </span>Balances Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="balances-plugin">
+<h1><span class="section-number">13. </span>Balances Plugin<a class="headerlink" href="#balances-plugin" title="Link to this heading"></a></h1>
+<img alt="../_images/Balance_Header.png" src="../_images/Balance_Header.png" />
+<section id="introduction-to-balances-plugin">
+<h2><span class="section-number">13.1. </span>Introduction to Balances Plugin<a class="headerlink" href="#introduction-to-balances-plugin" title="Link to this heading"></a></h2>
+<p>This plugin is for integrating external laboratory balances into the
+software. The following devices are currently supported:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Manufacturer</p></th>
+<th class="head"><p>Supported Devices</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sartorius</p></td>
+<td><p>Entris, ED-, GK- and GW-scales</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configuration-of-sartorius-scales">
+<h2><span class="section-number">13.2. </span>Configuration of Sartorius Scales<a class="headerlink" href="#configuration-of-sartorius-scales" title="Link to this heading"></a></h2>
+<p>In order for the scale to work optimally with the software,
+please set the following parameters on the device:</p>
+<section id="device-rs232-menu">
+<h3><span class="section-number">13.2.1. </span>Device / RS232 Menu<a class="headerlink" href="#device-rs232-menu" title="Link to this heading"></a></h3>
+<p>In the DEVICE / RS232 menu, activate the following values marked in red:</p>
+<img alt="../_images/10000201000003DA000002F7CD3B422CA333C488.png" src="../_images/10000201000003DA000002F7CD3B422CA333C488.png" />
+</section>
+<section id="device-usb-menu">
+<h3><span class="section-number">13.2.2. </span>Device / USB Menu<a class="headerlink" href="#device-usb-menu" title="Link to this heading"></a></h3>
+<p>In the DEVICE / USB menu, activate the following values marked in red:</p>
+<img alt="../_images/10000201000003DA000002F7CD3B422CA333C488.png" src="../_images/10000201000003DA000002F7CD3B422CA333C488.png" />
+</section>
+<section id="data-out-com-sbi-menu">
+<h3><span class="section-number">13.2.3. </span>DATA.OUT. / COM. SBI Menu<a class="headerlink" href="#data-out-com-sbi-menu" title="Link to this heading"></a></h3>
+<p>In the DATA.OUT. / COM. SBI menu, activate the following values marked
+in red:</p>
+<img alt="../_images/10000201000003CC0000020A56B0A6CD74551F66.png" src="../_images/10000201000003CC0000020A56B0A6CD74551F66.png" />
+</section>
+</section>
+<section id="adding-a-scale-to-a-cetoni-elements-device-configuration">
+<h2><span class="section-number">13.3. </span>Adding a scale to a CETONI Elements device configuration<a class="headerlink" href="#adding-a-scale-to-a-cetoni-elements-device-configuration" title="Link to this heading"></a></h2>
+<p>In the <em>Device Configurator</em>, simply add a scale to the current device
+configuration using drag &amp; drop or double-click <span class="guinum">❶</span>. Then save the device
+configuration <span class="guinum">❷</span> and activate it by clicking the <span class="guilabel">Activate Configuration</span>
+button <span class="guinum">❸</span>.</p>
+<img alt="../_images/1000020100000327000001CE56CDCFBB84CBB896.png" src="../_images/1000020100000327000001CE56CDCFBB84CBB896.png" />
+</section>
+<section id="operation">
+<h2><span class="section-number">13.4. </span>Operation<a class="headerlink" href="#operation" title="Link to this heading"></a></h2>
+<section id="display-read-the-values">
+<h3><span class="section-number">13.4.1. </span>Display / Read the values<a class="headerlink" href="#display-read-the-values" title="Link to this heading"></a></h3>
+<p>For each balance that has been added to the device configuration, an
+analogue input channel is displayed in the list of I/O channels. In the
+picture below, this is the <span class="guilabel">Sartorius Balance 1</span> channel.</p>
+<img alt="../_images/1000020100000193000000C89CA159222396D53F.png" src="../_images/1000020100000193000000C89CA159222396D53F.png" />
+<p>This analogue channel shows the current value measured by the scale in
+the <em>Value</em> column. Like any other analogue channel, this channel can be
+added in the graphical logger or CSV logger or read in the script.</p>
+</section>
+<section id="tare-balance">
+<h3><span class="section-number">13.4.2. </span>Tare balance<a class="headerlink" href="#tare-balance" title="Link to this heading"></a></h3>
+<p>To tare the balance, right-click on the channel <span class="guinum">❶</span> and then select
+<span class="menuselection">Tare balance</span> <span class="guinum">❷</span> from the context menu.</p>
+<img alt="../_images/10000201000001DA000000CA6CD29A54C4B5F66A.png" src="../_images/10000201000001DA000000CA6CD29A54C4B5F66A.png" />
+<p>The taring of the scale can also be carried out in a script. To do this,
+add the script function <span class="guilabel">Device Functions –&gt; Write Device Property</span> <span class="guinum">❶</span> to
+the script. Configure this function so that the value 1 <span class="guinum">❷</span> is written to
+the property <code class="code docutils literal notranslate"><span class="pre">Tare</span></code> <span class="guinum">❸</span> of the scale channel (see figure below).</p>
+<img alt="../_images/100002010000030A0000016ABF280E02DB3E0E44.png" src="../_images/100002010000030A0000016ABF280E02DB3E0E44.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../rotaxys_EN/rotaxys_EN.html" class="btn btn-neutral float-left" title="12. Rotaxys / Nemaxys Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ledarray_EN/ledarray_EN.html" class="btn btn-neutral float-right" title="14. LED Array Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

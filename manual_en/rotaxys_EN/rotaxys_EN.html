@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotaxys / Nemaxys Plugins &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Rotaxys / Nemaxys Plugins</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rotaxys-nemaxys-plugins">
+<h1>Rotaxys / Nemaxys Plugins<a class="headerlink" href="#rotaxys-nemaxys-plugins" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>These plugins support the control and visualization of
+various CETONI positioning systems such as Rotaxys and Nemaxys devices.
+For each device a <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> is created that provides all UI elements
+to manually control a single device (see image below).</p>
+<img alt="../_images/10000201000003DC00000264E20C70B3.png" src="../_images/10000201000003DC00000264E20C70B3.png" />
+<p>You can show a View for a specific device via the main menu item
+<span class="menuselection">Window → Show View → Rotaxys</span> or
+<span class="menuselection">Window → Show View → Nemaxys</span> or via the corresponding
+buttons in the application <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#application-sidebar"><span class="std std-ref">Sidebar</span></a>.</p>
+<p>Such a view mainly consists of the following components:</p>
+<ol class="arabic simple guinums">
+<li><p>Toolbar</p></li>
+<li><p>Positioning map for XY positioning</p></li>
+<li><p>Control pad for manual control</p></li>
+<li><p>Z panel for positioning of Z axis (vertical axis)</p></li>
+<li><p>Sidebar</p></li>
+<li><p>Status Bar</p></li>
+</ol>
+</section>
+<section id="positioning-sidebar">
+<h2>Positioning Sidebar<a class="headerlink" href="#positioning-sidebar" title="Link to this heading"></a></h2>
+<img alt="../_images/10000201000000AF0000012F9C3F78B4.png" src="../_images/10000201000000AF0000012F9C3F78B4.png" />
+<p>In the sidebar, which can be turned on and turned off, you can
+find additional controls to configure and control your positioning
+systems. In the sidebar there is the <span class="guilabel">Velocities</span> panel where you can
+configure the velocities of all axes. All positionings in the
+<em>Positioning Map</em> or in the <em>Z-Panel</em> are then carried out with the set
+speeds.</p>
+</section>
+<section id="toolbar">
+<h2>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000CF90000388E0000388E1FD1A88B.svg"><img alt="image26" src="../_images/10000CF90000388E0000388E1FD1A88B.svg" width="40" /></a></p></td>
+<td><p>Hides or shows the sidebar with additional
+configuration and control elements</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000D410000388E0000388E35A2B3B1.svg"><img alt="image27" src="../_images/10000D410000388E0000388E35A2B3B1.svg" width="40" /></a></p></td>
+<td><p>Adjust the magnification of the positioning map so that
+the complete display fits into the working area.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100009990000388E0000388E1BA93A61.svg"><img alt="image28" src="../_images/100009990000388E0000388E1BA93A61.svg" width="40" /></a></p></td>
+<td><p>Changes the magnification of the positioning map to the
+actual pixel size</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100006470000388E0000388E347518E6.svg"><img alt="image29" src="../_images/100006470000388E0000388E347518E6.svg" width="40" /></a></p></td>
+<td><p>Increases the magnification factor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100005ED0000388E0000388ED759EE76.svg"><img alt="image30" src="../_images/100005ED0000388E0000388ED759EE76.svg" width="40" /></a></p></td>
+<td><p>Decreases the magnification factor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000D0D0000387200003872DC49EFEE.svg"><img alt="image31" src="../_images/10000D0D0000387200003872DC49EFEE.svg" width="40" /></a></p></td>
+<td><p>Switches between free positioning and well positioning
+(see section <a class="reference external" href="#anchor-2">1.5</a> - <a class="reference external" href="#anchor-2">Positioning
+Map</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10006A1200003872000038721E5AEA51.svg"><img alt="image32" src="../_images/10006A1200003872000038721E5AEA51.svg" width="40" /></a></p></td>
+<td><p>Adds the script function <em>Move XY</em> with the current XY
+position as target position parameter to the script
+editor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10004B2D000038720000387201D5E26F.svg"><img alt="image33" src="../_images/10004B2D000038720000387201D5E26F.svg" width="40" /></a></p></td>
+<td><p>Adds the script function <em>Move Z</em> with the current
+position of the Z axis as target position parameter to
+the script editor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000DBF0000388E0000388EA99541AC.svg"><img alt="image34" src="../_images/10000DBF0000388E0000388EA99541AC.svg" width="40" /></a></p></td>
+<td><p>Immediately stops the movement of all axes of the
+positioning system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B3C0000388E0000388EB899FB65.svg"><img alt="image35" src="../_images/10000B3C0000388E0000388EB899FB65.svg" width="40" /></a></p></td>
+<td><p>Activates / deactivates the lift axis safety stroke. If
+it is active, then the Z-axis moves to a safe height
+before each movement in the XY plane.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000C840000387200003872CDFFD2CA.svg"><img alt="image36" src="../_images/10000C840000387200003872CDFFD2CA.svg" width="40" /></a></p></td>
+<td><p>Sets the current Z-axis position as safe height. If the
+safety lift feature is active, then the positioning
+system moves to this height before each movement in the
+XY plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000DA30000388E0000388E5B234FC2.svg"><img alt="image37" src="../_images/10000DA30000388E0000388E5B234FC2.svg" width="40" /></a></p></td>
+<td><p>Configure zero angle - the zero angle is never crossed
+by the axis system and it is the start and end point of
+the 360 ° rotation range</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004F40000388E0000388E24B4D5C8.svg"><img alt="image38" src="../_images/100004F40000388E0000388E24B4D5C8.svg" width="40" /></a></p></td>
+<td><p>Find Home - Executes a reference move to find the home
+position of the device</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="control-pad">
+<h2>Control Pad<a class="headerlink" href="#control-pad" title="Link to this heading"></a></h2>
+<section id="rotaxys">
+<h3>Rotaxys<a class="headerlink" href="#rotaxys" title="Link to this heading"></a></h3>
+<p>With the 6-way control pad, you can manually position all the axes of
+the Rotaxys positioning system.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_left.svg"><img alt="image48" src="../_images/rotaxys_control_pad_left.svg" width="120" /></a></p></td>
+<td><p>Rotate the rotary axis counter-clockwise</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_right.svg"><img alt="image49" src="../_images/rotaxys_control_pad_right.svg" width="120" /></a></p></td>
+<td><p>Rotate the rotary axis clockwise</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_up.svg"><img alt="image50" src="../_images/rotaxys_control_pad_up.svg" width="120" /></a></p></td>
+<td><p>Move the radius axis away from the centre
+of rotation (increase radius)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_down.svg"><img alt="image51" src="../_images/rotaxys_control_pad_down.svg" width="120" /></a></p></td>
+<td><p>Move the radius axis toward the centre
+of rotation (decrease radius)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/rotaxys_control_pad_center.svg"><img alt="image52" src="../_images/rotaxys_control_pad_center.svg" width="120" /></a></p></td>
+<td><p>Move the vertical axis up and down</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nemaxys">
+<h3>Nemaxys<a class="headerlink" href="#nemaxys" title="Link to this heading"></a></h3>
+<p>With the 6-way control pad, you can manually position all the axes of
+the Nemaxys positioning system.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_left.svg"><img alt="image53" src="../_images/nemaxys_control_pad_left.svg" width="120" /></a></p></td>
+<td><p>Moves X-axis to the left</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_right.svg"><img alt="image54" src="../_images/nemaxys_control_pad_right.svg" width="120" /></a></p></td>
+<td><p>Moves X-axis to the right</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_up.svg"><img alt="image55" src="../_images/nemaxys_control_pad_up.svg" width="120" /></a></p></td>
+<td><p>Moves the Y-axis toward the back of the device</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_down.svg"><img alt="image56" src="../_images/nemaxys_control_pad_down.svg" width="120" /></a></p></td>
+<td><p>Moves the Y-axis toward the front of the device</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/nemaxys_control_pad_center.svg"><img alt="image57" src="../_images/nemaxys_control_pad_center.svg" width="120" /></a></p></td>
+<td><p>Move the vertical Z-axis up and down</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="changing-the-speed">
+<h3>Changing the speed<a class="headerlink" href="#changing-the-speed" title="Link to this heading"></a></h3>
+<p>When a direction is selected on the control pad, the corresponding
+axle is positioned at a fixed velocity. This velocity can be changed by
+simultaneously pressing a key on the keyboard. First press the key on
+the keyboard, and then click a direction button in the control cross.</p>
+<p>The following keys can be used:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000227000000DC165AEB92.png"><img alt="image62" src="../_images/1000000000000227000000DC165AEB92.png" style="width: 4.489cm;" /></a></p></td>
+<td><p>Shift key</p>
+<p>Increases the velocity by a fixed factor</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000000E9000000DA41A245E6.png"><img alt="image63" src="../_images/10000000000000E9000000DA41A245E6.png" style="width: 1.91cm;" /></a></p></td>
+<td><p>Control key</p>
+<p>Decreases the velocity be a fixed factor
+for precise, fine positioning</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Danger of damage through collision with
+the sample holder! For example, if there is a needle in
+a holder, ensure that moving the rotary or linear axis
+will not cause collisions when the tool tip is lowered.</p>
+</div>
+</section>
+</section>
+<section id="positioning-map">
+<h2>Positioning Map<a class="headerlink" href="#positioning-map" title="Link to this heading"></a></h2>
+<section id="introduction-to-positioning-map">
+<h3>Introduction to Positioning Map<a class="headerlink" href="#introduction-to-positioning-map" title="Link to this heading"></a></h3>
+<p>The positioning map is a top view of the XY plane of your axis system.
+It shows the travel range and and the worktable configuration of your device.</p>
+<img alt="../_images/positioning_map.png" src="../_images/positioning_map.png" />
+<p>With the positioning map you can position your axis system in the
+XY plane by clicking points on the positioning map. The magnification of
+the positioning map can be changed via the context menu in fixed steps
+or continuously adjusted with the mouse wheel.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E98AB541701.png"><img alt="image67" src="../_images/10000000000001EC000002E98AB541701.png" style="width: 2.5cm;" /></a></p></td>
+<td><p>Increase magnification (zoom in)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E9389967B01.png"><img alt="image68" src="../_images/10000000000001EC000002E9389967B01.png" style="width: 2.5cm;" /></a></p></td>
+<td><p>Decrease magnification (zoom out)</p></td>
+</tr>
+</tbody>
+</table>
+<p>For navigation within the positioning map you can also use the mouse.
+You can move the currently visible area with the two scroll bars on the
+right and bottom of the map Alternatively, you can also enable free
+mouse navigation mode. To do this, follow these steps:</p>
+<ol class="arabic steps">
+<li><p>Click the middle mouse button within the positioning map</p>
+<p><a class="reference internal" href="../_images/10000000000001EC000002E9F2BF71491.png"><img alt="image69" src="../_images/10000000000001EC000002E9F2BF71491.png" style="width: 2.5cm;" /></a></p>
+</li>
+<li><p>It is now displayed a navigation cross and the free
+navigation mode is activated</p>
+<p><img alt="image70" src="../_images/100002010000018300000083E415CE9E.png" /></p>
+</li>
+<li><p>You can now move the mouse to scroll the visible area of
+the positioning map. The further you move the mouse away from the
+on-screen navigation cross, the faster the positioning map is
+scrolled.</p></li>
+</ol>
+</section>
+<section id="positioning-modes">
+<h3>Positioning modes<a class="headerlink" href="#positioning-modes" title="Link to this heading"></a></h3>
+<p>The positioning map can be used in two different modes:</p>
+<ul class="simple">
+<li><p>Free positioning mode</p></li>
+<li><p>Container positioning mode</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/10000D0D0000387200003872DC49EFEE.svg"><img alt="../_images/10000D0D0000387200003872DC49EFEE.svg" class="align-left" src="../_images/10000D0D0000387200003872DC49EFEE.svg" width="60" /></a>
+<p>Switch between the two modes with the <em>Positioning Map</em>
+button in the toolbar or with the context menu of the positioning map.
+The current position of the device is indicated by a green cross
+on the positioning map (Figure below).</p>
+<img alt="../_images/100000000000021B000001883AC10950.png" src="../_images/100000000000021B000001883AC10950.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>In order to avoid collisions, the
+vertical axis always moves automatically into its
+topmost position before traveling to a position.</p>
+</div>
+</section>
+<section id="free-positioning-mode">
+<h3>Free positioning mode<a class="headerlink" href="#free-positioning-mode" title="Link to this heading"></a></h3>
+<img alt="../_images/100002010000026F00000160893A15AD.png" src="../_images/100002010000026F00000160893A15AD.png" />
+<p>With free positioning, you can travel
+to all positions within a permissible area. The permissible area is
+indicated by a green border  <span class="guinum">❹</span> (see Figure above). When you move the mouse,
+the potential target position <span class="guinum">❶</span> is indicated by a target cross
+consisting of two dashed lines. When you click the left mouse button on
+the target position, the positioning system travels to the selected
+position. The indicator of the current position <span class="guinum">❷</span> then moves to the
+target position <span class="guinum">❸</span>.</p>
+</section>
+<section id="container-positioning-mode">
+<h3>Container positioning mode<a class="headerlink" href="#container-positioning-mode" title="Link to this heading"></a></h3>
+<p>In this mode, simply click in one of the existing containers such as fluid tanks
+or single wells in a titerplate to position. As
+soon as you have clicked the target container, the system automatically moves
+to the centre of the selected container.</p>
+<img alt="../_images/10000000000001820000011C044844B8.png" src="../_images/10000000000001820000011C044844B8.png" />
+<p>The selected target container <span class="guinum">❶</span> is coloured with the current
+highlight color.</p>
+</section>
+<section id="open-context-menu">
+<h3>Open context menu<a class="headerlink" href="#open-context-menu" title="Link to this heading"></a></h3>
+<p>Right-click on the positioning map to open the context menu.</p>
+<img alt="../_images/100002010000026400000183CB728E2F.png" src="../_images/100002010000026400000183CB728E2F.png" />
+</section>
+</section>
+<section id="z-panel-for-positioning-the-z-axis">
+<h2>Z panel for Positioning the Z axis<a class="headerlink" href="#z-panel-for-positioning-the-z-axis" title="Link to this heading"></a></h2>
+<img alt="../_images/100002010000008400000179E985566C.png" src="../_images/100002010000008400000179E985566C.png" />
+<p>The Z panel on the right of the positioning map shows you the current
+position of the vertical axis, and gives you a number of ways of
+positioning the vertical axis. These are:</p>
+<ol class="arabic simple guinums">
+<li><p>Buttons for predefined positions (lower button and raise button)</p></li>
+<li><p>Height indicator (position lift axis)</p></li>
+<li><p>Slider to select the target position</p></li>
+<li><p>Graphical height indicator</p></li>
+</ol>
+<section id="z-panel-buttons-for-predefined-positions">
+<h3>Z panel Buttons for predefined Positions<a class="headerlink" href="#z-panel-buttons-for-predefined-positions" title="Link to this heading"></a></h3>
+<p>The two raise and lower buttons <span class="guinum">❶</span> (image above) simplify quick positioning of the
+vertical axis to previously defined positions. When you click one of the
+two buttons, the vertical axis travels at maximum velocity to the
+position previously defined for this button. With the two buttons you
+also define the travel range which can be selected with the position
+slider <span class="guinum">❸</span> .</p>
+<p>To assign the current position, right mouse click one of the two
+buttons, and then select <span class="menuselection">Assign actual position</span>
+from the context menu (see Figure below).</p>
+<img alt="../_images/10000201000001260000005F5060C7EB.png" src="../_images/10000201000001260000005F5060C7EB.png" />
+<p>The assigned position is saved in
+the configuration data, and is still present when the software is
+restarted. The configured travel range with maximum and minimum position
+is indicated in the graphic height indicator by two blue markings (see
+section <a class="reference internal" href="#height-indicator">Height Indicator</a>).</p>
+</section>
+<section id="height-indicator">
+<h3>Height Indicator<a class="headerlink" href="#height-indicator" title="Link to this heading"></a></h3>
+<p>The numerical height indicator shows you the current height of the axis
+in millimeters. A bar in the graphic display shows the current position
+of the axis within the range of travel.</p>
+<img alt="../_images/1000020100000077000000F2F26E6F5B.png" src="../_images/1000020100000077000000F2F26E6F5B.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Current position / height</strong> - the colored bar shows
+the current position of the axis</p></li>
+<li><p><strong>Software Limit Maximum</strong> - shows the maximum position you can
+select with the slider. The section <a class="reference external" href="#1.6.2.ButtonsforpredefinedPositions|outline">Buttons for predefined
+Positions</a>
+describes how to set the limit.</p></li>
+<li><p><strong>Software Limit Minimum</strong> - shows the minimum position you can
+select with the slider</p></li>
+<li><p><strong>Target selection mark</strong> - shows the potential target position,
+which becomes the target position by mouse click. The value for this
+position is displayed in the message window next to the marker</p></li>
+<li><p><strong>Target position</strong> - if you click with the mouse in the height
+display, a new target position is defined and the axis moves to this
+position. The new target position can only be within the software
+limits. If you click outside the limits, the axis moves to the
+corresponding limit.</p></li>
+<li><p><strong>Safe position for XY movement</strong> - indicates the safe position for
+XY movements for certain axis systems (e.g. rotAXYS). This means that
+if the axis is lower than this position, the axis is moved to this
+height before any XY movement.</p></li>
+</ol>
+</section>
+</section>
+<section id="status-bar">
+<h2>Status Bar<a class="headerlink" href="#status-bar" title="Link to this heading"></a></h2>
+<p>You can read the current XY position and the current status of the
+device in the status bar of the Rotaxys working area at all times.</p>
+<img alt="../_images/10000201000001A40000003D95DACEE7.png" src="../_images/10000201000001A40000003D95DACEE7.png" />
+</section>
+<section id="z-axis-safety-stroke">
+<h2>Z-Axis safety stroke<a class="headerlink" href="#z-axis-safety-stroke" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10000B3C0000388E0000388EB899FB65.svg"><img alt="../_images/10000B3C0000388E0000388EB899FB65.svg" class="align-left" src="../_images/10000B3C0000388E0000388EB899FB65.svg" width="60" /></a>
+<p>You can use this button in the toolbar to switch on and off
+the safety stroke of the Z-Axis. If it is active, then the Z-axis moves
+to a safe height before each movement in the XY plane. This prevents
+collisions with sample vessels or other objects on the worktable.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/10000C840000387200003872CDFFD2CA.svg"><img alt="../_images/10000C840000387200003872CDFFD2CA.svg" class="align-left" src="../_images/10000C840000387200003872CDFFD2CA.svg" width="60" /></a>
+<p>By pressing this button, you define the current position of
+the Z-axis as the clearance height. If the safety stroke is active, the
+positioning system will automatically go to this height before any XY
+positioning.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="configuring-well-plates-rotaxys">
+<h2>Configuring Well Plates (Rotaxys)<a class="headerlink" href="#configuring-well-plates-rotaxys" title="Link to this heading"></a></h2>
+<section id="introduction-to-well-plate-configuration">
+<h3>Introduction to Well Plate Configuration<a class="headerlink" href="#introduction-to-well-plate-configuration" title="Link to this heading"></a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This feature is available only for Rotaxys devices. If you have a Nemaxys
+or Rotaxys 360 device, then skip this section.</p>
+</div>
+<p>The <a class="reference internal" href="#positioning-map">Positioning Map</a> always shows the
+currently configured well plate. You can configure new well plates in
+the software and assign it to Rotaxys device. To do this, select the
+main menu item <span class="menuselection">Edit → Configure Well Plate</span> (see figure below).</p>
+<img alt="../_images/1000000000000185000000A437A90768.png" src="../_images/1000000000000185000000A437A90768.png" />
+<p>The configuration
+dialogue for well plates appears. This configuration dialogue is
+structured as follows (see figure below):</p>
+<ol class="arabic simple guinums">
+<li><p>list of available well plates</p></li>
+<li><p>configuration parameters of current plate</p></li>
+<li><p>graphical representation of the current well plate</p></li>
+</ol>
+</section>
+<section id="selecting-an-existing-well-plate">
+<h3>Selecting an existing well plate<a class="headerlink" href="#selecting-an-existing-well-plate" title="Link to this heading"></a></h3>
+<p>If the list of available well plates <span class="guinum">❶</span> already contains a suitable
+plate, simply select it by clicking on it and confirm the selection by
+clicking the <span class="guilabel">OK</span> button in the configuration dialogue.</p>
+<img alt="../_images/100000000000029A0000020185A439FC.png" src="../_images/100000000000029A0000020185A439FC.png" />
+</section>
+<section id="creating-a-new-well-plate">
+<h3>Creating a new well plate<a class="headerlink" href="#creating-a-new-well-plate" title="Link to this heading"></a></h3>
+<p>To create a new well plate, perform the following steps:</p>
+<ol class="arabic steps">
+<li><p>First you need to configure the well plate geometry in the
+<em>Wellplate geometry</em> panel <span class="guinum">❷</span>. You can configure the
+number of:guilabel <span class="guilabel">Rows</span> and
+<span class="guilabel">Columns</span> and the space between rows <span class="guilabel">Row Spacing</span> and
+columns <span class="guilabel">Column Spacing</span>. You will find the required data in
+the data sheet of the well plate.</p></li>
+<li><p>Next, configure the geometry of the cavities in the
+<em>Cavity geometry</em> panel. Define the size of the cavities
+<span class="guilabel">Cavity Size</span> and
+their depth <span class="guilabel">Cavity Height</span>. Use the selection field
+<span class="guilabel">Circular Cavities</span> to determine whether the new plate should
+have round or square cavities.</p></li>
+<li><p>Finally define the color of the new well plate. Choose the desired
+color in the <span class="guilabel">Color</span> selection box. If the right color is not
+available, select the entry <em>More…</em> The application shows a
+color selection dialogue (see figure below) that allows you to
+select any color.</p>
+<p><img alt="image82" src="../_images/1000000000000222000001B52D5E1599.png" /></p>
+</li>
+<li><p>Now click the <span class="guilabel">Add Well Plate</span> button to add the new
+plate to the list of available well plates. In the input dialogue
+that appears (see figure below), enter a unique name for the new
+well plate and press <kbd class="kbd docutils literal notranslate">Enter</kbd> or click <span class="guilabel">OK</span>.</p>
+<p><img alt="image83" src="../_images/10000000000000F6000000A48331D83C.png" /></p>
+</li>
+<li><p>The new well plate will be added to the list and can be
+selected from now on.</p></li>
+</ol>
+</section>
+</section>
+<section id="configuring-the-rotaxys-360-worktable">
+<h2>Configuring the Rotaxys 360 Worktable<a class="headerlink" href="#configuring-the-rotaxys-360-worktable" title="Link to this heading"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This feature is available only for Rotaxys 360 devices. If you have a Nemaxys
+or Rotaxys device, then skip this section.</p>
+</div>
+<section id="load-a-work-table-configuration">
+<h3>Load a work table configuration<a class="headerlink" href="#load-a-work-table-configuration" title="Link to this heading"></a></h3>
+<p>For the Rotaxys 360 positioning system, the individual microtiter plates
+can not yet be configured by the user, as with the Rotaxys positioning
+system. However, the Rotaxys 360 positioning system supports the loading
+of preconfigured work table configuration files, which describe the
+entire configuration of a particular workbench.</p>
+<p>To load a work table configuration, activate the graphical user
+interface of the corresponding Rotaxys 360 device. Then select
+<span class="menuselection">Device → rotAXYS 360 → Load Table Configuration</span>
+from the main menu.</p>
+<img alt="../_images/10000201000001F90000016C8210A438.png" src="../_images/10000201000001F90000016C8210A438.png" />
+<p>Then, in the file
+selection dialog that appears, select the configuration file for the
+work table and load it. The graphical representation of the work table
+is then immediately updated to the new configuration (see figure example
+configuration).</p>
+<img alt="../_images/100002010000029700000167F3466823.png" src="../_images/100002010000029700000167F3466823.png" />
+</section>
+<section id="restore-standard-work-table">
+<h3>Restore standard work table<a class="headerlink" href="#restore-standard-work-table" title="Link to this heading"></a></h3>
+<p>To restore the default work table, select
+<span class="menuselection">Device → rotAXYS 360 → Restore Default Table</span> from the main
+menu.</p>
+<img alt="../_images/10000201000001D2000000ACD92863B0.png" src="../_images/10000201000001D2000000ACD92863B0.png" />
+</section>
+</section>
+<section id="zero-angle-configuration">
+<h2>Zero angle configuration<a class="headerlink" href="#zero-angle-configuration" title="Link to this heading"></a></h2>
+<p>The Rotaxys 360 axis system has an operation angle which is
+theoretically greater than 360 degrees. In order to prevent entanglement
+of the hose for fluid dosing, the turning range is limited to 360 °.</p>
+<img alt="../_images/10000000000001F4000001F443D41FA1.png" src="../_images/10000000000001F4000001F443D41FA1.png" />
+<p>The zero angle ist the angle that
+will never be crossed by the positioning system. It is the start- and
+end-point of the 360° rotation range. If this angle is situated between
+two sample containers that you would like to process, the positioning
+system will choose the longer route in the opposite direction, so as not
+to cross the zero angle.</p>
+<a class="reference internal image-reference" href="../_images/10000DA30000388E0000388E5B234FC2.svg"><img alt="../_images/10000DA30000388E0000388E5B234FC2.svg" class="align-left" src="../_images/10000DA30000388E0000388E5B234FC2.svg" width="60" /></a>
+<p>You can move the zero angle to a different angular position
+in order to circumvent this problem. Press the button for zero angle
+configuration (image left) to set a new zero angle.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000015E00000176CAF82C1C.png"><img alt="image85" src="../_images/100000000000015E00000176CAF82C1C.png" style="width: 6.807cm;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/10000000000001F4000001F46EE2C177.png"><img alt="image86" src="../_images/10000000000001F4000001F46EE2C177.png" style="width: 6.807cm;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>In the dialog which is now displayed (see illustration above), you can
+freely set the zero angle in the range from 0 - 360 °.</p>
+</section>
+<section id="spacemouse-support">
+<h2>SpaceMouse Support<a class="headerlink" href="#spacemouse-support" title="Link to this heading"></a></h2>
+<img alt="../_images/10000000000001BC000001A5A84978561.png" src="../_images/10000000000001BC000001A5A84978561.png" />
+<p>The <a class="reference external" href="https://3dconnexion.com/us/product/spacemouse-compact/">SpaceMouse</a>
+is an intuitive input device which allows you to control all axes
+(rotation, radius and vertical axis) simultaneously. To use the SpaceMouse,
+connect it to an available USB port on your PC. Latest drivers can be found
+on our internet page:</p>
+<p><a class="reference external" href="http://www.cetoni.de/englisch/service/downloads_software.html">http://www.cetoni.de/englisch/service/downloads_software.html</a></p>
+<p>or on disk (CD or USB stick) you received when you purchased the
+software. Install the driver to use the SpaceMouse.</p>
+<img alt="../_images/1000000000000500000002D03030564E1.png" src="../_images/1000000000000500000002D03030564E1.png" />
+<p>Position the SpaceMouse device, so that the cable leads away from
+you and that the <strong>3D Connexion</strong> label is readable from your position.</p>
+</section>
+<section id="positioning-rotaxys-with-spacemouse">
+<h2>Positioning Rotaxys with SpaceMouse<a class="headerlink" href="#positioning-rotaxys-with-spacemouse" title="Link to this heading"></a></h2>
+<section id="rotaxys-spacemouse-overview">
+<h3>Rotaxys SpaceMouse Overview<a class="headerlink" href="#rotaxys-spacemouse-overview" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000000DF000000CCCD58FB2B.png"><img alt="image94" src="../_images/10000000000000DF000000CCCD58FB2B.png" style="width: 80px;" /></a></p></td>
+<td><p>Rotates the rotary axis clockwise or counter-clockwise</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000000000000116000000E97F22C9171.png"><img alt="image95" src="../_images/1000000000000116000000E97F22C9171.png" style="width: 80px;" /></a></p></td>
+<td><p>Moves the radius axis away from or towards to the
+centre of rotation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000009D000000DF60858E321.png"><img alt="image96" src="../_images/100000000000009D000000DF60858E321.png" style="width: 80px;" /></a></p></td>
+<td><p>Move the vertical axis up or down</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Don’t use the SpaceMouse if the
+software moves the positioning system (e.g., during
+active script execution), in order to not interrupt
+movements.</p>
+</div>
+</section>
+<section id="positioning-rotary-axis">
+<h3>Positioning rotary axis<a class="headerlink" href="#positioning-rotary-axis" title="Link to this heading"></a></h3>
+<p>In order to position the rotary axis, rotate the SpaceMouse cap
+clockwise or counter-clockwise.</p>
+<img alt="../_images/100000000000023C00000157E76FE648.png" src="../_images/100000000000023C00000157E76FE648.png" />
+<p>The speed of
+the axes can be determined by the strength of the deflection of the
+SpaceMouse cap. The harder you push or twist the cap, the faster
+the axes are moving. By a slight deflection of the cap, you can very
+finely and precisely control axis speeds.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The more you deflect the SpaceMouse
+cap, the higher are the axes speeds.</p>
+</div>
+</section>
+<section id="positioning-radius-axis">
+<h3>Positioning radius axis<a class="headerlink" href="#positioning-radius-axis" title="Link to this heading"></a></h3>
+<p>To move the radius-axis, slide the cap of the SpaceMouse to the
+front or rear. To move the radius-axis to the outer radius, press away
+the control element from you. To move the radius axis to the centre of
+the rotation axis, pull the cap to your direction.</p>
+<img alt="../_images/10000000000001BA0000016A872C4EFA.png" src="../_images/10000000000001BA0000016A872C4EFA.png" />
+</section>
+<section id="vertical-axis-positioning">
+<h3>Vertical axis positioning<a class="headerlink" href="#vertical-axis-positioning" title="Link to this heading"></a></h3>
+<p>To position the Z-axis, press down the cap or pull it to the top. The
+Z-axis is moved in the direction in which you move the control element
+of the SpaceMouse.</p>
+<img alt="../_images/1000000000000153000002091D224344.png" src="../_images/1000000000000153000002091D224344.png" />
+</section>
+</section>
+<section id="positioning-nemaxys-with-spacemouse">
+<h2>Positioning Nemaxys with SpaceMouse<a class="headerlink" href="#positioning-nemaxys-with-spacemouse" title="Link to this heading"></a></h2>
+<section id="nemaxys-spacemouse-overview">
+<h3>Nemaxys SpaceMouse Overview<a class="headerlink" href="#nemaxys-spacemouse-overview" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000000C40000008BD9BAE1821.png"><img alt="image103" src="../_images/10000000000000C40000008BD9BAE1821.png" style="width: 80px;" /></a></p></td>
+<td><p>Move X-axis to the left or right</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000000000000116000000E97F22C9171.png"><img alt="image104" src="../_images/1000000000000116000000E97F22C9171.png" style="width: 80px;" /></a></p></td>
+<td><p>Move Y-axis forwards or backwards</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000009D000000DF60858E321.png"><img alt="image105" src="../_images/100000000000009D000000DF60858E321.png" style="width: 80px;" /></a></p></td>
+<td><p>Positioning vertical Z-axis</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Don’t use the SpaceMouse if the
+software moves the positioning system (e.g., during
+active script execution), in order to not interrupt
+movements.</p>
+</div>
+</section>
+<section id="positioning-x-axis">
+<h3>Positioning X-axis<a class="headerlink" href="#positioning-x-axis" title="Link to this heading"></a></h3>
+<p>To control the X-axis movement, slide the SpaceMouse’s control in
+the desired direction. Push the controller to the left, to move the
+X-axis leftwards and push it to the right to move the axis rightwards.</p>
+<img alt="../_images/100000000000021E0000012A75C2B620.png" src="../_images/100000000000021E0000012A75C2B620.png" />
+<p>The speed of the
+axes can be determined by the strength of the deflection of the Space
+Navigator cap. The harder you push or twist the cap, the faster the axes
+are moving. By a slight deflection of the cap, you can very finely and
+precisely control axis speeds.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The more you deflect the SpaceMouse
+cap, the higher are the axes speeds.</p>
+</div>
+</section>
+<section id="positioning-y-axis">
+<h3>Positioning Y-axis<a class="headerlink" href="#positioning-y-axis" title="Link to this heading"></a></h3>
+<img alt="../_images/10000000000001BA0000016A872C4EFA.png" src="../_images/10000000000001BA0000016A872C4EFA.png" />
+<p>To move the Y-axis
+towards the back of the device, press the controller forward. To move
+the positioning system towards the front of the device, pull the
+controller towards you.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can control both directions at the same
+time if you move the controller forward or backward
+and to the left or right at the same time.</p>
+</div>
+</section>
+<section id="id1">
+<h3>Vertical axis positioning<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<img alt="../_images/1000000000000153000002091D224344.png" src="../_images/1000000000000153000002091D224344.png" />
+<p>To position the Z-axis, press down the cap or pull it to the top. The
+Z-axis is moved in the direction in which you move the control element
+of the SpaceMouse.</p>
+</section>
+</section>
+<section id="single-axis-control">
+<h2>Single Axis Control<a class="headerlink" href="#single-axis-control" title="Link to this heading"></a></h2>
+<p>In addition to the control of multi-axis systems the software also
+supports control of individual axis devices. This may be necessary if
+your axis system has additional tool axes (like second Z-axis or
+rotation axis) which are not part of the XYZ-multi-axis control.</p>
+<img alt="../_images/10000000000001DC000000DF02C90C52.png" src="../_images/10000000000001DC000000DF02C90C52.png" />
+<p>You can show / hide
+the window for single axis control via the main menu item
+<span class="menuselection">Window → Single Axis Control</span> (figure below).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The single axis control window is a tool
+window and can be freely placed in the application
+window and docked in all four side areas.</p>
+</div>
+<p>The following control elements are available in the single axis control
+window:</p>
+<ol class="arabic guinums">
+<li><p>Drop-down list <strong>Axis Device</strong> for selection of axis device to
+control.</p></li>
+<li><p>In the <strong>Position</strong> area a progress bar shows the actual position in
+the range between minimum and maximum axis position. You can move the
+axis by pressing the plus / minus buttons. The movements continues as
+long as the buttons are pressed and stops immediately if a button is
+released.</p>
+<img alt="../_images/10000000000001620000013436ED2B99.png" src="../_images/10000000000001620000013436ED2B99.png" />
+</li>
+<li><p>In the <strong>Velocity</strong> area you can adjust the speed of axis move.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>With the <a class="reference internal" href="#move-axis">Move Axis</a> script function you can control individual axes
+from a script program.</p>
+</div>
+</section>
+<section id="additional-functions">
+<h2>Additional Functions<a class="headerlink" href="#additional-functions" title="Link to this heading"></a></h2>
+<section id="calibrating-axis-system">
+<h3>Calibrating axis system<a class="headerlink" href="#calibrating-axis-system" title="Link to this heading"></a></h3>
+<p>If the travel path of an axis is blocked (for example in the event of a
+collision), the stepper motors in the device may “lose” steps, so that
+the position values are no longer displayed correctly. In this case, the
+axis system has to be calibrated. To start calibration, select the menu item
+in the main menu <span class="menuselection">Device → rotAXYS → Find Home</span>
+(see Figure below). If you have a neMAXYS system, you can start the
+calibration via  <span class="menuselection">Device → neMAXYS → Find Home</span>.</p>
+<img alt="../_images/10000201000001DD00000099ECA5B3B8.png" src="../_images/10000201000001DD00000099ECA5B3B8.png" />
+</section>
+</section>
+<section id="positioning-script-functions">
+<h2>Positioning Script Functions<a class="headerlink" href="#positioning-script-functions" title="Link to this heading"></a></h2>
+<p>The plugin offers a number of script functions
+required for integrating the cetoni positioning systems in the CETONI Elements
+scripting system. The following script functions are available:</p>
+<img alt="../_images/100002010000013E000000C4FF06E1BD.png" src="../_images/100002010000013E000000C4FF06E1BD.png" />
+<section id="move-xy">
+<h3>Move XY<a class="headerlink" href="#move-xy" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000668B0000388E0000388EDE73FA6F.svg"><img alt="../_images/1000668B0000388E0000388EDE73FA6F.svg" class="align-left" src="../_images/1000668B0000388E0000388EDE73FA6F.svg" width="60" /></a>
+<p>This function is used in a script to position an XY
+axis system in the XY plane. You can select an axis system <span class="guinum">❶</span> and the
+target position (X and Y positions) <span class="guinum">❷</span> in the configuration area of
+this function. Alternatively, you can move the axis system manually to a
+specific position (for example with the <a class="reference internal" href="#positioning-map"><span class="std std-ref">positioning map</span></a>),
+and then assign the current position values to the script function with the
+<span class="guilabel">Capture Actual Position</span> button (see Figure below).</p>
+<img alt="../_images/1000000000000222000001A467F71F03.png" src="../_images/1000000000000222000001A467F71F03.png" />
+<p>If you make no further
+adjustments, all positionings are carried out with the maximum possible
+speed. If you want to change velocities, you need to expand the
+<span class="guilabel">Axis Velocities</span> control by clicking it. This control panel <span class="guinum">❸</span>
+contains all control elements for entering velocity values for each single axis.</p>
+<p>Use the <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> check box to determine whether the next
+function</p>
+<ul class="simple">
+<li><p>will start immediately after the current positioning move started
+(<em>Run to completion</em> not checked)</p></li>
+<li><p>or if the next function is called after the target position has been
+reached (<em>Run to completion</em> checked).</p></li>
+</ul>
+</section>
+<section id="move-z">
+<h3>Move Z<a class="headerlink" href="#move-z" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100028D60000388E0000388E7FEE4E05.svg"><img alt="../_images/100028D60000388E0000388E7FEE4E05.svg" class="align-left" src="../_images/100028D60000388E0000388E7FEE4E05.svg" width="60" /></a>
+<p>This function can be used to position the
+vertical axis (Z-axis) of an axis system. You can enter the axis system
+<span class="guinum">❶</span> and the position parameters (Z position <span class="guinum">❷</span> and velocity <span class="guinum">❸</span>) in the
+configuration area of this function. Alternatively, you can move the
+Z-axis manually to a specific position (for example with the
+<a class="reference internal" href="#z-panel-for-positioning-the-z-axis"><span class="std std-ref">Z panel</span></a>), and then assign the
+current Z position to the script function with the
+<span class="guilabel">Capture Actual Position</span> button.</p>
+<img alt="../_images/10000000000001F80000011DC4B4D896.png" src="../_images/10000000000001F80000011DC4B4D896.png" />
+<p>If you make no further
+adjustments, the positioning is carried out with the maximum possible
+speed. If you want to change velocities, you need to expand the
+<span class="guilabel">Velocity</span> control <span class="guinum">❸</span> by clicking it. Another click on
+this element hides the velocity controls again.</p>
+<p>Use the <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> check box to determine
+whether the next function</p>
+<ul class="simple">
+<li><p>will start immediately after the current positioning move started
+(<em>Run to completion</em> not checked)</p></li>
+<li><p>or if the next function is called after the target position has been
+reached (<em>Run to completion</em> checked).</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If <span class="guilabel">Run to completion</span> is not activated,
+you can move several axes simultaneously. You can e.g.
+start positioning the XY-system, and while the XY-axes
+are moving, you can perform positioning with the
+Z-axis.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The input fields for configuring the
+speeds are hidden by default, and must be displayed by
+clicking the <span class="guilabel">Velocity</span> label.</p>
+</div>
+</section>
+<section id="find-home">
+<h3>Find Home<a class="headerlink" href="#find-home" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100004F40000388E0000388E24B4D5C8.svg"><img alt="../_images/100004F40000388E0000388E24B4D5C8.svg" class="align-left" src="../_images/100004F40000388E0000388E24B4D5C8.svg" width="60" /></a>
+<p>This function allows you to start a reference move from the
+script. The positioning system moves to its reference position and
+initializes its distance measuring system. The <span class="guilabel">Run to Completion</span>
+parameter allows you to select whether the function should be terminated
+after the start of the reference move or when the reference move has
+been completed.</p>
+</section>
+<section id="move-axis">
+<h3>Move Axis<a class="headerlink" href="#move-axis" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000083F0000388E0000388E79629C8E.svg"><img alt="../_images/1000083F0000388E0000388E79629C8E.svg" class="align-left" src="../_images/1000083F0000388E0000388E79629C8E.svg" width="60" /></a>
+<p>This function can be used to position a single
+axis device. Use the drop-down list <span class="guilabel">Axis device</span> <span class="guinum">❶</span> to
+select the axis to be moved. You can enter the parameters (position <span class="guinum">❷</span>
+and velocity <span class="guinum">❸</span>) in the configuration area of this function.
+Alternatively, you can move the axis manually to a specific position
+(for example with the <a class="reference internal" href="#single-axis-control"><span class="std std-ref">Single Axis Control Panel</span></a>),
+and then assign the current position to the script function with the
+<span class="guilabel">Capture Position</span> button.</p>
+<img alt="../_images/10000000000001F50000011DA0097ABC.png" src="../_images/10000000000001F50000011DA0097ABC.png" />
+<p>If you make no further
+adjustments, the positioning is carried out with the maximum possible
+speed. If you want to change velocity, you need to expand the <span class="guilabel">Velocity</span>
+control by clicking it. Another click on this element hides the velocity
+controls again.</p>
+<p>Use the <span class="guilabel">Run to completion</span> <span class="guinum">❹</span> check box to determine
+whether the next function</p>
+<ul class="simple">
+<li><p>will start immediately after the current positioning move started
+(<em>Run to completion</em> not checked)</p></li>
+<li><p>or if the next function is called after the target position has been
+reached (<em>Run to completion</em> checked).</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The input fields for configuring the
+speeds are hidden by default, and must be displayed by
+clicking the <span class="guilabel">Velocity</span> label.</p>
+</div>
+</section>
+<section id="move-to-container">
+<h3>Move to container<a class="headerlink" href="#move-to-container" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001F860000387200003872C360796C.svg"><img alt="../_images/10001F860000387200003872C360796C.svg" class="align-left" src="../_images/10001F860000387200003872C360796C.svg" width="60" /></a>
+<p>This function is used to move an axis system in the XY
+plane to the centre a specific container (beaker, fluid tank, cavity of
+a well plate).</p>
+<p>First you select the positioning device in the <span class="guilabel">XY Device</span> combo
+box <span class="guinum">❶</span> (figure below). Then you select the target container in the
+container selection combo box <span class="guinum">❷</span>. If the container has several
+cavities (e.g. the wells of a well plate), enter the column and row of
+the cavity in the <span class="guilabel">row</span> and <span class="guilabel">column</span> input fields
+<span class="guinum">❸</span>. The numbering
+starts at zero. That means, for a microwell plate with 12 columns and 8
+rows, you can enter values from 0 to 11 in the column input field and
+values from 0 to 7 in the row input field. If the container has only one
+single cavity (e.g. beaker or fluid tank) the input fields
+for row and column are greyed out.</p>
+<img alt="../_images/1000000000000235000001BE75B30F65.png" src="../_images/1000000000000235000001BE75B30F65.png" />
+<p>If you make no further
+adjustments, all positionings are carried out with the maximum possible
+speed. If you want to change velocities, you need to expand the
+<span class="guilabel">Axis Velocities</span> control by clicking it. This control panel
+<span class="guinum">❹</span> contains all control elements for entering velocity values for
+each single axis.</p>
+<p>Use the <span class="guilabel">Run to completion</span> <span class="guinum">❺</span> check box to determine
+whether the next function</p>
+<ul class="simple">
+<li><p>will start immediately after the current positioning move started
+(<em>Run to completion</em> not checked)</p></li>
+<li><p>or if the next function is called after the target position has been
+reached (<em>Run to completion</em> checked).</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use script variables in the row and
+column input fields. This allows you to process all
+wells of a well plate in a loop using the loop counter
+variables.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

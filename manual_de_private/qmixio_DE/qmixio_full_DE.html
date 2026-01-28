@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. I/O Plugin &mdash; CETONI Elements Privat Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="9. Controller Plugin" href="../qmixcontroller_DE/qmixcontroller_full_DE.html" />
+    <link rel="prev" title="7. Nemesys Plugin" href="../nemesys_DE/nemesys_full_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Privat Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. I/O Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfuhrung">8.1. Einführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#liste-der-i-o-kanale">8.2. Liste der I/O Kanäle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kanaltypen">8.2.1. Kanaltypen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gruppierung">8.2.2. Gruppierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-o-kanale-suchen">8.2.3. I/O Kanäle suchen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skalierung-andern">8.2.4. Skalierung ändern</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ausgange-setzen">8.3. Ausgänge setzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-kanal-konfiguration">8.4. I/O Kanal Konfiguration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kanalnamen-andern">8.4.1. Kanalnamen ändern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurationsdialog-aufrufen">8.4.2. Konfigurationsdialog aufrufen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurationsdialog">8.4.3. Konfigurationsdialog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kalibrierung">8.5. Kalibrierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensorskalierung-konfigurieren">8.6. Sensorskalierung konfigurieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">8.6.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#physikalische-messgrosze-wahlen">8.6.2. Physikalische Messgröße wählen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zweipunkt-skalierung">8.6.3. Zweipunkt-Skalierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limits">8.6.4. Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anwenderspezifische-skalierungen">8.6.5. Anwenderspezifische Skalierungen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vordefinierte-skalierungen-scaling-presets">8.7. Vordefinierte Skalierungen - Scaling Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtuelle-kanale-virtual-channels">8.8. Virtuelle Kanäle (Virtual Channels)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtuellen-kanal-anlegen">8.8.1. Virtuellen Kanal anlegen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zugriff-auf-virtuelle-kanale-aus-scriptprogrammen">8.8.2. Zugriff auf virtuelle Kanäle aus Scriptprogrammen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtuelle-kanale-loschen">8.8.3. Virtuelle Kanäle löschen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-script-funktionen">8.9. I/O Script-Funktionen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">8.9.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-digitalausgang-setzen-set-digital-out">8.9.2. Funktion Digitalausgang setzen - <em>Set Digital Out</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktion-analogausgang-setzen-set-analog-out">8.9.3. Funktion Analogausgang setzen - <em>Set Analog Out</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#unterstutzte-beckhoff-klemmen">8.10. Unterstützte Beckhoff Klemmen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#digitale-eingangsklemmen">8.10.1. Digitale Eingangsklemmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitale-ausgangsklemmen">8.10.2. Digitale Ausgangsklemmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analoge-eingangsklemmen">8.10.3. Analoge Eingangsklemmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analoge-ausgangsklemmen">8.10.4. Analoge Ausgangsklemmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spezielle-klemmen">8.10.5. Spezielle Klemmen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#beckhoff-klemmen-konfigurieren">8.11. Beckhoff Klemmen konfigurieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfuhrung-in-die-klemmenkonfiguration">8.11.1. Einführung in die Klemmenkonfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurationsoberflache">8.11.2. Konfigurationsoberfläche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eine-xml-klemmenbeschreibung-erstellen">8.11.3. Eine XML-Klemmenbeschreibung erstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitale-eingangsterminals">8.11.4. Digitale Eingangsterminals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_DE/python_DE.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">21. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">23. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">24. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">26. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Privat Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>I/O Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="i-o-plugin">
+<h1><span class="section-number">8. </span>I/O Plugin<a class="headerlink" href="#i-o-plugin" title="Link to this heading"></a></h1>
+<section id="einfuhrung">
+<h2><span class="section-number">8.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Das I/O Plugin dient zur Einbindung der I/O Module in die
+CETONI Elements Software und zur Anzeige von I/O Kanälen anderer Geräte wie
+z.B. Nemaxys / Rotaxys Positioniersystem oder Nemesys Spritzenpumpen.</p>
+<img alt="Liste der I/O Kanäle" src="../_images/10000201000001F6000001EFFBB551A475EADF72.png" />
+</section>
+<section id="liste-der-i-o-kanale">
+<h2><span class="section-number">8.2. </span>Liste der I/O Kanäle<a class="headerlink" href="#liste-der-i-o-kanale" title="Link to this heading"></a></h2>
+<p>Alle I/O Kanäle werden in der Liste der I/O Kanäle angezeigt. Die
+unterschiedlichen I/O-Typen (Analog Eingang, Analog Ausgang, Digital
+Eingang und Digital Ausgang) können Sie an den unterschiedlichen
+Symbolen vor dem Kanalnamen unterscheiden (siehe Abbildung). Wenn Sie
+die I/O Liste nicht sehen, können Sie das Fenster über das Hauptmenü der
+Anwendung <span class="menuselection">Window → Show View → I/O Channels</span> einblenden:</p>
+<img alt="../_images/100002010000021B000000AB3B30B0CC6EFEE72A.png" src="../_images/100002010000021B000000AB3B30B0CC6EFEE72A.png" />
+<p>Folgende Spalten sind vorhanden:</p>
+<ul class="simple">
+<li><p><strong>I/O Channel</strong>- enthält den Namen des I/O-Kanals und zeigt ein Symbol
+für den Kanaltyp an.</p></li>
+<li><p><strong>On</strong> - zeigt durch eine grüne LED, ob ein Kanal ein- oder
+ausgeschaltet ist bzw. ob ein Digital-Kanal 0 oder 1 gesetzt ist.</p></li>
+<li><p><strong>Actual Value</strong> - zeigt den aktuellen Wert des Kanals an. Bei
+Ausgangskanälen ist dies der Wert, der ausgegeben wird und bei
+Eingangskanälen der Wert, der vom Gerät gelesen wird.</p></li>
+</ul>
+<section id="kanaltypen">
+<h3><span class="section-number">8.2.1. </span>Kanaltypen<a class="headerlink" href="#kanaltypen" title="Link to this heading"></a></h3>
+<p>Die folgenden Kanaltypen werden im Moment unterstützt:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/analog_in.svg"><img alt="image1" src="../_images/analog_in.svg" width="40" /></a></p></td>
+<td><p>analoge Eingänge (Spannung oder Strom)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/analog_out.svg"><img alt="image2" src="../_images/analog_out.svg" width="40" /></a></p></td>
+<td><p>analoge Ausgänge</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/dig_in.svg"><img alt="image3" src="../_images/dig_in.svg" width="40" /></a></p></td>
+<td><p>digitale Eingänge</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/dig_out.svg"><img alt="image4" src="../_images/dig_out.svg" width="40" /></a></p></td>
+<td><p>digitale Ausgänge</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004C06000034EB000034EB3B64F50CF73C7319.svg"><img alt="image5" src="../_images/10004C06000034EB000034EB3B64F50CF73C7319.svg" width="40" /></a></p></td>
+<td><p>analoge Druckmesseingänge</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100051AD000034EB000034EB615CA53F231E2071.svg"><img alt="image6" src="../_images/100051AD000034EB000034EB615CA53F231E2071.svg" width="40" /></a></p></td>
+<td><p>analoge Temperaturmesseingänge</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10004C5E000034EB000034EB7FFDB68DD93E5C3E.svg"><img alt="image7" src="../_images/10004C5E000034EB000034EB7FFDB68DD93E5C3E.svg" width="40" /></a></p></td>
+<td><p>analoge Kraftsensoren</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100047B2000034EB000034EB7BBD43FF0627D5D3.svg"><img alt="image8" src="../_images/100047B2000034EB000034EB7BBD43FF0627D5D3.svg" width="40" /></a></p></td>
+<td><p>analoge Flusssensoren</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000030000000305963F73F938F8699.png"><img alt="image9" src="../_images/1000000000000030000000305963F73F938F8699.png" style="width: 40px;" /></a></p></td>
+<td><p>virtuelle Kanäle</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gruppierung">
+<h3><span class="section-number">8.2.2. </span>Gruppierung<a class="headerlink" href="#gruppierung" title="Link to this heading"></a></h3>
+<p>Standardmäßig werden die I/O Kanäle gruppiert angezeigt. D.h. die Kanäle
+eines bestimmten Gerätes sind unter dem Gerätenamen gruppiert, so dass
+eine baumartige Struktur entsteht. D.h., Sie können damit gezielt die
+Anzeige von Kanälen für bestimmte Geräte, z.B. für die Nemesys Pumpen,
+ein- und ausblenden. In der folgenden Abbildung werden z.B. nur die
+Kanäle der ersten Nemesys Pumpe angezeigt.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn Sie noch mit einer älteren
+Gerätekonfiguration arbeiten, müssen Sie ggf. die
+Gerätekonfiguration im Gerätekonfigurator erneut
+speichern, damit die I/O Kanäle gruppiert angezeigt
+werden.</p>
+</div>
+<img alt="Gruppierung der I/O Kanäle" src="../_images/100002010000022A00000129BE2F20D0F3631291.png" />
+<p>Alle I/O Kanäle, die nicht zu
+einem bestimmten Gerät gehören, bzw. Kanäle von Geräten, die noch keine
+Gruppierung unterstützen, werden in der Gruppe <em>Ungrouped Channels</em>
+zusammengefasst.</p>
+<img alt="Ungrouped Channels" src="../_images/1000020100000211000000EC8C1F3E3DFF5B05B5.png" />
+<p>Die Gruppierung der Kanäle können Sie
+jederzeit aktivieren und deaktivieren. Klicken Sie dafür einfach mit der
+rechten Maustaste in die Liste der I/O Kanäle und wählen Sie dann im
+Kontextmenü den Punkt <span class="guilabel">Group Channels</span> (Abbildung unten).</p>
+<img alt="../_images/10000201000000BA0000009AEFB00DBBC09E8A96.png" src="../_images/10000201000000BA0000009AEFB00DBBC09E8A96.png" />
+<p>Wenn die Gruppierung der Kanäle deaktiviert ist, erhalten Sie
+eine flache Darstellung der I/O-Kanäle in Listenform.</p>
+<img alt="Anzeige der I/O Kanäle ohne Gruppierung" src="../_images/10000201000002410000010956222D3E3459DF4B.png" />
+</section>
+<section id="i-o-kanale-suchen">
+<h3><span class="section-number">8.2.3. </span>I/O Kanäle suchen<a class="headerlink" href="#i-o-kanale-suchen" title="Link to this heading"></a></h3>
+<p>Wenn Sie in der Liste schnell nach einem bestimmten Kanal suchen
+möchten, klicken Sie mit der rechten Maustaste in die erste Spalte (<em>I/O
+Channel</em>) und wählen Sie aus dem Kontextmenü den Punkt <span class="guilabel">Search in column</span>.</p>
+<img alt="../_images/1000000000000164000000B8F8746536D6C09088.png" src="../_images/1000000000000164000000B8F8746536D6C09088.png" />
+<p>Es wird ein Suchdialog angezeigt, in dem Sie den Suchbegriff
+eingeben können. Bereits während der Eingabe wird Ihnen eine Liste der
+möglichen Treffer angezeigt. Wenn Sie einen Eintrag auswählen, wird der
+entsprechende Kanal in der I/O Liste angezeigt und farblich markiert.</p>
+</section>
+<section id="skalierung-andern">
+<h3><span class="section-number">8.2.4. </span>Skalierung ändern<a class="headerlink" href="#skalierung-andern" title="Link to this heading"></a></h3>
+<p>Um die Übersichtlichkeit zu erhöhen oder die Anzeige zu vergrößern, kann
+die Darstellung zwischen drei Größen umgeschaltet werden. Dafür wählen
+Sie aus dem Kontextmenü den Punkt <span class="guilabel">Set Item Scaling</span> und anschließend
+die gewünschte Größe:</p>
+<img alt="Skalierung der Darstellung ändern" src="../_images/100002010000022B000001231C920F293849CD41.png" />
+</section>
+</section>
+<section id="ausgange-setzen">
+<h2><span class="section-number">8.3. </span>Ausgänge setzen<a class="headerlink" href="#ausgange-setzen" title="Link to this heading"></a></h2>
+<p>Die Werte von Ausgangskanälen können vom Anwender geändert werden. Zu
+den Ausgangskanälen gehören z.B. digitale und analoge Ausgangskanäle
+sowie virtuelle Kanäle (<em>Virtual Channels)</em>. Digitale Ausgangskanäle
+können Sie ein- und ausschalten, indem Sie auf die LED in der <em>On</em>-Spalte
+des Kanals klicken.</p>
+<img alt="Digitale Ausgangskanäle ein- und ausschalten" src="../_images/10000201000001F1000000B04F8C214E5ED6F298.png" />
+<p>Analoge Kanäle können Sie ebenfalls durch Anklicken der LED ein- und
+ausschalten. Ist ein analoger Kanal ausgeschaltet, wird der Wert 0
+ausgegeben. Ist ein analoge Kanal eingeschaltet, wird der Wert in der
+Spalte <em>Value</em> ausgegeben. Möchten Sie die analogen Wert ändern, klicken
+Sie einfach mit der linken Maustaste doppelt in die Wert Spalte eines
+Kanals, oder wählen Sie die Wert-Spalte des Kanals aus und beginnen Sie
+anschließend mit der Eingabe auf der Tastatur.</p>
+<img alt="Werte von analogen Ausgangskanälen ändern" src="../_images/10000201000001F1000000B76EDE046BAAE032A0.png" />
+<p>Damit können Sie auch die Werte von virtuellen Kanälen ändern.</p>
+</section>
+<section id="i-o-kanal-konfiguration">
+<h2><span class="section-number">8.4. </span>I/O Kanal Konfiguration<a class="headerlink" href="#i-o-kanal-konfiguration" title="Link to this heading"></a></h2>
+<section id="kanalnamen-andern">
+<h3><span class="section-number">8.4.1. </span>Kanalnamen ändern<a class="headerlink" href="#kanalnamen-andern" title="Link to this heading"></a></h3>
+<p>Sie können den Namen jedes Kanals jederzeit ändern und, z.B., einen
+Namen vergeben, der zu Ihrer speziellen Anwendung passt. Ändern Sie den
+Namen mit folgenden Schritten:</p>
+<ol class="arabic simple steps">
+<li><p>Klicken Sie <strong>doppelt</strong> in die Tabellenzelle mit dem Namen, den Sie
+ändern möchten.</p></li>
+<li><p>Geben Sie den neuen Namen in das Editierfenster ein, welches nun
+eingeblendet wird (siehe Abbildung).</p></li>
+<li><p>Beenden Sie Ihre Eingabe durch Drücken der <kbd class="kbd docutils literal notranslate">Return</kbd>-Taste.</p></li>
+</ol>
+<img alt="Kanalnamen ändern" src="../_images/1000020100000210000000CFEE86A61E8D9261A1.png" />
+</section>
+<section id="konfigurationsdialog-aufrufen">
+<h3><span class="section-number">8.4.2. </span>Konfigurationsdialog aufrufen<a class="headerlink" href="#konfigurationsdialog-aufrufen" title="Link to this heading"></a></h3>
+<p>Für viele I/O Kanäle sind neben der Konfiguration des Kanalnamens noch
+weitere Konfigurationsmöglichkeiten vorhanden (z.B., Skalierung der
+analogen Ein- / Ausgänge). Diese Konfigurationseinstellungen finden Sie
+im Konfigurationsdialog des jeweiligen Kanals.</p>
+<img alt="Kanalkonfiguration aufrufen" src="../_images/1000020100000210000000E26A44508AB4B23B66.png" />
+<p>Den Dialog zur Konfiguration
+rufen Sie auf, indem Sie mit der rechten Maustaste auf einen Kanal in
+der Liste der I/O Kanäle klicken und dann den Menüpunkt <span class="guilabel">Configure channel</span>
+auswählen (Abbildung oben).</p>
+</section>
+<section id="konfigurationsdialog">
+<h3><span class="section-number">8.4.3. </span>Konfigurationsdialog<a class="headerlink" href="#konfigurationsdialog" title="Link to this heading"></a></h3>
+<p>Im Konfigurationsdialog können Sie alle Parameter der analogen Ein- und
+Ausgänge konfigurieren. Wenn Sie den Dialog öffnen, sehen Sie die
+folgenden Bedienelemente</p>
+<img alt="I/O Kanal Konfiguration" src="../_images/1000020100000212000001862DB8297006D93319.png" />
+<ol class="arabic guinums">
+<li><p>In der Titelzeile des Dialogs wird Ihnen der Name des Kanals
+angezeigt, den Sie konfigurieren.</p></li>
+<li><p>In der Werkzeugleiste können finden Sie die Aktionen, die Sie
+ausführen können:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000046A00003505000035052554114A973E3AD6.svg"><img alt="image21" src="../_images/1000046A00003505000035052554114A973E3AD6.svg" width="40" /></a></p></td>
+<td><p><strong>Restore default settings</strong> – durch Anklicken dieser
+Schaltfläche können sie alle Parameter (Kanalname,
+Nachkommastellen, Skalierung, <em>etc</em>…) wieder auf Ihre
+Standardwerte zurücksetzen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001183000034EB000034EBDFA4938505ACE302.svg"><img alt="image22" src="../_images/10001183000034EB000034EBDFA4938505ACE302.svg" width="40" /></a></p></td>
+<td><p><strong>Select Scaling Preset</strong> – öffnet ein Auswahldialog mit
+vordefinierten <a class="reference internal" href="#vordefinierte-skalierungen"><span class="std std-ref">Skalierungseinstellungen</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100002C1000035050000350588E8C4C80407FC4C.svg"><img alt="image23" src="../_images/100002C1000035050000350588E8C4C80407FC4C.svg" width="40" /></a></p></td>
+<td><p><strong>Reset Calibration</strong> – setzt die Kalibrierung des Kanals
+auf die Standardeinstellungen (Offset = 0, Faktor = 1)
+zurück.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Hier können Sie die allgemeinen Einstellungen des Kanals, wie Name,
+Dezimalstellen oder Maßeinheit konfigurieren:</p>
+<ul class="simple">
+<li><p><em>Caption</em> - hier können Sie einen neuen Kanalnamen vergeben, der
+dann in der Kanalliste angezeigt wird.</p></li>
+<li><p><em>Measuring Unit</em>– geben Sie in dieses Feld die Maßeinheit ein, in
+der die Messwerte angezeigt werden. Die Einheit muss kompatibel
+zur Basiseinheit des Kanals oder des Sensors sein. So können Sie
+z.B. für einen Druckmesskanal die Einheiten <strong>bar, psi</strong> oder
+<strong>Pa</strong> verwenden, aber nicht die Einheiten <strong>mV, mA</strong> oder
+<strong>kg</strong>. Die Software rechnet dann automatisch die Messwerte des
+Sensors in die gewählte Einheit um.</p></li>
+<li><p><em>Decimals</em> – in diesem Feld können Sie die Anzahl der Dezimal-
+oder Nachkommastellen festlegen, mit denen alle skalierten Werte
+angezeigt werden sollen.</p></li>
+</ul>
+</li>
+<li><p>Im Bereich Kalibrierung (<em>Calibration</em>) können Sie
+Messwertabweichungen von Kanälen durch Kalibrierung ausgleichen</p></li>
+<li><p>Bei Kanälen, die den Anschluss von Sensoren unterstützen (z.B. bei
+Spannungs- oder Strommesseingängen) können Sie hier die
+Bedienelemente zur Konfiguration der Skalierung des
+Sensors anzeigen. Klicken Sie dafür auf <em>Sensor / Actuator
+Configuration.</em></p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Alle Änderungen der Einstellungen werden erst
+nach dem Anklicken der Schaltfläche <span class="guilabel">OK</span> übernommen.
+Klicken Sie die Schaltfläche <span class="guilabel">Cancel</span>, werden alle
+Änderungen verworfen.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Beim Anklicken der Schaltfläche <span class="guilabel">Restore default settings</span>
+werden alle Einstellungen sofort
+zurückgesetzt. Ein Klick auf <span class="guilabel">OK</span> ist nicht
+erforderlich.</p>
+</div>
+</section>
+</section>
+<section id="kalibrierung">
+<h2><span class="section-number">8.5. </span>Kalibrierung<a class="headerlink" href="#kalibrierung" title="Link to this heading"></a></h2>
+<p>Mit der Zwei-Punkt-Kalibrierung können Sie Messabweichungen eines Kanals
+korrigieren. Dafür nehmen Sie an zwei Punkten <span class="guinum">❶</span> und <span class="guinum">❷</span> den Messwert des
+Kanals auf (<span class="guilabel">Value</span>), und geben für diese Punkte den tatsächlichen,
+korrigierten Wert des Kanals an (<span class="guilabel">Calibrated Value</span>). Die Software
+errechnet daraus den Anstieg (Faktor) und den Offset der Skalierung.</p>
+<p>Wenn Sie den die Schaltfläche <span class="guilabel">Capture current channel value</span> <span class="guinum">❸</span>
+anklicken, wird der aktuelle Wert des Kanals automatisch in das
+Messwertfeld <span class="guilabel">Value</span> eingetragen.</p>
+<img alt="Kalibrierung I/O Kanal" src="../_images/100002010000024C000000FE0348D163BBF02B8A.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Alle Werte der Kalibrierung werden in der
+konfigurierten Maßeinheit eingegeben. Wenn Sie die
+Maßeinheit oder die Skalierung des Kanals ändern,
+müssen Sie die Kalibrierung prüfen und ggf. anpassen.</p>
+</div>
+</section>
+<section id="sensorskalierung-konfigurieren">
+<h2><span class="section-number">8.6. </span>Sensorskalierung konfigurieren<a class="headerlink" href="#sensorskalierung-konfigurieren" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">8.6.1. </span>Einführung<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Bei analogen Kanälen, die den Anschluss von Sensoren unterstützen (z.B.
+bei Spannungs- oder Strommesseingängen) können Sie die sensorspezifische
+Skalierung konfigurieren. So können Sie, z.B., Sensoren an die analogen
+Eingänge anschließen und die Messwerte dann auf den Wertebereich der
+analogen Sensoren skalieren und in der richtigen Einheit anzeigen.
+Klicken Sie dafür im Konfigurationsdialog auf <span class="guilabel">Scaling Configuration</span>.</p>
+<img alt="Konfiguration der Skalierungsparameter" src="../_images/10000201000002B700000137795168A3F5C0861B.png" />
+</section>
+<section id="physikalische-messgrosze-wahlen">
+<h3><span class="section-number">8.6.2. </span>Physikalische Messgröße wählen<a class="headerlink" href="#physikalische-messgrosze-wahlen" title="Link to this heading"></a></h3>
+<p>Im Bereich <em>Physical Quantity</em> <span class="guinum">❶</span> wählen Sie die physikalische Messgröße
+aus, die mit dem Sensor gemessen werden soll. Wenn die gewünschte
+Messgröße in der <span class="guilabel">Type</span> Auswahlbox nicht unterstützt wird, wählen Sie
+einfach als Typ <em>Custom</em> aus, für eine eigene Skalierung. Für einen
+Drucksensor, wählen Sie z.B. den Typ <em>Pressure</em> aus.</p>
+<p>Im <span class="guilabel">Unit</span> Eingabefeld, geben Sie die Basiseinheit des Sensors ein. Bei
+der Auswahl eines Typs, wird Ihnen bereits eine entsprechende Einheit
+vorgeschlagen. Die Einheit muss kompatibel mit der gewählten
+physikalischen Messgröße sein (z.B. <em>bar, psi, Pa</em> oder <em>atm</em> für
+Drucksensoren).</p>
+</section>
+<section id="zweipunkt-skalierung">
+<h3><span class="section-number">8.6.3. </span>Zweipunkt-Skalierung<a class="headerlink" href="#zweipunkt-skalierung" title="Link to this heading"></a></h3>
+<p>Mit der Zweipunkt-Skalierung <span class="guinum">❷</span> konfigurieren Sie die Umrechnung zwischen
+den analogen Messwerten des I/O-Kanals (z.B. in mV oder mA) und den
+Sensormesswerten des daran angeschlossenen Sensors (z.B. bar oder °C).
+Normalerweise können Sie diese Werte direkt aus dem Datenblatt des
+betreffenden Sensors entnehmen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Im Moment unterstützt die Software nur die  lineare Skalierung von Messgrößen.</p>
+</div>
+<p>Haben Sie z.B. einen Drucksensor, der bei einem anlogen Eingangsbereich
+von 0,5 V bis 4,5 V einen Messbereich von 0 – 20 bar hat, dann geben Sie
+in der ersten Spalte (<em>Device value</em>) die 500 mV und 4500 mV ein und in
+der zweiten Spalte (<em>Scaled value</em>) die 0 und 20 bar.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Achten Sie darauf, dass die verwendeten
+Einheiten mit den Einheiten im Datenblatt des Sensors
+übereinstimmen.</p>
+</div>
+</section>
+<section id="limits">
+<h3><span class="section-number">8.6.4. </span>Limits<a class="headerlink" href="#limits" title="Link to this heading"></a></h3>
+<p>Im Bereich <em>Limits</em> <span class="guinum">❸</span> legen Sie den Messbereich des Sensors fest. In
+vielen Fällen stimmt dieser Bereich mit dem Bereich überein, den Sie in
+der Zweipunkt-Skalierung verwenden. Deshalb werden die Werte bei der
+Änderung der Zweipunktskalierung automatisch in den Bereich Limits
+übernommen. Hier können Sie den Wertebereich nachträglich noch weiter
+einschränken oder ändern.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Durch Klicken auf <span class="guilabel">estore default settings</span> werden alle Parameter
+sofort auf ihre ursprüngliche Einstellung zurückgesetzt. Das Klicken auf
+<span class="guilabel">OK</span> ist nicht erforderlich.</p>
+</div>
+</section>
+<section id="anwenderspezifische-skalierungen">
+<h3><span class="section-number">8.6.5. </span>Anwenderspezifische Skalierungen<a class="headerlink" href="#anwenderspezifische-skalierungen" title="Link to this heading"></a></h3>
+<p>Wenn Sie einen Sensor verwenden, der in der <span class="guilabel">Type</span> Auswahlbox noch nicht
+unterstützt wird, dann wählen Sie einfach den Sensortyp <span class="guilabel">Custom</span> <span class="guinum">❶</span> aus.
+In diesem Fall wird das Eingabefeld <em>Measuring unit</em> <span class="guinum">❷</span> ausgegraut, da
+keine automatische Einheitenumrechnung mehr möglich ist.</p>
+<img alt="Anwenderspezifische Skalierung" src="../_images/1000020100000293000001A7CF54CF7D61FB34F6.png" />
+</section>
+</section>
+<section id="vordefinierte-skalierungen-scaling-presets">
+<span id="vordefinierte-skalierungen"></span><h2><span class="section-number">8.7. </span>Vordefinierte Skalierungen - Scaling Presets<a class="headerlink" href="#vordefinierte-skalierungen-scaling-presets" title="Link to this heading"></a></h2>
+<p>Einige analoge Ein- und Ausgangskanäle bieten die Wahl vordefinierter
+Skalierungseinstellungen. Diese beinhalten Drucksensor-Konfigurationen für die
+Analogeingänge der Nemesys Spritzenpumpengeräte.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Nicht alle Kanäle verfügen über
+vordefinierte Skalierungseinstellungen, so dass der
+Menüpunkt <span class="guilabel">Select scaling preset</span> nur bei einigen
+Kanälen vorhanden ist.</p>
+</div>
+<img alt="Auswahl vordefinierter Konfigurationen" src="../_images/10000201000002010000010D504DB5DF96F402B1.png" />
+<p>Um eine vordefinierte Konfiguration zu übernehmen, klicken Sie mit der rechten
+Maustaste auf den entsprechenden Analogkanal, um das Kontextmenü anzuzeigen
+(siehe Abbildung unten). Wählen Sie <span class="guilabel">Select scaling preset</span>.
+s erscheint ein Dialog mit einer Auswahl von Skalierungsvoreinstellungen (siehe Abbildung unten).
+Wählen Sie die gewünschte Voreinstellung und bestätigen Sie Ihre Wahl mit einem
+Linksklick auf <span class="guilabel">OK</span>.</p>
+<img alt="Zurücksetzen auf Standardskalierung" src="../_images/100000000000022D0000015CEA4C9E2A9528BEA1.png" />
+<p>Um die Standardeinstellungen wiederherzustellen Kanaleinstellungen wiederherzustellen,
+klicken Sie einfach auf den Menüpunkt <span class="guilabel">Restore default settings</span> im
+Kontextmenü des Kanals (siehe Abbildung unten).</p>
+<img alt="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" src="../_images/1000020100000210000000E26F7EC82ABD40B5A3.png" />
+</section>
+<section id="virtuelle-kanale-virtual-channels">
+<h2><span class="section-number">8.8. </span>Virtuelle Kanäle (Virtual Channels)<a class="headerlink" href="#virtuelle-kanale-virtual-channels" title="Link to this heading"></a></h2>
+<section id="virtuellen-kanal-anlegen">
+<h3><span class="section-number">8.8.1. </span>Virtuellen Kanal anlegen<a class="headerlink" href="#virtuellen-kanal-anlegen" title="Link to this heading"></a></h3>
+<p>Die Software ermöglicht das Anlegen von virtuellen I/O Kanälen. Diese
+Kanäle sind keinem physischen I/O-Gerät zugeordnet, sondern eine Art
+Wertespeicher. Sie können die virtuellen Kanäle mit Werten beschreiben
+und diese Auslesen – genau wie bei einem Speicher. Mit Hilfe dieser
+Kanäle, können Sie z.B. berechnete Werte aus einem CETONI Elements Script
+im grafischen Logger anzeigen. Sie müssen nur den Kanal anlegen, im
+Logger den Kanal hinzufügen, und können dann Werte aus dem Script in den
+Kanal schreiben.</p>
+<p>Um einen virtuellen Kanal anzulegen, klicken Sie mit der rechten
+Maustaste in die I/O Kanalliste und wählen den Punkt <span class="guilabel">Create virtual channel</span>.</p>
+<img alt="Virtuelle Kanäle anlegen" src="../_images/100002010000023A00000102ED9CC097AC4CA17D.png" />
+<p>Es wird dann ein virtueller
+Kanal hinzugefügt und Sie können den Kanal nun weiter konfigurieren –
+z.B. den Kanalnamen ändern. Wenn die Gruppierung von Kanälen aktiv ist,
+werden alle virtuellen Kanäle in der Gruppe <em>Virtual Channels</em>
+zusammengefasst und beim Anlegen dort eingefügt.</p>
+<img alt="Gruppe mit virtuellen Kanälen" src="../_images/10000201000001EB000000BFAE47483A07671078.png" />
+<p>Wenn die Gruppierung von
+Kanälen deaktiviert ist, wird der neu erstellte virtuelle Kanal am Ender
+der Liste eingefügt.</p>
+</section>
+<section id="zugriff-auf-virtuelle-kanale-aus-scriptprogrammen">
+<h3><span class="section-number">8.8.2. </span>Zugriff auf virtuelle Kanäle aus Scriptprogrammen<a class="headerlink" href="#zugriff-auf-virtuelle-kanale-aus-scriptprogrammen" title="Link to this heading"></a></h3>
+<p>Um auf die virtuellen Kanäle aus Scriptprogrammen heraus zuzugreifen
+(Werte zu lesen und zu schreiben), können Sie die Funktionen aus der
+Kategorie <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#geratefunktionen"><span class="std std-ref">Gerätefunktionen</span></a> verwenden.</p>
+<img alt="Virtuelle Kanäle schreiben und lesen" src="../_images/100002010000010B000000720E021D287C297538.png" />
+</section>
+<section id="virtuelle-kanale-loschen">
+<h3><span class="section-number">8.8.3. </span>Virtuelle Kanäle löschen<a class="headerlink" href="#virtuelle-kanale-loschen" title="Link to this heading"></a></h3>
+<p>Zum Löschen eines virtuellen Kanals, klicken Sie mit der rechten
+Maustaste auf den Kanal, und wählen dann aus dem Kontextmenü den
+Menüpunkt <span class="guilabel">Delete virtual channel</span> (Abbildung unten).</p>
+<img alt="Virtuelle Kanäle löschen" src="../_images/10000000000001E8000000D1A8C8F0B61AD24CD2.png" />
+</section>
+</section>
+<section id="i-o-script-funktionen">
+<h2><span class="section-number">8.9. </span>I/O Script-Funktionen<a class="headerlink" href="#i-o-script-funktionen" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">8.9.1. </span>Einführung<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>Das I/O Plugin enthält Script-Funktionen zum Schalten der digitalen
+Ausgänge und zum Setzten von Ausgangswerten der analogen Ausgänge.</p>
+<img alt="I/O Script-Funktionen" src="../_images/1000020100000123000000778D7426E56265EAC3.png" />
+</section>
+<section id="funktion-digitalausgang-setzen-set-digital-out">
+<h3><span class="section-number">8.9.2. </span>Funktion Digitalausgang setzen - <em>Set Digital Out</em><a class="headerlink" href="#funktion-digitalausgang-setzen-set-digital-out" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000064300003505000035054FDB6D797453998C.svg"><img alt="../_images/1000064300003505000035054FDB6D797453998C.svg" class="align-left" src="../_images/1000064300003505000035054FDB6D797453998C.svg" width="60" /></a>
+<p>Verwenden Sie diese Funktion zum Setzen bzw. Löschen eines
+Digitalausgangs aus einem Script heraus. Wählen Sie im
+Konfigurationsbereich der Funktion den digitalen Kanal aus und stellen
+Sie dann den gewünschten Ausgangswert ein.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="funktion-analogausgang-setzen-set-analog-out">
+<h3><span class="section-number">8.9.3. </span>Funktion Analogausgang setzen - <em>Set Analog Out</em><a class="headerlink" href="#funktion-analogausgang-setzen-set-analog-out" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000F0E00003505000035054CE4E2663723FE52.svg"><img alt="../_images/10000F0E00003505000035054CE4E2663723FE52.svg" class="align-left" src="../_images/10000F0E00003505000035054CE4E2663723FE52.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie aus einem Script heraus einen
+Wert auf einen analogen Ausgangskanal schreiben. Wählen Sie dafür im
+Konfigurationsbereich den analogen Kanal aus und konfigurieren Sie dann
+den analogen Ausgangswert, der später beim Ausführen der Funktion
+gesetzt werden soll.</p>
+<p>Diese Funktion unterstützt die Verwendung von Variablen. D.h., im Feld
+<span class="guilabel">Value</span> können Sie, statt eines Wertes, den Namen einer Variablen
+eintragen, die den analogen Ausgangswert zur Laufzeit des Scripts
+enthält (siehe Abbildung unten). Diese Variable kann dann anschließend für
+Berechnungen oder zur Ausführung von wertbezogenen Funktionen verwendet werden.</p>
+<img alt="Set Analog Out Scriptkonfiguration" src="../_images/1000020100000218000000BA59FD4FDF9E3D6F7B.png" />
+</section>
+</section>
+<section id="unterstutzte-beckhoff-klemmen">
+<h2><span class="section-number">8.10. </span>Unterstützte Beckhoff Klemmen<a class="headerlink" href="#unterstutzte-beckhoff-klemmen" title="Link to this heading"></a></h2>
+<p>Das I/O-Plugin unterstützt das modulare CETONI QmixIO-B-Modul.</p>
+<img alt="../_images/QmixIO-B_IO-Module.jpg" src="../_images/QmixIO-B_IO-Module.jpg" />
+<p>Die folgende Liste zeigt alle Beckhoff Bussysteme, die von der Software
+unterstützt werden:</p>
+<section id="digitale-eingangsklemmen">
+<h3><span class="section-number">8.10.1. </span>Digitale Eingangsklemmen<a class="headerlink" href="#digitale-eingangsklemmen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/dig_in.svg"><img alt="../_images/dig_in.svg" class="align-left" src="../_images/dig_in.svg" width="60" /></a>
+<p>Die Software sollte mit allen
+<a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/">KL1xxx</a>
+digitalen Eingangsklemmen funktionieren. Die folgenden Klemmen wurden bereits mit dem
+dem I/O-Plugin getestet.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Terminal ID</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1104.html">KL1104</a></p></td>
+<td><p>4-Kanal-Digitaleingang 24 V DC, 3 ms, 2-/3-Leiteranschluss</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1124.html">KL1124</a></p></td>
+<td><p>4-Kanal-Digitaleingang 5 V DC</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1404.html">KL1404</a></p></td>
+<td><p>4-Kanal-Digitaleingang 24 V DC</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1408.html">KL1408</a></p></td>
+<td><p>8-Kanal-Digitaleingang 24 V DC</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl1xxx-digital-input/kl1862.html">KL1862</a></p></td>
+<td><p>16-Kanal-Digitaleingang 24 V DC, 3 ms, Flachbandkabelanschluss</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="digitale-ausgangsklemmen">
+<h3><span class="section-number">8.10.2. </span>Digitale Ausgangsklemmen<a class="headerlink" href="#digitale-ausgangsklemmen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/dig_out.svg"><img alt="../_images/dig_out.svg" class="align-left" src="../_images/dig_out.svg" width="60" /></a>
+<p>Die Software sollte mit allen
+<a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/">KL2xxx</a>
+digitalen Ausgangsklemmen funktionieren. Die folgenden Klemmen wurden bereits
+mit dem dem I/O-Plugin getestet.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Terminal ID</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2012.html">KL2012</a></p></td>
+<td><p>2-Kanal-Digitalausgang, 24 V DC, 0,5 A</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2022.html">KL2022</a></p></td>
+<td><p>2-Kanal-Digitalausgang, 24 V DC, 2 A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2114.html">KL2114</a></p></td>
+<td><p>4-Kanal-Digitalausgang, 24 VDC</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2124.html">KL2124</a></p></td>
+<td><p>4-Kanal-Digitalausgang, 5 V DC</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2404.html">KL2404</a></p></td>
+<td><p>4-Kanal-Digitalausgang, 24 V DC, 0,5 A, 2-Leiter-Anschluss</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2408.html">KL2408</a></p></td>
+<td><p>8-Kanal-Digitalausgang, 24 V DC, 0,5 A, 2-Leiter-Anschluss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2442.html">KL2442</a></p></td>
+<td><p>2 Kanal Digitalausgang, 24 V DC, 2 x 4 A/1 x 8 A</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2612.html">KL2612</a></p></td>
+<td><p>2-Kanal-Relaisausgang, 125 V AC/30 V DC</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2634.html">KL2634</a></p></td>
+<td><p>4-Kanal-Relaisausgang, 250 V AC/30 V DC</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2808.html">KL2808</a></p></td>
+<td><p>8-Kanal-Digitalausgang, 24V, 0,5 A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl2xxx-digital-output/kl2872.html">KL2872</a></p></td>
+<td><p>16-Kanal-Digitalausgang, 24V, 0,5 A, Flachbandkabel</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analoge-eingangsklemmen">
+<h3><span class="section-number">8.10.3. </span>Analoge Eingangsklemmen<a class="headerlink" href="#analoge-eingangsklemmen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/analog_in.svg"><img alt="../_images/analog_in.svg" class="align-left" src="../_images/analog_in.svg" width="60" /></a>
+<p>Die folgenden analogen Eingangsklemmen werden vom E/A-Plugin unterstützt:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Terminal ID</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3021.html">KL3021</a></p></td>
+<td><p>1-Kanal-Analogeingang 4..20mA - 0,3% 12Bit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3022.html">KL3022</a></p></td>
+<td><p>2-Kanal-Analogeingang 4…20 mA, 12 Bit, differenziell</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3054.html">KL3054</a></p></td>
+<td><p>4-Kanal-Analogeingang 4..20mA - 12 Bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3102.html">KL3102</a></p></td>
+<td><p>2-Kanal-Analogeingang -10V..+10V</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3152.html">KL3152</a></p></td>
+<td><p>2-Kanal-Analogeingang 4..20mA - 0.05% 16 Bit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3162.html">KL3162</a></p></td>
+<td><p>2-Kanal-Analogeingang 0..10V - 0.05% 16 Bit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3201.html">KL3201</a></p></td>
+<td><p>1-Kanal PT100 RTD</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3202.html">KL3202</a></p></td>
+<td><p>2-Kanal PT100 RTD</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3204.html">KL3204</a></p></td>
+<td><p>4-Kanal PT100 RTD</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3214.html">KL3214</a></p></td>
+<td><p>4-Kanal PT100 RTD 3-Draht-Verbindung</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3222.html">KL3222</a></p></td>
+<td><p>2-Kanal PT100 RTD, hochpräzise</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3312.html">KL3312</a></p></td>
+<td><p>2-Kanal-Thermoelement-Eingang</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3314.html">KL3314</a></p></td>
+<td><p>4-Kanal-Thermoelement-Eingang</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3404.html">KL3404</a></p></td>
+<td><p>4-Kanal-Analogeingang -10V..+10V, 12 Bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3408.html">KL3408</a></p></td>
+<td><p>8-Kanal-Analogeingang -10V..+10V, 12 Bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3444.html">KL3444</a></p></td>
+<td><p>4-Kanal-Analogeingang 0..20mA, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3454.html">KL3454</a></p></td>
+<td><p>4-Kanal-Analogeingang 4..20mA, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3464.html">KL3464</a></p></td>
+<td><p>4-Kanal-Analogeingang 0..10V, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl3xxx-analog-input/kl3468.html">KL3468</a></p></td>
+<td><p>8-Kanal-Analogeingang 0..10V, 12 bit, single-ended</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analoge-ausgangsklemmen">
+<h3><span class="section-number">8.10.4. </span>Analoge Ausgangsklemmen<a class="headerlink" href="#analoge-ausgangsklemmen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/analog_out.svg"><img alt="../_images/analog_out.svg" class="align-left" src="../_images/analog_out.svg" width="60" /></a>
+<p>Die folgenden analogen Ausgangsklemmen werden vom I/O-Plugin unterstützt:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Terminal ID</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4002.html">KL4002</a></p></td>
+<td><p>2-Kanal-Analogausgang 0..10, 12 Bit, differenziell</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4004.html">KL4004</a></p></td>
+<td><p>4-Kanal-Analogausgang 0..10, 12 Bit, differenziell</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4022.html">KL4022</a></p></td>
+<td><p>2-Kanal-Analogausgang 4..20mA, 12 Bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4112.html">KL4112</a></p></td>
+<td><p>2-Kanal-Analogausgang 0..20mA, 16 bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4132.html">KL4132</a></p></td>
+<td><p>2-Kanal-Analogausgang -10..10V, 16 bit, differenziell</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4404.html">KL4404</a></p></td>
+<td><p>4-Kanal-Analogausgang 0..10V, 12 Bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4408.html">KL4408</a></p></td>
+<td><p>8-Kanal-Analogausgang 0..10V, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4414.html">KL4414</a></p></td>
+<td><p>4-Kanal-Analogausgang 0..20mA, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4424.html">KL4424</a></p></td>
+<td><p>4-Kanal-Analogausgang 4..20mA, 12 bit, single-ended</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/en-en/products/i-o/bus-terminals/kl4xxx-analog-output/kl4434.html">KL4434</a></p></td>
+<td><p>4-Kanal-Analogausgang -10V..+10V, 12 bit, single-ended</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spezielle-klemmen">
+<h3><span class="section-number">8.10.5. </span>Spezielle Klemmen<a class="headerlink" href="#spezielle-klemmen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/special_terminals.svg"><img alt="../_images/special_terminals.svg" class="align-left" src="../_images/special_terminals.svg" width="60" /></a>
+<p>Die folgenden speziellen Klemmen werden vom I/O-Plugin unterstützt:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Terminal ID</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.beckhoff.com/en-gb/products/i-o/bus-terminals/kl1xxx-digital-input/kl1501.html">KL1501</a></p></td>
+<td><p>1-Kanal-Digitaleingang, Zähler, 24 V DC, 100 kHz</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.beckhoff.com/de-de/produkte/i-o/busklemmen/kl3xxx-analog-eingang/kl3356.html">KL3356</a></p></td>
+<td><p>1-Kanal-Analog-Eingang, Messbrücke, Vollbrücke, 16 Bit</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="beckhoff-klemmen-konfigurieren">
+<h2><span class="section-number">8.11. </span>Beckhoff Klemmen konfigurieren<a class="headerlink" href="#beckhoff-klemmen-konfigurieren" title="Link to this heading"></a></h2>
+<section id="einfuhrung-in-die-klemmenkonfiguration">
+<h3><span class="section-number">8.11.1. </span>Einführung in die Klemmenkonfiguration<a class="headerlink" href="#einfuhrung-in-die-klemmenkonfiguration" title="Link to this heading"></a></h3>
+<p>Die I/O-Klemmen von Beckhoff können über ihre Klemmenregister parametriert und
+konfiguriert werden. Die einzelnen Klemmen werden vor der Lieferung von
+CETONI konfiguriert, parametriert und getestet. Unter Umständen kann es aber
+erforderlich werden, die Klemmenkonfiguration nachträglich anzupassen - z.B.
+zur Auswahl eines anderen Sensortyps, zur Änderung der Skalierung oder zum
+Aktivieren / Deaktivieren der automatischen Kalibrierung.</p>
+<p>Zur Konfiguration der Klemmen können Sie sich in der Software den View
+<span class="guilabel">Beckhoff Devices</span> verwenden. Den View können Sie über das Hauptmenü
+mit dem Menüpunkt <span class="menuselection">Window → Show View → Beckhoff Devices</span>
+einblenden.</p>
+</section>
+<section id="konfigurationsoberflache">
+<h3><span class="section-number">8.11.2. </span>Konfigurationsoberfläche<a class="headerlink" href="#konfigurationsoberflache" title="Link to this heading"></a></h3>
+<p>Die Konfigurationsoberfläche ermöglicht Ihnen den Zugriff auf die Parameter
+einzelner Klemmen. Wenn Sie über mehrere QmixIO-B oder Beckhoff Module
+verfügen, wählen Sie zuerst in der Auswahlbox <span class="guilabel">Device</span> <span class="guinum">❶</span> das
+Gerät aus, welches die Klemme enthält, die konfiguriert werden soll.</p>
+<img alt="../_images/beckhoff_terminal_config.png" src="../_images/beckhoff_terminal_config.png" />
+<p>Jetzt können Sie im Auswahlfeld <span class="guilabel">Terminal</span> <span class="guinum">❸</span> die Klemme
+auswählen, die Sie parametrieren wollen. Die Reihenfolge der Klemmen in der
+Auswahlbox entspricht dabei der Reihenfolge der Klemmen auf dem Gerät von
+links nach rechts beginnend beim Buskoppler.</p>
+<p>Im Bereich <span class="guilabel">Register</span> <span class="guinum">❹</span> wählen Sie den Kanal der Klemme
+<span class="guilabel">Table / Channel</span> und das Klemmenregister <span class="guilabel">Register</span> aus.
+Bei mehrkanaligen Klemmen, z.B. bei 4-kanaligen analogen Eingangsklemmen,
+können Sie jeden Kanal separat konfigurieren. Wenn für die gewählte Klemme
+eine XML-Beschreibungsdatei hinterlegt ist, können Sie das Register auch
+über eine Auswahlfeld mit den Registernamen <span class="guinum">❺</span> auswählen. Ist keine
+XML-Beschreibungsdatei vorhanden, müssen Sie sich die Registernummer aus der
+PDF-Dokumentation von Beckhoff heraussuchen.</p>
+<p>Über die beiden Schaltflächen <span class="guilabel">Read</span> <span class="guinum">❻</span> und <span class="guilabel">Write</span>
+<span class="guinum">❼</span> können Sie nun Daten aus dem ausgewählten Register lesen und schreiben.
+Informationen zu Bedeutung der Daten finden Sie in der PDF-Dokumentation von
+Beckhoff.</p>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Das Ändern von Parametern kann dazu führen, dass die Klemme nicht mehr wie
+von CETONI getestet und konfiguriert funktioniert. Vor dem Ändern eines
+Parameters sollten Sie sich ggf. den aktuellen Wert notieren um diesen
+später wieder herstellen zu können.</p>
+</div>
+<p>Die meisten Klemmen verfügen über ein <strong>Feature Register</strong> je Kanal zur Einstellung
+bestimmter Konfigurationsparameter. Dieses Register ist gewöhnlich das Register
+<strong>R32</strong>. Wenn für die gewählte Klemme eine XML-Beschreibungsdatei hinterlegt ist
+sehen Sie im Bereich <span class="guilabel">Feature Register</span> <span class="guinum">❽</span> eine grafische
+Oberfläche zum Zugriff auf die einzelnen Parameter des Registers. Ist keine
+XML-Beschreibungsdatei vorhanden, müssen Sie im Bereich <span class="guilabel">Register</span>
+<span class="guinum">❹</span> das Register über seine Nummer auswählen, und dann den kompletten
+Wert lesen oder schreiben. Details zum Feature-Register finden Sie in der
+Beckhoff PDF-Dokumentation.</p>
+</section>
+<section id="eine-xml-klemmenbeschreibung-erstellen">
+<h3><span class="section-number">8.11.3. </span>Eine XML-Klemmenbeschreibung erstellen<a class="headerlink" href="#eine-xml-klemmenbeschreibung-erstellen" title="Link to this heading"></a></h3>
+<p>Wenn für eine bestimmte Klemme noch keine XML-Beschreibungsdatei hinterlegt ist,
+können Sie mit Hilfe der PDF-Dokumentation ggf. selbst eine XML Datei erstellen
+und über die Schaltfläche <span class="guilabel">Add Terminal XML</span> zur Software hinzufügen:</p>
+<img alt="../_images/beckhoff_add_terminal_xml.png" src="../_images/beckhoff_add_terminal_xml.png" />
+<p>Eine XML-Klemmenbeschreibung kann mehrere Klemmen enthalten. Die folgende
+Datei zeigt die Klemmenbeschreibung für die Klemmen, die bereits in der Software
+hinterlegt sind. Sie können diese als Vorlage zur Erstellung einer eigenen XML
+Klemmenbeschreibung verwenden:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;Terminals&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K1501</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Up- or Down-Counter Terminal, 24 VDC, 100 kHz&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R8</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Terminal type&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R9</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Software version number&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Counter mode&quot;</span><span class="w"> </span><span class="na">Bits=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;List&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;001&quot;</span><span class="nt">&gt;</span>32-bit<span class="w"> </span>up/down<span class="w"> </span>counter<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item1</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;010&quot;</span><span class="nt">&gt;</span>2<span class="w"> </span>*<span class="w"> </span>16-bit<span class="w"> </span>up<span class="w"> </span>counter<span class="nt">&lt;/Item1&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item2</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>32-bit<span class="w"> </span>gated<span class="w"> </span>counter,<span class="w"> </span>Gate<span class="w"> </span>input<span class="w"> </span>low:<span class="w"> </span>Counter<span class="w"> </span>is<span class="w"> </span>locked<span class="nt">&lt;/Item2&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item3</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;101&quot;</span><span class="nt">&gt;</span>32-bit<span class="w"> </span>gated<span class="w"> </span>counter,<span class="w"> </span>Gate<span class="w"> </span>input<span class="w"> </span>high:<span class="w"> </span>Counter<span class="w"> </span>is<span class="w"> </span>locked<span class="nt">&lt;/Item3&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Bit8&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit11</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Down counter&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K1501&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K3152</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Input, 4..20mA, 16 bit, differential, high precision&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable watchdog timer&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit3</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Signed amount representation&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit4</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Siemens outout format&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable calibration&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit6</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable differential measurement&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit7</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Stabilization of calibration active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Measuring range limitation active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit9</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Limit value 1 active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit10</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Limit value 2 active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit11</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable channel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R35</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Limit value 1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R36</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Limit value 2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R37</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Filter constants&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R40</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Calibration interval&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R44</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Interval for forced calibration&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R47</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Number of stable measured values&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R48</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Tolerance for measured value stability&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K3152&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K3162</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Input, 0..10V, 16 bit, differential,&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable watchdog timer&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit3</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Signed amount representation&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit4</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Siemens outout format&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable calibration&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit6</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable differential measurement&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit7</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Stabilization of calibration active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Measuring range limitation active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit9</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Limit value 1 active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit10</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Limit value 2 active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit11</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable channel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R35</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Limit value 1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R36</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Limit value 2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R37</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Filter constants&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R40</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Calibration interval&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R44</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Interval for forced calibration&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R47</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Number of stable measured values&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R48</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Tolerance for measured value stability&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K3162&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K3312</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Input, temperature, thermocouple 16 bit&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R0</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Raw ADC value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R6</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Diagnostic register&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R17</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;HW compensation: Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R18</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;HW compensation: Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R19</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Manuf. Scaling: Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R20</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Manuf. Scaling: Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Watchdog timer active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Activate filter constant R37&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit6</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Deactivate measuring current for open-circuit recognition&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Reference temperature switched off&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Sensor Type&quot;</span><span class="w"> </span><span class="na">Bits=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;List&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0000&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>L<span class="w"> </span>(-25°C<span class="w"> </span>to<span class="w"> </span>900°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0001&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>K<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1370°C<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0010&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>J<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1200°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0011&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>E<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1000°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0100&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>T<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>400°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0101&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>N<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1300°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0110&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>U<span class="w"> </span>(-25°C<span class="w"> </span>to<span class="w"> </span>600°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0111&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>B<span class="w"> </span>(600<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1800<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1000&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>R<span class="w"> </span>(0<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1700<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1001&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>S<span class="w"> </span>(0<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1700<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1101&quot;</span><span class="nt">&gt;</span>1<span class="w"> </span>µV<span class="w"> </span>1.6µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1110&quot;</span><span class="nt">&gt;</span>2<span class="w"> </span>µV<span class="w"> </span>3.2µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1111&quot;</span><span class="nt">&gt;</span>4<span class="w"> </span>µV<span class="w"> </span>6.4µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Bit8&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R37</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Filter constant&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K3312&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K3314</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Input, temperature, thermocouple 16 bit&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R0</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Raw ADC value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R6</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Diagnostic register&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R17</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;HW compensation: Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R18</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;HW compensation: Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R19</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Manuf. Scaling: Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R20</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Manuf. Scaling: Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Watchdog timer active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Activate filter constant R37&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit6</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Deactivate measuring current for open-circuit recognition&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Reference temperature switched off&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Sensor Type&quot;</span><span class="w"> </span><span class="na">Bits=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;List&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0000&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>L<span class="w"> </span>(-25°C<span class="w"> </span>to<span class="w"> </span>900°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0001&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>K<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1370°C<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0010&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>J<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1200°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0011&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>E<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1000°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0100&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>T<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>400°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0101&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>N<span class="w"> </span>(-100°C<span class="w"> </span>to<span class="w"> </span>1300°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0110&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>U<span class="w"> </span>(-25°C<span class="w"> </span>to<span class="w"> </span>600°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0111&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>B<span class="w"> </span>(600<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1800<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1000&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>R<span class="w"> </span>(0<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1700<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1001&quot;</span><span class="nt">&gt;</span>Type:<span class="w"> </span>S<span class="w"> </span>(0<span class="w"> </span>°C<span class="w"> </span>to<span class="w"> </span>1700<span class="w"> </span>°C)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1101&quot;</span><span class="nt">&gt;</span>1<span class="w"> </span>µV<span class="w"> </span>1.6µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1110&quot;</span><span class="nt">&gt;</span>2<span class="w"> </span>µV<span class="w"> </span>3.2µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1111&quot;</span><span class="nt">&gt;</span>4<span class="w"> </span>µV<span class="w"> </span>6.4µV<span class="w"> </span>(Range<span class="w"> </span>+-30<span class="w"> </span>mV)<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Bit8&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R37</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Filter constant&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K3314&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K3356</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Input, measuring bridge, full bridge, 16 bit&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable watchdog timer&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit4</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable cyclic calibrartion of A/D converter&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable cyclic testing&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit6</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Disable cyclic reference measurement&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit7</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Symmetrical measurement active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Scale factor is active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit9</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Calibration stabilization active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit10</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User calibration is active if bit 32.0 is set.&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit11</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Unit of R36&quot;</span><span class="w"> </span><span class="na">Bits=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;List&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>1<span class="w"> </span>mV/V<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item1</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>0,01<span class="w"> </span>mV/V<span class="nt">&lt;/Item1&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Bit11&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit12</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;After calibration / measurement of ref. voltage output value&quot;</span><span class="w"> </span><span class="na">Bits=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;List&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item0</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>immediately<span class="nt">&lt;/Item0&gt;</span>
+<span class="w">               </span><span class="nt">&lt;Item1</span><span class="w"> </span><span class="na">Bin=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>if<span class="w"> </span>weight<span class="w"> </span>value<span class="w"> </span>has<span class="w"> </span>become<span class="w"> </span>stable<span class="nt">&lt;/Item1&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Bit12&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User Scaling Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R35</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;nominal weight of the load cell&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R36</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;nominal parameter of the load cell&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R37</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Filter constant of the A/D converter, and configuration bits for the filter&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Fast&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;SkipFIR&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R37&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R38</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Scaling Factor&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R39</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Measuring interval for reference signal&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R40</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Calibration interval&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R41</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Test interval&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R42</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;nominal test value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R43</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;test tolerance&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R44</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Forced calibration interval&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R45</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;threshold for reference voltage test&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R46</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;threshold for correction factor&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K3356&gt;</span>
+<span class="w">   </span><span class="nt">&lt;K4004</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Analog Output, 0..10V,&quot;</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Registers</span><span class="w"> </span><span class="na">FeatureReg=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R5</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Raw DAC value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R9</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Software version number&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R32</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;Feature register&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit0</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit1</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Manufacturer scaling active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit2</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Watchdog timer active&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit3</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Sign / amount representation&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit5</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;Calculation of absolute value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Bit8</span><span class="w"> </span><span class="na">Descr=</span><span class="s">&quot;User switch-on value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/R32&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R33</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User scaling: Offset&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R34</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User scaling: Gain&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;R35</span><span class="w"> </span><span class="na">Name=</span><span class="s">&quot;User switch-on value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Registers&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/K4004&gt;</span>
+<span class="nt">&lt;/Terminals&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="digitale-eingangsterminals">
+<h3><span class="section-number">8.11.4. </span>Digitale Eingangsterminals<a class="headerlink" href="#digitale-eingangsterminals" title="Link to this heading"></a></h3>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../nemesys_DE/nemesys_full_DE.html" class="btn btn-neutral float-left" title="7. Nemesys Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../qmixcontroller_DE/qmixcontroller_full_DE.html" class="btn btn-neutral float-right" title="9. Controller Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

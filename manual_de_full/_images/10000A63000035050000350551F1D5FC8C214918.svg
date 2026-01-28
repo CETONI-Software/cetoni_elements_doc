@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="empty_syringe.svg">
+  <metadata
+     id="metadata4152">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>media beginning icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4150" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4148"
+     showgrid="false"
+     inkscape:zoom="1.03"
+     inkscape:cx="256"
+     inkscape:cy="207.81176"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4136" />
+  <title
+     id="title4138">media beginning icon</title>
+  <desc
+     id="desc4140">media beginning icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <path
+     style="fill:#0299e3;fill-opacity:1;stroke:#01699c;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path4144"
+     d="m 37,365.4958 0,78.21128 c 0,8.60324 7.039286,15.64226 15.642857,15.64226 l 406.714283,0 c 8.60357,0 15.64286,-7.03902 15.64286,-15.64226 l 0,-78.21128 c 0,-8.60325 -7.03929,-15.64226 -15.64286,-15.64226 l -406.714283,0 C 44.039286,349.85354 37,356.89255 37,365.4958 Z M 42.23058,84.766164 245.53884,298.23409 c 2.98192,3.12845 6.74598,4.69268 10.46116,4.69268 3.71518,0 7.47924,-1.56423 10.46116,-4.69268 L 469.76942,84.766164 c 4.83951,-5.132615 6.50156,-12.953744 4.20402,-20.23717 -2.24866,-7.283426 -7.77255,-11.878339 -14.27411,-11.878339 l -407.39866,0 c -6.501563,0 -12.025447,4.594913 -14.274108,11.878339 -2.297544,7.283426 -0.635491,15.104555 4.204018,20.23717 z" />
+</svg>

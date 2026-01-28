@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script System &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Script System</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="script-system">
+<h1>Script System<a class="headerlink" href="#script-system" title="Link to this heading"></a></h1>
+<section id="introduction-to-the-script-system">
+<h2>Introduction to the Script System<a class="headerlink" href="#introduction-to-the-script-system" title="Link to this heading"></a></h2>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>The CETONI Elements Script system allows you to control and automate processes.
+Check the created scripts/programs as well as parameter entries before you
+execute them for the first time! CETONI assumes no liability for direct and/or
+indirect damage to your system or external hardware and software components
+caused by the scripts/programs you have created or by the entry of parameters
+that are not suitable or unfavorable for your specific application.</p>
+</div>
+<p>The software provides a powerful scripting system to set up automated
+process sequences.</p>
+<p><img alt="Figure 1: Script system overview" src="../_images/10000201000003C9000001AAB18C614061F55B68.png" /></p>
+<p>The script system user interface consists of two single views:</p>
+<ol class="arabic simple guinums">
+<li><p><em>Script Editor</em> – this <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> shows the script programmed by the
+user as a  function tree. It also features buttons for controlling script files
+and their execution.</p></li>
+<li><p><em>Script Pool</em> – contains all available script functions ordered in
+device categories.</p></li>
+<li><p><em>Script Configuration</em> – is used to configure the parameters of
+individual script functions.</p></li>
+</ol>
+</section>
+<section id="script-pool">
+<h2>Script Pool<a class="headerlink" href="#script-pool" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>Activate the <span class="guilabel">Scripting</span> button in the side bar to show the <em>Script
+Pool</em>.</p>
+<p><img alt="Figure 2: Show Script Pool" src="../_images/10000201000001BC00000116F459D83094022ABD.png" /></p>
+<p>In addition to the <em>Script Pool</em>, the
+<em>Script Configuration</em> area is also shown. The <em>Script Pool</em> contains
+all script functions that are available for programming scripts. The
+script functions are grouped into categories. In addition to a set of
+core functions, each device and each plug-in registers its own specific
+script functions in a separate category.</p>
+<p>The user can open or close the categories in the <em>Script Pool</em> at any
+time. To open or close the function list of a category, simply
+double-click on the category name (figure below).</p>
+<img alt="../_images/100002010000022E0000017D7475090392B8F4E9.png" src="../_images/100002010000022E0000017D7475090392B8F4E9.png" />
+</section>
+<section id="script-pool-context-menu">
+<h3>Script Pool Context Menu<a class="headerlink" href="#script-pool-context-menu" title="Link to this heading"></a></h3>
+<p>Open the context menu by right clicking into the script pool:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/edit_function.svg"><img alt="editfun" src="../_images/edit_function.svg" width="40" /></a></p></td>
+<td><p>Opens the selected <em>User Library</em> function for
+editing.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/folder.svg"><img alt="folder" src="../_images/folder.svg" width="40" /></a></p></td>
+<td><p>Opens the <em>User Library</em> folder in file explorer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Expands all categories</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Collapses all categories</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="script-editor">
+<h2>Script Editor<a class="headerlink" href="#script-editor" title="Link to this heading"></a></h2>
+<section id="introduction-to-script-editor">
+<span id="introduction-script-editor"></span><h3>Introduction to Script Editor<a class="headerlink" href="#introduction-to-script-editor" title="Link to this heading"></a></h3>
+<p>The <em>Script Editor</em> is used for the graphic programming of scripts. The
+following items are numbered in the figure below:</p>
+<ol class="arabic simple guinums">
+<li><p><em>Toolbar</em> – is for loading, saving, and running scripts.</p></li>
+<li><p>The header shows the script filename.</p></li>
+<li><p><em>Function tree</em> – shows a tree like program structure.</p></li>
+<li><p>The currently executed function is highlighted in blue.</p></li>
+<li><p>When you select a function by clicking, it is highlighted in the selected
+theme accent color (here orange)</p></li>
+</ol>
+<p><img alt="Figure 4: Script editor panel" src="../_images/100002010000025A00000168CC93E6B2FBB4D916.png" /></p>
+<p>Each single function is displayed in
+the function tree in a separate line. In this line all the important
+function parameters are visible for you (see figure below):</p>
+<p><img alt="Figure 5: Single function in the Script Editor" src="../_images/1000020100000272000000627C834EF46698FB03.png" /></p>
+<p>On the left side you
+will find the graphic icon of the function <span class="guinum">❶</span>. Immediate right of the
+icon at the top <span class="guinum">❷</span> you will find the function name. Status information
+can be found to the right of the function name <span class="guinum">❸</span>. For many functions,
+these status information are visible only during the execution and are
+subject to change. Directly below the function name is a summary of all
+important function parameters <span class="guinum">❹</span>, that you have configured in the
+configuration area.</p>
+<p>The <em>Script Editor</em> is a movable and dockable window: you may move and
+dock the Editor to another position within the main software window.
+To do this, drag &amp; drop the window via the title bar to its new location
+using the computer mouse. If the Editor window is not visible, you
+may first have to activate it via <span class="menuselection">Window → Script Editor</span>
+in the main menu (figure below).</p>
+<p><img alt="Figure 6: Activating the Script Editor" src="../_images/100002010000018B000000E25969D2D1DAB3AE6A.png" /></p>
+<p>You can change the scaling in
+order to increase the clarity or adjust the display of the editor to
+suit your requirements. To do this, right-click in the editor to open
+the context menu and select the size of the display in the submenu <em>Set
+Item Scaling</em>:</p>
+<p><img alt="Figure 7: Change script editor scaling" src="../_images/10000201000001BD000000E95ED186BD70837E01.png" /></p>
+<p>The following sizes are available:</p>
+<ul class="simple">
+<li><p><strong>Small</strong> – very compact display for maximum clarity in complex
+function processes, the function parameters are no longer displayed.</p></li>
+<li><p><strong>Normal</strong> – normal size</p></li>
+<li><p><strong>Big</strong> – the icons and the function names are enlarged for optimal
+readability</p></li>
+</ul>
+</section>
+<section id="toolbar">
+<h3>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100018A30000387200003872627AA1597179191F.svg"><img alt="image17" src="../_images/100018A30000387200003872627AA1597179191F.svg" width="40" /></a></p></td>
+<td><p>Generates a new, empty script.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000F850000350500003505755524BB44FF2E56.svg"><img alt="image18" src="../_images/10000F850000350500003505755524BB44FF2E56.svg" width="40" /></a></p></td>
+<td><p>Loads an existing script file into the <em>Script Editor</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000111B000038720000387231FCD7A597623EB3.svg"><img alt="image19" src="../_images/1000111B000038720000387231FCD7A597623EB3.svg" width="40" /></a></p></td>
+<td><p>Saves the currently active script.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000173B0000387200003872AFCF364C5ED9850F1.svg"><img alt="image20" src="../_images/1000173B0000387200003872AFCF364C5ED9850F1.svg" width="40" /></a></p></td>
+<td><p>Saves the currently active script into a new script
+file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000C2E000034EB000034EB0815ABACAEE84EE0.svg"><img alt="image21" src="../_images/10000C2E000034EB000034EB0815ABACAEE84EE0.svg" width="40" /></a></p></td>
+<td><p>Stops the execution of the current script. By clicking
+the start button, the complete program will be
+restarted from the beginning.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000C46000034EB000034EBC0807B1C81FD15E0.svg"><img alt="image22" src="../_images/10000C46000034EB000034EBC0807B1C81FD15E0.svg" width="40" /></a></p></td>
+<td><p>Request Script Stop - clicking this button sets the
+<code class="code docutils literal notranslate"><span class="pre">$StopRequested</span></code> global script variable to true.
+The script can query this variable cyclically, e.g. in
+the main loop of the script, to react to a stop request
+and terminate the script. Thus the script has the
+possibility to bring devices into a safe state (e.g. to
+stop pumps, to switch valves) before the script
+execution is terminated.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000E11000034EB000034EB5683B6AF8D85CDA6.svg"><img alt="image23" src="../_images/10000E11000034EB000034EB5683B6AF8D85CDA6.svg" width="40" /></a></p></td>
+<td><p>Pauses the execution of the current script. By clicking
+the start button, the execution will resume from its
+current position.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg"><img alt="runscript" src="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg" width="40" /></a></p></td>
+<td><p>Starts the execution of a script or resumes a script
+after an interruption.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a></p></td>
+<td><p>Activates single step operation for debugging scripts.
+When single step operation is active, the script stops
+after the execution of each single script function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/single_step2.svg"><img alt="execstep" src="../_images/single_step2.svg" width="40" /></a></p></td>
+<td><p>Click this button to trigger execution of next script
+function in single step operation mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/scroll_lock1.svg"><img alt="scroll" src="../_images/scroll_lock1.svg" width="40" /></a></p></td>
+<td><p>Scroll Lock - prevents the Script Editor from
+automatically scrolling to a function when the function
+is executed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Expands all functions in the script</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Collapses all functions in the script so that only the
+topmost function level is visible</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also load script files easily via
+drag &amp; drop. Simply drag a script file from your file
+system over the script editor and drop it there.</p>
+</div>
+</section>
+<section id="context-menu-of-script-editor">
+<span id="scripteditor-contextmenu"></span><h3>Context Menu of Script Editor<a class="headerlink" href="#context-menu-of-script-editor" title="Link to this heading"></a></h3>
+<p>If you click with the right mouse button on any function within the
+<em>Script Editor</em>, a context menu appears to quickly access additional
+actions (figure below).</p>
+<p><img alt="Figure 8: Script Editor context menu" src="../_images/100002010000014400000150DF1BE1DD8FC0A460.png" /></p>
+<p>The following functions are
+available from the context menu:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/edit_function.svg"><img alt="editfun" src="../_images/edit_function.svg" width="40" /></a></p></td>
+<td><p>Opens the selected <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#script-function-call"><span class="std std-ref">Script Function Call</span></a> for
+editing (only when right clicking on a
+Script Function Call)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000097D000035050000350538CD8A3BED7FE2BC.svg"><img alt="image52" src="../_images/1000097D000035050000350538CD8A3BED7FE2BC.svg" width="40" /></a></p></td>
+<td><p>Moves the selected function one position up</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100009440000350500003505BD31755A160012FF.svg"><img alt="image53" src="../_images/100009440000350500003505BD31755A160012FF.svg" width="40" /></a></p></td>
+<td><p>Moves the selected function one position down</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000089D000034EB000034EB2EF1F414485F4814.svg"><img alt="image54" src="../_images/1000089D000034EB000034EB2EF1F414485F4814.svg" width="40" /></a></p></td>
+<td><p>Copies the selected functions to the clipboard</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100006280000350500003505598C9D0C09166EE0.svg"><img alt="image55" src="../_images/100006280000350500003505598C9D0C09166EE0.svg" width="40" /></a></p></td>
+<td><p>Inserts the functions from the clipboard before the
+selected function</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/duplicate.svg"><img alt="duplica" src="../_images/duplicate.svg" width="40" /></a></p></td>
+<td><p>Duplicates the selected function. This is a combination
+of copy and paste in one single step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000029600003505000035058E70718A79A91FE8.svg"><img alt="image56" src="../_images/1000029600003505000035058E70718A79A91FE8.svg" width="40" /></a></p></td>
+<td><p>Deletes the selected functions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100007F200003505000035055B70923F64560DD7.svg"><img alt="image57" src="../_images/100007F200003505000035055B70923F64560DD7.svg" width="40" /></a></p></td>
+<td><p>Deletes all functions in the script</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000944000038720000387225245FA0499799FC.svg"><img alt="image58" src="../_images/10000944000038720000387225245FA0499799FC.svg" width="40" /></a></p></td>
+<td><p>Replaces the selected functions with a function
+sequence and inserts the functions into this sequence.
+This allows you to quickly group functions together to
+structure your script, make it clearer and improve
+readibilty.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/enable_disable_functions2.svg"><img alt="disable" src="../_images/enable_disable_functions2.svg" width="40" /></a></p></td>
+<td><p>Disables / enables the selected functions.
+This allows you to temporarily disable certain functions
+and enable them again later. Disabled functions are
+skipped during program execution. This corresponds to
+the functionality of commenting out source code in
+text-based programming languages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/expand-all2.svg"><img alt="expand" src="../_images/expand-all2.svg" width="40" /></a></p></td>
+<td><p>Expands all functions in the script</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/collapse-all2.svg"><img alt="collapse" src="../_images/collapse-all2.svg" width="40" /></a></p></td>
+<td><p>Collapses all functions in the script so that only the
+topmost function level is visible</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100003FA00003505000035058DF099368DC3B55E.svg"><img alt="image61" src="../_images/100003FA00003505000035058DF099368DC3B55E.svg" width="40" /></a></p></td>
+<td><p>Changes the scaling of the display of the script
+functions. This increases the clarity of complex
+scripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B39000034EB000034EB3EB900673AC29BB5.svg"><img alt="image62" src="../_images/10000B39000034EB000034EB3EB900673AC29BB5.svg" width="40" /></a></p></td>
+<td><p>Starts the script execution at the selected function.
+If variables are previously initialized in the script,
+it is possible that they are not yet initialized in
+this case.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100008F80000350500003505C177441D68208C36.svg"><img alt="image63" src="../_images/100008F80000350500003505C177441D68208C36.svg" width="40" /></a></p></td>
+<td><p>Terminates script execution immediately. All devices
+remain in their current state, are not shut down or
+stopped, and do not transition to a safe state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/debug.svg"><img alt="debug" src="../_images/debug.svg" width="40" /></a></p></td>
+<td><p>Enables / disables the debug mode.
+Sets the value of the global script variable
+<code class="code docutils literal notranslate"><span class="pre">$DebugMode</span></code>. This variable can then be used in
+the script to execute code or log additional debug
+output.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To start script execution at a specific
+function from within a script, click the right mouse
+button on the function of choice and select
+<span class="menuselection">Run From Here</span> from the context menu.</p>
+</div>
+</section>
+</section>
+<section id="script-configuration-panel">
+<h2>Script Configuration Panel<a class="headerlink" href="#script-configuration-panel" title="Link to this heading"></a></h2>
+<section id="overview-of-script-configuration-panel">
+<h3>Overview of Script Configuration Panel<a class="headerlink" href="#overview-of-script-configuration-panel" title="Link to this heading"></a></h3>
+<p>The configuration panel contains all controls for configuring the script
+function that is currently selected in the <em>Script Editor</em>.</p>
+<p><img alt="Figure 9: Script Configuration Area" src="../_images/100002010000021A0000012F07608C2B70720CC7.png" /></p>
+<p>The configuration area consists of:</p>
+<ol class="arabic simple">
+<li><p>header with the name of the currently selected function</p></li>
+<li><p>input- and control elements of the function</p></li>
+<li><p>comment box to enter any commentary</p></li>
+</ol>
+<p>The input- and control elements <span class="guinum">❷</span> are different for each script
+function. But all functions provide some common controls like the
+function caption <span class="guinum">❶</span> in the header and a comment box <span class="guinum">❸</span> at the bottom of
+the configuration area.</p>
+</section>
+<section id="changing-function-caption">
+<h3>Changing Function Caption<a class="headerlink" href="#changing-function-caption" title="Link to this heading"></a></h3>
+<p>In the header of the configuration area you can change the caption of
+the function. It allows you to use “talking” function names that make it
+a lot easier for you or third parties to read and understand your
+scripts later.</p>
+<p>To change the function name, you can either click with the left mouse
+button on the function name in the header or you can click on the name
+with the right mouse button and select the context menu item,
+<span class="menuselection">Edit Function Caption</span> (see figure below).</p>
+<p><img alt="Figure : Showing Caption input dialog" src="../_images/10000201000001BC0000008C307209237D1183C6.png" /></p>
+<p>In the input dialog that now
+appears, you can enter a new name for the function.</p>
+<p><img alt="Figure : Function Caption input dialog" src="../_images/10000201000001B00000009EE87E1DC8113145D3.png" /></p>
+<p>The following example shows a
+short program with the default function names on the left side and the
+same program with own function names on the right side:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Default function names</p></td>
+<td><p>Application-specific names</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="image67" src="../_images/100002010000012C0000009A8EA2B85DC0AE3CC8.png" /></p></td>
+<td><p><img alt="image68" src="../_images/100002010000012C0000009B3D05CC276B4F0D6F.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Enhance the readability, understandability
+and maintainability of your scripts through the use of
+speaking, application-specific function names.</p>
+</div>
+</section>
+<section id="enter-comment">
+<h3>Enter Comment<a class="headerlink" href="#enter-comment" title="Link to this heading"></a></h3>
+<p>In the comment field you can enter a comment that will allow other users
+to understand your scripts better and to follow the flow of execution
+easier.</p>
+<p><img alt="Figure 12: Script function comment" src="../_images/1000020100000204000000DEFE8A94073FF71C98.png" /></p>
+<p>When you move the mouse pointer
+over a function in the <em>Script Editor</em> the comment of this function will
+be shown in a message box (see figure above). So you can read the
+comment of a function without having to open the configuration area of
+that function.</p>
+</section>
+<section id="script-input-fields">
+<h3>Script Input Fields<a class="headerlink" href="#script-input-fields" title="Link to this heading"></a></h3>
+<p>In many script functions, you will see special input fields in the configuration
+area, which are marked with a coloured <strong>V</strong>:</p>
+<img alt="../_images/script_input_fields.png" src="../_images/script_input_fields.png" />
+<p>These special input fields allow you to:</p>
+<ul class="simple">
+<li><p>the input of values (e.g. 0.23 or -24)</p></li>
+<li><p>the use of <a class="reference internal" href="#script-variables"><span class="std std-ref">Script Variables</span></a> (e.g. <code class="code docutils literal notranslate"><span class="pre">$TargetFlow</span></code> or <code class="code docutils literal notranslate"><span class="pre">$Voltage</span></code>)</p></li>
+<li><p>the use of <a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> (e.g. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.ActualFlow</span></code>)</p></li>
+<li><p>the use of inline JavaScript (e.g. <code class="code docutils literal notranslate"><span class="pre">${</span> <span class="pre">$$Nemesys_M_1.ActualFlow</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">}</span></code>)</p></li>
+</ul>
+<section id="insert-script-variables">
+<h4>Insert Script Variables<a class="headerlink" href="#insert-script-variables" title="Link to this heading"></a></h4>
+<p>To use script variables, you only have to enter a dollar sign <code class="code docutils literal notranslate"><span class="pre">$</span></code> in the input
+field. Then you are immediately shown a selection list of variables that are
+available at the current position in the script. You can simply select a
+variable from the list or continue typing the name manually:</p>
+<img alt="../_images/enter_script_variables.png" src="../_images/enter_script_variables.png" />
+<p>The value of the variable is then used at runtime for the corresponding
+parameter. In the example above, the value of the variable <code class="code docutils literal notranslate"><span class="pre">$TargetVolume</span></code> is
+used for the script parameter <strong>Volume</strong> at runtime.</p>
+</section>
+<section id="insert-device-properties">
+<h4>Insert Device Properties<a class="headerlink" href="#insert-device-properties" title="Link to this heading"></a></h4>
+<p>To insert <a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a>, simply right-click
+in the input field and then select the menu item
+<span class="menuselection">Insert device property…</span>:</p>
+<img alt="../_images/enter_device_properties.png" src="../_images/enter_device_properties.png" />
+<p>Then select the device property in the dialogue that appears. The identifier
+for the device property is then inserted into the input field.</p>
+<img alt="../_images/device_property_example.png" src="../_images/device_property_example.png" />
+<p>At runtime, the value of the device property is read and
+passed to the script. In the example above, the current
+flow rate of pump <em>Cedosys 2</em> is used (<code class="code docutils literal notranslate"><span class="pre">$$Cedosys_2.ActualFlow</span></code>)
+to set the flow rate of pump <em>Cedosys 1</em>.</p>
+</section>
+<section id="use-inline-javascript">
+<h4>Use inline JavaScript<a class="headerlink" href="#use-inline-javascript" title="Link to this heading"></a></h4>
+<p>Inline JavaScript can be used in special input fields, allowing for short
+calculations to be written directly within the field, beginning with
+<code class="code docutils literal notranslate"><span class="pre">${</span></code> and ending with <code class="code docutils literal notranslate"><span class="pre">}</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">{</span><span class="w"> </span><span class="cm">/* inline code */</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>In the following example, the flow rate for the <em>Nemesys S 1</em> pump is
+to be calculated based on the analogue input signal of channel
+<code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN</span></code>. For this purpose, the analogue input signal
+is to be scaled by a factor of <code class="code docutils literal notranslate"><span class="pre">0.1</span></code>:</p>
+<img alt="../_images/inline_javascript_example.png" src="../_images/inline_javascript_example.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Use Inline JavaScript only for very simple calculations,
+such as scaling. For more complex calculations or logical
+comparisons, you should use the corresponding <a class="reference internal" href="../javascript_EN/javascript_EN.html#javascript-script-function"><span class="std std-ref">JavaScript</span></a>
+function or the <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#set-variable"><span class="std std-ref">Set Variable</span></a> function.</p>
+</div>
+</section>
+<section id="insert-device-handle-variables">
+<h4>Insert Device Handle Variables<a class="headerlink" href="#insert-device-handle-variables" title="Link to this heading"></a></h4>
+<p>Device handles are device identifiers that begin with two
+dollar signs <code class="code docutils literal notranslate"><span class="pre">$$</span></code> and uniquely identify a device. A device
+handle is e.g. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code>. <a class="reference internal" href="#device-property-identifiers"><span class="std std-ref">Device Properties</span></a> always
+consist of a device handle and an identifier for the
+corresponding property of the device. For example,
+the device property  <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN1.ActualValue</span></code>
+consists of the device handle <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1_AnIN1</span></code> and
+the property <code class="code docutils literal notranslate"><span class="pre">ActualValue</span></code>. This means that if you know a
+device property, then you also know the corresponding device handle.</p>
+<p>Device handles are not usually used in normal input fields.
+However, many device-specific script functions have a selection
+field for selecting the device for which a command is to be executed.
+If this selection field is marked with a coloured <strong>V</strong>, then you can
+also pass variables there that contain a device handle.</p>
+<img alt="../_images/enter_device_handle_variable.png" src="../_images/enter_device_handle_variable.png" />
+<p>In the example above, the variable <code class="code docutils literal notranslate"><span class="pre">$PumpDevice</span></code>, which contains the
+device handle for the pump for which a dosing process is to be started,
+is passed to the <span class="guilabel">Dosing Module</span> selection control.</p>
+</section>
+</section>
+</section>
+<section id="programming">
+<h2>Programming<a class="headerlink" href="#programming" title="Link to this heading"></a></h2>
+<section id="adding-functions">
+<h3>Adding Functions<a class="headerlink" href="#adding-functions" title="Link to this heading"></a></h3>
+<p>Functions are activated via drag &amp; drop from the <em>Script Pool</em> to the
+<em>Script Editor</em>. To do this, proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>In the Script Pool, left-click on the function that you want to
+insert <span class="guinum">❶</span> and hold down the mouse button.</p></li>
+<li><p>Move the pointer to the desired position within the <em>Script
+Editor</em> window.</p></li>
+<li><p>As soon as you release the mouse button <span class="guinum">❷</span>, the selected function
+will be inserted into the Script Editor.</p></li>
+</ol>
+<p><img alt="Figure 13: Inserting a function into a script via drag-&amp;-drop" src="../_images/1000020100000257000000FE60273A82A9E46F3B.png" /></p>
+<p>The function is inserted according to where the mouse pointer is positioned
+when you release the mouse button. The following scenarios are possible
+(figure below):</p>
+<p><img alt="image72" src="../_images/10000201000001340000012B261E2BD3D1D76AC8.png" /></p>
+<ol class="arabic simple">
+<li><p>If you release the mouse button atop an existing function,
+the new function will be inserted immediately before that existing
+function.</p></li>
+<li><p>If the mouse button is released atop a function sequence (for
+example, a loop), the new function will be inserted at the end of
+that sequence.</p></li>
+<li><p>If the mouse button is released on an empty area at the end of the
+function tree, the function is added at the end.</p></li>
+</ol>
+</section>
+<section id="selecting-functions">
+<h3>Selecting Functions<a class="headerlink" href="#selecting-functions" title="Link to this heading"></a></h3>
+<p>To move, copy or delete functions, you must first select them. You can
+either select a single function by clicking on it, or you can select a
+continuous sequence of functions at the same hierarchy level.</p>
+<p><img alt="Figure 14: Script Editor contiguous selection" src="../_images/10000201000001F0000000EFC1A07C20DF2E2141.png" /></p>
+<p>When you select an item
+in the usual way with the left mouse button, the selection is cleared
+and the new item is selected <span class="guinum">❶</span>. However, if you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key
+while clicking on an item <span class="guinum">❷</span>, all items between the current item and the
+clicked item are selected or unselected, depending on the state of the
+clicked item.</p>
+</section>
+<section id="moving-functions">
+<h3>Moving Functions<a class="headerlink" href="#moving-functions" title="Link to this heading"></a></h3>
+<p>Analogous to inserting a new function from the <em>Script Pool</em>, you can
+move the functions to new positions within the function tree via
+drag &amp; drop. Again, the same insertion rules apply as above.</p>
+<p><img alt="Figure 15: Moving functions within a function tree" src="../_images/10000201000001CC000000FCEBE9DEBFD8E32CFF.png" /></p>
+<p>There is
+alternative way for moving functions up and down the list: First, make a
+right mouse click on the function that is to be moved. This will open a
+context menu from which you may then select <em>Move up</em> or <em>Move down</em>,
+respectively (figure above). Alternatively, you can use the keyboard
+with the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">↑</kbd> or <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">↓</kbd> shortcuts.</p>
+<p>This latter method may only be used to move functions up or down within
+the current sequence. If you want to move a function to a completely
+different position within the function tree, this can only be done via
+drag-&amp;-drop.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p><em>Move up</em> and <em>Move down</em> only moves the
+current function. Even if several functions are
+selected, only the current function is moved. If you
+want to move the entire selection, you can do this by
+dragging and dropping.</p>
+</div>
+</section>
+<section id="deleting-functions">
+<h3>Deleting Functions<a class="headerlink" href="#deleting-functions" title="Link to this heading"></a></h3>
+<p>There are two ways to delete functions:</p>
+<ol class="arabic simple">
+<li><p>Select the functions you want to delete and then click the context
+menu entry <em>Delete</em>.</p></li>
+<li><p>Select the functions you want to delete and then press the <kbd class="kbd docutils literal notranslate">Delete</kbd>
+key of your keyboard.</p></li>
+</ol>
+</section>
+<section id="copying-functions">
+<h3>Copying Functions<a class="headerlink" href="#copying-functions" title="Link to this heading"></a></h3>
+<p>Similarly, functions can be copied either by using the context menu via
+the mouse or using key combinations via the keyboard. If you work with
+the context menu, simply select <em>Copy</em> and then <em>Paste</em> from the menu
+(figure below); with the keyboard, use the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd> shortcut to copy and
+<kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd> to paste.</p>
+<p><img alt="Figure : Copying a function" src="../_images/1000020100000112000000CF9D471977536A43C2.png" /></p>
+<p>This is how you copy a function to a new position:</p>
+<ol class="arabic simple">
+<li><p>Select the functions you want to move.</p></li>
+<li><p>Copy the functions via <em>Copy</em> of the context menu or via the
+keyboard and <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd>.</p></li>
+<li><p>Select the function before which you want to insert the copied
+function by left-clicking it.</p></li>
+<li><p>Paste the copied functions via <em>Paste</em> of the context menu or via the
+keyboard and <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd>.</p></li>
+</ol>
+<p>To insert the same functions at multiple points of the function tree
+simply repeat steps 3 and 4 (above).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To quickly duplicate functions, you can also use the <span class="menuselection">Duplicate</span>
+menu item or the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">D</kbd> shortcut.</p>
+</div>
+</section>
+<section id="grouping-functions">
+<h3>Grouping Functions<a class="headerlink" href="#grouping-functions" title="Link to this heading"></a></h3>
+<p>To improve the clarity and readability of your script, you can quickly
+and easily group sequences of functions into function sequences. To do
+this, simply select a contiguous set of functions, and then click
+<em>Convert Selection To Function Sequence</em> in the context menu.</p>
+<p><img alt="Figure : Grouping Functions" src="../_images/1000020100000162000000A933F710A74CD5FF30.png" /></p>
+<p>The selected functions are now replaced
+by a function sequence containing the selected functions.</p>
+<p><img alt="image76" src="../_images/10000201000002AD000000B45887FBE2E338C1B1.png" /></p>
+</section>
+<section id="disable-enable-functions">
+<h3>Disable / Enable Functions<a class="headerlink" href="#disable-enable-functions" title="Link to this heading"></a></h3>
+<p>In classical text-based programming languages there is the feature to
+temporarily disable source code by commenting it out. The Script system offers
+a comparable functionality. To disable functions, select the functions in the
+script editor and then choose <span class="menuselection">Enable / Disable Selected Functions</span>
+from the  context menu. Alternatively, you can also use the shortcut
+<kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">/</kbd>.</p>
+<img alt="../_images/context_menu_disable_functions.png" src="../_images/context_menu_disable_functions.png" />
+<p>When you disable functions, they are inserted into a <span class="guilabel">Disabled Functions</span>
+sequence. During script execution, the content of this sequence is simply skipped.</p>
+<img alt="../_images/disabled_functions.png" src="../_images/disabled_functions.png" />
+<p>To re-enable disabled functions, select a single <span class="guilabel">Disabled Functions</span>
+sequence, then use the same menu item / keyboard shortcut as for disabling.</p>
+</section>
+<section id="editing-function-parameters">
+<h3>Editing Function Parameters<a class="headerlink" href="#editing-function-parameters" title="Link to this heading"></a></h3>
+<p>As soon as you select a function from the function tree, the operating
+elements appear in the <em>Script Configuration</em> area that allow you to
+configure the selected function. Edit the function parameters as
+required.</p>
+</section>
+<section id="showing-function-tooltip">
+<h3>Showing Function Tooltip<a class="headerlink" href="#showing-function-tooltip" title="Link to this heading"></a></h3>
+<p>If you move the mouse cursor over a function, a tooltip window is
+displayed for this function after a short time (see figure below). In
+this window, you will get all information about this function at a
+glance: function name <span class="guinum">❶</span>, user comment or function description <span class="guinum">❷</span> and
+function parameters <span class="guinum">❸</span>.</p>
+<figure class="align-default">
+<img alt="../_images/1000020100000204000000DEDBCF89E6569C55A7.png" src="../_images/1000020100000204000000DEDBCF89E6569C55A7.png" />
+</figure>
+</section>
+</section>
+<section id="variables">
+<span id="script-variables"></span><h2>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h2>
+<section id="introduction-to-variables">
+<span id="variables-introduction"></span><h3>Introduction to variables<a class="headerlink" href="#introduction-to-variables" title="Link to this heading"></a></h3>
+<p>The script system of supports the use of variables. Within script
+programs, variables serve as containers for calculated and device
+values. Their values are generated during program execution from, for
+example, loop counts or sensor data. Each variable is defined by a name.
+Script functions that support the use of variables may then use the
+values stored in these containers, e.g., to trigger value-dependent
+events.</p>
+</section>
+<section id="setting-variables">
+<h3>Setting Variables<a class="headerlink" href="#setting-variables" title="Link to this heading"></a></h3>
+<p>Before variables may be used by a script, such variables need to be
+defined. There are two possibilities to setup variables:</p>
+<ol class="arabic simple">
+<li><p>Explicit: Variables are defined explicitly by the user, e.g., via
+the function <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#create-variable"><span class="std std-ref">Create Variable</span></a>.</p></li>
+<li><p>Implicit: Implicit variables are created via functions that offer
+variables by default, such as the counter of the
+<a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#counting-loop"><span class="std std-ref">Counting Loop</span></a> function.</p></li>
+</ol>
+</section>
+<section id="naming-variables">
+<span id="id1"></span><h3>Naming Variables<a class="headerlink" href="#naming-variables" title="Link to this heading"></a></h3>
+<p>There are some important requirements to keep in mind when naming
+variables: Every variable is called within a program script via an
+essentially freely definable name. This name serves to uniquely
+identify that variable; different names signify different variables. The
+<code class="code docutils literal notranslate"><span class="pre">$</span></code>-prefix clearly identifies a name and its use as a variable. The
+scripting system is case sensitive: <code class="code docutils literal notranslate"><span class="pre">$Var</span></code> is different variable than
+<code class="code docutils literal notranslate"><span class="pre">$var</span></code>.</p>
+<p>Additionally, the following rules apply when naming variables:</p>
+<ul class="simple">
+<li><p>Variable names have to start with the Dollar symbol ($) and must not
+themselves contain a $-symbol.</p></li>
+<li><p>Only alphanumeric characters are allowed (a-Z, 0-9).</p></li>
+<li><p>Special characters (such as, $, &amp;, /, -, …) are not allowed.</p></li>
+<li><p>Variable names must not start with a number.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can display the contents of variables
+using the <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#show-message"><span class="std std-ref">Show Message</span></a> function, e.g.
+to check the results of calculations.</p>
+</div>
+</section>
+<section id="visibility-range-of-variables-scope">
+<h3>Visibility Range of Variables (Scope)<a class="headerlink" href="#visibility-range-of-variables-scope" title="Link to this heading"></a></h3>
+<p>The visibility range (scope) of a variable is that part of the program
+within which that variable is visible, i.e., available. Scripts
+are trees with an essentially unlimited number of branches and levels; a
+variable, i.e., the value it returns, is only visible, i.e.,
+available to be used, at that level at which it has been defined plus
+all its sub-levels.</p>
+<p>The following example illustrates the scope of variables:</p>
+<p>In the following example program the variable <code class="code docutils literal notranslate"><span class="pre">$a</span></code> is visible in the red
+marked area - i. e. usable by script functions (figure below):</p>
+<img alt="../_images/10000201000001CB00000183136E0FD0BB1DB56C.png" src="../_images/10000201000001CB00000183136E0FD0BB1DB56C.png" />
+<p>Variable <code class="code docutils literal notranslate"><span class="pre">$b</span></code>, on the other hand, is only visible within a specific
+function sequence (figure below).</p>
+<p>The counter variable <code class="code docutils literal notranslate"><span class="pre">$i</span></code> of the counting loop is only visible in those
+functions that are in the counting loop:</p>
+<p><img alt="image80" src="../_images/10000201000001CB000001831A3AF6CDB6960307.png" /></p>
+<p>The scope of variable <code class="code docutils literal notranslate"><span class="pre">$c</span></code> , which has been setup within
+the counting loop, is only available within that counting loop, too, as
+no other sublevel has been added at this point:</p>
+<p><img alt="image81" src="../_images/10000201000001CB00000183CA6D8F113E4CEE33.png" /></p>
+<p>It is important to note that, if two variables have the same
+name, the variable that has been defined later (i.e., at a lower level)
+will shadow the variable defined earlier (i.e., at a higher level).
+In the example above, if <code class="code docutils literal notranslate"><span class="pre">$c</span></code> would have been named again as <code class="code docutils literal notranslate"><span class="pre">$b</span></code>,
+the later-defined value (i.e., 2) would replace the earlier-defined value
+(i.e., 1).</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If a lower-level variable has the same
+name as a higher-level variable, the lower-level
+variable will supersede the higher-level variable. That
+is, functions at the lower level cannot access the
+value of the higher-level variable of the same name and
+will use „newer“ value instead.</p>
+</div>
+</section>
+<section id="using-variables">
+<h3>Using Variables<a class="headerlink" href="#using-variables" title="Link to this heading"></a></h3>
+<p>Variables can be used with all functions that support them. Calling a
+variable to, e.g., set or calculate a value, requires the use of the
+dollar symbol ($) as a prefix: To use (call write to) the variable <em>a</em>,
+the required syntax is: <code class="code docutils literal notranslate"><span class="pre">$a</span></code>.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Variables get assigned a valid value
+only after they have been assigned a value via being
+run through a relevant function (e.g., Create
+Variable). If you are using the action <em>Run From
+Here</em> to start a script, variables may not have been
+assigned a valid value yet if the respective assignment
+function follows later in the sequence or has been
+skipped.</p>
+</div>
+<p>Functions that support the use of variables have the relevant input
+boxes highlighted by a yellow <span class="guilabel">V</span> (see figure below). Here you
+can insert the name of a variable instead of a numeric value that is to
+be used subsequently within the relevant section of the program script.</p>
+<figure class="align-default">
+<img alt="Figure 19: A yellow „V“ signifies a function that supports" src="../_images/100002010000020E000001041A67F3D4FCEC9662.png" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Nearly all input fields that support
+variables allow for direct access of device process
+data via device property identifiers
+(see <a class="reference internal" href="#id2">Device Property Identifiers</a>).</p>
+</div>
+</section>
+<section id="auto-completion-of-variable-names">
+<h3>Auto-Completion of Variable Names<a class="headerlink" href="#auto-completion-of-variable-names" title="Link to this heading"></a></h3>
+<p>Input boxes that support the use of variables, feature auto-completion
+to aid the selection and input of valid variable names: Upon inserting
+the $-symbol, a list will appear that contains all variable names
+defined so far (see figure below).</p>
+<p><img alt="Figure 20: Auto-completion of variable names" src="../_images/10000201000001C20000014FBE3E569F0981A6AD.png" /></p>
+<p>Every additional
+character that you enter will cause a filtering of that list according
+to the character sequence inserted thus far. You may use either the
+<kbd class="kbd docutils literal notranslate">↑</kbd> or <kbd class="kbd docutils literal notranslate">↓</kbd> of your keyboard or the mouse to select a name
+from that pre-filtered list. Accept the selection by pressing the
+<kbd class="kbd docutils literal notranslate">Enter</kbd> key.</p>
+</section>
+</section>
+<section id="device-property-identifiers">
+<span id="id2"></span><h2>Device Property Identifiers<a class="headerlink" href="#device-property-identifiers" title="Link to this heading"></a></h2>
+<p>Nearly all input fields that support variables (see
+<a class="reference internal" href="#using-variables">Using Variables</a>)
+allow for direct access of device process data via device property
+identifiers. Just click with the right mouse button in the input field
+and select the menu item <em>Insert device property</em> (see figure below).</p>
+<p><img alt="Figure 21: Inserting device properties into input fields" src="../_images/10000201000001E3000000F91FE4E79FF2747393.png" /></p>
+<p>A dialog for
+selecting the process data is displayed (see figure below).</p>
+<p><img alt="Figure 22: Selection dialog for device process data" src="../_images/10000201000001C6000000F0B5F49C8D9D01ECE2.png" /></p>
+<p>In this dialog
+you can select which type of device you want to access in the selection
+box <span class="guilabel">Filter</span> <span class="guinum">❶</span>. Select a specific device in the selection box
+<span class="guilabel">Device</span> <span class="guinum">❷</span> which contains the filtered list of devices. Finally
+select the process data to be accessed in the <span class="guilabel">Property</span> <span class="guinum">❸</span> field.</p>
+<p><img alt="Figure 23: Using process data identifiers in input fields" src="../_images/10000000000001F4000000A145D5D5774F56F660.png" /></p>
+<p>The selected process data identifier will be entered into the input field.
+Similar to variable names, the process data identifiers have a
+particular form:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">$$DeviceName.DeviceProperty</span></code></p>
+<p>Each identifier starts with two dollar signs. A point separates the
+device name from the device property name. The entire process data
+identifier must not contain spaces or other special characters.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The device name and the name of the
+process data have a normalized form. All spaces are
+removed and replaced by underscores. The device name is
+the unique name of each device and may be different
+from the device caption that can configured by the
+user.</p>
+</div>
+<p>When the script function is executed, the process data is read from the
+device and used as function parameter for the script function.</p>
+</section>
+<section id="programming-your-own-script-functions">
+<span id="id3"></span><h2>Programming your own script functions<a class="headerlink" href="#programming-your-own-script-functions" title="Link to this heading"></a></h2>
+<section id="create-a-script-function">
+<h3>Create a script function<a class="headerlink" href="#create-a-script-function" title="Link to this heading"></a></h3>
+<p>In addition to the script functions available in the script pool, you
+have the option of programming your own script functions to use them
+later in your scripts. To implement an own script function, proceed as
+follows:</p>
+<p><strong>Step 1 – Create a new script</strong></p>
+<p>Click on the button <span class="guilabel">Create New Script</span> <span class="guinum">❶</span> to create an empty script.
+Then click on the <span class="guilabel">Save Script</span> button <span class="guinum">❷</span> to give the script function a
+name and then save it with this name. The name of the script function is
+then displayed in the script editor header <span class="guinum">❸</span>. In this example we use the
+name <em>AddValues</em> because we want to implement a simple function that
+adds two values.</p>
+<img alt="../_images/10000201000001E300000081C08337AF408A77E5.png" src="../_images/10000201000001E300000081C08337AF408A77E5.png" />
+<p><strong>Step 2 – Define function parameters</strong></p>
+<p>You can define function parameters and return values for your function.
+Function parameters are values that are passed to the function when it
+is called. Return values are values (e.g. results of calculations) that
+are returned by the function to the calling script. Up to 10 function
+parameters and up to 10 return values can be defined for each function.</p>
+<p>To define parameters and return values, click with the mouse on a free
+area in the script editor or on the script editor’s header <span class="guinum">❶</span> (figure
+below), where the name of the function is displayed.</p>
+<p><img alt="image94" src="../_images/100002010000025F000000F613C948DBF14299DF.png" /></p>
+<p>The script pool now shows the configuration window for the
+script. Here you can add function parameters <span class="guinum">❷</span> or return values <span class="guinum">❸</span> by
+clicking on the <span class="guilabel">Add</span> buttons.</p>
+<p>For this example, click twice on the <span class="guilabel">Add</span> button <span class="guinum">❷</span> to add two function
+parameters. Then click on the first parameter name (figure below) and
+give it a more meaningful name: <em>Summand1</em>:</p>
+<img alt="../_images/10000201000001AD000000BA59BF59476BCC908C.png" src="../_images/10000201000001AD000000BA59BF59476BCC908C.png" />
+<p>Then enter the default value 0 <span class="guinum">❷</span> for the parameter. Now click on the
+second parameter name and rename it to <em>Summand2</em>.</p>
+<p><strong>Step 3 – Define return values</strong></p>
+<p>Now click once on the <span class="guilabel">Add</span> button in the <em>Return Values</em> <span class="guinum">❶</span> area
+(figure below) to add a return value. Then click on the first return value name
+and rename it to: <em>Sum</em>.</p>
+<img alt="../_images/10000201000001510000007CC6466F2943E0596A.png" src="../_images/10000201000001510000007CC6466F2943E0596A.png" />
+<p>Now save the script function to store your changes. The configuration
+area of the script function should now look like this:</p>
+<img alt="../_images/100002010000024C0000019005AB068207394D76.png" src="../_images/100002010000024C0000019005AB068207394D76.png" />
+<p><strong>Step 4 – Implement function logic</strong></p>
+<p>All function parameters and return values are available within the
+script as variables that can be read and written. I.e. the script can
+now read the transferred values from the two variables <code class="code docutils literal notranslate"><span class="pre">$Summand1</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">$Summand2</span></code> and save the result of the calculation in the variable
+<code class="code docutils literal notranslate"><span class="pre">$Sum</span></code> and thus transfer it back to the calling script.</p>
+<p>To perform the addition, insert a <em>Set Variable</em> script function into
+the script and set the type of the variable to <em>JavaScript Expression</em>.</p>
+<img alt="../_images/1000020100000256000000F4FC5255AD8336787C.png" src="../_images/1000020100000256000000F4FC5255AD8336787C.png" />
+<p>In the <span class="guilabel">Name</span> field, enter the name <span class="guinum">❶</span> (see figure below) of the variable
+which should store the value – in this case, the variable <code class="code docutils literal notranslate"><span class="pre">$Sum</span></code>.
+In the input field for the JavaScript code <span class="guinum">❷</span> you can now enter the addition of
+the two variables <code class="code docutils literal notranslate"><span class="pre">$Summand1</span></code> and <code class="code docutils literal notranslate"><span class="pre">$Summand2</span></code>.</p>
+<img alt="../_images/10000201000001A60000010A9B2821B16D5BA0B3.png" src="../_images/10000201000001A60000010A9B2821B16D5BA0B3.png" />
+<p><strong>Step 5 – Give the function a meaningful name</strong></p>
+<p>Click into the function name label <span class="guinum">❶</span> and give the function a meaningful,
+unique, short and descriptive name. This name will be shown in the script editor as
+the function name later. Here we use the Name <strong>Add Values</strong> <span class="guinum">❷</span>:</p>
+<img alt="../_images/function_name.png" src="../_images/function_name.png" />
+<p><strong>Step 6 – Add an optional comment</strong></p>
+<p>Click into the <span class="guilabel">Comment</span> field and add a n optional comment that helps
+the user of your function to understand its parameters, return value and its
+usage:</p>
+<img alt="../_images/function_comment.png" src="../_images/function_comment.png" />
+<p><strong>Step 6 – Assign an optional custom icon</strong></p>
+<p>If you use your functions in the script, the standard icon will be the icon of
+the <strong>Script Function Call</strong>:</p>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C10.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" src="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" width="60" /></a>
+<p>If you would like to improve your function with a custom SVG icon, then click
+the <span class="guilabel">Select Icon</span> button.  The software shows an icon selection dialog
+with a library of all icons loaded in the software. You can select an icon,
+by double-clicking it <span class="guinum">❸</span>.</p>
+<img alt="../_images/icon_library.png" src="../_images/icon_library.png" />
+<p>You have two
+options, two filter the icon library. The first option is to select a certain
+plug-in from the list <span class="guinum">❶</span>, if you are interested only in icons from
+this plugin. The second option is, to enter a filter expression into the
+filter text box <span class="guinum">❷</span>. You can combine both filter options:</p>
+<img alt="../_images/filtered_icon_library.png" src="../_images/filtered_icon_library.png" />
+<p>If you do not find an icon in the library, you can load a custom SVG icon by
+clicking the <span class="guilabel">Load Custom SVG Icon</span> button below the icon list. Here
+in this example we use this option to choose a custom sum icon. As soon as you
+have selected the icon, the icon of the function in the script editor <span class="guinum">❶</span>
+and in the configuration panel <span class="guinum">❷</span> is updated:</p>
+<img alt="../_images/script_function_icons.png" src="../_images/script_function_icons.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you would like to restore the default icon, click the <span class="guilabel">Clear Icon</span>
+button in the script function configuration panel.</p>
+</div>
+<p><strong>Step 7 – Save the function</strong></p>
+<p>If you have finished all your modifications, the you should save the final
+function again.</p>
+<p><strong>Step 8 – Test your function</strong></p>
+<p>Finally you can test your new script function.
+Click on the <span class="guilabel">Run Script</span> button <span class="guinum">❶</span> (figure below) - no error should
+occur and the result of the addition should be displayed in the script
+editor in the <em>Set Variable</em> function <span class="guinum">❷</span>.</p>
+<img alt="../_images/10000201000002670000013365D1FE2B80D7A609.png" src="../_images/10000201000002670000013365D1FE2B80D7A609.png" />
+<p>If errors occur, correct them and save the script function again.</p>
+</section>
+<section id="use-your-own-script-functions">
+<h3>Use your own script functions<a class="headerlink" href="#use-your-own-script-functions" title="Link to this heading"></a></h3>
+<p>Click on the button <span class="guilabel">Create New Script</span> <span class="guinum">❶</span> to create an empty script.
+Then click on the <span class="guilabel">Save Script</span> button <span class="guinum">❷</span> to give the script function a
+name and then save it with this name. The name of the script function is
+then displayed in the script editor header <span class="guinum">❸</span>. In this example we use the
+name <em>CustomScriptFunctionTest</em>.</p>
+<img alt="../_images/custom_script_function_test01.png" src="../_images/custom_script_function_test01.png" />
+<p>Add a <em>Create Variable</em> function to the script as the first function and
+configure the function as follows.</p>
+<img alt="../_images/100002010000027000000121D5231907367C5044.png" src="../_images/100002010000027000000121D5231907367C5044.png" />
+<p>Now insert a <em>Script Function Call</em> from the <em>Core Functions</em> category
+into the script as the second function.</p>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C10.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" src="../_images/10002495000034EB000034EB5801BA1011E76C10.svg" width="60" /></a>
+<p>A file selection dialogue pops up where you can select the external
+script function to be called by the script. Select the example function
+<code class="file docutils literal notranslate"><span class="pre">AddValues.qsc</span></code> that we created in the previous section. The
+function is inserted. The script editor <span class="guinum">❶</span> and the configuration
+panel <span class="guinum">❷</span> both show the custom icon. For the
+function parameters <em>Summand1</em> and <em>Summand2</em> <span class="guinum">❸</span>, enter two values as a
+test, e.g. 4 and 3. You can also use script variables in these fields.
+Enter the variable <code class="code docutils literal notranslate"><span class="pre">$Result</span></code> in the return parameter <em>Sum</em>. In other
+words, the return value of <em>Sum</em> is stored in the variable <code class="code docutils literal notranslate"><span class="pre">$Result</span></code>.
+The function should now be configured as follows:</p>
+<img alt="../_images/10000201000001D1000001A86EEBD1F62A2FEFFD.png" src="../_images/10000201000001D1000001A86EEBD1F62A2FEFFD.png" />
+<p>Now add a <em>ShowMessage</em> function as the last function to output the
+value of the <code class="code docutils literal notranslate"><span class="pre">$Result</span></code> variable. Enter the following in the
+<span class="guilabel">Message</span> field:</p>
+<img alt="../_images/10000201000001D300000094BED5B208580C66A3.png" src="../_images/10000201000001D300000094BED5B208580C66A3.png" />
+<p>Your script should now look like this:</p>
+<img alt="../_images/100002010000017D000000CE262C3B7A1191FE4E.png" src="../_images/100002010000017D000000CE262C3B7A1191FE4E.png" />
+<p>Now run the script. The <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#show-message"><span class="std std-ref">Show Message</span></a> function should show you the
+result of the call to <code class="file docutils literal notranslate"><span class="pre">AddValues.qsc</span></code> in a window and in the event log.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>By using your own script functions, you can structure your script and
+break it down into reusable and easily maintainable individual
+components.</p>
+</div>
+</section>
+<section id="edit-script-function">
+<h3>Edit script function<a class="headerlink" href="#edit-script-function" title="Link to this heading"></a></h3>
+<p>To edit a script function later, you just need to open it in the script editor.
+You can do this directly from the Script Editor by right-clicking on a custom
+function and selecting the context menu item <span class="menuselection">Edit Selected Function</span>.</p>
+<img alt="../_images/script_editor_edit_script_functions.png" src="../_images/script_editor_edit_script_functions.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Opening a script function for editing will replace the current open script
+in the Script Editor with the script to be edited.</p>
+</div>
+</section>
+</section>
+<section id="script-user-library">
+<h2>Script User Library<a class="headerlink" href="#script-user-library" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="#script-pool">Script Pool</a> contains an initially empty <em>User Library</em> category.
+This category enables a project specific grouping of custom script functions
+in a kind of user library. This allows quick access to frequently used functions
+and quick  addition of user-specific functions to the script editor via
+drag &amp; drop.</p>
+<img alt="../_images/user_library.png" src="../_images/user_library.png" />
+<p>The <em>User Library</em> category shows the content of the <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> folder
+inside of the current project <code class="file docutils literal notranslate"><span class="pre">Scripts</span></code> folder. To browse the content
+of the this folder in the file explorer, just right click into the <em>User Library</em>
+category and select the menu item <span class="menuselection">Browse User Library Folder</span>.</p>
+<img alt="../_images/browse_user_library_folder.png" src="../_images/browse_user_library_folder.png" />
+<p>To add functions to the <em>User Library</em> category, you just need to save them
+into the <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> folder or any sub folder inside of the
+<code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> folder or you use your file explorer to copy the functions
+into the <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> folder. When you have added new functions
+to the <em>User Library</em>, you need to refresh the user library. To do this,
+right click into the <em>User Library</em> category and select the menu item
+<span class="menuselection">Refresh User Library</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>To display newly added functions in the <em>User Library</em> you need to refresh
+the library via context menu item <span class="menuselection">Refresh User Library</span>.</p>
+</div>
+<p>The <em>User Library</em> category also
+takes into account subdirectories in the <code class="file docutils literal notranslate"><span class="pre">UserLibrary</span></code> folder.
+That means, subdirectories will be shown as folders in the <em>User Library</em> category.</p>
+<img alt="../_images/user_library_folders.png" src="../_images/user_library_folders.png" />
+<p>By default each folder is shown with a folder symbol <span class="guinum">❶</span> but you can
+provide a custom icon for each folder. Just copy an <code class="file docutils literal notranslate"><span class="pre">SVG</span></code> icon with
+the same name into a folder, to set it as folder icon. In the example above
+the <em>User Library</em> contains the folder <code class="file docutils literal notranslate"><span class="pre">Robot</span> <span class="pre">Functions</span></code>. This folder
+contains the file <code class="file docutils literal notranslate"><span class="pre">Robot</span> <span class="pre">Functions.svg</span></code>. If the software detects an
+SVG icon in a folder with the same name like the folder, it will set it as
+folder icon <span class="guinum">❷</span> in the Script Pool.</p>
+<p>To open a user function from the <em>User Library</em> for editing in the <a class="reference internal" href="#script-editor">Script Editor</a>
+right-click on the function and select the context menu item
+<span class="menuselection">Edit Selected Function</span>.</p>
+<img alt="../_images/script_pool_edit_function.png" src="../_images/script_pool_edit_function.png" />
+</section>
+<section id="script-autostart">
+<h2>Script Autostart<a class="headerlink" href="#script-autostart" title="Link to this heading"></a></h2>
+<p>The script system can be configured to automatically load and start a
+script after successfully connecting to the device hardware. The dialog
+with the corresponding settings can be opened via the menu item
+<span class="menuselection">Edit → Settings</span> in the main menu of the application.</p>
+<p><img alt="Figure 24: Script autostart configuration" src="../_images/100002010000022600000126F6C3DD9DEA793D3B.png" /></p>
+<p>You can now configure the
+script autostart in the Settings dialog of the application. First select
+the settings category <em>Scripting</em> <span class="guinum">❶</span>. Now you can activate the script
+autostart <span class="guinum">❷</span> in the right area. You can select the script file to be
+loaded and executed via the <span class="guilabel">Autostart Scriptfile</span> <span class="guinum">❸</span> input field. If
+this field is empty, the script is executed which is loaded when the
+application is started, i.e. the script which was open when the
+application was last used. Finish the configuration by clicking <span class="guilabel">OK</span> <span class="guinum">❹</span>.</p>
+<p>If you want the software to start up automatically and execute a script
+after your computer has booted, then proceed as follows:</p>
+<ol class="arabic simple steps">
+<li><p>Insert <strong class="program">QmixElements.exe</strong> into the <em>Windows Autostart</em> to start the
+software automatically after booting the computer.</p></li>
+<li><p>Open the dialog with the global settings via the main menu of the
+application (<span class="menuselection">Edit → Settings</span>).</p></li>
+<li><p>Select the <em>General</em> settings category and activate the
+<span class="guilabel">auto connect</span> option. This will cause the software to automatically
+connect to the device hardware after start-up.</p></li>
+<li><p>Then select the <em>Scripting</em> setting category to configure the script
+autostart</p></li>
+</ol>
+</section>
+<section id="script-error-handling">
+<h2>Script Error Handling<a class="headerlink" href="#script-error-handling" title="Link to this heading"></a></h2>
+<p>No matter how great we are at programming, sometimes our scripts have errors.
+They may occur due to our mistakes, unexpected user input, when parameters are
+out of range, errors in communication with devices or a thousand other reasons.</p>
+<p>If an error occurs in the script, the standard reaction is as follows:</p>
+<ul class="simple">
+<li><p>the script execution is interrupted <span class="guinum">❶</span></p></li>
+<li><p>the script stops at the function that caused the error <span class="guinum">❷</span></p></li>
+<li><p>an error message is displayed in the <em>Event Log</em> and the warning that the
+script execution was interrupted <span class="guinum">❸</span></p></li>
+<li><p>since the script is interrupted, parallel sequences are also not executed any longer</p></li>
+<li><p>the script can only be continued by clicking the <span class="guilabel">Start</span> button <span class="guinum">❹</span></p></li>
+</ul>
+<img alt="../_images/default_error_handling.png" src="../_images/default_error_handling.png" />
+<p>This type of error handling may be unacceptable, for example, in the case of
+automatic control via the I/Os of a PLC or also due to the requirements of a
+certain user application process - e.g. if parallel sequences should continue
+to run, a PLC should be able to react to errors or reset errors or if manual
+intervention by the user is not possible.</p>
+<a class="reference internal image-reference" href="../_images/try_except.svg"><img alt="../_images/try_except.svg" class="align-left" src="../_images/try_except.svg" width="60" /></a>
+<p>But there’s a <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#try-catch"><span class="std std-ref">Try…Catch</span></a> function that allows us to “catch”
+errors so the script can, instead of interrupting, do something more reasonable
+such as handling the error or bringing devices into a safe state.
+If an error is caught in a <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#try-catch"><span class="std std-ref">Try…Catch</span></a> block, only the function
+sequence in which the error occurred is affected - the script continues to run
+and parallel sequences are still executed.</p>
+<p>All details on error handling using Try…Catch can be found in the
+<a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#try-catch"><span class="std std-ref">documentation for the Try…Catch</span></a> block.</p>
+</section>
+<section id="debugging-scripts">
+<h2>Debugging Scripts<a class="headerlink" href="#debugging-scripts" title="Link to this heading"></a></h2>
+<p>When you develop a script program, there are several ways,
+to find and debug errors. In the following sections we present
+some features that help you debug scripts.</p>
+<section id="single-step-operation">
+<h3>Single Step Operation<a class="headerlink" href="#single-step-operation" title="Link to this heading"></a></h3>
+<p>single-stepping allows you to have more control of viewing individual actions of
+the program. With single-stepping, you can execute a single function at a time,
+causing the program to pause after the function completes. To use the single
+step mode, proceed as follows:</p>
+<ol class="arabic steps inlineimg">
+<li><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a> Activate the single stepping mode by pressing the
+<em>Enable / Disable Single Stepping</em> button.</p>
+<img alt="../_images/single_stepping_buttons.png" src="../_images/single_stepping_buttons.png" />
+</li>
+<li><p><a class="reference internal" href="../_images/single_step2.svg"><img alt="execstep" src="../_images/single_step2.svg" width="40" /></a> Use the <em>Execute Single Step</em> button to trigger the execution of
+the next step. Press this button as often as you want to execute further
+single steps.</p></li>
+<li><p><a class="reference internal" href="../_images/step.svg"><img alt="stepping" src="../_images/step.svg" width="40" /></a> Deactivate the single stepping mode by pressing again the
+<em>Enable / Disable Single Stepping</em> button.</p></li>
+<li><p><a class="reference internal" href="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg"><img alt="runscript" src="../_images/10000C80000038720000387227CC20DA34BFD4F5.svg" width="40" /></a> Continue normal script execution by pressing the
+<em>Run Script</em> button.</p></li>
+</ol>
+<p class="inlineimg">This allows you to go through your program step by step and observe the process
+at your leisure. You can activate or deactivate the single-step mode at any
+time - even while your program is already running.</p>
+</section>
+<section id="activate-deactivate-debug-mode">
+<span id="debug-mode"></span><h3>Activate / deactivate debug mode<a class="headerlink" href="#activate-deactivate-debug-mode" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/debug.svg"><img alt="../_images/debug.svg" class="align-left" src="../_images/debug.svg" width="60" /></a>
+<p>The debug mode can be activated and deactivated via the
+<a class="reference internal" href="#scripteditor-contextmenu"><span class="std std-ref">context menu of the script editor</span></a>. This sets
+the value of the global script variable <code class="code docutils literal notranslate"><span class="pre">$DebugMode</span></code> to <code class="code docutils literal notranslate"><span class="pre">true</span></code> or
+<code class="code docutils literal notranslate"><span class="pre">false</span></code>. I.e. you can then execute code or output additional debug
+messages depending on this variable in the script. For example, you can use
+the <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#log-message"><span class="std std-ref">Log Message</span></a> function to log messages that are only output when debug
+mode is active.</p>
+</section>
+<section id="insert-breakpoints">
+<h3>Insert Breakpoints<a class="headerlink" href="#insert-breakpoints" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_script.svg"><img alt="../_images/interrupt_script.svg" class="align-left" src="../_images/interrupt_script.svg" width="60" /></a>
+<p>You can interrupt your script at certain points by inserting an
+<a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#interrupt-script"><span class="std std-ref">Interrupt Script</span></a> function. This allows you to interrupt the program
+flow at specific points to examine the state of variables. If you insert the
+interrupt function in a <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a>, you can interrupt the
+program conditionally when certain events occur or variables have certain values.</p>
+<p>In the following example, the program flow is interrupted when the value of the
+variable <code class="code docutils literal notranslate"><span class="pre">EmployeeName</span></code> has the value <code class="code docutils literal notranslate"><span class="pre">John</span></code>.</p>
+<img alt="../_images/conditional_interrupt.png" src="../_images/conditional_interrupt.png" />
+</section>
+<section id="printing-debug-messages">
+<h3>Printing Debug Messages<a class="headerlink" href="#printing-debug-messages" title="Link to this heading"></a></h3>
+<p>The runtime behavior of the program is changed by single-step operation or the
+insertion of breakpoints. I.e. the sequence is slowed down or interrupted. If
+you use debug messages to display the program flow, the value of variables or
+the value of device properties, the runtime behavior is hardly affected.</p>
+<p>To output a debug message, you just need to insert a <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#log-message"><span class="std std-ref">Log Message</span></a>
+function at  the point in the program where you want to write a message to the
+event log. In the following picture, for example, the value of the <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code>
+variable is output to the event log in each loop cycle:</p>
+<img alt="../_images/debug_show_message.png" src="../_images/debug_show_message.png" />
+<p>The event log then displays each recorded message with a timestamp. This allows
+you to analyze the output values in a temporal context:</p>
+<img alt="../_images/debug_event_log.png" src="../_images/debug_event_log.png" />
+</section>
+<section id="disable-functions">
+<h3>Disable Functions<a class="headerlink" href="#disable-functions" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/enable_disable_functions2.svg"><img alt="../_images/enable_disable_functions2.svg" class="align-left" src="../_images/enable_disable_functions2.svg" width="60" /></a>
+<p>To test certain program sections in isolation, to block the execution of
+functions during debugging, or to test alternative implementations, it may be
+necessary to temporarily disable functions. Disabled functions are skipped
+during program execution. This corresponds to the functionality of commenting
+out source code in text-based programming languages.</p>
+<p>For details on how to disable functions, refer to the section
+<a class="reference internal" href="#disable-enable-functions"><span class="std std-ref">Disable / Enable Functions</span></a>.</p>
+</section>
+<section id="display-variable-values">
+<h3>Display variable values<a class="headerlink" href="#display-variable-values" title="Link to this heading"></a></h3>
+<p>To display the current value of a script variable, simply move the mouse pointer
+over a <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#create-variable"><span class="std std-ref">Create Variable</span></a> or <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#set-variable"><span class="std std-ref">Set Variable</span></a> function in which this
+variable is accessed. The current value of the variable is then displayed
+at <span class="guilabel">Current Value</span>.</p>
+<img alt="../_images/debug_variable_value.png" src="../_images/debug_variable_value.png" />
+<p>In the example above you can see a script in which the value of the variable
+<code class="code docutils literal notranslate"><span class="pre">$Test</span></code> is changed by three different functions. After the execution of
+the script, the mouse pointer is moved over the <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#create-variable"><span class="std std-ref">Create Variable</span></a> function.
+Although the value 0 is assigned in this function, you see the current value 2
+in the message window, because the two following <a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html#set-variable"><span class="std std-ref">Set Variable</span></a> functions have
+already been executed.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

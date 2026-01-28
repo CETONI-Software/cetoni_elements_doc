@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg4214"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="open_image2.svg">
+  <metadata
+     id="metadata4238">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4236" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4234"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.95"
+     inkscape:cx="48.354253"
+     inkscape:cy="256"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4214" />
+  <title
+     id="title4216">folder3 document icon</title>
+  <desc
+     id="desc4218">folder3 document icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+  <path
+     style="fill:#ffb100"
+     inkscape:connector-curvature="0"
+     id="path4222"
+     d="m 434.2,202.35 -20.4,14.05 c -8.9,6.15 -13.8,15.45 -13.8,26.3 l 0,229.3 c 0,4.4 -3.6,8 -8,8 l -352,0 c -4.4,0 -8,-3.6 -8,-8 L 32,40 c 0,-4.4 3.6,-8 8,-8 l 400,0 c 4.4,0 8,3.6 8,8 l 0,136 c 0,10.85 -4.9,20.2 -13.8,26.35 z" />
+  <g
+     id="g4792"
+     transform="matrix(-0.78207237,0,0,0.79303728,512,106.61403)">
+    <polygon
+       id="polygon4794"
+       points="512,448 0,448 0,64 512,64 "
+       style="fill:#ebedef" />
+    <polygon
+       id="polygon4796"
+       points="0,448 0,443.75 512,68.25 512,448 "
+       style="fill:#cdd7db" />
+    <polygon
+       id="polygon4798"
+       points="496,432 16,432 16,80 496,80 "
+       style="fill:#4ec1f5" />
+    <polygon
+       id="polygon4800"
+       points="496,432 16,432 496,80 "
+       style="fill:#28b5f5" />
+    <path
+       id="path4802"
+       d="m 208,112 c 35.35,0 64,28.65 64,64 0,35.35 -28.65,64 -64,64 -35.35,0 -64,-28.65 -64,-64 0,-35.35 28.65,-64 64,-64 z"
+       inkscape:connector-curvature="0"
+       style="fill:#fbd734" />
+    <path
+       id="path4804"
+       d="M 496,379.95 496,432 16,432 16,289 C 45.05,269.2 81.15,256 125.1,256 208,256 332.2,331.7 496,379.95 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#429f46" />
+    <path
+       id="path4806"
+       d="M 496,379.95 496,432 16,432 225.15,278.65 C 298.05,304.8 388.5,348.3 496,379.95 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#388d3c" />
+    <path
+       id="path4808"
+       d="M 496,275.55 496,432 16,432 16,330.7 c 223.6,104.35 326.15,-113.8 414.55,-113.8 31.95,0 65.85,46.35 65.45,58.65 z"
+       inkscape:connector-curvature="0"
+       style="fill:#7cb142" />
+    <path
+       id="path4810"
+       d="M 496,275.55 496,432 16,432 116.4,358.35 C 272.75,369.5 356.6,216.9 430.55,216.9 c 31.95,0 65.85,46.35 65.45,58.65 z"
+       inkscape:connector-curvature="0"
+       style="fill:#689d38" />
+  </g>
+  <path
+     style="fill:#ffd34e"
+     inkscape:connector-curvature="0"
+     id="path4230"
+     d="m 246.2,170.3 0,-159.65 c 0,-4.95 -2.85,-8.55 -6.3,-8.1 L 37,29.65 c -2.8,0.35 -5,4.2 -5,8.6 0,144 0,288 0,432 0,4.35 2.2,8.35 5,8.7 76.15,10.15 152.3,20.3 228.4,30.45 3.65,0.5 6.6,-3.3 6.6,-8.3 l -0.05,-266.35 c 0,-10.7 -2.9,-19.8 -8.5,-26.9 -2.95,-3.75 -5.95,-7.45 -8.9,-11.15 -5.55,-6.9 -8.35,-15.9 -8.35,-26.4 z" />
+  <path
+     style="fill:#ffc928"
+     inkscape:connector-curvature="0"
+     id="path4232"
+     d="m 246.2,170.3 0,-159.65 c 0,-2.5 -0.75,-4.65 -1.9,-6.1 L 45.35,480.1 c 73.35,9.75 146.7,19.55 220.05,29.3 3.65,0.5 6.6,-3.3 6.6,-8.3 l -0.05,-266.35 c 0,-10.7 -2.9,-19.8 -8.5,-26.9 -2.95,-3.75 -5.95,-7.45 -8.9,-11.15 -5.55,-6.9 -8.35,-15.9 -8.35,-26.4 z" />
+</svg>

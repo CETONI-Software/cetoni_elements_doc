@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16. Image Analysis Plugin &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="17. Video Builder Plugin" href="../videobuilder_EN/videobuilder_EN.html" />
+    <link rel="prev" title="15. Camera Add-on" href="../cameraview_EN/cameraview_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">16. Image Analysis Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">16.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">16.2. Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-viewer">16.3. Image Viewer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">16.3.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-scale-unit">16.3.2. Select Scale Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-zoom-level">16.3.3. Select Zoom Level</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#image-navigation">16.4. Image Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-via-scrollbars">16.4.1. Navigation via Scrollbars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-via-the-pan-tool">16.4.2. Navigation via the Pan Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-via-mouse">16.4.3. Navigation via Mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-via-the-space-mouse">16.4.4. Navigation via the Space Mouse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#measurement-of-objects">16.5. Measurement of Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#draw-a-measuring-box">16.5.1. Draw a Measuring Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-the-measuring-box">16.5.2. Moving the Measuring Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adjusting-the-size-of-a-measuring-box">16.5.3. Adjusting the Size of a Measuring Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-a-measuring-box">16.5.4. Deleting a Measuring Box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">16. </span>Image Analysis Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="image-analysis-plugin">
+<h1><span class="section-number">16. </span>Image Analysis Plugin<a class="headerlink" href="#image-analysis-plugin" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">16.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This plug-in allows you to view, edit, and save images using the most
+common image file formats (PNG, JPG). In addition you can use it to:</p>
+<ul class="simple">
+<li><p>zoom in and out of images,</p></li>
+<li><p>easily navigate within an image,</p></li>
+<li><p>measure the dimensions of details of an image.</p></li>
+</ul>
+<img alt="../_images/100002010000025A000001644CA06F4F.png" src="../_images/100002010000025A000001644CA06F4F.png" />
+<p>You can show the Image Analysis <a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#views"><span class="std std-ref">View</span></a> via the main menu iteme
+<span class="menuselection">Window → Show View → Image Analysis</span>. The user interface
+of the Image Analysis View consists of two main elements: the <a class="reference internal" href="#toolbar">Toolbar</a> <span class="guinum">❶</span> and
+the <a class="reference internal" href="#image-viewer"><span class="std std-ref">Image Viewer</span></a> <span class="guinum">❷</span>.</p>
+</section>
+<section id="toolbar">
+<h2><span class="section-number">16.2. </span>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/open_image2.svg"><img alt="image19" src="../_images/open_image2.svg" width="60" /></a></p></td>
+<td><p>Open image file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/save_image.svg"><img alt="image20" src="../_images/save_image.svg" width="60" /></a></p></td>
+<td><p>Save current image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/fit_to_size1.svg"><img alt="image21" src="../_images/fit_to_size1.svg" width="60" /></a></p></td>
+<td><p>Adjust display size of image to completely fill image
+viewer area.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/view_1_11.svg"><img alt="image22" src="../_images/view_1_11.svg" width="60" /></a></p></td>
+<td><p>Resize image to match original pixel size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/zoom_in1.svg"><img alt="image23" src="../_images/zoom_in1.svg" width="60" /></a></p></td>
+<td><p>Zoom in to image.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/zoom_out1.svg"><img alt="image24" src="../_images/zoom_out1.svg" width="60" /></a></p></td>
+<td><p>Zoom out of image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/pan_hand.svg"><img alt="image25" src="../_images/pan_hand.svg" width="60" /></a></p></td>
+<td><p>Pan tool to move the currently displayed image section.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/measure_rect.svg"><img alt="image26" src="../_images/measure_rect.svg" width="60" /></a></p></td>
+<td><p>Draw rectangular measuring box.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/measure_items_clear.svg"><img alt="image27" src="../_images/measure_items_clear.svg" width="60" /></a></p></td>
+<td><p>Remove all measurement overlays.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also open image files easily via drag
+&amp; drop. Simply drag an image file from your file system
+over the image analysis workbench and drop it there.</p>
+</div>
+</section>
+<section id="image-viewer">
+<h2><span class="section-number">16.3. </span>Image Viewer<a class="headerlink" href="#image-viewer" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3><span class="section-number">16.3.1. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>The image viewer contains the following elements:</p>
+<img alt="../_images/10000201000001ED000000E091038262.png" src="../_images/10000201000001ED000000E091038262.png" />
+<ol class="arabic simple guinums">
+<li><p>Tabbed list of available images.</p></li>
+<li><p>Ruler with customizable dimensions.</p></li>
+<li><p>Display area.</p></li>
+<li><p>Zoom level status bar.</p></li>
+<li><p>Scroll bars.</p></li>
+</ol>
+<p>A new tab displaying the file name will be added for each opened image,
+e.g., when you open an image file or take a screen shot using the
+camera. The active tab is highlighted. To close a tab, left-click on the
+cross icon that is displayed on the right hand side of every tab
+(see figure below).</p>
+<img alt="../_images/10000201000001220000005C1545D1D1.png" src="../_images/10000201000001220000005C1545D1D1.png" />
+<p>To easily access the most frequently used functions, use the mouse and
+right-click within the image viewing area. This will open a context menu
+with most of the same buttons that are shown in the toolbar.</p>
+<img alt="../_images/100002010000020F0000010C65D000F9.png" src="../_images/100002010000020F0000010C65D000F9.png" />
+</section>
+<section id="select-scale-unit">
+<h3><span class="section-number">16.3.2. </span>Select Scale Unit<a class="headerlink" href="#select-scale-unit" title="Link to this heading"></a></h3>
+<p>You can select between different scale units for the ruler to measure
+objects displayed in the image viewer window. To change the scale unit
+right-click anywhere within the ruler. This will open a context menu
+with the list of available scale units (see figure below).</p>
+<img alt="../_images/1000020100000193000000A1DB1AAD46.png" src="../_images/1000020100000193000000A1DB1AAD46.png" />
+</section>
+<section id="select-zoom-level">
+<h3><span class="section-number">16.3.3. </span>Select Zoom Level<a class="headerlink" href="#select-zoom-level" title="Link to this heading"></a></h3>
+<p>Use the <em>Zoom In</em> or <em>Zoom Out</em> buttons in the toolbar to adjust the
+zoom level. Alternatively, simply place the cursor into the image viewer
+area and use the mouse wheel to re-scale the panoramic image.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E98AB54170.png"><img alt="image32" src="../_images/10000000000001EC000002E98AB54170.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_in1.svg"><img alt="image23" src="../_images/zoom_in1.svg" width="60" /></a></p></td>
+<td><p>Increase zoom level.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000001EC000002E9389967B0.png"><img alt="image33" src="../_images/10000000000001EC000002E9389967B0.png" style="width: 80px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/zoom_out1.svg"><img alt="image24" src="../_images/zoom_out1.svg" width="60" /></a></p></td>
+<td><p>Decrease zoom level.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="image-navigation">
+<h2><span class="section-number">16.4. </span>Image Navigation<a class="headerlink" href="#image-navigation" title="Link to this heading"></a></h2>
+<section id="navigation-via-scrollbars">
+<h3><span class="section-number">16.4.1. </span>Navigation via Scrollbars<a class="headerlink" href="#navigation-via-scrollbars" title="Link to this heading"></a></h3>
+<p>If the image is larger than the viewing area (e.g., due to a large zoom
+level), scrollbars will be displayed below and to the right of the image
+viewer. Use these scrollbars to adjust the displayed section of the
+image.</p>
+</section>
+<section id="navigation-via-the-pan-tool">
+<h3><span class="section-number">16.4.2. </span>Navigation via the Pan Tool<a class="headerlink" href="#navigation-via-the-pan-tool" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/pan_hand.svg"><img alt="../_images/pan_hand.svg" class="align-left" src="../_images/pan_hand.svg" width="60" /></a>
+<p>Activate the Pan Tool in the tool bar to move the displayed
+image section manually. Click-and-drag into the image viewer to move the
+image in the viewing area.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="navigation-via-mouse">
+<h3><span class="section-number">16.4.3. </span>Navigation via Mouse<a class="headerlink" href="#navigation-via-mouse" title="Link to this heading"></a></h3>
+<p>You may also use the mouse to interact with the panoramic view of an
+image:</p>
+<ol class="arabic steps">
+<li><p>Middle-click into the image.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/10000000000001EC000002E9F2BF7149.png"><img alt="../_images/10000000000001EC000002E9F2BF7149.png" src="../_images/10000000000001EC000002E9F2BF7149.png" style="width: 80px;" /></a>
+</div></blockquote>
+</li>
+<li><p>This will activate a navigation cross, which indicates
+that mouse panning is activated.</p>
+<img alt="../_images/1000020100000189000000B918EE2BA8.png" src="../_images/1000020100000189000000B918EE2BA8.png" />
+</li>
+<li><p>By moving the cursor away from the navigation cross, the
+image will move into the same relative direction. The speed of the
+movement depends on the distance between the cross and the cursor –
+the greater the distance, the faster the adjustment.</p>
+<a class="reference internal image-reference" href="../_images/10000000000002BB000003B0D14AEFFC.png"><img alt="../_images/10000000000002BB000003B0D14AEFFC.png" src="../_images/10000000000002BB000003B0D14AEFFC.png" style="width: 100px;" /></a>
+</li>
+<li><p>Mouse panning can be deactivated by another middle-click or a
+left-click into the image.</p></li>
+</ol>
+</section>
+<section id="navigation-via-the-space-mouse">
+<h3><span class="section-number">16.4.4. </span>Navigation via the Space Mouse<a class="headerlink" href="#navigation-via-the-space-mouse" title="Link to this heading"></a></h3>
+<p>When the <em>Space Mouse</em> is installed, loading the relevant
+plug-in allows for yet another way for image manipulation.</p>
+<img alt="../_images/10000000000001BC000001A5A8497856.png" src="../_images/10000000000001BC000001A5A8497856.png" />
+<p>The <a class="reference external" href="https://3dconnexion.com/us/product/spacemouse-compact/">SpaceMouse</a>
+is an intuitive input device which allows you to control all axes
+(rotation, radius and vertical axis) simultaneously. To use the SpaceMouse,
+connect it to an available USB port on your PC. Latest drivers can be found
+on our internet page:</p>
+<p><a class="reference external" href="http://www.cetoni.de/englisch/service/downloads_software.html">http://www.cetoni.de/englisch/service/downloads_software.html</a></p>
+<p>or on disk (CD or USB stick) you received when you purchased the
+software. Install the driver to use the SpaceMouse. Position the SpaceMouse device, so that the cable leads away from
+you and that the <strong>3D Connexion</strong> label is readable from your position.</p>
+<img alt="../_images/1000000000000500000002D03030564E.png" src="../_images/1000000000000500000002D03030564E.png" />
+<p>To adjust the digital zoom
+of the currently active image, press down or pull up the navigation knob
+of the Space Mouse (figure below).</p>
+<img alt="../_images/1000000000000117000001F4986AD712.png" src="../_images/1000000000000117000001F4986AD712.png" />
+<p>To adjust
+the section of the image displayed in the image viewing area, pivot the
+navigation knob of the Space Mouse into the desired direction.</p>
+<img alt="../_images/10000000000002240000017430F55526.png" src="../_images/10000000000002240000017430F55526.png" />
+<p>The speed with
+which the adjustment is carried out can be regulated by adjusting the
+degree of pivoting – the stronger the navigation knob is pushed or
+pulled, the faster the image will move.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000000000000C40000008BD9BAE182.png"><img alt="image39" src="../_images/10000000000000C40000008BD9BAE182.png" style="width: 80px;" /></a></p></td>
+<td><p>Move image section left &amp; right.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000000000000116000000E97F22C917.png"><img alt="image40" src="../_images/1000000000000116000000E97F22C917.png" style="width: 80px;" /></a></p></td>
+<td><p>Move image section up &amp; down.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000009D000000DF60858E32.png"><img alt="image41" src="../_images/100000000000009D000000DF60858E32.png" style="width: 60px;" /></a></p></td>
+<td><p>Zoom in/out.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="measurement-of-objects">
+<h2><span class="section-number">16.5. </span>Measurement of Objects<a class="headerlink" href="#measurement-of-objects" title="Link to this heading"></a></h2>
+<section id="draw-a-measuring-box">
+<h3><span class="section-number">16.5.1. </span>Draw a Measuring Box<a class="headerlink" href="#draw-a-measuring-box" title="Link to this heading"></a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before drawing a measuring box, select the desired scale unit.</p>
+</div>
+<p>You can draw and adjust a measuring box using the following steps:</p>
+<ol class="arabic steps">
+<li><p>Click the toolbar button <em>Measure Rectangle</em> to activate
+the measuring box tool.</p>
+<a class="reference internal image-reference" href="../_images/measure_rect.svg"><img alt="../_images/measure_rect.svg" src="../_images/measure_rect.svg" width="60" /></a>
+</li>
+<li><p>Left-click into the image viewing area to define the upper left-hand
+corner of the measuring box <span class="guinum">❶</span>.</p>
+<img alt="../_images/100002010000020E000000CCEAC7AB0F.png" src="../_images/100002010000020E000000CCEAC7AB0F.png" />
+</li>
+<li><p>While holding the left mouse button, drag the cursor to size the box
+as required <span class="guinum">❷</span>.</p></li>
+</ol>
+</section>
+<section id="moving-the-measuring-box">
+<h3><span class="section-number">16.5.2. </span>Moving the Measuring Box<a class="headerlink" href="#moving-the-measuring-box" title="Link to this heading"></a></h3>
+<p>To move an entire box to a new location within the viewing area, first
+place the cursor within the box so that it changes into a crossed arrow
+<span class="guinum">❶</span>. Left-klick to drag the measuring box to its new position <span class="guinum">❷</span>.</p>
+<img alt="../_images/100002010000020C000000CAA5EBAD7D.png" src="../_images/100002010000020C000000CAA5EBAD7D.png" />
+</section>
+<section id="adjusting-the-size-of-a-measuring-box">
+<h3><span class="section-number">16.5.3. </span>Adjusting the Size of a Measuring Box<a class="headerlink" href="#adjusting-the-size-of-a-measuring-box" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000203000000BA99B95279.png" src="../_images/1000020100000203000000BA99B95279.png" />
+<p>To change the size
+of a measuring box, move the cursor to one of the 8 square drag handles at the
+corners or the sides of the box (figure below). The cursor will change
+to a double-sided arrow <span class="guinum">❶</span>, which indicates that you can now resizing the
+box by dragging the respective mark to a new position.</p>
+</section>
+<section id="deleting-a-measuring-box">
+<h3><span class="section-number">16.5.4. </span>Deleting a Measuring Box<a class="headerlink" href="#deleting-a-measuring-box" title="Link to this heading"></a></h3>
+<p>You can delete individual measuring boxes. First click into the
+respective box to activate it – the activated box can be identified by
+the presence of the check marks. Press the Delete button of your
+keyboard to remove the box.</p>
+<a class="reference internal image-reference" href="../_images/measure_items_clear.svg"><img alt="../_images/measure_items_clear.svg" class="align-left" src="../_images/measure_items_clear.svg" width="60" /></a>
+<p>Delete all measuring boxes within an image by clicking the
+button <em>Delete measuring lines</em> button in the toolbar or via the context menu.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../cameraview_EN/cameraview_EN.html" class="btn btn-neutral float-left" title="15. Camera Add-on" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../videobuilder_EN/videobuilder_EN.html" class="btn btn-neutral float-right" title="17. Video Builder Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

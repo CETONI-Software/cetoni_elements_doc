@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemesys Script Functions &mdash; CETONI Elements Private Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Private Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_EN/python_EN.html">21. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">23. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">24. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">26. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Private Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nemesys Script Functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nemesys-script-functions">
+<h1>Nemesys Script Functions<a class="headerlink" href="#nemesys-script-functions" title="Link to this heading"></a></h1>
+<section id="introduction-to-nemesys-script-functions">
+<h2>Introduction to Nemesys Script Functions<a class="headerlink" href="#introduction-to-nemesys-script-functions" title="Link to this heading"></a></h2>
+<p>The Nemesys plugin offers a number of script functions which can be used
+to program automatic sequences. The following script functions are
+available:</p>
+<img alt="../_images/100002010000011B000000F6E6C15CD2AF9DE7DA.png" src="../_images/100002010000011B000000F6E6C15CD2AF9DE7DA.png" />
+</section>
+<section id="automatically-stop-pumps-at-script-stop">
+<h2>Automatically stop pumps at script stop<a class="headerlink" href="#automatically-stop-pumps-at-script-stop" title="Link to this heading"></a></h2>
+<p>If you want all pumps to be stopped immediately when the user stops the
+running script program, activate the corresponding button in the main
+toolbar.</p>
+<img alt="../_images/10000201000001D60000004893A82EEF2696F6A7.png" src="../_images/10000201000001D60000004893A82EEF2696F6A7.png" />
+</section>
+<section id="dose-volume">
+<h2>Dose Volume<a class="headerlink" href="#dose-volume" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/100008FA000034EB000034EB3822C426C555871E.svg"><img alt="../_images/100008FA000034EB000034EB3822C426C555871E.svg" class="align-left" src="../_images/100008FA000034EB000034EB3822C426C555871E.svg" width="60" /></a>
+<p>With this function, you can dose a specific volume at a
+precisely defined flow rate. In the selection field Dosing Module <span class="guinum">❶</span>
+you select the dosing module you want to use for dosing. Alternatively, you
+can also enter the name of a script variable in the field, which
+contains a device reference of a pump.</p>
+<img alt="../_images/10000201000001A8000000FED3ED286BF6ED76C6.png" src="../_images/10000201000001A8000000FED3ED286BF6ED76C6.png" />
+<p>All other parameters, such as
+the volume to be dosed and the flow rate, can be set in the Target
+Values <span class="guinum">❷</span> area.</p>
+<p>You can also activate or deactivate the <span class="guilabel">Run to completion</span> <span class="guinum">❸</span>
+parameter in the configuration area. When <span class="guilabel">Run to completion</span> is activated,
+the script execution is not continued until the complete volume has been
+dosed and the dosing process has ended. If this parameter is not active,
+the dosing is started, and then the next script function is executed
+immediately. This enables you, for example, to start a number of dosing
+modules almost simultaneously.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All the dosing functions support the use of
+variables. That means, in all input fields marked with a
+coloured V in the script configuration panel (e.g. flow
+rate and volume) you can enter variables.</p>
+</div>
+</section>
+<section id="generate-flow">
+<h2>Generate Flow<a class="headerlink" href="#generate-flow" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10003B74000034EB000034EB5935D7B503AF0C6A.svg"><img alt="../_images/10003B74000034EB000034EB5935D7B503AF0C6A.svg" class="align-left" src="../_images/10003B74000034EB000034EB5935D7B503AF0C6A.svg" width="60" /></a>
+<p>This function is used to generate a constant flow rate. In the
+configuration area, you can select the dosing module and set the flow
+rate. If the <span class="guilabel">Run to completion</span> parameter is active, the next script
+function is not executed until the module has stopped or reached one of
+the limit positions. The configuration of the parameters corresponds to
+the <a class="reference internal" href="#dose-volume">Dose Volume</a> function.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use script variables with device
+references in the pump drop-down box.</p>
+</div>
+</section>
+<section id="set-syringe-level">
+<h2>Set Syringe Level<a class="headerlink" href="#set-syringe-level" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10003A2D000034EB000034EBBFEA0991D95C1B99.svg"><img alt="../_images/10003A2D000034EB000034EBBFEA0991D95C1B99.svg" class="align-left" src="../_images/10003A2D000034EB000034EBBFEA0991D95C1B99.svg" width="60" /></a>
+<p>You can use this function in a script if you want to reach a
+specific syringe fill level. The dosing module then doses until the
+target fill level is reached. You can set the dosing module, the fill
+level and the flow rate in the configuration area of this function. The
+configuration of the parameters corresponds to the <a class="reference internal" href="#dose-volume">Dose Volume</a> function.</p>
+</section>
+<section id="continuous-flow-function">
+<h2>Continuous Flow Function<a class="headerlink" href="#continuous-flow-function" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10006B24000034EB000034EB2B72B9A4AEDF2E9A.svg"><img alt="../_images/10006B24000034EB000034EB2B72B9A4AEDF2E9A.svg" class="align-left" src="../_images/10006B24000034EB000034EB2B72B9A4AEDF2E9A.svg" width="60" /></a>
+<p>This function allows you to start a continuous flow of two
+pumps from a script. To do this, select the first dosing unit <span class="guinum">❶</span>
+in the script configuration area of this function and then start
+the <em>Continuous Flow Wizard</em> <span class="guinum">❷</span> to configure all parameters. For a
+detailed description of the configuration, refer to the
+<a class="reference internal" href="nemesys_full_EN.html#configuring-continuous-flow"><span class="std std-ref">Configuring Continuous Flow</span></a> section.</p>
+<img alt="../_images/10000201000001BC00000132A166CAFDAC65CC2D.png" src="../_images/10000201000001BC00000132A166CAFDAC65CC2D.png" />
+<p>After configuration with the <em>Continuous Flow Wizard</em>, you will see the
+configured flow rate in the <span class="guilabel">Flow</span> field <span class="guinum">❸</span>.
+If you have configured a certain volume for the continuous flow in the wizard,
+the <span class="guilabel">Volume</span> field <span class="guinum">❹</span> is also displayed. You can use
+the <span class="guilabel">Flow</span> and <span class="guilabel">Volume</span> fields to set the flow rate and
+volume using script variables.</p>
+<p>With the checkbox <span class="guilabel">Run to completion</span> <span class="guinum">❺</span> you define when
+the next script function will be executed. If no check mark is set here, the
+continuous flow is started and the next script function is executed
+immediately. If <span class="guilabel">Run to completion</span> is active, the script is only
+continued when the abort condition configured in the wizard occurs -
+i.e. when the configured volume has been dosed or the set time has
+elapsed.</p>
+</section>
+<section id="change-continuous-flow">
+<h2>Change Continuous Flow<a class="headerlink" href="#change-continuous-flow" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/100215FB000034EB000034EB41F823505A27F258.svg"><img alt="../_images/100215FB000034EB000034EB41F823505A27F258.svg" class="align-left" src="../_images/100215FB000034EB000034EB41F823505A27F258.svg" width="60" /></a>
+<p>With this function you can start a previously configured
+continuous flow or change an already running continuous flow. To execute
+this function without errors, you must either have previously configured
+a continuous flow for two pumps or have executed the
+<a class="reference internal" href="#continuous-flow-function">Continuous Flow Function</a> script function.</p>
+<img alt="../_images/100002010000021900000072852784EDF6312364.png" src="../_images/100002010000021900000072852784EDF6312364.png" />
+<p>In the configuration area, select the pump <span class="guinum">❶</span> whose continuous flow you want to
+change. In the Flow field <span class="guinum">❷</span> enter the flow rate. The unit corresponds to
+the unit configured in the Continuous Flow Wizard when configuring the
+continuous flow.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use script variables to set the flow rate.</p>
+</div>
+</section>
+<section id="stop-dosage">
+<h2>Stop Dosage<a class="headerlink" href="#stop-dosage" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg"><img alt="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg" class="align-left" src="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg" width="60" /></a>
+<p>You can stop an active dosing process of a module with this
+function.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use script variables with device references in the pump drop-down box.</p>
+</div>
+</section>
+<section id="stop-all-pumps">
+<h2>Stop All Pumps<a class="headerlink" href="#stop-all-pumps" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg"><img alt="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg" class="align-left" src="../_images/1000783B000034EB000034EB057FAC65A6CE5D99.svg" width="60" /></a>
+<p>Stops the dosing of all pumps simultaneously.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="execute-reference-move">
+<h2>Execute Reference Move<a class="headerlink" href="#execute-reference-move" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10003A6B000034EB000034EB7D405E638826AD8C.svg"><img alt="../_images/10003A6B000034EB000034EB7D405E638826AD8C.svg" class="align-left" src="../_images/10003A6B000034EB000034EB7D405E638826AD8C.svg" width="60" /></a>
+<p>This function allows you to start a reference move from the
+script. With the parameter <span class="guilabel">Run To Completion</span> you can specify whether
+the function is terminated after starting the reference move or after
+completion of reference move.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

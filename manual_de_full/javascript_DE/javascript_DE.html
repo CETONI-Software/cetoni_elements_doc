@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Verwendung von JavaScript &mdash; CETONI Elements Full Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="7. Nemesys Plugin" href="../nemesys_DE/nemesys_full_DE.html" />
+    <link rel="prev" title="5. Script Grundfunktionen" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html">5. Script Grundfunktionen</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Verwendung von JavaScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-unterstutzung-in-cetoni-elementen">6.1. JavaScript-Unterstützung in CETONI-Elementen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-konsole">6.2. JavaScript-Konsole</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uberblick-uber-die-javascript-konsole">6.2.1. Überblick über die JavaScript-Konsole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-vervollstandigung">6.2.2. Code-Vervollständigung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fehlermeldungen">6.2.3. Fehlermeldungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hilfe-bekommen-getting-help">6.2.4. Hilfe bekommen - getting help</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#zugriff-auf-anwendungsobjekte">6.3. Zugriff auf Anwendungsobjekte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verwendung-von-gerateobjekten">6.3.1. Verwendung von Geräteobjekten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verwendung-von-anwendungsobjekten">6.3.2. Verwendung von Anwendungsobjekten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#standardmaszig-vorhandene-objekte">6.4. Standardmäßig vorhandene Objekte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-skript-funktion">6.5. JavaScript-Skript-Funktion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-uber-javascript-skriptfunktionen">6.5.1. Übersicht über JavaScript-Skriptfunktionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-editor">6.5.2. JavaScript Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementierung-der-funktionslogik-in-main">6.5.3. Implementierung der Funktionslogik in main()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globale-werte-mit-namen-registrieren">6.5.4. Globale Werte mit Namen registrieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-module-importieren">6.5.5. JavaScript Module importieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fehler-bei-der-skriptausfuhrung">6.5.6. Fehler bei der Skriptausführung</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-code-debuggen">6.6. JavaScript-Code debuggen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nebenlaufige-ausfuhrung">6.7. Nebenläufige Ausführung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zugriff-auf-signale-und-slots-in-skripten">6.8. Zugriff auf Signale und Slots in Skripten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-referenz">6.9. API-Referenz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scriptenv">6.9.1. ScriptEnv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::eMainFunctionReturnCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::eProjectLocation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevelE"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::eLogLevel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listDevicesEv"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::listDevices()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getDeviceERK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::getDevice()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listObjectsEv"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::listObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getObjectERK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::getObject()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess6getVarERK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::getVar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6setVarERK7QStringRK8QVariant"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::setVar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess7setVarsEK12QVariantList"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::setVars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::setNamedValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::namedValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess5sleepEf"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::sleep()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess5leaveEv"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::leave()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6invokeERK8QJSValueRK8QJSValue"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::invoke()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11projectPathEi"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::projectPath()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6importERK7QStringRK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::import()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess3logEiRK7QStringRK7QString"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::log()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess13isDebugModeOnEv"><code class="docutils literal notranslate"><span class="pre">CScriptEnvAccess::isDebugModeOn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#qfile">6.9.2. QFile</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6QtLabb6Script12CScriptQFileE"><code class="docutils literal notranslate"><span class="pre">CScriptQFile</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">20. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">22. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">23. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">25. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Verwendung von JavaScript</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="verwendung-von-javascript">
+<h1><span class="section-number">6. </span>Verwendung von JavaScript<a class="headerlink" href="#verwendung-von-javascript" title="Link to this heading"></a></h1>
+<section id="javascript-unterstutzung-in-cetoni-elementen">
+<h2><span class="section-number">6.1. </span>JavaScript-Unterstützung in CETONI-Elementen<a class="headerlink" href="#javascript-unterstutzung-in-cetoni-elementen" title="Link to this heading"></a></h2>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Das CETONI Elements Script System Add-on ermöglicht die Steuerung und Automatisierung
+von Prozessen mit Hilfe der Scriptsprache JavaScript. Überprüfen Sie die erstellten
+Skripte/Programme sowie die Parametereingaben, bevor Sie diese zum ersten Mal
+ausführen! CETONI übernimmt keine Haftung für direkte und/oder indirekte Schäden
+an Ihrem System oder externen Hard- und Softwarekomponenten, die durch die von
+Ihnen erstellten Skripte/Programme oder durch die Verwendung von Parametern,
+die für Ihre spezifische Anwendung nicht geeignet oder ungünstig sind, entstehen.</p>
+</div>
+<p>Die CETONI Elements Software verfügt über eine integrierte JavaScript-Engine.
+Diese Engine bietet eine Umgebung für die Ausführung von JavaScript-Code. Sie
+ermöglicht die Ausführung von JavaScript-Code in CETONI Elements-Skripten über
+eine entsprechende Skriptfunktion und bietet eine einfache Möglichkeit, die
+Skriptsprache JavaScript in Ihre CETONI Elements-Skripte einzubinden.</p>
+<p>Dies gibt Ihnen eine zusätzliche Möglichkeit, Logik im <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#script-system"><span class="std std-ref">Script-System</span></a> zu
+implementieren und kann die Implementierung komplexer Berechnungen vereinfachen.</p>
+</section>
+<section id="javascript-konsole">
+<span id="javascript-console"></span><h2><span class="section-number">6.2. </span>JavaScript-Konsole<a class="headerlink" href="#javascript-konsole" title="Link to this heading"></a></h2>
+<section id="uberblick-uber-die-javascript-konsole">
+<h3><span class="section-number">6.2.1. </span>Überblick über die JavaScript-Konsole<a class="headerlink" href="#uberblick-uber-die-javascript-konsole" title="Link to this heading"></a></h3>
+<p>Das Skript-System bietet eine JavaScript-Konsole, mit der Sie ähnlich wie mit
+der Python-Konsole interaktiv JavaScript-Code eingeben und ausführen können.
+Sie können die JavaScript-Konsole über das Hauptmenü aufrufen
+(<span class="menuselection">Window → Show View → Scripting → JavaScript Console</span>):</p>
+<img alt="../_images/javascript_console.png" src="../_images/javascript_console.png" />
+<p>In der JavaScript-Konsole können Sie Befehle ausprobieren, den Zugriff auf Objekte
+testen und Fehler debuggen. Wenn Funktionsaufrufe in der Konsole funktionieren,
+können Sie diese in Ihrem Skript verwenden.</p>
+<p>Das Kontextmenü der JavaScript-Konsole enthält die üblichen Befehle zur Textbearbeitung:</p>
+<img alt="../_images/javascript_console_context_menu.png" src="../_images/javascript_console_context_menu.png" />
+<p>Sie haben drei Möglichkeiten, den Inhalt der JavaScript-Konsole zu löschen:</p>
+<ul class="simple">
+<li><p>wählen Sie <span class="menuselection">Clear</span> <span class="guinum">❶</span> im Kontextmenü</p></li>
+<li><p>klicken Sie auf das Mülleimer-Symbol <span class="guinum">❷</span> in der Titelleiste</p></li>
+<li><p>geben Sie in der Konsole den Befehl <code class="code docutils literal notranslate"><span class="pre">clear()</span></code> ein</p></li>
+</ul>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p><strong>Gefahr von Fehlfunktionen oder Datenverlust !</strong></p>
+<p>Verwenden Sie die JavaScript-Konsole nicht in einem laufenden Experiment,
+Prozess oder während des normalen Betriebs bzw. produktiven Einsatzes. Falsche
+Eingaben oder Zugriffe auf Ressourcen können unter Umständen zu einem Absturz
+der Software führen.</p>
+</div>
+</section>
+<section id="code-vervollstandigung">
+<h3><span class="section-number">6.2.2. </span>Code-Vervollständigung<a class="headerlink" href="#code-vervollstandigung" title="Link to this heading"></a></h3>
+<p>Die JavaScript-Konsole unterstützt Sie bei der Eingabe mit einer einfachen Code-Vervollständigung.</p>
+<img alt="../_images/js_console_code_completion.png" src="../_images/js_console_code_completion.png" />
+<p>Im obigen Beispiel zeigt die Code-Vervollständigung eine Auswahl von Geräten an,
+die mit <code class="code docutils literal notranslate"><span class="pre">Nemes</span></code> beginnen.</p>
+</section>
+<section id="fehlermeldungen">
+<h3><span class="section-number">6.2.3. </span>Fehlermeldungen<a class="headerlink" href="#fehlermeldungen" title="Link to this heading"></a></h3>
+<p>Fehler, die beim Ausführen von Code in der JavaScript-Konsole auftreten, werden
+Ihnen als roter Text angezeigt:</p>
+<img alt="../_images/js_console_error.png" src="../_images/js_console_error.png" />
+</section>
+<section id="hilfe-bekommen-getting-help">
+<h3><span class="section-number">6.2.4. </span>Hilfe bekommen - getting help<a class="headerlink" href="#hilfe-bekommen-getting-help" title="Link to this heading"></a></h3>
+<p>Sie können den globalen Befehl <code class="code docutils literal notranslate"><span class="pre">help()</span></code> verwenden, um mehr über die
+verfügbaren Objekte und Funktionen herauszufinden. Wenn Sie den Befehl <code class="code docutils literal notranslate"><span class="pre">help()</span></code>
+ohne Parameter verwenden, erhalten Sie eine Liste der verfügbaren Funktionen und
+Objekte:</p>
+<img alt="../_images/js_console_help_no_param.png" src="../_images/js_console_help_no_param.png" />
+<p>Wenn Sie das globale Objekt über <code class="code docutils literal notranslate"><span class="pre">help(this)</span></code> übergeben, dann erhalten Sie
+eine Liste aller <a class="reference internal" href="#standardmaszig-vorhandene-objekte"><span class="std std-ref">Standardmäßig vorhandene Objekte</span></a> im
+globalen Bereich:</p>
+<img alt="../_images/js_console_help_built_in.png" src="../_images/js_console_help_built_in.png" />
+<p>Wenn Sie ein Objekt oder einen Funktionsnamen als Parameter an die Hilfefunktion
+übergeben, z.B. <code class="code docutils literal notranslate"><span class="pre">help(ScriptEnv)</span></code>, erhalten Sie detaillierte Informationen
+über das angegebene Objekt, wie z.B. Typ <span class="guinum">❶</span>, Eigenschaften <span class="guinum">❷</span>,
+Methoden <span class="guinum">❸</span> und Signale <span class="guinum">❹</span>:</p>
+<img alt="../_images/js_console_help.png" src="../_images/js_console_help.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Verwenden Sie die Funktion <code class="code docutils literal notranslate"><span class="pre">help(object)</span></code>, um einen Überblick über die
+Methoden und Eigenschaften eines bestimmten Objekts zu erhalten.</p>
+</div>
+</section>
+</section>
+<section id="zugriff-auf-anwendungsobjekte">
+<h2><span class="section-number">6.3. </span>Zugriff auf Anwendungsobjekte<a class="headerlink" href="#zugriff-auf-anwendungsobjekte" title="Link to this heading"></a></h2>
+<p>Das <strong>ScriptEnv</strong>-Objekt ist das zentrale Objekt für den Zugriff auf verfügbare
+Geräte und Anwendungsobjekte. Verwenden Sie den Befehl <code class="code docutils literal notranslate"><span class="pre">help(ScriptEnv)</span></code>,
+um eine Liste der verfügbaren Methoden und Eigenschaften dieses Objekts zu erhalten.</p>
+<section id="verwendung-von-gerateobjekten">
+<h3><span class="section-number">6.3.1. </span>Verwendung von Geräteobjekten<a class="headerlink" href="#verwendung-von-gerateobjekten" title="Link to this heading"></a></h3>
+<p>Sie können auf Geräteobjekte mit der Funktion <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code> zugreifen.
+Um eine Übersicht der verfügbaren Gerätenamen zu erhalten, können Sie die Funktion
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.listDevices()</span></code> aufrufen.</p>
+<img alt="../_images/js_console_device_names.png" src="../_images/js_console_device_names.png" />
+<p>Die Code-Vervollständigung hilft Ihnen bei der Eingabe eines Gerätenamens, indem
+sie Ihnen eine Liste der passenden Namen anzeigt (siehe Abbildung oben). Wenn Sie
+die Funktion <code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code> ohne eine Zuweisung an eine Variable aufrufen,
+können Sie in der Konsole sehen, ob der Aufruf erfolgreich war:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+QtLabb::CNemesys4Pump<span class="o">(</span>0x1e2136485a0,<span class="w"> </span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Um auf ein Gerät zuzugreifen, weisen Sie das Ergebnis des Aufrufs von <code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code>
+einer Variablen zu. Im folgenden Beispiel weisen wir das Geräteobjekt für die
+erste Nemesys S-Pumpe der Variablen <code class="code docutils literal notranslate"><span class="pre">pump</span></code> zu:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span><span class="nv">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+QtLabb::CNemesys4Pump<span class="o">(</span>0x1e2136485a0,<span class="w"> </span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Jetzt können Sie die Funktion <code class="code docutils literal notranslate"><span class="pre">help(pump)</span></code> verwenden, um einen Überblick
+über die verfügbaren Methoden und Funktionen des Pumpenobjekts zu erhalten.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Verwenden Sie die Funktion <code class="code docutils literal notranslate"><span class="pre">help(object)</span></code>, um einen Überblick über die
+Methoden und Eigenschaften von Geräteobjekten zu erhalten.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Bei vielen Geräten ist der Zugriff auf Geräteeigenschaften und -methoden nur
+möglich, wenn die Anwendung mit den Geräten verbunden ist.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p><strong>Risiko von Fehlfunktionen / Datenverlust !</strong></p>
+<p>Über Gerätefunktionen können Sie auf Funktionen zugreifen, die in der grafischen
+Benutzeroberfläche nicht verfügbar sind. Testen Sie Funktionen immer außerhalb
+laufender Prozesse und nicht während des produktiven Einsatzes. Falsche
+Eingaben oder Zugriffe auf Ressourcen, Methoden oder Eigenschaften können zu
+Fehlfunktionen oder einem Absturz der Software führen.</p>
+</div>
+<p>Wenn Sie mit dem Gerät verbunden sind, können Sie nun über die Funktionen des
+Geräteobjekts auf die Gerätefunktionalität zugreifen. So können Sie beispielsweise
+einen Nachfüllvorgang für die Pumpe auslösen:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span>pump.refillSyringe<span class="o">()</span>
+</pre></div>
+</div>
+<p>oder den Pumpvorgang stoppen:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span>pump.stopPumping<span class="o">()</span>
+</pre></div>
+</div>
+<p>Der folgende Code zeigt, wie man das Geräteobjekt für die Nemesys S-Pumpe über das
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code>-Objekt erhält und dann einen Entleerungsvorgang der Spritze startet:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span><span class="nv">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+QtLabb::CNemesys4Pump<span class="o">(</span>0x1e2136485a0,<span class="w"> </span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+
+js&gt;<span class="w"> </span>pump.emptySyringe<span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<section id="verwendung-von-anwendungsobjekten">
+<h3><span class="section-number">6.3.2. </span>Verwendung von Anwendungsobjekten<a class="headerlink" href="#verwendung-von-anwendungsobjekten" title="Link to this heading"></a></h3>
+<p>Ähnlich wie bei Geräteobjekten können Sie auch auf Anwendungsobjekte zugreifen,
+die keine Geräte sind. Verwenden Sie dazu die beiden Funktionen
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> und <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.listObjects()</span></code></p>
+<p>Der folgende Code zeigt, wie man das Anwendungsobjekt des grafischen Loggers über
+das <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code>-Objekt abruft und dann die Protokollierung startet:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>js&gt;<span class="w"> </span><span class="nv">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getObject<span class="o">(</span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="o">)</span>
+QtLabb::CQCustomPlotDataLogger<span class="o">(</span>0x1e2112dc280,<span class="w"> </span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="o">)</span>
+
+js&gt;<span class="w"> </span>plot.startLogging<span class="o">()</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Verwenden Sie die Funktion <code class="code docutils literal notranslate"><span class="pre">help(object)</span></code>, um einen Überblick über die
+Methoden und Eigenschaften von Anwendungsobjekten zu erhalten.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p><strong>Risiko von Fehlfunktionen / Datenverlust !</strong></p>
+<p>Über die Funktionen der Anwendungsobjekte können Sie auf Funktionen zugreifen,
+die in der grafischen Benutzeroberfläche nicht verfügbar sind. Testen Sie Funktionen
+immer außerhalb laufender Prozesse und nicht während des produktiven Einsatzes.
+Falsche Eingaben oder Zugriffe auf Ressourcen, Methoden oder Eigenschaften können
+zu Fehlfunktionen oder einem Absturz der Software führen.</p>
+</div>
+</section>
+</section>
+<section id="standardmaszig-vorhandene-objekte">
+<span id="javascript-script-function"></span><h2><span class="section-number">6.4. </span>Standardmäßig vorhandene Objekte<a class="headerlink" href="#standardmaszig-vorhandene-objekte" title="Link to this heading"></a></h2>
+<p>Die JavaScript-Engine verfügt über eine Reihe von Standardobjekten, die in den
+globalen Bereich integriert sind. Eines dieser Objekte ist das <strong>global object</strong>,
+auf das mit dem Operator <code class="code docutils literal notranslate"><span class="pre">this</span></code> zugegriffen werden kann. Um alle eingebauten
+Objekte aufzulisten, müssen Sie nur die Funktion <a class="reference internal" href="#hilfe-bekommen-getting-help"><span class="std std-ref">help</span></a> mit
+dem globalen Objekt wie folgt aufrufen: <code class="code docutils literal notranslate"><span class="pre">help(this)</span></code>.</p>
+<img alt="../_images/js_console_help_built_in.png" src="../_images/js_console_help_built_in.png" />
+<p>Wenn Sie die Eigenschaften und Funktionen eines bestimmten eingebauten Objekts,
+wie z.B. <code class="code docutils literal notranslate"><span class="pre">Math</span></code>, sehen möchten, müssen Sie nur die Funktion help aufrufen
+und dieses Objekt übergeben: <code class="code docutils literal notranslate"><span class="pre">help(Math)</span></code>. Eine detaillierte Liste der
+eingebauten Objekte, die von der integrierten
+JavaScript-Engine unterstützt werden, finden Sie in der Qt-Dokumentation:</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html">https://doc.qt.io/qt-5/qtqml-javascript-functionlist.html</a></p>
+<p>Eine ausführliche Dokumentation der eingebauten Objekte finden Sie in der
+JavaScript-Referenzdokumentation:</p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects</a></p>
+</section>
+<section id="javascript-skript-funktion">
+<h2><span class="section-number">6.5. </span>JavaScript-Skript-Funktion<a class="headerlink" href="#javascript-skript-funktion" title="Link to this heading"></a></h2>
+<section id="ubersicht-uber-javascript-skriptfunktionen">
+<h3><span class="section-number">6.5.1. </span>Übersicht über JavaScript-Skriptfunktionen<a class="headerlink" href="#ubersicht-uber-javascript-skriptfunktionen" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/javascript_logo.svg"><img alt="../_images/javascript_logo.svg" class="align-left" src="../_images/javascript_logo.svg" width="60px" /></a>
+<p>Die Skriptfunktion <code class="code docutils literal notranslate"><span class="pre">JExecute</span> <span class="pre">JavaScript</span> <span class="pre">Code</span></code> ist in der Kategorie
+<span class="guilabel">Core Functions</span> des <span class="guilabel">Script Pool</span> verfügbar:</p>
+<img alt="../_images/core_functions.png" src="../_images/core_functions.png" />
+<p>Mit dieser Funktion können Sie JavaScript-Code im Skript-System der Anwendung
+ausführen. Wenn Sie die Funktion in Ihr Skript einfügen, sehen Sie den ursprünglichen
+JavaScript-Code im Konfigurationsbereich.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Implement your script logic in this function</span>
+<span class="c1">// Avoid blocking function calls</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">FINISH</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Wenn das Skript ausgeführt wird, wird es von der JavaScript-Engine geladen, und
+dann wird die Funktion <code class="code docutils literal notranslate"><span class="pre">main()</span></code> aufgerufen. D.h. diese Funktion ist die
+Hauptfunktion des Skripts und die Logik sollte dort implementiert werden.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Alle Optionen, die Sie in der <a class="reference internal" href="#javascript-konsole">JavaScript-Konsole</a> für den Zugriff auf
+<a class="reference internal" href="#verwendung-von-gerateobjekten"><span class="std std-ref">Geräteobjekte</span></a>
+und <a class="reference internal" href="#verwendung-von-anwendungsobjekten"><span class="std std-ref">Anwendungsobjekte</span></a> haben,
+sind auch in der Skriptfunktion verfügbar.</p>
+</div>
+<p>Jede Skriptfunktion verwendet ihre eigene JavaScript-Engine-Instanz. Dies
+ermöglicht die Verwendung von JavaScript-Funktionen in parallelen Sequenzen.</p>
+</section>
+<section id="javascript-editor">
+<h3><span class="section-number">6.5.2. </span>JavaScript Editor<a class="headerlink" href="#javascript-editor" title="Link to this heading"></a></h3>
+<p>Die JavaScript Skript Funktion verfügt über einen JavaScript Code Editor, der Sie
+beim Schreiben von JavaScript Code unterstützt.</p>
+<img alt="../_images/javascript_editor.png" src="../_images/javascript_editor.png" />
+<p>Der Editor verfügt über die folgenden Funktionen:</p>
+<ul class="simple">
+<li><p>Syntax-Hervorhebung für JavaScript-Code <span class="guinum">❶</span></p></li>
+<li><p>eine einfache Code-Vervollständigung</p></li>
+<li><p>Code-Faltung <span class="guinum">❷</span></p></li>
+<li><p>Zeilennummern <span class="guinum">❸</span></p></li>
+<li><p>Undo / Redo-Funktionalität <span class="guinum">❹</span></p></li>
+</ul>
+<p>Einige Funktionen des Editors sind über das Kontextmenü zugänglich, andere
+Funktionen sind über Tastaturkürzel abrufbar. Hier sind einige der Funktionen:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Aktion</p></th>
+<th class="head"><p>Tastaturkürzel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Schriftgröße erhöhen</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">+</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Schriftgröße verkleinern</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">-</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Schriftgröße auf Standard zurücksetzen</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">0</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ausgewählten Code-Block einrücken</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Tab</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Ausgewählten Code-Block wieder einrücken</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Umschalt</kbd> + <kbd class="kbd docutils literal notranslate">Tab</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rückgängig machen</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">Z</kbd> oder Kontextmenü</p></td>
+</tr>
+<tr class="row-even"><td><p>Wiederholen</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Strg</kbd> + <kbd class="kbd docutils literal notranslate">Y</kbd> oder Kontextmenü</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Bearbeitung des JavaScript-Quellcodes ist nur möglich, wenn das Skript nicht
+läuft. Sobald das Skript gestartet wurde, ist die Bearbeitung des Quellcodes
+deaktiviert. Im Falle eines Fehlers müssen Sie das Skript über die Schaltfläche
+<span class="guilabel">Terminate Script</span> beenden, bevor Sie den JavaScript-Code bearbeiten
+können.</p>
+</div>
+</section>
+<section id="implementierung-der-funktionslogik-in-main">
+<h3><span class="section-number">6.5.3. </span>Implementierung der Funktionslogik in main()<a class="headerlink" href="#implementierung-der-funktionslogik-in-main" title="Link to this heading"></a></h3>
+<p>Bei der Implementierung des Skripts in <code class="code docutils literal notranslate"><span class="pre">main()</span></code> sollten Sie darauf achten,
+keine blockierenden Funktionen oder blockierende Wartezeiten zu verwenden.
+Normalerweise führt die JavaScript-Engine den JavaScript-Code im Haupt-Thread
+der Benutzeroberfläche aus, und die Verwendung blockierender Funktionsaufrufe
+kann alle Aktualisierungen der Benutzeroberfläche und die Hauptereignisschleife
+blockieren.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Verwenden Sie keine blockierenden Funktionsaufrufe, um ein Blockieren des
+Haupt-UI-Threads zu vermeiden.</p>
+</div>
+<p>Wenn Sie komplexe Logik oder Zustandsautomaten in JavaScript implementieren wollen,
+sollten Sie die gleichzeitige Ausführung in einem Worker-Thread in Betracht ziehen.
+Um die gleichzeitige Ausführung zu aktivieren, können Sie den Kippschalter
+<span class="guilabel">Current Execution</span> einschalten. Lesen Sie mehr über diese Funktion im
+Abschnitt <a class="reference internal" href="#nebenlaufige-ausfuhrung">Nebenläufige Ausführung</a>.</p>
+<img alt="../_images/concurrent_execution.png" src="../_images/concurrent_execution.png" />
+<p>Anders als bei den Scriptfunktionen <a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#set-variable"><span class="std std-ref">Set Variable</span></a> oder
+<a class="reference internal" href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html#create-variable"><span class="std std-ref">Create Variable</span></a> ist
+es hier nicht erlaubt, Variablenbezeichner (wie <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code>) oder Geräteeigenschaften
+(wie <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1.ActualFlow</span></code>) direkt im JavaScript-Quellcode zu verwenden.
+Das heißt, der folgende Code ist <strong>falsch</strong> und <strong>ungültig</strong>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">calculateFlow</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="c1">// Wrong - $Flow and $$Nemesys_S_1.ActualFlow are not defined</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">$Flow</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$$Nemesys_S_1</span><span class="p">.</span><span class="nx">ActualFlow</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Für den Zugriff auf Variablen müssen die Funktionen <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVar()</span></code> und
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getVar()</span></code> verwendet werden. Der Zugriff auf Gerätefunktionen ist
+über <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code> möglich. Der korrekte Weg, um die obige Funktion
+zu implementieren, ist dieser:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">calculateFlow</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="nx">Flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">Flow</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">pump</span><span class="p">.</span><span class="nx">ActualFlow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Es ist nicht erlaubt, Variablenbezeichner wie <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code> oder
+Geräteeigenschaften wie <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1.ActualFlow</span></code> direkt im
+JavaScript-Quellcode zu verwenden.</p>
+</div>
+</section>
+<section id="globale-werte-mit-namen-registrieren">
+<h3><span class="section-number">6.5.4. </span>Globale Werte mit Namen registrieren<a class="headerlink" href="#globale-werte-mit-namen-registrieren" title="Link to this heading"></a></h3>
+<p>Das <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> Objekt hat die Funktion <code class="code docutils literal notranslate"><span class="pre">setNamedValue()</span></code>
+Sie können diese Funktion verwenden, um einen bestimmten Wert mit einem
+definierten Namen global für die aktuelle Skript-Engine-Instanz zu registrieren.
+Sie können dann später die Funktion <code class="code docutils literal notranslate"><span class="pre">namedValue()</span></code> verwenden, um einfach auf den
+registrierten benannten Wert zuzugreifen. Dies ist z.B. dann praktisch,
+wenn Sie auf bestimmte Objekte, wie z.B. Settings Dateien oder globale Einstellungen,
+aus unterschiedlichen JavaScript Funktionen heraus zugreifen möchten.
+So können Sie dann in einer JavaScript Funktion den Wert registrieren und dann
+später aus anderen JavaScript Funktionen darauf zugreifen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Weitere Details finden Sie in der API Dokumentation der beiden Funktionen
+<a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb" title="QtLabb::Script::CScriptEnvAccess::setNamedValue"><code class="xref any cpp cpp-func docutils literal notranslate"><span class="pre">ScriptEnv.setNamedValue()</span></code></a>
+und <a class="reference internal" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString" title="QtLabb::Script::CScriptEnvAccess::namedValue"><code class="xref any cpp cpp-func docutils literal notranslate"><span class="pre">ScriptEnv.namedValue()</span></code></a></p>
+</div>
+</section>
+<section id="javascript-module-importieren">
+<h3><span class="section-number">6.5.5. </span>JavaScript Module importieren<a class="headerlink" href="#javascript-module-importieren" title="Link to this heading"></a></h3>
+<p>Die JavaScript Engine erlaubt den Import eigener JavaScript Module aus dem
+aktuellen Projektverzeichnis. Wenn Sie eigene Module verwenden, die Sie zusammen mit Ihrem
+Projekt weitergeben oder ausliefern wollen, dann können Sie diese in den
+Unterordner <code class="file docutils literal notranslate"><span class="pre">Scripts/JavaScript</span></code> ihres aktuellen Projekts speichern.
+Wenn Sie z.B. im Projekt <code class="code docutils literal notranslate"><span class="pre">JavaScript_Tutorial</span></code> arbeiten, dann wäre der absolute
+Pfad zu diesem Verzeichnis:</p>
+<p class="centered">
+<strong><code class="file docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/JavaScript_Tutorial/Scripts/JavaScript</span></code></strong></p><p>Module, die in diesem Ordner enthalten sind, können Sie dann über die <code class="code docutils literal notranslate"><span class="pre">import</span></code>
+Funktion des <a class="reference internal" href="../python_DE/python_DE.html#scriptenv"><span class="std std-ref">ScriptEnv</span></a> Objektes importieren. Im folgenden Beispiel wird
+im <code class="file docutils literal notranslate"><span class="pre">Scripts/JavaScript</span></code> Ordner ein JavaScript Modul in der Datei
+<code class="file docutils literal notranslate"><span class="pre">test.js</span></code> mit folgendem Inhalt erstellt:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// module &quot;test.js&quot;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">cube</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">SQRT2</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">thickness</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2px&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;From graph draw function&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span><span class="w"> </span><span class="nx">lastName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstName</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lastName</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="nx">getFullName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cube</span><span class="p">,</span><span class="w"> </span><span class="nx">foo</span><span class="p">,</span><span class="w"> </span><span class="nx">graph</span><span class="p">,</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>In der JavaScript Script-Funktion, wird das Modul nun als <code class="code docutils literal notranslate"><span class="pre">MyModule</span></code>
+importiert und verwendet:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s2">&quot;test.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MyModule&quot;</span><span class="p">);</span>
+
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="nx">MyModule</span><span class="p">.</span><span class="nx">foo</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="nx">MyModule</span><span class="p">.</span><span class="nx">cube</span><span class="p">(</span><span class="mf">3</span><span class="p">));</span>
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="nx">MyModule</span><span class="p">.</span><span class="nx">graph</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+<span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">person1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MyModule</span><span class="p">.</span><span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Doe&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Person: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">person1</span><span class="p">.</span><span class="nx">getFullName</span><span class="p">());</span>
+
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">ScriptFinish</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die <a class="reference internal" href="#javascript-console"><span class="std std-ref">JavaScript-Konsole</span></a> sollte nach der Ausführung der Scriptfunktion die
+folgenden Ausgaben enthalten:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>js&gt;
+4.555806215962888
+27
+white
+Person:  John Doe
+</pre></div>
+</div>
+</section>
+<section id="fehler-bei-der-skriptausfuhrung">
+<h3><span class="section-number">6.5.6. </span>Fehler bei der Skriptausführung<a class="headerlink" href="#fehler-bei-der-skriptausfuhrung" title="Link to this heading"></a></h3>
+<p>Wenn während der Ausführung eines Skripts Fehler auftreten, werden diese im
+<span class="guilabel">Event Log</span> angezeigt. Wenn Sie den Mauszeiger über die Fehlermeldung
+im Ereignisprotokoll bewegen, wird ein Hinweisfenster mit Details angezeigt:</p>
+<img alt="../_images/script_execution_errors.png" src="../_images/script_execution_errors.png" />
+<p>In der Fehlermeldung erhalten Sie auch die Information, in welcher Zeile des
+Skripts ein Fehler aufgetreten ist. Dies hilft Ihnen, den Fehler im Skript-Editor
+zu finden und zu beheben.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Bearbeitung des JavaScript-Quellcodes ist nur möglich, wenn das Skript
+nicht läuft. Sobald das Skript gestartet wurde, ist die Bearbeitung des
+Quellcodes deaktiviert. Im Falle eines Fehlers müssen Sie das Skript über die
+Schaltfläche <span class="guilabel">Terminate Script</span> beenden, bevor Sie den
+JavaScript-Quellcode bearbeiten können.</p>
+</div>
+</section>
+</section>
+<section id="javascript-code-debuggen">
+<h2><span class="section-number">6.6. </span>JavaScript-Code debuggen<a class="headerlink" href="#javascript-code-debuggen" title="Link to this heading"></a></h2>
+<p>Wenn Sie eine Skriptfunktion mit JavaScript entwickeln, gibt es verschiedene Möglichkeiten,
+Fehler zu suchen und zu debuggen. In den folgenden Abschnitten wird beschrieben,
+wie Sie die JavaScript-Konsolen-API verwenden können, um Ihren JavaScript-Code zu debuggen.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Funktion</p></th>
+<th class="head"><p>Beschreibung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>print</p></td>
+<td><p>Verwenden Sie <code class="code docutils literal notranslate"><span class="pre">print</span></code>, um auf der Konsole und im
+Ereignisprotokoll zu drucken</p>
+<p>Zum Beispiel:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;a is &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;b is &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Log</p></td>
+<td><p>Verwenden Sie <code class="code docutils literal notranslate"><span class="pre">console.log</span></code>, <code class="code docutils literal notranslate"><span class="pre">console.debug</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">console.info</span></code>, <code class="code docutils literal notranslate"><span class="pre">console.warn</span></code>, oder <code class="code docutils literal notranslate"><span class="pre">console.error</span></code>,
+um Debugging-Informationen auf der Konsole auszugeben.</p>
+<p>Zum Beispiel:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;a is &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;b is &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Assert</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">console.assert</span></code> testet, ob ein Ausdruck wahr ist. Ist dies
+nicht der Fall, wird eine optionale Meldung auf die Konsole geschrieben
+und der Stack-Trace ausgegeben.</p>
+<p>Zum Beispiel:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;This will pass&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;This will fail&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Timer</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">console.time</span></code> und <code class="code docutils literal notranslate"><span class="pre">console.timeEnd</span></code> protokollieren die
+Zeit (in Millisekunden), die zwischen den Aufrufen vergangen ist.
+Beide benötigen ein String-Argument, das die Messung identifiziert.</p>
+<p>Zum Beispiel:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">&quot;wholeFunction&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">&quot;firstPart&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="c1">// first part</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">&quot;firstPart&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="c1">// second part</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">&quot;wholeFunction&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Trace</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">console.trace</span></code> gibt den Stack-Trace der JavaScript-Ausführung
+an der Stelle aus, an der sie aufgerufen wurde. Diese Stack-Trace-Informationen
+enthalten den Funktionsnamen, den Dateinamen, die Zeilennummer und
+die Spaltennummer. Der Stack-Trace ist auf die letzten 10 Stack-Frames
+beschränkt.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">console.count</span></code> gibt die aktuelle Anzahl der Durchläufe eines
+bestimmten Codes aus, zusammen mit einer Meldung.</p>
+<p>Zum Beispiel:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">count</span><span class="p">(</span><span class="s2">&quot;f called&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Exception</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">console.exception</span></code> gibt eine Fehlermeldung zusammen mit dem
+Stack-Trace der JavaScript-Ausführung an der Stelle aus, an der sie
+aufgerufen wird.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Zusätzlich haben Sie in der Software die Möglichkeit die <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.log()</span></code>
+Funtion zur Ausgabe von Nachrichten im Event-Log zu verwenden. Der Vorteil
+dieser Funktion ist, dass Sie als Parameter zusätzlich einen Log-Level und eine
+Quelle <code class="code docutils literal notranslate"><span class="pre">Source</span></code> angeben können, die dann im Event-Log ausgegebn wird.</p>
+<p>Im folgenden Beispiel, werden in der JavaScript Funktion vier Log-Nachrichten
+mit unterschiedlichem Level ausgegeben:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">LogInfo</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Test Info Message&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript Function&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">LogWarning</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Test Warning Message&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript Function&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">LogError</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Test Error Message&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript Function&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">LogDebug</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Test Debug Message&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript Function&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">ScriptFinish</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Dieser Code führt im Event-Log zu folgenden Log-Ausgaben:</p>
+<img alt="../_images/js_scriptenv_log_eventlog.png" src="../_images/js_scriptenv_log_eventlog.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Nachrichten mit dem Log-Level <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.LogDebug</span></code> werden nur ausgegeben,
+wenn der <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#debug-mode"><span class="std std-ref">Debug-Modus</span></a> aktiv ist.</p>
+</div>
+</section>
+<section id="nebenlaufige-ausfuhrung">
+<h2><span class="section-number">6.7. </span>Nebenläufige Ausführung<a class="headerlink" href="#nebenlaufige-ausfuhrung" title="Link to this heading"></a></h2>
+<p>Normalerweise wird der JavaScript-Code im Haupt-Thread der Benutzeroberfläche
+ausgeführt. Wenn Sie lang laufenden JavaScript-Code mit blockierenden
+Funktionsaufrufen oder längeren Verzögerungen implementieren möchten, sollten Sie
+die gleichzeitige Ausführung in einem eigenen Worker-Thread in Betracht ziehen,
+um eine Blockierung des Haupt-UI-Threads zu vermeiden. Um die gleichzeitige
+Ausführung zu aktivieren, können Sie die Option
+<span class="guilabel">Concurrent Execution</span> aktivieren.</p>
+<img alt="../_images/concurrent_execution.png" src="../_images/concurrent_execution.png" />
+<p>Wenn der JavaScript-Code nebenläufig ausgeführt wird, ist es möglich, die
+JavaScript-Skriptfunktion zu unterbrechen, wenn die Skriptausführung angehalten
+wird. Der Nachteil der gleichzeitigen Ausführung ist, dass es nicht sicher ist,
+auf Methoden und Eigenschaften von UI-Objekten zuzugreifen, die Sie über
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> erhalten haben.</p>
+<div class="caution admonition">
+<p class="admonition-title">Achtung</p>
+<p>Es ist nicht sicher, Eigenschaften und Methoden von UI-Anwendungsobjekten zu
+verwenden, wenn der JavaScript-Code nebenläufig außerhalb des Haupt-UI-Threads
+ausgeführt wird. In diesem
+Fall kann der Zugriff auf UI-Objekte die Anwendung zum Absturz bringen.</p>
+</div>
+<p>Um Methoden des UI-Objekts aufzurufen, müssen Sie die Funktion
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.invoke()</span></code> verwenden. Dadurch wird sichergestellt, dass die
+aufgerufene Methode im Haupt-UI-Thread aufgerufen wird. Das folgende Beispiel
+zeigt, wie man eine Funktion des grafischen Loggers und einer Pumpe mit
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.invoke()</span></code> aufruft:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="nx">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="nx">pump</span><span class="p">.</span><span class="nx">generateFlow</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">0.01</span><span class="p">]);</span>
+<span class="w">   </span><span class="nx">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getObject</span><span class="p">(</span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="nx">graph</span><span class="p">.</span><span class="nx">startLogging</span><span class="p">,</span><span class="w"> </span><span class="p">[]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die folgende Tabelle zeigt die Vor- und Nachteile der beiden Ausführungsarten,
+um Ihnen die Entscheidung zu erleichtern, welche Ausführungsart Sie verwenden
+sollten:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p>Ausführung im UI-Thread</p></th>
+<th class="head"><p>Gleichzeitige Ausführung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Zugriff auf UI-Objekte</p></th>
+<td><p>ja</p></td>
+<td><p>nur über <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.invoke()</span></code></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Blockierende Funktionsaufrufe</p></th>
+<td><p>nein - blockiert UI-Thread</p></td>
+<td><p>ja</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Unterbrechbar</p></th>
+<td><p>nein</p></td>
+<td><p>ja</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Geeignet für</p></th>
+<td><p>kurze Skripte oder Berechnungen</p></td>
+<td><p>komplexe Skripte mit blockierenden Funktionsaufrufen und Verzögerungen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="zugriff-auf-signale-und-slots-in-skripten">
+<h2><span class="section-number">6.8. </span>Zugriff auf Signale und Slots in Skripten<a class="headerlink" href="#zugriff-auf-signale-und-slots-in-skripten" title="Link to this heading"></a></h2>
+<p>Die eingebettete JavaScript-Engine bietet die Möglichkeit, Signale und Slots zu
+verwenden. Signale werden von einem Objekt ausgesendet, wenn sich sein interner
+Zustand in irgendeiner Weise geändert hat. Ein Slot wird aufgerufen, wenn ein
+mit ihm verbundenes Signal ausgegeben wird. Slots sind normale Funktionen und
+können normal aufgerufen werden; ihre einzige Besonderheit ist, dass Signale mit
+ihnen verbunden werden können. Wenn Sie eine Verbindung zu einem Signal herstellen,
+kann der Empfänger ein regulärer Slot eines anderen Objekts oder eine
+JavaScript-Funktion sein. Der häufigste Fall ist, dass Sie das Signal mit einer
+anonymen Funktion verbinden:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">pump</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;dosage finished!&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Wenn Sie die Verbindung rückgängig machen wollen, müssen Sie die Funktion in einer
+Variablen speichern:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">dosageFinished</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;dosage finished!&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">pump</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">dosageFinished</span><span class="p">);</span>
+<span class="c1">//...</span>
+<span class="nx">pump</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">(</span><span class="nx">dosageFinished</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Sie können das Signal auch mit einem Signal oder Slot eines anderen sichtbaren
+Objekts verbinden. Im folgenden Beispiel verbinden wir das Signal
+<code class="code docutils literal notranslate"><span class="pre">dosageFinished</span></code> von <em>pump2</em> mit dem Slot <code class="code docutils literal notranslate"><span class="pre">stopPumping</span></code> von <em>pump1</em>.
+Dadurch wird <em>pump1</em> automatisch gestoppt, wenn <em>pump2</em> anhält:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">pump1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getDevice</span><span class="p">(</span><span class="s2">&quot;peRISYS_S_1&quot;</span><span class="p">);</span>
+<span class="nx">pump2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getDevice</span><span class="p">(</span><span class="s2">&quot;peRISYS_S_2&quot;</span><span class="p">);</span>
+<span class="nx">pump2</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">pump1</span><span class="p">.</span><span class="nx">stopPumping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Das folgende Beispiel ist etwas komplexer und zeigt, wie die gleichzeitige
+Ausführung zusammen mit einer Signalverbindung verwendet werden kann.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">function</span><span class="w"> </span><span class="nx">onDosageFinished</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;onDosageFinished&quot;</span><span class="p">);</span>
+<span class="linenos"> 3</span><span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">leave</span><span class="p">();</span>
+<span class="linenos"> 4</span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">// Implement your script logic in this function</span>
+<span class="linenos"> 7</span><span class="c1">// Avoid blocking function calls</span>
+<span class="linenos"> 8</span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="nx">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">Initialized</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;undefined&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">      </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">Initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">      </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Connecting signal&quot;</span><span class="p">)</span>
+<span class="linenos">13</span><span class="w">      </span><span class="nx">pump</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">onDosageFinished</span><span class="p">);</span>
+<span class="linenos">14</span><span class="w">   </span><span class="p">}</span>
+<span class="linenos">15</span><span class="w">   </span><span class="nx">pump</span><span class="p">.</span><span class="nx">aspirate</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">KEEP_RUNNING</span><span class="p">;</span>
+<span class="linenos">17</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Der Code in den Zeilen 10 bis 14 verbindet das Signal <code class="code docutils literal notranslate"><span class="pre">dosageFinished</span></code> der
+Pumpe mit der JavaScript-Funktion <code class="code docutils literal notranslate"><span class="pre">onDosageFinished</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">Initialized</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;undefined&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">Initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Connecting signal&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">pump</span><span class="p">.</span><span class="nx">dosageFinished</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">onDosageFinished</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die umgebende Prüfung <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">(typeof</span> <span class="pre">ScriptEnv.Initialized</span> <span class="pre">==</span> <span class="pre">&quot;undefined&quot;)</span></code>
+stellt sicher, dass es nur eine Verbindung gibt, wenn die Funktion mehrmals
+aufgerufen wird. Wenn wir diese Prüfung nicht verwenden, wird bei jedem Aufruf
+der Funktion eine neue Verbindung erstellt.</p>
+<p>In den nächsten beiden Zeilen wird die Pumpenansaugung gestartet und die
+Skriptfunktion <code class="code docutils literal notranslate"><span class="pre">main()</span></code> gibt <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.KEEP_RUNNING</span></code> zurück, um
+anzuzeigen, dass die Skriptausführung nicht beendet werden soll, wenn die
+Hauptfunktion beendet ist.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">pump</span><span class="p">.</span><span class="nx">aspirate</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">);</span>
+<span class="k">return</span><span class="w"> </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">KEEP_RUNNING</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Das Skripting-System bleibt in dieser Skriptfunktion, bis die Pumpe die Dosierung
+beendet hat. In diesem Fall wird die JavaScript-Funktion <code class="code docutils literal notranslate"><span class="pre">onDosageFinished()</span></code>
+aufgerufen.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">onDosageFinished</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;onDosageFinished&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">ScriptEnv</span><span class="p">.</span><span class="nx">leave</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die Funktion gibt eine Meldung auf der Konsole aus und ruft
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.leave()</span></code> auf, um der Skriptfunktion zu signalisieren, dass die
+Funktion beendet ist und die nächste Skriptfunktion ausgeführt werden kann.
+Dieses Beispiel zeigt, wie man eine länger laufende Aufgabe ausführt und die
+Skriptfunktion beendet, wenn die Aufgabe beendet ist.</p>
+</section>
+<section id="api-referenz">
+<h2><span class="section-number">6.9. </span>API-Referenz<a class="headerlink" href="#api-referenz" title="Link to this heading"></a></h2>
+<section id="scriptenv">
+<h3><span class="section-number">6.9.1. </span>ScriptEnv<a class="headerlink" href="#scriptenv" title="Link to this heading"></a></h3>
+<p>Das <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code>-Objekt ist das zentrale Objekt für den Zugriff auf
+verfügbare Geräte und Anwendungsobjekte.</p>
+<div class="breathe-sectiondef docutils container">
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bce"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eMainFunctionReturnCode</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCodeE" title="Link to this definition"></a><br /></dt>
+<dd><p>The main function return code. </p>
+<p>Normally the script execution finishes, if the JavaScript main() function is left. To indicate, that script execution should not finish, i.e. if you would like to wait for a certain event or signal, then your main function can return KEEP_RUNNING, to indicate, that you would like to stay in the current script function.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">ScriptFinish</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea7c121246bc1620b53d7b43b329f0c645"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScriptFinish</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode12ScriptFinishE" title="Link to this definition"></a><br /></dt>
+<dd><p>finish current script function </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a92582128e2d71ac3887b8186b5553bcea6bb9f1225d98f88473ac27072492f577"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScriptKeepRunning</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess23eMainFunctionReturnCode17ScriptKeepRunningE" title="Link to this definition"></a><br /></dt>
+<dd><p>keep the JavaScript engine running and stay in current script </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eProjectLocation</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocationE" title="Link to this definition"></a><br /></dt>
+<dd><p>This enum describes the different locations that can be queried using <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37"><span class="std std-ref">projectPath()</span></a> function. </p>
+<p>The following example shows, how to get the data path of the current project:</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">projectPath</span><span class="p">(</span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">LocationData</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a46d73021499686e642a8c1b8f8f577b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationProject</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationProjectE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the current project directory </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a227bfb94d63937efb4709f6fe12b4830"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationConfigurations</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation22LocationConfigurationsE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the device configurations in the current project </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a48e638aa971507944a7800adcee73132"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationLog</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation11LocationLogE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the log files </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aaf2b83669deae9e3a021bed291b88d2f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationScripts</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation15LocationScriptsE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the current project script files </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9aad2e766d5b3d00c67365708c664ea4e2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationPictures</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationPicturesE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the current project image files </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a84e88d464ea7fc65df40255861ccb425"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationVideos</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation14LocationVideosE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of the current project video files </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a6e51e29656b1412056e79860997c5b86"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationData</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation12LocationDataE" title="Link to this definition"></a><br /></dt>
+<dd><p>location of data in the current project </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9a8c9336c3bb32f36b14b1915b2fb389a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocationSettings</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess16eProjectLocation16LocationSettingsE" title="Link to this definition"></a><br /></dt>
+<dd><p>location where application can store settings and configuration files </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevelE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess9eLogLevelE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess9eLogLevelE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eLogLevel</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevelE" title="Link to this definition"></a><br /></dt>
+<dd><p>Log levels - keep this in sync with Core::CLogEvent::eType. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel7LogInfoE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess9eLogLevel7LogInfoE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess9eLogLevel7LogInfoE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012afd4a66f95165420f5a0d1059a47e72be"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LogInfo</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel7LogInfoE" title="Link to this definition"></a><br /></dt>
+<dd><p>LogInfo. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel10LogWarningE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess9eLogLevel10LogWarningE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess9eLogLevel10LogWarningE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a18d693b5ba32b6910a9d0298f4492d10"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LogWarning</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel10LogWarningE" title="Link to this definition"></a><br /></dt>
+<dd><p>LogWarning. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogErrorE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogErrorE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogErrorE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012ae0bb14efee4d649277882ed678e0c75e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LogError</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogErrorE" title="Link to this definition"></a><br /></dt>
+<dd><p>LogError. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogDebugE">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogDebugE"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogDebugE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3e41259ce53d0dcdd5d99f0d8e810012a101f5e6b7a5efbb02d261fe7600220f4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LogDebug</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess9eLogLevel8LogDebugE" title="Link to this definition"></a><br /></dt>
+<dd><p>LogDebug. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listDevicesEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess11listDevicesEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess11listDevicesEv"></span><span id="QtLabb::Script::CScriptEnvAccess::listDevicesC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a591f85f840f014041a19572e67fd3af0"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listDevices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listDevicesEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns an array with all device names that can be accessed from JavaScript. </p>
+<p>Use the device name when calling the <code class="docutils literal notranslate"><a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe"><span class="std std-ref"><span class="pre">getDevice()</span></span></a></code> function to get the corresponding device object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getDeviceERK7QString">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess9getDeviceERK7QString"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess9getDeviceERK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::getDevice__QStringCRC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a95ec0c6877721274e0656b98c29b20fe"></span><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CDevice</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getDeviceERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the device object for the given device name. </p>
+<p>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s">&quot;Nemesys_S_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listObjectsEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess11listObjectsEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess11listObjectsEv"></span><span id="QtLabb::Script::CScriptEnvAccess::listObjectsC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a3f5fae5e0814d8311b704349f04a95d5"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listObjects</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11listObjectsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns an array of all registered application objects that are not devices and that can be accessed from JavaScript, such as the graphical logger. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getObjectERK7QString">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess9getObjectERK7QString"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess9getObjectERK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::getObject__QStringCRC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a9e33ef0b2c324d14d0900c64365ad2d5"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getObject</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess9getObjectERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the object with the given object name <code class="docutils literal notranslate"><span class="pre">Name</span></code>. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getObject</span><span class="p">(</span><span class="s">&quot;ProcessDataGraph&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess6getVarERK7QString">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess6getVarERK7QString"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess6getVarERK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::getVar__QStringCRC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a0c72e2c42c9afe9a50ae059fb6f2c518"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">VarName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess6getVarERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the value of a certain script variable. </p>
+<p>The variable name needs to start with a dollar sign.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getVar</span><span class="p">(</span><span class="s">&quot;$FlowRate&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess6setVarERK7QStringRK8QVariant">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="QtLabb::Script::CScriptEnvAccess::setVar__QStringCR.QVariantCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a8191c741d60cbef51b394caaf394d9dc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6setVarERK7QStringRK8QVariant" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets the value of the script variable to the given value. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVar</span><span class="p">(</span><span class="s">&quot;$TargetPos&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess7setVarsEK12QVariantList">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess7setVarsEK12QVariantList"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess7setVarsEK12QVariantList"></span><span id="QtLabb::Script::CScriptEnvAccess::setVars__QVariantListC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a797af24ccb3a3f9b2c5350db487928c9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVars</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantList</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess7setVarsEK12QVariantList" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets multiple script variables using a JavaScript array. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVars</span><span class="p">([</span><span class="s">&quot;$Value1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$Value2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">])</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb"></span><span id="QtLabb::Script::CScriptEnvAccess::setNamedValue__QStringCR.QVariantCR.b"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a4565a7d3c98cffa48bf2ca7234464d02"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNamedValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Value</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ReplaceIfExists</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess13setNamedValueERK7QStringRK8QVariantb" title="Link to this definition"></a><br /></dt>
+<dd><p>Registers a named value. </p>
+<p>You can use this function to register a certain value with a given name globally to the current script engine instance. You can then use the <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a52eec06a6ddc8dde3a4b4c8d21a18ee2"><span class="std std-ref">namedValue()</span></a> function later, to easily access the registered named value. If the value is already registered, it is overwritten with the new value given in Value If the value already exists and <code class="docutils literal notranslate"><span class="pre">ReplaceIfExists</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, then the value is not replaced <div class="admonition seealso">
+<p class="admonition-title">Siehe auch</p>
+<p><a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a52eec06a6ddc8dde3a4b4c8d21a18ee2"><span class="std std-ref">namedValue()</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::namedValue__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a52eec06a6ddc8dde3a4b4c8d21a18ee2"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">namedValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess10namedValueERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns a named value or an invalid variant, if no value with the given name is registered. </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">Siehe auch</p>
+<p><a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1a4565a7d3c98cffa48bf2ca7234464d02"><span class="std std-ref">setNamedValue()</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess5sleepEf">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess5sleepEf"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess5sleepEf"></span><span id="QtLabb::Script::CScriptEnvAccess::sleep__float"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1af7ec6fc59e3dcb339214211ecce97779"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Seconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess5sleepEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Sleep for the given number of seconds without blocking the application main event loop. </p>
+<p>Use this function for small delays only. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess5leaveEv">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess5leaveEv"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess5leaveEv"></span><span id="QtLabb::Script::CScriptEnvAccess::leave"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a635e9d974eb6fa716725ba4159c0df24"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leave</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess5leaveEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Leave the current script function. </p>
+<p>If your JavaScript main() function returned ScriptEnv.KEEP_RUNNING then you can use this function if you finished your JavaScript logic to signal the scripting system that the script system should leave the current script function and process the next one. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess6invokeERK8QJSValueRK8QJSValue">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess6invokeERK8QJSValueRK8QJSValue"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess6invokeERK8QJSValueRK8QJSValue"></span><span id="QtLabb::Script::CScriptEnvAccess::invoke__QJSValueCR.QJSValueCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a7289fa96e91064104d57457874a80f9d"></span><span class="n"><span class="pre">QJSValue</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invoke</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QJSValue</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fun</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QJSValue</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6invokeERK8QJSValueRK8QJSValue" title="Link to this definition"></a><br /></dt>
+<dd><p>Invoke the given function with the given parameters in the main UI thread. </p>
+<p>This allows calling of UI objects methods from a JavaScript function running concurrently in its own thread. The first parameter <code class="docutils literal notranslate"><span class="pre">fun</span></code> is the function that should get invoked (like <code class="docutils literal notranslate"><span class="pre">pump.generateFlow</span></code>) and the second parameter <code class="docutils literal notranslate"><span class="pre">args</span></code> is an JavaScript array with the function arguments (like <code class="docutils literal notranslate"><span class="pre">[-0.01,</span> <span class="pre">25]</span></code>).</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s">&quot;Nemesys_S_1&quot;</span><span class="p">);</span>
+<span class="n">ScriptEnv</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">pump</span><span class="p">.</span><span class="n">generateFlow</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.01</span><span class="p">]);</span>
+<span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getObject</span><span class="p">(</span><span class="s">&quot;ProcessDataGraph&quot;</span><span class="p">);</span>
+<span class="n">ScriptEnv</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">graph</span><span class="p">.</span><span class="n">startLogging</span><span class="p">,</span><span class="w"> </span><span class="p">[]);</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess11projectPathEi">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess11projectPathEi"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess11projectPathEi"></span><span id="QtLabb::Script::CScriptEnvAccess::projectPath__iC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a05d32bde10f7372d6a2fd80d64d51f37"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">projectPath</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess11projectPathEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the absolute path of a certain data location in the current project. </p>
+<p>
+The following example shows, how to get the data path of the current project:</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">projectPath</span><span class="p">(</span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">LocationData</span><span class="p">);</span>
+<span class="n">path</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;/TestFile1.txt&quot;</span><span class="p">;</span>
+<span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span>
+<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;This is just a test test&quot;</span><span class="p">);</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+</pre></div>
+</div>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">Siehe auch</p>
+<p><a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptEnvAccess_1af03a758182a0314f920e7db5024488d9"><span class="std std-ref">eProjectLocation</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Location</strong> – Location identifier (see eProjectLocation enum)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess6importERK7QStringRK7QString">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess6importERK7QStringRK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess6importERK7QStringRK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::import__QStringCR.QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a071e653b4c456f9043a354b392a082bb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">import</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">RelativeFilePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">JsModuleIdentifier</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess6importERK7QStringRK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Import a JavaScript module from the <code class="docutils literal notranslate"><span class="pre">Scripts/JavaScript</span></code> subfolder of the current project. </p>
+<p>The following example shows, how to register and use the JavaScript module <code class="docutils literal notranslate"><span class="pre">Scripts/JavaScript/TestModules/test.js</span></code> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;TestModules/test.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MyModule&quot;</span><span class="p">);</span>
+<span class="n">MyModule</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RelativeFilePath</strong> – The module file path relative to <code class="docutils literal notranslate"><span class="pre">Scripts/JavaScript</span></code></p></li>
+<li><p><strong>JsModuleIdentifier</strong> – The name of the module in JavaScript </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script16CScriptEnvAccess3logEiRK7QStringRK7QString">
+<span id="_CPPv3N6QtLabb6Script16CScriptEnvAccess3logEiRK7QStringRK7QString"></span><span id="_CPPv2N6QtLabb6Script16CScriptEnvAccess3logEiRK7QStringRK7QString"></span><span id="QtLabb::Script::CScriptEnvAccess::log__i.QStringCR.QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1ac83af5b77b23679f3c000b9c1d83ca45"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Level</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Message</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script16CScriptEnvAccess3logEiRK7QStringRK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Log a message to the application event log. </p>
+<p>This function is similar to the console.log, console.warn or console.error functions. But this function allows to provide an additional source parameter. If you use the console.log functions, then the event source in the event log is always the JavaScript script function that contains the log statement. If you would like to evaluate and print errors for a certain object or device, then it is better for the user if the source if the name of the device or object that caused the error. For example, if you have a device „Pure Water Station“ that signals the warning „Filter Cleaning Required“ then you can use this function to signal the warning: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">LogWarning</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Filter Cleaning Required&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pure Water Station&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Level</strong> – The log level (ScriptEnv.LogInfo, ScriptEnv.LogWarning, ScriptEnv.LogError) </p></li>
+<li><p><strong>Message</strong> – The log message printed in the Event column </p></li>
+<li><p><strong>Source</strong> – The name of the error source printed in the Event source column </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script16CScriptEnvAccess13isDebugModeOnEv">
+<span id="_CPPv3NK6QtLabb6Script16CScriptEnvAccess13isDebugModeOnEv"></span><span id="_CPPv2NK6QtLabb6Script16CScriptEnvAccess13isDebugModeOnEv"></span><span id="QtLabb::Script::CScriptEnvAccess::isDebugModeOnC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptEnvAccess_1a037e7a8a6427e25834567a40366be762"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDebugModeOn</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script16CScriptEnvAccess13isDebugModeOnEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns true, if the debug mode of the script engine is on. </p>
+</dd></dl>
+
+</div>
+</section>
+<section id="qfile">
+<h3><span class="section-number">6.9.2. </span>QFile<a class="headerlink" href="#qfile" title="Link to this heading"></a></h3>
+<p>Die Klasse <code class="code docutils literal notranslate"><span class="pre">QFile</span></code> bietet eine Schnittstelle zum Lesen von und Schreiben
+in Dateien. Sie ist ein Wrapper für die Klasse
+<a class="reference external" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> aus dem Qt-Framework.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFileE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFileE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFileE"></span><span id="QtLabb::Script::CScriptQFile"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQFile</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFileE" title="Link to this definition"></a><br /></dt>
+<dd><p>Wrapper for QFile object. </p>
+<p>The QFile class provides an interface for reading from and writing to files. The file name is usually passed in the constructor, but it can be set at any time using <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d"><span class="std std-ref">setFileName()</span></a>. QFile expects the file separator to be ‚/‘ regardless of operating system. The use of other separators (e.g., ‚') is not supported. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlagE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlagE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlagE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OpenModeFlag</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlagE" title="Link to this definition"></a><br /></dt>
+<dd><p>This enum is used with <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"><span class="std std-ref">open()</span></a> to describe the mode in which a device is opened. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a93933c7b8ce9ab9c12411338d1f80d1a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeNotOpen</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNotOpenE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3897825a0a50455b527ec544efb07627"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeReadOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeReadOnlyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a232357858b02da2b9323d27cbe8a21bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeWriteOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeWriteOnlyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10aa4f49d99bf48a4843254c8eec533454f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeReadWrite</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag13ModeReadWriteE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10ae84b6af3903f26830faa6879300d1afa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeAppend</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag10ModeAppendE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a89ebc69f866cc4041ce89fad1fb1c040"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeTruncate</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag12ModeTruncateE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a83210927f28b8ae24881d1ce4f606dc3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeText</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag8ModeTextE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a3bf499aed113a4a71bdd66cee40c971b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeUnbuffered</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag14ModeUnbufferedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a47420c9282a5893edbe84d517b632fac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeNewOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag11ModeNewOnlyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1aa7788048a46c837764da6ebe2d137b10a924e83f029974c98e2e190481a5e242a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeExistingOnly</span></span></span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12OpenModeFlag16ModeExistingOnlyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile5closeEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile5closeEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile5closeEv"></span><span id="QtLabb::Script::CScriptQFile::close"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a175862fb83360515c0f454840aa3177d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile5closeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Closes the file. </p>
+<p>Calls flush() and closes the file. Errors from flush are ignored. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4copyERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4copyERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4copyERK7QString"></span><span id="QtLabb::Script::CScriptQFile::copy__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4copyERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Copies the file named <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to newName. </p>
+<p>This file is closed before it is copied. If the copied file is a symbolic link (symlink), the file it refers to is copied, not the link itself. With the exception of permissions, which are copied, no other file metadata is copied. Returns true if successful; otherwise returns false. Note that if a file with the name newName already exists, <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ace7c89b048d5f21884bb32d79c9e04d4"><span class="std std-ref">copy()</span></a> returns false. This means QFile will not overwrite it. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString"></span><span id="QtLabb::Script::CScriptQFile::CScriptQFile__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a9e419758b80f4b7df949e3b8b0645c35"></span><span class="sig-name descname"><span class="n"><span class="pre">CScriptQFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile12CScriptQFileERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructs a new file object to represent the file with the specified name. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="s">&quot;C:/temp/test1.txt&quot;</span><span class="p">);</span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile11errorStringEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile11errorStringEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile11errorStringEv"></span><span id="QtLabb::Script::CScriptQFile::errorStringC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ad4d1284536fa8ad66c535f78452b401f"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">errorString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile11errorStringEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns a human-readable description of the last device error that occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile6existsEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile6existsEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile6existsEv"></span><span id="QtLabb::Script::CScriptQFile::existsC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a519e60d707b7082cafb94568e3d88bbd"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exists</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile6existsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns true if the file specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> exists; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile8fileNameEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile8fileNameEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile8fileNameEv"></span><span id="QtLabb::Script::CScriptQFile::fileNameC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fileName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile8fileNameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6QtLabb6Script12CScriptQFile6isOpenEv">
+<span id="_CPPv3NK6QtLabb6Script12CScriptQFile6isOpenEv"></span><span id="_CPPv2NK6QtLabb6Script12CScriptQFile6isOpenEv"></span><span id="QtLabb::Script::CScriptQFile::isOpenC"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab47c1c4a8fd39a8cec1882d2832486a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6QtLabb6Script12CScriptQFile6isOpenEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns true if the device is open; otherwise returns false. </p>
+<p>A file is open if it can be read from and/or written to. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile11moveToTrashEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile11moveToTrashEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile11moveToTrashEv"></span><span id="QtLabb::Script::CScriptQFile::moveToTrash"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1ab25ea89875c88b5e803678a9e2a5ec3a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">moveToTrash</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile11moveToTrashEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Moves the file specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to the trash. </p>
+<p>Returns true if successful, and sets the <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to the path at which the file can be found within the trash; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4openEi">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4openEi"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4openEi"></span><span id="QtLabb::Script::CScriptQFile::open__i"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4openEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Opens the file with the given open mode. </p>
+<p>Returns true if successful; otherwise returns false.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFile</span><span class="p">(</span><span class="s">&quot;C:/temp/test1.txt&quot;</span><span class="p">);</span>
+<span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="p">.</span><span class="n">ModeReadWrite</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4readE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4readE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4readE6qint64"></span><span id="QtLabb::Script::CScriptQFile::read__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a56502f9f52a2c26e8e6b1dd64585feeb"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4readE6qint64" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads at most maxSize bytes from the device, and returns the data read as a QByteArray. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile7readAllEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile7readAllEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile7readAllEv"></span><span id="QtLabb::Script::CScriptQFile::readAll"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a14797a28271e3fc2f5c1a108347973f9"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile7readAllEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads all remaining data from the device, and returns it as a byte array. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile8readLineE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile8readLineE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile8readLineE6qint64"></span><span id="QtLabb::Script::CScriptQFile::readLine__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a0c7ff50e5b241dab8e6c0fec86761130"></span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLine</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile8readLineE6qint64" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads a line from the device, but no more than maxSize characters, and returns the result as a byte array. </p>
+<p>This function has no way of reporting errors; returning an empty QByteArray can mean either that no data was currently available for reading, or that an error occurred. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile6removeEv">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile6removeEv"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile6removeEv"></span><span id="QtLabb::Script::CScriptQFile::remove"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a82a346b6fa25d04e613c3d058b0b719d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile6removeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Removes the file specified by the fileName given. </p>
+<p>Returns true if successful; otherwise returns false. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile6renameERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile6renameERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile6renameERK7QString"></span><span id="QtLabb::Script::CScriptQFile::rename__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rename</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile6renameERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Renames the file currently specified by <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1ac502ab97a0adc431b4f3fa0439c62f91"><span class="std std-ref">fileName()</span></a> to newName. </p>
+<p>Returns true if successful; otherwise returns false.</p>
+<p>If a file with the name newName already exists, <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1abee1f9b798045be83c6fba05ec8b3216"><span class="std std-ref">rename()</span></a> returns false (i.e., QFile will not overwrite it).</p>
+<p>The file is closed before it is renamed.</p>
+<p>If the rename operation fails, Qt will attempt to copy this file’s contents to newName, and then remove this file, keeping only newName. If that copy operation fails or this file can’t be removed, the destination file newName is removed to restore the old state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile4seekE6qint64">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile4seekE6qint64"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile4seekE6qint64"></span><span id="QtLabb::Script::CScriptQFile::seek__qint64"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile4seekE6qint64" title="Link to this definition"></a><br /></dt>
+<dd><p>For random-access devices, this function sets the current position to pos, returning true on success, or false if an error occurred. </p>
+<p>For sequential devices, the default behavior is to do nothing and return false.</p>
+<p>Seeking beyond the end of a file: If the position is beyond the end of a file, then <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a280939cabacb5fcf4c5fe82de60ed17a"><span class="std std-ref">seek()</span></a> will not immediately extend the file. If a write is performed at this position, then the file will be extended. The content of the file between the previous end of file and the newly written data is UNDEFINED and varies between platforms and file systems. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile11setFileNameERK7QString">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile11setFileNameERK7QString"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile11setFileNameERK7QString"></span><span id="QtLabb::Script::CScriptQFile::setFileName__QStringCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a89a70ec60ae8f4cd46bb968cc5ad104d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFileName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">FileName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile11setFileNameERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets the name of the file. </p>
+<p>The name can have no path, a relative path, or an absolute path. Do not call this function if the file has already been opened. If the file name has no path or a relative path, the path used will be the application’s current directory path at the time of the <a class="reference internal" href="#classQtLabb_1_1Script_1_1CScriptQFile_1a7c16659862cb40822f7ce4042d20a304"><span class="std std-ref">open()</span></a> call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6QtLabb6Script12CScriptQFile5writeERK10QByteArray">
+<span id="_CPPv3N6QtLabb6Script12CScriptQFile5writeERK10QByteArray"></span><span id="_CPPv2N6QtLabb6Script12CScriptQFile5writeERK10QByteArray"></span><span id="QtLabb::Script::CScriptQFile::write__QByteArrayCR"></span><span class="target" id="classQtLabb_1_1Script_1_1CScriptQFile_1a86be775c6f69ff4bca53fd0494a1f1d6"></span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6QtLabb6Script12CScriptQFile5writeERK10QByteArray" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes the content of byteArray to the device. </p>
+<p>Returns the number of bytes that were actually written, or -1 if an error occurred. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../scriptingsystem_part2_DE/scriptingsystem_part2_DE.html" class="btn btn-neutral float-left" title="5. Script Grundfunktionen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../nemesys_DE/nemesys_full_DE.html" class="btn btn-neutral float-right" title="7. Nemesys Plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

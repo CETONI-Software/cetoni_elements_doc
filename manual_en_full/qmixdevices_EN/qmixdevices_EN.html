@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating Device Configurations &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating Device Configurations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-device-configurations">
+<h1>Creating Device Configurations<a class="headerlink" href="#creating-device-configurations" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In order to combine single devices according to your requirements and
+use them in CETONI Elements, you have to create a device configuration.
+Creating device configurations can be done using the <em>Device
+Configurator</em> which is integrated in the CETONI Elements software. The
+Device Configurator features the <em>Device Configuration Wizard</em> that
+guides you through the integration of your devices into your device
+configuration.</p>
+</section>
+<section id="starting-the-device-configurator">
+<h2>Starting the Device Configurator<a class="headerlink" href="#starting-the-device-configurator" title="Link to this heading"></a></h2>
+<p>You can start the <em>Device Configurator</em> by selecting the menu item
+<span class="menuselection">Device → Create Configuration</span> from the main menu.</p>
+<img alt="../_images/1000020100000142000000E460C63C6ECF459963.png" src="../_images/1000020100000142000000E460C63C6ECF459963.png" />
+<p>To use the Device Configurator to configure your devices, a valid license must
+be installed. If you only have a demo license, then only device configurations
+with simulated devices can be created and it is not possible to configure your
+devices with it.</p>
+<img alt="../_images/device_configurator_demo_license.png" src="../_images/device_configurator_demo_license.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html#activate-license"><span class="std std-ref">Activate your License</span></a> before you start the
+<em>Device Configurator</em> if you want to configure your real devices.</p>
+</div>
+</section>
+<section id="import-a-device-database">
+<h2>Import a device database<a class="headerlink" href="#import-a-device-database" title="Link to this heading"></a></h2>
+<p>The device configurator and the configuration wizard use a device
+database <code class="file docutils literal notranslate"><span class="pre">devices.db`</span></code> to read device-specifc parameters and settings
+for configuration of the devices.</p>
+<p>During the installation of the CETONI Elements software this database is
+already installed. If you use devices that are not yet listed in the
+device database (e.g. if your devices are newer than the latest CETONI
+Elements software version), you may need to import an updated version of
+the device database. This database can be found either on your
+installation media or your get it directly from CETONI.</p>
+<p>When you start the device configurator, you will be asked if you want to
+import a new device database. If your installation media contains the
+file <code class="file docutils literal notranslate"><span class="pre">devices.db</span></code>, you should import it now.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your installation media does not contain a
+device database, your devices are already supported by
+the CETONI Elements software and you can skip the device
+database import.</p>
+</div>
+<ol class="arabic steps">
+<li><p>Confirm the query by left-clicking the <span class="guilabel">Yes</span> button.</p>
+<p><img alt="Figure 2: Query for device database import" src="../_images/100002010000021400000104F1C5A4A3FB36B583.png" /></p>
+</li>
+<li><p>A file selection dialog opens. Select the database file <code class="file docutils literal notranslate"><span class="pre">devices.db</span></code> located in the
+root directory of the CETONI Elements CD (see figure below).</p>
+<p><img alt="Figure 3: Device database import dialog" src="../_images/100002010000030C000001D07377795B057AC007.png" /></p>
+</li>
+<li><p>The device configurator now has an actual device database available.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The device database contains important
+configuration information about your devices. You always
+have to import an actual device database if you purchase
+new devices from the CETONI GmbH.</p>
+</div>
+<p>As long as you don’t purchase new devices you needn’t import a device
+database on start of the device configurator. If you don’t want CETONI
+Elements to further ask for database import just check
+<span class="guilabel">Do not ask me again</span> and confirm by left-clicking <span class="guilabel">No</span>
+(see figure below).</p>
+<p><img alt="Figure 4: Deselect device database import" src="../_images/10000201000002140000010401848AB92A244C42.png" /></p>
+<p>If you want to import a device database in the
+future you can reach the import dialog by selecting
+<span class="menuselection">Device → Import Device Database</span> from the main menu (see figure below).</p>
+<p><img alt="Figure 5: Import device database menu item" src="../_images/100002010000012C000000D9432772F445244F1B.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You don’t have to import a device database on
+each start of the device configurator. As long as you
+don’t purchase any new devices, you don’t need to import
+a new device database.</p>
+</div>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><img alt="Figure 7: Device Configurator overview" src="../_images/10000201000003A8000002551C97F93586909741.png" /></p>
+<p>The Device Configurator is divided into the following three parts:</p>
+<ol class="arabic simple guinums">
+<li><p><strong>Toolbar</strong> – Functions for creating, loading and saving device
+configurations, as well as starting the Device Configuration Wizard.</p></li>
+<li><p><strong>Device List</strong> – Selection of available devices.</p></li>
+<li><p><strong>Device configuration</strong> created by user.</p></li>
+</ol>
+</section>
+<section id="toolbar">
+<h2>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h2>
+<p>The toolbar contains the following functions:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100016B7000034EB000034EBF007ABD978022879.svg"><img alt="image26" src="../_images/100016B7000034EB000034EBF007ABD978022879.svg" width="40" /></a></p></td>
+<td><p>Creates a new, empty device configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000069300003505000035059CEEC88E17AC3A44.svg"><img alt="image27" src="../_images/1000069300003505000035059CEEC88E17AC3A44.svg" width="40" /></a></p></td>
+<td><p>Loads an existing device configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000CE50000350500003505303BFDEECD65BB70.svg"><img alt="image28" src="../_images/10000CE50000350500003505303BFDEECD65BB70.svg" width="40" /></a></p></td>
+<td><p>Saves the created device configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000173B0000387200003872AFCF364C5ED9850F.svg"><img alt="image29" src="../_images/1000173B0000387200003872AFCF364C5ED9850F.svg" width="40" /></a></p></td>
+<td><p>Saves the created device configuration using a new
+name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100011C0000034EB000034EBDA043906CEBA5F5A.svg"><img alt="image30" src="../_images/100011C0000034EB000034EBDA043906CEBA5F5A.svg" width="40" /></a></p></td>
+<td><p>Sets all devices of the created device configuration to
+simulated.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000AD00000350500003505C47905C00A889D90.svg"><img alt="image31" src="../_images/10000AD00000350500003505C47905C00A889D90.svg" width="40" /></a></p></td>
+<td><p>Starts the add-on plugins selection dialog. These are
+optional software extensions that CETONI has developed
+customer-specific, possibly on your behalf.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10002680000034EB000034EBD15B809B1EA625C8.svg"><img alt="image32" src="../_images/10002680000034EB000034EBD15B809B1EA625C8.svg" width="40" /></a></p></td>
+<td><p>Starts the Device Configuration Wizard.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10001BD3000034EB000034EBF4CF559786D64E36.svg"><img alt="image33" src="../_images/10001BD3000034EB000034EBF4CF559786D64E36.svg" width="40" /></a></p></td>
+<td><p>Restarts the software with the device configuration
+from the device configurator</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="device-configuration-wizard">
+<h2>Device Configuration Wizard<a class="headerlink" href="#device-configuration-wizard" title="Link to this heading"></a></h2>
+<p><img alt="Figure 8: The Device Configuration Wizard" src="../_images/1000020100000386000002786DDB775867DDCAEB.png" /></p>
+<p>The <em>Device Configuration Wizard</em> guides you through the integration of your
+devices into your device configuration. You <strong>must</strong> execute the
+Device Configuration Wizard after:</p>
+<ul class="simple">
+<li><p>creating a new device configuration or changing an existing one.</p></li>
+<li><p>swapping devices or integrating a new device into an existing device
+configuration.</p></li>
+<li><p>an update of the CETONI Elements software</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Device configurations and devices belong
+together. Always execute the Device Configuration Wizard if you want to
+change a device configuration or integrate a new device into an existing
+device configuration.</p>
+</div>
+<p>Your device configuration should always be created with the software
+version with which you want to use the configuration, otherwise errors
+may occur. If the device configuration was created with another software
+version, you will receive a warning message when the application is
+started.</p>
+<img alt="../_images/outdated_device_config.png" src="../_images/outdated_device_config.png" />
+<p>If you see this warning, you should open the device
+configuration in the <em>Device Configurator</em>, save it and then configure
+all devices using the <em>Configuration Wizard</em>.</p>
+</section>
+<section id="creating-a-sample-device-configuration">
+<h2>Creating a sample device configuration<a class="headerlink" href="#creating-a-sample-device-configuration" title="Link to this heading"></a></h2>
+<p>The following example describes the creation of a device configuration
+containing a Nemesys S dosing module and a Qmix Q+ module.</p>
+<ol class="arabic steps">
+<li><p><a class="reference internal" href="qmixdevices_full_EN.html#starting-the-device-configurator"><span class="std std-ref">Start the Device Configurator</span></a></p></li>
+<li><p>Left-click on the Nemesys S dosing module listed in the device list
+<span class="guinum">❶</span> and hold down the mouse button.</p></li>
+<li><p>Drag the Nemesys dosing module into the device configuration <span class="guinum">❷</span>
+holding the mouse button down. As soon as you release the mouse
+button the Nemesys dosing module is added to the device
+configuration. Alternatively, you can add a device by
+double-clicking on it in the device list.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add devices via drag &amp; drop or by a double click.</p>
+</div>
+<img alt="../_images/1000020100000315000001F95769560860DF416C.png" src="../_images/1000020100000315000001F95769560860DF416C.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can remove devices from the device
+configuration by selecting the device by clicking it
+and then pressing the Delete key.</p>
+</div>
+</li>
+<li><p>Proceed in the same way with the Qmix Q+ module.</p></li>
+<li><p>Save your configuration under a meaningful name by clicking on the
+<span class="guilabel">Save</span> button <span class="guinum">❸</span></p></li>
+<li><p>Start the Device Configuration Wizard by left-clicking <span class="guilabel">Configure</span>
+<span class="guinum">❹</span></p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Make sure that the mains voltage on your
+Base module or on your power supply is switched off
+before connecting or disconnecting modules to your
+system. Not doing so may result in damage or
+malfunction.</p>
+</div>
+</li>
+<li><p>The Device Configuration Wizard advices you to follow these
+instructions:</p>
+<ul class="simple">
+<li><p>Ensure that the Nemesys S module which is to be configured is
+connected to your Base module. Turn the Nemesys S power switch ON.
+The blue Power LED should now light up</p></li>
+<li><p>Switch off all other modules that have a power switch</p></li>
+<li><p>Remove all other modules from the setup, that do not have a power
+switch – in this case, that would be the Qmix Q+ module (Attention:
+Switch of the mains voltage at the Base module before removing or
+adding modules)</p></li>
+<li><p>Ensure that the terminator is plugged into the last module of your
+setup – the Nemesys S in this case</p></li>
+<li><p>Switch on the mains power switch on your Base module or on your power
+supply unit.</p></li>
+<li><p>Check that the Nemesys S module is really the only device that is
+powered on now. The blue power LED of all other modules must be off</p></li>
+</ul>
+<img alt="../_images/10000201000003860000027872DE1FBA980DE172.png" src="../_images/10000201000003860000027872DE1FBA980DE172.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>During the configuration of a device, no
+other switched-on devices may be connected to the Base
+module, as otherwise errors may occur during the
+configuration or subsequent malfunctions.</p>
+</div>
+<ul class="simple">
+<li><p>Click <span class="guilabel">Next</span> to start device configuration</p></li>
+</ul>
+</li>
+<li><p>The Nemesys S pump is being configured. This may take a few seconds.</p>
+<img alt="../_images/1000020100000386000002783B7DFF9EE7B610D1.png" src="../_images/1000020100000386000002783B7DFF9EE7B610D1.png" />
+</li>
+<li><p>The Device Configuration Wizard displays the Nemesys S dosing module
+configured successfully. Left-click <span class="guilabel">Next</span> to proceed.</p>
+<p><img alt="Figure 12: Device configuration successful" src="../_images/1000020100000386000002780368D5E4C23E8331.png" /></p>
+</li>
+<li><p>The Device Configuration Wizard advices you to follow these instructions (see
+image below):</p>
+<ul class="simple">
+<li><p>Ensure that the Qmix Q+ module is connected to your base module</p></li>
+<li><p>Switch off all other devices that have a power switch – in this case
+switch off the Nemesys S module. Alternatively, you can remove the
+Nemesys S pump from the base module and connect only the Qmix Q+
+module.</p></li>
+<li><p>Remove all other modules from the setup, that do not have a power
+switch</p></li>
+<li><p>Ensure that the terminator is plugged into the last module of your
+setup</p></li>
+<li><p>Switch on the mains power switch on your Base module or on your power
+supply unit.</p></li>
+<li><p>Check that the Qmix Q+ module is really the only device that is
+powered on now. The blue power LED of all other modules must be off</p></li>
+</ul>
+<p><img alt="Figure 13: Unplug configured device" src="../_images/100002010000038600000278BB49B91B78BAF742.png" /></p>
+</li>
+<li><p>Click <span class="guilabel">Next</span> to configure the QmixQ+ module.</p></li>
+<li><p>On the next page check <em>Import and activate new device configuration
+into CETONI Elements now</em>. Doing so CETONI Elements activates the
+new device configuration and restarts after finishing the Device
+Configuration Wizard.</p>
+<p><img alt="Figure 14: Activating device configuration" src="../_images/10000201000002DC000001E9CA80FBFC63198D1D.png" /></p>
+</li>
+<li><p>Prepare the restart of CETONI Elements with the created device configuration:</p>
+<ul class="simple">
+<li><p>Switch off the Base module.</p></li>
+<li><p>Plug the Nemesys dosing module and the Qmix Q+ module to the base
+module.</p></li>
+<li><p>Plug the terminator.</p></li>
+<li><p>Switch on the base module again.</p></li>
+<li><p>Turn on the power switch of the Nemesys S pump</p></li>
+<li><p>Finish the Device Configuration Wizard by left-clicking <span class="guilabel">Finish</span></p></li>
+</ul>
+<p><img alt="Figure 15: Finishing the Device Configuration Wizard" src="../_images/10000201000002DC000001E960A7B6801635EFFC.png" /></p>
+</li>
+<li><p>Confirm the software restart with the new device configuration.</p>
+<p><img alt="Figure 16: Confirming restart of CETONI Elements" src="../_images/1000020100000209000000973518A94FC04F6523.png" /></p>
+</li>
+<li><p>CETONI Elements now offers the functions of the Nemesys S dosing module and
+the Qmix Q+ module.</p></li>
+</ol>
+</section>
+<section id="extending-an-existing-device-configuration">
+<h2>Extending an existing device configuration<a class="headerlink" href="#extending-an-existing-device-configuration" title="Link to this heading"></a></h2>
+<p>The following example shows how you can add another device to the
+configuration created in the previous section.</p>
+<ol class="arabic steps">
+<li><p><a class="reference internal" href="qmixdevices_full_EN.html#starting-the-device-configurator"><span class="std std-ref">Start the Device Configurator</span></a></p></li>
+<li><p>After start of the Device Configurator the device configuration
+currently loaded by the CETONI Elements software is shown. The green
+checks displayed on top of the devices indicate that these devices
+have already been configured.</p>
+<p><img alt="Figure 17: Displaying the currently loaded device configuration" src="../_images/1000020100000495000002DBC4E00C234E4AF418.png" /></p>
+</li>
+<li><p>If you want to change another device configuration
+as the one currently loaded by CETONI Elements, you have to load the
+desired device configuration using the <span class="guilabel">Open</span> button.</p>
+<p><img alt="Figure 18: Loading a device configuration" src="../_images/100002010000025F000000564EB0B2BD3EA73911.png" /></p>
+</li>
+<li><p>Add a further device
+via Drag &amp; Drop as described in the previous section. The
+exclamation mark above the device points out that it has not been
+configured yet. The configuration can’t be used in this state.</p>
+<img alt="../_images/1000020100000495000002DBE574762DF8C08052.png" src="../_images/1000020100000495000002DBE574762DF8C08052.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If a device configuration contains not
+configured devices, it is invalid and can’t be used
+yet.</p>
+</div>
+</li>
+<li><p>Save the configuration and start the <em>Device Configuration Wizard</em> by
+clicking the <span class="guilabel">Configure</span> button.</p>
+<p><img alt="Figure 20: Starting the Device Configuration Wizard" src="../_images/100002010000026E0000005A49AF5264C0E989FD.png" /></p>
+</li>
+<li><p>If the software has already been connected to the plugged devices, the
+device configuration process can’t be continued. In this case the
+Device Configuration Wizard proposes to automatically restart the
+software and the Device Configurator. Click the <span class="guilabel">Yes</span> button if you
+agree.</p>
+<p><img alt="Figure 21: Restart the Device Configurator" src="../_images/1000020100000214000000B9F911FCCD726CA849.png" /></p>
+</li>
+<li><p>The device configuration process known from the previous section starts. But
+this time the wizard proposes on the second page to exclude devices
+from the device configuration process that have already been
+configured. Just check <span class="guilabel">Skip configured devices</span>.</p>
+<p><img alt="Figure 22: Skip configured devices" src="../_images/10000201000002DC000001A6F3562502AF0DE59C.png" /></p>
+</li>
+<li><p>The Device Configuration
+Wizard directly continues with the configuration of the newly added
+device (Qmix P in this example).</p>
+<p><img alt="Figure 23: Configuration of the newly added device" src="../_images/10000201000002DC000001C34265519F69AC6D55.png" /></p>
+</li>
+<li><p>Just finish the <em>Device Configuration Wizard</em> the same way you would have done
+if you had created a device configuration from scratch.</p></li>
+<li><p>After restart the functionality of the new device is available to
+you.</p></li>
+</ol>
+</section>
+<section id="configuration-of-a-single-device">
+<h2>Configuration of a single device<a class="headerlink" href="#configuration-of-a-single-device" title="Link to this heading"></a></h2>
+<p>You can configure a single device from your configuration in the Device
+Configurator at any time - e. g. if you have exchanged a defective
+device for a new one. Simply right-click on the device to be configured
+and select the menu item <span class="menuselection">Configure</span>.</p>
+<p><img alt="Figure 24: Configuring a single device" src="../_images/1000020100000432000002BB096CA19B52A6276F.png" /></p>
+<p>The configuration wizard now guides you through the configuration of the individual device.</p>
+</section>
+<section id="simulated-devices">
+<h2>Simulated devices<a class="headerlink" href="#simulated-devices" title="Link to this heading"></a></h2>
+<p>You can set single devices or a whole device configuration to simulated.
+This is useful if you want create CETONI Elements
+scripts using devices not available at the moment. The CETONI Elements
+demo configuration for example completely consists of simulated devices.
+Proceed as follows in order to simulate a single device:</p>
+<ol class="arabic steps">
+<li><p>In the device configuration right-click the device you want to
+simulate.</p></li>
+<li><p>Left-click the button <span class="guilabel">Simulate</span></p>
+<p><img alt="Figure 25: Simulating a single device" src="../_images/100002010000024900000114FAB67531E84DD8FF.png" /></p>
+</li>
+<li><p>The device is marked as
+simulated. Save the device configuration. The next time you load
+this device configuration in CETONI Elements the simulated device
+will be available to you.</p>
+<p><img alt="Figure 26: Simulated device" src="../_images/100002010000024500000103CAAD327CC34BFAE1.png" /></p>
+</li>
+</ol>
+<p>You can simulate a whole device configuration by left-clicking
+<span class="guilabel">Simulate All</span> in the main toolbar.</p>
+<p><img alt="Figure 27: Simulating a whole device configuration" src="../_images/10000201000003A4000001AB6990B251D2B11E55.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

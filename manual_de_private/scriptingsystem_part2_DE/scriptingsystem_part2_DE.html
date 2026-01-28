@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Script Grundfunktionen &mdash; CETONI Elements Privat Handbuch</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cad705d1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="6. Verwendung von JavaScript" href="../javascript_DE/javascript_DE.html" />
+    <link rel="prev" title="4. Script-System" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Privat Handbuch
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_DE/Installation_DE.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html">2. Einführung CETONI Elements Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_DE/qmixdevices_full_DE.html">3. Erstellen von Gerätekonfigurationen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html">4. Script-System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Script Grundfunktionen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kernfunktionen-core-functions">5.1. Kernfunktionen - <em>Core Functions</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-kernfunktionen">5.1.1. Übersicht Kernfunktionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-script">5.1.2. Interrupt Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-sequence">5.1.3. Interrupt Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-message">5.1.4. Show Message</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#show-message-konfiguration">Show Message Konfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variablen-inhalt-oder-prozessdaten-anzeigen">Variablen-Inhalt oder Prozessdaten anzeigen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rich-text-unterstutzung">Rich-Text Unterstützung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-variable">5.1.5. Create Variable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#variablen-typen">Variablen Typen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#berechnung-von-werten">Berechnung von Werten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operatoren">Operatoren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operatorenrangfolge">Operatorenrangfolge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele">Beispiele</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#set-variable">5.1.6. Set Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-declaration-sequence">5.1.7. Variable Declaration Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-input">5.1.8. User Input</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Rich Text Unterstützung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#script-function-call">5.1.9. Script Function Call</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funktionssequenzen-function-sequences">5.2. Funktionssequenzen - <em>Function Sequences</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-funktionssequenzen">5.2.1. Übersicht Funktionssequenzen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counting-loop">5.2.2. Counting Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-loop">5.2.3. Conditional Loop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#einfuhrung">Einführung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#konfiguration-einfacher-modus">Konfiguration - einfacher Modus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#konfiguration-erweiterter-modus">Konfiguration - erweiterter Modus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#function-sequence">5.2.4. Function Sequence</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#funktionssequenz-benennen">Funktionssequenz benennen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#funktionsparameter-und-ruckgabewerte-hinzufugen">Funktionsparameter und Rückgabewerte hinzufügen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#funktionssequenz-laden">Funktionssequenz laden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auswahl-in-funktionssequenz-umwandeln">Auswahl in Funktionssequenz umwandeln</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-sequence">5.2.5. Conditional Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-sequence">5.2.6. Parallel Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#break">5.2.7. Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#return">5.2.8. Return</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fehlerbehandlung-error-handling">5.3. Fehlerbehandlung - <em>Error Handling</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#try-catch-block">5.3.1. Try…Catch Block</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#throw-error">5.3.2. Throw Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#zeitfunktionen-time-functions">5.4. Zeitfunktionen - <em>Time Functions</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-zeitfunktionen">5.4.1. Übersicht Zeitfunktionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay">5.4.2. Delay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispielkonfiguration">Beispielkonfiguration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-until">5.4.3. Wait until</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-timer">5.4.4. Start Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-timer">5.4.5. Wait for Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-timer">5.4.6. Read Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#geratefunktionen-device-functions">5.5. Gerätefunktionen - <em>Device Functions</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5.5.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-device-property">5.5.2. Read Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-device-property">5.5.3. Write Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-device-property">5.5.4. Wait For Device Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-property-variable">5.5.5. Create Property Variable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funktionen-zum-logging">5.6. Funktionen zum Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht">5.6.1. Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-message">5.6.2. Log Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-event-log">5.6.3. Clear Event Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-event-log">5.6.4. Export Event Log</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funktionen-zur-datenspeicherung">5.7. Funktionen zur Datenspeicherung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-settings-file">5.7.1. Open Settings File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-setting">5.7.2. Read Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-setting">5.7.3. Write Setting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_DE/javascript_DE.html">6. Verwendung von JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_DE/nemesys_full_DE.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_DE/qmixio_full_DE.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_DE/qmixcontroller_full_DE.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_DE/qmixv_full_DE.html">10. Ventil Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_DE/tubingpump_DE.html">11. Schlauchpumpen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_DE/rotaxys_DE.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_DE/balance_DE.html">13. Waagen Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_DE/ledarray_DE.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_DE/cameraview_DE.html">15. Kamera Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_DE/imageanalysis_DE.html">16. Bildbetrachter / Bildanalyse Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_DE/videobuilder_DE.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_DE/datalogger_full_DE.html">18. CSV-Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_DE/graphlogger_full_DE.html">19. Grafischer Datenlogger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_DE/python_DE.html">20. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_DE/database_DE.html">21. Datenbank Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_DE/sila_DE.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_DE/spectroscopy_DE.html">23. Spektroskopie Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_DE/daq_DE.html">24. DAQ-Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_DE/canopentools_DE.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_DE/Appendix_DE.html">26. Anhang</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Privat Handbuch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Script Grundfunktionen</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="script-grundfunktionen">
+<h1><span class="section-number">5. </span>Script Grundfunktionen<a class="headerlink" href="#script-grundfunktionen" title="Link to this heading"></a></h1>
+<p>Das <em>Script-System</em> enthält bereits eine Reihe von Grundfunktionen oder
+Basis- Funktionen zur Programmablaufsteuerung. Diese Funktionen sind
+unabhängig von den vorhandenen Plugins immer verfügbar. Diese Funktionen
+finden Sie in den Kategorien <span class="guilabel">Core Functions</span> , <span class="guilabel">Function Sequences</span>,
+und <span class="guilabel">Time Functions</span>.</p>
+<img alt="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" src="../_images/100002010000016C000002591AF7FEE5FA0D46F1.png" />
+<section id="kernfunktionen-core-functions">
+<h2><span class="section-number">5.1. </span>Kernfunktionen - <em>Core Functions</em><a class="headerlink" href="#kernfunktionen-core-functions" title="Link to this heading"></a></h2>
+<section id="ubersicht-kernfunktionen">
+<h3><span class="section-number">5.1.1. </span>Übersicht Kernfunktionen<a class="headerlink" href="#ubersicht-kernfunktionen" title="Link to this heading"></a></h3>
+<p>Die Funktionskategorie <em>Core Functions</em> enthält grundlegende Funktionen
+zur Programmablaufsteuerung und zur Verwendung von Variablen.</p>
+<img alt="Übersicht Kern Funktionen (Core Functions)" src="../_images/core_functions1.png" />
+</section>
+<section id="interrupt-script">
+<span id="script-unterbrechen"></span><h3><span class="section-number">5.1.2. </span>Interrupt Script<a class="headerlink" href="#interrupt-script" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_script1.svg"><img alt="../_images/interrupt_script1.svg" class="align-left" src="../_images/interrupt_script1.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie die Skriptausführung
+unterbrechen. Die Funktion hat die gleiche Wirkung wie das Drücken der Interrupt
+Schaltfläche in der Toolbar. Der Anwender kann das Script durch Drücken der
+Continue Schaltfäche in der Toolbar fortsetzen.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wird die Scriptausführung unterbrochen, werden alle parallel laufenden
+Sequenzen unterbrochen und es ist kein Kommunikation mit dem Script möglich.</p>
+</div>
+</section>
+<section id="interrupt-sequence">
+<span id="id1"></span><h3><span class="section-number">5.1.3. </span>Interrupt Sequence<a class="headerlink" href="#interrupt-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/interrupt_sequence31.svg"><img alt="../_images/interrupt_sequence31.svg" class="align-left" src="../_images/interrupt_sequence31.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie die Ausführung der Funktionssequenz unterbrechen,
+in der die Funktion enthalten ist. Werden mehrere Sequenzen mit Hilfe der
+<a class="reference internal" href="#parallele-sequenz"><span class="std std-ref">Parallelen Sequenz</span></a> parallel ausgeführt, dann wird nur
+die Sequenz unterbrochen, in der die Funktion enthalten ist.</p>
+<p>Wird Interrupt Sequence Funktion ausgeführt, erhalten Sie im <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#ereignisprotokoll"><span class="std std-ref">Event Log</span></a>
+der Anwendung eine Information, das die Sequenz unterbrochen wurde:</p>
+<img alt="../_images/interrupt_sequence_message.png" src="../_images/interrupt_sequence_message.png" />
+<p>Sie können dann doppelt auf den Log-Eintrag klicken, um sich die Funktion und
+das Bedienpanel anzeigen zur lassen. Danach können Sie die Ausführung mit Mausklick
+auf <span class="guilabel">Continue</span> im Bedienpanel der <em>Interrupt Sequence</em> Funktion fortzusetzen.</p>
+<img alt="../_images/interrupt_sequence_continue.png" src="../_images/interrupt_sequence_continue.png" />
+</section>
+<section id="show-message">
+<span id="show-message-function"></span><span id="nachricht-anzeigen"></span><h3><span class="section-number">5.1.4. </span>Show Message<a class="headerlink" href="#show-message" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000490000034EB000034EB215655F378C8DAF2.svg"><img alt="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" class="align-left" src="../_images/10000490000034EB000034EB215655F378C8DAF2.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie dem Anwender aus einem Skript
+heraus eine Nachricht anzeigen und optional die Skriptausführung
+unterbrechen. Damit ist diese Funktion für Anwendungen geeignet, die ein
+Eingreifen des Anwenders zu bestimmten Zeitpunkten während der
+Ausführung eines Skriptes erforderlich machen.</p>
+<p>Beim Ausführen kann die Nachricht sowohl in einem <em>Nachrichtenfenster</em>,
+…</p>
+<img alt="Nachrichtenfenster" src="../_images/100002010000013E000000AF6775389C8CA3B9A1.png" />
+<p>… als auch in der <em>Ereignisanzeige</em> der Software angezeigt werden:</p>
+<img alt="Ereignisanzeige" src="../_images/10000201000002B30000009CE9126D1E71812C4B.png" />
+<p>In der <em>Ereignisanzeige</em> werden alle
+Nachrichten in chronologischer Reihenfolge aufgelistet. In der
+optionalen Message Box wird stets die letzte Nachricht angezeigt.</p>
+<section id="show-message-konfiguration">
+<h4>Show Message Konfiguration<a class="headerlink" href="#show-message-konfiguration" title="Link to this heading"></a></h4>
+<p>Bei der Konfiguration der Nachrichtenfunktion, können Sie folgende
+Punkte konfigurieren:</p>
+<img alt="../_images/show_message_config.png" src="../_images/show_message_config.png" />
+<ol class="arabic simple guinums">
+<li><p>Geben Sie im Bereich <span class="guilabel">Message</span> den Nachrichtentext ein.</p></li>
+<li><p>Im Bereich <span class="guilabel">Message Type</span> können Sie Art der Nachricht auswählen.
+Je nach Typ, wird im Nachrichtenfenster und in der Ereignisanzeige
+ein entsprechendes Symbol eingeblendet und in der Ereignisanzeige die
+Nachricht farblich hervorgehoben.</p></li>
+<li><p>Im Bereich <em>Output</em> stellen Sie ein, ob die Nachricht in einem
+eigenen Meldungsfenster angezeigt werden soll (<span class="guilabel">Show Message Box</span>)
+und ob die Nachricht in der <em>Ereignisanzeige</em> erscheinen soll (<span class="guilabel">Write to Event Log</span>).</p></li>
+<li><p>Wählen Sie aus, ob die Nachricht die Skriptausführung unterbrechen
+soll. Ist in dem Feld <span class="guilabel">Interrupt script execution</span> ein Häkchen,
+so wird die komplette Scriptausführung unterbrochen, bis die
+Programmausführung vom Anwender fortgesetzt wird. Wenn Sie ein
+Meldungsfenster mit <span class="guilabel">Show Message Box</span> einblenden, sollten Sie diese
+Option nicht auswählen und stattdessen auf Option <span class="guinum">❺</span> zurückgreifen.</p></li>
+<li><p>Hier können Sie auswählen, ob die Skriptausführung nach dem
+Anklicken von <span class="guilabel">OK</span> im Meldungsfenster fortgesetzt wird.</p></li>
+<li><p>Rich-Text - Aktivieren Sie diese Option, um Ihren Text mit
+Fettdruck, Kursivschrift, Farben und mehr zu formatieren.</p></li>
+</ol>
+<p>Je nach ausgewählten Optionen verhält sich diese Funktion wie folgt:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Show Message Box</p></td>
+<td><p>Write to Event Log</p></td>
+<td><p>Inter-rupt Script Exe-cution</p></td>
+<td><p>Continue Script if User Clicks OK</p></td>
+<td><p>Result</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>Eine Nachricht wird in den Event Log geschrieben und dann die nächste
+Funktion ausgeführt.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td><p>Eine Nachricht wird in den Event Log geschrieben und die Scriptausführung
+wird unterbrochen. Die Ausführung kann durch Anklicken der <span class="guilabel">Run Script</span>
+-Schaltfläche fortgesetzt werden.</p></td>
+</tr>
+<tr class="row-even"><td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>Eine Nachricht wird in den Event Log geschrieben, ein Meldungsfenster wird
+angezeigt und dann die nächste Funktion ausgeführt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p>Ein Meldungsfenster wird angezeigt. Sobald der Anwender auf OK klickt,
+wird die nächste Scriptfunktion ausgeführt.</p></td>
+</tr>
+<tr class="row-even"><td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td></td>
+<td></td>
+<td><p>Ein Meldungsfenster wird angezeigt und die Scriptausführung wird unterbrochen.
+Die Ausführung kann durch Anklicken der <span class="guilabel">Run Script</span>-Schaltfläche
+fortgesetzt werden.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variablen-inhalt-oder-prozessdaten-anzeigen">
+<h4>Variablen-Inhalt oder Prozessdaten anzeigen<a class="headerlink" href="#variablen-inhalt-oder-prozessdaten-anzeigen" title="Link to this heading"></a></h4>
+<p>Im <span class="guilabel">Message</span>-Feld der Funktion können Sie auch Variablen
+oder <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#device-properties-prozessdaten"><span class="std std-ref">Prozessdatenbezeichner</span></a> verwenden.
+Diese dienen als Platzhalter und werden zur Laufzeit des Scriptes durch
+den Inhalt der Variablen oder die Prozessdaten eines Gerätes ersetzt.
+Sobald Sie im Text ein Dollarzeichen ($) eingeben, wird Ihnen eine Liste
+der verfügbaren Variablen eingeblendet, aus der Sie eine Variable
+auswählen können (siehe Abbildung unten).</p>
+<img alt="Verwendung von Variablen in Show Message" src="../_images/10000201000001DB000000D68C630A99C4BAD6D1.png" />
+<p>Sie können z.B. in das <span class="guilabel">Message</span>-Feld folgenden Text eingeben:</p>
+<p class="centered">
+<strong><em>Der Inhalt der Variablen A ist $A.</em></strong></p><p>Wenn die Variable <code class="code docutils literal notranslate"><span class="pre">$A</span></code> zur Laufzeit den Wert 25,3 enthält, dann wird die
+Funktion folgende Nachricht ausgeben:</p>
+<p class="centered">
+<strong><em>Der Inhalt der Variablen A ist 25,3.</em></strong></p><div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können den Inhalt von Variablen mit Hilfe
+der Show Message Funktion anzeigen lassen, um so z.B.
+die Ergebnisse von Berechnungen zu überprüfen.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Klicken Sie mit der rechten Maustaste und
+wählen Sie dann aus dem Kontextmenü den Punkt Insert
+device property um direkt die Prozessdaten von Geräten
+auszugeben.</p>
+</div>
+</section>
+<section id="rich-text-unterstutzung">
+<span id="show-message-rich-text"></span><h4>Rich-Text Unterstützung<a class="headerlink" href="#rich-text-unterstutzung" title="Link to this heading"></a></h4>
+<p>Wenn Sie die <span class="guilabel">Enable rich text</span> Option aktivieren, erhalten Sie
+umfassende Möglichkeiten Ihren Nachrichtentext zu formatieren, Listen
+zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
+wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
+eingeblendet:</p>
+<img alt="../_images/show_message_rich_text.png" src="../_images/show_message_rich_text.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Rich Text benötigt wesentlich mehr Speicherplatz als normaler Text und kann
+die Ladezeiten von Skriptdateien verlängern. Schalten Sie diese Option daher
+nur dann ein, wenn Sie sie wirklich benötigen!</p>
+</div>
+</section>
+</section>
+<section id="create-variable">
+<span id="variable-erzeugen"></span><span id="id2"></span><h3><span class="section-number">5.1.5. </span>Create Variable<a class="headerlink" href="#create-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000119100003872000038728AF29595FE1DD321.svg"><img alt="../_images/1000119100003872000038728AF29595FE1DD321.svg" class="align-left" src="../_images/1000119100003872000038728AF29595FE1DD321.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie eine neue Variable erzeugen und
+ihr einen Wert zuweisen. Im Konfigurationsbereich dieser Funktion
+(Abbildung unten) können Sie folgende Parameter eingeben:</p>
+<img alt="../_images/create_variable_function.png" src="../_images/create_variable_function.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Name</strong> - geben Sie hier den eindeutigen Variablennamen ein. Details zur
+Benennung von Variablen finden Sie im Abschnitt <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#naming-variables"><span class="std std-ref">Benennung von Variablen</span></a>.</p></li>
+<li><p><strong>Type Hint</strong> - wählen Sie hier den Typ aus, den Sie in der
+Variable speichern wollen.</p></li>
+<li><p><strong>Value</strong> - geben Sie hier den Wert ein oder, wenn die Variable vom
+Typ <em>JavascriptExpression</em> ist, den Ausdruck zur Berechnung der
+Variable.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Um eine falsche Benennung von Variablen zu
+verhindern, akzeptiert das <span class="guilabel">Name</span>-Feld nur Variablennamen
+die mit einem Dollarzeichen beginnen.</p>
+</div>
+<section id="variablen-typen">
+<h4>Variablen Typen<a class="headerlink" href="#variablen-typen" title="Link to this heading"></a></h4>
+<p>Die Variablen im Script-System sind untypisiert und können
+unterschiedlichste Werte aufnehmen. So kann z.B. einer Variable bei der
+Erstellung ein numerischer Wert zugewiesen werden und später in die
+gleiche Variable ein Text gespeichert werden. Das <span class="guilabel">Type Hint</span>-Feld im
+Konfigurationsbereich ist lediglich ein Hinweis, welcher Typ
+gespeichert werden soll und dient dazu, ein entsprechendes Eingabefeld
+je nach Typ anzuzeigen. Alle
+Typen, <em>Boolean</em> , <em>Number</em> oder <em>Text</em> lassen sich auch über
+einen JavaScript Ausdruck eingeben. Die folgende Tabelle ist eine
+Übersicht einer Auswahl von Daten, die in Variablen gespeichert werden
+können.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 33.3%" />
+<col style="width: 44.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type Hint</p></th>
+<th class="head"><p>Daten / Werte</p></th>
+<th class="head"><p>Beispiele</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/1000034B000035050000350585C9BEED447C4FB81.svg"><img alt="image31" src="../_images/1000034B000035050000350585C9BEED447C4FB81.svg" width="40" /></a></p></td>
+<td><p>Boolean</p></td>
+<td><p>Boolesche Werte</p></td>
+<td><p>true, false</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100004EA000035050000350581CFD983D12D425F1.svg"><img alt="image32" src="../_images/100004EA000035050000350581CFD983D12D425F1.svg" width="40" /></a></p></td>
+<td><p>Number</p></td>
+<td><p>Numerische Werte</p></td>
+<td><p>24, 10, -13.23,
+-128, 0.001</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000B740000350500003505221106A05ED7DC851.svg"><img alt="image33" src="../_images/10000B740000350500003505221106A05ED7DC851.svg" width="40" /></a></p></td>
+<td><p>Text</p></td>
+<td><p>Wörter oder Texte</p></td>
+<td><p>Value1, Enter a
+value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Geräte Handle
+(z.B. zur Übergabe
+von Geräten an
+Funktionen)</p></td>
+<td><p>$$Nemesys_M_1
+or
+$$Nemesys
+_M_1_ForceSensor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array von Zahlen</p></td>
+<td><p>[3, 7, 8.5, 12,
+23.5]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array von Texten</p></td>
+<td><p>[User1, User2,
+User3, User4]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Array von Geräte
+Handles</p></td>
+<td><p>[$$Nemesys_M_1,
+$$Nemesys_M_2]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Ergebnis einer
+Berechnung</p></td>
+<td><p>25 +
+$TargetPositionX</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/javascript_logo1.svg"><img alt="image34" src="../_images/javascript_logo1.svg" width="40" /></a></p></td>
+<td><p>JavaScript</p></td>
+<td><p>Gelesene Geräte-
+eigenschaften /
+Prozessdaten</p></td>
+<td><p>$$Nemesy
+s_M_1.DosedVolume</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="berechnung-von-werten">
+<h4>Berechnung von Werten<a class="headerlink" href="#berechnung-von-werten" title="Link to this heading"></a></h4>
+<p>Wenn Sie für eine Variable den Typ <em>JavaScript Expression</em> wählen,
+können Sie im Feld <span class="guilabel">Value</span> einen Ausdruck eingeben, der dann zur
+Laufzeit berechnet wird. In diesem Ausdruck können Sie auch auf andere
+Variablen zugreifen und deren Werte in die Berechnung einbinden.Der
+Zugriff auf Scriptvariablen ist über den Variablennamen, der mit einem
+Dollarzeichen beginnt möglich.</p>
+<img alt="Eingabe von Berechnungen" src="../_images/10000201000001F4000000F212FF4BFC515C9AB5.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Bei der Eingabe von Berechnungen mit
+Variablen unterstützt Sie die Autovervollständigung bei
+der Auswahl von Variablen, die bereits erstellt wurden.</p>
+</div>
+<p>Sie können in einen JavasScript Ausdruck auch direkt die Eigenschaften /
+Prozessdaten eines Gerätes lesen und in eine Berechnung einbinden. Im
+folgenden Beispiel wird der Variable <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code> <span class="guinum">❶</span> berechnet als ein
+zwanzigstel der Geräteeigenschaft <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.MaxFlow</span></code> <span class="guinum">❷</span>.
+Geräteeigenschaften (Device Properties) können sie einfach über das
+Kontextmenü (<em>Insert device property</em>) <span class="guinum">❸</span> hinzufügen.</p>
+<img alt="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" src="../_images/10000201000001E7000000D09DED5F410BD67FC9.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Klicken Sie mit der rechten Maustaste in das
+Eingabefeld und wählen Sie dann aus dem Kontextmenü den
+Punkt <em>Insert device property</em> um in der Berechnung
+direkt auf die Prozessdaten von Geräten zuzugreifen.</p>
+</div>
+<p>Über das Kontextmenü können Sie auch Gerätereferenzen (Device
+References) in den JavaScript Code einfügen. Damit ist es möglich,
+Gerätereferenzen (z.B. <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code>) oder Arrays mit
+Gerätereferenzen (z.B. <code class="code docutils literal notranslate"><span class="pre">[$$Nemesys_M_1,</span> <span class="pre">$$Nemesys_M_2,</span> <span class="pre">$$Nemesys_M_3]</span></code>)
+in Variablen speichern. Im folgenden Beispiel wird
+eine Referenz des Drucksensors <code class="code docutils literal notranslate"><span class="pre">$$QmixP1_Pressure1</span></code>  in der
+Variable <code class="code docutils literal notranslate"><span class="pre">$PressureSensor</span></code> gespeichert.</p>
+<img alt="../_images/10000201000001C2000000CAB0BD6169AA4D32FD.png" src="../_images/10000201000001C2000000CAB0BD6169AA4D32FD.png" />
+<p>Die Bezeichner für Gerätereferenzen beginnen wie
+<a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#device-properties-prozessdaten"><span class="std std-ref">Device Properties</span></a>
+mit zwei Dollarzeichen, bestehen aber nur aus dem
+Gerätenamen ohne zusätzliche Geräteeigenschaft.</p>
+</section>
+<section id="operatoren">
+<h4>Operatoren<a class="headerlink" href="#operatoren" title="Link to this heading"></a></h4>
+<p>Folgende Operatoren stehen für Berechnungen zur Verfügung:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Arithmetische Operatoren</p></th>
+<th class="head"><p>Beispiel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Addiert zwei Werte</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">+</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Subtrahiert einen Wert von einem
+anderen</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">-</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multipliziert zwei Werte</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Dividiert zwei Werte</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">/</span> <span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>%</p></td>
+<td><p>Dividiert zwei Werte und gibt den
+Rest zurück</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">%</span> <span class="pre">5</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Logische Operatoren</p></th>
+<th class="head"><p>Beispiel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>Prüft, ob die Werte gleich sind</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1</span> <span class="pre">==</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>Prüft, ob die Werte ungleich sind</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">!=</span> <span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>Prüft, ob der erste Wert größer ist
+als der zweite.</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">7</span> <span class="pre">&gt;</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;</p></td>
+<td><p>Prüft, ob der erste Wert kleiner ist
+als der zweite.</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">$a</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>≥</p></td>
+<td><p>Prüft, ob der erste Wert größer oder
+gleich dem zweiten ist.</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$b</span> <span class="pre">≥</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>≤</p></td>
+<td><p>Prüft, ob der erste Wert kleiner
+oder gleich dem zweiten ist</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">≤</span> <span class="pre">$b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&amp;&amp;</p></td>
+<td><p>Verknüpft zwei Aussagen durch
+logisches AND (und)</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">true</span> <span class="pre">&amp;&amp;</span> <span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>||</p></td>
+<td><p>Verknüpft zwei Werte durch logisches
+OR (oder)</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">||</span> <span class="pre">(b</span> <span class="pre">&lt;</span> <span class="pre">5)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>!</p></td>
+<td><p>Verknüpft einen Wert mit logischem
+NOT (nicht)</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">!true</span> <span class="pre">==</span> <span class="pre">false</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Text Operatoren</p></th>
+<th class="head"><p>Beispiel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Fügt zwei Texte zusammen</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">text</span> <span class="pre">+</span> <span class="pre">$a</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operatorenrangfolge">
+<h4>Operatorenrangfolge<a class="headerlink" href="#operatorenrangfolge" title="Link to this heading"></a></h4>
+<p>Unter den Operatoren gibt es eine festgelegte Rangordnung. Wenn Sie
+komplexe Rechenoperationen durchführen oder mehrere Bedingungen
+miteinander verknüpfen, gilt bei der internen Auflösung solcher
+komplexen Ausdrücke die folgende Rangordnung:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rangfolge</p></th>
+<th class="head"><p>Operatoren</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>||</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>&amp;&amp;</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>== !=</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>&lt; ≤ &gt; ≥</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>+ -</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>\ / %</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>!</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>()</p></td>
+</tr>
+</tbody>
+</table>
+<p>Mit Hilfe von Klammern, die absichtlich die unterste Rangstufe in der
+Prioritätshierarchie darstellen, können Sie die Rangfolge bei den
+Operatoren beeinflussen und Ausdrücke so bewerten, wie Sie es wünschen.</p>
+</section>
+<section id="beispiele">
+<h4>Beispiele<a class="headerlink" href="#beispiele" title="Link to this heading"></a></h4>
+<p>Nachfolgend finden Sie einige Beispiele zur Berechnung von Variablen und
+für unterschiedliche JavaScript Ausdrücke:</p>
+<section id="beispiel-1">
+<h5>Beispiel 1<a class="headerlink" href="#beispiel-1" title="Link to this heading"></a></h5>
+<p>Sie möchten die Werte zweier Variablen <em>a</em> und <em>b</em> miteinander
+addieren und das Ergebnis in einer dritten Variable <em>c</em> speichern:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$c</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$a</span> <span class="pre">+</span> <span class="pre">$b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-2">
+<h5>Beispiel 2<a class="headerlink" href="#beispiel-2" title="Link to this heading"></a></h5>
+<p>Sie möchten eine Variable <em>Speed</em> mit 5 multiplizieren und den Wert
+in der gleichen Variable wieder speichern:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Speed</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$Speed</span> <span class="pre">*</span> <span class="pre">5</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-3">
+<h5>Beispiel 3<a class="headerlink" href="#beispiel-3" title="Link to this heading"></a></h5>
+<p>Sie möchten die beiden booleschen Variablen <em>SwitchedOn</em> und
+<em>CheckOk</em> miteinander durch UND Verknüpfen und in der Variable
+<em>TurnOn</em> speichern:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$TurnOn</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$SwitchedOn</span> <span class="pre">&amp;&amp;</span> <span class="pre">$CheckOk</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-4">
+<h5>Beispiel 4<a class="headerlink" href="#beispiel-4" title="Link to this heading"></a></h5>
+<p>Sie möchten der Variablen <em>$Flow</em> die aktuelle Flussrate der Pumpe
+<em>Nemesys_M_1</em> zuweisen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Flow</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1.ActualFlow</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-5">
+<h5>Beispiel 5<a class="headerlink" href="#beispiel-5" title="Link to this heading"></a></h5>
+<p>Sie möchten ein Array erstellen mit 4 Flussraten und dieses der
+Variablen <em>$TargetFlows</em> zuweisen.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$TargetFlows</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">[0.12,</span> <span class="pre">0.05,</span> <span class="pre">0.2,</span> <span class="pre">0.21]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-6">
+<h5>Beispiel 6<a class="headerlink" href="#beispiel-6" title="Link to this heading"></a></h5>
+<p>Die Variable <em>$TargetFlows</em> enthält ein Array mit 4 numerischen Werten.
+Sie möchten den dritten Wert im Array der Variable
+<em>$NextFlow</em> zuweisen. Der Index für den Array Zugriff wird von 0
+beginnend nummeriert. D.h. zum Zugriff auf das dritte Element ist der
+Index 2.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$NextFlow</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$TargetFlows[2]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-7">
+<h5>Beispiel 7<a class="headerlink" href="#beispiel-7" title="Link to this heading"></a></h5>
+<p>Sie möchten in der Variable <em>$Pressures</em> ein Array mit den beiden
+aktuellen Werten der Drucksensoren <em>QmixP_1_Pressure1</em> und
+<em>QmixP_1_Pressure2</em> speichern.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$Pressures</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">[$$QmixP_1_Pressure1.ActualValue,</span> <span class="pre">$$QmixP_1_Pressure2.ActualValue]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beispiel-8">
+<h5>Beispiel 8<a class="headerlink" href="#beispiel-8" title="Link to this heading"></a></h5>
+<p>Sie möchten in der Variable <em>$ProcessPump</em> eine Gerätereferenz (Device
+Reference) der <em>Nemesys_M_1</em> Pumpe speichern um diesen später an eine
+Funktion übergeben zu können.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name:</p></td>
+<td><p><em>$ProcessPump</em></p></td>
+</tr>
+<tr class="row-even"><td><p>JavaScript:</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">$$Nemesys_M_1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="set-variable">
+<span id="wert-variable-setzen"></span><span id="id3"></span><h3><span class="section-number">5.1.6. </span>Set Variable<a class="headerlink" href="#set-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000132400003872000038722A8DDCED1A890F1C.svg"><img alt="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" class="align-left" src="../_images/1000132400003872000038722A8DDCED1A890F1C.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie einer bereits vorhandenen
+Variable einen neuen Wert zuweisen. Die Konfiguration der Variablen
+entspricht der Funktion <a class="reference internal" href="#variable-erzeugen"><span class="std std-ref">Variable erzeugen</span></a>.</p>
+<figure class="align-default">
+<img alt="Eingabe Variablenname mit Autovervollständigung" src="../_images/10000201000001AB00000115B0297DFCE8D1556F.png" />
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Bei der Eingabe des Namens unterstützt Sie
+die Autovervollständigung mit einer Auswahl von
+Variablen die bereits erstellt wurden.</p>
+</div>
+</section>
+<section id="variable-declaration-sequence">
+<span id="eigenschaftsvariable-erzeugen"></span><h3><span class="section-number">5.1.7. </span>Variable Declaration Sequence<a class="headerlink" href="#variable-declaration-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg"><img alt="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" class="align-left" src="../_images/100015BD00003872000038722A0A6332DCBD75A0.svg" width="60" /></a>
+<p>Mit der Variable Declaration Sequence können Sie Variablen,
+die Sie mit <a class="reference internal" href="#variable-erzeugen"><span class="std std-ref">Variable erzeugen</span></a> oder <a class="reference internal" href="#eigenschaftsvariable-erzeugen"><span class="std std-ref">Eigenschaftsvariable erzeugen</span></a>
+deklarieren zusammenfassen. Damit können Sie die Übersichtlichkeit Ihres
+Scriptes erhöhen. Statt vieler einzelner Variablen ist nur noch die
+Variablendeklarationssequenz sichtbar und erst beim Aufklappen dieser
+Sequenz, sehen Sie die deklarierten Variablen.</p>
+<p>Alle Variablen sind auf der Ebene sichtbar, in der sich die
+Deklarationssequenz befindet. D.h. die Variablen innerhalb der Sequenz
+werden so deklariert, als würden Sie sich auf der Ebene der
+Deklarationssequenz befinden.</p>
+<img alt="Beispielsequenz mit Variablen" src="../_images/100002010000019E000000C0724835B0FD04E921.png" />
+<p>Mit der Sequenz
+können Sie auch Variablen die logisch zusammengehören gruppieren und es
+so für den Anwender einfacher machen, bestimmte Variablen zu finden.</p>
+</section>
+<section id="user-input">
+<h3><span class="section-number">5.1.8. </span>User Input<a class="headerlink" href="#user-input" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001DE9000038720000387289754B44B2610975.svg"><img alt="../_images/10001DE9000038720000387289754B44B2610975.svg" class="align-left" src="../_images/10001DE9000038720000387289754B44B2610975.svg" width="60" /></a>
+<p>Diese Funktion ermöglicht das Einlesen eines einzelnen
+Eingabewertes (Zahl oder Text) in eine bestehende Variable. Im
+Konfigurationsbereich (siehe Abbildung unten) können Sie folgende
+Parameter konfigurieren:</p>
+<img alt="../_images/user_input_config.png" src="../_images/user_input_config.png" />
+<ol class="arabic guinums">
+<li><p><strong>Label Text</strong> - Hier geben Sie einen Text an, der dem Anwender bei der
+Ausführung der Funktion über dem Eingabefeld als Beschriftung und erklärender
+Text angezeigt wird.</p></li>
+<li><p><strong>Variable</strong> - In diesem Feld legen Sie die Variable fest, die den vom
+Anwender eingegebenen Wert speichern soll. Gleichzeitig wird Wert der Variable
+auch als Ausgangswert bei der Anzeige des Eingabedialogs verwendet. D.h.,
+wenn Sie die Variable z.B. vorher mit dem Wert 5 initialisieren, wird
+bei der Anzeige des Eingabedialogs der Wert 5 als Standardwert angezeigt.</p></li>
+<li><p><strong>Type Hint</strong> - Den Eingabetyp, Zahl oder Text, legen Sie hier fest. Je
+nach gewähltem Wert, akzeptiert der Eingabedialog nur bestimmte
+Werte.</p></li>
+<li><p><strong>Allow Cancel</strong> - Ist dieses Auswahlfeld aktiv, dann enthält der
+angezeigte Dialog eine <span class="guilabel">Cancel</span> Schaltfläche, die den Abbruch der
+Eingabe ermöglicht.</p></li>
+<li><p><strong>Rich Text</strong> - Aktivieren Sie diese Option, um Ihren Text mit Fettdruck,
+Kursivschrift, Farben und mehr zu formatieren.</p></li>
+<li><p><strong>Test Input Dialog</strong> - Durch Anklicken dieser Schaltfläche können Sie
+den Eingabedialog testweise anzeigen, um zu prüfen, wie der Anwender
+den Eingabedialog später bei der Ausführung des Scriptes sehen wird
+(siehe Abbildung unten).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Input Dialog</p></td>
+<td><p>Input Dialog mit Cancel Schaltfläche</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="input_dialog" src="../_images/input_dialog.png" /></p></td>
+<td><p><img alt="input_dialog_cancel" src="../_images/input_dialog_cancel.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>Wird während der Scriptausführung die Eingabe mit <span class="guilabel">OK</span> bestätigt,
+dann enthält die Variable den Wert, der vom Anwender eingegeben wurde.
+Wir der Dialog mit <span class="guilabel">Cancel</span> abgebrochen, dann enthält die
+Variable einen undefinierten Wert. In JavaScript, z.B. in einer
+<a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a>, können Sie dann wie folgt
+testen, ob der Wert undefiniert ist:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$InputVariable</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span>
+</pre></div>
+</div>
+<p>Im folgenden Beispielscript wird getestet, ob der Anwender den Eingabedialog
+abgebrochen hat. In diesem Fall wird eine entsprechende Meldung in den
+Event-Log geschrieben:</p>
+<img alt="../_images/input_dialog_canceled.png" src="../_images/input_dialog_canceled.png" />
+<section id="id4">
+<h4>Rich Text Unterstützung<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<p>Wenn Sie die <span class="guilabel">Rich Text</span> Option aktivieren, erhalten Sie
+umfassende Möglichkeiten Ihren Label-Text zu formatieren, Listen
+zu gestalten oder Bilder und Hyperlinks einzufügen. Ist die Option aktiviert,
+wird Ihnen eine Werkzeugleiste ähnlich wie in einem Textverarbeitungsprogramm
+eingeblendet:</p>
+<img alt="../_images/user_input_rich_text.png" src="../_images/user_input_rich_text.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Rich Text benötigt wesentlich mehr Speicherplatz als normaler Text und kann
+die Ladezeiten von Skriptdateien verlängern. Schalten Sie diese Option daher
+nur dann ein, wenn Sie sie wirklich benötigen!</p>
+</div>
+</section>
+</section>
+<section id="script-function-call">
+<span id="id5"></span><h3><span class="section-number">5.1.9. </span>Script Function Call<a class="headerlink" href="#script-function-call" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002495000034EB000034EB5801BA1011E76C101.svg"><img alt="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" class="align-left" src="../_images/10002495000034EB000034EB5801BA1011E76C101.svg" width="60" /></a>
+<p>Script Function Calls ermöglichen Ihnen die Einbindung
+eigener Scripte als Funktionen. D.h. so wie Sie in anderen
+Programmiersprachen Funktionen als wiederverwendbare Bausteine
+erstellen, können Sie auch im Scriptsystem eigene Funktionen in Form
+externer Scripte aufrufen.</p>
+<img alt="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" src="../_images/10000201000001E1000001A9C4192918D20FBB5B.png" />
+<p>Externe Scriptfunktionen können über 0 - 10 Eingabe Parameter (Input
+Parameters) <span class="guinum">❶</span> verfügen und über 0 - 10 Rückgabewerte (Return Values)
+<span class="guinum">❷</span>. Damit können Sie Werte an das Script übergeben (z.B. numerische
+Werte oder Variablen) und Rückgabewerte des Scriptes lesen und in
+Scriptvariablen speichern. Unter <span class="guilabel">Script File</span> <span class="guinum">❸</span> wird Ihnen der Pfad
+zur externen Scriptdatei angezeigt, die beim Aufruf ausgeführt wird.</p>
+<p>Im Abschnitt <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#eigene-scriptfunktionen-programmieren"><span class="std std-ref">Eigene Scriptfunktionen programmieren</span></a>
+finden Sie eine ausführliche Anleitung zur Erstellung eigener
+Scriptfunktionen.</p>
+</section>
+</section>
+<section id="funktionssequenzen-function-sequences">
+<h2><span class="section-number">5.2. </span>Funktionssequenzen - <em>Function Sequences</em><a class="headerlink" href="#funktionssequenzen-function-sequences" title="Link to this heading"></a></h2>
+<section id="ubersicht-funktionssequenzen">
+<h3><span class="section-number">5.2.1. </span>Übersicht Funktionssequenzen<a class="headerlink" href="#ubersicht-funktionssequenzen" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000100000000C3B3C3827EFC5DBC99.png" src="../_images/1000020100000100000000C3B3C3827EFC5DBC99.png" />
+<p>Die Funktionskategorie <em>Function Sequences</em> enthält
+verschiedene Arten von Funktionssequenzen. Funktionssequenzen sind
+Scriptfunktionen, die eine Reihe (Sequenz) von Funktionen aufnehmen
+können. Wird eine Funktionssequenz ausgeführt, bedeutet das, dass alle
+Scriptfunktionen die sich in dieser Sequenz befinden ausgeführt werden.</p>
+</section>
+<section id="counting-loop">
+<span id="zahlschleife"></span><h3><span class="section-number">5.2.2. </span>Counting Loop<a class="headerlink" href="#counting-loop" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg"><img alt="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" class="align-left" src="../_images/100013490000388C0000388C4A5D96BDCF59F705.svg" width="60" /></a>
+<p>Diese Funktion ermöglicht die mehrfache Ausführung von
+Funktionen innerhalb der Schleife. Die Anzahl der Wiederholungen ist
+dabei über die Anzahl der Schleifenzyklen (<span class="guilabel">Loop Cycles</span>) im
+Konfigurationsbereich festlegbar.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Die Anzahl der Schleifendurchläufe kann entweder explizit über eine
+Zahl oder implizit über den Name einer Variablen definiert werden
+(Abbildung unten, <span class="guinum">❶</span>), die die Anzahl der Durchläufe enthält.</p>
+<img alt="../_images/10000201000001FA0000007BEEA293AE47742C49.png" src="../_images/10000201000001FA0000007BEEA293AE47742C49.png" />
+<p>Zusätzlich können Sie einen Namen für die Zählvariable (<em>Counter
+Variable</em>) der Schleife vergeben (Abbildung oben, <span class="guinum">❷</span>). Innerhalb der
+Schleife können dann Funktionen, die Variablen unterstützen, über diesen
+Namen auf den aktuellen Wert der Zählvariable zugreifen und diesen,
+z.B., für weitere Berechnung verwenden.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die Zählvariable einer Zählschleife
+beginnt stets bei dem Wert 0 zu zählen. D.h. bei einer
+Zyklenzahl von 10 Schleifenzyklen, enthält die
+Zählvariable in den einzelnen Durchläufen aufsteigende
+Werte von 0 bis 9.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Sie sollten stets eine <a class="reference internal" href="#verzogerungsfunktion"><span class="std std-ref">Verzögerungsfunktion</span></a> in
+eine Schleife einfügen. Ansonsten kann die Ausführung
+zu einer 100% Auslastung des Prozessors und damit zur
+Blockierung der grafischen Oberfläche führen. Eine
+kleine Verzögerungszeit von 10ms – 100ms sind bereits
+ausreichend.</p>
+</div>
+<p>Mit Hilfe der Zählvariable (<span class="guilabel">Counter Variable</span>) können Sie die Schleife auf vorzeitig beenden
+(abbrechen). Wenn Sie innerhalb der Schleife mit Hilfe der Funktion
+<a class="reference internal" href="#wert-variable-setzen"><span class="std std-ref">Wert einer Variable setzen</span></a>
+den Wert der Zählvariable auf einen Wert &gt;= der Anzahl von
+Schleifenzyklen setzen (<span class="guilabel">Loop Cycles</span>), wird die Schleife beim nächsten
+Durchlauf beendet.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Sie können die Zählschleife vorzeitig durch das Ändern der Zählvariable beenden.</p>
+</div>
+</section>
+<section id="conditional-loop">
+<h3><span class="section-number">5.2.3. </span>Conditional Loop<a class="headerlink" href="#conditional-loop" title="Link to this heading"></a></h3>
+<section id="einfuhrung">
+<h4>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h4>
+<a class="reference internal image-reference" href="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg"><img alt="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" class="align-left" src="../_images/100016C80000388C0000388C2CFA711217EA5B06.svg" width="60" /></a>
+<p>Diese Schleifenfunktion dient zur mehrfachen Ausführung von
+Funktionen innerhalb der Schleife, solange die Bedingung im Kopf der
+Schleife wahr ist. D.h. die Abbruchbedingung im Schleifenkopf wird vor
+jedem Schleifendurchlauf geprüft und die Schleifenausführung wird
+beendet oder übersprungen, wenn die Abbruchbedingung nicht wahr ist.</p>
+<p>In Textform lässt sich die Funktionsauführung wie folgt beschreiben:</p>
+<p class="centered">
+<strong>„Wiederhole die Ausführung der Funktionen innerhalb der Schleife,
+solange die Schleifenbedingung wahr ist.“</strong></p><p>Es gibt zwei Möglichkeiten, die Parameter für die Schleifenprüfung festzulegen: den einfachen Modus
+und den JavaScript-Ausdruck.</p>
+</section>
+<section id="konfiguration-einfacher-modus">
+<h4>Konfiguration - einfacher Modus<a class="headerlink" href="#konfiguration-einfacher-modus" title="Link to this heading"></a></h4>
+<p>Im Konfigurationsbereich können Sie im einfachen Modus die
+Schleifenbedingung bequem über die vorhandenen Bedienelemente eingeben.
+Folgende Parameter können eingegeben werden:</p>
+<img alt="Konfiguration Conditional Loop - Einfacher Modus" src="../_images/10000201000001FF000001568EF29AE39EE9077E.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>JavaScript Expression</strong> – diese Schaltfläche dient zum Umschalten
+zwischen dem einfachen und dem <a class="reference internal" href="#erweiterter-eingabemodus"><span class="std std-ref">erweiterten Eingabemodus</span></a>.</p></li>
+<li><p><strong>Name</strong> – geben Sie hier den Namen der Variablen ein, deren
+Wert in der Bedingung verglichen oder geprüft werden soll. Die
+Variable steht auf der linken Seite der Vergleichsbedingung und muss
+mit einem Dollar-Zeichen <code class="code docutils literal notranslate"><span class="pre">$</span></code> (sowie <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>) beginnen.</p></li>
+<li><p><strong>Type</strong> – hier können Sie den Typ der Variablen wählen und
+damit die Bedienelemente im Bereich <em>Condition</em> umschalten.</p></li>
+<li><p><strong>Comparison operator</strong> – mit der Auswahlbox können Sie bequem den
+Vergleichsoperator auswählen.</p></li>
+<li><p><strong>Comparison condition</strong> – geben Sie hier einen numerischen Wert oder
+eine Variable ein, mit der die Variable aus <span class="guinum">❷</span> verglichen werden soll.</p></li>
+</ol>
+<section id="beispielkonfiguration-einfacher-modus">
+<h5>Beispielkonfiguration (einfacher Modus)<a class="headerlink" href="#beispielkonfiguration-einfacher-modus" title="Link to this heading"></a></h5>
+<p>Im folgenden Beispiel wird in der Schleifenbedingung geprüft, ob die
+Variable <code class="code docutils literal notranslate"><span class="pre">$Position</span></code> kleiner oder gleich <strong>25.000,31</strong> ist.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variablenname <span class="guinum">❷</span></p></th>
+<th class="head"><p>Typ <span class="guinum">❸</span></p></th>
+<th class="head"><p>Operator <span class="guinum">❹</span></p></th>
+<th class="head"><p>Bedingung <span class="guinum">❺</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>$Position</em></p></td>
+<td><p><em>Number</em></p></td>
+<td><p><em>≤</em></p></td>
+<td><p><em>25.000,31</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>Im Scripteditor wird der eingegebene Ausdruck komplett angezeigt:</p>
+<img alt="Conditional Loop Beispiel" src="../_images/100002010000016F000000B71ED1E13FA12FB8D2.png" />
+<p>Dieser Ausdruck bewirkt,
+dass die Schleife solange ausgeführt wird, wie der Wert der Variablen
+<code class="code docutils literal notranslate"><span class="pre">$Position</span></code> kleiner oder gleich ist <em>25.000,31.</em></p>
+</section>
+</section>
+<section id="konfiguration-erweiterter-modus">
+<span id="erweiterter-eingabemodus"></span><h4>Konfiguration - erweiterter Modus<a class="headerlink" href="#konfiguration-erweiterter-modus" title="Link to this heading"></a></h4>
+<p>Während der einfache Modus dem Benutzer eine grafische Benutzeroberfläche bietet,
+ermöglicht der JavaScript-Modus das direkte Einfügen eines JavaScript-Ausdrucks
+mit Variablennamen sowie mathematischen und logischen Ausdrücken.</p>
+<img alt="Konfiguration Conditional Loop - Erweiterter Modus" src="../_images/1000020100000204000000F1DD2E88C4898B65B8.png" />
+<p>Im erweiterten Modus wird ein JavaScript Editor angezeigt mit
+Syntaxhervorhebung und Zeilennummern. Hier können Sie die
+Schleifenbedingung als JavaScript Ausdruck eingeben. D.h. Sie können,
+wie in der Abbildung oben, auch komplexere Rechenoperationen in der
+Prüfbedingung durchführen oder mehrere Variablen in die Prüfbedingung
+einbinden. Auch JavaScript Funktionen, wie hier z.B.
+<code class="code docutils literal notranslate"><span class="pre">Math.round()</span></code> können verwendet werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Sie sollten stets eine <a class="reference internal" href="#verzogerungsfunktion"><span class="std std-ref">Verzögerungsfunktion</span></a>
+in eine Schleife einfügen. Ansonsten kann die
+Ausführung zu einer 100% Auslastung des Prozessors und
+damit zur Blockierung der grafischen Oberfläche führen.
+Eine kleine Verzögerungszeit von 10ms - 100ms sind
+bereits ausreichend.</p>
+</div>
+</section>
+</section>
+<section id="function-sequence">
+<span id="funktionssequenz"></span><h3><span class="section-number">5.2.4. </span>Function Sequence<a class="headerlink" href="#function-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000944000038720000387225245FA0499799FC1.svg"><img alt="../_images/10000944000038720000387225245FA0499799FC1.svg" class="align-left" src="../_images/10000944000038720000387225245FA0499799FC1.svg" width="60" /></a>
+<p>Die <em>Funktionssequenz</em> dient zur Gruppierung von Funktionen.
+Dies erleichtert die Navigation im Funktionsbaum, da die
+Funktionssequenz ggf. zugeklappt werden kann. Weiterhin erleichtert die
+Sequenz auch das Kopieren von Funktionsabläufen, die aus mehreren
+Funktionen bestehen. Wenn Sie, z.B., mehrere Funktionen, die
+nacheinander ausgeführt werden, kopieren möchten, um sie an
+verschiedenen Stellen im Programm erneut zu verwenden, dann verschieben
+Sie diese in eine leere Funktionssequenz. Anschließend können Sie bequem die
+gesamte Sequenz verschieben oder kopieren.</p>
+<img alt="Konfiguration Funktionssequenz" src="../_images/10000201000001C800000183A3E022ED20FA32CC.png" />
+<section id="funktionssequenz-benennen">
+<h4>Funktionssequenz benennen<a class="headerlink" href="#funktionssequenz-benennen" title="Link to this heading"></a></h4>
+<p>Es ist möglich, einer Funktionssequenz einen neuen und damit eindeutigen
+Namen zu geben, der dann im Funktionsbaum angezeigt wird. Dies
+erleichtert die Navigation, wenn mehrere Funktionssequenzen vorhanden
+sind. Klicken Sie dafür einfach doppelt auf den Funktionsnamen <span class="guilabel">Caption Field</span>
+(Abbildung oben <span class="guinum">❶</span>).</p>
+</section>
+<section id="funktionsparameter-und-ruckgabewerte-hinzufugen">
+<h4>Funktionsparameter und Rückgabewerte hinzufügen<a class="headerlink" href="#funktionsparameter-und-ruckgabewerte-hinzufugen" title="Link to this heading"></a></h4>
+<p>Sie können aus der Funktionssequenz heraus auf Variablen zugreifen, die
+außerhalb der Funktionssequenz definiert sind. Alternativ können Sie
+aber auch Funktionsparameter und Rückgabewerte definieren.
+<em>Funktionsparameter</em> sind Werte, die beim Aufruf der Funktion an diese
+übergeben werden. <em>Rückgabewerte</em> sind Werte (z.B. Ergebnisse von
+Berechnungen), die von der Funktion an das aufrufende Script
+zurückgegeben werden. Für jede Funktion können bis zu 10
+Funktionsparameter und bis zu 10 Rückgabewerte definiert werden. Die
+Funktionen in der Sequenz greifen dann nur noch auf die
+Funktionsparameter zu und nicht mehr auf die externen Variablen. Das
+verbessert die Kapselung und macht die Funktion unabhängiger von äußeren
+Variablen und damit einfacher wartbar.</p>
+<p>Sie können durch Anklicken der <span class="guilabel">Add</span> Schaltflächen Funktionsparameter <span class="guinum">❷</span>
+oder Rückgabewerte <span class="guinum">❸</span> hinzufügen. Vergeben Sie aussagekräftige
+Parameternamen, indem Sie die Parameternamen über den Eingabefeldern
+anklicken (Abbildung unten):</p>
+<img alt="../_images/10000201000001570000008695AB6CE95EA00D6D.png" src="../_images/10000201000001570000008695AB6CE95EA00D6D.png" />
+</section>
+<section id="funktionssequenz-laden">
+<h4>Funktionssequenz laden<a class="headerlink" href="#funktionssequenz-laden" title="Link to this heading"></a></h4>
+<p>Die Funktionssequenz ermöglicht es außerdem, gespeicherte
+Funktionsabläufe erneut zu laden. Damit können Sie spezielle Abläufe in
+verschiedenen Skripten direkt wieder verwenden. Klicken Sie dafür auf
+die Schaltfläche <em>Load from script file</em> (Abbildung oben: <span class="guinum">❹</span>). Die
+Scripte werden in das aktuelle Script geladen. D.h. Sie können
+Änderungen an der geladenen Funktionssequenz durchführen, ohne dass das
+externe Script beeinflusst wird.</p>
+</section>
+<section id="auswahl-in-funktionssequenz-umwandeln">
+<h4>Auswahl in Funktionssequenz umwandeln<a class="headerlink" href="#auswahl-in-funktionssequenz-umwandeln" title="Link to this heading"></a></h4>
+<p>Um die Übersichtlichkeit und Lesbarkeit Ihres Scripts zu verbessern,
+können Sie Abfolgen von Funktionen schnell und einfach in
+<em>Funktionssequenzen</em> gruppieren. Wählen Sie dafür einfach eine
+zusammenhängende Reihe von Funktionen aus, und klicken Sie dann im
+Kontextmenü auf den Menüpunkt <em>Convert Selection To Function Sequence.</em></p>
+<img alt="../_images/1000020100000162000000A95990FD078AE74F5D.png" src="../_images/1000020100000162000000A95990FD078AE74F5D.png" />
+<p><em>Die ausgewählten Funktionen werden nun durch eine
+Funktionssequenz ersetzt, welche die ausgewählten Funktionen enthält.</em></p>
+<img alt="../_images/10000201000002AD000000B49490E03AE7CD8CE6.png" src="../_images/10000201000002AD000000B49490E03AE7CD8CE6.png" />
+</section>
+</section>
+<section id="conditional-sequence">
+<h3><span class="section-number">5.2.5. </span>Conditional Sequence<a class="headerlink" href="#conditional-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100010E0000038720000387245E0E2D44AF732BF.svg"><img alt="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" class="align-left" src="../_images/100010E0000038720000387245E0E2D44AF732BF.svg" width="60" /></a>
+<p>Die bedingte Sequenz enthält eine Reihe von Scriptfunktionen,
+die nur ausgeführt wird, wenn die Prüfbedingung im Kopf der bedingten
+Sequenz wahr ist. Ist die Prüfbedingung zum Zeitpunkt der
+Skriptausführung nicht wahr, dann wird die bedingte Sequenz einfach
+übersprungen. In Textform lässt sich die Funktionsauführung wie folgt
+beschreiben:</p>
+<p class="centered">
+<strong>„Wenn die Prüfbedingung wahr ist, dann führe die Funktionen innerhalb
+der Sequenz aus.“</strong></p><p>Die Konfiguration der bedingten Sequenz ist identisch zur Konfiguration
+des <a class="reference internal" href="#conditional-loop">Conditional Loop</a>.</p>
+</section>
+<section id="parallel-sequence">
+<span id="parallele-sequenz"></span><h3><span class="section-number">5.2.6. </span>Parallel Sequence<a class="headerlink" href="#parallel-sequence" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000F0500003872000038726C61F7339CE41618.svg"><img alt="../_images/10000F0500003872000038726C61F7339CE41618.svg" class="align-left" src="../_images/10000F0500003872000038726C61F7339CE41618.svg" width="60" /></a>
+<p>Diese Skriptfunktion ermöglicht die parallele Ausführung von
+Funktionen oder Funktionssequenzen. Die Konfiguration dieser
+Skriptfunktion entspricht der Konfiguration einer Funktionssequenz
+(<em>Function Sequence</em>). Im Gegensatz zur normalen Funktionssequenz werden
+die einzelnen Funktionen aber nicht sequenziell sondern parallel
+ausgeführt. D.h., bei der Ausführung dieser Funktion werden alle
+unmittelbar untergeordneten Funktionen gleichzeitig gestartet.</p>
+<p>Wenn Sie komplexe Funktionsabläufe parallel ausführen möchten, sollten
+Sie diese jeweils in einer Funktionssequenz zusammenfassen. Die folgende
+Abbildung zeigt Ihnen eine parallele Sequenz, in der der drei einzelne
+Prozesse (Funktionssequenzen) parallel ablaufen:</p>
+<img alt="../_images/1000020100000183000000C4A35D59BF937B06FE.png" src="../_images/1000020100000183000000C4A35D59BF937B06FE.png" />
+<p>Die Sequenz
+wird beendet, wenn alle parallel ausgeführten Funktionen der Sequenz
+beendet wurden. Dadurch eignet sich die Funktion zur Ausführung von
+parallelen Abläufen, bei denen bis zur Beendigung des längsten Ablaufes
+gewartet werden soll.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Parallele Sequenzen erhöhen die Komplexität
+und sind schwierig zu debuggen, d.h. das Finden von
+Fehlern in parallelen Sequenzen kann unter Umständen
+schwierig sein.</p>
+</div>
+</section>
+<section id="break">
+<h3><span class="section-number">5.2.7. </span>Break<a class="headerlink" href="#break" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000CF40000387200003872240B44CEBEA58C98.svg"><img alt="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" class="align-left" src="../_images/10000CF40000387200003872240B44CEBEA58C98.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie die die Funktionssequenz, die
+diese Funktion enthält, abbrechen. Dies funktioniert mit allen
+Funktionssequenzen aus der <a class="reference internal" href="#funktionssequenz"><span class="std std-ref">Funktionssequenz</span></a>-Kategorie und mit dem
+Script selbst.</p>
+<p>Mit dem Parameter <span class="guilabel">Termination Depth</span> können Sie einstellen, bis zu
+welcher Ebene die umgebende Funktionssequenz abgebrochen wird. Beim
+Standartwert 0 wird lediglich die Sequenz abgebrochen, welche die
+<em>Break</em> Funktion enthält. Bei dem Wert 1 wird zusätzlich auch die
+Sequenz, die eine weitere Ebene darüber liegt abgebrochen usw.</p>
+<p>Möchten Sie z.B. eine Funktionssequenz <span class="guinum">❶</span> bei einer bestimmten Bedingung
+abbrechen, dann fügen Sie in die Funktionssequenz eine <a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a> <span class="guinum">❷</span>
+zum Prüfen der Abbruchbedingung ein und in diese
+<a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a> eine <em>Break</em> Funktion <span class="guinum">❸</span> mit der <em>Termination
+Depth</em> <span class="guinum">❷</span>. Die Break Funktion <span class="guinum">❸</span> wird dann im Fall dass die Bedingung war
+ist die <em>Conditional Sequence</em> <span class="guinum">❷</span> und die darüber liegende
+Funktionssequenz <span class="guinum">❶</span> abbrechen.</p>
+<img alt="../_images/1000020100000175000000A03698480BFF00A770.png" src="../_images/1000020100000175000000A03698480BFF00A770.png" />
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Wenn Sie die <em>Break</em> Funktion verschieben oder kopieren, z.B. eine Ebene nach
+oben oder in ein tiefere Ebene, sollten Sie immer überprüfen, ob die
+<span class="guilabel">Termination Depth</span> angepasst werden muss.</p>
+</div>
+</section>
+<section id="return">
+<span id="error-handling-functions"></span><h3><span class="section-number">5.2.8. </span>Return<a class="headerlink" href="#return" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/return.svg"><img alt="../_images/return.svg" class="align-left" src="../_images/return.svg" width="60" /></a>
+<p>Mit der Return Funktion können Sie sofort aus einem Script bzw. aus
+einem <a class="reference internal" href="#script-function-call"><span class="std std-ref">Script Function Call</span></a> zum Aufrufer zurückkehren. Diese Funktion entspricht
+dem <strong>return</strong> Statement in Sprachen wie JavaScript oder C++.</p>
+</section>
+</section>
+<section id="fehlerbehandlung-error-handling">
+<h2><span class="section-number">5.3. </span>Fehlerbehandlung - <em>Error Handling</em><a class="headerlink" href="#fehlerbehandlung-error-handling" title="Link to this heading"></a></h2>
+<img alt="../_images/error_handling_category.png" src="../_images/error_handling_category.png" />
+<p>Die Kategorie <em>Error Handling</em> enthält Funktionen, die Sie zur Fehlerbehandlung
+in Scripten verwenden können.</p>
+<section id="try-catch-block">
+<span id="try-catch"></span><h3><span class="section-number">5.3.1. </span>Try…Catch Block<a class="headerlink" href="#try-catch-block" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/try_except1.svg"><img alt="../_images/try_except1.svg" class="align-left" src="../_images/try_except1.svg" width="60" /></a>
+<p>Der <em>Try…Catch</em> Block dient dazu, Fehler, die bei der Scriptausführung auftreten
+aufzufangen und zu behandeln. Dies ermöglicht eine ähnliche Fehlerbehandlung
+wie z.B. in <a class="reference external" href="https://www.w3schools.com/js/js_errors.asp">JavaScript</a> oder
+<a class="reference external" href="https://www.w3schools.com/python/python_try_except.asp">Python</a>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Der Try…Catch block besteht aus den folgenden zwei Codeblöcken:</p>
+<ul class="inlineimg simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="../_images/try_block.svg"><img alt="try_block" src="../_images/try_block.svg" width="40" /></a> Try</dt><dd><p>Mit der Try-Anweisung definieren Sie einen Codebock, der während seiner
+Ausführung auf Fehler getestet wird. Hier implementieren Sie Ihre normale
+Funktionslogik wie in jeder anderen Funktionssequenz.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="../_images/except_block2.svg"><img alt="catch_block" src="../_images/except_block2.svg" width="40" /></a> Catch</dt><dd><p>Im Catch Block definieren Sie einen Codeblock, der nur dann ausgeführt wird
+wenn im Try-Block ein Fehler auftritt.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Es funktioniert folgendermaßen:</p>
+<ol class="arabic simple">
+<li><p>Zuerst wird der Code im <strong>Try</strong> Block ausgeführt</p></li>
+<li><p>Wenn keine Fehler aufgetreten sind, wird der <strong>Catch</strong> block ignoriert. Die Ausführung
+erreicht das Ende des <strong>Try</strong> Blocks und wird fortgesetzt mit der nächsten Funktion
+nach dem <strong>Try…Catch</strong> Block, wobei Catch übersprungen wird.</p></li>
+<li><p>Tritt eine Fehler auf, wir die Ausführung des <strong>Try</strong> Blocks sofort unterbrochen
+und zur Ausführung des <strong>Catch</strong> Blocks gesprungen.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/try_catch_flow.png"><img alt="../_images/try_catch_flow.png" src="../_images/try_catch_flow.png" style="width: 500px;" /></a>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Das heißt, ein Fehler im <strong>Try</strong> Block unterbricht nicht das Script, parallele
+Sequenzen laufen weiter und wir haben die Chance den Fehler zu behandeln.</p>
+</div>
+<p>Wird der <strong>Catch</strong> Block ausgeführt, dann stehen in diesem Block die zwei
+Scriptvariablen <code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code> und  <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> zur Verfügung.
+Die <code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code> Variable enthält die Fehlermeldung, die von der
+Scriptfunktion generiert wurde, die den Fehler verursacht hat. Die
+optionale <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> Variable kann eine eindeutige Error Id
+(z.B. <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code>) enthalten, der im Catch Block dazu verwendet werden
+kann, unterschiedliche Fehler unterschiedliche zu behandeln.</p>
+<p>Im Konfigurationsbereich des Try…Catch Blocks können Sie die Einstellung
+<span class="guilabel">Print Error Message To Event Log</span> aktivieren (default) oder
+deaktivieren.</p>
+<img alt="../_images/try_catch_print_error.png" src="../_images/try_catch_print_error.png" />
+<p>Is die Option deaktiviert, wird die Fehlermeldung nicht automatisch im Event-Log
+ausgegeben. D.h., wenn Sie den Fehler im Catch Block behandeln und nicht möchten,
+dass die Anwender Ihres Scripts einen Fehler sehen, können Sie die Fehlerausgabe
+hier deaktivieren. Sie können dann im Catch Block den Fehler weiterhin mit
+einer <a class="reference internal" href="#show-message-function"><span class="std std-ref">Show Message</span></a> Funktion oder einer
+<a class="reference internal" href="#log-message-function"><span class="std std-ref">Log Message</span></a> Funktion und den Zugriff auf
+die <code class="code docutils literal notranslate"><span class="pre">$ErrorMessage</span></code> ausgeben oder eine eigene Fehlermeldung erzeugen.
+Standardmäßig ist die Fehlerausgabe aktiviert und es wird eine Warnmeldung im
+Event-Log generiert.</p>
+<p>Das folgende Script zeigt ein Beispiel für eine Fehlerbehandlung:</p>
+<img alt="../_images/try_catch_example.png" src="../_images/try_catch_example.png" />
+<p>Im <strong>Try</strong> Block ist eine <a class="reference internal" href="#wait-for-device-property-func"><span class="std std-ref">Wait For Device Property</span></a>
+Funktion enthalten <span class="guinum">❶</span>. Für diese Funktion wurde im Konfigurationsbereich der Funktion
+ein Timeout festgelegt. Das bewirkt, dass die Funktion im Fall eines Timeout einen
+Fehler mit der Fehler ID <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> auslöst.</p>
+<p>Dieser Fehler bewirkt, dass der <strong>Try</strong> Block sofort abgebrochen und der <strong>Catch</strong> Block
+ausgeführt wird. Im <strong>Catch</strong> Block befindet sich eine
+<a class="reference internal" href="#conditional-sequence"><span class="std std-ref">Conditional Sequence</span></a> <span class="guinum">❷</span>. In der Prüfbedingung
+der Funktion wird getestet, ob es sich um einen <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> Fehler handelt.
+Dazu wird der folgende JavaScript Code verwendet:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">ErrorIdString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$ErrorId</span><span class="p">;</span><span class="w"> </span><span class="nx">ErrorIdString</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;ERR_TIMEOUT&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Der Inhalt der <code class="code docutils literal notranslate"><span class="pre">$ErrorId</span></code> wird in dem String-Objekt <code class="code docutils literal notranslate"><span class="pre">ErrorIdString</span></code>
+gespeichert. Danach kann mit der String-Funktion <code class="code docutils literal notranslate"><span class="pre">indexOf</span></code> getestet werden,
+ob die Error Id mit <code class="code docutils literal notranslate"><span class="pre">&quot;ERR_TIMEOUT&quot;</span></code> beginnt. Man könnte in diesem Fall
+auch mit dem istgleich-Operator testen. Die Prüfung auf den Anfang des Strings
+ermöglicht aber auch die Erkennung einer Gruppe von Fehlern. Würde es z.B.
+die Fehlercodes <code class="code docutils literal notranslate"><span class="pre">ERR_PUMP_DOSING</span></code> und <code class="code docutils literal notranslate"><span class="pre">ERR_PUMP_ENABLE</span></code> geben,
+dann würde der Test</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">ErrorIdString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$ErrorId</span><span class="p">;</span><span class="w"> </span><span class="nx">ErrorIdString</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;ERR_PUMP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>beide Fehler erkennen und somit alle Pumpenfehler.</p>
+<p>Wird der Timeout Fehler
+erkannt, wird dann im nächsten Schritt <span class="guinum">❸</span> zur Behandlung des Fehlers
+eine eigene Fehlermeldung mit der <a class="reference internal" href="#log-message-function"><span class="std std-ref">Log Message</span></a> ausgegeben.</p>
+<img alt="../_images/try_catch_example_message.png" src="../_images/try_catch_example_message.png" />
+<p>Im Event Log der Anwendung sieht der Anwender dann die Folgende Fehlerausgabe:</p>
+<img alt="../_images/try_catch_example_log.png" src="../_images/try_catch_example_log.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn Sie im Event Log doppelt auf einen Log-Eintrag klicken, wird im
+<a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#script-editor"><span class="std std-ref">Script Editor</span></a> die Funktion geöffnet und farblich hervorgehoben, die den
+Log-Eintrag verursacht hat. So können Sie im Fehlerfall schnell zu der
+Funktion springen, die einen Fehler ausgelöst hat. Alternativ können
+Sie auch den Menüpunkt <span class="menuselection">Got to Script Function</span> im
+Kontextmenü des Event-Log verwenden (rechte Maustaste).</p>
+</div>
+</section>
+<section id="throw-error">
+<h3><span class="section-number">5.3.2. </span>Throw Error<a class="headerlink" href="#throw-error" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/throw_error.svg"><img alt="../_images/throw_error.svg" class="align-left" src="../_images/throw_error.svg" width="60" /></a>
+<p>Die <em>Throw Error</em> Funktion ermöglicht das Auslösen eines Fehlers, welcher die
+Scriptausführung unterbricht oder in einem <a class="reference internal" href="#try-catch"><span class="std std-ref">Try…Catch</span></a>
+Block gefangen werden kann. Wenn Sie in Ihrem Script Fehler erkennen, oder
+aus einem Catch Block heraus einen eigenen Fehler erzeugen möchten, dann
+können Sie diese Funktion verwenden.</p>
+<p>Im Konfigurationsbereich der Funktion können Sie die Fehlermeldung <span class="guinum">❶</span>
+und die Fehler ID <span class="guinum">❷</span> festlegen:</p>
+<img alt="../_images/throw_error_config.png" src="../_images/throw_error_config.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Im <span class="guilabel">Error Message</span> Feld können Sie Script-Variablen und Device
+Properties verwenden (siehe Abbildung oben).</p>
+</div>
+</section>
+</section>
+<section id="zeitfunktionen-time-functions">
+<h2><span class="section-number">5.4. </span>Zeitfunktionen - <em>Time Functions</em><a class="headerlink" href="#zeitfunktionen-time-functions" title="Link to this heading"></a></h2>
+<section id="ubersicht-zeitfunktionen">
+<h3><span class="section-number">5.4.1. </span>Übersicht Zeitfunktionen<a class="headerlink" href="#ubersicht-zeitfunktionen" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000145000000ACCA98E3B49CC6CFEB.png" src="../_images/1000020100000145000000ACCA98E3B49CC6CFEB.png" />
+<p>Diese
+Funktionskategorie enthält Funktionen, um den Programmablauf
+zeitgesteuert oder in Abhängigkeit von bestimmten Zeiten und Zeiträumen
+zu unterbrechen oder um auf bestimmte Zeitereignisse zu warten.</p>
+</section>
+<section id="delay">
+<span id="verzogerungsfunktion"></span><h3><span class="section-number">5.4.2. </span>Delay<a class="headerlink" href="#delay" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100007700000350500003505BC110D46A028D1D8.svg"><img alt="../_images/100007700000350500003505BC110D46A028D1D8.svg" class="align-left" src="../_images/100007700000350500003505BC110D46A028D1D8.svg" width="60" /></a>
+<p>Die Verzögerungsfunktion unterbricht die weitere
+Programmausführung für eine einstellbare Anzahl von Millisekunden. Die
+Verzögerungsdauer (Stunden, Minuten, Sekunden und Millisekunden) können
+Sie im Konfigurationsbereich (siehe Abbildung unten) einstellen.</p>
+<img alt="Konfiguration Delay-Funktion" src="../_images/100000000000021E00000077C7524A66137294EE.png" />
+<p>Alle Eingabefelder
+unterstützen die Verwendung von Variablen. Sie können die Eingabefelder
+völlig frei und flexibel mit Werten belegen und können Werte und
+Variablen beliebig miteinander mischen.</p>
+<section id="beispielkonfiguration">
+<h4>Beispielkonfiguration<a class="headerlink" href="#beispielkonfiguration" title="Link to this heading"></a></h4>
+<p>Wenn Sie z.B. eine Verzögerung von 10 Minuten und 15 Sekunden
+einstellen möchten, können Sie dies durch sehr unterschiedliche Belegung
+der Eingabefelder erreichen:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Stunden</p></th>
+<th class="head"><p>Minuten</p></th>
+<th class="head"><p>Sekunden</p></th>
+<th class="head"><p>Millisekunden</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>15</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>615</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>615000</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>15000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="wait-until">
+<h3><span class="section-number">5.4.3. </span>Wait until<a class="headerlink" href="#wait-until" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000087800003505000035058C9536180430C275.svg"><img alt="../_images/1000087800003505000035058C9536180430C275.svg" class="align-left" src="../_images/1000087800003505000035058C9536180430C275.svg" width="60" /></a>
+<p>Mit der Wartefunktion können Sie die Programmausführung bis
+zu einem genau definiertem Zeitpunkt aus Datum + Uhrzeit verzögern. Die
+Programmausführung wird erst beim Erreichen des konfigurierten Termins
+fortgesetzt.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Beachten Sie, dass die Wartefunktion nur
+einmal korrekt ausgeführt werden kann. Wird das Script
+erneut ausgeführt und der Termin liegt in der
+Vergangenheit, wird diese Funktion einfach
+übersprungen. D.h. vor einer erneuten Ausführung muss
+ein Termin, der in der Zukunft liegt, konfiguriert
+werden.</p>
+</div>
+</section>
+<section id="start-timer">
+<span id="timer-starten"></span><h3><span class="section-number">5.4.4. </span>Start Timer<a class="headerlink" href="#start-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000095E0000350500003505163F47DDE33790B9.svg"><img alt="../_images/1000095E0000350500003505163F47DDE33790B9.svg" class="align-left" src="../_images/1000095E0000350500003505163F47DDE33790B9.svg" width="60" /></a>
+<p>Diese Funktion startet einen Millisekundentimer, auf dessen
+Ablauf mit der Funktion <a class="reference internal" href="#auf-timer-warten"><span class="std std-ref">Auf Timer warten</span></a> (siehe unten) gewartet werden
+kann oder dessen aktuelle Millisekundenwert mit der Funktion <a class="reference internal" href="#timerwert-lesen"><span class="std std-ref">Timerwert lesen</span></a>
+gelesen werden kann. Zur Konfiguration vergeben Sie einen
+eindeutigen Namen für den Timer (<span class="guilabel">Timer Name</span>).</p>
+<p>Wird diese Funktion aufgerufen mit dem Namen eines Timers der bereits
+gestartet wurde, wird dieser Timer erneut gestartet mit der nun
+konfigurierten Zeitspanne.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Wenn Sie in Ihrem Script die Ausführungszeit
+für einen bestimmten Prozess Sequenz von Funktionen
+messen möchten, starten Sie einfach vor der Sequenz
+einen Timer und lesen nach der Sequenz die
+Millisekunden mit der Funktion <a class="reference internal" href="#timerwert-lesen"><span class="std std-ref">Timerwert lesen</span></a></p>
+</div>
+</section>
+<section id="wait-for-timer">
+<span id="auf-timer-warten"></span><h3><span class="section-number">5.4.5. </span>Wait for Timer<a class="headerlink" href="#wait-for-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000D500000350500003505855C71628C55D85A.svg"><img alt="../_images/10000D500000350500003505855C71628C55D85A.svg" class="align-left" src="../_images/10000D500000350500003505855C71628C55D85A.svg" width="60" /></a>
+<p>Diese Funktion unterbricht den weiteren Programmablauf, bis
+für den gewählten Timer die in dieser Funktion konfigurierte Ablaufzeit
+(<em>Timer Running Time</em>), abgelaufen ist. Der Timer mit dem
+entsprechenden Namen muss vorher mit der Funktion <a class="reference internal" href="#timer-starten"><span class="std std-ref">Timer starten</span></a>
+gestartet worden sein. Ist der Timer beim Aufruf dieser
+Funktion bereits abgelaufen, wird die Programmausführung ohne
+Unterbrechung fortgesetzt.</p>
+<p>Mit den beiden Funktionen <a class="reference internal" href="#timer-starten"><span class="std std-ref">Timer starten</span></a>  und <a class="reference internal" href="#auf-timer-warten"><span class="std std-ref">Auf Timer warten</span></a>
+können Programmfunktionen in festen Intervallen ausgeführt werden. Sie können
+dafür, z.B., eine Funktion oder Funktionssequenz zusammen mit den
+Timerfunktionen in einer <a class="reference internal" href="#parallele-sequenz"><span class="std std-ref">parallelen Sequenz</span></a> verwenden.*</p>
+</section>
+<section id="read-timer">
+<span id="timerwert-lesen"></span><h3><span class="section-number">5.4.6. </span>Read Timer<a class="headerlink" href="#read-timer" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg"><img alt="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" class="align-left" src="../_images/10000B8100003505000035056090D1DE9D69C3F8.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie den aktuellen
+Millisekundenwert eines bestimmten Timers auslesen und in einer
+Variablen speichern. Diesen Variablenwert können Sie dann z.B. mit der
+<a class="reference internal" href="#nachricht-anzeigen"><span class="std std-ref">Show Message</span></a>
+-Funktion anzeigen lassen. Damit können Sie z.B. die Zeiten von
+Programmabläufen in Ihrem Script messen und ausgeben.</p>
+</section>
+</section>
+<section id="geratefunktionen-device-functions">
+<span id="geratefunktionen"></span><h2><span class="section-number">5.5. </span>Gerätefunktionen - <em>Device Functions</em><a class="headerlink" href="#geratefunktionen-device-functions" title="Link to this heading"></a></h2>
+<p>Im Script-System sind bereits eine Reihe von generischen
+Script-Funktionen zum Zugriff auf Geräte (Gerätedaten,
+Geräteeigenschaften = <em>Device Properties</em>) enthalten. Diese Funktionen
+sind unabhängig von den vorhandenen Plugins immer verfügbar. Sie finden
+diese Funktionen in der Kategorie <em>Device Functions</em>.</p>
+<section id="id6">
+<h3><span class="section-number">5.5.1. </span>Einführung<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<img alt="../_images/device_functions_category.png" src="../_images/device_functions_category.png" />
+</section>
+<section id="read-device-property">
+<span id="prozessdaten-lesen"></span><h3><span class="section-number">5.5.2. </span>Read Device Property<a class="headerlink" href="#read-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg"><img alt="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" class="align-left" src="../_images/10002597000034EB000034EB8C1E4F7964CA4032.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie Prozessdaten aus einem Gerät
+lesen und in eine Variable speichern.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Über die Auswahlbox <span class="guilabel">Device</span> <span class="guinum">❷</span> wählen Sie das Gerät aus, von welchem
+Sie die Prozessdaten lesen möchten. In der Auswahlliste werden alle
+Geräte der aktuellen Konfiguration angezeigt. Um die Suche nach einem
+Gerät zu vereinfachen, können Sie die Geräteliste filtern. Wählen Sie
+dafür im Auswahlfeld <span class="guilabel">Filter</span> <span class="guinum">❶</span> einfach den Gerätetyp aus, nach dem
+Sie suchen. Wenn Sie das Gerät gewählt haben, können Sie nun im
+Auswahlfeld <span class="guilabel">Property</span> <span class="guinum">❸</span> die Geräteeigenschaft wählen, die Sie
+auslesen möchten.</p>
+<div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Es werden nur Geräte und
+Geräteeigenschaften angezeigt, die lesbar sind.</p>
+</div>
+<p>Den Namen der Variable, in die der Wert gespeichert werden soll, geben
+Sie im Feld <span class="guilabel">Variable</span> <span class="guinum">❹</span> ein (Abbildung unten).</p>
+<img alt="Scriptkonfiguration Read Device Property" src="../_images/10000201000001DE000001244F9C5E31F069E4F2.png" />
+<p>Zusammenfassend lässt sich die Funktion <em>Read Process Data</em> wie folgt
+beschreiben:</p>
+<p class="centered">
+<strong>„Lese von Gerät* <span class="guinum">❷</span> den Wert* <span class="guinum">❸</span> und speichere ihn in Variable <span class="guinum">❹</span>.“</strong></p><div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Bei der Eingabe des Variablennamens
+unterstützt Sie die Autovervollständigung durch das
+Einblenden einer Liste bereits erstellter Variablen.</p>
+</div>
+</section>
+<section id="write-device-property">
+<h3><span class="section-number">5.5.3. </span>Write Device Property<a class="headerlink" href="#write-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg"><img alt="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" class="align-left" src="../_images/100024C0000034EB000034EBCD08BD4563B1D7D1.svg" width="60" /></a>
+<p>Diese Funktion dient zum Schreiben von Prozessdaten von
+Geräten. Im Eingabefeld <span class="guinum">❶</span> geben Sie den Wert ein, der geschrieben
+werden soll. In diesem Feld können Sie auch Variablen oder <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#device-properties-prozessdaten"><span class="std std-ref">Device Properties (Prozessdaten)</span></a> verwenden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Im Bereich <em>Device Property</em> <span class="guinum">❷</span> wählen Sie, wie bei der Funktion
+<a class="reference internal" href="#prozessdaten-lesen"><span class="std std-ref">Prozessdaten lesen</span></a> beschrieben, das Gerät und dessen
+Geräteeigenschaft aus, die Sie schreiben möchten (Abbildung unten). In
+der Geräteauswahl werden Ihnen nur Geräte und Geräteeigenschaften <span class="guinum">❷</span>
+angezeigt, die beschreibbar sind.</p>
+<img alt="Scriptkonfiguration Write Device Property" src="../_images/10000201000001DE00000122138AE1DCD5FBF187.png" />
+<p>Der Wert im Eingabefeld <span class="guinum">❶</span> wird dann zur Laufzeit in die gewählte
+Geräteeigenschaft geschrieben.</p>
+</section>
+<section id="wait-for-device-property">
+<span id="wait-for-device-property-func"></span><h3><span class="section-number">5.5.4. </span>Wait For Device Property<a class="headerlink" href="#wait-for-device-property" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10002565000034EB000034EB5C19DADB200F9112.svg"><img alt="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" class="align-left" src="../_images/10002565000034EB000034EB5C19DADB200F9112.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie die Scriptausführung darauf
+warten lassen, dass eine bestimmte Geräteeigenschaft oder ein bestimmter
+Prozessdateneintrag eine definierte Bedingung erfüllt. Die Funktion wird
+erst dann fortgesetzt, wenn diese Bedingung erfüllt ist.</p>
+<img alt="../_images/wait_for_device_property_function.png" src="../_images/wait_for_device_property_function.png" />
+<p>Im Konfigurationsbereich (Abbildung oben) wählen Sie als erstes im Bereich
+<em>Device Data</em> <span class="guinum">❶</span>, wie bei der Funktion <a class="reference internal" href="#prozessdaten-lesen"><span class="std std-ref">Prozessdaten lesen</span></a>
+beschrieben, das Gerät und dessen
+Geräteeigenschaft aus, die Sie prüfen möchten.</p>
+<p>Im Bereich <em>Condition</em> konfigurieren Sie die Prüfbedingung. Dafür wählen
+Sie als erstes einen Vergleichsoperator <span class="guinum">❷</span> aus und geben dann den Wert
+ein <span class="guinum">❸</span>, mit dem verglichen werden soll. Im Wertefeld <span class="guinum">❸</span> können Sie
+auch Variablen (z.B. <code class="code docutils literal notranslate"><span class="pre">$FlowRate</span></code>) oder Geräteeigenschaften (Device Properties -
+z.B. <code class="code docutils literal notranslate"><span class="pre">Nemesys_M_1.ActualFlow</span></code>) verwenden, um die Prüfbedingung zu setzen.</p>
+<p>Um zu verhindern, dass die Funktion die weitere Ausführung zu lange blockiert,
+können Sie im Feld <span class="guilabel">Timeout (ms)</span> ein Zeitlimit festlegen. Ist das
+Zeitlimit abgelaufen und die Prüfbedingung noch nicht wahr, erzeugt die Funktion
+einen <code class="code docutils literal notranslate"><span class="pre">ERR_TIMEOUT</span></code> Fehler. Um den Timeout zu deaktivieren, setzen Sie
+den Wert einfach auf 0.</p>
+<p>Verkürzt lässt sich die Funktion wie folgt beschreiben:</p>
+<p class="centered">
+<strong>„Setzte die Programmausführung fort, wenn die die gewählte Eigenschaft
+des Gerätes <span class="guinum">❶</span> die Bedingung <span class="guinum">❷</span> <span class="guinum">❸</span> erfüllt.“</strong></p><div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Als Vergleichsbedingung können Variablen verwendet werden.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Ein Timeout Wert von 0 deaktiviert das Zeitlimit.</p>
+</div>
+</section>
+<section id="create-property-variable">
+<h3><span class="section-number">5.5.5. </span>Create Property Variable<a class="headerlink" href="#create-property-variable" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/10001162000038720000387269894D0D5041B1EE.svg"><img alt="../_images/10001162000038720000387269894D0D5041B1EE.svg" class="align-left" src="../_images/10001162000038720000387269894D0D5041B1EE.svg" width="60" /></a>
+<p>Mit dieser Funktion erzeugen Sie eine spezielle Variable, die
+mit einer bestimmten Eigenschaft eines Gerätes verbunden wird. Über
+diese Variable haben Sie im Script direkten Zugriff auf die verbundene
+Geräteeigenschaft und können diese ohne zusätzliche Funktionsaufrufe
+auslesen.</p>
+<p>Wenn Sie z.B. einen analogen Eingangswert einlesen möchten und mit
+normalen Variablen arbeiten, müssen Sie zuerst eine Variable mit der
+Funktion <a class="reference internal" href="#variable-erzeugen"><span class="std std-ref">Variable erzeugen</span></a> erzeugen und dann mit der
+Funktion <a class="reference internal" href="#prozessdaten-lesen"><span class="std std-ref">Prozessdaten lesen</span></a> den
+analogen Eingangswert in die Variable einlesen. Erst danach können Sie
+die Variable für weitere Berechnungen und Prüfungen verwenden. Wann
+immer Sie einen neuen analogen Eingangswert benötigen, müssen Sie die
+Funktion <a class="reference internal" href="#prozessdaten-lesen"><span class="std std-ref">Prozessdaten lesen</span></a> erneut aufrufen.</p>
+<img alt="Konfiguration Eigenschaftsvariable anlegen" src="../_images/10000201000001F7000001347DCF10AF4AE123D0.png" />
+<p>Mit Eigenschaftsvariablen wird dieser Zugriff auf Geräteeigenschaften
+(z.B. Eingangswert eines analogen Einganges) erheblich vereinfacht. Wenn
+Sie die Variable anlegen, verbinden Sie im Konfigurationsdialog
+dauerhaft eine Geräteeigenschaft mit der Variable. Wann immer Sie nun in
+Scriptfunktionen auf den Wert dieser Variable lesend zugreifen, wird
+automatisch der aktuelle Wert der verbundenen Geräteeigenschaft
+ausgelesen.</p>
+<p>Den Namen der Variable geben Sie im Feld <span class="guilabel">Variable</span> <span class="guinum">❶</span> ein (Abbildung
+oben). Über die Auswahlbox <span class="guilabel">Device</span> <span class="guinum">❸</span> wählen Sie das Gerät aus, von
+welchem Sie die Prozessdaten lesen möchten. In der Auswahlliste werden
+alle Geräte der aktuellen Konfiguration angezeigt. Um die Suche nach
+einem Gerät zu vereinfachen, können Sie die Geräteliste filtern. Wählen
+Sie dafür im Auswahlfeld <span class="guilabel">Filter</span> <span class="guinum">❷</span> einfach den Gerätetyp aus, nach
+dem Sie filtern möchten.</p>
+<p>Wenn Sie
+das Gerät gewählt haben, können Sie dann im Auswahlfeld <span class="guilabel">Property</span> <span class="guinum">❹</span> die
+Geräteeigenschaft (den Prozessdateneintrag) wählen, den Sie auslesen
+möchten.</p>
+<p>D.h., zusammenfassend lässt sich diese Funktion wie folgt beschreiben:</p>
+<p class="centered">
+<strong>„Verbinde die Geräteeigenschaft <span class="guinum">❹</span> des Gerätes <span class="guinum">❸</span> mit der Variablen
+<span class="guinum">❶</span> und gebe den Wert der Geräteeigenschaft zurück, wenn ein Lesezugriff
+auf die Variable erfolgt.“</strong></p><div class="note admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Eigenschaftsvariablen können nicht zum
+Speichern von Werten bei Berechnungen verwendet werden.
+Verwenden Sie dafür normale Variablen.</p>
+</div>
+</section>
+</section>
+<section id="funktionen-zum-logging">
+<h2><span class="section-number">5.6. </span>Funktionen zum Logging<a class="headerlink" href="#funktionen-zum-logging" title="Link to this heading"></a></h2>
+<section id="ubersicht">
+<h3><span class="section-number">5.6.1. </span>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading"></a></h3>
+<p>Die Kategorie Logging enthält Scriptfunktionen zur Steuerung diverser
+Log-Funktionen und zum Zugriff auf den Event-Log.</p>
+<img alt="../_images/logging_category.png" src="../_images/logging_category.png" />
+</section>
+<section id="log-message">
+<span id="log-message-function"></span><h3><span class="section-number">5.6.2. </span>Log Message<a class="headerlink" href="#log-message" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/log_message2.svg"><img alt="../_images/log_message2.svg" class="align-left" src="../_images/log_message2.svg" width="60" /></a>
+<p>Mit dieser Funktion können Sie eine Nachricht im <a class="reference internal" href="../QmixElementsADS_DE/QmixElementsADS_DE.html#ereignisprotokoll"><span class="std std-ref">Event Log</span></a>
+der Anwendung ausgeben. Im Konfigurationsbereich der Funktion können Sie
+folgendes konfigurieren:</p>
+<img alt="../_images/log_message_config.png" src="../_images/log_message_config.png" />
+<ol class="arabic simple guinums">
+<li><p>Im Feld <span class="guilabel">Message</span> geben Sie den Nachrichtentext ein.</p></li>
+<li><p>Im Bereich <span class="guilabel">Message Type</span> können Sie Art der Nachricht auswählen.
+Je nach Typ, wird in der Ereignisanzeige ein entsprechendes Symbol
+eingeblendet und die Nachricht farblich hervorgehoben.</p></li>
+</ol>
+<p>Im Message-Text können Sie <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#device-property-identifiers"><span class="std std-ref">Device Properties</span></a>
+und <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#scriptvariablen"><span class="std std-ref">Scriptvariablen</span></a> verwenden. Diese dienen als
+Platzhalter und werden zur Laufzeit des Scriptes durch den Inhalt der Variablen
+oder die Prozessdaten eines Gerätes ersetzt.  Sobald Sie im Text ein
+Dollarzeichen <code class="code docutils literal notranslate"><span class="pre">$</span></code> eingeben, wird Ihnen eine Liste der verfügbaren Variablen
+eingeblendet, aus der Sie eine Variable auswählen können.</p>
+<img alt="../_images/log_message_text_input.png" src="../_images/log_message_text_input.png" />
+<p>In der Abbildung oben wurde die Scriptvariable <code class="code docutils literal notranslate"><span class="pre">$TargetVolume</span></code> und die
+Device Property <code class="code docutils literal notranslate"><span class="pre">$$Nemesys_S_1.DosedVolume</span></code> eingefügt. Beim Ausführen
+wird die Nachricht im Event-Log der Anwendung ausgegeben:</p>
+<img alt="../_images/log_message_output.png" src="../_images/log_message_output.png" />
+<div class="tip admonition">
+<p class="admonition-title">Tipp</p>
+<p>Device Properties können Sie bequem über das Kontextmenü des Message-Feldes
+einfügen (Rechtsklick mit Maus).</p>
+</div>
+<p>Wenn Sie den Message-Type <span class="guilabel">Debug / Trace</span> auswählen, wird die
+Nachricht nur ausgegeben, wenn der <a class="reference internal" href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html#debug-mode"><span class="std std-ref">Debug-Modus</span></a> aktiv ist.
+So können Sie für das Debugging Ihrer Scripte zusätzliche Log-Ausgaben
+aktivieren, die bei normaler Ausführung des Scripts nicht erscheinen.</p>
+</section>
+<section id="clear-event-log">
+<h3><span class="section-number">5.6.3. </span>Clear Event Log<a class="headerlink" href="#clear-event-log" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/clear_event_log.svg"><img alt="../_images/clear_event_log.svg" class="align-left" src="../_images/clear_event_log.svg" width="60" /></a>
+<p>Diese Scriptfunktion löscht alle Einträge aus dem Event-Log
+Fenster der Anwendung.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="export-event-log">
+<h3><span class="section-number">5.6.4. </span>Export Event Log<a class="headerlink" href="#export-event-log" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/export_event_log.svg"><img alt="../_images/export_event_log.svg" class="align-left" src="../_images/export_event_log.svg" width="60" /></a>
+<p>Die Export Funktion exportiert den Inhalt des Event-Log
+Fensters in eine Textdatei. Klicken Sie im Konfigurationsbereich auf das
+Ordnersymbol (Abbildung unten), um einen Dateinamen und Speicherort zu
+wählen. Wir empfehlen Ihnen den Speicherort im Log Ordner des aktuellen
+Projekts beizubehalten.</p>
+<img alt="../_images/10000201000001CE00000085ECEBD0BB80415B83.png" src="../_images/10000201000001CE00000085ECEBD0BB80415B83.png" />
+<p>Die Funktion speichert die exportierte Datei mit einem
+Zeitstempel, z.B. <code class="file docutils literal notranslate"><span class="pre">EventLog_20220121_161653.txt</span></code>.</p>
+</section>
+</section>
+<section id="funktionen-zur-datenspeicherung">
+<h2><span class="section-number">5.7. </span>Funktionen zur Datenspeicherung<a class="headerlink" href="#funktionen-zur-datenspeicherung" title="Link to this heading"></a></h2>
+<p>Diese Kategorie enthält Funktionen zum Lesen von Daten aus Dateien und zum
+dauerhaften Speichern von Daten.</p>
+<img alt="../_images/data_storage_category.png" src="../_images/data_storage_category.png" />
+<section id="open-settings-file">
+<h3><span class="section-number">5.7.1. </span>Open Settings File<a class="headerlink" href="#open-settings-file" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/open_settings_file.svg"><img alt="../_images/open_settings_file.svg" class="align-left" src="../_images/open_settings_file.svg" width="60" /></a>
+<p>Diese Funktion öffnet eine Einstellungsdatei <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> zum dauerhaften Lesen / Schreiben von Daten.
+Eine <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code>-Datei ist eine strukturierte Datei, die aus Abschnitten und Schlüsseln besteht.
+Der Name eines Abschnitts in der Datei <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> wird immer in eckigen Klammern angegeben.
+Der Name eines Schlüssels steht immer in einer separaten Zeile und der Inhalt wird durch das Zeichen
+<code class="code docutils literal notranslate"><span class="pre">=</span></code> zugewiesen. Das folgende Beispiel zeigt eine typische <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code>-Datei:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SyringeConfig]</span>
+<span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+<span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+<span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+
+<span class="k">[Variables]</span>
+<span class="na">Flow</span><span class="o">=</span><span class="s">100</span>
+<span class="na">Caption</span><span class="o">=</span><span class="s">Water</span>
+</pre></div>
+</div>
+<p>Die Datei hat zwei Abschnitte (<code class="code docutils literal notranslate"><span class="pre">SyringeConfig</span></code> und <code class="code docutils literal notranslate"><span class="pre">Variables</span></code>) und jeder
+Abschnitt enthält eine Reihe von Schlüssel-Werte-Paaren.</p>
+<p>Um eine Einstellungsdatei zu öffnen oder eine neue Datei zu erstellen, müssen Sie einen Dateinamen <span class="guinum">❶</span>
+und eine Skriptvariable <span class="guinum">❷</span> angeben, um das erstellte Objekt der Einstellungsdatei zu speichern.</p>
+<img alt="../_images/open_settings_config.png" src="../_images/open_settings_config.png" />
+<p>Im Eingabefeld für den Dateinamen <span class="guinum">❶</span>, haben Sie verschiedene Möglichkeiten,
+einen Dateinamen einzugeben:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Auswahl über Dateidialog:</dt><dd><p>Klicken Sie dafür auf die
+Schaltfläche mit dem Ordnersymbol , und wählen Sie dann das
+Zielverzeichnis, den Dateinamen und den Typ aus im angezeigten Dateidialog aus.</p>
+</dd>
+<dt>Eingabe eines absoluten Dateipfades:</dt><dd><p>Geben Sie einen absoluten Dateipfad, wie z.B. <code class="code docutils literal notranslate"><span class="pre">C:tempMySettings.ini</span></code>,
+über die Tastatur ein.</p>
+</dd>
+<dt>Eingabe eines relativen Dateipfades</dt><dd><p>Eingabe eines relativen Pfades per Tastatur - z.B. <code class="code docutils literal notranslate"><span class="pre">.DataMySettings.ini</span></code>.
+In diesem Fall wird die Datei <code class="code docutils literal notranslate"><span class="pre">MySettings.ini</span></code> im aktuellen Projektverzeichnis
+im Unterordner <code class="code docutils literal notranslate"><span class="pre">Data</span></code> gespeichert. Wenn der aktuelle Projektordner
+z.B. <code class="code docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/Nemesys</span></code> ist, dann
+würde folgende Datei erzeugt werden: <code class="code docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/Nemesys/Data/MySettings.ini</span></code></p>
+</dd>
+<dt>Verwendung einer Scriptvariable</dt><dd><p>Sie können einen absoluten oder relativen
+Dateipfad in einer Scriptvariablen speichern, und dann diese Variable in
+dem Feld verwenden.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Wenn die Datei existiert, wird sie geöffnet. Wenn sie noch nicht existiert, wird sie
+erstellt. Sie können die Variable mit dem Settings Objekt nun in den Funktionen
+<a class="reference internal" href="#werte-lesen"><span class="std std-ref">Werte lesen</span></a> und <a class="reference internal" href="#werte-schreiben"><span class="std std-ref">Werte schreiben</span></a> verwenden
+Funktionen verwenden, um ein gültiges und korrekt initialisiertes
+Einstellungsobjekt bereitzustellen.</p>
+</section>
+<section id="read-setting">
+<span id="werte-lesen"></span><h3><span class="section-number">5.7.2. </span>Read Setting<a class="headerlink" href="#read-setting" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/settings_read.svg"><img alt="../_images/settings_read.svg" class="align-left" src="../_images/settings_read.svg" width="60" /></a>
+<p>Diese Funktion liest einen einzelnen Wert aus der Einstellungsdatei. Wenn die Einstellung nicht
+existiert, gibt die Funktion den angegebenen optionalen  Normalwert (<span class="guilabel">Default Value</span>) zurück.
+Wenn die Einstellung nicht existiert und kein Standardwert angegeben ist, zeigt die Funktion einen Fehler.</p>
+<p>Wenn Sie die Spritzenlänge aus der folgenden Einstellungsdatei lesen möchten…</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[SyringeConfig]</span>
+<span class="hll"><span class="linenos">2</span><span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+</span><span class="linenos">3</span><span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+<span class="linenos">4</span><span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+</pre></div>
+</div>
+<p>…dann würden Sie die folgenden Parameter verwenden:</p>
+<img alt="../_images/read_setting_config.png" src="../_images/read_setting_config.png" />
+<p>In das Feld <span class="guilabel">Settings Object Variable</span> <span class="guinum">❶</span> geben Sie eine Variable mit einem gültigen
+Einstellungsobjekt an, das mit der Funktion <a class="reference internal" href="#open-settings-file">Open Settings File</a> erstellt wurde. Dann
+müssen Sie in das optionale Feld <span class="guilabel">Settings Group</span> <em>SyingeConfig</em> <span class="guinum">❷</span> und den
+<span class="guilabel">Schlüssel</span> <em>Length</em> (Länge) <span class="guinum">❸</span> angeben. Die Funktion liest nun den Wert <code class="code docutils literal notranslate"><span class="pre">60</span></code> aus
+der Datei und speichert ihn in der angegebenen Skriptvariablen <code class="code docutils literal notranslate"><span class="pre">$SyringeLength</span></code>.</p>
+</section>
+<section id="write-setting">
+<span id="werte-schreiben"></span><h3><span class="section-number">5.7.3. </span>Write Setting<a class="headerlink" href="#write-setting" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/settings_write.svg"><img alt="../_images/settings_write.svg" class="align-left" src="../_images/settings_write.svg" width="60" /></a>
+<p>Diese Funktion schreibt einen einzelnen Wert in eine Einstellungsdatei. Wenn der im Feld
+<span class="guilabel">Key</span> angegebene Schlüssel bereits existiert, wird der vorherige Wert überschrieben. Um
+diese Funktion zu verwenden, müssen Sie eine Einstellungsdatei öffnen oder erstellen, bevor Sie die
+Funktion <a class="reference internal" href="#open-settings-file">Open Settings File</a> verwenden.</p>
+<p>Im folgenden Beispiel soll das Spritzenvolumen 1000 in der
+Einstellungsdatei gespeichert werden:</p>
+<img alt="../_images/write_setting_config.png" src="../_images/write_setting_config.png" />
+<p>Im <span class="guilabel">Settings Object Variable</span> <span class="guinum">❶</span> geben Sie eine Variable mit einem gültigen
+Einstellungsobjekt an, das mit der Funktion <a class="reference internal" href="#open-settings-file">Open Settings File</a> erstellt wurde. Dann müssen Sie
+ein optionales <span class="guilabel">Settings Group</span> und den <span class="guilabel">Key</span> <span class="guinum">❷</span> angeben.
+Im Feld <span class="guilabel">Value</span> <span class="guinum">❸</span> geben Sie den Wert oder eine Skriptvariable
+die den Wert enthält.</p>
+<p>Mit den angegebenen Parametern wird das Spritzenvolumen in Zeile 3 der Einstellungsdatei geschrieben:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[SyringeConfig]</span>
+<span class="linenos">2</span><span class="na">Length</span><span class="o">=</span><span class="s">60</span>
+<span class="hll"><span class="linenos">3</span><span class="na">Volume</span><span class="o">=</span><span class="s">1000</span>
+</span><span class="linenos">4</span><span class="na">Caption</span><span class="o">=</span><span class="s">CustomGlass</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../scriptingsystem_part1_DE/scriptingsystem_part1_DE.html" class="btn btn-neutral float-left" title="4. Script-System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../javascript_DE/javascript_DE.html" class="btn btn-neutral float-right" title="6. Verwendung von JavaScript" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Zuletzt aktualisiert am Jan. 28, 2026 14:14.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

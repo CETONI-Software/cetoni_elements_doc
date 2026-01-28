@@ -1,0 +1,12 @@
+<svg x="0" y="0" width="512" height="512" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <title>checkbox icon</title>
+    <desc>checkbox icon from the IconExperience.com G-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+    <g>
+        <path d="M48,32l416,0c8.8,0 16,7.2 16,16l0,416c0,8.8 -7.2,16 -16,16l-416,0c-8.8,0 -16,-7.2 -16,-16l0,-416c0,-8.8 7.2,-16 16,-16z" fill="#429f46"/>
+        <path d="M475.3,36.7c2.9,2.9 4.7,6.9 4.7,11.3l0,416c0,8.8 -7.2,16 -16,16l-416,0c-4.4,0 -8.4,-1.8 -11.3,-4.7z" fill="#388d3c"/>
+        <polygon points="377.8,116.6 432,170.85 202.85,400 86.65,283.8 140.85,229.6 202.85,291.55" fill="#ffffff"/>
+        <polygon points="386.6,125.4 432,170.85 202.85,400 157.4,354.6" fill="#ebedef"/>
+    </g>
+</svg>

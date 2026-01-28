@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to set controller parameters &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to set controller parameters</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-set-controller-parameters">
+<h1>How to set controller parameters<a class="headerlink" href="#how-to-set-controller-parameters" title="Link to this heading"></a></h1>
+<section id="closed-control-loop-and-pid-controller-equation">
+<h2>Closed control loop and PID controller equation<a class="headerlink" href="#closed-control-loop-and-pid-controller-equation" title="Link to this heading"></a></h2>
+<p>The controller (e.g. PID controller) and the controlled system (e.g.
+temperature-controlled system) together make up a feedback system, the
+closed control loop. (see figure below)</p>
+<p><img alt="Figure 19: Closed control loop" src="../_images/1000020100000345000000BBD9E22878.png" /></p>
+<p>A PID-controller determines thh control value <em>u</em> at the time t<sub>1</sub>
+using the following equation:</p>
+<a class="reference internal image-reference" href="../_images/math_08.png"><img alt="../_images/math_08.png" src="../_images/math_08.png" style="width: 317.0px; height: 53.2px;" /></a>
+<p>The control value contains 3 shares.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/math_09.png"><img alt="math09" src="../_images/math_09.png" style="width: 39.2px; height: 21.0px;" /></a></p></td>
+<td><p>The proportional share (P) forms
+by means of the factor
+K<sub>p</sub> the direct effect of
+the control error on the control
+value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/math_10.png"><img alt="math10" src="../_images/math_10.png" style="width: 78.0px; height: 53.0px;" /></a></p></td>
+<td><p>The integral share (I) computes
+the sum of the error over the
+time and by means of K<sub>p</sub>
+and the time constant
+T<sub>i</sub>maps it to the
+control value. The bigger
+K<sub>p</sub>and the smaller
+T<sub>i</sub>the bigger the
+integral share of the control
+value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/math_11.png"><img alt="math11" src="../_images/math_11.png" style="width: 80.60000000000001px; height: 38.800000000000004px;" /></a></p></td>
+<td><p>The differential share depends
+on the temporal change of the
+actual value that is mapped to
+the control value by
+K<sub>p</sub>and T<sub>d</sub>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="preparations-for-setting-controller-parameters">
+<h2>Preparations for setting controller parameters<a class="headerlink" href="#preparations-for-setting-controller-parameters" title="Link to this heading"></a></h2>
+<p>Initially make the plot of the datalogger plugin show the measurement
+value and the control value to you. (refer to section <span class="xref std std-ref">Process Data
+Graph</span>) <span class="guinum">❶</span> It is recommended to do the
+same with the setpoint value. It is not necessary but facilitates
+orientation within the plot. (see figure below)</p>
+<p><img alt="Figure 20: Configuration of the graphical logger for setting controller parameters" src="../_images/100002010000033E000001B1025EE03C.png" /></p>
+<p>The setting for <span class="guilabel">Log Interval</span> <span class="guinum">❷</span> depends on the change
+frequency of the actual value. You should get a useful graph if you set
+<em>Log Interval</em> to the sample time used by your control channel (see next
+section).</p>
+</section>
+<section id="choosing-the-sample-time">
+<h2>Choosing the sample time<a class="headerlink" href="#choosing-the-sample-time" title="Link to this heading"></a></h2>
+<p>The time between 2 computations of the control value is defined as
+sample time. The smaller the sample time the more often the control
+value is calculated. As a rule of thumb you can keep in mind that the
+sample time should not be higher than one tenth of the smallest time
+constant in the closed control loop. Experiences have shown that the
+following values achieved useful results (stable control) with the
+appropriate devices.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Application</p></th>
+<th class="head"><p>Sample Time (ms)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Qmix Q+</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pressure control using Nemesys and Qmix P</p></td>
+<td><p>50</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For the sample time choose values that are
+less than or equal to 1/10 of the smallest time
+constant occurring in the control loop.</p>
+</div>
+</section>
+<section id="setting-the-control-value-limits">
+<h2>Setting the control value limits<a class="headerlink" href="#setting-the-control-value-limits" title="Link to this heading"></a></h2>
+<p>You can limit the minimum (U<sub>min</sub>) and the maximum
+(U<sub>max</sub>) control value of the controllers. The
+control value should have a sufficient stroke in order to reach the
+desired setpoint values. But you should also take care not to damage the
+controlled system by choosing to large control value limits. (e.g. too
+high flow rate of a neMESYS dosing module in a pressure controlled
+system leads to damage of the fluidic system) You should test the
+control value limits by temporarily acting with them on your controlled
+system. (e.g. dose with a Nemesys pump using a flowrate equal
+to the control value limit) Futhermore you have to choose a value
+assumed by the controller if the control channel is disabled
+(U<sub>disabled</sub>) which is usually zero.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Insufficient limitation of the control
+value can lead to damage of the controlled system.</p>
+</div>
+</section>
+<section id="determination-of-pi-parameters">
+<h2>Determination of PI parameters<a class="headerlink" href="#determination-of-pi-parameters" title="Link to this heading"></a></h2>
+<p>A temperature control system usually makes up a delay line containing
+one or more delay time constants. It can often be approximated by a
+first-order delay line. The appropriate step response function is:</p>
+<a class="reference internal image-reference" href="../_images/math_12.png"><img alt="../_images/math_12.png" src="../_images/math_12.png" style="width: 112.60000000000001px; height: 46.0px;" /></a>
+<p>Setting the controller parameters targets the compensation of the delay
+time constant T<sub>1</sub>and adapting the controller gain K<sub>p</sub>
+in order to reach an efficient control behaviour. In practice
+T<sub>1</sub>is often unknown, but you can gradually approach to a
+useful result using the following procedure.</p>
+<img alt="../_images/graph01.png" src="../_images/graph01.png" />
+<ol class="arabic steps">
+<li><p>Choose the values for Sample Time, U<sub>min</sub>,
+U<sub>max</sub> und U<sub>disabled</sub> according to the
+recommendations in the previous sections. Disable the differential and
+integral share by setting the controller time constants to 0. This leads to a
+simplified controller equation.</p>
+<div class="math notranslate nohighlight">
+\[U = {K_{p} \cdot e}\]</div>
+<p>Set a moderate value for the proportional gain. Keep in mind that by
+means of K<sub>p</sub> the control error immediately impacts the
+control value. Choosing a too big value for K<sub>p</sub>can drive
+the controller into saturation.</p>
+</li>
+<li><p>Give a setpoint step to your control loop, i.e. by changing the
+setpoint temperature from room temperature to 50°C and activating
+the control channel. (see section <a class="reference internal" href="qmixcontroller_full_EN.html#entering-setpoint"><span class="std std-ref">Entering setpoint</span></a> and
+<a class="reference internal" href="qmixcontroller_full_EN.html#switching-control-devices-on-off"><span class="std std-ref">Switching control devices on / off</span></a>)</p></li>
+<li><p>Providing a first-order delay line the actual value will behave
+according to the following figure.</p>
+<img alt="../_images/graph02.png" src="../_images/graph02.png" />
+<p>Depending on chosen controller proportional gain
+K<sub>p</sub> the actual value will vary quickly settle near the
+setpoint value. Due to the fact that a proportional controller is
+not able to fully compensate a delay line, a steady-state error
+establishes. If K<sub>p</sub> is set too low, the actual value
+approaches only very slowly the target value. (see curve for
+K<sub>p</sub> = 1 in figure above) If K<sub>p</sub> is set to high, the
+actual value overshoots, optionally oscillates about the setpoint.
+(see curve for Kp = 50 in figure above) In the provided example the
+actual value reaches a steady-state quickly without overshooting
+using K<sub>p</sub>=3. This is why we use that value for further
+optimizations.</p>
+</li>
+<li><p>In the next step set T<sub>i</sub>in a way that the steady-state
+error is compensated. You should begin using a large time constant
+T<sub>i</sub> which means a small integral share.</p></li>
+<li><p>Give a setpoint step to your control loop, i.e. by changing the
+setpoint temperature from room temperature to 50°C and activating
+the control channel.  (see section <a class="reference internal" href="qmixcontroller_full_EN.html#entering-setpoint"><span class="std std-ref">Entering setpoint</span></a> and
+<a class="reference internal" href="qmixcontroller_full_EN.html#switching-control-devices-on-off"><span class="std std-ref">Switching control devices on / off</span></a>)</p></li>
+<li><p>Lower the time constant T<sub>i</sub> if you want to reduce time for
+permanently reaching the setpoint value. Please notify that a time
+constant T<sub>i</sub> set to small (large integral share) can lead to
+the control loop oscillating. In the provided figure you can see
+that T<sub>i</sub>=260s leads to a good result. The actual value
+matches the setpoint value and the system does not oscillate. Using
+T<sub>i</sub>=1000s the setpoint is not reached within the
+illustrated time range and T<sub>i</sub>=20s leads to the system
+overshooting heavily. (see figure below)</p>
+<img alt="../_images/10000000000001A7000000C4FD6D097D.png" src="../_images/10000000000001A7000000C4FD6D097D.png" />
+</li>
+<li><p>In many cases (i.e. temperature control) a PI controller is sufficient.
+There is no steady-state error and the dynamic behaviour is
+satisfactory. If the controller shall be robust with respect to
+sudden disturbances, it might be useful to include a differential
+component. A detailed consideration of control stability, control
+behaviour with respect to setpoint changes and disturbances is
+beyond the scope of this practical introduction. Reference is
+therefore made at this point on the control engineering literature.</p>
+<img alt="../_images/graph03.png" src="../_images/graph03.png" />
+</li>
+<li><p>Now create a PID parameter preset with the values you have
+determined and assign a unique name.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

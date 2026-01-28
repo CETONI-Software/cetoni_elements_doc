@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>26. Appendix &mdash; CETONI Elements Private Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="25. CANopen Tools Plugin" href="../canopentools_EN/canopentools_EN.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_private.html" class="icon icon-home">
+            CETONI Elements Private Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_EN/python_EN.html">21. Python Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">22. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">23. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">24. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">25. CANopen Tools Plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">26. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#licenses">26.1. Licenses</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_private.html">CETONI Elements Private Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_private.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">26. </span>Appendix</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="appendix">
+<h1><span class="section-number">26. </span>Appendix<a class="headerlink" href="#appendix" title="Link to this heading"></a></h1>
+<section id="licenses">
+<h2><span class="section-number">26.1. </span>Licenses<a class="headerlink" href="#licenses" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Library</p></th>
+<th class="head"><p>Link to License information</p></th>
+<th class="head"><p>Link to Library</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Abseil</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-abseil-cpp/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-abseil-cpp/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-abseil-cpp">https://github.com/CETONI-Software/3rdparty-abseil-cpp</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Aqt StyleSheets</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-aqt-stylesheets/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-aqt-stylesheets/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-aqt-stylesheets">https://github.com/CETONI-Software/3rdparty-aqt-stylesheets</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Armadillo</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/Apache-2.0">https://opensource.org/licenses/Apache-2.0</a></p></td>
+<td><p><a class="reference external" href="http://arma.sourceforge.net/">http://arma.sourceforge.net/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>BLAS</p></td>
+<td><p><a class="reference external" href="http://www.netlib.org/blas/">http://www.netlib.org/blas/</a></p></td>
+<td><p><a class="reference external" href="http://www.netlib.org/blas/">http://www.netlib.org/blas/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>boost</p></td>
+<td><p><a class="reference external" href="https://www.boost.org/LICENSE_1_0.txt">https://www.boost.org/LICENSE_1_0.txt</a></p></td>
+<td><p><a class="reference external" href="https://www.boost.org/">https://www.boost.org/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>C++ Machine Objects</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/mit-license.php">https://opensource.org/licenses/mit-license.php</a></p></td>
+<td><p><a class="reference external" href="http://ehiti.de/machine_objects">http://ehiti.de/machine_objects</a></p></td>
+</tr>
+<tr class="row-even"><td><p>cmu1394</p></td>
+<td><p><a class="reference external" href="http://www.gnu.org/licenses/lgpl.html">http://www.gnu.org/licenses/lgpl.html</a></p></td>
+<td><p><a class="reference external" href="http://www.cs.cmu.edu/~iwan/1394/">http://www.cs.cmu.edu/~iwan/1394/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Coin 3D – Coin</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-coin3d/blob/master/COPYING">https://github.com/CETONI-Software/3rdparty-coin3d/blob/master/COPYING</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-coin3d">https://github.com/CETONI-Software/3rdparty-coin3d</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Coin 3D – SoQt</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-soqt/blob/master/COPYING">https://github.com/CETONI-Software/3rdparty-soqt/blob/master/COPYING</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-soqt">https://github.com/CETONI-Software/3rdparty-soqt</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Dr Mingw</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-drmingw/blob/master/LICENSE.txt">https://github.com/CETONI-Software/3rdparty-drmingw/blob/master/LICENSE.txt</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-drmingw">https://github.com/CETONI-Software/3rdparty-drmingw</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Embedded Widgets for Qt</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets/blob/main/LICENSE.txt">https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets/blob/main/LICENSE.txt</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets">https://github.com/CETONI-Software/3rdparty-qt-embedded-widgets</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>FCL – The Flexible Collision Library</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-fcl/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-fcl/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-fcl">https://github.com/CETONI-Software/3rdparty-fcl</a></p></td>
+</tr>
+<tr class="row-even"><td><p>gRPC</p></td>
+<td><p><a class="reference external" href="https://github.com/grpc/grpc/blob/master/LICENSE">https://github.com/grpc/grpc/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/grpc/grpc">https://github.com/grpc/grpc</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>JSON for Modern C++</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlohmann-json/blob/develop/LICENSE.MIT">https://github.com/CETONI-Software/3rdparty-nlohmann-json/blob/develop/LICENSE.MIT</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlohmann-json">https://github.com/CETONI-Software/3rdparty-nlohmann-json</a></p></td>
+</tr>
+<tr class="row-even"><td><p>JSON Schema Validator</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlohmann-json-schema-validator/blob/main/LICENSE">https://github.com/CETONI-Software/3rdparty-nlohmann-json-schema-validator/blob/main/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlohmann-json-schema-validator">https://github.com/CETONI-Software/3rdparty-nlohmann-json-schema-validator</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>KDBindings</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-KDBindings/blob/1.0/LICENSES/MIT.txt">https://github.com/CETONI-Software/3rdparty-KDBindings/blob/1.0/LICENSES/MIT.txt</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-KDBindings">https://github.com/CETONI-Software/3rdparty-KDBindings</a></p></td>
+</tr>
+<tr class="row-even"><td><p>LAPACK</p></td>
+<td><p><a class="reference external" href="http://www.netlib.org/lapack/LICENSE.txt">http://www.netlib.org/lapack/LICENSE.txt</a></p></td>
+<td><p><a class="reference external" href="http://www.netlib.org/lapack/">http://www.netlib.org/lapack/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>libccd</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-libccd/blob/master/BSD-LICENSE">https://github.com/CETONI-Software/3rdparty-libccd/blob/master/BSD-LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-libccd">https://github.com/CETONI-Software/3rdparty-libccd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>libiconv</p></td>
+<td><p><a class="reference external" href="https://www.gnu.org/software/libiconv/">https://www.gnu.org/software/libiconv/</a></p></td>
+<td><p><a class="reference external" href="https://www.gnu.org/software/libiconv/">https://www.gnu.org/software/libiconv/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>libserialport</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/lgpl-3.0.html">https://opensource.org/licenses/lgpl-3.0.html</a></p></td>
+<td><p><a class="reference external" href="https://sigrok.org/wiki/Libserialport">https://sigrok.org/wiki/Libserialport</a></p></td>
+</tr>
+<tr class="row-even"><td><p>libxml2</p></td>
+<td><p><a class="reference external" href="https://gitlab.gnome.org/GNOME/libxml2/-/blob/master/Copyright">https://gitlab.gnome.org/GNOME/libxml2/-/blob/master/Copyright</a></p></td>
+<td><p><a class="reference external" href="https://gitlab.gnome.org/GNOME/libxml2">https://gitlab.gnome.org/GNOME/libxml2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>libxslt</p></td>
+<td><p><a class="reference external" href="https://gitlab.gnome.org/GNOME/libxslt/-/blob/master/Copyright">https://gitlab.gnome.org/GNOME/libxslt/-/blob/master/Copyright</a></p></td>
+<td><p><a class="reference external" href="https://gitlab.gnome.org/GNOME/libxslt">https://gitlab.gnome.org/GNOME/libxslt</a></p></td>
+</tr>
+<tr class="row-even"><td><p>log4cplus</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/BSD-2-Clause">https://opensource.org/licenses/BSD-2-Clause</a></p></td>
+<td><p><a class="reference external" href="https://github.com/log4cplus/log4cplus">https://github.com/log4cplus/log4cplus</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Nlopt</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlopt/blob/master/COPYING">https://github.com/CETONI-Software/3rdparty-nlopt/blob/master/COPYING</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-nlopt">https://github.com/CETONI-Software/3rdparty-nlopt</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ODE</p></td>
+<td><p><a class="reference external" href="https://bitbucket.org/odedevs/ode/src/master/LICENSE.TXT">https://bitbucket.org/odedevs/ode/src/master/LICENSE.TXT</a></p></td>
+<td><p><a class="reference external" href="https://bitbucket.org/odedevs/ode/src/master/">https://bitbucket.org/odedevs/ode/src/master/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenCV</p></td>
+<td><p><a class="reference external" href="https://opencv.org/license.html">https://opencv.org/license.html</a></p></td>
+<td><p><a class="reference external" href="https://opencv.org/">https://opencv.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>protobuf</p></td>
+<td><p><a class="reference external" href="https://github.com/protocolbuffers/protobuf/blob/master/LICENSE">https://github.com/protocolbuffers/protobuf/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/protocolbuffers/protobuf">https://github.com/protocolbuffers/protobuf</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PythonQt</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-pythonqt/blob/master/README.md">https://github.com/CETONI-Software/3rdparty-pythonqt/blob/master/README.md</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-pythonqt">https://github.com/CETONI-Software/3rdparty-pythonqt</a></p></td>
+</tr>
+<tr class="row-even"><td><p>QDeferred</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-QDeferred/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-QDeferred/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-QDeferred">https://github.com/CETONI-Software/3rdparty-QDeferred</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Qt Advanced Docking System</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System">https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Docking-System/blob/master/LICENSE</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Qt Advanced Stylesheets</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets/blob/main/LICENSE">https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets/blob/main/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets">https://github.com/CETONI-Software/3rdparty-Qt-Advanced-Stylesheets</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Qt5</p></td>
+<td><p><a class="reference external" href="https://doc.qt.io/qt-5/lgpl.html">https://doc.qt.io/qt-5/lgpl.html</a></p></td>
+<td><p><a class="reference external" href="https://www.qt.io/">https://www.qt.io/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>QtZeroConf</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-QtZeroConf/blob/master/LICENSE">https://github.com/CETONI-Software/3rdparty-QtZeroConf/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-QtZeroConf">https://github.com/CETONI-Software/3rdparty-QtZeroConf</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>QuaZIP</p></td>
+<td><p><a class="reference external" href="https://github.com/stachenov/quazip/blob/master/COPYING">https://github.com/stachenov/quazip/blob/master/COPYING</a></p></td>
+<td><p><a class="reference external" href="https://github.com/stachenov/quazip">https://github.com/stachenov/quazip</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Qwt</p></td>
+<td><p><a class="reference external" href="https://qwt.sourceforge.io/qwtlicense.html">https://qwt.sourceforge.io/qwtlicense.html</a></p></td>
+<td><p><a class="reference external" href="https://qwt.sourceforge.io/">https://qwt.sourceforge.io/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>RE2</p></td>
+<td><p><a class="reference external" href="https://github.com/google/re2/blob/master/LICENSE">https://github.com/google/re2/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/re2">https://github.com/google/re2</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Robotics Library</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-roboticslibrary/blob/master/LICENSE.md">https://github.com/CETONI-Software/3rdparty-roboticslibrary/blob/master/LICENSE.md</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-roboticslibrary">https://github.com/CETONI-Software/3rdparty-roboticslibrary</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>sigslot</p></td>
+<td><p><a class="reference external" href="http://sigslot.sourceforge.net/">http://sigslot.sourceforge.net/</a></p></td>
+<td><p><a class="reference external" href="http://sigslot.sourceforge.net/">http://sigslot.sourceforge.net/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>sila_cpp</p></td>
+<td><p><a class="reference external" href="https://gitlab.com/SiLA2/sila_cpp/-/blob/master/LICENSE">https://gitlab.com/SiLA2/sila_cpp/-/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://gitlab.com/SiLA2/sila_cpp">https://gitlab.com/SiLA2/sila_cpp</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Solid</p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-solid3/blob/master/LICENSE_QPL.txt">https://github.com/CETONI-Software/3rdparty-solid3/blob/master/LICENSE_QPL.txt</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CETONI-Software/3rdparty-solid3">https://github.com/CETONI-Software/3rdparty-solid3</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SQLite</p></td>
+<td><p><a class="reference external" href="https://www.sqlite.org/copyright.html">https://www.sqlite.org/copyright.html</a></p></td>
+<td><p><a class="reference external" href="https://www.sqlite.org/index.html">https://www.sqlite.org/index.html</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TINY UTF8</p></td>
+<td><p><a class="reference external" href="https://github.com/DuffsDevice/tinyutf8/blob/master/LICENCE">https://github.com/DuffsDevice/tinyutf8/blob/master/LICENCE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/DuffsDevice/tinyutf8">https://github.com/DuffsDevice/tinyutf8</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Units</p></td>
+<td><p><a class="reference external" href="https://github.com/LLNL/units/blob/master/LICENSE">https://github.com/LLNL/units/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/LLNL/units">https://github.com/LLNL/units</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ur_rtde</p></td>
+<td><p><a class="reference external" href="https://gitlab.com/cetoni-3rdparty/ur_rtde/-/blob/master/LICENSE">https://gitlab.com/cetoni-3rdparty/ur_rtde/-/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://gitlab.com/cetoni-3rdparty/ur_rtde">https://gitlab.com/cetoni-3rdparty/ur_rtde</a></p></td>
+</tr>
+<tr class="row-even"><td><p>zlib</p></td>
+<td><p><a class="reference external" href="https://www.zlib.net/zlib_license.html">https://www.zlib.net/zlib_license.html</a></p></td>
+<td><p><a class="reference external" href="https://zlib.net/">https://zlib.net/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>µpb</p></td>
+<td><p><a class="reference external" href="https://github.com/protocolbuffers/upb/blob/master/LICENSE">https://github.com/protocolbuffers/upb/blob/master/LICENSE</a></p></td>
+<td><p><a class="reference external" href="https://github.com/protocolbuffers/upb">https://github.com/protocolbuffers/upb</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../canopentools_EN/canopentools_EN.html" class="btn btn-neutral float-left" title="25. CANopen Tools Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

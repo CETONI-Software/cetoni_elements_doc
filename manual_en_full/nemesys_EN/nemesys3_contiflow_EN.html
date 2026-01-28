@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Continuous Flow &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Continuous Flow</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="continuous-flow">
+<h1>Continuous Flow<a class="headerlink" href="#continuous-flow" title="Link to this heading"></a></h1>
+<section id="introduction-to-continuous-flow">
+<h2>Introduction to Continuous Flow<a class="headerlink" href="#introduction-to-continuous-flow" title="Link to this heading"></a></h2>
+<p>In continuous flow mode you can pair two pumps together using the
+software, in order to create a continuous flow over a long period of
+time through alternating fluid take-up and discharge. In this case one
+of the pumps doses at a particular flow rate, while the other pump takes
+up reagent from the reservoir. Once the dosing pump has emptied the
+syringe, the software automatically switches to the second dosing unit
+with a full syringe and continues dosing with that pump. This creates a
+continuous, uninterrupted flow, which lets you dose at a constant flow
+rate for a nearly unlimited period of time.</p>
+</section>
+<section id="operating-and-display-elements">
+<h2>Operating and Display Elements<a class="headerlink" href="#operating-and-display-elements" title="Link to this heading"></a></h2>
+<p>You can recognize a dosing unit that was configured for continuous flow
+by the activated continuous flow icon in the direct control window (see
+image).</p>
+<img alt="../_images/1000000000000234000000666822C5C8CC8265D0.png" src="../_images/1000000000000234000000666822C5C8CC8265D0.png" />
+<p>The continuous flow mode
+is terminated automatically, as soon as you change the syringe
+configuration of one of the connected dosing units. In this case you
+have to reconfigure all parameters. If continuous flow has been
+activated for one of the dosing units, the operating panel will indicate
+“continuous flow” in its status display (see image below).</p>
+<img alt="../_images/1000000000000235000000E8395960DBE1D49010.png" src="../_images/1000000000000235000000E8395960DBE1D49010.png" />
+<p>The following display elements will then be visible:</p>
+<ul class="simple">
+<li><p><strong>Remaining time</strong> – shows the remaining time for continuous dosing.
+When this display reaches zero, continuous flow is stopped
+automatically.</p></li>
+<li><p><strong>Accumulated volume [ml]</strong> – the accumulated discharged volume shows
+the total volume discharged by both pumps into the application.</p></li>
+<li><p><strong>Linked pump</strong> – the linked pump is the second pump paired to this
+pump for the purpose of achieving continuous flow.</p></li>
+</ul>
+</section>
+<section id="configuring-continuous-flow">
+<h2>Configuring Continuous Flow<a class="headerlink" href="#configuring-continuous-flow" title="Link to this heading"></a></h2>
+<p>You will need at least two Nemesys dosing units to achieve continuous
+flow. Both units should have a valve. To configure continuous flow
+perform a right mouse click on the operating panel of the direct
+controller and select <span class="menuselection">Configure continuous flow</span>
+from the context menu (see image below).</p>
+<img alt="../_images/1000000000000231000000BAD54DEB42C3F65FB7.png" src="../_images/1000000000000231000000BAD54DEB42C3F65FB7.png" />
+<p>A configuration dialog
+will appear. The dosing unit you click on for configuring continuous
+flow is the first of the dosing units to be paired. If continuous flow
+has not been configured for this dosing unit, you can also open the
+configuration dialog by pressing the <span class="guilabel">Continuous Flow</span> button in the
+direct control window (see image below).</p>
+<img alt="../_images/10000000000000AC00000042C7E1513050994EA1.png" src="../_images/10000000000000AC00000042C7E1513050994EA1.png" />
+<p>If you see the following configuration page after calling up
+the dialog (see image below), the previously set configuration was
+loaded successfully and all you have to do is click the Finish button to
+accept the configuration.</p>
+<img alt="../_images/1000020100000322000001FBE37231369011B166.png" src="../_images/1000020100000322000001FBE37231369011B166.png" />
+<p>If you want to change certain parameters of the loaded
+configuration, click on the Next button to browse the individual pages
+of the configuration assistant.</p>
+</section>
+<section id="selecting-the-second-dosing-unit">
+<h2>Selecting the second Dosing Unit<a class="headerlink" href="#selecting-the-second-dosing-unit" title="Link to this heading"></a></h2>
+<img alt="../_images/1000020100000322000001A528FAB18020B1F28A.png" src="../_images/1000020100000322000001A528FAB18020B1F28A.png" />
+<p>On this page of the
+configuration dialog you can select the second continuous flow unit from
+a list of available dosing units. If no configuration has been loaded,
+this will be the first page of the configuration assistant. Select the
+dosing unit of your choice by clicking the relevant name in the list.
+Then click on Next to continue the configuration.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>For continuous flow you should always
+select two dosing units that are immediately connected
+and displayed next to each other in the software.</p>
+</div>
+</section>
+<section id="selecting-a-continuous-flow-mode">
+<h2>Selecting a Continuous Flow Mode<a class="headerlink" href="#selecting-a-continuous-flow-mode" title="Link to this heading"></a></h2>
+<img alt="../_images/1000020100000322000001A51A93BAD0DAE927D5.png" src="../_images/1000020100000322000001A51A93BAD0DAE927D5.png" />
+<p>You can choose from the following continuous flow modes:</p>
+<ul class="simple">
+<li><p><strong>Pressure Controlled Switching</strong> - yields the best results without
+changing pressure or flow rate when switching units. However, you
+will need a pressure sensor on each pump.</p></li>
+<li><p><strong>Cross-Flow</strong>- provides a soft transition and a constant flow rate
+when switching from one dosing unit to the other. This mode is most
+suitable if your application uses a low system pressure and you don’t
+have pressure sensors.</p></li>
+</ul>
+<p>The individual modes will be explained in detail in the following
+subsections. Perform a left mouse click on the mode you wish to
+configure and then click on Next to continue.</p>
+</section>
+<section id="configuring-3x2-way-valves">
+<h2>Configuring 3x2-way Valves<a class="headerlink" href="#configuring-3x2-way-valves" title="Link to this heading"></a></h2>
+<p>During continuous flow operation the respective valves get switched for
+both pumps. In the <em>Configure 3x2-way Valves</em> window (see image below)
+you can configure the valves and valve positions for your 3x2-way
+valves.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already assigned valves to your
+pumps, these valves are automatically selected here.</p>
+</div>
+<img alt="../_images/10000000000003400000024683286CF4C3CADAAF.png" src="../_images/10000000000003400000024683286CF4C3CADAAF.png" />
+<p>First, select the valve type you wish to use <span class="guinum">❶</span>. If you use
+3x2-way valves and have selected
+<span class="guilabel">Pressure-Controlled Switching</span>, you will need additional
+shut-off valves. If you use 3x3-way valves with an additional closed
+position, you will not require additional shut-off valves for
+pressure-controlled switching.</p>
+<p>Use the selection box <span class="guinum">❷</span> to select the valve you want to switch. Using
+the two selection boxes below <span class="guinum">❸</span>, select the positions you want the valve
+to switch to when filling and dosing. If you have a 3x3-way valve with
+an additional closed position, you also need to configure the closed
+position.</p>
+<img alt="../_images/100000000000027400000050FC75667E716B4EBE.png" src="../_images/100000000000027400000050FC75667E716B4EBE.png" />
+</section>
+<section id="configuring-shut-off-valves">
+<h2>Configuring Shut-off Valves<a class="headerlink" href="#configuring-shut-off-valves" title="Link to this heading"></a></h2>
+<p>If you have selected pressure-controlled switching and your 3x2-way
+valves do not have a closed position, you will need to configure your
+shut-off valves in this next step. As in the valve dialog above, please
+select the valves and configure the closed <span class="guinum">❶</span> and open <span class="guinum">❷</span> valve position.</p>
+<img alt="../_images/10000000000003400000022D3939253C9F4C9986.png" src="../_images/10000000000003400000022D3939253C9F4C9986.png" />
+</section>
+<section id="configuring-pressure-sensors">
+<h2>Configuring Pressure Sensors<a class="headerlink" href="#configuring-pressure-sensors" title="Link to this heading"></a></h2>
+<p>If you have selected pressure-controlled switching, you need to
+configure the pressure sensors for both pumps in this next step (see
+image below).</p>
+<img alt="../_images/1000000000000340000001E2129FDD2D9C04C10E.png" src="../_images/1000000000000340000001E2129FDD2D9C04C10E.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already assigned pressure sensors
+image10  to your pumps that are displayed on the front panel,
+these sensors are automatically selected here, and you
+can proceed immediately by clicking <span class="guilabel">Next &gt;</span>.</p>
+</div>
+</section>
+<section id="pressure-controlled-switching">
+<h2>Pressure-controlled Switching<a class="headerlink" href="#pressure-controlled-switching" title="Link to this heading"></a></h2>
+<section id="introduction-to-pressure-controlled-switching">
+<h3>Introduction to pressure-controlled switching<a class="headerlink" href="#introduction-to-pressure-controlled-switching" title="Link to this heading"></a></h3>
+<p>In pressure-controlled switching the pressure of the filling pump is
+adapted to the pressure of the dosing pump prior to switching, through
+the use of valves and pressure sensors. In addition, during the
+switching process the flow of both pumps is cross-faded (cross-flow).
+This prevents the occurrence of a switching impulse, while pressure and
+flow rate stay nearly constant.</p>
+<p>Since a certain period of time is needed to fill and cross-fade the
+pump, in order to build and reduce pressure and to switch the valves,
+the achievable flow rate in continuous mode is lower than the maximum
+flow rate of each of the individual pumps involved.</p>
+<p>In the configuration window for pressure-controlled switching you can
+set all parameters and you can adjust the pressure controller of each
+pump for the current configuration and the desired application pressure.</p>
+<img alt="../_images/10000201000003220000022A91AAB220A4857814.png" src="../_images/10000201000003220000022A91AAB220A4857814.png" />
+<p>In the
+upper part of the window <span class="guinum">❶</span> you find the tuning parameters. In the lower
+part of the window <span class="guinum">❷</span> you will find a diagram, which shows the
+controller’s target value (white) and the measured pressure value (in
+color) during adjustment. Using this graphic representation you can get
+an idea of the pressure controller’s operational status and detect
+issues like excessive oscillation.</p>
+<div class="error admonition">
+<p class="admonition-title">Caution</p>
+<p>Very high pressure may occur during
+tuning. If necessary, you should activate <a class="reference internal" href="nemesys_full_EN.html#pressure-monitoring"><span class="std std-ref">pressure
+monitoring</span></a>, in order to stop the pump when certain
+pressure values are exceeded.</p>
+</div>
+</section>
+<section id="tuning-parameter-overview">
+<h3>Tuning Parameter Overview<a class="headerlink" href="#tuning-parameter-overview" title="Link to this heading"></a></h3>
+<p>The continuous mode uses a dedicated pressure controller for each pump
+to regulate the target pressure in the filling pump before switching to
+the application. The proportional gain of the controller depends on many
+factors, such as pressure, tightness, tube length and the fluid being
+used. This value must be re-calibrated or retuned for each setup. The
+tuning section uses the following operating elements:</p>
+<img alt="../_images/1000020100000269000000BE9D9D103837FCB8A9.png" src="../_images/1000020100000269000000BE9D9D103837FCB8A9.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Pressure Display</strong> – depending on the dosing direction
+(filling/discharge) the pressure display is colored in orange or
+blue.</p></li>
+<li><p><strong>Tuning Pressure</strong> – this is where you set the pressure to which
+the pressure controller will be tuned. Set the anticipated
+application pressure you will use for dosing into your application.</p></li>
+<li><p><strong>Proportional Gain</strong> – this field shows you the proportional gain
+of the pressure controller. If you click the button with the lamp
+symbol, the system will suggest a proportional gain for the target
+pressure you set. This value can be used as a starting point for
+tuning.</p></li>
+<li><p><strong>Pressure Window</strong> – Defines a symmetrical range of accepted
+pressure values relative to the target pressure. This means that only
+if the pressure is within this window for the duration of the
+<em>Pressure Window Time</em> it will be considered stable. A value that is
+too high may cause the controller to overshoot, a value that is too
+low may cause long times for the target pressure to settle, or may
+cause the target pressure never to be reached. The value that should
+be set depends on the target pressure and the quality of the pressure
+sensors used. The pressure window must always be greater than the
+fluctuations of the pressure sensor, otherwise the pressure will
+never be considered stable.</p></li>
+<li><p><strong>Pressure Window Time</strong>– The time the pressure must be within the
+<em>Pressure Window</em> for it to be considered stable by the software.</p></li>
+<li><p><strong>Reservoir Pressure</strong> – Set the pressure that exists in the
+reservoir from which the syringe is filled. The pressure is lowered
+to this pressure before the valve to the reservoir is opened to fill
+the syringe.</p></li>
+<li><p><strong>Status Display</strong> – the status display gives you information
+regarding the current status of the pressure controller or the
+calibration. You should only go to the next step if you see a green
+checkmark here or if a previous tuning has been loaded.</p></li>
+<li><p><strong>Restore Default Settings</strong> – pushing this button restores the
+standard tuning parameters.</p></li>
+</ol>
+</section>
+<section id="tuning-the-pressure-controller">
+<h3>Tuning the Pressure Controller<a class="headerlink" href="#tuning-the-pressure-controller" title="Link to this heading"></a></h3>
+<p>A pump’s pressure controller should be tuned at the approximate piston
+position at which the switching to the other pump takes place. If you
+use two identical pumps, this usually happens when the syringe is almost
+completely filled. To make sure that the syringe can still be filled
+further for pressure building, the piston should not be in the rearmost
+position. As a rule of thumb the syringe should be filled to about 90%.</p>
+<p>Please follow the steps below to tune the pressure controller.</p>
+<ol class="arabic simple steps">
+<li><p>First, enter the desired tuning pressure <span class="guinum">❷</span>. This should be
+approximately equal to the application pressure at the desired flow
+rate. You can determine the tuning pressure ahead of time by dosing
+into your application at the desired flow rate.</p></li>
+<li><p>Now select the starting value for the proportional gain <span class="guinum">❹</span> of the
+controller. If you click on the button with the lamp symbol, the
+system will suggest a starting value for the selected pressure.</p></li>
+<li><p>Start the tuning process by clicking the <span class="guilabel">Start Tuning</span> button. The
+software will now start tuning the controller automatically. For
+safety reasons tuning will begin at 50% tuning pressure, to avoid
+damage due to pressure overshooting. The system tunes the controller
+in such way as to arrive at the target pressure quickly with a
+minimum of overshoot.</p></li>
+</ol>
+<img alt="../_images/100000000000029B000000D0324E5253118A97DF.png" src="../_images/100000000000029B000000D0324E5253118A97DF.png" />
+<p>If achieving the target pressure takes a long time (10
+seconds or more – see image below), you can interrupt the tuning process
+and increase the proportional gain manually (by doubling it, for
+example).</p>
+<img alt="../_images/100000000000028700000096E13BE55DE415EBFA.png" src="../_images/100000000000028700000096E13BE55DE415EBFA.png" />
+<p>If the controller overshoots a lot, you can interrupt the tuning process
+and decrease the proportional gain manually (by halving it, for
+example). Restart the tuning process with the new values.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After a successful tuning, change the value
+for the target window (Pressure Window) and start
+another tuning run. You will get a feeling for how
+Pressure Window value affects controller tuning.</p>
+</div>
+<p>During tuning the controller’s proportional gain is adjusted
+automatically. If you just want to manually test the current control
+parameters without the automatic adjustment, simply start a parameter
+test by clicking on <span class="guilabel">Test Parameters</span>.</p>
+<img alt="../_images/100000000000029B000000D07CB8BD8EA57530D0.png" src="../_images/100000000000029B000000D07CB8BD8EA57530D0.png" />
+<p>During the parameter test the pump cycles between a
+non-pressurized state of 0 bar and the set tuning pressure. This lets
+you visually check and evaluate the current control parameters using the
+diagram.</p>
+<p>Perform a right mouse-click on the diagram to open the context menu with
+additional diagram functions.</p>
+<img alt="../_images/100000000000029000000120B3361EA8175F41D4.png" src="../_images/100000000000029000000120B3361EA8175F41D4.png" />
+</section>
+<section id="setting-parameters">
+<h3>Setting Parameters<a class="headerlink" href="#setting-parameters" title="Link to this heading"></a></h3>
+<p>After tuning both pumps, go to the next page to set further parameters
+for pressure controlled switching.</p>
+<img alt="../_images/1000020100000322000001A5F4F82BA9F678CA6C.png" src="../_images/1000020100000322000001A5F4F82BA9F678CA6C.png" />
+<p>In the <span class="guilabel">Refill Flow</span> field <span class="guinum">❶</span>, set the flow rate used to
+fill the syringe. The larger you select this value, the higher the
+maximum flow rate that can be realized for continuous dosing. This means
+that you should always select the filling flow rate as high as possible
+or as high as your application allows. If the filling flow rate is too
+high, air bubbles may form.</p>
+<p>The <span class="guilabel">Timing</span> slider <span class="guinum">❷</span> lets you control the timing of continuous flow
+operation. During tuning, the volume and time periods needed for
+pressurizing the filling pump are determined. These time values are
+multiplied by a certain factor to create a safety margin. This buffer is
+used to compensate for delays during pressure building, which can be
+caused by issues or variations in the system. You can use the slider to
+select a higher margin (<em>Robust Timing</em>) or a lower margin (<em>Tight
+Timing</em>).</p>
+<p><img alt="image03_19" src="../_images/10000000000001C70000004CD2D8CDFE5C22501F.png" /></p>
+<p>Using a larger buffer decreases the flow rates that can be
+achieved in comparison to a smaller buffer. In the same way, a smaller
+buffer increases the risk of disrupting the continuous flow timing in
+case of system issues or variations, possibly leading to flow
+instabilities. Double-clicking on the slider sets the standard value we
+recommend, unless you absolutely need a higher or lower flow rate.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>A small safety buffer for the timing
+increases the risk that the timing of the continuous
+flow is disturbed and the continuous flow is
+interrupted if the application pressure fluctuates or
+if other disturbances occur.</p>
+</div>
+<p>In the field <span class="guilabel">Maximum feasible flow (ml/s)</span> <span class="guinum">❸</span> you can see the maximum
+flow rate that can be achieved with the set parameters. The coloured bar
+shows how far away this flow rate is from the maximum flow rate that you
+can achieve in normal pump operation mode. This allows you to quickly
+see how the refill flow rate and timing affect the realizable flow rate.</p>
+<p>Once you have set all parameters, continue the configuration with
+section <a class="reference internal" href="#set-flow-rate-and-duration-of-continuous-flow">Set flow rate and duration of continuous flow</a>.</p>
+</section>
+</section>
+<section id="configuring-cross-flow">
+<h2>Configuring Cross-Flow<a class="headerlink" href="#configuring-cross-flow" title="Link to this heading"></a></h2>
+<img alt="../_images/1000020100000322000001A6B9F155797B5B91F9.png" src="../_images/1000020100000322000001A6B9F155797B5B91F9.png" />
+<p>In the <span class="guilabel">Refill Flow</span> field <span class="guinum">❶</span>, set the flow rate used to
+fill the syringe. By pressing the <span class="guilabel">Min</span> and <span class="guilabel">Max</span>
+buttons. The larger
+you select this value, the higher the maximum flow rate that can be
+realized for continuous dosing. This means that you should always select
+the filling flow rate as high as possible or as high as your application
+allows. If the filling flow rate is too high, air bubbles may form. This
+flow rate is always slightly higher than the rate indicated in the
+<span class="guilabel">Maximum feasible flow (ml/s)</span> field <span class="guinum">❹</span>, since the syringes must be
+filled more quickly in order to be ready for the next dosing run when
+the syringes are switched.</p>
+<p>Cross-flow makes it possible to cross-fade the flows of the dosing
+modules. This is done by configuring the <span class="guilabel">Cross-flow Duration</span>
+<span class="guinum">❷</span>.</p>
+<p>In the field <span class="guilabel">Maximum feasible flow (ml/s)</span> <span class="guinum">❹</span> you can
+see the maximum
+flow rate that can be achieved with the set parameters. The coloured bar
+shows how far away this flow rate is from the maximum flow rate that you
+can achieve in normal pump operation mode. This allows you to quickly
+see how the refill flow rate and timing affect the realizable flow
+rate.</p>
+<p>The following image shows the cross-fading of flows from two individual
+pumps.</p>
+<img alt="../_images/100002010000034B000002BF708D26F0E1102F63.png" src="../_images/100002010000034B000002BF708D26F0E1102F63.png" />
+<p>The Cross-Flow-Duration t<sub>cross</sub> expresses the period of time needed for cross-fading one
+dosing module to the other. The smaller this value, the steeper the flow
+rate curve and the less time is required for the cross-flow operation to
+be completed.</p>
+<img alt="../_images/1000020100000320000002A28DB2B4CFC4D85EB4.png" src="../_images/1000020100000320000002A28DB2B4CFC4D85EB4.png" />
+<p>Cross-flow offers you a simple way of
+compensating for pressure drops during switching. The <em>Overlap Time</em> t<sub>ov</sub>
+<span class="guinum">❸</span> governs the period of time by which the flow curves of both
+dosing modules overlap. The larger the tov value, the longer both dosing
+modules keep dosing simultaneously (see image above).</p>
+</section>
+<section id="set-flow-rate-and-duration-of-continuous-flow">
+<h2>Set flow rate and duration of continuous flow<a class="headerlink" href="#set-flow-rate-and-duration-of-continuous-flow" title="Link to this heading"></a></h2>
+<p>In this window (figure below) you set the flow rate at which the
+continuous flow is started <span class="guinum">❶</span> and the duration of dosing <span class="guinum">❷</span>. If you don’t
+want to limit the duration, simply leave the setting at <em>Dose
+unlimited</em>. With this setting continuous flow is maintained until you
+stop the dosing process manually.</p>
+<img alt="../_images/1000020100000322000001A5B79EDE9CBF839695.png" src="../_images/1000020100000322000001A5B79EDE9CBF839695.png" />
+<p>The software offers you three ways of limiting the duration of
+continuous flow:</p>
+<ul class="simple">
+<li><p><strong>Dose volume</strong> – continuous flow is stopped as soon as a defined
+dosing volume has been reached.</p></li>
+<li><p><strong>Dose for –</strong> continuous flow ends after a predetermined duration of
+time.</p></li>
+<li><p><strong>Dose until</strong> – continuous flow ends at a specific time in the future.</p></li>
+</ul>
+</section>
+<section id="starting-stopping-continuous-flow">
+<h2>Starting/Stopping Continuous Flow<a class="headerlink" href="#starting-stopping-continuous-flow" title="Link to this heading"></a></h2>
+<p>After the configuration you can start continuous flow
+operation by a left mouse-click on the <span class="guilabel">Start Dosing</span> button in the direct
+controller window.</p>
+<p><img alt="image03_23" src="../_images/10000201000000DC0000004C9FC9EE927968E354.png" /></p>
+<p>You can interrupt continuous flow operation at any time by
+clicking the <span class="guilabel">Stop Dosing</span> button.</p>
+<p><img alt="image03_24" src="../_images/10000201000000DC0000004C5F506061A78F169E.png" /></p>
+<p>If you stop a dosing unit involved in continuous flow operation, you
+also stop the other dosing unit tied into the system. If you have
+configured a particular duration for continuous flow operation, stopping
+a dosing unit will also interrupt the preset duration, meaning that when
+you restart the dosing unit, continuous flow operation will resume for
+the time remaining at the point of interruption. If you configured a
+target volume for continuous flow operation, the system will resume
+dosing the remaining volume at the time of interruption, upon restart.</p>
+</section>
+<section id="cancel-restart-continuous-flow">
+<h2>Cancel/Restart Continuous Flow<a class="headerlink" href="#cancel-restart-continuous-flow" title="Link to this heading"></a></h2>
+<p>Once the preset time for continuous flow operation has elapsed or the
+target volume has been reached, continuous flow operation is terminated
+and both dosing units are stopped. Performing a left click on the
+<span class="guilabel">Start</span> <span class="guinum">❶</span> button lets you restart continuous flow operation. In this
+case the duration or target volume will be reset to their starting
+values. Left clicking on the <span class="guilabel">Continuous Flow</span> <span class="guinum">❷</span> button terminates
+continuous flow mode and stops the continuous flow operation in
+progress. In this case re-starting will not be possible (see image
+below).</p>
+<img alt="../_images/10000201000000AF00000041D5654AE6FF1B3C7A.png" src="../_images/10000201000000AF00000041D5654AE6FF1B3C7A.png" />
+</section>
+<section id="change-flow-rate-in-continuous-flow">
+<h2>Change flow rate in continuous flow<a class="headerlink" href="#change-flow-rate-in-continuous-flow" title="Link to this heading"></a></h2>
+<p>You can change the flow rate during a dosing run in all operating modes.
+To achieve this enter the desired flow rate into the <span class="guilabel">Flow</span> field <span class="guinum">❶</span>
+and confirm by clicking on <span class="guilabel">Start</span> <span class="guinum">❷</span> with the left mouse button (see image
+below).</p>
+<img alt="../_images/1000020100000226000000C881350B3A934EF760.png" src="../_images/1000020100000226000000C881350B3A934EF760.png" />
+<p>The dosing module accepts the
+change in flow rate, while retaining all other dosing parameters, such
+as volume or continuous flow parameters. When you configure continuous
+flow operation you will be shown the maximum dosing flow rate achievable
+with the currently set refill rate and the other continuous flow
+parameters, for guidance (see image below).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

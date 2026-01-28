@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Add-on &mdash; CETONI Elements Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CETONI Elements Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nemesys_EN/nemesys_EN.html">4. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_EN.html">5. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_EN.html">6. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_EN.html">7. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_EN.html">8. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_EN.html">9. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">10. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CETONI Elements Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python Add-on</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-add-on">
+<h1>Python Add-on<a class="headerlink" href="#python-add-on" title="Link to this heading"></a></h1>
+<img alt="../_images/python_header.svg" src="../_images/python_header.svg" /><section id="introduction-to-python-add-on">
+<h2>Introduction to Python Add-on<a class="headerlink" href="#introduction-to-python-add-on" title="Link to this heading"></a></h2>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>The CETONI Elements Python Add-on allows you to control and automate processes
+using Python scripting language.
+Check the created scripts/programs as well as parameter entries before you
+execute them for the first time! CETONI assumes no liability for direct and/or
+indirect damage to your system or external hardware and software components
+caused by the scripts/programs you have created or by the use of parameters
+that are not suitable or unfavorable for your specific application.</p>
+</div>
+<p>The Python add-on allows you to execute Python code in CETONI Elements
+scripts via a corresponding script function. It thus provides an easy
+way to include the Python scripting language in your CETONI Elements
+scripts.</p>
+<p>The embedded Python interpreter offers the same functionality as an
+execution of Python scripts via <strong class="command">python</strong> command. I.e. if you install
+libraries via <strong class="command">pip</strong> for the Python version used by the add-on, the
+functions of these Python libraries are also available in CETONI
+Elements.</p>
+<p>This gives you many additional possibilities such as accessing and
+parsing files, accessing databases, TCP/IP network communication via
+Python sockets or using complex analysis functions implemented in
+Python.</p>
+</section>
+<section id="installation">
+<span id="python-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>The Python add-on is not included in the standard installation package,
+but must be installed additionally as an add-on. The versions of the
+Python add-on and the installed CETONI Elements software should match.
+For example, if you want to install the Python add-on with version
+number <strong>20220126</strong>, the CETONI Elements software <strong>20220126</strong> should be
+installed.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The version number of the CETONI Elements
+software and the Python add-on should match. The version
+number of the Python add-on must never be greater than
+that of the CETONI Elements software. The greater the
+difference between the version numbers, the greater the
+risk of problems and errors.</p>
+</div>
+<p>For installation, run the file <code class="file docutils literal notranslate"><span class="pre">CETONI_Elements_Python_64bit_Setup.exe</span></code>.
+The installation wizard will then guide you through the installation of
+the software.</p>
+<p><img alt="image4" src="../_images/10000201000001F300000184E6B4E02B1D179B7A.png" /></p>
+<p>To use the Python add-on, a suitable Python 64-bit version
+must be installed on your computer. In the installation step <em>Choose
+Components</em> you can see the required version (here e.g. Python 3.8) and
+select it for installation if it is not yet available on your computer.</p>
+<img alt="../_images/10000201000001F300000184EEFA5602FDC005BD.png" src="../_images/10000201000001F300000184EEFA5602FDC005BD.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>On Windows, you must be logged in with
+administrator privileges to install the add-on, as it is
+installed for all users.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>The installed Python version <strong>must</strong>
+match the version specified in the installer. The plugin
+will not work correctly with other versions.</p>
+</div>
+</section>
+<section id="python-console">
+<h2>Python Console<a class="headerlink" href="#python-console" title="Link to this heading"></a></h2>
+<section id="overview-of-python-console">
+<h3>Overview of Python Console<a class="headerlink" href="#overview-of-python-console" title="Link to this heading"></a></h3>
+<p>The Python add-on has a Python console that allows you to interactively
+enter and execute Python code similar to the standard Python console.
+You can show the Python console from the main menu
+(<span class="menuselection">Window → Show View → Scripting → Python Console</span>):</p>
+<img alt="../_images/10000201000001EB00000073BDF3384E8179E4AB.png" src="../_images/10000201000001EB00000073BDF3384E8179E4AB.png" />
+<p>In the Python console, you can try out commands, test access
+to objects, and it helps you debug problems. If function calls work in
+the console, you can use them in your script.</p>
+</section>
+<section id="context-menu-of-python-console">
+<h3>Context Menu of Python Console<a class="headerlink" href="#context-menu-of-python-console" title="Link to this heading"></a></h3>
+<p>The context menu of the Python console contains the usual commands for
+text editing:</p>
+<p><img alt="image12" src="../_images/10000201000001F7000000E586F7E58BD20D8C3D.png" /></p>
+<p>To delete the contents of the console, select <span class="guilabel">Clear</span> <span class="guinum">❶</span> in
+the context menu or click the trash can icon <span class="guinum">❷</span> in the title bar.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Risk of malfunction or data loss !
+Do not use the Python Console in a running experiment,
+process or during normal operation or productive use.
+Incorrect input or access to resources can possibly
+lead to a crash of the software.</p>
+</div>
+</section>
+<section id="code-completion">
+<h3>Code completion<a class="headerlink" href="#code-completion" title="Link to this heading"></a></h3>
+<p>The Python console supports you during the typing with a simple code
+completion. I.e., if you have imported modules, then the code completion
+supports you with the source code editing by suitable suggestions, like
+you are used to it from other code editors.</p>
+<p><img alt="image16" src="../_images/10000201000001F80000008CC938D11BE28032EE.png" /></p>
+<p>In the example above all functions from the <em>cetoni_elements</em>
+module were imported. After entering <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.get</span></code>, matching functions
+for the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object are displayed that start with <code class="code docutils literal notranslate"><span class="pre">get</span></code>.</p>
+</section>
+<section id="error-messages">
+<h3>Error messages<a class="headerlink" href="#error-messages" title="Link to this heading"></a></h3>
+<p>Errors that occur when executing code in the Python console, as well as
+errors that occur when executing Python code in the Python script
+function, are displayed to you as red text in the Python console.</p>
+<p><img alt="image17" src="../_images/10000201000001EF00000062B50A9A0A013ADF8C.png" /></p>
+</section>
+</section>
+<section id="python-modules">
+<h2>Python Modules<a class="headerlink" href="#python-modules" title="Link to this heading"></a></h2>
+<section id="import-standard-modules">
+<h3>Import standard modules<a class="headerlink" href="#import-standard-modules" title="Link to this heading"></a></h3>
+<p>The plugin uses a standard Python installation and thus has access to
+all standard Python modules or to other modules installed via <code class="file docutils literal notranslate"><span class="pre">pip</span></code>. You
+can import a module as usual using the <code class="code docutils literal notranslate"><span class="pre">import</span></code> statement. In the
+following example the <code class="file docutils literal notranslate"><span class="pre">time</span></code> module is imported and used:</p>
+<p><img alt="image18" src="../_images/10000201000001F80000008C5125B8F7F53F8BDD.png" /></p>
+</section>
+<section id="import-custom-modules">
+<h3>Import custom modules<a class="headerlink" href="#import-custom-modules" title="Link to this heading"></a></h3>
+<p>If you use your custom modules that you want to distribute or ship with
+your project, you can store them in the <code class="file docutils literal notranslate"><span class="pre">Scripts/Python</span></code> subfolder of
+your current project. This directory is added by the software to the
+<code class="code docutils literal notranslate"><span class="pre">sys.path</span></code> of the Python interpreter. For example, if you are working
+in the <em>PythonDev</em> project, then the absolute path to this directory
+would be:</p>
+<p class="centered">
+<strong><code class="file docutils literal notranslate"><span class="pre">C:/Users/Public/Documents/QmixElements/Projects/PythonDev/Scripts/Python</span></code></strong></p><p>If you import the module <code class="code docutils literal notranslate"><span class="pre">sys</span></code> in the Python console, then you can see
+via <code class="code docutils literal notranslate"><span class="pre">sys.path</span></code> that the above directory is in the import path.</p>
+<p><img alt="image19" src="../_images/100002010000025D00000083173EACC09611440F.png" /></p>
+<p>To test the import functionality, create the <code class="file docutils literal notranslate"><span class="pre">hello.py</span></code> file
+in the above folder with the following content:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">helloworld</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can now import this module and use the <code class="code docutils literal notranslate"><span class="pre">helloworld</span></code> function:</p>
+<p><img alt="image20" src="../_images/100002010000021E0000007B7A4EF3D62F1DF696.png" /></p>
+</section>
+</section>
+<section id="accessing-application-objects">
+<h2>Accessing application objects<a class="headerlink" href="#accessing-application-objects" title="Link to this heading"></a></h2>
+<section id="the-cetoni-elements-module">
+<h3>The cetoni_elements module<a class="headerlink" href="#the-cetoni-elements-module" title="Link to this heading"></a></h3>
+<p>The software adds a module <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> to the Python interpreter,
+which can be used to access application objects. After importing the
+module via <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">cetoni_elements</span> <span class="pre">import</span> <span class="pre">*</span></code> you can access these
+objects. The <a class="reference internal" href="#scriptenv">ScriptEnv</a> object is the central object for accessing
+available devices and application objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference internal" href="#python-api"><span class="std std-ref">API Reference</span></a> for a detailed description of the ScriptEnv object.</p>
+</div>
+<p>The following image shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module
+and then call the <code class="code docutils literal notranslate"><span class="pre">help()</span></code> function of the <a class="reference internal" href="#scriptenv">ScriptEnv</a> object:</p>
+<p><img alt="image21" src="../_images/10000201000001F100000088C0C4A7C7C9B93CC8.png" /></p>
+</section>
+<section id="display-properties-and-methods-of-objects">
+<h3>Display properties and methods of objects<a class="headerlink" href="#display-properties-and-methods-of-objects" title="Link to this heading"></a></h3>
+<p>Using the Python function <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> you can display all methods and
+properties of application objects. For example, you can use it to
+display all the functions and properties of the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object.</p>
+<p><img alt="image22" src="../_images/10000201000002260000007A3CE2023C617A29C5.png" /></p>
+<p>Alternatively, all application objects also have a <code class="code docutils literal notranslate"><span class="pre">help()</span></code>
+function that provides a clearer display of an object’s properties and
+methods. In the figure below you can see the call of <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.help()</span></code>.
+The console shows the <code class="code docutils literal notranslate"><span class="pre">Properties</span></code> <span class="guinum">❶</span> and methods (<code class="code docutils literal notranslate"><span class="pre">Slots</span></code> <span class="guinum">❷</span>) of the
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object:</p>
+<a class="reference internal image-reference" href="../_images/10000201000002260000011A8780E1969FECAAC9.png"><img alt="../_images/10000201000002260000011A8780E1969FECAAC9.png" src="../_images/10000201000002260000011A8780E1969FECAAC9.png" style="width: 14.557cm;" /></a>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
+functions to get an overview of the methods and
+properties of a given object.</p>
+</div>
+</section>
+<section id="using-device-objects">
+<h3>Using device objects<a class="headerlink" href="#using-device-objects" title="Link to this heading"></a></h3>
+<p>You can access device objects using the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDevice()</span></code>
+function. To get an overview of available device names you can call the
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getDeviceNames()</span></code> function.</p>
+<p><img alt="image26" src="../_images/1000020100000240000000AEB0E9BCC2CF19CA4A.png" /></p>
+<p>The code completion helps you to enter a device name by
+showing you a list of matching names (see figure above). If you call the
+<code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code> function without an assignment to a variable, then you can
+see in the console if the call was successful:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+CNemesys4Pump<span class="w"> </span><span class="o">(</span>QtLabb::CNemesys4Pump<span class="w"> </span>at:<span class="w"> </span>0x000002402DDCBF20<span class="o">)</span>
+</pre></div>
+</div>
+<p>To access a device, assign the result of the call to <code class="code docutils literal notranslate"><span class="pre">getDevice()</span></code> to a
+variable. In the following example, we assign the device object for the
+first Nemesys S pump to the variable <code class="code docutils literal notranslate"><span class="pre">pump</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span><span class="nv">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Now you can use the <code class="code docutils literal notranslate"><span class="pre">dir(pump)</span></code> and <code class="code docutils literal notranslate"><span class="pre">pump.help()</span></code> functions to get an
+overview of the available methods and functions of the pump object.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
+functions to get an overview of the methods and
+properties of device objects.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>For many devices, accessing device
+properties and methods or displaying help via
+<code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code> is only possible if the application is
+connected to the devices.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p><strong>Risk of malfunction / data loss !</strong>
+Via device functions you may have access to functions
+that are not available in the graphical user interface.
+Always test functions outside running processes and not
+during productive use. Incorrect input or access to
+resources, methods or properties can lead to
+malfunctions or a crash of the software.</p>
+</div>
+<p>When you are connected to the device, you can now access the device
+functionality via the device object functions. For example, you can
+trigger a refill process for the pump:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span>pump.refillSyringe<span class="o">()</span>
+</pre></div>
+</div>
+<p>or stop the pumping operation:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span>pump.stopPumping<span class="o">()</span>
+</pre></div>
+</div>
+<p>The following code shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, get
+the device object for the Nemesys S pump via the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object, and
+then start an emptying process of the syringe:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span>from<span class="w"> </span>cetoni_elements<span class="w"> </span>import
+py&gt;<span class="w"> </span><span class="nv">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getDevice<span class="o">(</span><span class="s2">&quot;Nemesys_S_1&quot;</span><span class="o">)</span>
+py&gt;<span class="w"> </span>pump.emptySyringe<span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<section id="using-application-objects">
+<h3>Using application objects<a class="headerlink" href="#using-application-objects" title="Link to this heading"></a></h3>
+<p>Similar to device objects, you can also access application objects that
+are no devices. Use the two functions <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getObject()</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">criptEnv.getObjectNames()</span></code> for this</p>
+<p>The following code shows how to import the <code class="code docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, get
+the application object of the graphical logger via the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code>
+object and then start logging:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py&gt;<span class="w"> </span>from<span class="w"> </span>cetoni_elements<span class="w"> </span>import<span class="w"> </span>*
+py&gt;<span class="w"> </span><span class="nv">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ScriptEnv.getObject<span class="o">(</span><span class="s2">&quot;ProcessDataGraph&quot;</span><span class="o">)</span>
+py&gt;<span class="w"> </span>plot.startLogging<span class="o">()</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">dir(object)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Object.help()</span></code>
+functions to get an overview of the methods and
+properties of application objects.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p><strong>Risk of malfunction / data loss !</strong>
+The functions of the application objects may give you
+access to functions that are not available in the
+graphical user interface. Always test functions outside
+running processes and not during productive use.
+Incorrect input or access to resources, methods or
+properties can lead to malfunctions or a crash of the
+software.</p>
+</div>
+</section>
+</section>
+<section id="python-script-function-execute-python-code">
+<h2>Python Script Function - Execute Python Code<a class="headerlink" href="#python-script-function-execute-python-code" title="Link to this heading"></a></h2>
+<section id="python-script-functions-overview">
+<h3>Python Script Functions Overview<a class="headerlink" href="#python-script-functions-overview" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg"><img alt="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" class="align-left" src="../_images/1000139A00000B6A00000B5A63C99382F8AF9D57.svg" width="60px" /></a>
+<p>The Python plugin adds the <code class="code docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">Python</span> <span class="pre">Code</span></code> script
+function to the <span class="guilabel">Core Functions</span> category of the <span class="guilabel">Script Pool</span>:</p>
+<img alt="../_images/1000020100000109000001120A8A8A9BB7B494E7.png" src="../_images/1000020100000109000001120A8A8A9BB7B494E7.png" />
+<p>This function allows you to execute Python code in the script
+system of the application. When you insert the function into your
+script, you will see the initial Python script in the configuration
+area. This script contains the two functions <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement your script logic in this function</span>
+<span class="c1"># Avoid blocking function calls</span>
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="k">return</span>
+
+
+<span class="c1"># Implement your clean up code here in case of script stop</span>
+<span class="c1"># Stop pending actions, clean up resources</span>
+<span class="c1"># Keep execution time of this function short and do not use</span>
+<span class="c1"># any blocking function calls</span>
+<span class="k">def</span> <span class="nf">script_abort</span><span class="p">():</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>When the script is executed, it is loaded by the Python
+interpreter as a separate module and then the <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> function
+is called. I.e. this function is the main function of the script and the
+logic should be implemented there.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All options you have in the Python console
+to access device objects and application objects are
+also available in the script function.</p>
+</div>
+<p>The Python interpreter can only execute one Python script at a time.
+Parallel execution is not possible. If you use Python scripts in
+parallel sequences, then the scripts are executed one after the other,
+i.e. a parallel execution branch blocks until the execution of a script
+in another branch is completed. This is another reason why you should
+keep the execution time of scripts as short as possible. If you use
+non-blocking Python scripts with short execution times,
+“almost-parallel” execution in parallel sequences is possible.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Parallel execution of multiple Python
+functions is not possible. If Python scripts are used
+in parallel sequences, they are executed one after the
+other.</p>
+</div>
+</section>
+<section id="python-script-editor">
+<h3>Python Script Editor<a class="headerlink" href="#python-script-editor" title="Link to this heading"></a></h3>
+<p>The Python Script function has a Python code editor to assist you in
+writing Python code.</p>
+<img alt="../_images/10000201000002220000012B6A5FF31AA3060F79.png" src="../_images/10000201000002220000012B6A5FF31AA3060F79.png" />
+<p>The editor has the following features</p>
+<ul class="simple">
+<li><p>Syntax highlighting for Python code <span class="guinum">❶</span></p></li>
+<li><p>a simple code completion</p></li>
+<li><p>Code Folding <span class="guinum">❷</span></p></li>
+<li><p>Line numbers <span class="guinum">❸</span></p></li>
+<li><p>Undo / Redo functionality <span class="guinum">❹</span></p></li>
+</ul>
+<p>Some functions of the editor are available via the context menu, other
+functions are available via keyboard shortcuts. Here are some of the
+functions:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action</p></th>
+<th class="head"><p>Keyboard Shortcut</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Increase font size</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">+</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Decrease font size</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">-</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Reset font size to default</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">0</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Indent selected code block</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Tab</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Unindent selected code block</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">Tab</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Undo</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Z</kbd> or context menu</p></td>
+</tr>
+<tr class="row-even"><td><p>Redo</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Y</kbd> or contexte menu</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Editing the Python source code is only
+possible when the script is not running. Once the
+script has been started, editing of the source code is
+disabled. In case of an error you have to terminate the
+script via the <span class="guilabel">Terminate Script</span> button before you
+can edit the Python code.</p>
+</div>
+</section>
+<section id="handle-script-termination-script-abort">
+<h3>Handle script termination - script_abort()<a class="headerlink" href="#handle-script-termination-script-abort" title="Link to this heading"></a></h3>
+<p>If the running script is terminated via the <span class="guilabel">Terminate Script</span> button of
+the Script Editor (see figure below), then the execution of
+<code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> is interrupted and the <code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code> function is
+executed:</p>
+<p><img alt="image54" src="../_images/10000201000001950000009E1928E5F4B3BBCE66.png" /></p>
+<p>In case of such an abort, you will see a corresponding error
+message in the Python console:</p>
+<p><img alt="image55" src="../_images/10000201000001F60000006B04A15868149985AC.png" /></p>
+<p>If you want to act on the abort of the script, e.g. to
+release resources or to inform the user, you can do this in the
+<code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code> function. If you want to access data or objects (e.g.
+file handles, sockets or similar) in the <code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code> function
+which you have used before in the <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> function, you can do
+this via global variables. The following script shows a corresponding
+example. The <code class="code docutils literal notranslate"><span class="pre">script_abort()</span></code> function outputs the number of loop cycles
+that were executed before the script was aborted. Both functions access
+the global variable <code class="code docutils literal notranslate"><span class="pre">counter</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">counter</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="k">global</span> <span class="n">counter</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+      <span class="n">counter</span> <span class="o">=</span> <span class="n">i</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">script_abort</span><span class="p">():</span>
+   <span class="k">global</span> <span class="n">counter</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;script_abort() after &quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="s2">&quot; loops&quot;</span><span class="p">)</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+</section>
+<section id="implementation-of-the-function-logic-in-script-exec">
+<h3>Implementation of the function logic in script_exec()<a class="headerlink" href="#implementation-of-the-function-logic-in-script-exec" title="Link to this heading"></a></h3>
+<p>When implementing the script in <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code> you should be careful
+not to use blocking functions or blocking waits. The Python interpreter
+can be interrupted via the <span class="guilabel">Terminate Script</span> button only after the
+execution of the current Python statement. If the current statement is a
+blocking function call, e.g. <code class="code docutils literal notranslate"><span class="pre">time.wait(10)</span></code>, the interpreter can only
+be interrupted after 10 seconds when the wait call has finished.
+Therefore, always add a timeout to blocking function calls.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Do not use blocking function calls to
+avoid blocking termination of script execution. Always
+add a timeout to blocking function calls.</p>
+</div>
+<p>In the following example, the call to <code class="code docutils literal notranslate"><span class="pre">socket.recv()</span></code> in line 8 is
+blocking. I.e. the call returns only when data has been received. As
+long as no data is received, the function blocks and the script cannot
+be aborted cleanly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
+   <span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
+   <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>To fix this problem the call to <code class="code docutils literal notranslate"><span class="pre">socket.recv()</span></code> should have a timeout.
+This has been implemented in the following example using the
+<code class="code docutils literal notranslate"><span class="pre">socket.settimeout()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>  <span class="c1"># The server&#39;s hostname or IP address</span>
+   <span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>        <span class="c1"># The port used by the server</span>
+   <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+      <span class="k">try</span><span class="p">:</span>
+         <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
+      <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+</section>
+<section id="script-execution-errors">
+<h3>Script execution errors<a class="headerlink" href="#script-execution-errors" title="Link to this heading"></a></h3>
+<p>If errors occur during the execution of a script, you will see them in
+the <span class="guilabel">Event Log</span> and in the <span class="guilabel">Python console</span>.
+If you hover over the error message in the event log, you will see a hint
+window with details:</p>
+<p><img alt="image59" src="../_images/1000020100000299000000B54BF487EBAF7E8E66.png" /></p>
+<p>In the Python console, the error message is displayed to you
+as red error text:</p>
+<p><img alt="image60" src="../_images/10000201000001D000000061F880AB480C04AA56.png" /></p>
+<p>In the error message you will also get the information in
+which line of the script an error occurred. This will help you to find
+and fix the error in the script editor.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Editing the Python source code is only
+possible when the script is not running. Once the
+script has been started, editing of the source code is
+disabled. In case of an error you have to terminate the
+script via the <span class="guilabel">Terminate Script</span> button before you can
+edit the Python code.</p>
+</div>
+</section>
+<section id="using-custom-modules">
+<h3>Using custom modules<a class="headerlink" href="#using-custom-modules" title="Link to this heading"></a></h3>
+<p>If your script contains very complex and extensive logic, you may want
+to offload the code to an external module and include it using the
+import functionality (see section <a class="reference internal" href="#import-custom-modules">Import custom modules</a>). You can then call
+the functions of the imported module from within <code class="code docutils literal notranslate"><span class="pre">script_exec()</span></code>.</p>
+<p>In the following example we import our own module <code class="file docutils literal notranslate"><span class="pre">hello</span></code> and call its
+function <code class="code docutils literal notranslate"><span class="pre">helloworld()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hello</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>The output of the script appears both in the event log:</p>
+<p><img alt="image64" src="../_images/100002010000018E0000004E45BDDA2F2CB1A1E9.png" /></p>
+<p>and in the Python console:</p>
+<p><img alt="image65" src="../_images/1000020100000157000000475414DB3324BBC74A.png" /></p>
+<p>If you make changes to the external module after the module
+has already been imported, then these changes will not be available in
+your Python script in the application. This is the normal way the Python
+interpreter works - once a module has been imported, it will not be
+imported again. As a test, add the <code class="code docutils literal notranslate"><span class="pre">hellouniverse()</span></code> function to your
+own <code class="file docutils literal notranslate"><span class="pre">hello</span></code> module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hellouniverse</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello universe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now call the new function from your application script. When running,
+you will receive the information that the <code class="code docutils literal notranslate"><span class="pre">hellouniverse</span></code> function is
+not available.</p>
+<p>To avoid restarting the application after changing the external module,
+you can explicitly request a reload in your script using the <code class="code docutils literal notranslate"><span class="pre">reload()</span></code>
+function from the <code class="file docutils literal notranslate"><span class="pre">importlib</span></code> module. To do this, modify your Python
+script in the application as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hello</span>
+<span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">reload</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">reload</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span> <span class="c1"># trigger explicit reload of hello module</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">helloworld</span><span class="p">()</span>
+   <span class="n">hello</span><span class="o">.</span><span class="n">hellouniverse</span><span class="p">()</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>The script is now executed without errors.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <code class="code docutils literal notranslate"><span class="pre">importlib.reload()</span></code> function
+when making changes to external modules after you have
+already imported them via import into your Python
+script in the application.</p>
+</div>
+</section>
+<section id="accessing-script-variables">
+<h3>Accessing script variables<a class="headerlink" href="#accessing-script-variables" title="Link to this heading"></a></h3>
+<p>To be able to pass the results of calculations in Python code to the
+running script or to react to values from the script, it is necessary to
+access script variables. To do this, import the <code class="file docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module
+(see section <a class="reference internal" href="#the-cetoni-elements-module">The cetoni_elements module</a>).</p>
+<p>Once you have imported the module, you can access script variables using
+the <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.getVar()</span></code>, <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVar()</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVars()</span></code> functions. The following example shows how to read
+the script variable <code class="code docutils literal notranslate"><span class="pre">$Flow</span></code>, increment it by 2 and then store the
+calculated value back into the script variable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">flow</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
+   <span class="n">flow</span> <span class="o">=</span> <span class="n">flow</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Flow&quot;</span><span class="p">,</span> <span class="n">flow</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Remember that script variables in
+Python script always start with a dollar sign - <code class="code docutils literal notranslate"><span class="pre">$VarName</span></code>.</p>
+</div>
+<p>Script variables can also be used to access devices. Script variables
+can store device references. By reading the device reference and
+assigning it to a Python variable, the device object can be accessed. In
+the following example, the <code class="code docutils literal notranslate"><span class="pre">$Pump1</span></code> script variable contains a device
+reference of the <em>Nemesys_S_1</em> pump that was assigned to the variable in
+the <em>Create Variable</em> function. The device reference is read from the
+variable and assigned to the Python variable <code class="code docutils literal notranslate"><span class="pre">pump</span></code>. Now device
+functions can be accessed via the <code class="code docutils literal notranslate"><span class="pre">pump</span></code> variable. In this example, the
+syringe is emptied via <code class="code docutils literal notranslate"><span class="pre">pump.emptySyringe()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">pump</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s2">&quot;$Pump1&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">pump</span><span class="p">)</span>
+   <span class="n">pump</span><span class="o">.</span><span class="n">emptySyringe</span><span class="p">()</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>It is also possible to create lists in Python and to store them in a
+script variable. The following example creates a list of 4 values and
+stores them in the script variable <code class="code docutils literal notranslate"><span class="pre">$Positions</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$Positions&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+<p>Instead of simple values, it is possible to create lists of devices and
+store them in variables. In the following example a list is created
+which contains the two digital inputs of the first <em>Nemesys S</em> pump.
+This list is stored in the script variable <code class="code docutils literal notranslate"><span class="pre">$DigitalInputs</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+   <span class="n">di1</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN1&quot;</span><span class="p">)</span>
+   <span class="n">di2</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s2">&quot;Nemesys_S_1_DigIN2&quot;</span><span class="p">)</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s2">&quot;$DigitalInputs&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">di1</span><span class="p">,</span> <span class="n">di2</span><span class="p">])</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="example-scripts">
+<h2>Example scripts<a class="headerlink" href="#example-scripts" title="Link to this heading"></a></h2>
+<section id="barcode-scanner">
+<h3>Barcode Scanner<a class="headerlink" href="#barcode-scanner" title="Link to this heading"></a></h3>
+<p>The following example script shows how the camera support of CETONI
+Elements can be used to implement a barcode scanner using the
+<a class="reference external" href="https://pypi.org/project/pyzbar/">pyzbar</a> module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">pyzbar</span> <span class="kn">import</span> <span class="n">pyzbar</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">qimage2ndarray</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">cetoni_elements</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># Main script function</span>
+<span class="linenos"> 7</span><span class="k">def</span> <span class="nf">script_exec</span><span class="p">():</span>
+<span class="linenos"> 8</span>   <span class="n">barcode</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos"> 9</span>   <span class="n">camera</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s1">&#39;Qmix_CAM_1&#39;</span><span class="p">)</span>
+<span class="linenos">10</span>   <span class="n">qimage</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">capturedPreviewImage</span><span class="p">()</span>
+<span class="linenos">11</span>   <span class="n">frame</span> <span class="o">=</span> <span class="n">qimage2ndarray</span><span class="o">.</span><span class="n">rgb_view</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span>
+<span class="linenos">12</span>   <span class="n">barcodes</span> <span class="o">=</span> <span class="n">pyzbar</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+<span class="linenos">13</span>   <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">barcodes</span><span class="p">:</span>
+<span class="linenos">14</span>      <span class="n">barcode</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="linenos">15</span>      <span class="k">break</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>   <span class="c1"># output</span>
+<span class="linenos">18</span>   <span class="k">if</span> <span class="n">barcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">19</span>      <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="n">barcode</span><span class="p">)</span>
+<span class="linenos">20</span>   <span class="k">else</span><span class="p">:</span>
+<span class="linenos">21</span>      <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="linenos">22</span>   <span class="k">return</span>
+</pre></div>
+</div>
+<p>By importing the <code class="file docutils literal notranslate"><span class="pre">cetoni_elements</span></code> module, the CETONI Elements camera
+can be accessed and an image can be captured:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">camera</span> <span class="o">=</span> <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s1">&#39;Qmix_CAM_1&#39;</span><span class="p">)</span>
+<span class="n">qimage</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">capturedPreviewImage</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://pypi.org/project/qimage2ndarray/">qimage2ndarrays</a>
+module helps us to convert the captured image in <code class="code docutils literal notranslate"><span class="pre">QImage</span></code> format into a
+<code class="code docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, which is required by the
+<a class="reference external" href="https://pypi.org/project/pyzbar/">pyzbar</a> module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">qimage2ndarray</span><span class="o">.</span><span class="n">rgb_view</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can use the <a class="reference external" href="https://pypi.org/project/pyzbar/">pyzbar</a> module
+to decode the barcode:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">barcodes</span> <span class="o">=</span> <span class="n">pyzbar</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">barcodes</span><span class="p">:</span>
+   <span class="n">barcode</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+   <span class="k">break</span>
+</pre></div>
+</div>
+<p>In the last step the barcode is stored in the script variable <code class="code docutils literal notranslate"><span class="pre">$Barcode</span></code>
+with the function <code class="code docutils literal notranslate"><span class="pre">ScriptEnv.setVar()</span></code> so that it is available in the
+script and can be evaluated further.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">barcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="n">barcode</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">ScriptEnv</span><span class="o">.</span><span class="n">setVar</span><span class="p">(</span><span class="s1">&#39;$Barcode&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">return</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-reference">
+<span id="python-api"></span><h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<section id="scriptenv">
+<h3>ScriptEnv<a class="headerlink" href="#scriptenv" title="Link to this heading"></a></h3>
+<p>The <code class="code docutils literal notranslate"><span class="pre">ScriptEnv</span></code> object is the central object for accessing available
+devices and application objects.</p>
+<div class="breathe-sectiondef docutils container">
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv">
+<span id="_CPPv3NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getDeviceNamesEv"></span><span id="Python::CScriptEnvAccess::getDeviceNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aeccbcc8aa4e70a6fecd2da066ec0c8fe"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDeviceNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getDeviceNamesEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns a tuple with all device names that can be accessed from Python. </p>
+<p>Use the device name when calling the <code class="docutils literal notranslate"><a class="reference internal" href="#classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"><span class="std std-ref"><span class="pre">getDevice()</span></span></a></code> function to get the corresponding device object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getDeviceERK7QString"></span><span id="Python::CScriptEnvAccess::getDevice__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a91f6851b867ed8e7f2ff06479b1c726a"></span><span class="n"><span class="pre">QtLabb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CDevice</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getDeviceERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the device object for the given device name. </p>
+<p>The device object provides access to device-specific functions and properties of this device. The device names are the names that are also used in the CETONI Elements script system to access devices or device properties.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getDevice</span><span class="p">(</span><span class="s">&quot;Nemesys_S_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv">
+<span id="_CPPv3NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="_CPPv2NK6Python16CScriptEnvAccess14getObjectNamesEv"></span><span id="Python::CScriptEnvAccess::getObjectNamesC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1aebc2b852d0b10062fdf0ad18fbca3859"></span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObjectNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess14getObjectNamesEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns a list of all registered application objects that are not devices and that can be accessed from Python, such as the graphical logger. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess9getObjectERK7QString"></span><span id="Python::CScriptEnvAccess::getObject__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a503f83d2297c44a6617c539bc798e0fb"></span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getObject</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess9getObjectERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the object with the given object name <code class="docutils literal notranslate"><span class="pre">Name</span></code>. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getObject</span><span class="p">(</span><span class="s">&quot;ProcessDataGraph&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString">
+<span id="_CPPv3NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="_CPPv2NK6Python16CScriptEnvAccess6getVarERK7QString"></span><span id="Python::CScriptEnvAccess::getVar__QStringCRC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1ac97676172ce79c81a8aa15b994909ae9"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">VarName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Python16CScriptEnvAccess6getVarERK7QString" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the value of a certain script variable. </p>
+<p>The variable name needs to start with a dollar sign.</p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">getVar</span><span class="p">(</span><span class="s">&quot;$FlowRate&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant">
+<span id="_CPPv3N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="_CPPv2N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant"></span><span id="Python::CScriptEnvAccess::setVar__QStringCR.QVariantCR"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a7710c14e9b48f9b779c2819b59d30a49"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Python16CScriptEnvAccess6setVarERK7QStringRK8QVariant" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets the value of the script variable to the given value. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVar</span><span class="p">(</span><span class="s">&quot;$TargetPos&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Python16CScriptEnvAccess7setVarsEK11QVariantMap">
+<span id="_CPPv3N6Python16CScriptEnvAccess7setVarsEK11QVariantMap"></span><span id="_CPPv2N6Python16CScriptEnvAccess7setVarsEK11QVariantMap"></span><span id="Python::CScriptEnvAccess::setVars__QVariantMapC"></span><span class="target" id="classPython_1_1CScriptEnvAccess_1a94259e9a9d31737b8940a7c7d9dd4b87"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVars</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Python16CScriptEnvAccess7setVarsEK11QVariantMap" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets multiple script variables using a Python dictionary. </p>
+<p><strong>Example:</strong> <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScriptEnv</span><span class="p">.</span><span class="n">setVars</span><span class="p">({</span><span class="s">&quot;$Value1&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$Value2&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">})</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

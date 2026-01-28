@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemesys Plugin &mdash; CETONI Elements Full Manual</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/style_override.css?v=ce09112c" />
+      <link rel="stylesheet" type="text/css" href="../_static/cetoni_style_override_css/color_roles.css?v=7881a399" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b7a8dedb"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_full.html" class="icon icon-home">
+            CETONI Elements Full Manual
+              <img src="../_static/logo_cetoni_elements4.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation_EN/Installation_EN.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QmixElementsADS_EN/QmixElementsADS_EN.html">2. CETONI Elements - An Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixdevices_EN/qmixdevices_full_EN.html">3. Creating Device Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part1_EN/scriptingsystem_part1_EN.html">4. Script System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptingsystem_part2_EN/scriptingsystem_part2_EN.html">5. Generic Script Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript_EN/javascript_EN.html">6. Using JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nemesys_full_EN.html">7. Nemesys Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html">8. I/O Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixcontroller_EN/qmixcontroller_full_EN.html">9. Controller Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qmixv_EN/qmixv_full_EN.html">10. Valve Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tubingpump_EN/tubingpump_EN.html">11. Tubing Pump Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rotaxys_EN/rotaxys_EN.html">12. Rotaxys / Nemaxys Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../balance_EN/balance_EN.html">13. Balances Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ledarray_EN/ledarray_EN.html">14. LED Array Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cameraview_EN/cameraview_EN.html">15. Camera Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imageanalysis_EN/imageanalysis_EN.html">16. Image Analysis Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videobuilder_EN/videobuilder_EN.html">17. Video Builder Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datalogger_EN/datalogger_full_EN.html">18. CSV Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphlogger_EN/graphlogger_full_EN.html">19. Graphical Data Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database_EN/database_EN.html">20. Database Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sila_EN/sila_EN.html">21. SiLA 2 Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spectroscopy_EN/spectroscopy_EN.html">22. Spectroscopy Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../daq_EN/daq_EN.html">23. DAQ Add-on</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canopentools_EN/canopentools_EN.html">24. CANopen Tools Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Appendix_EN/Appendix_EN.html">25. Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_full.html">CETONI Elements Full Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_full.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nemesys Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nemesys-plugin">
+<h1>Nemesys Plugin<a class="headerlink" href="#nemesys-plugin" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The Nemesys Plugin is for controlling the CETONI Nemesys syringe pumps.
+In the Nemesys View (figure below), operating panels are displayed for all
+existing and configured syringe pumps.</p>
+<p><img alt="Figure 1: Nemesys workspace" src="../_images/100000000000045E000002BE838E4D417C3553CE.png" /></p>
+<p>If the Nemesys View is not visible, then select
+<span class="menuselection">Window → Show View → Nemesys</span> from the main menu or click
+the <span class="guilabel">Nemesys</span> button in the sidebar.</p>
+</section>
+<section id="pump-operating-panel">
+<h2>Pump Operating Panel<a class="headerlink" href="#pump-operating-panel" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>Each operating panel is used to control, configure and visualize a
+Nemesys dosing module. It contains all the control elements for
+configuring and controlling the pump parameters and for visualizing the
+current status.</p>
+<p><img alt="image1" src="../_images/10000201000000DA0000027D087AA389826F3C49.png" /></p>
+<p>The panel consists of</p>
+<ol class="arabic simple guinums">
+<li><p>Caption of the syringe pump</p></li>
+<li><p>Level indicator</p></li>
+<li><p>Control elements (depending on operating mode)</p></li>
+<li><p>Valve switching and status</p></li>
+<li><p>Display of the internal force sensor if supported by the device</p></li>
+</ol>
+<p>The force sensor display is hidden by default. To show the display, select
+<span class="menuselection">Show Force Indicator</span> from the context menu.</p>
+<img alt="../_images/show_force_sensor.png" src="../_images/show_force_sensor.png" />
+</section>
+<section id="changing-module-names">
+<h3>Changing module names<a class="headerlink" href="#changing-module-names" title="Link to this heading"></a></h3>
+<p>You can assign a unique name to each
+dosing unit. For example, you can indicate which liquid a dosing unit
+doses or what it is used for. To assign a new name, simply make a left
+mouse click on the name of the dosing unit. You can then enter a new
+name, and confirm the entry with <kbd class="kbd docutils literal notranslate">Return</kbd> (Figure below).</p>
+<p><img alt="Figure 2: Changing module name" src="../_images/1000020100000153000000865EA46C8D528E4051.png" /></p>
+</section>
+<section id="syringe-level-indicator">
+<h3>Syringe level indicator<a class="headerlink" href="#syringe-level-indicator" title="Link to this heading"></a></h3>
+<p>The fill level indicator of the syringe always shows the current
+position of the drive unit, and thus the current fill level of the
+syringe used. The colour of the syringe also indicates the current
+motion of the dosing unit, so you can immediately see the direction of
+motion of the syringe even with a very low flow rate. The following
+colours are possible:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100000000000004600000055B5BD133DBED7017F.png"><img alt="image8" src="../_images/100000000000004600000055B5BD133DBED7017F.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Grey</strong> - The drive unit is currently inactive.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000000000000460000005571CC2832E2E47223.png"><img alt="image9" src="../_images/10000000000000460000005571CC2832E2E47223.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Blue</strong> - The syringe piston is moving in the direction
+of the syringe clamp (Dispensing).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000000000000046000000555AB1B48CFF3950BB.png"><img alt="image10" src="../_images/1000000000000046000000555AB1B48CFF3950BB.png" style="width: 60px;" /></a></p></td>
+<td><p><strong>Orange</strong> - The syringe piston is moving away from the
+syringe clamp (Aspirating).</p></td>
+</tr>
+</tbody>
+</table>
+<p>This color coding of the direction of motion is also used in all other
+parts of the Nemesys plugin.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The colours of the syringes help you identify
+the direction of motion quickly, especially with very
+low flow rates, because it is almost impossible to see
+the position of the syringe piston changing.</p>
+</div>
+<p>The thickness of the syringe in the display indicates the approximate
+size of the currently clamped syringe. You should be very cautious with
+the use of higher flow rates, especially with very large syringes,
+because very high pressures can develop very quickly, which could damage
+the device (valve) or your application.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Risk of high pressures damaging the
+connectors in the liquid path. To avoid high pressures
+causing damage, never make a reference move with a
+high-pressure syringe clamped.</p>
+</div>
+</section>
+<section id="software-limits">
+<h3>Software limits<a class="headerlink" href="#software-limits" title="Link to this heading"></a></h3>
+<p>The travel path of a syringe is limited in the software by a minimum and
+a maximum value in order to prevent irreparable damage to the syringe or
+the piston being pulled out of the body of the syringe. These values are
+indicated by two red marks in the fill level indicator (Figure below),
+and they have to be defined for each syringe in the
+<a class="reference internal" href="nemesys_full_EN.html#syringe-configuration"><span class="std std-ref">Syringe configuration</span></a>.</p>
+<img alt="../_images/syringe_software_limits.png" src="../_images/syringe_software_limits.png" />
+</section>
+</section>
+<section id="force-monitoring">
+<h2>Force Monitoring<a class="headerlink" href="#force-monitoring" title="Link to this heading"></a></h2>
+<section id="introduction-to-force-monitoring">
+<h3>Introduction to Force Monitoring<a class="headerlink" href="#introduction-to-force-monitoring" title="Link to this heading"></a></h3>
+<p>The latest pumps in the Nemesys range (Nemesys M and Nemesys S) have an
+internal force sensor to monitor the force with which the syringe
+plunger is pressed into the syringe. This serves to minimize the risk of
+damage to the device, the syringes and the application.</p>
+<p>Each pump has a fixed maximum force value at which dosing stops:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Nemesys S</strong></p></td>
+<td><p>0.48 kN</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Nemesys M</strong></p></td>
+<td><p>1.3 kN</p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the maximum force can be further limited by a user
+adjustable force limit.</p>
+</section>
+<section id="operating-controls">
+<h3>Operating Controls<a class="headerlink" href="#operating-controls" title="Link to this heading"></a></h3>
+<p>In the operating panel of the pump you will find the display of the
+force monitoring <span class="guinum">❶</span> below the syringe display: If the display is hidden,
+you can show the display again via the context menu of the pump. In the
+context menu, select the menu item <span class="menuselection">Show Force Indicator</span>:</p>
+<img alt="../_images/show_force_sensor.png" src="../_images/show_force_sensor.png" />
+<p>The protective shield symbol <span class="guinum">❷</span> (see figure below) in the upper left
+corner of the force display indicates whether the force monitoring is
+active or inactive (symbol greyed out).</p>
+<p><img alt="image17" src="../_images/100002010000011500000099B1E7B77D37E1332E.png" /></p>
+<p>Dosage is only possible when force monitoring is activated.
+If you move the mouse arrow over the force indicator, additional
+information is displayed in a small window <span class="guinum">❸</span>:</p>
+<ul class="simple">
+<li><p><strong>Name</strong> of the force sensor channel (e.g. to query the sensor in the
+script or to use it in the logger).</p></li>
+<li><p><strong>Force range</strong> - the adjustable range of force monitoring</p></li>
+<li><p><strong>Force limit</strong> - the currently set maximum permissible force</p></li>
+<li><p><strong>Monitoring</strong> - indicates whether the force monitoring is active.</p></li>
+</ul>
+<p>To limit the maximum force, right-click in the force display and select
+the menu item <span class="menuselection">Configure Force Limit</span>:</p>
+<p><img alt="image18" src="../_images/1000020100000146000000800BD9B0432D00F22A.png" /></p>
+<p>Then enter the desired maximum force and click <span class="guilabel">OK</span>:</p>
+<img alt="../_images/100002010000010000000070D53D2787371955AA.png" src="../_images/100002010000010000000070D53D2787371955AA.png" />
+</section>
+<section id="what-to-do-after-a-force-overload-stop">
+<h3>What to do after a force overload stop<a class="headerlink" href="#what-to-do-after-a-force-overload-stop" title="Link to this heading"></a></h3>
+<p>If the maximum set force is exceeded while the pump is in use, the pump
+is stopped immediately and set to a fault state. This is shown in the
+figure below. The value of the force sensor (green curve) has exceeded
+the set force limit (red line) <span class="guinum">❶</span>.</p>
+<p><img alt="image19" src="../_images/100002010000041C0000027F06C58E855A268253.png" /></p>
+<p>The error status of the pump is indicated by the red flashing
+LED <span class="guinum">❷</span>. The current measured value of the force sensor can be seen in the
+force display <span class="guinum">❸</span>. In addition, the reason for the error is shown in the
+event log.</p>
+<p><img alt="image20" src="../_images/10000201000002EA0000005B00458FB9B9C5043B.png" /></p>
+<p>To reset the pump from this “overload” state to normal
+operating mode, proceed as follows:</p>
+<ol class="arabic steps">
+<li><p><strong>Disable force monitoring</strong>. Click with the right mouse button in
+the force display and select the menu item <em>Enable / Disable Force
+Monitoring</em>. The protective shield symbol should then be greyed out.</p>
+<p><img alt="image21" src="../_images/1000020100000205000000628984EFCAD3138B6D.png" /></p>
+<p>The event log informs you that the safety stop has now been
+reset and that only aspiration is possible:</p>
+<img alt="../_images/100002010000028C00000056870799632F9FDD06.png" src="../_images/100002010000028C00000056870799632F9FDD06.png" />
+</li>
+<li><p><strong>Enable pump</strong>. To activate the pump, right-click on the red status
+LED of the pump and select the menu item <em>Enable Pump Drive</em> from
+the context menu. The status LED of the pump must then light up
+green.</p>
+<img alt="../_images/10000201000000F30000006A80846DAA366E3158.png" src="../_images/10000201000000F30000006A80846DAA366E3158.png" />
+</li>
+<li><p><strong>Reduce force</strong>. You can now reduce the force by drawing up the
+syringe or starting a dosage with a negative flow rate. You should
+now see the value in the force display decrease. As soon as the
+force value falls below a threshold, the pump will stop and return
+to an error state. You should then see a corresponding message in
+the event log:</p>
+<img alt="../_images/10000201000002C70000005EE9E5349F4ACFEEAF.png" src="../_images/10000201000002C70000005EE9E5349F4ACFEEAF.png" />
+</li>
+<li><p><strong>Activate force monitoring</strong>. Now click with the right mouse button
+in the force display again and select the menu item <em>Enable /
+Disable Force Monitoring</em>. The force monitoring should then be
+active again and the shield symbol should be coloured:</p>
+<p><img alt="image22" src="../_images/10000201000000630000005FF329372D2B9DEC99.png" /></p>
+<p>In the event log you should now see the information that the
+force monitoring is active again and that the safety stop has been
+reset.</p>
+<img alt="../_images/10000201000001AA00000056EACFFD3C7DD5C0F4.png" src="../_images/10000201000001AA00000056EACFFD3C7DD5C0F4.png" />
+</li>
+<li><p><strong>Activate pump.</strong> To activate the pump, right-click on the red
+status LED of the pump again and select the menu item Enable Pump
+Drive from the context menu. The status LED of the pump must then
+light up green.</p>
+<img alt="../_images/10000201000000F30000006A80846DAA366E3158.png" src="../_images/10000201000000F30000006A80846DAA366E3158.png" />
+</li>
+</ol>
+<p>Now the pump is ready for operation and can be used as usual.</p>
+</section>
+</section>
+<section id="reference-move">
+<h2>Reference Move<a class="headerlink" href="#reference-move" title="Link to this heading"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>With the current <em>Nemesys M</em> and <em>Nemesys S</em>
+pumps, a reference move is no longer necessary and you
+can skip this chapter.</p>
+</div>
+<p>The drives of the dosing units are monitored and controlled by a digital
+positioning unit. You can make a reference move of the dosing unit to
+calibrate this positioning unit. A suitable time for this is, for
+example, when a syringe is changed, because the syringe has to be
+removed from the dosing unit in order to make a reference move. During
+the reference move, the dosing unit travels to its lower limit position,
+and calibrates your zero position when it reaches the limit position.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Always make a reference move if you
+operate the pumps from another PC, because the
+calibration data are stored on the PC and not in the
+dosing units.</p>
+</div>
+<img alt="../_images/start_reference_move.png" src="../_images/start_reference_move.png" />
+<p>To start a reference move, make a
+right mouse click in the operating panel of the dosing unit that is to
+be calibrated. Select the <span class="menuselection">Reference Move</span> menu item in the context menu
+that will open now.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Danger of damaging syringes! The system
+may only be calibrated when a syringe is not installed
+in the dosing unit.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Risk of high pressures damaging the
+connectors in the liquid path. To avoid high pressures
+causing damage, never make a reference move with a
+high-pressure syringe clamped.</p>
+</div>
+</section>
+<section id="valve">
+<h2>Valve<a class="headerlink" href="#valve" title="Link to this heading"></a></h2>
+<img alt="../_images/ventil.png" src="../_images/ventil.png" />
+<p>If your dosing unit has a valve, you can switch the valve or
+configure the automatic valve switching in this part of the operating
+panel. The current switching status of the valve is indicated by the
+valve control element.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Move the mouse cursor over the valve to get
+additional information about the valve.</p>
+</div>
+<section id="manual-valve-switching">
+<h3>Manual valve switching<a class="headerlink" href="#manual-valve-switching" title="Link to this heading"></a></h3>
+<p>To switch the valve, simply make a left mouse click on the valve icon
+(figure below). You should hear a soft click, and the valve image should
+switch to the other switching status.</p>
+<p><img alt="Figure 5: Manual valve switching" src="../_images/1000000000000195000000ADA27EB388AC14806E.png" /></p>
+<p>If you have a valve with more than
+two valve positions, you can cycle through all positions by clicking
+with the left mouse button on the valve image. If you hold down the
+<kbd class="kbd docutils literal notranslate">Shift</kbd> key when you click on the valve, you can cycle through the valve
+positions in the opposite direction:</p>
+<p><img alt="Figure 6: Inverted manual valve switching" src="../_images/10000000000001B10000009674312B473919102F.png" /></p>
+<p>Alternatively, you can
+select the desired valve position directly. Click with the right mouse
+button on the valve, and then select the context menu item
+<span class="menuselection">Switch Valve</span>.</p>
+<p><img alt="Figure 7: Showing valve context menu" src="../_images/100000000000016E000000B3905F4EAA693DD621.png" /></p>
+<p>A small dialog window comes up,
+where you can choose the desired valve switching position from a valve
+selection box. Once you select a position, the valve is switched
+immediately. You can finish the selection of a valve switching position
+by clicking the green check mark (see figure below).</p>
+<p><img alt="Figure 8: Selection of valve switching position" src="../_images/100000000000017C000000FBB8D53C0B60FC4150.png" /></p>
+</section>
+<section id="automatic-valve-switching">
+<h3>Automatic valve switching<a class="headerlink" href="#automatic-valve-switching" title="Link to this heading"></a></h3>
+<p>Each pump has a valve automatic, which automatically switches the
+associated valve when the pump state changes. The small orange
+<strong>A</strong>-icon overlay shows you whether the valve automatic mode is active.</p>
+<p><img alt="Figure 9: Valve automatic mode active" src="../_images/10000000000002230000009D317412D5E296952F.png" /></p>
+<p>To toggle the valve automatic,
+just click with the right mouse button on a valve and then select the
+menu item <span class="menuselection">Enable Valve Automatic</span>.</p>
+<p><img alt="Figure 10: Enable / disable valve automatic" src="../_images/10000000000001320000007D07F9BEE1F917E086.png" /></p>
+<p>To configure the
+automatic valve mode, click with the right mouse button on a valve and
+select the menu item <span class="menuselection">Configure Valve Automatic</span>.
+The valve automatic configuration dialog will then appear.</p>
+<p><img alt="Figure 11: Valve automatic configuration dialog" src="../_images/100000000000024E0000027078F3574498FE2E0F.png" /></p>
+<p>You can configure the
+target valve position for each pump state (<em>Aspiration, Stopped and
+Dispensing</em>) separately. To activate valve switching for a certain
+state, check the check box <span class="guinum">❶</span>. It is then displayed a selection box
+<span class="guinum">❷</span> for selection of the valve position. If you want to disable valve
+switching for a certain state, simply uncheck the check box <span class="guinum">❸</span>.
+Finish the configuration by clicking the <span class="guilabel">OK</span> <span class="guinum">❹</span> button.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>In certain dosing modes, such as during
+continuous dosing with two pumps, the valve automatic
+is temporarily disabled because the valves are switched
+by the logic of the respective operating mode.</p>
+</div>
+</section>
+<section id="assigning-a-valve">
+<h3>Assigning a Valve<a class="headerlink" href="#assigning-a-valve" title="Link to this heading"></a></h3>
+<p>You can assign a valve to each syringe pump, regardless of whether the
+pump has its own valve or not. This valve can be e.g. a Qmix V module,
+an external ball valve or the valve of another syringe pump. You can do
+this via drag &amp; drop. Simply drag the corresponding valve out of the
+valve list <span class="guinum">❶</span> onto the front panel <span class="guinum">❷</span> of the corresponding pump.</p>
+<img alt="../_images/1000020100000469000002A783AE238E93742740.png" src="../_images/1000020100000469000002A783AE238E93742740.png" />
+<p>To assign a valve, select the menu item <span class="menuselection">Assign Valve</span> from the context
+menu of a pump.</p>
+<p><img alt="Figure 13: Valve Assignment" src="../_images/100000000000017C000000A2A0DA88BD315B82A3.png" /></p>
+<p>Then select the valve from the valve
+list, which you want to assign.</p>
+<p><img alt="Figure 14: Valve selection dialog" src="../_images/10000000000001790000011DC571F9CE1064E587.png" /></p>
+<p>The new valve is then displayed
+below the syringe. When you configure and activate the valve automatic
+for this valve, the valve is automatically switched when aspirating and
+dispensing liquid and when stopping the pump.</p>
+<img alt="../_images/10000000000001400000009219520510E258BA22.png" src="../_images/10000000000001400000009219520510E258BA22.png" />
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>You can only assign one single valve to a certain pump.</p>
+</div>
+<p>If you want to restore the original valve configuration later, select
+the context menu item <span class="menuselection">Restore Default Valve</span>.</p>
+<img alt="../_images/100000000000017600000098413180ED58246500.png" src="../_images/100000000000017600000098413180ED58246500.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In section <a class="reference internal" href="nemesys_full_EN.html#connect-external-valves-to-i-o-interface"><span class="std std-ref">Connect external valves to I/O interface</span></a> you will find a detailed
+guide how to integrate external valve modules connected
+to the I/O interface (such as external ball valves) in
+the software.</p>
+</div>
+</section>
+</section>
+<section id="i-o-interface">
+<h2>I/O Interface<a class="headerlink" href="#i-o-interface" title="Link to this heading"></a></h2>
+<section id="i-o-interface-overview">
+<h3>I/O Interface Overview<a class="headerlink" href="#i-o-interface-overview" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="../_images/10000000000003880000025CBC968CAE13909DEE.png"><img alt="Figure 17: I/O interface Nemesys mid pressure pump V3" src="../_images/10000000000003880000025CBC968CAE13909DEE.png" style="width: 400px;" /></a></p>
+<p>Various Nemesys
+pumps offer an I/O interface for connecting external sensors and
+signals, or for outputting trigger signals (example shown below).</p>
+<p>Depending on the device configuration the I/O interface features digital
+inputs and outputs and/or analog inputs. All I/O channels can be found
+in the software window <em>I/O Channels</em>. If this window is not visible,
+you can show it by clicking the menu item <span class="menuselection">Window → Show View → I/O Channels</span>
+in the main menu (see figure below). The channels of a pump are grouped below the
+corresponding pump node.</p>
+<p><img alt="Figure 18: Showing I/O channel window" src="../_images/100002010000013E000000B74AE0265CA479D65B.png" /></p>
+<p>Each I/O channel has a unique
+name (e.g. <em>Nemesys 1 Analog In 1</em>), which is composed of the pump name
+(e.g. <em>Nemesys 1</em>) and the name of the channel (e.g. <em>Analog In 1</em>) like
+in the figure below.</p>
+<p><img alt="Figure 19: Nemesys I/O channels" src="../_images/100002010000021D0000011FD08A581F4A0DB149.png" /></p>
+</section>
+<section id="scaling-of-the-analog-inputs">
+<h3>Scaling of the analog inputs<a class="headerlink" href="#scaling-of-the-analog-inputs" title="Link to this heading"></a></h3>
+<p>The analog inputs of the modules measure the input voltage in the range
+of 0 - 5000 mV. For each channel, you can specify a separate scaling.
+This allows you for example to scale the voltage value of 0 - 5000 mV
+into a pressure value of 0 – 20 bar, if you have connected a pressure
+sensor. For details on configuring the channels or on scaling, read the
+section <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#configure-sensor-scaling"><span class="std std-ref">Configure Sensor Scaling</span></a> in the I/O Plugin documentation.</p>
+<p>In the following example, we will show you, how to connect a pressure
+sensor with the measuring range: 0.5 V - 4.5 V corresponds to 0 - 20
+bar. The sensor is connected to analog input 1. We will now define a
+scaling for this pressure sensor. To do this, click with the right mouse
+button in the channel row if of the I/O channel view and select the menu
+item <span class="menuselection">Configure channel</span>. The following configuration dialog is
+then displayed.</p>
+<p><img alt="Figure 20: Example: input scaling for pressure sensor" src="../_images/100002010000029C00000278588D110A32DA5302.png" /></p>
+<p>In this dialog, we configure the following values:</p>
+<ol class="arabic simple guinums">
+<li><p>as sensor type we choose <em>Pressure</em></p></li>
+<li><p>the basic unit bar corresponds to the unit in the data sheet of our
+sensor</p></li>
+<li><p>in the line <span class="guilabel">Device value</span>, enter the measuring range of the analog
+input: 500 mV to 4500 mV. In the <span class="guilabel">Scaled value</span> line, enter the
+measuring range of the sensor 0 - 20 bar.</p></li>
+<li><p>we select a meaningful name for the channel: <em>Presssure 1</em></p></li>
+<li><p>As the display unit, we select the pressure unit <em>psi</em> in the
+<span class="guilabel">Measuring unit</span> input field.</p></li>
+<li><p>by clicking <span class="guilabel">OK</span> we complete the configuration</p></li>
+</ol>
+<p>The measured pressure of the sensor is now displayed in the I/O Channel
+window in bar (see figure below).</p>
+<img alt="../_images/1000020100000217000000D0C2BA47560EE1E867.png" src="../_images/1000020100000217000000D0C2BA47560EE1E867.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For a detailed description of I/O channels,
+configuration and scaling, see the <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#i-o-plugin"><span class="std std-ref">I/O Plugin</span></a> documentation.</p>
+</div>
+</section>
+<section id="connect-external-valves-to-i-o-interface">
+<h3>Connect external valves to I/O interface<a class="headerlink" href="#connect-external-valves-to-i-o-interface" title="Link to this heading"></a></h3>
+<p>You can connect various external valves to the Nemesys I/O interface connector.
+To configure an external valve choose the context menu item
+<span class="menuselection">Configure external valves</span>.</p>
+<p><img alt="Figure 22: External valve configuration" src="../_images/10000201000001F4000000FD1C3EDAD5B9F8862F.png" /></p>
+<p>From the list of external valves, you can now select a device you want to
+connect to the I/O interface. The list of <span class="guilabel">Available Valves</span> <span class="guinum">❶</span> shows
+all valve devices that you can select. In the <span class="guilabel">Valve Parameters</span>
+<span class="guinum">❷</span> section, you will see detailed information abpout the selected valve type.</p>
+<p><img alt="Figure 23: Selection dialog for external I/O devices" src="../_images/10000201000001AE00000171BFE2001F1F2DF986.png" /></p>
+<p>For some valves, you may need to provide additional parameters <span class="guinum">❸</span>.
+If you are finished, confirm your selection with <span class="guilabel">OK</span>.</p>
+<p>After selecting a valve, a dialog may appear where you need to configure
+whether the valve is to be a primary valve or secondary valve.</p>
+<p><img alt="Figure 24: Primary / Secondary valve selection" src="../_images/1000000000000214000000A6D5C37AA1BE5C3A54.png" /></p>
+<p>The <em>primary valve</em> can be connected directly to the I/O interface. If you want to connect a
+second additional valve, you need a Y-cable or a distribution box. Since
+the second valve is connected to a different digital output, you need to
+choose <span class="guinum">❷</span> <em>Second Valve</em>.</p>
+<p>If you added a valve, the new valve will appear at the end of the valve
+list (see figure below). Now you can switch the valve positions or
+<a class="reference internal" href="nemesys_full_EN.html#assigning-a-valve"><span class="std std-ref">assign it to a pump</span></a>.</p>
+<p><img alt="Figure 25: Valve list with external valve as last list entry" src="../_images/10000000000001AC000000FE4D17491FB27B7A90.png" /></p>
+<p>Later,
+if you no longer need a certain valve, you can delete it in the valve
+list. Click with the right mouse button on the valve list entry to open
+the context menu and select the menu item <span class="menuselection">Delete Valve</span>.</p>
+<p><img alt="Figure 26: Deleting external valve" src="../_images/10000000000001AC00000091DBC619732FF93701.png" /></p>
+<p>The valve is then removed from the
+list and if you have assigned it to a pump, then it will be removed from
+the control panel of the pump.</p>
+</section>
+</section>
+<section id="pressure-monitoring">
+<h2>Pressure Monitoring<a class="headerlink" href="#pressure-monitoring" title="Link to this heading"></a></h2>
+<div class="error admonition">
+<p class="admonition-title">Caution</p>
+<p>Dosing with Nemesys pumps can create high pressure levels, which may
+cause damage to syringes, the fluidic system or the application. To
+prevent this from happening, you should monitor the pressure in your
+system, manually or automatically, using pressure sensors.</p>
+</div>
+<section id="assigning-pressure-sensors">
+<h3>Assigning Pressure Sensors<a class="headerlink" href="#assigning-pressure-sensors" title="Link to this heading"></a></h3>
+<p>You can assign a pressure sensor to each pump. This sensor will then be
+displayed on the pump’s front panel and can be used for automatic
+pressure monitoring. The pressure sensor does not have to be
+electrically connected to the pump. You can use any sensor displayed in
+the I/O channel list (see image below).</p>
+<figure class="align-default">
+<img alt="../_images/1000020100000190000000FC6D10B51DF557A864.png" src="../_images/1000020100000190000000FC6D10B51DF557A864.png" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To use any analog input as a pressure measuring
+input, you have to set it up beforehand. Please refer to
+the Qmix I/O plugin section <a class="reference internal" href="../qmixio_EN/qmixio_full_EN.html#configure-sensor-scaling"><span class="std std-ref">Configure Sensor Scaling</span></a> for
+more on the configuration of I/O channels.</p>
+</div>
+<p>To assign a pressure sensor to a pump, drag the pressure sensor from the
+I/O channel list and drop it on the pump’s front panel.</p>
+<img alt="../_images/100002010000045D000002A7CFEF571ED65786B1.png" src="../_images/100002010000045D000002A7CFEF571ED65786B1.png" />
+<p>When you
+release the mouse button, the pressure sensor is added to the pump’s
+operating panel. The pressure sensor is now displayed in the form of a
+digital manometer below the syringe, or below the valve, if a valve is
+present (see figure below).</p>
+<img alt="../_images/1000020100000235000001256D259A8883FF0BAA.png" src="../_images/1000020100000235000001256D259A8883FF0BAA.png" />
+<p>The display changes
+color depending on the pressure being measured. This gives you a quick
+indication of how close the pressure level is to the pressure limit.</p>
+<figure class="align-default">
+<img alt="../_images/100002010000023A0000009D1764E18592831F2C.png" src="../_images/100002010000023A0000009D1764E18592831F2C.png" />
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>You can only assign one pressure sensor per pump.</p>
+</div>
+<p>If you want to restore the original sensor of a pump, select
+<span class="menuselection">Restore Default Pressure Sensor</span> from the context menu on the
+pressure display.</p>
+<img alt="../_images/1000020100000139000000B4CE10195A7B1DFEB5.png" src="../_images/1000020100000139000000B4CE10195A7B1DFEB5.png" />
+</section>
+<section id="configuring-the-pressure-monitoring-function">
+<h3>Configuring the Pressure Monitoring Function<a class="headerlink" href="#configuring-the-pressure-monitoring-function" title="Link to this heading"></a></h3>
+<p>Once you’ve assigned a pressure sensor to a pump, you can set up the
+pressure monitoring function for that pump. When the function is active,
+it will continuously monitor the current system pressure and trigger
+certain responses, if the pressure falls below or rises above certain
+limits. This could include a pump stop, for example.</p>
+<p>Please follow these steps to set up the pressure monitoring function:</p>
+<ol class="arabic steps">
+<li><p>Perform a right mouse click on the pressure display and select
+<span class="menuselection">Configure Pressure Monitoring</span> from the context menu
+(see image below).</p>
+<p><img alt="Figure 6: Selecting the Pressure Monitoring Configuration" src="../_images/1000020100000144000000B30A56CA320F030E21.png" /></p>
+</li>
+<li><p>The dialog window for pressure sensor configuration will be displayed
+(see image below).</p>
+<img alt="../_images/100002010000018000000216A8684657BB7011FA.png" src="../_images/100002010000018000000216A8684657BB7011FA.png" />
+</li>
+<li><p>Define a safe range by entering a lower limit and an upper limit <span class="guinum">❷</span>.
+The upper limit is limited by the maximum permissible system
+pressure. This maximum pressure level is dictated by the maximum
+rated pressure of the syringe, the valve, the pressure sensor and
+the maximum force provided by the drive unit.</p></li>
+<li><p>By selecting the respective button, you can determine what you want
+to happen when the lower threshold is underrun (<span class="guilabel">Underrun Action</span>)
+<span class="guinum">❸</span> or the upper threshold is exceeded (<span class="guilabel">Overrun Action</span>).</p></li>
+<li><p>Please select the pumping direction you want the monitoring function
+to apply to. You can monitor filling, dosing or both. The
+recommended standard setting is dosing. In this setting the pump
+gets stopped in case of excessive pressure, while letting you ease
+the pressure by switching to filling.</p></li>
+<li><p>Make sure the <span class="guilabel">Monitoring enabled</span> <span class="guinum">❶</span> checkbox is checked.
+Otherwise the pressure monitoring function will not be active.</p></li>
+<li><p>Accept the configuration by pressing <span class="guilabel">OK</span> <span class="guinum">❺</span>.</p></li>
+</ol>
+<p>In the <em>Overrun</em> and <em>Underrun Action</em> <span class="guinum">❸</span> panel, you have the following
+options:</p>
+<ul class="simple">
+<li><p><strong>Do Nothing</strong> – safe range departure is ignored. The neMESYS module
+continues dosing. There is no information or warning of any kind.</p></li>
+<li><p><strong>Warn Only</strong> – a warning message is displayed upon safe range
+departure. The neMESYS module continues dosing.</p></li>
+<li><p><strong>Stop Pump Drive</strong> – dosing is stopped upon safe range departure. In
+addition, a warning message is displayed.</p></li>
+<li><p><strong>Disable Voltage</strong> – the dosing module is stopped by cutting off the
+motor’s electrical power. In this case the syringe piston may be
+moved by the pressure in the system. In addition, a warning message
+is displayed. The pump must be reactivated to be able to use it again
+(see section <a class="reference internal" href="#enabling-a-disabled-pump">Enabling a disabled pump</a>).</p></li>
+</ul>
+</section>
+<section id="using-the-pressure-monitoring-function">
+<h3>Using the Pressure Monitoring Function<a class="headerlink" href="#using-the-pressure-monitoring-function" title="Link to this heading"></a></h3>
+<p>High pressures can quickly occur during dosing, which can damage the
+valve or the pressure sensor. For this reason, it is particularly
+important to monitor the overpressure in the dosing direction. Whether
+the pressure monitoring is active is indicated by the small shield
+symbol which is shown in the pressure display when pressure monitoring
+is activated (see figures below). Only if an action has been configured
+for the overpressure that causes the pump to stop, the shield symbol is
+shown in orange. If an action has been selected for overpressure
+monitoring that only issues a warning, the label is grayed out.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="monitoring1" src="../_images/100002010000006B0000006B365777AF0E6D78EE.png" /></p></td>
+<td><p><img alt="monitoring2" src="../_images/100002010000006B0000006B74DCFA441C7082B3.png" /></p></td>
+<td><p><img alt="monitoring3" src="../_images/100002010000006B0000006BB08163BBBD4A5EC9.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>Pressure monitoring
+disabled</p></td>
+<td><p>Pressure monitoring
+enabled - Pump is
+not stopped in case
+of overpressure</p></td>
+<td><p>Pressure monitoring
+enabled - Pump is
+stopped in case of
+overpressure</p></td>
+</tr>
+</tbody>
+</table>
+<p>The arrows in the label indicate the pump direction for which pressure
+monitoring is active:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10003607000035050000350533EA6BA84CD29399.svg"><img alt="mon_filling" src="../_images/10003607000035050000350533EA6BA84CD29399.svg" width="60" /></a></p></td>
+<td><p>Filling monitoring</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10003605000035050000350547D40E228AE1ECA1.svg"><img alt="mon_dosing" src="../_images/10003605000035050000350547D40E228AE1ECA1.svg" width="60" /></a></p></td>
+<td><p>Dosing monitoring</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1000054600003505000035050DAB3DA9ED765957.svg"><img alt="mon_always" src="../_images/1000054600003505000035050DAB3DA9ED765957.svg" width="60" /></a></p></td>
+<td><p>Filling and dosing monitoring</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Once the pressure monitoring function has been
+configured, you can activate it or deactivate it an any
+time using the context menu of the pressure display
+(see image below).</p>
+</div>
+<figure class="align-default">
+<img alt="../_images/100002010000015C000000A27069F23A3292D42D.png" src="../_images/100002010000015C000000A27069F23A3292D42D.png" />
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>If you remove an assigned pressure
+sensor, for example by restoring a default pressure
+sensor, the pressure monitoring function will be
+deactivated automatically.</p>
+</div>
+<p>If you move the mouse pointer on top of the pressure display, you will
+get additional information regarding the pressure monitoring function as
+well as the maximum pressure of the sensor and the system:</p>
+</section>
+</section>
+<section id="enabling-a-disabled-pump">
+<h2>Enabling a disabled pump<a class="headerlink" href="#enabling-a-disabled-pump" title="Link to this heading"></a></h2>
+<p>If a Nemesys module has been disabled by a monitoring function, the
+color of the LED in the pump’s control panel will change from green <span class="guinum">❶</span> to
+red <span class="guinum">❷</span>.</p>
+<p><img alt="Figure 8: Pump Status Display" src="../_images/1000000000000205000000E324C478DCDA68618B.png" /></p>
+<p>To be able to use the pump again, you
+have to reenable it. Perform a right mouse click on the pump’s
+operating panel and select <span class="menuselection">Enable Pump Drive</span> from the context menu
+(see image below).</p>
+<img alt="../_images/1000020100000226000000B397F3BA342CB9289C.png" src="../_images/1000020100000226000000B397F3BA342CB9289C.png" />
+</section>
+<section id="syringe-configuration">
+<h2>Syringe configuration<a class="headerlink" href="#syringe-configuration" title="Link to this heading"></a></h2>
+<section id="introduction-to-syringe-configuration">
+<h3>Introduction to Syringe configuration<a class="headerlink" href="#introduction-to-syringe-configuration" title="Link to this heading"></a></h3>
+<p>The software provides user-friendly ways of configuring and managing
+your own syringes. The configuration and use of specific syringes in the
+software thus fulfil two requirements:</p>
+<ol class="arabic simple">
+<li><p>The software calculates all flow rates and volumes on the basis of
+the configured syringe.</p></li>
+<li><p>The motion of the piston is limited by the configured syringe length
+and the set limits.</p></li>
+</ol>
+</section>
+<section id="opening-the-configuration-dialog">
+<h3>Opening the configuration dialog<a class="headerlink" href="#opening-the-configuration-dialog" title="Link to this heading"></a></h3>
+<p>The software constantly shows the current flow rate for each dosing
+unit. The program needs the parameters for each syringe in order to
+calculate the flow rates. You should configure these values properly
+each time a syringe is changed.</p>
+<p>To do this, make a right mouse click on the axis of the image of the
+syringe you want to configure. Select the <span class="menuselection">Configure Syringe</span>
+menu item in the appearing context menu. Then select the syringe you
+want to configure, as shown in Figure below. The <em>Configure syringe</em>
+dialog then opens.</p>
+<figure class="align-default">
+<img alt="../_images/100000000000017F000000C72D5302EF6D73D652.png" src="../_images/100000000000017F000000C72D5302EF6D73D652.png" />
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Please note that when a syringe is
+changed, the fill flow rate and empty flow rate of this
+dosing unit are reset to 0. This means that you have to
+reconfigure these values after each syringe change.</p>
+</div>
+</section>
+<section id="syringe-selection-dialog">
+<h3>Syringe selection dialog<a class="headerlink" href="#syringe-selection-dialog" title="Link to this heading"></a></h3>
+<p>In this dialog, you can also select the desired syringe from a list of
+available syringes. The following options are available here:</p>
+<p><img alt="Figure 2: Syringe selection dialog" src="../_images/1000020100000378000002404EDC1DC325F1526C.png" /></p>
+<p>The list view <span class="guinum">❶</span> displays all the
+syringes that you have previously created. If the list contains a
+suitable syringe, you can select it, and close the dialog by clicking
+<span class="guilabel">Apply Syringe</span>. Alternatively, you can simply select a syringe by
+double clicking the syringe.</p>
+<p>If the list does not contain a suitable syringe, a new syringe can be
+created by clicking the <span class="guilabel">Create</span> <span class="guinum">❷</span> button. Clicking
+the <span class="guilabel">Edit</span> button opens a window to edit the syringe parameters of the currently marked
+syringe. You can remove a syringe from the list by clicking the <span class="guilabel">Delete</span>
+button. A syringe can also be removed by pressing the <kbd class="kbd docutils literal notranslate">Delete</kbd> key.</p>
+<p>On the right you will see a preview image <span class="guinum">❸</span> of the currently selected
+syringe and all syringe parameters</p>
+<p>The selection can be completed at any time by clicking <span class="guilabel">Apply Syringe</span>
+<span class="guinum">❹</span> or cancelled by clicking <span class="guilabel">Cancel</span>.</p>
+</section>
+<section id="list-of-available-syringes">
+<h3>List of available syringes<a class="headerlink" href="#list-of-available-syringes" title="Link to this heading"></a></h3>
+<p>The list of available syringes shows all available syringes in tabular
+form. It contains both the standard syringes defined by CETONI and the
+syringes created by the user. The icon in the first column indicates
+whether the syringe is a standard syringe or a user-specific syringe:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/1005A3140000109100001091CCFB5CA93067BCC0.svg"><img alt="syringe1" src="../_images/1005A3140000109100001091CCFB5CA93067BCC0.svg" width="60" /></a></p></td>
+<td><p>Predefined standard syringe from CETONI</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100008110000350500003505F16041283C2D49B0.svg"><img alt="syringe2" src="../_images/100008110000350500003505F16041283C2D49B0.svg" width="60" /></a></p></td>
+<td><p>Syringe created by user</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Predefined syringes can not be edited or
+deleted.</p>
+</div>
+<p>You will find the following columns in the syringe list:</p>
+<ul class="simple">
+<li><p><strong>Name</strong> - Unique syringe name. Syringes with the same name are not allowed.</p></li>
+<li><p><strong>Material</strong> - Steel or glass – the syringe display is adjusted accordingly</p></li>
+<li><p><strong>Max. Pressure (bar)</strong> - Maximum syringe pressure – important for
+pressure monitoring</p></li>
+<li><p><strong>Suited for pump</strong>- Shows for which pump a syringe is suited.
+If this field is empty, it is a syringe that was created by the user.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you click in the header of a column, the
+syringe list is sorted according to this column. This
+is indicated by a small arrow above the column title.
+By clicking again in the same column header, you can
+reverse the sorting.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/10000201000002230000022371E273E087477440.png"><img alt="../_images/10000201000002230000022371E273E087477440.png" class="align-left" src="../_images/10000201000002230000022371E273E087477440.png" style="width: 60px;" /></a>
+<p>To search for a specific syringe in the list, simply
+right-click on a cell in the column you want to search. Usually this
+will be the <em>Name</em> column. From the context menu that is then displayed,
+choose <span class="menuselection">Search in column</span>.</p>
+<p>A search field is displayed in which you can enter your search text <span class="guinum">❶</span>.</p>
+<img alt="../_images/100002010000015D000000EFB70D100D1CA3DEDA.png" src="../_images/100002010000015D000000EFB70D100D1CA3DEDA.png" />
+<p>While typing, a list of possible
+hits is displayed <span class="guinum">❷</span>. As soon as there is a matching entry, select it
+with the cursor keys or click on the entry with the mouse. The search
+dialog will be closed and in the list of syringes the found syringe will
+be highlighted in color.</p>
+</section>
+<section id="configuring-the-syringe-parameters">
+<h3>Configuring the syringe parameters<a class="headerlink" href="#configuring-the-syringe-parameters" title="Link to this heading"></a></h3>
+<p>If you click the <span class="guilabel">Create</span> or <span class="guilabel">Edit</span> button, the <em>Syringe
+Configuration Wizard</em> for configuring the syringe parameters opens.</p>
+<img alt="../_images/100002010000019A0000002FF7133A8CD9E5221A.png" src="../_images/100002010000019A0000002FF7133A8CD9E5221A.png" />
+<p>Please configure a syringe with the following steps:</p>
+<ol class="arabic steps">
+<li><p>First assign a unique name to the syringe in the field
+<span class="guilabel">Unique syringe name</span> <span class="guinum">❶</span> (Figure below). If you have
+selected a syringe for editing and only change its name, you can generate a
+copy of the selected syringe. Then select the syringe material <span class="guinum">❷</span>.
+Click <span class="guilabel">Next</span> to go to the next step.</p>
+<blockquote>
+<div><img alt="../_images/1000020100000288000001A4EEE8573B18AE8967.png" src="../_images/1000020100000288000001A4EEE8573B18AE8967.png" />
+</div></blockquote>
+</li>
+<li><p>You should
+now configure the inner diameter of the syringe. The inner diameter
+of the syringe is required in order to calculate flow rates and dose
+quantities. If you do not know the inner diameter, you can
+alternatively define the inner diameter via the <span class="guilabel">Scale length</span> in
+mm, and the volume it contains via <span class="guilabel">Scale volume</span> in μl. The
+software then uses these values to calculate the inner diameter of
+the syringe. In this step, select how you want to configure the
+inner diameter of the syringe. (Figure below). Depending on the
+selection, you continue the configuration with point <strong>(3)</strong> or
+<strong>(4)</strong>. Click <span class="guilabel">Next</span> to go to the next step.</p>
+<img alt="../_images/100002010000028800000185AF36898A33DA145C.png" src="../_images/100002010000028800000185AF36898A33DA145C.png" />
+</li>
+<li><p>You configure the inner diameter of the syringe by entering the
+scale length and volume within this scale length. (Figure below). To
+do this, measure, the scale with a suitable measuring instrument
+(calliper gauge), and read the volume shown on the inscription on
+the scale. Then click <span class="guilabel">Next</span> to go to the next step, and read
+further at point <strong>(5)</strong>.</p></li>
+<li><p>You configure the inner diameter of the syringe by measuring it with
+a calliper gauge. Then enter the value in the <span class="guilabel">Inner Syringe Diameter</span>
+field, and click <span class="guilabel">Next</span> to go to the next step.</p>
+<img alt="../_images/100002010000028800000162E28D58A7BA62F4FD.png" src="../_images/100002010000028800000162E28D58A7BA62F4FD.png" />
+</li>
+<li><p>Now configure the piston stroke <span class="guilabel">Piston Stroke</span> of the
+syringe (Figure below). The piston stroke is the maximum length
+through which the piston can be moved in the syringe without it
+leaking and liquid emerging. It is advisable to use the length of
+the scale on the syringe as the maximum piston stroke.</p>
+<p><img alt="Figure 6: Syringe configuration step 2 – Piston stroke" src="../_images/1000020100000288000001628DA24CB3EDC0A2EF.png" /></p>
+<p>If syringes of
+different lengths are used in a multi-syringe holder, the syringe with
+the shortest piston stroke limits the range of travel of the drive. When
+you have entered the piston stroke, the software uses this and the inner
+diameter to calculate the maximum dosable volume.</p>
+</li>
+<li><p>In this step you can define the limits for the maximum and minimum
+syringe fill levels. (Figure below). In this way, you can limit the
+range of travel of the piston by two additional software limits. You
+can enter these parameters optionally in microlitres or millimetres.
+You should use these values to limit the range of travel, for
+example when using a syringe stirrer. If you enter the value in one
+unit (e.g. millimetres), the value in the other unit (e.g.
+microlitres) is calculated by the software.</p>
+<p><img alt="Figure 7: Syringe configuration step 6 - Limits" src="../_images/100002010000028800000162919C8B52DB5AA3E1.png" /></p>
+<p>The syringe preview
+on the left-hand side always shows you the current configuration of the
+syringe. The width of the syringe changes when the inner diameter
+changes. The length of the syringe changes when the maximum piston
+stroke is changed, and the two red marks on the syringe indicate the two
+additional limits. The syringe is subsequently also shown corresponding
+to this preview in the software.</p>
+</li>
+<li><dl class="simple">
+<dt>Finally enter the maximum pressure the syringe can be used with.</dt><dd><p>This value is the maximum value you can use for pressure monitoring.
+(see section <a class="reference internal" href="#pressure-monitoring">Pressure Monitoring</a>).</p>
+</dd>
+</dl>
+<img alt="../_images/100002010000028800000162A0AA05D585AC109D.png" src="../_images/100002010000028800000162A0AA05D585AC109D.png" />
+</li>
+<li><p>Close
+the configuration of the syringe parameters by clicking the <em>Finish</em>
+button. You can cancel the configuration at any time by pressing the
+<em>Cancel</em> button. You can always return to the previous configuration
+step with the <em>Back</em> button.</p></li>
+</ol>
+</section>
+</section>
+<section id="configuration-of-si-units">
+<h2>Configuration of SI units<a class="headerlink" href="#configuration-of-si-units" title="Link to this heading"></a></h2>
+<p>When dosing liquid flows, the main parameters are the flow rates used
+and the quantities of liquid to be dosed or already dosed. For optimal
+adaptation to the particular application, the user can configure the SI
+units individually for displaying the flow rates and volumes for each
+individual dosing unit. To show the SI-dialog, click with the right
+mouse button in the control panel of the pump to display the context
+menu.</p>
+<p><img alt="Figure 9: Pump context menu" src="../_images/100000000000022E000000C19B0C9EFBDA77502B.png" /></p>
+<p>Then click the menu item <span class="menuselection">Select Volume Unit</span> to configure the
+SI unit of volume or click the menu item <span class="menuselection">Select Flow Unit</span>,
+to configure the SI unit of flow rates. A SI-unit selection dialog window appears.</p>
+<p><img alt="Figure 10: SI-unit selection dialog" src="../_images/1000000000000145000000BEBA39AC007BF75722.png" /></p>
+<p>Set the desired SI unit, and close the dialog by clicking <span class="guilabel">OK</span>.</p>
+</section>
+<section id="direct-control">
+<h2>Direct Control<a class="headerlink" href="#direct-control" title="Link to this heading"></a></h2>
+<section id="direct-control-overview">
+<h3>Direct Control Overview<a class="headerlink" href="#direct-control-overview" title="Link to this heading"></a></h3>
+<img alt="../_images/100002010000009E000001A84E67845F7A6B164B.png" src="../_images/100002010000009E000001A84E67845F7A6B164B.png" />
+<p>Use the direct control for interactive control of the dosing
+units. In this way, you dose precisely defined quantities of liquid with
+defined flow rates or generate constant liquid flows.</p>
+<p>The direct control also displays the current flow rate, the dosed volume
+and the fill level of the syringe. If you use a high-pressure module,
+the current pressure measured by the pressure sensor is also displayed.</p>
+<p>Following controls and indicators are available:</p>
+<ol class="arabic simple guinums">
+<li><p>Toolbar</p></li>
+<li><p>Target values of the dosing module</p></li>
+<li><p>Actual values of the dosing module</p></li>
+</ol>
+</section>
+<section id="toolbar">
+<h3>Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h3>
+<p>The toolbar includes buttons for starting dosing processes. The
+following buttons are available:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/100009810000388C0000388C3CA31C917CCAEF69.svg"><img alt="toolbar1" src="../_images/100009810000388C0000388C3CA31C917CCAEF69.svg" width="40" /></a></p></td>
+<td><p>Start the dosing with set target values</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/100009170000388C0000388C5FBCE4289669598A.svg"><img alt="toolbar2" src="../_images/100009170000388C0000388C5FBCE4289669598A.svg" width="40" /></a></p></td>
+<td><p>Stop dosing</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10000A5A0000350500003505C28D88992FBDF5DF.svg"><img alt="toolbar3" src="../_images/10000A5A0000350500003505C28D88992FBDF5DF.svg" width="40" /></a></p></td>
+<td><p>Aspirate reagent - Move dosing unit to maximum position</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10000A63000035050000350551F1D5FC8C214918.svg"><img alt="toolbar4" src="../_images/10000A63000035050000350551F1D5FC8C214918.svg" width="40" /></a></p></td>
+<td><p>Empty syringe - Move dosing unit to minimum position</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10006B24000034EB000034EB2B72B9A4AEDF2E9A.svg"><img alt="toolbar5" src="../_images/10006B24000034EB000034EB2B72B9A4AEDF2E9A.svg" width="40" /></a></p></td>
+<td><p>Configure the continuous flow</p></td>
+</tr>
+</tbody>
+</table>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Danger of damaging the syringe during
+emptying! When the syringe is emptied, according to the
+configuration, the dosing unit is moved toward the
+lower limit position at high speed.</p>
+</div>
+</section>
+<section id="target-value">
+<h3>Target value<a class="headerlink" href="#target-value" title="Link to this heading"></a></h3>
+<section id="selecting-dosing-mode">
+<h4>Selecting dosing mode<a class="headerlink" href="#selecting-dosing-mode" title="Link to this heading"></a></h4>
+<img alt="../_images/10000201000000820000009E49BC52210132F79C.png" src="../_images/10000201000000820000009E49BC52210132F79C.png" />
+<p>You define the type of dosing with the
+selection buttons on the on the left-hand side.</p>
+<p>The following options are available:</p>
+<ul class="simple">
+<li><p><strong>Volume</strong> - Select this mode to dose a specific volume at a defined
+flow rate</p></li>
+<li><p><strong>Flow</strong> - In this mode, you generate a constant flow of liquid. The
+dosing continues until a limit position is reached or until you stop
+the dosing process.</p></li>
+<li><p><strong>Syringe Level</strong> - In this mode, you can define a specific fill level
+for the syringe which is to be reached at a defined flow rate.</p></li>
+</ul>
+</section>
+<section id="setting-flow-rate-and-volume">
+<h4>Setting flow rate and volume<a class="headerlink" href="#setting-flow-rate-and-volume" title="Link to this heading"></a></h4>
+<p>Use the <span class="guilabel">Volume</span>, <span class="guilabel">Flow</span> and <span class="guilabel">Syringe Level</span>
+input fields in order to enter the flow rate, the flow volume or the syringe
+level. Setting the set-points does not start the drives or change the current
+flow rate. The new values are not transferred to the dosing unit until a dosing
+process is started by pressing the <span class="guilabel">Start</span> button in the toolbar.</p>
+</section>
+<section id="volume-dosing">
+<h4>Volume dosing<a class="headerlink" href="#volume-dosing" title="Link to this heading"></a></h4>
+<p>If you want to dose a specific volume, you have to enter the volume to
+be dosed and the flow rate. The volume is entered relative to the
+current position of the syringe piston. This means that you enter a
+negative volume to aspirate reagent and a positive volume to dispense
+reagent. In this operating mode, the flow rate is always a positive
+value, and defines the flow rate of the aspiration/dispensing of
+reagent.</p>
+</section>
+<section id="constant-flow-rate">
+<h4>Constant flow rate<a class="headerlink" href="#constant-flow-rate" title="Link to this heading"></a></h4>
+<p>In order to generate a constant flow of liquid, only the flow rate has
+to be defined, and the volume input field is disabled for entries. In
+this operating mode, the flow rate can be either positive or negative. A
+negative value indicates reagent aspiration, and a positive value
+reagent dispensing.</p>
+</section>
+<section id="setting-syringe-level">
+<h4>Setting syringe level<a class="headerlink" href="#setting-syringe-level" title="Link to this heading"></a></h4>
+<p>You can achieve a precisely defined syringe fill level by entering the
+values for the syringe fill level and the flow rate. The syringe fill
+level must be a positive value lying between the minimum and maximum
+values of the syringe fill level. (see section <a class="reference internal" href="#syringe-configuration">Syringe configuration</a>).
+In this operating mode, the flow
+rate is always a positive value, and defines the flow rate of the
+aspiration/dispensing of reagent.</p>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Danger of damaging the valve or
+connections in the liquid path High flow rates can
+cause high pressures to develop very quickly, which can
+damage the valve, connections in the liquid path or
+your application.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>For dosing very low flow rates, select
+syringes with small inner diameters in order to ensure
+pulsation-free dosing.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="actual-values">
+<h2>Actual Values<a class="headerlink" href="#actual-values" title="Link to this heading"></a></h2>
+<p>The current values reported by the device are shown in the
+<span class="guilabel">Actual Values</span> area.</p>
+<img alt="../_images/10000201000000A3000000D936035CE9D70E6F8F.png" src="../_images/10000201000000A3000000D936035CE9D70E6F8F.png" />
+<p>The <span class="guilabel">Flow</span> field shows the current flow rate
+in the dosing unit. The <span class="guilabel">Volume</span> field shows the volume that has been
+pumped since the last time the dosing unit was started. If the drive is
+stopped and restarted, the actual value of the pumped volume is reset to 0.
+The <span class="guilabel">Syringe Level</span> field shows the current fill level of the dosing
+unit in the configured SI volume unit.</p>
+</section>
+<section id="synchronous-pump-start-stop">
+<h2>Synchronous pump start / stop<a class="headerlink" href="#synchronous-pump-start-stop" title="Link to this heading"></a></h2>
+<p>In the main toolbar, you will find two buttons for simultaneously start
+/ stop multiple pump modules.</p>
+<img alt="../_images/10000000000002100000004E2CFFC454D39AB8D9.png" src="../_images/10000000000002100000004E2CFFC454D39AB8D9.png" />
+<a class="reference internal image-reference" href="../_images/sync_start.svg"><img alt="../_images/sync_start.svg" class="align-left" src="../_images/sync_start.svg" width="60" /></a>
+<p>When you click the <span class="guilabel">Sync Start</span>
+button <span class="guinum">❶</span>, a selection dialog appears in which you select the pumps that
+you want to start at the same time (see figure below).</p>
+<img alt="../_images/100002010000013A0000011B729AF6870BDA3CDF.png" src="../_images/100002010000013A0000011B729AF6870BDA3CDF.png" />
+<p>Set a checkmark for
+each pump you want to start. Dosage starts as soon as you klick the
+<span class="guilabel">OK</span> button.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Before starting, you need to configure
+the dosing parameters (volume, flow) of all selected
+pumps in the control panel of each pump.</p>
+</div>
+<p>Before the software starts the dosage, it checks the configured
+parameters of all selected pumps. If the software found invalid
+parameters (eg flow or volume values of 0), the synchronous start is not
+performed. In the application <em>Event Log</em> you will get information
+about the problems encountered.</p>
+<img alt="../_images/10000201000002810000008B3DC15D90BE641006.png" src="../_images/10000201000002810000008B3DC15D90BE641006.png" />
+<a class="reference internal image-reference" href="../_images/stop_all.svg"><img alt="../_images/stop_all.svg" class="align-left" src="../_images/stop_all.svg" width="60" /></a>
+<p>When you click the <span class="guilabel">Stop All</span> button <span class="guinum">❷</span>, all pumps are stopped immediately.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="continuous-flow">
+<h2>Continuous Flow<a class="headerlink" href="#continuous-flow" title="Link to this heading"></a></h2>
+<section id="introduction-to-continuous-flow">
+<h3>Introduction to Continuous Flow<a class="headerlink" href="#introduction-to-continuous-flow" title="Link to this heading"></a></h3>
+<p>In continuous flow mode you can pair two pumps together using the
+software, in order to create a continuous flow over a long period of
+time through alternating fluid take-up and discharge. In this case one
+of the pumps doses at a particular flow rate, while the other pump takes
+up reagent from the reservoir. Once the dosing pump has emptied the
+syringe, the software automatically switches to the second dosing unit
+with a full syringe and continues dosing with that pump. This creates a
+continuous, uninterrupted flow, which lets you dose at a constant flow
+rate for a nearly unlimited period of time.</p>
+</section>
+<section id="operating-and-display-elements">
+<h3>Operating and Display Elements<a class="headerlink" href="#operating-and-display-elements" title="Link to this heading"></a></h3>
+<p>You can recognize a dosing unit that was configured for continuous flow
+by the activated continuous flow icon in the direct control window (see
+image).</p>
+<img alt="../_images/1000000000000234000000666822C5C8CC8265D0.png" src="../_images/1000000000000234000000666822C5C8CC8265D0.png" />
+<p>The continuous flow mode
+is terminated automatically, as soon as you change the syringe
+configuration of one of the connected dosing units. In this case you
+have to reconfigure all parameters. If continuous flow has been
+activated for one of the dosing units, the operating panel will indicate
+“continuous flow” in its status display (see image below).</p>
+<img alt="../_images/1000000000000235000000E8395960DBE1D49010.png" src="../_images/1000000000000235000000E8395960DBE1D49010.png" />
+<p>The following display elements will then be visible:</p>
+<ul class="simple">
+<li><p><strong>Remaining time</strong> – shows the remaining time for continuous dosing.
+When this display reaches zero, continuous flow is stopped
+automatically.</p></li>
+<li><p><strong>Accumulated volume [ml]</strong> – the accumulated discharged volume shows
+the total volume discharged by both pumps into the application.</p></li>
+<li><p><strong>Linked pump</strong> – the linked pump is the second pump paired to this
+pump for the purpose of achieving continuous flow.</p></li>
+</ul>
+</section>
+<section id="configuring-continuous-flow">
+<h3>Configuring Continuous Flow<a class="headerlink" href="#configuring-continuous-flow" title="Link to this heading"></a></h3>
+<p>You will need at least two Nemesys dosing units to achieve continuous
+flow. Both units should have a valve. To configure continuous flow
+perform a right mouse click on the operating panel of the direct
+controller and select <span class="menuselection">Configure continuous flow</span>
+from the context menu (see image below).</p>
+<img alt="../_images/1000000000000231000000BAD54DEB42C3F65FB7.png" src="../_images/1000000000000231000000BAD54DEB42C3F65FB7.png" />
+<p>A configuration dialog
+will appear. The dosing unit you click on for configuring continuous
+flow is the first of the dosing units to be paired. If continuous flow
+has not been configured for this dosing unit, you can also open the
+configuration dialog by pressing the <span class="guilabel">Continuous Flow</span> button in the
+direct control window (see image below).</p>
+<img alt="../_images/10000000000000AC00000042C7E1513050994EA1.png" src="../_images/10000000000000AC00000042C7E1513050994EA1.png" />
+<p>If you see the following configuration page after calling up
+the dialog (see image below), the previously set configuration was
+loaded successfully and all you have to do is click the Finish button to
+accept the configuration.</p>
+<img alt="../_images/1000020100000322000001FBE37231369011B166.png" src="../_images/1000020100000322000001FBE37231369011B166.png" />
+<p>If you want to change certain parameters of the loaded
+configuration, click on the Next button to browse the individual pages
+of the configuration assistant.</p>
+</section>
+<section id="selecting-the-second-dosing-unit">
+<h3>Selecting the second Dosing Unit<a class="headerlink" href="#selecting-the-second-dosing-unit" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000322000001A528FAB18020B1F28A.png" src="../_images/1000020100000322000001A528FAB18020B1F28A.png" />
+<p>On this page of the
+configuration dialog you can select the second continuous flow unit from
+a list of available dosing units. If no configuration has been loaded,
+this will be the first page of the configuration assistant. Select the
+dosing unit of your choice by clicking the relevant name in the list.
+Then click on Next to continue the configuration.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>For continuous flow you should always
+select two dosing units that are immediately connected
+and displayed next to each other in the software.</p>
+</div>
+</section>
+<section id="selecting-a-continuous-flow-mode">
+<h3>Selecting a Continuous Flow Mode<a class="headerlink" href="#selecting-a-continuous-flow-mode" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000322000001A51A93BAD0DAE927D5.png" src="../_images/1000020100000322000001A51A93BAD0DAE927D5.png" />
+<p>You can choose from the following continuous flow modes:</p>
+<ul class="simple">
+<li><p><strong>Pressure Controlled Switching</strong> - yields the best results without
+changing pressure or flow rate when switching units. However, you
+will need a pressure sensor on each pump.</p></li>
+<li><p><strong>Cross-Flow</strong>- provides a soft transition and a constant flow rate
+when switching from one dosing unit to the other. This mode is most
+suitable if your application uses a low system pressure and you don’t
+have pressure sensors.</p></li>
+</ul>
+<p>The individual modes will be explained in detail in the following
+subsections. Perform a left mouse click on the mode you wish to
+configure and then click on Next to continue.</p>
+</section>
+<section id="configuring-3x2-way-valves">
+<h3>Configuring 3x2-way Valves<a class="headerlink" href="#configuring-3x2-way-valves" title="Link to this heading"></a></h3>
+<p>During continuous flow operation the respective valves get switched for
+both pumps. In the <em>Configure 3x2-way Valves</em> window (see image below)
+you can configure the valves and valve positions for your 3x2-way
+valves.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already assigned valves to your
+pumps, these valves are automatically selected here.</p>
+</div>
+<img alt="../_images/10000000000003400000024683286CF4C3CADAAF.png" src="../_images/10000000000003400000024683286CF4C3CADAAF.png" />
+<p>First, select the valve type you wish to use <span class="guinum">❶</span>. If you use
+3x2-way valves and have selected
+<span class="guilabel">Pressure-Controlled Switching</span>, you will need additional
+shut-off valves. If you use 3x3-way valves with an additional closed
+position, you will not require additional shut-off valves for
+pressure-controlled switching.</p>
+<p>Use the selection box <span class="guinum">❷</span> to select the valve you want to switch. Using
+the two selection boxes below <span class="guinum">❸</span>, select the positions you want the valve
+to switch to when filling and dosing. If you have a 3x3-way valve with
+an additional closed position, you also need to configure the closed
+position.</p>
+<img alt="../_images/100000000000027400000050FC75667E716B4EBE.png" src="../_images/100000000000027400000050FC75667E716B4EBE.png" />
+</section>
+<section id="configuring-shut-off-valves">
+<h3>Configuring Shut-off Valves<a class="headerlink" href="#configuring-shut-off-valves" title="Link to this heading"></a></h3>
+<p>If you have selected pressure-controlled switching and your 3x2-way
+valves do not have a closed position, you will need to configure your
+shut-off valves in this next step. As in the valve dialog above, please
+select the valves and configure the closed <span class="guinum">❶</span> and open <span class="guinum">❷</span> valve position.</p>
+<img alt="../_images/10000000000003400000022D3939253C9F4C9986.png" src="../_images/10000000000003400000022D3939253C9F4C9986.png" />
+</section>
+<section id="configuring-pressure-sensors">
+<h3>Configuring Pressure Sensors<a class="headerlink" href="#configuring-pressure-sensors" title="Link to this heading"></a></h3>
+<p>If you have selected pressure-controlled switching, you need to
+configure the pressure sensors for both pumps in this next step (see
+image below).</p>
+<img alt="../_images/1000000000000340000001E2129FDD2D9C04C10E.png" src="../_images/1000000000000340000001E2129FDD2D9C04C10E.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already assigned pressure sensors
+image10  to your pumps that are displayed on the front panel,
+these sensors are automatically selected here, and you
+can proceed immediately by clicking <span class="guilabel">Next &gt;</span>.</p>
+</div>
+</section>
+<section id="pressure-controlled-switching">
+<h3>Pressure-controlled Switching<a class="headerlink" href="#pressure-controlled-switching" title="Link to this heading"></a></h3>
+<section id="introduction-to-pressure-controlled-switching">
+<h4>Introduction to pressure-controlled switching<a class="headerlink" href="#introduction-to-pressure-controlled-switching" title="Link to this heading"></a></h4>
+<p>In pressure-controlled switching the pressure of the filling pump is
+adapted to the pressure of the dosing pump prior to switching, through
+the use of valves and pressure sensors. In addition, during the
+switching process the flow of both pumps is cross-faded (cross-flow).
+This prevents the occurrence of a switching impulse, while pressure and
+flow rate stay nearly constant.</p>
+<p>Since a certain period of time is needed to fill and cross-fade the
+pump, in order to build and reduce pressure and to switch the valves,
+the achievable flow rate in continuous mode is lower than the maximum
+flow rate of each of the individual pumps involved.</p>
+<p>In the configuration window for pressure-controlled switching you can
+set all parameters and you can adjust the pressure controller of each
+pump for the current configuration and the desired application pressure.</p>
+<img alt="../_images/10000201000003220000022A91AAB220A4857814.png" src="../_images/10000201000003220000022A91AAB220A4857814.png" />
+<p>In the
+upper part of the window <span class="guinum">❶</span> you find the tuning parameters. In the lower
+part of the window <span class="guinum">❷</span> you will find a diagram, which shows the
+controller’s target value (white) and the measured pressure value (in
+color) during adjustment. Using this graphic representation you can get
+an idea of the pressure controller’s operational status and detect
+issues like excessive oscillation.</p>
+<div class="error admonition">
+<p class="admonition-title">Caution</p>
+<p>Very high pressure may occur during
+tuning. If necessary, you should activate <a class="reference internal" href="nemesys_full_EN.html#pressure-monitoring"><span class="std std-ref">pressure
+monitoring</span></a>, in order to stop the pump when certain
+pressure values are exceeded.</p>
+</div>
+</section>
+<section id="tuning-parameter-overview">
+<h4>Tuning Parameter Overview<a class="headerlink" href="#tuning-parameter-overview" title="Link to this heading"></a></h4>
+<p>The continuous mode uses a dedicated pressure controller for each pump
+to regulate the target pressure in the filling pump before switching to
+the application. The proportional gain of the controller depends on many
+factors, such as pressure, tightness, tube length and the fluid being
+used. This value must be re-calibrated or retuned for each setup. The
+tuning section uses the following operating elements:</p>
+<img alt="../_images/1000020100000269000000BE9D9D103837FCB8A9.png" src="../_images/1000020100000269000000BE9D9D103837FCB8A9.png" />
+<ol class="arabic simple guinums">
+<li><p><strong>Pressure Display</strong> – depending on the dosing direction
+(filling/discharge) the pressure display is colored in orange or
+blue.</p></li>
+<li><p><strong>Tuning Pressure</strong> – this is where you set the pressure to which
+the pressure controller will be tuned. Set the anticipated
+application pressure you will use for dosing into your application.</p></li>
+<li><p><strong>Proportional Gain</strong> – this field shows you the proportional gain
+of the pressure controller. If you click the button with the lamp
+symbol, the system will suggest a proportional gain for the target
+pressure you set. This value can be used as a starting point for
+tuning.</p></li>
+<li><p><strong>Pressure Window</strong> – Defines a symmetrical range of accepted
+pressure values relative to the target pressure. This means that only
+if the pressure is within this window for the duration of the
+<em>Pressure Window Time</em> it will be considered stable. A value that is
+too high may cause the controller to overshoot, a value that is too
+low may cause long times for the target pressure to settle, or may
+cause the target pressure never to be reached. The value that should
+be set depends on the target pressure and the quality of the pressure
+sensors used. The pressure window must always be greater than the
+fluctuations of the pressure sensor, otherwise the pressure will
+never be considered stable.</p></li>
+<li><p><strong>Pressure Window Time</strong>– The time the pressure must be within the
+<em>Pressure Window</em> for it to be considered stable by the software.</p></li>
+<li><p><strong>Reservoir Pressure</strong> – Set the pressure that exists in the
+reservoir from which the syringe is filled. The pressure is lowered
+to this pressure before the valve to the reservoir is opened to fill
+the syringe.</p></li>
+<li><p><strong>Status Display</strong> – the status display gives you information
+regarding the current status of the pressure controller or the
+calibration. You should only go to the next step if you see a green
+checkmark here or if a previous tuning has been loaded.</p></li>
+<li><p><strong>Restore Default Settings</strong> – pushing this button restores the
+standard tuning parameters.</p></li>
+</ol>
+</section>
+<section id="tuning-the-pressure-controller">
+<h4>Tuning the Pressure Controller<a class="headerlink" href="#tuning-the-pressure-controller" title="Link to this heading"></a></h4>
+<p>A pump’s pressure controller should be tuned at the approximate piston
+position at which the switching to the other pump takes place. If you
+use two identical pumps, this usually happens when the syringe is almost
+completely filled. To make sure that the syringe can still be filled
+further for pressure building, the piston should not be in the rearmost
+position. As a rule of thumb the syringe should be filled to about 90%.</p>
+<p>Please follow the steps below to tune the pressure controller.</p>
+<ol class="arabic simple steps">
+<li><p>First, enter the desired tuning pressure <span class="guinum">❷</span>. This should be
+approximately equal to the application pressure at the desired flow
+rate. You can determine the tuning pressure ahead of time by dosing
+into your application at the desired flow rate.</p></li>
+<li><p>Now select the starting value for the proportional gain <span class="guinum">❹</span> of the
+controller. If you click on the button with the lamp symbol, the
+system will suggest a starting value for the selected pressure.</p></li>
+<li><p>Start the tuning process by clicking the <span class="guilabel">Start Tuning</span> button. The
+software will now start tuning the controller automatically. For
+safety reasons tuning will begin at 50% tuning pressure, to avoid
+damage due to pressure overshooting. The system tunes the controller
+in such way as to arrive at the target pressure quickly with a
+minimum of overshoot.</p></li>
+</ol>
+<img alt="../_images/100000000000029B000000D0324E5253118A97DF.png" src="../_images/100000000000029B000000D0324E5253118A97DF.png" />
+<p>If achieving the target pressure takes a long time (10
+seconds or more – see image below), you can interrupt the tuning process
+and increase the proportional gain manually (by doubling it, for
+example).</p>
+<img alt="../_images/100000000000028700000096E13BE55DE415EBFA.png" src="../_images/100000000000028700000096E13BE55DE415EBFA.png" />
+<p>If the controller overshoots a lot, you can interrupt the tuning process
+and decrease the proportional gain manually (by halving it, for
+example). Restart the tuning process with the new values.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After a successful tuning, change the value
+for the target window (Pressure Window) and start
+another tuning run. You will get a feeling for how
+Pressure Window value affects controller tuning.</p>
+</div>
+<p>During tuning the controller’s proportional gain is adjusted
+automatically. If you just want to manually test the current control
+parameters without the automatic adjustment, simply start a parameter
+test by clicking on <span class="guilabel">Test Parameters</span>.</p>
+<img alt="../_images/100000000000029B000000D07CB8BD8EA57530D0.png" src="../_images/100000000000029B000000D07CB8BD8EA57530D0.png" />
+<p>During the parameter test the pump cycles between a
+non-pressurized state of 0 bar and the set tuning pressure. This lets
+you visually check and evaluate the current control parameters using the
+diagram.</p>
+<p>Perform a right mouse-click on the diagram to open the context menu with
+additional diagram functions.</p>
+<img alt="../_images/100000000000029000000120B3361EA8175F41D4.png" src="../_images/100000000000029000000120B3361EA8175F41D4.png" />
+</section>
+<section id="setting-parameters">
+<h4>Setting Parameters<a class="headerlink" href="#setting-parameters" title="Link to this heading"></a></h4>
+<p>After tuning both pumps, go to the next page to set further parameters
+for pressure controlled switching.</p>
+<img alt="../_images/1000020100000322000001A5F4F82BA9F678CA6C.png" src="../_images/1000020100000322000001A5F4F82BA9F678CA6C.png" />
+<p>In the <span class="guilabel">Refill Flow</span> field <span class="guinum">❶</span>, set the flow rate used to
+fill the syringe. The larger you select this value, the higher the
+maximum flow rate that can be realized for continuous dosing. This means
+that you should always select the filling flow rate as high as possible
+or as high as your application allows. If the filling flow rate is too
+high, air bubbles may form.</p>
+<p>The <span class="guilabel">Timing</span> slider <span class="guinum">❷</span> lets you control the timing of continuous flow
+operation. During tuning, the volume and time periods needed for
+pressurizing the filling pump are determined. These time values are
+multiplied by a certain factor to create a safety margin. This buffer is
+used to compensate for delays during pressure building, which can be
+caused by issues or variations in the system. You can use the slider to
+select a higher margin (<em>Robust Timing</em>) or a lower margin (<em>Tight
+Timing</em>).</p>
+<p><img alt="image03_19" src="../_images/10000000000001C70000004CD2D8CDFE5C22501F.png" /></p>
+<p>Using a larger buffer decreases the flow rates that can be
+achieved in comparison to a smaller buffer. In the same way, a smaller
+buffer increases the risk of disrupting the continuous flow timing in
+case of system issues or variations, possibly leading to flow
+instabilities. Double-clicking on the slider sets the standard value we
+recommend, unless you absolutely need a higher or lower flow rate.</p>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>A small safety buffer for the timing
+increases the risk that the timing of the continuous
+flow is disturbed and the continuous flow is
+interrupted if the application pressure fluctuates or
+if other disturbances occur.</p>
+</div>
+<p>In the field <span class="guilabel">Maximum feasible flow (ml/s)</span> <span class="guinum">❸</span> you can see the maximum
+flow rate that can be achieved with the set parameters. The coloured bar
+shows how far away this flow rate is from the maximum flow rate that you
+can achieve in normal pump operation mode. This allows you to quickly
+see how the refill flow rate and timing affect the realizable flow rate.</p>
+<p>Once you have set all parameters, continue the configuration with
+section <a class="reference internal" href="#set-flow-rate-and-duration-of-continuous-flow">Set flow rate and duration of continuous flow</a>.</p>
+</section>
+</section>
+<section id="configuring-cross-flow">
+<h3>Configuring Cross-Flow<a class="headerlink" href="#configuring-cross-flow" title="Link to this heading"></a></h3>
+<img alt="../_images/1000020100000322000001A6B9F155797B5B91F9.png" src="../_images/1000020100000322000001A6B9F155797B5B91F9.png" />
+<p>In the <span class="guilabel">Refill Flow</span> field <span class="guinum">❶</span>, set the flow rate used to
+fill the syringe. By pressing the <span class="guilabel">Min</span> and <span class="guilabel">Max</span>
+buttons. The larger
+you select this value, the higher the maximum flow rate that can be
+realized for continuous dosing. This means that you should always select
+the filling flow rate as high as possible or as high as your application
+allows. If the filling flow rate is too high, air bubbles may form. This
+flow rate is always slightly higher than the rate indicated in the
+<span class="guilabel">Maximum feasible flow (ml/s)</span> field <span class="guinum">❹</span>, since the syringes must be
+filled more quickly in order to be ready for the next dosing run when
+the syringes are switched.</p>
+<p>Cross-flow makes it possible to cross-fade the flows of the dosing
+modules. This is done by configuring the <span class="guilabel">Cross-flow Duration</span>
+<span class="guinum">❷</span>.</p>
+<p>In the field <span class="guilabel">Maximum feasible flow (ml/s)</span> <span class="guinum">❹</span> you can
+see the maximum
+flow rate that can be achieved with the set parameters. The coloured bar
+shows how far away this flow rate is from the maximum flow rate that you
+can achieve in normal pump operation mode. This allows you to quickly
+see how the refill flow rate and timing affect the realizable flow
+rate.</p>
+<p>The following image shows the cross-fading of flows from two individual
+pumps.</p>
+<img alt="../_images/100002010000034B000002BF708D26F0E1102F63.png" src="../_images/100002010000034B000002BF708D26F0E1102F63.png" />
+<p>The Cross-Flow-Duration t<sub>cross</sub> expresses the period of time needed for cross-fading one
+dosing module to the other. The smaller this value, the steeper the flow
+rate curve and the less time is required for the cross-flow operation to
+be completed.</p>
+<img alt="../_images/1000020100000320000002A28DB2B4CFC4D85EB4.png" src="../_images/1000020100000320000002A28DB2B4CFC4D85EB4.png" />
+<p>Cross-flow offers you a simple way of
+compensating for pressure drops during switching. The <em>Overlap Time</em> t<sub>ov</sub>
+<span class="guinum">❸</span> governs the period of time by which the flow curves of both
+dosing modules overlap. The larger the tov value, the longer both dosing
+modules keep dosing simultaneously (see image above).</p>
+</section>
+<section id="set-flow-rate-and-duration-of-continuous-flow">
+<h3>Set flow rate and duration of continuous flow<a class="headerlink" href="#set-flow-rate-and-duration-of-continuous-flow" title="Link to this heading"></a></h3>
+<p>In this window (figure below) you set the flow rate at which the
+continuous flow is started <span class="guinum">❶</span> and the duration of dosing <span class="guinum">❷</span>. If you don’t
+want to limit the duration, simply leave the setting at <em>Dose
+unlimited</em>. With this setting continuous flow is maintained until you
+stop the dosing process manually.</p>
+<img alt="../_images/1000020100000322000001A5B79EDE9CBF839695.png" src="../_images/1000020100000322000001A5B79EDE9CBF839695.png" />
+<p>The software offers you three ways of limiting the duration of
+continuous flow:</p>
+<ul class="simple">
+<li><p><strong>Dose volume</strong> – continuous flow is stopped as soon as a defined
+dosing volume has been reached.</p></li>
+<li><p><strong>Dose for –</strong> continuous flow ends after a predetermined duration of
+time.</p></li>
+<li><p><strong>Dose until</strong> – continuous flow ends at a specific time in the future.</p></li>
+</ul>
+</section>
+<section id="starting-stopping-continuous-flow">
+<h3>Starting/Stopping Continuous Flow<a class="headerlink" href="#starting-stopping-continuous-flow" title="Link to this heading"></a></h3>
+<p>After the configuration you can start continuous flow
+operation by a left mouse-click on the <span class="guilabel">Start Dosing</span> button in the direct
+controller window.</p>
+<p><img alt="image03_23" src="../_images/10000201000000DC0000004C9FC9EE927968E354.png" /></p>
+<p>You can interrupt continuous flow operation at any time by
+clicking the <span class="guilabel">Stop Dosing</span> button.</p>
+<p><img alt="image03_24" src="../_images/10000201000000DC0000004C5F506061A78F169E.png" /></p>
+<p>If you stop a dosing unit involved in continuous flow operation, you
+also stop the other dosing unit tied into the system. If you have
+configured a particular duration for continuous flow operation, stopping
+a dosing unit will also interrupt the preset duration, meaning that when
+you restart the dosing unit, continuous flow operation will resume for
+the time remaining at the point of interruption. If you configured a
+target volume for continuous flow operation, the system will resume
+dosing the remaining volume at the time of interruption, upon restart.</p>
+</section>
+<section id="cancel-restart-continuous-flow">
+<h3>Cancel/Restart Continuous Flow<a class="headerlink" href="#cancel-restart-continuous-flow" title="Link to this heading"></a></h3>
+<p>Once the preset time for continuous flow operation has elapsed or the
+target volume has been reached, continuous flow operation is terminated
+and both dosing units are stopped. Performing a left click on the
+<span class="guilabel">Start</span> <span class="guinum">❶</span> button lets you restart continuous flow operation. In this
+case the duration or target volume will be reset to their starting
+values. Left clicking on the <span class="guilabel">Continuous Flow</span> <span class="guinum">❷</span> button terminates
+continuous flow mode and stops the continuous flow operation in
+progress. In this case re-starting will not be possible (see image
+below).</p>
+<img alt="../_images/10000201000000AF00000041D5654AE6FF1B3C7A.png" src="../_images/10000201000000AF00000041D5654AE6FF1B3C7A.png" />
+</section>
+<section id="change-flow-rate-in-continuous-flow">
+<h3>Change flow rate in continuous flow<a class="headerlink" href="#change-flow-rate-in-continuous-flow" title="Link to this heading"></a></h3>
+<p>You can change the flow rate during a dosing run in all operating modes.
+To achieve this enter the desired flow rate into the <span class="guilabel">Flow</span> field <span class="guinum">❶</span>
+and confirm by clicking on <span class="guilabel">Start</span> <span class="guinum">❷</span> with the left mouse button (see image
+below).</p>
+<img alt="../_images/1000020100000226000000C881350B3A934EF760.png" src="../_images/1000020100000226000000C881350B3A934EF760.png" />
+<p>The dosing module accepts the
+change in flow rate, while retaining all other dosing parameters, such
+as volume or continuous flow parameters. When you configure continuous
+flow operation you will be shown the maximum dosing flow rate achievable
+with the currently set refill rate and the other continuous flow
+parameters, for guidance (see image below).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CETONI GmbH.
+      <span class="lastupdated">Last updated on Jan 28, 2026 14:15.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
